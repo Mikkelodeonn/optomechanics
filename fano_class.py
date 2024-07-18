@@ -6,8 +6,8 @@ from scipy.optimize import curve_fit
 class fano:
     def __init__(self, path_to_file: str):
         self.data = np.loadtxt(path_to_file)
-        self.λmin = self.data[:,0].min()# * 10**9
-        self.λmax = self.data[:,0].max()# * 10**9
+        self.λmin = self.data[:,0].min()
+        self.λmax = self.data[:,0].max()
         self.λ_fit = np.linspace(self.λmin, self.λmax, 1000)
 
     def lossless_model(self, λ, λ0, λ1, td, γ): # lossless transmission
