@@ -18,12 +18,12 @@ class fano:
             t = td * (k - k0) / (k - k1 + 1j * Γ)
             return np.abs(t)**2
     
-    def lossy_model(self, λ, λ0, λ1, td, γ, alpha): # lossy transmission
+    def lossy_model(self, λ, λ0, λ1, td, γ, α): # lossy transmission
             k = 2*np.pi / λ
             k0 = 2*np.pi / λ0
             k1 = 2*np.pi / λ1
             Γ = 2*np.pi / λ1**2 * γ
-            t = td * (k - k0 + 1j * alpha) / (k - k1 + 1j * Γ)
+            t = td * (k - k0 + 1j * α) / (k - k1 + 1j * Γ)
             return np.abs(t)**2
 
     def lossless_fit(self, code: str, fitting_params: list):
@@ -73,6 +73,26 @@ class fano:
         plt.ylabel('Reflection Coeffiecient')
         plt.show()
         
+########################################              Class documentation              ########################################
+##
+## The fano class takes a path to an appropriate transmission/reflectivity datafile as it's only input.
+##
+## Attributes: 
+##
+## The loaded data from the given input file is referred to simply as "self.data". 
+## The minimum and maximum wavelength of the relevant interval is referred to as "self.λmin" and "self.λmax", respecitvely.
+## The range between λmin and λmax is defined as "self.λ_fit", and is defines to be used in the methods described below. 
+##
+## Methods:
+##
+## fano.lossy_fit takes arguments code -> "R" / "T" refering to the type of data one wishes to fit (i.e. transmission or  
+## reflectivity), and a list of initial guesses for the fitting parameters [λ0, λ1, td, γ, α].
+##
+## fano.lossless_fit takes the same arguments as fano.lossy_fit, except for the lack of α in the fitting parameters, and the  
+## additional option of choosing to plot and fit both transmission and reflecitivity data (for this option set code -> "both").
+##
+## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
+## (plots/fit are produced according to the chosen code/type).
 
 ref = fano("/Users/mikkelodeon/optomechanics/Data/Reflection_600um_grating.txt")
 trans = fano("/Users/mikkelodeon/optomechanics/Data/Transmission_600um_grating.txt")
