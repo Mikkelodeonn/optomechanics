@@ -99,8 +99,8 @@ trans = fano("/Users/mikkelodeon/optomechanics/Data/Transmission_600um_grating.t
 
 #grating.lossless_fit("both",[951, 951, 0.6, 2])
 
-ref.lossy_fit("R", [951, 951, 0.6, 1, 0.1])
-#trans.lossy_fit("T", [951, 951, 0.6, 1, 0.1])
+#ref.lossy_fit("R", [951, 951, 0.6, 1, 0.1])
+trans.lossy_fit("T", [951, 951, 0.6, 1, 0.1])
 
 
 
