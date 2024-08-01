@@ -70,7 +70,7 @@ class fano:
         else:
             pass
         plt.xlabel('Wavelength (nm)')
-        plt.ylabel('Reflection Coeffiecient')
+        plt.ylabel('Reflection/Transmission Coeffiecient')
         plt.show()
         
 ########################################              Class documentation              ########################################
@@ -94,13 +94,16 @@ class fano:
 ## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
 ## (plots/fit are produced according to the chosen code/type).
 
-ref = fano("/Users/mikkelodeon/optomechanics/Data/Reflection_600um_grating.txt")
-trans = fano("/Users/mikkelodeon/optomechanics/Data/Transmission_600um_grating.txt")
+#ref = fano("/Users/mikkelodeon/optomechanics/Data/400um grating/reflectivity_400um_grating.txt")
+#trans = fano("/Users/mikkelodeon/optomechanics/Data/400um grating/transmission_400um_grating.txt")
+ref = fano("/Users/mikkelodeon/optomechanics/600um grating/Data/reflection_600um_grating.txt")
 
 #grating.lossless_fit("both",[951, 951, 0.6, 2])
 
-#ref.lossy_fit("R", [951, 951, 0.6, 1, 0.1])
-trans.lossy_fit("T", [951, 951, 0.6, 1, 0.1])
+#ref.lossy_fit("R", [952, 952, 0.6, 1, 0.1])
+ref.lossy_fit("R", [952, 952, 0.6, 1, 0.1])
+#short_scan.lossy_fit("T", [951.9, 951.9, 0.30, 0.075, 0])
+
 
 
 
