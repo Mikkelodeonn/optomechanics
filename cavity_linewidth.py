@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 ## resonance wavelength [nm -> m]
 λres = 951.930*1e-9
 ## length of cavity [μm -> m]
-l = np.linspace(5,1200,1000000)*1e-6
+l = np.linspace(5,12000,1000000)*1e-6
 ## losses in cavity
 L = 0.12
 ## width of guided mode resonance [nm -> m]
@@ -12,9 +12,9 @@ L = 0.12
 ## direct (off-resonance) reflectivity
 rd = np.sqrt(0.38)
 ## Grating transmission at resonance
-Tg = 0.024 
+Tg = 0.024
 ## Broadband mirror transmission at resonance 
-Tm = 0.02 
+Tm = 0.04
 
 def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float):
     δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
@@ -35,8 +35,9 @@ lws = np.array([16,16,66,22,30,40,30,60,80,88,84,200,122])*1e-9 ## linewidths fo
 
 plt.figure(figsize=(10,6))
 
-plt.plot(l*1e6,2*lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband mirror")
-plt.plot(l*1e6,2*lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="fano mirror")
+plt.plot(l*1e6,2*lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband cavity")
+plt.plot(l*1e6,2*lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="fano cavity")
+plt.plot(l*1e6,2*lw_fano(l,λres,0.08,γλ,rd,Tg,Tg)*1e12, label="dual fano cavity", ls="--")
 plt.plot(lengths*1e6,lws*1e9, "ro", label="measured linewidths")
 plt.title("FWHM as a function of cavity length")
 plt.xlabel("Cavity length [μm]")
