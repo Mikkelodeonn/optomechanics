@@ -29,7 +29,7 @@ def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, T
 lengths = np.array([823,724,647,604,566,453,394,201,162,92,81,22,10])*1e-6 # lengths in m
 for length in lengths:
     linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
-    print("length of cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
+    print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
 
 lws = np.array([16,16,66,22,30,40,30,60,80,88,84,200,122])*1e-9 ## linewidths found for the 400um grating
 

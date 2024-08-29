@@ -55,7 +55,7 @@ class fano:
         plt.ylabel('Reflection and Transmission Coefficient')
         plt.show()
 
-    def lossy_fit(self, code: str, fitting_params:list):
+    def lossy_fit(self, code: str, fitting_params: list):
         popt, pcov = curve_fit(self.lossy_model, self.data[:,0], self.data[:,1], p0=fitting_params)
 
         plt.figure(figsize=(10,6))
@@ -71,6 +71,39 @@ class fano:
             pass
         plt.xlabel('Wavelength (nm)')
         plt.ylabel('Reflection/Transmission Coeffiecient')
+        plt.show()
+
+    def theoretical_reflection_lossy(self, fitting_params: list):
+        popt, pcov = curve_fit(self.lossy_model, self.data[:,0], self.data[:,1], p0=fitting_params)
+
+        λ0s, λ1s, tds, γλs, αs = popt
+        γs = 2*np.pi / λ1s**2 * γλs
+        as_ = tds * (2*np.pi / λ1s - 2*np.pi / λ0s - 1j*γs)
+        xas = np.real(as_)
+        yas = np.imag(as_)
+
+        rds = np.sqrt(1 - tds**2)
+        xbs = -xas * tds / rds
+        As = 0.015 * (γs**2 + (2*np.pi/λ0s - 2*np.pi/λ1s)**2)
+
+        def equations(vars):
+            yb = vars
+            return xas**2 + yas**2 + xbs**2 + yb**2 + 2 * γs * rds * yb + 2 * γs * tds * yas + As
+        yb_initial_guess=0.5
+        ybs = fsolve(equations,yb_initial_guess)
+
+        r = []
+        for λ_val in self.λ_fit:
+            r_val = rds + (xbs + 1j * ybs) / (2 * np.pi / λ_val - 2 * np.pi / λ1s+ 1j * γs)
+            r.append(r_val)
+        t2 = tds + as_ / (2 * np.pi / λ1s - 2 * np.pi / λ1s + 1j * γs)
+        r = np.array(r)
+        reflectivity_values = np.abs(r)**2
+        plt.figure(figsize=(10,6))
+        plt.plot(self.λ_fit, reflectivity_values, 'b-', label='Reflectivity model')
+        plt.xlabel('Wavelength (nm)')
+        plt.ylabel('Reflection Coeffiecient')
+        plt.legend()
         plt.show()
         
 ########################################              Class documentation              ########################################
@@ -95,14 +128,14 @@ class fano:
 ## (plots/fit are produced according to the chosen code/type).
 
 #ref = fano("/Users/mikkelodeon/optomechanics/Data/400um grating/reflectivity_400um_grating.txt")
-#trans = fano("/Users/mikkelodeon/optomechanics/Data/400um grating/transmission_400um_grating.txt")
-ref = fano("/Users/mikkelodeon/optomechanics/600um grating/Data/reflection_600um_grating.txt")
+trans = fano("/Users/mikkelodeon/optomechanics/400um gratings/01/Data/transmission_400um_grating.txt")
+ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/01/Data/reflectivity_400um_grating.txt")
 
 #grating.lossless_fit("both",[951, 951, 0.6, 2])
 
 #ref.lossy_fit("R", [952, 952, 0.6, 1, 0.1])
-ref.lossy_fit("R", [952, 952, 0.6, 1, 0.1])
 #short_scan.lossy_fit("T", [951.9, 951.9, 0.30, 0.075, 0])
+trans.theoretical_reflection_lossy([952, 952, 0.6, 1, 0.1])
 
 
 
