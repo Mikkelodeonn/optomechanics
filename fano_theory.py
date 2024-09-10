@@ -24,18 +24,19 @@ def theoretical_reflection_values(params: list):
     def equations(vars):
         yb = vars
         return xas**2 + yas**2 + xbs**2 + yb**2 + 2 * γs * rds * yb + 2 * γs * tds * yas + As
-    yb_initial_guess=0.5
+    yb_initial_guess = 0.5
     ybs = fsolve(equations,yb_initial_guess)
 
     r = []
     for λ_val in grating.λ_fit:
         r_val = rds + (xbs + 1j * ybs) / (2 * np.pi / λ_val - 2 * np.pi / λ1s+ 1j * γs)
         r.append(r_val)
-    t2 = tds + as_ / (2 * np.pi / λ1s - 2 * np.pi / λ1s + 1j * γs)
+    #t2 = tds + as_ / (2 * np.pi / λ1s - 2 * np.pi / λ1s + 1j * γs)
     r = np.array(r)
     reflectivity_values = np.abs(r)**2
+    complex_reflectivity_values = r
 
-    return reflectivity_values
+    return (reflectivity_values, complex_reflectivity_values)
 
 def theoretical_reflection_values_plot(reflection_values):
     plt.figure(figsize=(10,6))
@@ -47,15 +48,15 @@ def theoretical_reflection_values_plot(reflection_values):
     plt.show()
 
 def fano_cavity_transmission(params: list, code: str):
-    reflection_values = theoretical_reflection_values(params)
-    transmission_values = grating.lossy_model(grating.λ_fit, *params)
+    reflection_values = theoretical_reflection_values(params)[1]
+    transmission_values = np.sqrt(grating.lossy_model(grating.λ_fit, *params))
 
     if code == "cavitylength":
         def cavity_transmission(l):
             tg = np.min(transmission_values)
             rg = np.max(reflection_values)
-            tm = 0.04
-            rm = 0.96
+            tm = np.sqrt(0.04)
+            rm = np.sqrt(0.96)
             λ = params[0]
             T = np.abs(tm*tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
@@ -67,8 +68,8 @@ def fano_cavity_transmission(params: list, code: str):
 
     if code == "wavelength":
         def cavity_transmission(λ, rg, tg):
-            tm = 0.04
-            rm = 0.96
+            tm = np.sqrt(0.04)
+            rm = np.sqrt(0.96)
             l = 1
             T = np.abs(tm*tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
@@ -85,8 +86,8 @@ def fano_cavity_transmission(params: list, code: str):
 
 def dual_fano_transmission(params: list, code: str):
     
-    reflection_values = theoretical_reflection_values(params)
-    transmission_values = grating.lossy_model(grating.λ_fit, *params)
+    reflection_values = theoretical_reflection_values(params)[1]
+    transmission_values = np.sqrt(grating.lossy_model(grating.λ_fit, *params))
 
     if code == "cavitylength":
         def cavity_transmission(l):
@@ -122,14 +123,6 @@ def dual_fano_transmission(params: list, code: str):
         plt.show()
 
 
-dual_fano_transmission(params,"wavelength")
-
-
-
-
-
-
-
-
+fano_cavity_transmission(params,"cavitylength")
 
 
