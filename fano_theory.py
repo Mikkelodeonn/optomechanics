@@ -124,6 +124,9 @@ def dual_fano_transmission(params1: list, params2: list, code: str):
 
         plt.figure(figsize=(10,6))
         plt.plot(lengths, cavity_transmission(lengths))
+        plt.title("Dual fano cavity transmission as function of cavity length")
+        plt.xlabel("Cavity Length [μm]") 
+        plt.ylabel("Intensity [arb.u.]")
         plt.show()
 
     if code == "wavelength":
@@ -140,7 +143,7 @@ def dual_fano_transmission(params1: list, params2: list, code: str):
         plt.figure(figsize=(10,6))
         plt.title("Dual fano cavity transmission as function of wavelength")
         plt.xlabel("Wavelength [nm]")
-        #plt.ylabel("")
+        plt.ylabel("Intensity [arb.u.]")
         plt.plot(λs, Ts)
         plt.show()
 
