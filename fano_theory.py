@@ -17,9 +17,9 @@ from scipy.optimize import curve_fit
 # td -> direct transmission coefficient
 # γλ -> width of guided mode resonance
 # α  -> loss factor
-#Δ = 0.2 #nm
-#grating1 = [950, 950, 0.81, 0.48, 9e-7]
-#grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
+Δ = 0.7 #nm
+grating1 = [950, 950, 0.81, 0.48, 9e-7]
+grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
 λs_range = np.linspace(949.85,950.55,1000)
 
@@ -173,9 +173,15 @@ def detuning_plot(Δs): ## plots dual fano cavity transmission for different val
     plt.legend()
     plt.show()
 
+def dual_fano_transmission_plot(params1: list, params2: list, code: str):
+    λs, Ts =  dual_fano_transmission(params1, params2, code=code)
+    plt.figure(figsize=(10,6))
+    plt.title("Dual fano cavity transmission as a function of wavelength")
+    plt.xlabel("Wavelength [nm]")
+    plt.ylabel("Intensity [arb.u.]")
+    plt.plot(λs, Ts)
+    plt.show()
+
+
 detuning_plot(Δs)
-
-
-
-
-
+#dual_fano_transmission_plot(grating1, grating2, code="wavelength")
