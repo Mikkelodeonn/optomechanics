@@ -6,9 +6,14 @@ from scipy.optimize import curve_fit
 
 ## grating -> 400um, batch 06, M3
 
-#grating = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+M1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1/400_M1 trans.txt")
+M2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 trans.txt")
+M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.txt")
+M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
-#params = grating.lossy_fit([952,952,0.6,1,0.1])
+params1 = M3.lossy_fit([952,952,0.6,1,0.1])
+params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 #print(params)
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
@@ -17,11 +22,11 @@ from scipy.optimize import curve_fit
 # td -> direct transmission coefficient
 # γλ -> width of guided mode resonance
 # α  -> loss factor
-Δ = 0.7 #nm
-grating1 = [950, 950, 0.81, 0.48, 9e-7]
-grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
+#Δ = 0.7 #nm
+#grating1 = [950, 950, 0.81, 0.48, 9e-7]
+#grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
-λs_range = np.linspace(949.85,950.55,1000)
+λs_range = np.linspace(949,954,1000)
 
 def model(λ, λ0, λ1, td, γ, α): 
     k = 2*np.pi / λ
@@ -118,7 +123,7 @@ def dual_fano_transmission(params1: list, params2: list, code: str):
 
     if code == "cavitylength":
         def cavity_transmission(l):
-            λ = params1[0]
+            λ = (params1[0] + params2[0])/2
             rg1 = np.max(reflection_values1)
             tg1 = np.min(transmission_values1)
             rg2 = np.max(reflection_values2)
@@ -130,16 +135,9 @@ def dual_fano_transmission(params1: list, params2: list, code: str):
 
         return (lengths, cavity_transmission(lengths))
 
-        #plt.figure(figsize=(10,6))
-        #plt.plot(lengths, cavity_transmission(lengths))
-        #plt.title("Dual fano cavity transmission as function of cavity length")
-        #plt.xlabel("Cavity length [μm]") 
-        #plt.ylabel("Intensity [arb.u.]")
-        #plt.show()
-
     if code == "wavelength":
         def cavity_transmission(λ, rg1, tg1, rg2, tg2):
-            l = 10
+            l = 20
             T = np.abs(tg1*tg2*np.exp(1j*(2*np.pi/λ)*l)/(1-rg1*rg2*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
         λs = np.linspace(λs_range.min(), λs_range.max(), len(reflection_values1))
@@ -149,15 +147,6 @@ def dual_fano_transmission(params1: list, params2: list, code: str):
             Ts.append(T)
 
         return (λs, Ts)
-
-        #plt.figure(figsize=(10,6))
-        #plt.title("Dual fano cavity transmission as a function of wavelength")
-        #plt.xlabel("Wavelength [nm]")
-        #plt.ylabel("Intensity [arb.u.]")
-        #plt.plot(λs, Ts)
-        #plt.show()
-
-Δs = [0.01, 0.04, 0.07, 0.10, 0.20, 0.30, 0.40] # detuning in nm    
 
 def detuning_plot(Δs): ## plots dual fano cavity transmission for different values for the detuning
     plt.figure(figsize=(10,6))
@@ -182,6 +171,7 @@ def dual_fano_transmission_plot(params1: list, params2: list, code: str):
     plt.plot(λs, Ts)
     plt.show()
 
+Δs = [0.01, 0.04, 0.07, 0.10, 0.20, 0.30, 0.40] # detuning in nm    
 
-detuning_plot(Δs)
-#dual_fano_transmission_plot(grating1, grating2, code="wavelength")
+#detuning_plot(Δs)
+dual_fano_transmission_plot(params1, params2, code="wavelength")
