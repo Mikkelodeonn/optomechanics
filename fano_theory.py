@@ -14,9 +14,9 @@ M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2[1] = params2[1] 
-params2[0] = params2[0] + 0.3
+params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+params2[1] = params2[1]
+params2[0] = params2[0] 
 
 #params1 = [950, 950.3, 0.81, 0.48, 9e-7]
 #params2 = [949.8, 950, 0.81, 0.48, 9e-7]
@@ -30,7 +30,7 @@ params2[0] = params2[0] + 0.3
 #grating1 = [950, 950, 0.81, 0.48, 9e-7]
 #grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
-λs_range = np.linspace(951,953,1000)
+λs_range = np.linspace(948,954.8,1000)
 
 def model(λ, λ0, λ1, td, γ, α): 
     k = 2*np.pi / λ
@@ -83,7 +83,7 @@ def resonant_cavity_length(params: list):
     lengths = []
     Ts = []
 
-    ls = np.linspace(0,1000,10000)
+    ls = np.linspace(1,1000,10000)
 
     for l in ls:
         tg = np.min(transmission_values)
@@ -156,18 +156,18 @@ def dual_fano_transmission_plot(params1: list, params2: list, length: float):
     plt.plot(λs, Ts)
     plt.show()
 
-def detuning_plot(Δs: list, length: float): ## plots dual fano cavity transmission for different values for the detuning
+def detuning_plot(Δs: list): ## plots dual fano cavity transmission for different values for the detuning
     plt.figure(figsize=(10,6))
+    grating1 = [950, 950, 0.81, 0.48, 9e-7]
+    length = resonant_cavity_length(grating1)
     for Δ in Δs:
-        grating1 = [950, 950, 0.81, 0.48, 9e-7]
-        grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]
+        grating2 = [950, 950+Δ, 0.81, 0.48, 9e-7]
         λs, Ts =  dual_fano_transmission(grating1, grating2, length)
         plt.plot(λs, Ts, label="Δ=%snm" %(Δ))
 
     plt.title("Dual fano cavity transmission as a function of wavelength (l = %sμm)" % str(round(length,2)))
     plt.xlabel("Wavelength [nm]")
     plt.ylabel("Intensity [arb.u.]")
-    plt.xlim(949.75,950.75)
     plt.legend()
     plt.show()
 
@@ -183,20 +183,91 @@ def cavity_length_plot(ls: list, params1: list, params2: list):
     plt.subplots_adjust(right=0.70)
     plt.show() 
 
-Δs = [0.01, 0.04, 0.08, 0.12, 0.20, 0.30, 0.40] # detuning in nm    
-ls = np.linspace(resonant_cavity_length(params1), resonant_cavity_length(params2),20)
-length = resonant_cavity_length(params2)
+def cavity_wave_length_cmaps(params1: list, params2: list):
+    Δs = 0.02
+    rows = 3
+    columns = 3
+    fig, ax = plt.subplots(rows,columns, figsize=(18,8))
+    for i in range(rows):
+        for j in range(columns):
+            params2[1] = params2[1] - Δs
+            ls = np.linspace(resonant_cavity_length(params1), resonant_cavity_length(params2), 20)
+            Ts = []
+            λs = 0
+            for l in ls:
+                λ, T = dual_fano_transmission(params1, params2, l)
+                Ts.append(T)
+                λs = λ
 
-#detuning_plot(Δs, length)
-cavity_length_plot(ls, params1, params2)
-#λs1, Ts1 =  fano_cavity_transmission(params2)
+            cmap = np.zeros([len(Ts),len(Ts[0])])
+
+            for h in range(len(Ts)):
+                for k in range(len(Ts[h])):
+                    cmap[h,k] = Ts[h][k] 
+            
+            l_labels = [round(l,2) for l in ls]
+            λ_labels = np.arange(np.min(λs), np.max(λs),0.1)
+            λ_labels = [round(label,2) for label in λ_labels]
+
+            im = ax[i,j].imshow(cmap, aspect="auto", extent=[np.min(λs), np.max(λs), np.min(ls), np.max(ls)])
+            ax[i,j].set_title("Δ = %s" %(round(Δs*((i+1)*(j+1)),2)), fontsize=7)
+            ax[i,j].set_xticks(np.arange(np.min(λs), np.max(λs),0.1))
+            ax[i,j].set_xticklabels(λ_labels, fontsize=5)
+            ax[i,j].set_yticks(ls)
+            ax[i,j].set_yticklabels(l_labels, fontsize=5)    
+    fig.subplots_adjust(right=0.8)
+    cbar_ax = fig.add_axes([0.85, 0.15, 0.02, 0.7])
+    fig.colorbar(im, cax=cbar_ax)
+    fig.text(0.5, 0.06, 'Wavelength [nm]', ha='center', va='center', fontsize=10)
+    fig.text(0.08, 0.5, 'Cavity length [μm]', ha='center', va='center', fontsize=10, rotation="vertical")
+    plt.show()
+
+def cmap_gratings(ls: list, params1: list, params2: list):
+
+    plt.figure(figsize=(10,6))
+    Ts = []
+    λs = 0
+    for l in ls:
+        λ, T = dual_fano_transmission(params1, params2, l)
+        Ts.append(T)
+        λs = λ
+
+    cmap = np.zeros([len(Ts),len(Ts[0])])
+
+    for h in range(len(Ts)):
+        for k in range(len(Ts[h])):
+            cmap[h,k] = Ts[h][k] 
+
+    l_labels = [round(l,2) for l in ls]
+    λ_labels = np.arange(np.min(λs), np.max(λs),0.6)
+    λ_labels = [round(label,2) for label in λ_labels]
+
+    plt.imshow(cmap, aspect="auto", extent=[np.min(λs), np.max(λs), np.min(ls), np.max(ls)])
+    plt.xticks(λ_labels)
+    plt.yticks(ls, l_labels)
+    plt.xlabel("Wavelength [nm]")
+    plt.ylabel("Cavity length [μm]")
+    plt.colorbar()
+    plt.show()
+
+
+Δs = np.array([0.01, 0.04, 0.08, 0.12, 0.20, 0.30, 0.40]) # detuning in nm    
+ls = np.linspace(resonant_cavity_length(params1), resonant_cavity_length(params2),20)
+length = resonant_cavity_length(params1)
+
+#detuning_plot(Δs)
+#cavity_length_plot(ls, params1, params2)
+#cavity_wave_length_cmaps(params1, params2)
+#cmap_gratings(ls, params1, params2)
+#λs1, Ts1 =  fano_cavity_transmission(params1)
 #λs2, Ts2 =  dual_fano_transmission(params1, params2, length)
 #plt.figure(figsize=(10,6))
 #plt.plot(λs1, Ts1, label="Reg. Fano")
 #plt.plot(λs2, Ts2, label="Double Fano")
 #plt.legend()
 #plt.show()
-#dual_fano_transmission_plot(params1, params2, length)
+#fano_cavity_transmission_plot(params2)
+dual_fano_transmission_plot(params1, params2, length)
 
 
 
