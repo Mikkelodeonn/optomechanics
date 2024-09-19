@@ -15,7 +15,7 @@ M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.
 
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
 params2 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2[1] = params2[1]
+params2[1] = params2[1] 
 params2[0] = params2[0] 
 
 #params1 = [950, 950.3, 0.81, 0.48, 9e-7]
@@ -259,8 +259,8 @@ ls = np.linspace(resonant_cavity_length(params1), resonant_cavity_length(params2
 length = resonant_cavity_length(params1)
 
 #detuning_plot(Δs)
-#cavity_length_plot(ls, params1, params2)
-l_vs_λ_cmaps(params1,params2)
+cavity_length_plot(ls, params1, params2)
+#l_vs_λ_cmaps(params1,params2)
 #double_fano_cmap(ls, params1, params2)
 #λs1, Ts1 =  fano_cavity_transmission(params1)
 #λs2, Ts2 =  dual_fano_transmission(params1, params2, length)
