@@ -12,10 +12,10 @@ M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2 = M3.lossy_fit([952,952,0.6,1,0.1])
-Δ = 0.03
-params2[1] = params2[1] + Δ
-params2[0] = params2[0] + Δ
+params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+#Δ = 0.2
+#params2[1] = params2[1] + Δ
+#params2[0] = params2[0] + Δ
 
 #params1 = [950, 950.3, 0.81, 0.48, 9e-7]
 #params2 = [949.8, 950, 0.81, 0.48, 9e-7]
@@ -29,7 +29,8 @@ params2[0] = params2[0] + Δ
 #grating1 = [950, 950, 0.81, 0.48, 9e-7]
 #grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
-λs_range = np.linspace(950,953,1000)
+#λs_range = np.linspace(951.5,952.2,1000)
+λs_range = np.linspace(948,955,1000)
 
 def model(λ, λ0, λ1, td, γ, α): 
     k = 2*np.pi / λ
@@ -285,30 +286,32 @@ def double_fano_cmap(params1: list, params2: list):
     plt.colorbar()
     plt.show()
 
-def line_width_double(params1: list, params2: list): ## change this !
-    λs, Ts =  dual_fano_transmission(params1, params2)
+def line_width_double(params1: list, params2: list): 
+    length = double_cavity_length(params1, params2)
+    λs, Ts =  dual_fano_transmission(params1, params2, length)
 
-    initial_guess = [951.748, 1, 0.1, 1] #[951.6, 951.6, 0.7, 0.05, 1e-7]
+    initial_guess = [951.748, 1, 0.2, 1] #[951.6, 951.6, 0.7, 0.05, 1e-7]
 
     def lorentzian(x, x0, A, γ, t):
         fano = 1 + ((x-x0) / (γ * (1 - t * (x-x0) / γ)))**2 
+        #fano = (γ/2) / ((x-x0)**2 + (γ/2)**2) 
         return A/fano 
 
     popt, pcov = curve_fit(lorentzian, λs, Ts, p0=initial_guess, maxfev=10000)
 
     #print("popt: ", popt)
 
-    FWHM = 2*popt[2]
+    FWHM = np.abs(2*popt[2])
 
     #print("length: ", length)
-    #print("FWHM: ", round(np.abs(FWHM)*1e3,2), "pm")
+    print("FWHM: ", round(np.abs(FWHM)*1e3,2), "pm")
 
     #plt.figure(figsize=(10,6))
     #plt.plot(λs, lorentzian(λs, *popt))
     #plt.plot(λs, Ts, 'r.')
     #plt.show()
 
-    return FWHM
+    return FWHM*1e3
 
 def line_width_single(params1: list): ## change this !
     λs, Ts =  fano_cavity_transmission(params1)
@@ -384,25 +387,12 @@ length = double_cavity_length(params1, params2)
 #plt.legend()
 #plt.show()
 #fano_cavity_transmission_plot(params1)
-#dual_fano_transmission_plot(params1, params2)
+dual_fano_transmission_plot(params1, params2, length)
 #line_width_double(params1, params2)
 #line_width_single(params1)
 #line_width_comparison(params1, params2)
 #print(double_cavity_length(params1, params2))
 #print(double_cavity_length(params2, params1))
 
-#Δs = np.linspace(0,0.35,50)
-
-#lw = []
-#
-#for Δ in Δs:
-#    params2[0] += Δ
-#    params2[1] += Δ
-#    fwhm = line_width_double(params1, params2)
-#   lw.append(fwhm)
-
-#plt.figure(figsize=(10,6))
-#plt.plot(Δs, lw)
-#plt.show()
 
 
