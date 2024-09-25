@@ -2,17 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ## resonance wavelength [nm -> m]
-λres = 951.8e-9
+λres = 951.6e-9
 ## length of cavity [μm -> m]
 l = np.linspace(5,12000,1000000)*1e-6
 ## losses in cavity
-L = 0.12
+L = 0.10
 ## width of guided mode resonance [nm -> m]
-γλ = 0.483*1e-9
+γλ = 0.482*1e-9
 ## direct (off-resonance) reflectivity
-rd = np.sqrt(0.38)
+rd = np.sqrt(1 - 0.814)
 ## Grating transmission at resonance
-Tg = 0.024
+Tg = 0.054
 ## Broadband mirror transmission at resonance 
 Tm = 0.04
 
@@ -27,7 +27,7 @@ def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, T
     return δγ
 
 #lengths = np.array([823,724,647,604,566,453,394,201,162,92,81,22,10])*1e-6 # lengths in m
-lengths = np.array([13.08])*1e-6
+lengths = np.array([26.077])*1e-6
 for length in lengths:
     linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
     print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
