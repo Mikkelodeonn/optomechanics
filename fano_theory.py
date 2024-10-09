@@ -12,7 +12,7 @@ M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 #Δ = 0.2
 #params2[1] = params2[1] + Δ
 #params2[0] = params2[0] + Δ
@@ -29,31 +29,33 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 #grating1 = [950, 950, 0.81, 0.48, 9e-7]
 #grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
-#λs_range = np.linspace(951.5,952.2,1000)
-λs_range = np.linspace(948,955,1000)
+λs_range = np.linspace(950, 953, 1000)
+#λs_range = np.linspace(949.9, 950.1, 100)
 
-def model(λ, λ0, λ1, td, γ, α): 
+def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
     k0 = 2*np.pi / λ0
     k1 = 2*np.pi / λ1
-    Γ = 2*np.pi / λ1**2 * γ
-    t = td * (k - k0 + 1j * α) / (k - k1 + 1j * Γ)
+    γ = 2*np.pi / λ1**2 * γλ
+    t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
 
 def theoretical_reflection_values(params: list):
-    λ0s, λ1s, tds, γλs, αs = params
+    λ0s, λ1s, tds, γλs, βs = params
     γs = 2*np.pi / λ1s**2 * γλs
-    as_ = tds * (2*np.pi / λ1s - 2*np.pi / λ0s - 1j*γs)
-    xas = np.real(as_)
-    yas = np.imag(as_)
+    a = tds * ((2*np.pi / λ1s) - (2*np.pi / λ0s) - 1j*γs)
+    xas = np.real(a)
+    yas = np.imag(a)
+
+    L = 0.06
+    c_squared = L * (γs**2 + (2*np.pi/λ0s - 2*np.pi/λ1s)**2)
 
     rds = np.sqrt(1 - tds**2)
-    xbs = -xas * tds / rds
-    As = 0.015 * (γs**2 + (2*np.pi/λ0s - 2*np.pi/λ1s)**2)
+    xbs = -(xas * tds / rds)
 
     def equations(vars):
         yb = vars
-        return xas**2 + yas**2 + xbs**2 + yb**2 + 2 * γs * rds * yb + 2 * γs * tds * yas + As
+        return xas**2 + yas**2 + xbs**2 + yb**2 + 2 * γs * rds * yb + 2 * γs * tds * yas + c_squared
     yb_initial_guess = 0.5
     ybs = fsolve(equations,yb_initial_guess)
 
@@ -63,9 +65,9 @@ def theoretical_reflection_values(params: list):
         r.append(r_val)
     r = np.array(r)
     reflectivity_values = np.abs(r)**2
-    complex_reflectivity_values = r
+    complex_reflectivity_amplitudes = r
 
-    return (reflectivity_values, complex_reflectivity_values)
+    return (reflectivity_values, complex_reflectivity_amplitudes)
 
 def theoretical_reflection_values_plot(reflection_values):
     plt.figure(figsize=(10,6))
@@ -189,7 +191,8 @@ def detuning_plot(Δs: list): ## plots dual fano cavity transmission for differe
     grating1 = [950, 950, 0.81, 0.48, 9e-7]
     for Δ in Δs:
         grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]
-        λs, Ts =  dual_fano_transmission(grating1, grating2)
+        length = double_cavity_length(grating1, grating2)
+        λs, Ts =  dual_fano_transmission(grating1, grating2, length)
         plt.plot(λs, Ts, label="Δ=%snm" %(Δ))
 
     plt.title("Dual fano cavity transmission as a function of wavelength")
@@ -211,17 +214,19 @@ def cavity_length_plot(ls: list, params1: list, params2: list):
     plt.show() 
 
 def l_vs_λ_cmaps(params1: list, params2: list): 
-    Δs = 0.1
+    params2[1] += 1
+    params2[0] += 1
+    Δs = 0.2
     rows = 3
     columns = 3
-    Δ_label = 0
+    Δ_label = 1
     fig, ax = plt.subplots(rows,columns, figsize=(18,8))
     for i in range(rows):
         for j in range(columns):
-            params2[1] = params2[1] - Δs
-            params2[0] = params2[0] - Δs
+            params2[1] -= Δs
+            params2[0] -= Δs
             Δ_label -= Δs
-            ls = np.linspace(double_cavity_length(params1, params2), double_cavity_length(params2, params1), 20)
+            ls = np.linspace(double_cavity_length(params1, params2)-1, double_cavity_length(params2, params1)+1, 20)
             Ts = []
             λs = 0
             for l in ls:
@@ -248,7 +253,7 @@ def l_vs_λ_cmaps(params1: list, params2: list):
     fig.subplots_adjust(right=0.8)
     cbar_ax = fig.add_axes([0.85, 0.15, 0.02, 0.7])
     fig.colorbar(im, cax=cbar_ax)
-    fig.text(0.5, 0.93, 'Negative detuning', ha='center', va='center', fontsize=16) 
+    fig.text(0.5, 0.93, 'Double fano transmission for different values of Δ', ha='center', va='center', fontsize=16) 
     fig.text(0.5, 0.06, 'Wavelength [nm]', ha='center', va='center', fontsize=10)
     fig.text(0.08, 0.5, 'Cavity length [μm]', ha='center', va='center', fontsize=10, rotation="vertical")
     plt.show()
@@ -257,7 +262,7 @@ def double_fano_cmap(params1: list, params2: list):
 
     plt.figure(figsize=(10,6))
 
-    ls = np.linspace(double_cavity_length(params1, params2), double_cavity_length(params2, params1),20)
+    ls = np.linspace(double_cavity_length(params1, params2)-1, double_cavity_length(params2, params1)+1,20)
     Ts = []
     λs = 0
     for l in ls:
@@ -303,13 +308,7 @@ def line_width_double(params1: list, params2: list):
 
     FWHM = np.abs(2*popt[2])
 
-    #print("length: ", length)
     print("FWHM: ", round(np.abs(FWHM)*1e3,2), "pm")
-
-    #plt.figure(figsize=(10,6))
-    #plt.plot(λs, lorentzian(λs, *popt))
-    #plt.plot(λs, Ts, 'r.')
-    #plt.show()
 
     return FWHM*1e3
 
@@ -338,11 +337,11 @@ def line_width_single(params1: list): ## change this !
 
     return FWHM
 
-def line_width_comparison(params1: list, params2: list): 
+def line_width_comparison(params1: list, params2: list, length: float): 
     λ1, T1 =  fano_cavity_transmission(params1)
-    λ2, T2 = dual_fano_transmission(params1, params2)
+    λ2, T2 = dual_fano_transmission(params1, params2, length)
 
-    initial_guess = [951.79, 1, 0.1, 1] #[951.6, 951.6, 0.7, 0.05, 1e-7]
+    initial_guess = [950, 1, 0.1, 1] #[951.6, 951.6, 0.7, 0.05, 1e-7]
 
     def lorentzian(x, x0, A, γ, t):
         fano = 1 + ((x-x0) / (γ * (1 - t * (x-x0) / γ)))**2 
@@ -355,9 +354,9 @@ def line_width_comparison(params1: list, params2: list):
     FWHM_double = 2*popt2[2]
 
     plt.figure(figsize=(10,6))
-    plt.title("Double vs single fano comparison")
-    plt.plot(λ1, T1, '.', color="cornflowerblue", alpha=0.5, label="single fano simulation (M3)")
-    plt.plot(λ2, T2, 'g.', alpha=0.5, label="double fano simulation (M3/M3)")
+    plt.title("Double vs single fano comparison (identical arb. gratings)")
+    plt.plot(λ1, T1, '.', color="cornflowerblue", alpha=0.5, label="single fano simulation")
+    plt.plot(λ2, T2, 'g.', alpha=0.5, label="double fano simulation")
     plt.plot(λ1, lorentzian(λ1, *popt1), label="single fano fit, FWHM: %spm" %(str(round(FWHM_single*1e3,2))), color="orange")
     plt.plot(λ2, lorentzian(λ2, *popt2), label="double fano fit, FWHM: %spm" %(str(round(FWHM_double*1e3,2))))
     plt.xlabel("Wavelength [nm]")
@@ -367,32 +366,43 @@ def line_width_comparison(params1: list, params2: list):
 
     return FWHM
 
-Δs = np.array([0.01, 0.04, 0.08, 0.12, 0.20, 0.30]) # detuning in nm    
 
-length = resonant_cavity_length(params1)
-double_length = double_cavity_length(params1, params2)
-ls = np.linspace(0,100,10000)
-length = double_cavity_length(params1, params2)
+#### double fano transmission as a function of detuning ####
 
-
-#plt.figure(figsize=(10,6))
+#Δs = np.array([0.01, 0.04, 0.08, 0.12, 0.20, 0.30]) # detuning in nm  
 #detuning_plot(Δs)
-#cavity_length_plot(ls, params1, params2)
+
+#### Heat maps of cavity transmission as a function of wavelength and cavity length ####
+
 #l_vs_λ_cmaps(params1,params2)
 #double_fano_cmap(params1, params2)
-#λs1, Ts1 =  fano_cavity_transmission(params1)
-#λs2, Ts2 =  dual_fano_transmission(params1, params2)
-#plt.plot(λs1, Ts1, label="Reg. Fano (cavity length: %s μm)" %(str(round(length,2))))
-#plt.plot(λs2, Ts2, "--", label="Double Fano (cavity length: %s μm)" %(str(round(double_length,2))))
-#plt.legend()
-#plt.show()
+
+
+#### Double/single fano cavity transmission plots ####
+
+#length = resonant_cavity_length(params1)
 #fano_cavity_transmission_plot(params1)
-dual_fano_transmission_plot(params1, params2, length)
-#line_width_double(params1, params2)
-#line_width_single(params1)
-#line_width_comparison(params1, params2)
-#print(double_cavity_length(params1, params2))
-#print(double_cavity_length(params2, params1))
+
+#length = double_cavity_length(params1, params2)
+#dual_fano_transmission_plot(params1, params2, length)
+
+
+#### for arbitrary line width comparison of the single and double fano models ####
+
+#grating1 = [950, 950, 0.81, 0.48, 9e-7]
+#grating2 = grating1
+#line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2))
+
+
+#### plotting the calculated reflection/transmission values ####
+
+#plt.figure(figsize=(10,6))
+#rs = theoretical_reflection_values(params1)[1]
+#ts = model(λs_range, *params1)
+#plt.plot(λs_range, rs)
+#plt.plot(λs_range, ts)
+#plt.show()
+
 
 
 

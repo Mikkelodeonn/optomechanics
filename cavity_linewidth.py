@@ -27,7 +27,7 @@ def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, T
     return δγ
 
 #lengths = np.array([823,724,647,604,566,453,394,201,162,92,81,22,10])*1e-6 # lengths in m
-lengths = np.array([26.077])*1e-6
+lengths = np.array([26.78])*1e-6
 for length in lengths:
     linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
     print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")

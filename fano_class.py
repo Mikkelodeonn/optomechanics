@@ -109,9 +109,9 @@ class fano:
 ## (plots/fit are produced according to the chosen code/type).
 
 #fitting_params = [951,951,0.6,1,0.1]
-#T = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
-#R = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 ref.txt")
-#tparams = T.lossy_fit(fitting_params)
+#T = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+#R = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
+#params = T.lossy_fit(fitting_params)
 #rparams = R.lossy_fit(fitting_params)
 
 #plt.figure(figsize=(10,7))
