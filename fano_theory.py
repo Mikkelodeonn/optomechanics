@@ -29,8 +29,8 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 #grating1 = [950, 950, 0.81, 0.48, 9e-7]
 #grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]   
 
-λs_range = np.linspace(950, 953, 1000)
-#λs_range = np.linspace(949.9, 950.1, 100)
+#λs_range = np.linspace(950, 953, 1000)
+λs_range = np.linspace(949.9, 950.1, 100)
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -43,11 +43,11 @@ def model(λ, λ0, λ1, td, γλ, β):
 def theoretical_reflection_values(params: list):
     λ0s, λ1s, tds, γλs, βs = params
     γs = 2*np.pi / λ1s**2 * γλs
-    a = tds * ((2*np.pi / λ1s) - (2*np.pi / λ0s) - 1j*γs)
+    a = tds * ((2*np.pi / λ1s) - (2*np.pi / λ0s) + 1j*βs - 1j*γs)
     xas = np.real(a)
     yas = np.imag(a)
 
-    L = 0.06
+    L = 0.015
     c_squared = L * (γs**2 + (2*np.pi/λ0s - 2*np.pi/λ1s)**2)
 
     rds = np.sqrt(1 - tds**2)
@@ -380,8 +380,8 @@ def line_width_comparison(params1: list, params2: list, length: float):
 
 #### Double/single fano cavity transmission plots ####
 
-#length = resonant_cavity_length(params1)
-#fano_cavity_transmission_plot(params1)
+#length = resonant_cavity_length(params2)
+#fano_cavity_transmission_plot(params2)
 
 #length = double_cavity_length(params1, params2)
 #dual_fano_transmission_plot(params1, params2, length)
@@ -389,9 +389,9 @@ def line_width_comparison(params1: list, params2: list, length: float):
 
 #### for arbitrary line width comparison of the single and double fano models ####
 
-#grating1 = [950, 950, 0.81, 0.48, 9e-7]
-#grating2 = grating1
-#line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2))
+grating1 = [950, 950, 0.81, 0.48, 9e-7]
+grating2 = grating1
+line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2))
 
 
 #### plotting the calculated reflection/transmission values ####
