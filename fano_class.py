@@ -108,16 +108,16 @@ class fano:
 ## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
 ## (plots/fit are produced according to the chosen code/type).
 
-#fitting_params = [951,951,0.6,1,0.1]
-#T = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
-#R = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
-#params = T.lossy_fit(fitting_params)
+#fitting_params = [955.5,955.5,0.2,1,0.1]
+#data = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1(2)/M1_trans.txt")
+#R = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1(2)/M1_ref.txt")
+#params = data.lossy_fit(fitting_params)
 #rparams = R.lossy_fit(fitting_params)
 
 #plt.figure(figsize=(10,7))
 
-#plt.plot(T.data[:,0], T.data[:,1], 'bo', label='Transmission data')
-#plt.plot(T.λ_fit, T.lossy_model(T.λ_fit, *tparams), 'cornflowerblue', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
+#plt.plot(data.data[:,0], data.data[:,1], 'bo', label='Transmission data')
+#plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), 'cornflowerblue', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(params))
 
 #plt.plot(R.data[:,0], R.data[:,1], 'ro', label='Reflection data')
 #plt.plot(R.λ_fit, R.lossy_model(R.λ_fit, *rparams), 'darkred', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
