@@ -380,8 +380,8 @@ def line_width_comparison(params1: list, params2: list, length: float):
 #plt.plot(λs_range, ts)
 #plt.show()
 
-peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M1/83short.txt")
-fitting_params = [955.58,955.58,0.5,1e-2,1e-7]
+peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M4/70short.txt")
+fitting_params = [950.99,950.99,0.5,1e-2,1e-7]
 params = peak.lossy_fit(fitting_params)
 
 plt.figure(figsize=(10,6))
@@ -393,7 +393,7 @@ plt.plot(peak.λ_fit, peak.lossy_model(peak.λ_fit, *params), 'cornflowerblue', 
 #plt.plot(λs, Ts, "r.", label="theory (FWHM: %spm)" % str(round(lw_single_fano, 2)))
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized ntensity [arb. u.]")
-plt.title("83 μm single fano cavity transmission (M1)")
+plt.title("60 μm single fano cavity transmission (M4)")
 plt.legend()
 plt.show()
 
