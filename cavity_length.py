@@ -6,4 +6,4 @@ import numpy as np
 def L(λ,FSR):
     return λ**2/(2*FSR)*1e-3
 
-print(L(λ,6.5), " μm")
+print(L(λ,7), " μm")

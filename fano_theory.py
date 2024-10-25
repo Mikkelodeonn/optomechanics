@@ -21,7 +21,7 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-λs_range = np.linspace(950.8, 951.1, 100)
+λs_range = np.linspace(950, 953, 500)
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -290,16 +290,7 @@ def line_width_double(params1: list, params2: list):
     length = double_cavity_length(params1, params2)
     λs, Ts =  dual_fano_transmission(params1, params2, length)
 
-    initial_guess = [955, 1, 0.2, 1] #[951.6, 951.6, 0.7, 0.05, 1e-7]
-
-    def lorentzian(x, x0, A, γ, t):
-        fano = 1 + ((x-x0) / (γ * (1 - t * (x-x0) / γ)))**2 
-        #fano = (γ/2) / ((x-x0)**2 + (γ/2)**2) 
-        return A/fano 
-
     popt, pcov = curve_fit(model, λs, Ts, p0=params1, maxfev=10000)
-
-    #print("popt: ", popt)
 
     FWHM = np.abs(2*popt[3])*1e3
 
@@ -317,12 +308,7 @@ def line_width_single(params1: list): ## change this !
 
     popt, pcov = curve_fit(model, λs, Ts, p0=params1, maxfev=10000)
 
-    #print("popt: ", popt)
-
     FWHM = np.abs(2*popt[3])*1e3
-
-    #print("length: ", length)
-    #print("FWHM: ", FWHM)
 
     plt.figure(figsize=(10,6))
     plt.plot(λs, model(λs, *popt), label="linewidth = %s" % str(FWHM))
@@ -330,7 +316,7 @@ def line_width_single(params1: list): ## change this !
     plt.legend()
     plt.show()
 
-    return FWHM # nm -> pm
+    return FWHM
 
 def line_width_comparison(params1: list, params2: list, length: float): 
     λ1, T1 =  fano_cavity_transmission(params1)
@@ -394,20 +380,20 @@ def line_width_comparison(params1: list, params2: list, length: float):
 #plt.plot(λs_range, ts)
 #plt.show()
 
-peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M1/70short.txt")
-fitting_params = [955.5,955.5,0.6,1,0.1]
+peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M1/83short.txt")
+fitting_params = [955.58,955.58,0.5,1e-2,1e-7]
 params = peak.lossy_fit(fitting_params)
 
 plt.figure(figsize=(10,6))
 
 #lw_single_fano = line_width_single(M1.lossy_fit([955.5, 955.5, 0.6, 1, 0.1]))
 
-plt.plot(peak.data[:,0], peak.data[:,1], 'b.', label='transmission data')
-plt.plot(peak.λ_fit, peak.lossy_model(peak.λ_fit, *params), 'cornflowerblue', label='fit: FWHM = %spm' % str(round(2*params[3]*1e3,2)))
+plt.plot(peak.data[:,0], peak.data[:,1], 'bo', label='transmission data')
+plt.plot(peak.λ_fit, peak.lossy_model(peak.λ_fit, *params), 'cornflowerblue', label='fit: FWHM = %spm' % str(round(2*np.abs(params[3])*1e3,2)))
 #plt.plot(λs, Ts, "r.", label="theory (FWHM: %spm)" % str(round(lw_single_fano, 2)))
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized ntensity [arb. u.]")
-plt.title("70 μm single fano cavity transmission (M1)")
+plt.title("83 μm single fano cavity transmission (M1)")
 plt.legend()
 plt.show()
 
