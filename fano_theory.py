@@ -106,7 +106,7 @@ def resonant_cavity_length(params: list, λs: np.array):
 
     tg = transmission_values[idx]
     rg = reflection_values[idx]
-    tm = np.sqrt(0.05)
+    tm = np.sqrt(0.08)
     rm = np.sqrt(0.92)
 
     ls = np.linspace(10,11,100000)*1e3
@@ -377,7 +377,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
     FWHM_double = np.abs(2*popt2[3])*1e3
 
     plt.figure(figsize=(10,6))
-    plt.title("Double vs single fano comparison (M1)")
+    plt.title("Double vs single fano comparison (M3 w/ losses)")
     plt.plot(λs, T1, '.', color="cornflowerblue", alpha=0.5, label="single fano simulation")
     plt.plot(λs, T2, 'g.', alpha=0.5, label="double fano simulation")
     plt.plot(λs, model(λs, *popt1), label="single fano fit, FWHM: %spm" %(str(round(FWHM_single,2))), color="orange")
@@ -406,13 +406,13 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = resonant_cavity_length(params1, λs)
 #fano_cavity_transmission_plot(params1, λs, intracavity=False, losses=True)
 
-#length = double_cavity_length(params1, params2, λs)
-#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True)
+length = double_cavity_length(params1, params2, λs)
+dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True)
 
 
 #### for arbitrary line width comparison of the single and double fano models ####
 
-#grating1 = [951, 951, 0.81, 0.48, 0.92e-6]
+#grating1 = [951, 951, 0.81, 0.48, 1.175e-6]
 #grating2 = grating1
 #line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2, λs), intracavity=True, losses=False)
 #line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
