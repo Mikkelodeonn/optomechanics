@@ -21,8 +21,8 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-#λs = np.linspace(951.2, 952.4, 500)
-λs = np.linspace(950, 954, 500)
+λs = np.linspace(951.2, 952.4, 500)
+#λs = np.linspace(950, 954, 500)
 #λs = np.linspace(951.6, 951.9, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
@@ -416,8 +416,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = double_cavity_length(params1, params2, λs)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True)
 
-#ls = np.linspace(double_cavity_length(params1,params2,λs), double_cavity_length(params2,params1,λs)+0.03*1e3, 5)
-#cavity_length_plot(ls, params1, params2, λs, intracavity=False)
+ls = np.linspace(double_cavity_length(params1,params2,λs)-0.03*1e3, double_cavity_length(params2,params1,λs)+0.03*1e3, 7)
+cavity_length_plot(ls, params1, params2, λs, intracavity=True)
 
 
 #### for arbitrary line width comparison of the single and double fano models ####
