@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
 from scipy.optimize import curve_fit
 from scipy.signal import find_peaks
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes, mark_inset
 
 M1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1/400_M1 trans.txt")
 M2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 trans.txt")
@@ -22,7 +23,7 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # α  -> loss factor 
 
 #λs = np.linspace(951.2, 952.4, 500)
-λs = np.linspace(951, 953, 500)
+λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.6, 951.9, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
@@ -142,7 +143,8 @@ def double_cavity_length(params1: list, params2: list, λs: np.array):
     lengths = []
     Ts = []
 
-    ls = np.linspace(10,11,100000)*1e3
+    lmin = 10
+    ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
         λ = λs[idx]
@@ -221,13 +223,23 @@ def dual_fano_transmission(params1: list, params2: list, length: float, λs: np.
 
     return Ts
 
-def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True):
+def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, zoom=False):
     Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
-    plt.figure(figsize=(10,6))
-    plt.title("Dual fano cavity transmission as a function of wavelength (l = %sμm)" % str(length*1e-3))
-    plt.xlabel("Wavelength [nm]")
-    plt.ylabel("Intensity [arb.u.]")
-    plt.plot(λs, Ts)
+    fig, ax = plt.subplots(figsize=(10,6))
+    if zoom == True:
+        x1, x2, y1, y2 = params1[0]-1, params1[0]+1, 0.05, 0.6
+        axins = ax.inset_axes([0.7, 0.65, 0.25, 0.25])
+        axins.plot(λs,Ts)
+        axins.set_xlim(x1,x2)
+        axins.set_ylim(y1,y2)
+        axins.set_xticklabels([])
+        axins.set_yticklabels([])
+        mark_inset(ax, axins, loc1=2, loc2=4, edgecolor="black", alpha=0.3)
+        #ax.indicate_inset_zoom(axins, edgecolor="black")
+    ax.set_title("Dual fano cavity transmission as a function of wavelength (l = %sμm)" % str(round(length*1e-3,3)))
+    ax.set_xlabel("Wavelength [nm]")
+    ax.set_ylabel("Intensity [arb.u.]")
+    ax.plot(λs, Ts)
     plt.show()
 
 def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, losses=True): ## plots dual fano cavity transmission for different values for the detuning
@@ -236,7 +248,6 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
     for Δ in Δs:
         params2[0] += Δ
         params2[1] += Δ
-        #grating2 = [950+Δ, 950+Δ, 0.81, 0.48, 9e-7]
         length = double_cavity_length(params, params2, λs)
         Ts =  dual_fano_transmission(params, params2, length, λs, intracavity=intracavity, losses=losses)
         plt.plot(λs, Ts, label="Δ=%snm" %(Δ))
@@ -413,8 +424,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = resonant_cavity_length(params1, λs)
 #fano_cavity_transmission_plot(params1, λs, intracavity=False, losses=True)
 
-#length = double_cavity_length(params1, params2, λs)
-#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True)
+length = double_cavity_length(params1, params2, λs)
+dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, zoom=True)
 
 #ls = np.linspace(double_cavity_length(params1,params2,λs)-0.03*1e3, double_cavity_length(params2,params1,λs)+0.03*1e3, 7)
 #cavity_length_plot(ls, params1, params2, λs, intracavity=True)
@@ -425,7 +436,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #grating1 = [951, 951, 0.81, 0.48, 1e-6]
 #grating2 = grating1
 #line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2, λs), intracavity=True, losses=False)
-line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
+#line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
 #line_width_single(params1, λs)
 #line_width_double(params1, params2, λs)
 
