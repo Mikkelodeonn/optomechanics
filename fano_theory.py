@@ -21,8 +21,8 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-λs = np.linspace(951.2, 952.4, 500)
-#λs = np.linspace(950, 954, 500)
+#λs = np.linspace(951.2, 952.4, 500)
+λs = np.linspace(951, 953, 500)
 #λs = np.linspace(951.6, 951.9, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
@@ -172,10 +172,10 @@ def fano_cavity_transmission(params: list, λs: np.array, intracavity=False, los
         
     if intracavity == True:
         def cavity_transmission(λ, rg, tg, l):
-            #tm = np.sqrt(0.06)
             rm = np.sqrt(0.92)
             tg = 1
-            T = np.abs(tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
+            tm = 1
+            T = np.abs(tg*tm*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
     
     Ts = []
@@ -416,16 +416,16 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = double_cavity_length(params1, params2, λs)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True)
 
-ls = np.linspace(double_cavity_length(params1,params2,λs)-0.03*1e3, double_cavity_length(params2,params1,λs)+0.03*1e3, 7)
-cavity_length_plot(ls, params1, params2, λs, intracavity=True)
+#ls = np.linspace(double_cavity_length(params1,params2,λs)-0.03*1e3, double_cavity_length(params2,params1,λs)+0.03*1e3, 7)
+#cavity_length_plot(ls, params1, params2, λs, intracavity=True)
 
 
 #### for arbitrary line width comparison of the single and double fano models ####
 
-#grating1 = [951, 951, 0.81, 0.48, 1.175e-6]
+#grating1 = [951, 951, 0.81, 0.48, 1e-6]
 #grating2 = grating1
 #line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2, λs), intracavity=True, losses=False)
-#line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
+line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
 #line_width_single(params1, λs)
 #line_width_double(params1, params2, λs)
 
