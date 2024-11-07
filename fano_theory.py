@@ -74,8 +74,8 @@ def theoretical_reflection_values_plot(params: list, λs: np.array):
     ts = model(λs, *params)
     λs_fit = np.linspace(np.min(λs), np.max(λs), 1000)
 
-    popt_r, pcov_r = curve_fit(model, λs, rs, p0=[951.8,951.8,0.4,1,1e-7])
-    popt_t, pcov_t = curve_fit(model, λs, ts, p0=[951.8,951.8,0.6,1,1e-7])
+    popt_r, _ = curve_fit(model, λs, rs, p0=[951.8,951.8,0.4,1,1e-7])
+    popt_t, _ = curve_fit(model, λs, ts, p0=[951.8,951.8,0.6,1,1e-7])
 
     ts_fit = model(λs_fit, *popt_t)
     rs_fit = model(λs_fit, *popt_r)
