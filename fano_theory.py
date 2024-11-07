@@ -23,7 +23,7 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # α  -> loss factor 
 
 #λs = np.linspace(951, 952.5, 500)
-λs = np.linspace(950, 954, 500)
+λs = np.linspace(950.5, 953.5, 500)
 #λs = np.linspace(945, 960, 10000)
 #λs = np.linspace(951.6, 951.9, 200)
 
@@ -112,7 +112,7 @@ def resonant_cavity_length(params: list, λs: np.array):
     tm = np.sqrt(0.08)
     rm = np.sqrt(0.92)
 
-    lmin = 30
+    lmin = 100
     ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
@@ -146,7 +146,7 @@ def double_cavity_length(params1: list, params2: list, λs: np.array):
     lengths = []
     Ts = []
 
-    lmin = 5
+    lmin = 100
     ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
@@ -293,6 +293,7 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
         params2 = np.copy(params)
         params2[0] += Δ
         params2[1] += Δ
+        #length = (double_cavity_length(params, params2, λs) + double_cavity_length(params2, params, λs))/2
         Ts =  dual_fano_transmission(params, params2, length, λs, intracavity=intracavity, losses=losses)
         if np.abs(Δ) < 1e-6:
             linesize = 3
@@ -300,8 +301,7 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
             linesize = 2
         plt.plot(λs, Ts, color=paint, linestyle=style, linewidth=linesize, label="Δ=%snm" %(round(Δ,2)))
 
-
-    plt.title("Double fano cavity transmission as a function of wavelength")
+    plt.title("Double fano transmission for varying detuning Δ (cavity length %s)" %(r"$\rightarrow l_{g,1} \approx 100 \mu m$"))
     plt.xlabel("Wavelength [nm]")
     plt.ylabel("Transmission [arb.u.]")
     plt.legend()
@@ -309,12 +309,14 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
 
 def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, intracavity=False, losses=True):
     plt.figure(figsize=(15,6))
-    for l in ls:
+    linestyles = ["-.", "--", "-", "--", "-."]
+    colors = ["skyblue","royalblue","forestgreen", "firebrick", "lightcoral"]
+    for l, paint, style in zip(ls, colors, linestyles):
         Ts = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
-        plt.plot(λs, Ts, label="cavity length: %sμm" % str(round(l*1e-3,2)))
-    #plt.title("Double fano cavity transmission as a function of wavelength (positive detuning)")
+        plt.plot(λs, Ts, color=paint, linestyle=style, linewidth=2, label="cavity length: %sμm" % str(round(l*1e-3,2)))
+    plt.title("Double fano transmission for different cavity lengths %s (Δ = 0.47nm)" %(r"$l_{g,1} \rightarrow l_{g,2}$")) 
     plt.xlabel("Wavelength [nm]")
-    plt.ylabel("Intensity [arb.u.]")
+    plt.ylabel("Normalized transmission [arb.u.]")
     plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
     plt.subplots_adjust(right=0.70)
     plt.show() 
@@ -457,11 +459,12 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
     return FWHM
 
 
-#### double fano transmission as a function of detuning ####
+#### double fano transmission as a function of detuning #### 
 
-Δs = np.linspace(-1.5, 1.5, 5) # low resolution
+#Δs = np.linspace(-1.5, 1.5, 5) # low resolution
 #Δs = np.linspace(-0.3, 0.3, 5) # high resolution
-detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
+#Δs = np.linspace(0, 0.15, 5)
+#detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
@@ -477,8 +480,11 @@ detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 #length = double_cavity_length(params1, params2, λs)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, total_grating_trans=True, zoom=False)
 
+#Δ = 0.47
+#params2[0] += Δ
+#params2[1] += Δ
 #ls = np.linspace(double_cavity_length(params1,params2,λs), double_cavity_length(params2,params1,λs), 5)
-#cavity_length_plot(ls, params1, params2, λs, intracavity=False)
+#cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True)
 
 
 #### for arbitrary line width comparison of the single and double fano models ####
