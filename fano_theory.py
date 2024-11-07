@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
 from scipy.optimize import curve_fit
 from scipy.signal import find_peaks
-from mpl_toolkits.axes_grid1.inset_locator import inset_axes, mark_inset
+from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
 M1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1/400_M1 trans.txt")
 M2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 trans.txt")
@@ -22,7 +22,7 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-λs = np.linspace(948, 956, 500)
+λs = np.linspace(951.5, 952.25, 500)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.6, 951.9, 200)
 
@@ -145,7 +145,7 @@ def double_cavity_length(params1: list, params2: list, λs: np.array):
     lengths = []
     Ts = []
 
-    lmin = 30
+    lmin = 100
     ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
@@ -285,17 +285,19 @@ def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs
 
 def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, losses=True): ## plots dual fano cavity transmission for different values for the detuning
     plt.figure(figsize=(10,6))
-    params2 = np.copy(params)
-    for Δ in Δs:
+    length = double_cavity_length(params, params, λs)
+    linestyles = ["-.", "--", "-", "--", "-."]
+    colors = ["skyblue","royalblue","forestgreen", "firebrick", "lightcoral"]
+    for Δ, paint, style in zip(Δs,colors,linestyles):
+        params2 = np.copy(params)
         params2[0] += Δ
         params2[1] += Δ
-        length = double_cavity_length(params, params2, λs)
         Ts =  dual_fano_transmission(params, params2, length, λs, intracavity=intracavity, losses=losses)
-        plt.plot(λs, Ts, label="Δ=%snm" %(Δ))
+        plt.plot(λs, Ts, color=paint, linestyle=style, label="Δ=%snm" %(round(Δ,2)))
 
-    plt.title("Dual fano cavity transmission as a function of wavelength")
+    plt.title("Double fano cavity transmission as a function of wavelength")
     plt.xlabel("Wavelength [nm]")
-    plt.ylabel("Intensity [arb.u.]")
+    plt.ylabel("Transmission [arb.u.]")
     plt.legend()
     plt.show()
 
@@ -451,8 +453,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### double fano transmission as a function of detuning ####
 
-#Δs = np.array([0.0, 0.05, 0.1, 0.15, 0.2, 0.25]) # detuning in nm
-#detuning_plot(Δs, params1, λs, intracavity=False, losses=False)
+Δs = np.linspace(-0.3, 0.3, 5) # detuning in nm
+detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
@@ -483,9 +485,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### length scan of the single and double fano cavities
 
-ls = np.linspace(30e3, 31e3, 300)
+#ls = np.linspace(30e3, 31e3, 300)
 #double_fano_length_scan(params1, params2, ls)
-single_fano_length_scan(params1, ls)
+#single_fano_length_scan(params1, ls)
 
 
 #### plotting the calculated reflection/transmission values ####
