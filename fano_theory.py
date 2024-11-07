@@ -22,8 +22,8 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-λs = np.linspace(951.5, 952.25, 500)
-#λs = np.linspace(910, 980, 10000)
+λs = np.linspace(950, 954, 500)
+#λs = np.linspace(945, 960, 10000)
 #λs = np.linspace(951.6, 951.9, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
@@ -145,7 +145,7 @@ def double_cavity_length(params1: list, params2: list, λs: np.array):
     lengths = []
     Ts = []
 
-    lmin = 100
+    lmin = 30
     ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
@@ -293,7 +293,12 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
         params2[0] += Δ
         params2[1] += Δ
         Ts =  dual_fano_transmission(params, params2, length, λs, intracavity=intracavity, losses=losses)
-        plt.plot(λs, Ts, color=paint, linestyle=style, label="Δ=%snm" %(round(Δ,2)))
+        if np.abs(Δ) < 1e-6:
+            linesize = 3
+        else:
+            linesize = 2
+        plt.plot(λs, Ts, color=paint, linestyle=style, linewidth=linesize, label="Δ=%snm" %(round(Δ,2)))
+
 
     plt.title("Double fano cavity transmission as a function of wavelength")
     plt.xlabel("Wavelength [nm]")
@@ -314,22 +319,22 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
     plt.show() 
 
 def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False, losses=True): 
-    params2[1] += 0.60
-    params2[0] += 0.60
-    Δs = 0.12
+    params2[1] += 0.40
+    params2[0] += 0.40
+    Δs = 0.08
     rows = 3
     columns = 3
-    Δ_label = 0.60
+    Δ_label = 0.40
     fig, ax = plt.subplots(rows,columns, figsize=(18,8))
     for i in range(rows):
         for j in range(columns):
             params2[1] -= Δs
             params2[0] -= Δs
             Δ_label -= Δs
-            if Δ_label != 0.0:
-                ls = np.linspace(double_cavity_length(params1, params2, λs), double_cavity_length(params2, params1, λs), 20)
-            else:
+            if np.abs(Δ_label) < 1e-6:
                 ls = np.linspace(double_cavity_length(params1, params2, λs)-0.1, double_cavity_length(params2, params1, λs)+0.1, 20)
+            else:
+                ls = np.linspace(double_cavity_length(params1, params2, λs), double_cavity_length(params2, params1, λs), 20)
             Ts = []
             for l in ls:
                 T = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
@@ -356,7 +361,7 @@ def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False
     fig.colorbar(im, cax=cbar_ax)
     if intracavity == False and losses == False:
         fig.text(0.5, 0.93, 'Double fano lossless transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
-    if intracavity == False and losses == True:
+    elif intracavity == False and losses == True:
         fig.text(0.5, 0.93, 'Double fano transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
     else: 
         fig.text(0.5, 0.93, 'Double fano lossless intracavity intensity as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
@@ -453,12 +458,12 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### double fano transmission as a function of detuning ####
 
-Δs = np.linspace(-0.3, 0.3, 5) # detuning in nm
-detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
+#Δs = np.linspace(-1.5, 1.5, 5) # detuning in nm
+#detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
-#l_vs_λ_cmaps(params1, params2, λs, intracavity=True, losses=False)
+#l_vs_λ_cmaps(params1, params2, λs, intracavity=True, losses=True)
 #double_fano_cmap(params1, params2, λs)
 
 
@@ -470,7 +475,7 @@ detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 #length = double_cavity_length(params1, params2, λs)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, total_grating_trans=True, zoom=False)
 
-#ls = np.linspace(double_cavity_length(params1,params2,λs), double_cavity_length(params2,params1,λs)+1*1e3, 100)
+#ls = np.linspace(double_cavity_length(params1,params2,λs), double_cavity_length(params2,params1,λs), 5)
 #cavity_length_plot(ls, params1, params2, λs, intracavity=False)
 
 
