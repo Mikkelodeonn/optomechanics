@@ -22,6 +22,7 @@ params2 = M3.lossy_fit([952,952,0.6,1,0.1])
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
+#λs = np.linspace(951, 952.5, 500)
 λs = np.linspace(950, 954, 500)
 #λs = np.linspace(945, 960, 10000)
 #λs = np.linspace(951.6, 951.9, 200)
@@ -145,7 +146,7 @@ def double_cavity_length(params1: list, params2: list, λs: np.array):
     lengths = []
     Ts = []
 
-    lmin = 30
+    lmin = 5
     ls = np.linspace(lmin,lmin+1,100000)*1e3
 
     for l in ls:
@@ -458,8 +459,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### double fano transmission as a function of detuning ####
 
-#Δs = np.linspace(-1.5, 1.5, 5) # detuning in nm
-#detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
+Δs = np.linspace(-1.5, 1.5, 5) # low resolution
+#Δs = np.linspace(-0.3, 0.3, 5) # high resolution
+detuning_plot(Δs, params1, λs, intracavity=False, losses=True)
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
