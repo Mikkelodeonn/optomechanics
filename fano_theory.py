@@ -109,8 +109,8 @@ def theoretical_reflection_values_comparison_plot(params1: list, params2: list, 
     
     λs_fit = np.linspace(np.min(λs), np.max(λs), 1000)
 
-    popt_t1, _ = curve_fit(model, λs, t1, p0=[951.8,951.8,0.6,1,1e-7])
-    popt_t2, _ = curve_fit(model, λs, t2, p0=[951.8,951.8,0.6,1,1e-7])
+    popt_t1, _ = curve_fit(model, λs, t1, p0=[952,952,0.6,1,1e-7])
+    popt_t2, _ = curve_fit(model, λs, t2, p0=[952,952,0.6,1,1e-7])
     t1_fit = model(λs_fit, *popt_t1)
     t2_fit = model(λs_fit, *popt_t2)
     tidx1 = np.argmin(t1_fit)
@@ -118,8 +118,8 @@ def theoretical_reflection_values_comparison_plot(params1: list, params2: list, 
     tmin1 = t1_fit[tidx1]
     tmin2 = t2_fit[tidx2]
 
-    popt_r1, _ = curve_fit(model, λs, r1, p0=[951.8,951.8,0.4,1,1e-7])
-    popt_r2, _ = curve_fit(model, λs, r2, p0=[951.8,951.8,0.4,1,1e-7])
+    popt_r1, _ = curve_fit(model, λs, r1, p0=[952,952,0.6,1,1e-7])
+    popt_r2, _ = curve_fit(model, λs, r2, p0=[952,952,0.6,1,1e-7])
     r1_fit = model(λs_fit, *popt_r1)
     r2_fit = model(λs_fit, *popt_r2)
     ridx1 = np.argmax(r1_fit)
@@ -567,7 +567,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #fano_cavity_transmission_plot(params1, length, λs, intracavity=False, losses=True)
 
 #length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
-#length = double_cavity_length(params1, params2, λs, lmin=10)
+#length = double_cavity_length(params1, params2, λs, lmin=30)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, total_grating_trans=False, zoom=False)
 
 #Δ = 0.1
@@ -592,9 +592,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### length scan of the single and double fano cavities
 
-l=30
-ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
-double_fano_length_scan(params1, params2, ls, λs, plot_both_gratings=True)
+#l=30
+#ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
+#double_fano_length_scan(params1, params2, ls, λs, plot_both_gratings=True)
 #single_fano_length_scan(params1, ls, λs)
 
 
