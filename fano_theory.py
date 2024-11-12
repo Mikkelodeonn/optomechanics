@@ -23,7 +23,7 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 # α  -> loss factor 
 
 #λs = np.linspace(951, 952.5, 500)
-λs = np.linspace(950, 953, 50)
+λs = np.linspace(950, 953, 500)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.7, 951.85, 200)
 
@@ -142,8 +142,6 @@ def theoretical_reflection_values_comparison_plot(params1: list, params2: list, 
     plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
     plt.subplots_adjust(right=0.70)
     plt.show()
-    
-
 
 def resonant_cavity_length(params: list, λs: np.array, lmin=50):
     reflection_values = theoretical_reflection_values(params, losses=True)[1]
@@ -243,31 +241,46 @@ def single_fano_length_scan(params: list, ls: np.array, λs: np.array):
     plt.legend(["Resonance cavity length: %sμm" % str(round(resonance_length*1e-3,3))])
     plt.show()
 
-def double_fano_length_scan(params1: list, params2: list, ls: np.array, λs: np.array):
+def double_fano_length_scan(params1: list, params2: list, ls: np.array, λs: np.array, plot_both_gratings: False):
     t1 = [complex(t) for t in np.array(np.sqrt(model(λs, *params1)))]
     t2 = [complex(t) for t in np.array(np.sqrt(model(λs, *params2)))]
     r1 = [complex(r) for r in theoretical_reflection_values(params1, losses=True)[1]]
     r2 = [complex(r) for r in theoretical_reflection_values(params2, losses=True)[1]]
 
     idx = np.argmin(t1)
+    idx_2 = np.argmin(t2)
 
     rg1 = r1[idx]; rg2 = r2[idx]
     tg1 = t1[idx]; tg2 = t2[idx]
 
+    rg1_2 = r1[idx_2]; rg2_2 = r2[idx_2]
+    tg1_2 = t1[idx_2]; tg2_2 = t2[idx_2]
+
+
     λ = np.array([λs[idx]])
+    λ_2 = np.array([λs[idx_2]])
     Ts = []
+    Ts_2 = []
     for l in ls:
         T = np.abs(tg1*tg2*np.exp(1j*(2*np.pi/λ)*l)/(1-rg1*rg2*np.exp(2j*(2*np.pi/λ)*l)))**2
+        T_2 = np.abs(tg1_2*tg2_2*np.exp(1j*(2*np.pi/λ_2)*l)/(1-rg1_2*rg2_2*np.exp(2j*(2*np.pi/λ_2)*l)))**2
         Ts.append(T)
+        Ts_2.append(T_2)
     
     resonance_length = double_cavity_length(params1, params2, λs, lmin=ls[0]*1e-3)*1e-3
+    resonance_length_2 = double_cavity_length(params2, params1, λs, lmin=ls[0]*1e-3)*1e-3
 
-    plt.figure(figsize=(10,6))
-    plt.plot(ls*1e-3, Ts, "cornflowerblue")
+    plt.figure(figsize=(15,6))
+    if plot_both_gratings == True:
+        plt.plot(ls*1e-3, Ts, "cornflowerblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
+        plt.plot(ls*1e-3, Ts_2, "--", color="lightcoral", label="$l_{res,M5}$: %sμm" % str(round(resonance_length_2,3)))
+    else:
+        plt.plot(ls*1e-3, Ts, "cornflowerblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
     plt.title("Double fano cavity transmission as a function of cavity length")
     plt.xlabel("cavity length [μm]")
     plt.ylabel("Transmission [arb. u.]")
-    plt.legend(["Resonance cavity length: %sμm" % str(round(resonance_length,3))]) 
+    plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+    plt.subplots_adjust(right=0.70)
     plt.show()
  
 def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
@@ -350,7 +363,7 @@ def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs
         tg2 = model(λs, *params2)
         tg_total = np.abs(tg1*tg2)
         ax.plot(λs, tg_total, "gray", linestyle="--", alpha=0.6, label=r"$|t_{M3} \cdot t_{M5}|$")
-    ax.set_title("Double fano cavity transmission as a function of wavelength (l = %sμm)" % str(round(length*1e-3,3)))
+    ax.set_title("Double fano transmission as a function of wavelength ($\\left(l_{M3} + l_{M5}\\right)/2 \\approx$%sμm)" % str(round(length*1e-3,3)))
     ax.set_xlabel("Wavelength [nm]")
     ax.set_ylabel("Intensity [arb.u.]")
     ax.plot(λs, Ts, "cornflowerblue", label="cavity transmission")
@@ -555,10 +568,10 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
 #length = double_cavity_length(params1, params2, λs, lmin=10)
-#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, total_grating_trans=True, zoom=False)
+#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, total_grating_trans=False, zoom=False)
 
 #Δ = 0.1
-#lmin=51
+#lmin=30
 #params2[0] += Δ
 #params2[1] += Δ
 #ls = np.linspace(double_cavity_length(params1,params2,λs,lmin=lmin), double_cavity_length(params2,params1,λs,lmin=lmin), 5)
@@ -579,9 +592,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### length scan of the single and double fano cavities
 
-#l=10
-#ls = np.linspace(l*1e3, (l+1)*1e3, 1000)
-#double_fano_length_scan(params1, params2, ls, λs)
+l=30
+ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
+double_fano_length_scan(params1, params2, ls, λs, plot_both_gratings=True)
 #single_fano_length_scan(params1, ls, λs)
 
 
