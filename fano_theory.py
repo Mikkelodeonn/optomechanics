@@ -350,32 +350,37 @@ def dual_fano_transmission(params1: list, params2: list, length: float, λs: np.
 def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, zoom=False, grating_trans=False):
     Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
     fig, ax = plt.subplots(figsize=(10,6))
-    if zoom == True:
+    if zoom == True and grating_trans == False:
         x1, x2, y1, y2 = params1[0]-1, params1[0]+1, 0.05, 0.6
-        axins = ax.inset_axes([0.7, 0.65, 0.25, 0.25])
+        axins = ax.inset_axes([0.1, 0.50, 0.30, 0.30])
         axins.plot(λs,Ts)
         axins.set_xlim(x1,x2)
         axins.set_ylim(y1,y2)
         axins.set_xticklabels([])
         axins.set_yticklabels([])
-        mark_inset(ax, axins, loc1=2, loc2=4, edgecolor="black", alpha=0.3)
-    if grating_trans == True:
+        mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
+    if grating_trans == True and zoom == False:
         tg1 = model(λs, *params1)
         tg2 = model(λs, *params2)
-        tg_total = np.abs(tg1*tg2)
         ax.plot(λs, tg1, "gray", linestyle="--", alpha=0.6, label="$t_{M3}$")
+        ax.plot(λs, tg2, "purple", linestyle="--", alpha=0.6, label="$t_{M5}$")
     if grating_trans == True and zoom == True:
         tg1 = model(λs, *params1)
-        x1, x2, y1, y2 = params1[0]-1, params1[0]+1, 0.05, 0.6
-        axins = ax.inset_axes([0.7, 0.65, 0.25, 0.25])
+        tg2 = model(λs, *params2)
+        ax.plot(λs, tg1, "gray", linestyle="--", alpha=0.6, label="$t_{M3}$")
+        ax.plot(λs, tg2, "purple", linestyle="--", alpha=0.6, label="$t_{M5}$")
+        x1, x2, y1, y2 = params1[0]-1, params1[0]+1, 0.01, 0.6
+        axins = ax.inset_axes([0.1, 0.50, 0.30, 0.30])
         axins.plot(λs, Ts, color="cornflowerblue")
         axins.plot(λs, tg1, "gray", linestyle="--", alpha=0.6)
+        axins.plot(λs, tg2, "purple", linestyle="--", alpha=0.6)
         axins.set_xlim(x1,x2)
         axins.set_ylim(y1,y2)
         axins.set_xticklabels([])
         axins.set_yticklabels([])
-        mark_inset(ax, axins, loc1=2, loc2=4, edgecolor="black", alpha=0.3)
+        mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
     ax.set_title("Double fano transmission as a function of wavelength ($\\left(l_{M3} + l_{M5}\\right)/2 \\approx$%sμm)" % str(round(length*1e-3,3)))
+    #ax.set_title("Double fano transmission as a function of wavelength ($l_{M3} \\approx$%sμm)" % str(round(length*1e-3,3)))
     ax.set_xlabel("Wavelength [nm]")
     ax.set_ylabel("Intensity [arb.u.]")
     ax.plot(λs, Ts, "cornflowerblue", label="cavity transmission")
@@ -590,9 +595,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = resonant_cavity_length(params1, λs, lmin=10)
 #fano_cavity_transmission_plot(params1, length, λs, intracavity=False, losses=True)
 
-#length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
+length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
 #length = double_cavity_length(params1, params2, λs, lmin=30)
-#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=True, zoom=False)
+dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=True, zoom=True)
 
 #Δ = 0.1
 #lmin=30
