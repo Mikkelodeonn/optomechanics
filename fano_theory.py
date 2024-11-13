@@ -24,8 +24,8 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(950, 953, 500)
-#λs = np.linspace(910, 980, 10000)
+#λs = np.linspace(950, 953, 500)
+λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.7, 951.85, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
@@ -409,7 +409,8 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
         for Ts, paint, style in zip(Ts_inset,colors,linestyles):
             axins.plot(λs, Ts, color=paint, linestyle=style, linewidth=2)
         axins.set_xlim(951.65, 951.95)
-        axins.set_ylim(0.02, 0.5)
+        #axins.set_xlim(950, 953.5)
+        axins.set_ylim(0.02, 0.6)
         axins.set_xticklabels([])
         axins.set_yticklabels([])
         mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
