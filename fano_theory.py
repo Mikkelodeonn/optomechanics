@@ -23,6 +23,7 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 # α  -> loss factor 
 
 #λs = np.linspace(951, 952.5, 500)
+#λs = np.linspace(951.65, 951.95, 500)
 λs = np.linspace(950, 953, 500)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.7, 951.85, 200)
@@ -394,14 +395,25 @@ def detuning_plot(Δs: list, params: list, λs: np.array, intracavity=False, los
     plt.legend()
     plt.show()
 
-def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, intracavity=False, losses=True):
-    plt.figure(figsize=(15,6))
+def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, intracavity=False, losses=True, zoom=False):
+    fig, ax = plt.subplots(figsize=(15,6))
     linestyles = ["-.", "--", "-", "--", "-."]
     colors = ["skyblue","royalblue","forestgreen", "firebrick", "lightcoral"]
+    Ts_inset = []
     for l, paint, style in zip(ls, colors, linestyles):
         Ts = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
-        plt.plot(λs, Ts, color=paint, linestyle=style, linewidth=2, label="cavity length: %sμm" % str(round(l*1e-3,4)))
-    plt.title("Double fano transmission for different cavity lengths %s (M3/M5)" %(r"$l_{g,1} \rightarrow l_{g,2}$")) 
+        ax.plot(λs, Ts, color=paint, linestyle=style, linewidth=2, label="cavity length: %sμm" % str(round(l*1e-3,4)))
+        Ts_inset.append(Ts)
+    if zoom == True:
+        axins = ax.inset_axes([0.1, 0.60, 0.35, 0.35])
+        for Ts, paint, style in zip(Ts_inset,colors,linestyles):
+            axins.plot(λs, Ts, color=paint, linestyle=style, linewidth=2)
+        axins.set_xlim(951.65, 951.95)
+        axins.set_ylim(0.02, 0.5)
+        axins.set_xticklabels([])
+        axins.set_yticklabels([])
+        mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
+    plt.title("Double fano transmission for different cavity lengths %s" %("$l_{M3} \\rightarrow l_{M5}$")) 
     plt.xlabel("Wavelength [nm]")
     plt.ylabel("Normalized transmission [arb.u.]")
     plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
@@ -575,7 +587,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #params2[0] += Δ
 #params2[1] += Δ
 #ls = np.linspace(double_cavity_length(params1,params2,λs,lmin=lmin), double_cavity_length(params2,params1,λs,lmin=lmin), 5)
-#cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True)
+#cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True, zoom=True)
 
 
 #### for line width comparison of the single and double fano models ####
