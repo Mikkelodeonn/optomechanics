@@ -422,7 +422,7 @@ def loss_factor_scan(params: list, loss_list: list, λs: np.array, lmin=50): ## 
         length = double_cavity_length(params, params, λs, lmin=lmin, loss_factor=loss)
         Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=loss)
         plt.plot(λs, Ts, color=color, linestyle=linestyle, linewidth=2, label="cavity losses: %s%%" %str(2*np.abs(percentile_loss)))
-    plt.title("symmetric double fano transmission for different cavity losses, length: $l_{M3} \\approx$ %s $\mu m$" % str(round(length*1e-3,3)))
+    plt.title("symmetric double fano transmission for different cavity losses, length: $l_{M3} \\approx$ %s $\mu m$" % str(lmin))
     plt.xlabel("wavelength [nm]")
     plt.ylabel("normalized transmission [arb. u.]")
     plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
@@ -596,8 +596,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### double fano transmission as a function of losses ####
 
-#Ls = [0.0, 0.02, 0.04, 0.06, 0.08]
-#loss_factor_scan(params1, Ls, λs, lmin=30)
+Ls = [0.0, 0.02, 0.04, 0.06, 0.08]
+loss_factor_scan(params1, Ls, λs, lmin=30)
 
 
 #### double fano transmission as a function of detuning #### 
@@ -618,9 +618,9 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = resonant_cavity_length(params1, λs, lmin=10)
 #fano_cavity_transmission_plot(params1, length, λs, intracavity=False, losses=True)
 
-length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
+#length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
 #length = double_cavity_length(params1, params2, λs, lmin=30)
-dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=False, zoom=False)
+#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=False, zoom=False)
 
 #Δ = 0.1
 #lmin=30
