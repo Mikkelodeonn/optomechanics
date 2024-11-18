@@ -596,8 +596,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #### double fano transmission as a function of losses ####
 
-Ls = [0.0, 0.02, 0.04, 0.06, 0.08] ## loss factor is NOT equal to actual cavity losses
-loss_factor_scan(params1, Ls, λs, lmin=30)
+#Ls = [0.0, 0.02, 0.04, 0.06, 0.08] ## loss factor is NOT equal to actual cavity losses
+#loss_factor_scan(params1, Ls, λs, lmin=30)
 
 
 #### double fano transmission as a function of detuning #### 
