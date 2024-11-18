@@ -24,9 +24,9 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(950.5, 953, 500)
+λs = np.linspace(950, 953, 1000)
 #λs = np.linspace(910, 980, 10000)
-#λs = np.linspace(951.7, 951.85, 200)
+#λs = np.linspace(951.68, 951.90, 200)
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -432,7 +432,9 @@ def loss_factor_scan(params: list, loss_list: list, λs: np.array, lmin=50): ## 
 def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, intracavity=False, losses=True, zoom=False):
     fig, ax = plt.subplots(figsize=(15,6))
     linestyles = ["-.", "--", "-", "--", "-."]
+    #linestyles = [":", "-.", "--", "-"]
     colors = ["skyblue","royalblue","forestgreen", "firebrick", "lightcoral"]
+    #colors = ["skyblue", "lightgreen", "lightcoral", "royalblue"]
     Ts_inset = []
     for l, paint, style in zip(ls, colors, linestyles):
         Ts = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
@@ -444,11 +446,12 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
             axins.plot(λs, Ts, color=paint, linestyle=style, linewidth=2)
         axins.set_xlim(951.65, 951.95)
         #axins.set_xlim(950, 953.5)
-        axins.set_ylim(0.02, 0.6)
+        axins.set_ylim(0.02, 0.5)
         axins.set_xticklabels([])
         axins.set_yticklabels([])
         mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
-    plt.title("Double fano transmission for different cavity lengths %s" %("$l_{M3} \\rightarrow l_{M5}$")) 
+    #plt.title("Double fano transmission for different cavity lengths %s" %("$l_{M3} \\rightarrow l_{M5}$")) 
+    plt.title("Double fano transmission for different cavity lengths:  %s" %("$(l_{M3} + l_{M5})/2$")) 
     plt.xlabel("Wavelength [nm]")
     plt.ylabel("Normalized transmission [arb.u.]")
     plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
@@ -546,7 +549,7 @@ def line_width_double(params1: list, params2: list, λs: np.array, length: float
     err = 2*np.sqrt(np.diag(pcov))[3]*1e3
     print("error: ", round(err,4))
     print("FWHM: ", round(np.abs(FWHM),4), "pm")
-    FWHM_print = str(round(FWHM,2)) + "+/-" + str(round(err,2))
+    FWHM_print = str(round(FWHM,2)) + " +/- " + str(round(err,2))
     plt.figure(figsize=(10,6))
     plt.plot(λs, model(λs, *popt), label="linewidth = %s" % (FWHM_print))
     plt.plot(λs, Ts, 'r.')
@@ -627,6 +630,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #params2[0] += Δ
 #params2[1] += Δ
 #ls = np.linspace(double_cavity_length(params1,params2,λs,lmin=lmin), double_cavity_length(params2,params1,λs,lmin=lmin), 5)
+#lmins = [10, 40, 100, 200]
+#ls = [(double_cavity_length(params1,params2,λs,lmin)+double_cavity_length(params2,params1,λs,lmin))/2 for lmin in lmins]
 #cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True, zoom=True)
 
 
@@ -634,8 +639,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #grating1 = [951, 951, 0.81, 0.48, 1e-6]
 #grating2 = grating1
-#lmin = 30
-#length = double_cavity_length(params1, params2, λs, lmin=lmin)*0.25 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.75
+#lmin = 5
+#length = double_cavity_length(params1, params2, λs, lmin=lmin)*0.0 + double_cavity_length(params2, params1, λs, lmin=lmin)*1.0
 #print("cavity length: ", length*1e-3)
 #line_width_comparison(grating1, grating2, double_cavity_length(grating1, grating2, λs), intracavity=True, losses=False)
 #line_width_comparison(params1, params2, double_cavity_length(params1, params2, λs), intracavity=True, losses=True)
@@ -676,12 +681,21 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
 #plt.figure(figsize=(10,6))
 # 12 -> 21
-#linewidths = [79.8997, 75.7106, 74.117, 76.2582, 79.8249]
-#cavity_lengths = [30.025460254602546, 30.021697716977172, 30.01810018100181, 30.014460144601447, 30.010830108301082]
-#errors = [0.2903, 0.15, 0.0768, 0.0982, 0.3143]
+# ~5um
+#cl5 = [5.277452774527745, 5.274415244152443, 5.271347713477135, 5.268325183251831, 5.265172651726517]
+#lw5 = [92.6956, 87.0209, 84.2142, 86.8427, 96.6472]
+#err5 = [0.2867, 0.1739, 0.1809, 0.2018, 0.178]
+# ~30um
+#lw30 = [79.8997, 75.7106, 74.117, 76.2582, 79.8249] 
+#cl30 = [30.025460254602546, 30.021697716977172, 30.01810018100181, 30.014460144601447, 30.010830108301082]
+#err30 = [0.2903, 0.15, 0.0768, 0.0982, 0.3143]
+# ~300um
+#cl300 = [300.34872348723485, 300.33872338723387, 300.3287232872329, 300.31872318723185, 300.3087230872309] # um 
+#lw300 = [31.7342, 29.7608, 28.8908, 29.0817, 30.2533] # pm
+#err300 = [0.03, 0.0259, 0.0199, 0.0149, 0.0119]
 
 #plt.errorbar(cavity_lengths, linewidths, errors, fmt="o", color="cornflowerblue", capsize=5)
-#plt.title("double Fano linewidth as a function of cavitylength (lengths: %s)" % r"$l_{M3} \rightarrow l_{M5} \approx 30μm$")
+#plt.title("double Fano linewidth as a function of cavity length (%s)" % r"$l_{M3} \rightarrow l_{M5} \approx 5μm$")
 #plt.ylabel("FWHM [pm]")
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
