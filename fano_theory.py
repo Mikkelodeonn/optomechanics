@@ -621,7 +621,8 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #length = resonant_cavity_length(params1, λs, lmin=10)
 #fano_cavity_transmission_plot(params1, length, λs, intracavity=False, losses=True)
 
-#length = (double_cavity_length(params1, params2, λs, lmin=30) + double_cavity_length(params2, params1, λs, lmin=30))/2
+#lmin = 51
+#length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
 #length = double_cavity_length(params1, params2, λs, lmin=30)
 #dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=False, zoom=False)
 
@@ -632,7 +633,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #ls = np.linspace(double_cavity_length(params1,params2,λs,lmin=lmin), double_cavity_length(params2,params1,λs,lmin=lmin), 5)
 #lmins = [10, 40, 100, 200]
 #ls = [(double_cavity_length(params1,params2,λs,lmin)+double_cavity_length(params2,params1,λs,lmin))/2 for lmin in lmins]
-#cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True, zoom=True)
+#cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=True, zoom=False)
 
 
 #### for line width comparison of the single and double fano models ####
@@ -695,7 +696,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #err300 = [0.03, 0.0259, 0.0199, 0.0149, 0.0119]
 
 #plt.errorbar(cavity_lengths, linewidths, errors, fmt="o", color="cornflowerblue", capsize=5)
-#plt.title("double Fano linewidth as a function of cavity length (%s)" % r"$l_{M3} \rightarrow l_{M5} \approx 5μm$")
+#plt.title("double Fano linewidth as a function of cavity length: %s" % r"$(l_{M3} + l_{M5})/2$")
 #plt.ylabel("FWHM [pm]")
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
