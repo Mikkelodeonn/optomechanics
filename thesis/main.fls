@@ -1,8 +1,8 @@
-PWD /Users/mikkelodeon/Desktop/Fysik - AU/Speciale/Thesis (latex)
+PWD /Users/mikkelodeon/optomechanics/thesis
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/mikkelodeon/Desktop/Fysik - AU/Speciale/Thesis (latex)/main.tex
+INPUT /Users/mikkelodeon/optomechanics/thesis/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/extsizes/extarticle.cls
