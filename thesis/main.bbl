@@ -1,0 +1,205 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Eichhorn}{book}{}
+      \name{author}{1}{}{%
+        {{hash=63bccb9e585d8efcf0b0f0f208f04eee}{%
+           family={Eichhorn},
+           familyi={E\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing Switzerland}%
+      }
+      \strng{namehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{fullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{bibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authorbibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authornamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authorfullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Laser Physics - From Principles to Practical Work in the Lab}
+      \field{year}{2014}
+    \endentry
+    \entry{Pedrotti}{book}{}
+      \name{author}{3}{}{%
+        {{hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{fullhash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{bibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorbibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authornamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorfullhash}{3939ebe7044db99b8c906f36251096b9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Optics, 3rd edition}
+      \field{year}{2018}
+    \endentry
+    \entry{Fan-Joannopoulos-guided-mode-resonance}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f949287454ec425b0cf7493a1d881de9}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Shanhui},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bc2d5931b89f57220ca190721e241846}{%
+           family={Joannopoulos},
+           familyi={J\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{08b0db1a9c739336fed3737cf153d10f}
+      \strng{fullhash}{08b0db1a9c739336fed3737cf153d10f}
+      \strng{bibnamehash}{08b0db1a9c739336fed3737cf153d10f}
+      \strng{authorbibnamehash}{08b0db1a9c739336fed3737cf153d10f}
+      \strng{authornamehash}{08b0db1a9c739336fed3737cf153d10f}
+      \strng{authorfullhash}{08b0db1a9c739336fed3737cf153d10f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{title}{Analysis of guided resonances in photonic crystal slabs}
+      \field{volume}{65}
+      \field{year}{2002}
+    \endentry
+    \entry{Fano-theory}{article}{}
+      \name{author}{1}{}{%
+        {{hash=03418cb202199cfed79c143ad9c82e96}{%
+           family={Fano},
+           familyi={F\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{fullhash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{bibnamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authorbibnamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authornamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authorfullhash}{03418cb202199cfed79c143ad9c82e96}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review}
+      \field{number}{6}
+      \field{title}{Effects of Configuration Interaction on Intensities and Phase Shifts*}
+      \field{volume}{124}
+      \field{year}{1961}
+    \endentry
+    \entry{Darki}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d5124032891d32e300aca36b46b86d1a}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={Ali\bibnamedelima Akbar},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Department of Physics}%
+        {Astronomy - Aarhus University}%
+      }
+      \strng{namehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{fullhash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{bibnamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authorbibnamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authornamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authorfullhash}{d5124032891d32e300aca36b46b86d1a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nanostructured tramplines for photonics and sensing}
+      \field{type}{phdthesis}
+      \field{year}{2022}
+    \endentry
+    \entry{Mitra}{article}{}
+      \name{author}{5}{}{%
+        {{hash=fae28472df6ba2b71c0164c6dfe5941f}{%
+           family={Mitra},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fb84494ae9e81ba81012811a81708634}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=49a273c32f879cd46e1def2cf24a7945}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=74a0953a09cb752fdcf2589df47cc63f}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{86c76d1b0399015c408049b202a8da43}
+      \strng{fullhash}{77e47ae6673f56a63ee04d94721fd010}
+      \strng{bibnamehash}{86c76d1b0399015c408049b202a8da43}
+      \strng{authorbibnamehash}{86c76d1b0399015c408049b202a8da43}
+      \strng{authornamehash}{86c76d1b0399015c408049b202a8da43}
+      \strng{authorfullhash}{77e47ae6673f56a63ee04d94721fd010}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Express}
+      \field{number}{9}
+      \field{title}{Narrow-linewidth Fano microcavities with resonant subwavelength grating mirror}
+      \field{volume}{32}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

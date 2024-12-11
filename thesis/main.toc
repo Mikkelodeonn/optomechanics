@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Content ideas}{1}{}%
+\contentsline {section}{\numberline {2}An Optical Cavity}{2}{}%
+\contentsline {subsection}{\numberline {2.1}The Fundamental Mode: A Gaussian Beam in the Large Waist Approximation}{2}{}%
+\contentsline {subsection}{\numberline {2.2}The Fabry-Perot Interferometer}{4}{}%
+\contentsline {section}{\numberline {3}The Fano mirror: a sub wavelength grating}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Geometric optical analysis}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Reflection/transmission spectra and line shape analysis}{4}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Lossless grating}{4}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Lossy grating}{7}{}%
+\contentsline {section}{\numberline {4}The single Fano cavity}{7}{}%
+\contentsline {section}{\numberline {5}The double Fano cavity}{7}{}%
+\contentsline {section}{\numberline {6}References}{8}{}%

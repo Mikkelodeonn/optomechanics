@@ -1,0 +1,88 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}  % Korrekt håndtering af æ, ø og å 
+\usepackage[T1]{fontenc}  % Korrekt håndtering af æ, ø og å 
+\usepackage{microtype}  % Typografisk magi! Giver bl.a. pænere orddeling 
+\usepackage{graphicx} % Gør det muligt at indsætte billeder  
+\usepackage{amsmath}  % Giver adgang til uundværlige matematikting  
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{helvet}
+\usepackage{revsymb}
+
+\usepackage{bm} % Bold math
+\usepackage[natbib=true, 
+            style=numeric,
+            sorting=none]{biblatex} % Referencer 
+\addbibresource{ref.bib}
+
+\usepackage{parskip}
+
+\setlength\parindent{0pt} %stopper indentering ved nyt paragraf 
+\usepackage{dsfont} 
+\usepackage{subcaption}
+\usepackage{caption}
+
+\usepackage{enumitem} %giver ekstra funktionalitet til enumerate og itemize 
+				    % fx [label=(\roman*), labelsep=0pt, labelwidth=0pt, labelindent=0pt, itemindent=0pt, topsep=0pt, itemsep=0pt]
+
+\usepackage{xcolor} 	%\textcolor{color}{text} for farvet text 
+				%\colorbox{color}{content} for baggrundsfarve 
+				%\textcolor{blue!50!white}{text} for at blande farver til finjustering 
+
+\usepackage{geometry} % leger med marginer og andre ting ved dokumentet
+\geometry{margin=1.25in} % duh
+%\renewcommand{\thesection}{\Alph{section}}
+% her erstattes alph med f.eks. Alph, arabic, roman eller Roman og ) kan fjernes eller erstattes
+
+\usepackage{wrapfig}
+\usepackage[skip=2pt,font=footnotesize]{caption}
+
+\newcommand{\ds}{\displaystyle} 
+
+\newcommand{\la}{\langle} 
+\newcommand{\ra}{\rangle} 
+
+\renewcommand{\v}{\left} 
+\newcommand{\h}{\right} 
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\fontsize{16}{15}\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{15}\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesubsubsection}{1em}{}
+
+
+\begin{document}
+
+%\include{Titlepage}
+
+%\maketitle
+\pagenumbering{roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+%\input{Preface}
+\setcounter{page}{1}
+
+\input{Outline}
+
+\newpage
+\input{theory/cavity_electrodynamics}
+\input{theory/fano_cavity}
+
+%\newpage
+%\input{Resumé}
+
+\newpage
+\section{References}
+\printbibliography[heading=none]
+%\newpage
+%\input{APPENDIX}
+\end{document}
+
