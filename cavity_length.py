@@ -1,7 +1,7 @@
 import numpy as np
 
 
-λ = 954.900
+λ = 955.000
 
 def L(λ,FSR):
     return λ**2/(2*FSR)*1e-3
