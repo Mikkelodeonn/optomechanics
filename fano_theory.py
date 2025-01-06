@@ -597,6 +597,27 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 
     return FWHM
 
+def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavity=True, losses=True):
+    lws = []
+    errs = []
+    lengths = np.linspace(double_cavity_length(params1, params2, λs, lmin=30), double_cavity_length(params2, params1, λs, lmin=30), 10)
+
+    for length in lengths:
+        Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
+        popt, pcov = curve_fit(model, λs, Ts, p0=(params1+params2)/2, maxfev=10000)
+        FWHM = np.abs(2*popt[3])*1e3
+        err = 2*np.sqrt(np.diag(pcov))[3]*1e3
+        lws.append(FWHM)
+        errs.append(err)
+    
+    plt.figure(figsize=(10,6))
+    plt.errorbar(lengths*1e-3, lws, errs, fmt="o", color="cornflowerblue", capsize=5)
+    plt.title("intracavity FWHM as a function of cavity length ($l = l_{M3} \\rightarrow l_{M5} \\approx 30μm$)")
+    plt.ylabel("FWHM [pm]")
+    plt.xlabel("cavity length [μm]") 
+    plt.show()
+
+
 #### double fano transmission as a function of losses ####
 
 #Ls = [0.0, 0.02, 0.04, 0.06, 0.08] ## loss factor is NOT equal to actual cavity losses
@@ -701,6 +722,7 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
 
+#linewidth_length_plot(params1, params2, λs)
 
 
 

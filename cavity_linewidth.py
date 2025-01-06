@@ -13,20 +13,20 @@ L = 0.11
 rd = np.sqrt(0.576)
 ## Grating transmission at resonance
 Tg = 0.06
-## Broadband mirror transmission at resonance 
+## Broadband mirror transmission at resonance
 Tm = 0.01
 
-def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float):
+def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float): 
     δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
-    return δγc
+    return δγc 
 
-def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, Tm: float):
+def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, Tm: float): 
     δγc = (λres**2)/(8*np.pi*l) * (Tg + Tm + L) 
     δγg = (γλ/(2*(1-rd))) * (Tg + Tm + L) 
-    δγ = 1/((1/δγc) + (1/δγg))
-    return δγ
+    δγ = 1/((1/δγc) + (1/δγg)) 
+    return δγ 
 
-lengths = np.array([460])*1e-6 # cavity lengths
+lengths = np.array([570])*1e-6 # cavity lengths
 for length in lengths:
     linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
     print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
