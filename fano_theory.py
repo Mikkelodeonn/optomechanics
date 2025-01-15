@@ -11,9 +11,12 @@ M2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 trans.
 M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.txt")
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
+M7 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 trans.txt")
 
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
 params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+
+params3 = M7.lossy_fit([952,952,0.6,1,0.1])
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelength
@@ -24,7 +27,7 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(950, 953, 1000)
+λs = np.linspace(950, 956, 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -679,7 +682,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #### plotting the calculated reflection/transmission values ####
 
-#theoretical_reflection_values_plot(params1, λs)
+theoretical_reflection_values_plot(params3, λs)
 #theoretical_reflection_values_comparison_plot(params1, params2, λs)
 
 #peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M4/70short.txt")

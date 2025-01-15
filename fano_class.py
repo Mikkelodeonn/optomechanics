@@ -108,17 +108,17 @@ class fano:
 ## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
 ## (plots/fit are produced according to the chosen code/type).
 
-fitting_params = [954.9,954.9,0.1,0.1,0.1]
-data = fano("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/test.txt")
-#R = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1(2)/M1_ref.txt")
+fitting_params = [952.15,952.15,0.1,0.1,1e-6]
+data = fano("/Users/mikkelodeon/optomechanics/Single fano cavity/Data//M7/300 short.txt")
+#data = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 ref.txt")
 params = data.lossy_fit(fitting_params)
 #rparams = R.lossy_fit(fitting_params)
 
 plt.figure(figsize=(10,7))
 
-plt.title("~460μm single fano cavity (M1)") 
-plt.plot(data.data[:,0], data.data[:,1], 'bo', label='transmission data')
-plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), label="fit: linewidth=%spm" % str(round(2*params[3],4)*1e3))
+plt.title("300μm single fano cavity (M7)") 
+plt.plot(data.data[:,0], data.data[:,1], 'bo', label='data')
+plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), label="fit: linewidth=%spm \nexpected linewidth: ~40pm" % str(round(2*np.abs(params[3]),4)*1e3))
 #plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), 'cornflowerblue', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(params))
 
 #plt.plot(R.data[:,0], R.data[:,1], 'ro', label='Reflection data')
