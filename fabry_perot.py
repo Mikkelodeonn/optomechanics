@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
+#### IMPORTANT!! -> FIT WITH FABRY-PEROT TRANSMISSION EQUATION INSTEAD OF A SERIES OF LORENTZIANS!
+
 x0s = [959,962.5,966,969.5]
 
 data = np.loadtxt("/Users/mikkelodeon/optomechanics/fabry perot/data/cavity.txt")[2:-12]
