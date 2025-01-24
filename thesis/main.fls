@@ -243,6 +243,11 @@ INPUT ./theory/fano_cavity.tex
 INPUT ./theory/fano_cavity.tex
 INPUT theory/fano_cavity.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT ./method/experimental_setup.tex
+INPUT ./method/experimental_setup.tex
+INPUT ./method/experimental_setup.tex
+INPUT ./method/experimental_setup.tex
+INPUT method/experimental_setup.tex
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
