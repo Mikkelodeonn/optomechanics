@@ -16,7 +16,7 @@ M7 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 trans.
 params1 = M3.lossy_fit([952,952,0.6,1,0.1])
 params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
-params3 = M7.lossy_fit([952,952,0.6,1,0.1])
+#params3 = M7.lossy_fit([952,952,0.6,1,0.1])
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelength
@@ -27,7 +27,7 @@ params3 = M7.lossy_fit([952,952,0.6,1,0.1])
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(950, 956, 1000)
+λs = np.linspace(951.4, 952.2, 100)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -71,6 +71,23 @@ def theoretical_reflection_values(params: list, losses=True, loss_factor=0.03):
     complex_reflectivity_amplitudes = r
 
     return (reflectivity_values, complex_reflectivity_amplitudes)
+
+def theoretical_phase_values(params: list, losses=True, loss_factor=0.03):
+    rs_complex = np.array(theoretical_reflection_values(params, losses=losses, loss_factor=loss_factor)[1])
+    φs = np.angle(rs_complex)
+    return φs
+
+def theoretical_phase_plot(params: list, λs: np.array, losses=True, loss_factor=0.03):
+    plt.figure(figsize=(10,7))
+    φs = theoretical_phase_values(params, losses=losses, loss_factor=loss_factor)
+    plt.scatter(λs, φs, marker=".", color="royalblue", label="simulated phase")
+    plt.plot(λs, φs, color="cornflowerblue")
+    plt.title("Simulated phase as a function of wavelength (M3)")
+    plt.ylabel("φ(λ) [radians]")
+    plt.xlabel("wavelength [nm]")
+    plt.legend()
+    plt.show()
+
 
 def theoretical_reflection_values_plot(params: list, λs: np.array):
     plt.figure(figsize=(10,7))
@@ -315,10 +332,49 @@ def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intr
 
     return Ts
 
+def single_fano_phase(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
+
+    reflection_values = theoretical_reflection_values(params, losses=losses)[1]
+    transmission_values = np.sqrt(model(λs, *params))
+
+    if intracavity == False:
+        def cavity_transmission(λ, rg, tg, l):
+            tm = np.sqrt(0.08)
+            rm = np.sqrt(0.92)
+            T = tm*tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l))
+            return T 
+        
+    if intracavity == True:
+        def cavity_transmission(λ, rg, tg, l):
+            rm = np.sqrt(0.92)
+            tg = 1
+            tm = 1
+            T = tg*tm*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l))
+            return T 
+    
+    Ts = []
+    for i in range(len(λs)):
+        T = cavity_transmission(λs[i], reflection_values[i], transmission_values[i], length)
+        Ts.append(T)
+
+    φs = np.angle(Ts)
+    return φs
+
+def single_fano_phase_plot(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
+    plt.figure(figsize=(10,7))
+    φs = single_fano_phase(params, length, λs, intracavity=intracavity, losses=losses)
+    plt.scatter(λs, φs, marker=".", color="royalblue", label="simulated phase")
+    plt.plot(λs, φs, color="cornflowerblue")
+    plt.title("Single Fano: phase as a function of wavelength")
+    plt.xlabel("wavelength [nm]")
+    plt.ylabel("φ(λ) [radians]")
+    plt.legend()
+    plt.show()
+
 def fano_cavity_transmission_plot(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
     Ts = fano_cavity_transmission(params, length, λs, intracavity=intracavity, losses=losses)
     plt.figure(figsize=(10,6))
-    plt.plot(λs, Ts)
+    plt.plot(λs, Ts, color="royalblue", label="simulated phase")
     plt.title("Single fano cavity transmission as function of wavelength (l = %sμm)" % str(round(length*1e-3,2)))
     plt.xlabel("Wavelength [nm]") 
     plt.ylabel("Intensity [arb.u.]")
@@ -349,6 +405,42 @@ def dual_fano_transmission(params1: list, params2: list, length: float, λs: np.
         Ts.append(float(T))
 
     return Ts
+
+def double_fano_phase(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, loss_factor=0.03):
+    reflection_values1 = theoretical_reflection_values(params1, losses=losses, loss_factor=loss_factor)[1]
+    transmission_values1 = np.sqrt(model(λs, *params1))
+    reflection_values2 = theoretical_reflection_values(params2, losses=losses, loss_factor=loss_factor)[1]
+    transmission_values2 = np.sqrt(model(λs, *params2))
+
+    if intracavity == False:
+        def cavity_transmission(λ, rg1, tg1, rg2, tg2, length):
+            T = tg1*tg2*np.exp(1j*(2*np.pi/λ)*length)/(1-rg1*rg2*np.exp(2j*(2*np.pi/λ)*length))
+            return T 
+        
+    if intracavity == True:
+        def cavity_transmission(λ, rg1, tg1, rg2, tg2, length):
+            tg1 = 1; tg2 = 1
+            T = tg1*tg2*np.exp(1j*(2*np.pi/λ)*length)/(1-rg1*rg2*np.exp(2j*(2*np.pi/λ)*length))
+            return T 
+
+    Ts = []
+    for i in range(len(λs)):
+        T = cavity_transmission(λs[i], reflection_values1[i], transmission_values1[i], reflection_values2[i], transmission_values2[i], length)
+        Ts.append(T)
+
+    φs = np.angle(Ts)
+    return φs
+
+def double_fano_phase_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, loss_factor=0.03):
+    φs = double_fano_phase(params1, params2, length, λs, intracavity=intracavity, losses=losses, loss_factor=loss_factor)
+    plt.figure(figsize=(10,7))
+    plt.scatter(λs, φs, marker=".", color="royalblue", label="simulated phase")
+    plt.plot(λs, φs, color="cornflowerblue")
+    plt.title("double fano: phase as a function of wavelength")
+    plt.xlabel("wavelength [nm]")
+    plt.ylabel("φ(λ) [radians]")
+    plt.legend()
+    plt.show()
 
 def dual_fano_transmission_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, zoom=False, grating_trans=False):
     Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
@@ -682,7 +774,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #### plotting the calculated reflection/transmission values ####
 
-theoretical_reflection_values_plot(params3, λs)
+#theoretical_reflection_values_plot(params3, λs)
 #theoretical_reflection_values_comparison_plot(params1, params2, λs)
 
 #peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M4/70short.txt")
@@ -727,5 +819,13 @@ theoretical_reflection_values_plot(params3, λs)
 
 #linewidth_length_plot(params1, params2, λs)
 
+#theoretical_phase_plot(params1, λs)
+#length = resonant_cavity_length(params1, λs, lmin=30)
+#single_fano_phase_plot(params1, length, λs)
+
+lmin=30
+length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
+#length = double_cavity_length(params2, params1, λs, lmin=lmin)
+double_fano_phase_plot(params1, params2, length, λs)
 
 
