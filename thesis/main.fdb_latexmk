@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1737643433.10702 "main.bcf" "main.bbl" "main" 1737731342.79167 0
-  "main.bcf" 1737731342.49856 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
+["biber main"] 1737643433.10702 "main.bcf" "main.bbl" "main" 1737969224.91173 0
+  "main.bcf" 1737969224.59051 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
   "ref.bib" 1733419308.608 2153 ea777df09f5c4414886a6b0b9190dd8e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1737731340.46113 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1737731342.79222 0
+["pdflatex"] 1737969222.30511 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1737969224.91229 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1737643488.04555 2341 9ae11a22d04b697258d03d72dedeec1a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -136,12 +136,12 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733415012 8221426 2de44a46bb09f90001162557916019bf ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "Outline.tex" 1737731340.12539 1001 e9a4a662530b5cbbc782eccf0aa4cc96 ""
-  "main.aux" 1737731342.49536 4700 4f39cbdbace9db52a204047a94a3eb34 "pdflatex"
+  "main.aux" 1737969224.58568 4975 7fbcc2d4b97cd30d53e26ebe672ab61b "pdflatex"
   "main.bbl" 1737643461.61306 8107 b525fb0834d28063a093508429246b25 "biber main"
-  "main.run.xml" 1737731342.49997 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1737969224.59561 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1737643488.04555 2341 9ae11a22d04b697258d03d72dedeec1a ""
-  "main.toc" 1737731342.50014 1737 03007f0e86f141201a46ea4ef2d630a9 "pdflatex"
-  "method/experimental_setup.tex" 1737643815.5072 421 e630c0bcbb77c01935809b3da05f147d ""
+  "main.toc" 1737969224.59581 1930 f47c61fc67c538745d871ccafeef9b9b "pdflatex"
+  "method/experimental_setup.tex" 1737969218.88037 532 de0c4434a718ba1b42394536b9e39c31 ""
   "theory/cavity_electrodynamics.tex" 1733919858.64425 4208 50a0f0938cd1264aa93398c3cc2f4f7b ""
   "theory/fano_cavity.tex" 1737642964.03309 8759 f9b18f15d960cad71e834dd020340211 ""
   (generated)

@@ -13,9 +13,11 @@
 \contentsline {subsection}{\numberline {5.2}Asymmetric}{8}{}%
 \contentsline {section}{\numberline {6}Characterization of sub-wavelength grating}{8}{}%
 \contentsline {subsection}{\numberline {6.1}Obtaining normalized transmission/reflection spectra}{8}{}%
-\contentsline {section}{\numberline {7}Single Fano cavity transmission}{8}{}%
-\contentsline {section}{\numberline {8}Double Fano cavity transmission}{8}{}%
-\contentsline {subsection}{\numberline {8.1}Fabry-Perot cavity consisting of a grating and membrane (test of setup)}{8}{}%
-\contentsline {subsection}{\numberline {8.2}Off-resonance Fabry-Perot cavity (alignment technique)}{8}{}%
-\contentsline {subsection}{\numberline {8.3}Centering of the top grating (pinhole method)}{8}{}%
-\contentsline {section}{\numberline {9}References}{9}{}%
+\contentsline {section}{\numberline {7}Cavity measurements}{8}{}%
+\contentsline {subsection}{\numberline {7.1}Parallelism study (deviation from normal incident)}{8}{}%
+\contentsline {subsection}{\numberline {7.2}Single Fano cavity transmission}{8}{}%
+\contentsline {subsection}{\numberline {7.3}Double Fano cavity transmission}{8}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}Fabry-Perot cavity consisting of a grating and membrane (test of setup)}{8}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}Off-resonance Fabry-Perot cavity (alignment technique)}{8}{}%
+\contentsline {subsubsection}{\numberline {7.3.3}Centering of the top grating (pinhole method)}{8}{}%
+\contentsline {section}{\numberline {8}References}{9}{}%
