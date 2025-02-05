@@ -18,6 +18,12 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #params3 = M7.lossy_fit([952,952,0.6,1,0.1])
 
+params1[0] = 951.460
+params1[1] = params1[0]
+
+params2[0] = 951.790
+params2[1] = params2[0]
+
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelength
 # λ1 -> guided mode resonance wavelength
@@ -27,7 +33,7 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(951.4, 952.2, 100)
+λs = np.linspace(951.425, 951.825, 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -737,10 +743,10 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = resonant_cavity_length(params1, λs, lmin=10)
 #fano_cavity_transmission_plot(params1, length, λs, intracavity=False, losses=True)
 
-#lmin = 51
-#length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
+lmin = 107
+length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
 #length = double_cavity_length(params1, params2, λs, lmin=30)
-#dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=False, zoom=False)
+dual_fano_transmission_plot(params1, params2, length, λs, intracavity=False, losses=True, grating_trans=False, zoom=False)
 
 #Δ = 0.1
 #lmin=30
@@ -823,9 +829,9 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = resonant_cavity_length(params1, λs, lmin=30)
 #single_fano_phase_plot(params1, length, λs)
 
-lmin=30
-length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
+#lmin=30
+#length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
-double_fano_phase_plot(params1, params2, length, λs)
+#double_fano_phase_plot(params1, params2, length, λs)
 
 

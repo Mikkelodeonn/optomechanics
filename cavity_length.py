@@ -1,9 +1,9 @@
 import numpy as np
 
 
-λ = 952.170
+λ = 951.625 #nm
 
 def L(λ,FSR):
     return λ**2/(2*FSR)*1e-3
 
-print(L(λ,1.5), " μm")
+print(L(λ,4.2), " μm")
