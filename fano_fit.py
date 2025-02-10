@@ -6,10 +6,10 @@ from scipy.optimize import fsolve
 
 ### Load data from .txt file
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/21l.txt")
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/21l_PI.txt")
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan.txt")
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan_PI.txt")
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/21l.txt")[15:-17]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/21l_PI.txt")[15:-17]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan.txt")[15:-17]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan_PI.txt")[15:-17]
 PI_0 = PI_data[0,1]
 data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]
 norm[:,1] = [N/(PI/PI_0) for N,PI in zip(norm[:,1], norm_PI[:,1])]
@@ -99,17 +99,20 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 
     return Ts
 
-p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 20e3, 0.05]
+#p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 20e3, 0.05]
+p0 = [951.7,951.7,0.8,0.1,1e-5]
 
-popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
-fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
+#popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
+popt,pcov = curve_fit(model, data[:,0], data[:,1], p0=p0, maxfev=10000000)
+#fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 print("popt:",popt)
 
 xs = np.linspace(data[:,0][0], data[:,0][-1], 10000) 
 
 plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
-plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
+#plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
+plt.plot(xs, model(xs, *popt), color="firebrick", label="fit: linewidth $\\approx$ %spm" % str(round(2*popt[3]*1e3,3)))
 plt.title("M3/M5 double fano transmission")  
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
