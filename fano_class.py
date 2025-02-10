@@ -114,9 +114,9 @@ fitting_params = [951.2,951.2,0.1,0.04,1e-6]
 #params = data.lossy_fit(fitting_params)
 #rparams = R.lossy_fit(fitting_params)
 
-plt.figure(figsize=(10,7))
+#plt.figure(figsize=(10,7))
 
-plt.title("1293μm double fano cavity (M3+M5)") 
+#plt.title("1293μm double fano cavity (M3+M5)") 
 #plt.plot(data.data[:,0], data.data[:,1], 'bo', label='data')
 #plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), label="fit: linewidth=%spm \nexpected linewidth: ~40pm" % str(round(2*np.abs(params[3]),4)*1e3))
 #plt.plot(data.λ_fit, data.lossy_model(data.λ_fit, *params), 'cornflowerblue', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(params))

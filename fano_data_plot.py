@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/565um/565s.txt")[15:-11]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/565um/565s_PI.txt")[15:-11]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/34um/34l.txt")
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/266um/long_scan_PI.txt")
 PI_0 = PI_data[0,1]
 
 data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]
@@ -28,4 +28,4 @@ plt.xlabel("wavelength [nm]")
 plt.ylabel("transmission [V]")
 plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 plt.subplots_adjust(right=0.70)
-plt.show()
+#plt.show()

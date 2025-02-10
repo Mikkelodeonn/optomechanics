@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ## resonance wavelength [nm -> m]
-λres = 951.395e-9 #955.572e-9
+λres = 951.625e-9 #955.572e-9
 ## length of cavity [μm -> m]
 l = np.linspace(30,500,10000)*1e-6
 ## losses in cavity
