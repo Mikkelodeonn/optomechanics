@@ -39,7 +39,9 @@ lengths = np.array([21,34,43,59,129,238])*1e-6
 #    linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
 #    print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
 
-lws = np.array([291,170,187,180,129,96])*1e-12 # line widths
+lws = np.array([291.28,173.5,187.6,180.4,129.2,96.63])*1e-12 # linewidths in pm
+
+### old 34um linewidth was ~380pm
 
 plt.figure(figsize=(10,6))
 
