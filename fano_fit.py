@@ -6,10 +6,10 @@ from scipy.optimize import fsolve
 
 ### Load data from .txt file
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34s.txt")#[15:-17]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34s_PI.txt")#[15:-17]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/short_scan.txt")#[15:-17]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/short_scan_PI.txt")#[15:-17]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")[14:-17]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")[14:-17]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")[14:-17]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")[14:-17]
 PI_0 = PI_data[0,1]
 data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]  ##  correcting for any fluctuations in laser power over time
 norm[:,1] = [N/(PI/PI_0) for N,PI in zip(norm[:,1], norm_PI[:,1])]      ##  from the main measurement to the normalization measurement.  
@@ -38,6 +38,11 @@ def model(λ, λ0, λ1, td, γλ, β):
     γ = 2*np.pi / λ1**2 * γλ
     t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
+
+def fit_model(λ, a, b, c, λ0, δλ): 
+    γ = 1 - c*((λ-λ0)/δλ)
+    t = (a/(1 + ((λ-λ0)/(δλ*γ))**2)) + b
+    return t
 
 ### Calculating the simulated reflection values 
 
@@ -101,12 +106,13 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 
 ### Fitting loaded data to the double fano transmission function
 
-p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 30e3, 0.05]
-#p0 = [951.7,951.7,0.8,0.01,1e-5]
+#p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 30e3, 0.05]
+#p0 = [951.7,951.7,0.8,0.01,1e-5,0.04]
+p0 = [0, 0.1, 0, 951.72, 100e-3]
 
-popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
-#popt,pcov = curve_fit(model, data[:,0], data[:,1], p0=p0, maxfev=10000000)
-fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
+#popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
+popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, maxfev=100000)
+#fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 print("popt:",popt)
 print("p0 =", p0)
 
@@ -114,8 +120,8 @@ xs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
 plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
-plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
-#plt.plot(xs, model(xs, *popt), color="firebrick", label="fit: linewidth $\\approx$ %spm" % str(round(2*popt[3]*1e3,3)))
+#plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
+plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %spm" % str(round(np.abs(popt[4])*1e3,3)))
 plt.title("M3/M5 double fano transmission")  
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
