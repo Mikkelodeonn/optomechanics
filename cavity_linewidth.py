@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from fano_class import fano
 from scipy.optimize import fsolve
+import matplotlib.ticker as ticker
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -151,6 +152,10 @@ plt.xlabel("Cavity length [μm]")
 plt.ylabel("HWHM [pm]")
 plt.xscale("log")
 plt.yscale("log")
+ax = plt.gca()
+ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
+ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
+plt.ticklabel_format(style='plain', axis="both")
 plt.legend()
 plt.show()
 
