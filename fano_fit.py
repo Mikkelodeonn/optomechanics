@@ -6,13 +6,15 @@ from scipy.optimize import fsolve
 
 ### Load data from .txt file
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")[14:-17]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")[14:-17]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")[14:-17]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")[14:-17]
-PI_0 = PI_data[0,1]
-data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]  ##  correcting for any fluctuations in laser power over time
-norm[:,1] = [N/(PI/PI_0) for N,PI in zip(norm[:,1], norm_PI[:,1])]      ##  from the main measurement to the normalization measurement.  
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/238um/238l.txt")[13:-20]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/238um/238l_PI.txt")[13:-20]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan.txt")[13:-20]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan_PI.txt")[13:-20]
+
+#PI_0 = PI_data[0,1]
+#PI_0_norm = norm[0,1]
+#data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]  ##  correcting for any fluctuations in laser power over time
+#norm[:,1] = [N/(PI/PI_0_norm) for N,PI in zip(norm[:,1], norm_PI[:,1])]      ##  from the main measurement to the normalization measurement.  
 
 data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
@@ -23,11 +25,11 @@ M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.
 λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
 λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
-λ0_1 = 951.7
-λ1_1 = 951.56
+λ0_1 = 951.535
+λ1_1 = 951.535 + 0.14
 
-λ0_2 = 951.7
-λ1_2 = 951.83
+λ0_2 = 951.875
+λ1_2 = 951.875 + 0.15
 
 ### Defining the grating transmission function/model
 
@@ -108,11 +110,14 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 
 #p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 30e3, 0.05]
 #p0 = [951.7,951.7,0.8,0.01,1e-5,0.04]
-p0 = [0, 0.1, 0, 951.72, 100e-3]
+p0 = [1, 0.1, 0, 951.7, 100e-3]
+bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
 
 #popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
-popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, maxfev=100000)
+popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, bounds=bounds, maxfev=100000)
 #fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
+lw_err = np.sqrt(np.diag(pcov))[4]*1e3
+print("lw error: ", lw_err)
 print("popt:",popt)
 print("p0 =", p0)
 

@@ -20,7 +20,7 @@ print(popt)
 
 xs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
-plt.figure(figsize=(10,6))
+#plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data")
 plt.plot(xs, fabry_perot(xs, *popt), color="firebrick", label="fit")
 plt.title("double fano transmission at ~565μm (M3 + M5)") 
