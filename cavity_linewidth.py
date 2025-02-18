@@ -128,12 +128,13 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: floa
 
 #lws = np.array([291.28,173.5,187.6,180.4,129.2,96.63])*1e-12*0.5 # linewidths in pm
 
-lengths = np.array([21, 34, 43, 59, 129, 238])*1e-6
-lws = np.array([148.169, 77.852, 96.458, 90.403, 61.248, 48.223])*1e-12
-lw_errs = np.array([10.160799928638458, 6.134863876528573, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
+lengths = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55])*1e-6
+lws = np.array([148.169, 77.852, 96.458, 90.403, 61.248, 48.223, 70.428, 69.92, 81.909, 66.54])*1e-12
+lw_errs = np.array([10.160799928638458, 6.134863876528573, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159, 6.409594508045273, 5.922830232552448, 6.458829009778409, 4.154976118278984])*1e-12
 
-sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681])*1e-12
-sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 0.00017926167187670345, 8.649780122407183e-05])*1e-12
+sim_ls = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55])*1e-6
+sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681, 58.109, 62.402, 66.374, 68.336])*1e-12
+sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 0.00032524791728291556, 0.000346816907429512])*1e-12
 
 ### NOTE: all errors are found as errors of the fit only! ###
 
@@ -144,7 +145,7 @@ plt.plot(l*1e6,lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband cavity")
 plt.plot(l*1e6,lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
 plt.plot(l*1e6,double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="double fano cavity")
 plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
-plt.errorbar(lengths*1e6, sim_lws*1e12, sim_lw_errs*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (simulated)")
+plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (simulated)")
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")
 plt.title("HWHM as a function of cavity length")

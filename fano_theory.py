@@ -858,7 +858,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-lmin = 235
+lmin = 55
 length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
 
@@ -879,7 +879,7 @@ plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\a
 #plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
 #plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission $(l \\approx 21μm)$") 
+plt.title("M3/M5 double fano transmission $(l \\approx 60μm)$") 
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
 plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
