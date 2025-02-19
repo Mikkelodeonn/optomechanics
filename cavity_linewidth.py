@@ -52,7 +52,6 @@ M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.
 
 λ_asymmetry_1 = λ1_1-λ0_1
 λ_asymmetry_2 = λ1_2-λ0_2
-#print(λ_asymmetry_1, λ_asymmetry_2)
 λ0_1 = 951.535 
 λ1_1 = 951.535 + λ_asymmetry_1
 λ0_2 = 951.880
@@ -70,8 +69,6 @@ ts_M3 = model(λs, *M3_params)
 ts_M5 = model(λs, *M5_params)
 
 idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
-#idx = int(list(rs_M3).index(np.max(rs_M3)))
-#idx = int(list(rs_M5).index(np.max(rs_M5)))
 
 rt_M3 = rs_M3[idx]
 rt_M5 = rs_M5[idx]
@@ -81,8 +78,6 @@ print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
 print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
 print("trans. of M3 at trans. wavelength: ", tt_M3)
 print("trans. of M5 at trans. wavelength: ", tt_M5)
-
-#print(idx)
 
 ## resonance wavelength [nm -> m]
 λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
@@ -118,23 +113,32 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: floa
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ 
 
-#lengths = np.array([900])*1e-6 # cavity lengths
-
-#lengths = np.array([21,34,43,59,129,238])*1e-6
-#lengths = np.array([20.1,30.18,40.04,59.08,139,238.9])*1e-6
 #for length in lengths:
 #    linewidth = 2*lw_fano(length,λres,L,γλ,rd,Tg,Tm)
 #    print("length of fano cavity: ", round(length*1e6,1), "μm", " -> ", "theoretical linewidth: ", round(linewidth*1e12,1), "pm")
 
-#lws = np.array([291.28,173.5,187.6,180.4,129.2,96.63])*1e-12*0.5 # linewidths in pm
-
 lengths = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55])*1e-6
-lws = np.array([148.169, 77.852, 96.458, 90.403, 61.248, 48.223, 70.428, 69.92, 81.909, 66.54])*1e-12
-lw_errs = np.array([10.160799928638458, 6.134863876528573, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159, 6.409594508045273, 5.922830232552448, 6.458829009778409, 4.154976118278984])*1e-12
+lws = np.array([148.169, 77.852, 96.458, 90.403, 61.248, 48.223, 70.428, 66.956, 79.968, 66.54])*1e-12
+lw_errs = np.array([10.160799928638458, 6.134863876528573, 24.388186270739908, 7.375280567851888, 5.511886232010013, 
+                    5.047405715383159, 6.409594508045273, 6.4623500579952555, 7.026351242285626, 4.154976118278984])*1e-12
+
+ls_0207 = np.array([21, 43, 59, 129, 238])*1e-6
+ls_0211 = np.array([34])*1e-6
+ls_0218 = np.array([90, 70, 60, 55])*1e-6
+
+lws_0207 = np.array([148.169, 96.458, 90.403, 61.248, 48.223])*1e-12
+lws_0211 = np.array([77.852])*1e-12
+lws_0218 = np.array([70.428, 66.956, 79.968, 66.54])*1e-12
+
+err_0207 = np.array([10.160799928638458, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
+err_0211 = np.array([6.134863876528573])*1e-12
+err_0218 = np.array([6.409594508045273, 6.4623500579952555, 7.026351242285626, 4.154976118278984])*1e-12
 
 sim_ls = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55])*1e-6
 sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681, 58.109, 62.402, 66.374, 68.336])*1e-12
-sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 0.00032524791728291556, 0.000346816907429512])*1e-12
+sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 
+                        0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 
+                        0.00032524791728291556, 0.000346816907429512])*1e-12
 
 ### NOTE: all errors are found as errors of the fit only! ###
 
@@ -144,7 +148,11 @@ plt.plot(l*1e6,lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband cavity")
 #plt.plot(l*1e6, double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="symmetric double fano")
 plt.plot(l*1e6,lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
 plt.plot(l*1e6,double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="double fano cavity")
-plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
+#plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
+plt.errorbar(ls_0207*1e6,lws_0207*1e12, err_0207*1e12, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
+plt.errorbar(ls_0211*1e6,lws_0211*1e12, err_0211*1e12, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
+plt.errorbar(ls_0218*1e6,lws_0218*1e12, err_0218*1e12, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
+
 plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (simulated)")
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")

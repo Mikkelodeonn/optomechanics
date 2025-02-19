@@ -6,10 +6,10 @@ from scipy.optimize import fsolve
 
 ### Load data from .txt file
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/55um/55s.txt")#[12:-14]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/55um/55s_PI.txt")#[12:-14]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/short_scan.txt")#[12:-14]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/short_scan_PI.txt")#[12:-14]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/70um/70s.txt")[12:-13]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/70um/70s_PI.txt")[12:-13]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/short_scan.txt")[12:-13]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/short_scan_PI.txt")[12:-13]
 
 #PI_0 = PI_data[0,1]
 #PI_0_norm = norm[0,1]
@@ -108,14 +108,14 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 
 ### Fitting loaded data to the double fano transmission function
 
-p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 60e3, 0.05]
+#p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 55e3, 0.05]
 #p0 = [951.7,951.7,0.8,0.01,1e-5,0.04]
-#p0 = [1, 0.1, 0, 951.7, 100e-3]
-#bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
+p0 = [1, 0.1, 0, 951.7, 100e-3]
+bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
 
-popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
-#popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, bounds=bounds, maxfev=100000)
-fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
+#popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
+popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, bounds=bounds, maxfev=100000)
+#fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 lw_err = np.sqrt(np.diag(pcov))[4]*1e3
 print("lw error: ", lw_err)
 print("popt:",popt)
@@ -125,8 +125,8 @@ xs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
 plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
-plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
-#plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %spm" % str(round(np.abs(popt[4])*1e3,3)))
+#plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
+plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %spm" % str(round(np.abs(popt[4])*1e3,3)))
 plt.title("M3/M5 double fano transmission")  
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
