@@ -31,10 +31,10 @@ params2[1] = 951.880 + 0.15
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/55um/55l.txt")
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/55um/55l_PI.txt")
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/long_scan.txt")
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250218/normalization/long_scan_PI.txt")
 PI_0 = PI_data[0,1]
 data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]
 norm[:,1] = [N/(PI/PI_0) for N,PI in zip(norm[:,1], norm_PI[:,1])]
@@ -43,7 +43,8 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(data[:,0][14:-17][0], data[:,0][14:-17][-1], 100)
+#λs = np.linspace(data[:,0][14:-17][0], data[:,0][14:-17][-1], 100)
+λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -378,6 +379,9 @@ def single_fano_phase(params: list, length: np.array, λs: np.array, intracavity
         Ts.append(T)
 
     φs = np.angle(Ts)
+    for φ in φs:
+        if φ < 0:
+            φ += 2*np.pi
     return φs
 
 def single_fano_phase_plot(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
@@ -449,9 +453,12 @@ def double_fano_phase(params1: list, params2: list, length: float, λs: np.array
         Ts.append(T)
 
     φs = np.angle(Ts)
+    for φ in φs:
+        if φ < 0:
+            φ += 2*np.pi
     return φs
 
-def double_fano_phase_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, loss_factor=0.03):
+def double_fano_phase_plot(params1: list, params2: list, length: float, λs: np.array, intracavity=False, losses=True, loss_factor=0.05):
     φs = double_fano_phase(params1, params2, length, λs, intracavity=intracavity, losses=losses, loss_factor=loss_factor)
     plt.figure(figsize=(10,7))
     plt.scatter(λs, φs, marker=".", color="royalblue", label="simulated phase")
@@ -733,6 +740,23 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
     plt.show()
 
 
+#lmin = 10
+#length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
+#length = resonant_cavity_length(params1, λs, lmin)
+#φs = double_fano_phase(params1, params2, length, λs)-np.pi
+#Ts = dual_fano_transmission(params1, params2, length, λs, intracavity=False, losses=True)
+#φs = single_fano_phase(params1, length, λs)-np.pi
+#Ts = fano_cavity_transmission(params1, length, λs)
+#plt.figure(figsize=(10,7))
+#plt.plot(λs, Ts, color="firebrick")
+#plt.title("M3 single fano transmission & phase $(l \\approx 10μm)$") 
+#plt.xlabel("wavelength [nm]")
+#plt.ylabel("normalized transmission [V]", color="firebrick")
+#ax2 = plt.gca().twinx()  
+#ax2.plot(λs, φs, color="cornflowerblue")
+#ax2.set_ylabel("phase [rad]", color='cornflowerblue')
+#plt.show()
+
 #### double fano transmission as a function of losses ####
 
 #Ls = [0.0, 0.02, 0.04, 0.06, 0.08] ## loss factor is NOT equal to actual cavity losses
@@ -848,7 +872,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
 
-#lmin=34
+#lmin=55
 #length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
 #Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
 
@@ -858,31 +882,31 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-lmin = 61
-length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
-Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
+#lmin = 90
+#length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
+#Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
 
-p0 = [0, 0, 0, 951.7, 100e-3]
+#p0 = [0, 0, 0, 951.7, 100e-3]
 #p0 = [951.7,951.7,0.6,0.1,1e-6]
 
-popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
-err = np.sqrt(np.diag(pcov))
-lw_err = err[4]
-print("lw error: ", lw_err)
+#popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
+#err = np.sqrt(np.diag(pcov))
+#lw_err = err[4]
+#print("lw error: ", lw_err)
 
-xs = np.linspace(λs[0], λs[-1], 1000)
+#xs = np.linspace(λs[0], λs[-1], 1000)
 
-plt.figure(figsize=(10,6))
-plt.scatter(λs, Ts, color="royalblue", label="theory")
-plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %spm" % (round(popt[4]*1e3,3)))
+#plt.figure(figsize=(10,6))
+#plt.scatter(λs, Ts, color="royalblue", label="theory")
+#plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %spm" % (round(popt[4]*1e3,3)))
 #plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
 #plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
 #plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission $(l \\approx 60μm)$") 
-plt.xlabel("wavelength [nm]")
-plt.ylabel("normalized transmission [V]")
-plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
-plt.subplots_adjust(right=0.70)
-plt.show()
+#plt.title("M3/M5 double fano transmission $(l \\approx 55μm)$") 
+#plt.xlabel("wavelength [nm]")
+#plt.ylabel("normalized transmission [V]")
+#plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
+#plt.subplots_adjust(right=0.70)
+#plt.show()
 
