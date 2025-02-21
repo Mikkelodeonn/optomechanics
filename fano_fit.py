@@ -126,7 +126,7 @@ fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 
 xs = np.linspace(data[:,0][0], data[:,0][-1], 10000) 
 
-plt.figure(figsize=(10,6))
+#plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
 plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
 #plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %spm" % str(round(np.abs(popt[4])*1e3,3)))
@@ -136,4 +136,4 @@ plt.ylabel("normalized transmission [V]")
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
 #plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
 plt.subplots_adjust(bottom=0.2)
-plt.show()
+#plt.show()
