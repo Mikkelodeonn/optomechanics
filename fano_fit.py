@@ -6,12 +6,12 @@ from scipy.optimize import fsolve
 
 ### Load data from .txt file
 
-left = 6
-right = -9
+left = 7
+right = -7
 extrapolated = True
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/75um/75s4.txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/75um/75s4_PI.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s3.txt")[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s3_PI.txt")[left:right]
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan.txt")[left:right]
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan.txt")[left:right]
 
