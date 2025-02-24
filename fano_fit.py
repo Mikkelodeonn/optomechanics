@@ -10,8 +10,8 @@ left = 6
 right = -9
 extrapolated = True
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s4.txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s4_PI.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/75um/75s4.txt")[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/75um/75s4_PI.txt")[left:right]
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan.txt")[left:right]
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan.txt")[left:right]
 
@@ -120,7 +120,9 @@ bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
 #popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
 popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, bounds=bounds, maxfev=100000)
 #fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
-lw_err = np.sqrt(np.diag(pcov))[4]*1e3
+lw_err = round(np.sqrt(np.diag(pcov))[4]*1e3,3)
+hwhm = round(np.abs(popt[4])*1e3,3)
+legend = [hwhm, lw_err]
 print("lw error: ", lw_err)
 print("popt:",popt)
 print("p0 =", p0)
@@ -133,7 +135,7 @@ else:
 plt.figure(figsize=(10,6))
 plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
 #plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
-plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %spm" % str(round(np.abs(popt[4])*1e3,3)))
+plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
 plt.title("M3/M5 double fano transmission")  
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
