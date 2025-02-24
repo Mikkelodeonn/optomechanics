@@ -52,10 +52,16 @@ M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.
 
 λ_asymmetry_1 = λ1_1-λ0_1
 λ_asymmetry_2 = λ1_2-λ0_2
-λ0_1 = 951.535 
-λ1_1 = 951.535 + λ_asymmetry_1
-λ0_2 = 951.880
-λ1_2 = 951.880 + λ_asymmetry_2
+#λ0_1 = 951.535 
+#λ1_1 = 951.535 + λ_asymmetry_1
+#λ0_2 = 951.880
+#λ1_2 = 951.880 + λ_asymmetry_2
+
+λ0_1 = 951.540
+λ1_1 = 951.540 + λ_asymmetry_1
+
+λ0_2 = 951.960
+λ1_2 = 951.960 + λ_asymmetry_2
 
 λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
 
@@ -122,28 +128,39 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: floa
 #lw_errs = np.array([10.160799928638458, 6.134863876528573, 24.388186270739908, 7.375280567851888, 5.511886232010013, 
 #                    5.047405715383159, 6.409594508045273, 6.4623500579952555, 7.026351242285626, 4.154976118278984])*1e-12
 
-ls_0207 = np.array([21, 43, 59, 130.421, 239.937])*1e-6
-ls_0207_err = np.array([, , , 0.970, 0.667])*1e-6
-ls_0211 = np.array([34])*1e-6
-ls_0218 = np.array([90, 70, 60, 55])*1e-6
-ls_0220 = np.array([25, 41, 58, 75])*1e-6
+ls_0207 = np.array([21.544, 44.155, 59.943, 130.421, 239.937])*1e-6
+ls_0207_err = np.array([0.134, 0.242, 0.518, 0.970, 0.667])*1e-6
+
+ls_0211 = np.array([33.283])*1e-6
+ls_0211_err = np.array([0.438])*1e-6
+
+ls_0218 = np.array([89.441, 64.420, 60.073, 52.909])*1e-6
+ls_0218_err = np.array([0.496, 0.555, 0.342, 0.437])*1e-6
+
+ls_0220 = np.array([25.369, 41.054, 55.508, 73.002])*1e-6
+ls_0220_err = np.array([0.189, 0.205, 0.347, 0.516])*1e-6
 
 lws_0207 = np.array([148.169, 96.458, 90.403, 61.248, 48.223])*1e-12
-lws_0211 = np.array([79.985])*1e-12
-lws_0218 = np.array([70.428, 66.956, 79.968, 66.54])*1e-12
-lws_0220 = np.array([115.698, 79.858, 79.966, 67.24])*1e-12
-
 err_0207 = np.array([10.160799928638458, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
+
+lws_0211 = np.array([79.985])*1e-12
 err_0211 = np.array([5.97499144083166])*1e-12
+
+lws_0218 = np.array([70.428, 66.956, 79.968, 66.54])*1e-12
 err_0218 = np.array([6.409594508045273, 6.4623500579952555, 7.026351242285626, 4.154976118278984])*1e-12
+
+lws_0220 = np.array([115.698, 79.858, 79.966, 67.24])*1e-12
 err_0220 = np.array([7.130991486232972, 8.382897672891941, 5.877895384766792, 9.143520307376802])*1e-12
 
-sim_ls = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55, 75, 58, 41, 25])*1e-6
-sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681, 58.109, 62.402, 66.374, 68.336, 62.404, 67.81, 73.861, 80.577])*1e-12
-sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 
-                        0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 
-                        0.00032524791728291556, 0.000346816907429512, 0.00031571414779105243, 0.0003776064321014153,
-                        0.0004568280148071062, 0.0005600255941293191])*1e-12
+#sim_ls = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55, 75, 58, 41, 25])*1e-6
+#sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681, 58.109, 62.402, 66.374, 68.336, 62.404, 67.81, 73.861, 80.577])*1e-12
+
+sim_ls = np.array([21.454, 44.296, 59.999, 130.428, 239.879, 33.350, 89.503, 64.282, 60.475, 52.861, 25.261, 41.440, 55.716, 73.324])*1e-6
+sim_lws = np.array([99.805, 88.860, 82.389, 61.299, 43.222, 93.865, 72.185, 80.758, 82.205, 85.232, 97.846, 90.125, 87.075, 77.492])*1e-12
+#sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 
+#                        0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 
+#                        0.00032524791728291556, 0.000346816907429512, 0.00031571414779105243, 0.0003776064321014153,
+#                        0.0004568280148071062, 0.0005600255941293191])*1e-12
 
 ### NOTE: all errors are found as errors of the fit only! ###
 
@@ -154,12 +171,12 @@ plt.plot(l*1e6,lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband cavity")
 plt.plot(l*1e6,lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
 plt.plot(l*1e6,double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="double fano cavity")
 #plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
-plt.errorbar(ls_0207*1e6,lws_0207*1e12, err_0207*1e12, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
-plt.errorbar(ls_0211*1e6,lws_0211*1e12, err_0211*1e12, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
-plt.errorbar(ls_0218*1e6,lws_0218*1e12, err_0218*1e12, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
-plt.errorbar(ls_0220*1e6,lws_0220*1e12, err_0220*1e12, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
+plt.errorbar(ls_0207*1e6, lws_0207*1e12, err_0207*1e12, xerr=ls_0207_err*1e6, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
+plt.errorbar(ls_0211*1e6, lws_0211*1e12, err_0211*1e12, xerr=ls_0211_err*1e6, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
+plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
+plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 
-plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (simulated)")
+plt.scatter(sim_ls*1e6, sim_lws*1e12, marker=".", color="firebrick", label="HWHM (simulated)")
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")
 plt.title("HWHM as a function of cavity length")

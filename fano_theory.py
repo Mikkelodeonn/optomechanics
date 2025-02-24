@@ -43,8 +43,8 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-#λs = np.linspace(data[:,0][13:-16][0], data[:,0][13:-16][-1], 100)
-λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
+λs = np.linspace(951.54, 951.96, 100)
+#λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -872,41 +872,43 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
 
-lmin=25
-length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
-Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
+#lmin=25
+#length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
+#Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
 
-length_M5 = double_cavity_length(params2, params1, λs, lmin=lmin)
-Ts_M5 = dual_fano_transmission(params1, params2, length_M5, λs, loss_factor=0.05)
+#length_M5 = double_cavity_length(params2, params1, λs, lmin=lmin)
+#Ts_M5 = dual_fano_transmission(params1, params2, length_M5, λs, loss_factor=0.05)
 
-length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
-Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
+#length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
+#Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-#lmin = 25
-#length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
-#Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
+lmin = 52.8
+length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
+Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
 
-#p0 = [0, 0, 0, 951.7, 100e-3]
+p0 = [0, 0, 0, 951.7, 100e-3]
 #p0 = [951.7,951.7,0.6,0.1,1e-6]
 
-#popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
-#err = np.sqrt(np.diag(pcov))
-#lw_err = err[4]
+popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
+err = np.sqrt(np.diag(pcov))
+lw_err = round(err[4]*1e3,3)
+lw = round(popt[4]*1e3,3)
+legend = [lw, lw_err, round(length*1e-3,3)]
 #print("lw error: ", lw_err)
 
-#xs = np.linspace(λs[0], λs[-1], 1000)
-
-#plt.figure(figsize=(10,6))
-#plt.scatter(λs, Ts, color="royalblue", label="theory")
-#plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %spm" % (round(popt[4]*1e3,3)))
-plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
-plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
-plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
-plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission $(l \\approx 25μm)$") 
+xs = np.linspace(λs[0], λs[-1], 1000)
+ 
+plt.figure(figsize=(10,6))
+plt.scatter(λs, Ts, color="royalblue", label="theory")
+plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm, cavity length $\\approx$ %5.3fμm" % tuple(legend))
+#plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
+#plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
+#plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
+#plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
+plt.title("M3/M5 double fano transmission") 
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
-plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
-plt.subplots_adjust(right=0.70)
+plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
+plt.subplots_adjust(bottom=0.2)
 plt.show()
 
