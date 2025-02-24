@@ -25,7 +25,7 @@ params2[0] = 951.960
 params2[1] = 951.960 + 0.15
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
-# λ0 -> resonance wavelength
+# λ0 -> resonance wavelengths
 # λ1 -> guided mode resonance wavelength
 # td -> direct transmission coefficient
 # γλ -> width of guided mode resonance
@@ -896,7 +896,7 @@ Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0
 
 #xs = np.linspace(λs[0], λs[-1], 1000)
 
-plt.figure(figsize=(10,6))
+#plt.figure(figsize=(10,6))
 #plt.scatter(λs, Ts, color="royalblue", label="theory")
 #plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %spm" % (round(popt[4]*1e3,3)))
 plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
