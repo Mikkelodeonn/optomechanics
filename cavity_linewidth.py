@@ -49,59 +49,67 @@ M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
 λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
-
 λ_asymmetry_1 = λ1_1-λ0_1
 λ_asymmetry_2 = λ1_2-λ0_2
+λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
+
+def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: float):
+    M3_params = [λ01, λ11, td_1, γ_1, α_1]
+    M5_params = [λ02, λ12, td_2, γ_2, α_2]
+    rs_M3 = theoretical_reflection_values(M3_params, losses=True, loss_factor=0.05)[0]
+    rs_M5 = theoretical_reflection_values(M5_params, losses=True, loss_factor=0.05)[0]
+    ts_M3 = model(λs, *M3_params)
+    ts_M5 = model(λs, *M5_params)
+    idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
+
+    rt_M3 = rs_M3[idx]
+    rt_M5 = rs_M5[idx]
+    tt_M3 = ts_M3[idx]
+    tt_M5 = ts_M5[idx]
+    print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
+    print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
+    print("trans. of M3 at trans. wavelength: ", tt_M3)
+    print("trans. of M5 at trans. wavelength: ", tt_M5)
+
+    λres = (λ01*1e-9 + λ02*1e-9)/2
+    L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
+    Tg = tt_M3
+    Tm = tt_M5
+    return λres, L, Tg, Tm
+
 #λ0_1 = 951.535 
 #λ1_1 = 951.535 + λ_asymmetry_1
 #λ0_2 = 951.880
 #λ1_2 = 951.880 + λ_asymmetry_2
 
-λ0_1 = 951.540
-λ1_1 = 951.540 + λ_asymmetry_1
+#λ0_1 = 951.540
+#λ1_1 = 951.540 + λ_asymmetry_1
 
-λ0_2 = 951.960
-λ1_2 = 951.960 + λ_asymmetry_2
+#λ0_2 = 951.960
+#λ1_2 = 951.960 + λ_asymmetry_2
 
-λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
-
-M3_params = [λ0_1, λ1_1, td_1, γ_1, α_1]
-M5_params = [λ0_2, λ1_2, td_2, γ_2, α_2]
-
-
-rs_M3 = theoretical_reflection_values(M3_params, losses=True, loss_factor=0.05)[0]
-rs_M5 = theoretical_reflection_values(M5_params, losses=True, loss_factor=0.05)[0]
-ts_M3 = model(λs, *M3_params)
-ts_M5 = model(λs, *M5_params)
-
-idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
-
-rt_M3 = rs_M3[idx]
-rt_M5 = rs_M5[idx]
-tt_M3 = ts_M3[idx]
-tt_M5 = ts_M5[idx]
-print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
-print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
-print("trans. of M3 at trans. wavelength: ", tt_M3)
-print("trans. of M5 at trans. wavelength: ", tt_M5)
 
 ## resonance wavelength [nm -> m]
-λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
+#λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
 ## length of cavity [μm -> m]
 l = np.linspace(10,300,10000)*1e-6
 ## losses in cavity
 #L = 0.15
-L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
-print("cavity losses at trans. wavelength:", L[0])
+#L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
+#print("cavity losses at trans. wavelength:", L[0])
 ## width of guided mode resonance [nm -> m]
 γλ = (γ_1*1e-9 + γ_2*1e-9)/2#0.485*1e-9
 ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
 rd = np.sqrt(0.57)*np.sqrt(0.575)#np.sqrt(((0.57+0.575)/2))#np.sqrt(0.576)
 #print(rd)
 ## Grating transmission at resonance
-Tg = tt_M3#0.049
+#Tg = tt_M3#0.049
 ## Broadband mirror transmission at resonance
-Tm = tt_M5#0.049
+#Tm = tt_M5#0.049
+
+λres1, L1, Tg1, Tm1 = calc_params(λs, 951.535, 951.535 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
+λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
+λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 
 def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float): 
     δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
@@ -140,6 +148,9 @@ ls_0218_err = np.array([0.496, 0.555, 0.342, 0.437])*1e-6
 ls_0220 = np.array([25.369, 41.054, 55.508, 73.002])*1e-6
 ls_0220_err = np.array([0.189, 0.205, 0.347, 0.516])*1e-6
 
+ls_0225 = np.array([19.930])*1e-6
+ls_0225_err = np.array([0.088])*1e-6
+
 lws_0207 = np.array([148.169, 96.458, 90.403, 61.248, 48.223])*1e-12
 err_0207 = np.array([10.160799928638458, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
 
@@ -152,31 +163,36 @@ err_0218 = np.array([6.409594508045273, 6.4623500579952555, 7.026351242285626, 4
 lws_0220 = np.array([115.698, 79.858, 79.966, 67.24])*1e-12
 err_0220 = np.array([7.130991486232972, 8.382897672891941, 5.877895384766792, 9.143520307376802])*1e-12
 
+lws_0225 = np.array([(70.684+82.082)/2])*1e-12
+err_0225 = np.array([(5.771+4.231)/2])*1e-12
+
 #sim_ls = np.array([21, 34, 43, 59, 129, 238, 90, 70, 60, 55, 75, 58, 41, 25])*1e-6
 #sim_lws = np.array([80.911, 75.736, 72.39, 67.117, 50.241, 35.681, 58.109, 62.402, 66.374, 68.336, 62.404, 67.81, 73.861, 80.577])*1e-12
 
-sim_ls = np.array([21.454, 44.296, 59.999, 130.428, 239.879, 33.350, 89.503, 64.282, 60.475, 52.861, 25.261, 41.440, 55.716, 73.324])*1e-6
-sim_lws = np.array([99.805, 88.860, 82.389, 61.299, 43.222, 93.865, 72.185, 80.758, 82.205, 85.232, 97.846, 90.125, 87.075, 77.492])*1e-12
-#sim_lw_errs = np.array([0.0005121934467886775, 0.0004377799130283023, 0.0003946381293104754, 0.0003333141561310218, 
-#                        0.00017926167187670345, 8.649780122407183e-05, 0.0002440424421446865, 0.00029433476802095433, 
-#                        0.00032524791728291556, 0.000346816907429512, 0.00031571414779105243, 0.0003776064321014153,
-#                        0.0004568280148071062, 0.0005600255941293191])*1e-12
+sim_ls = np.array([21.452, 44.292, 59.995, 130.421, 239.867, 33.348, 89.498, 64.278, 60.471, 52.858, 25.260, 41.440, 55.716, 72.848, 20.026])*1e-6
+sim_lws = np.array([81.548, 72.691, 67.455, 50.371, 35.678, 76.742, 58.431, 65.281, 66.436, 68.854, 88.797, 81.862, 76.420, 70.640, 74.150])*1e-12
+sim_lw_errs = np.array([0.378, 0.290, 0.246, 0.131, 0.063, 0.328, 0.179, 0.228, 0.237, 0.257, 0.475, 0.382, 0.329, 0.278, 0.302])*1e-12
 
 ### NOTE: all errors are found as errors of the fit only! ###
 
 plt.figure(figsize=(10,6))
 
-plt.plot(l*1e6,lw_mirror(l,λres,L,Tg,Tm)*1e12, label="broadband cavity")
-#plt.plot(l*1e6, double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="symmetric double fano")
-plt.plot(l*1e6,lw_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
-plt.plot(l*1e6,double_fano(l,λres,L,γλ,rd,Tg,Tm)*1e12, label="double fano cavity")
+plt.plot(l*1e6,lw_mirror(l,λres1,L1,Tg1,Tm1)*1e12, label="broadband cavity")
+plt.plot(l*1e6,lw_mirror(l,λres2,L2,Tg2,Tm2)*1e12, label="broadband cavity")
+plt.plot(l*1e6,lw_mirror(l,λres3,L3,Tg3,Tm3)*1e12, label="broadband cavity")
+
+#plt.plot(l*1e6,lw_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label="single fano cavity")
+plt.plot(l*1e6,double_fano(l,λres1,L1,γλ,rd,Tg1,Tm1)*1e12, label= "double fano cavity")
+plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
+plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
 plt.errorbar(ls_0207*1e6, lws_0207*1e12, err_0207*1e12, xerr=ls_0207_err*1e6, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
 plt.errorbar(ls_0211*1e6, lws_0211*1e12, err_0211*1e12, xerr=ls_0211_err*1e6, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
 plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
 plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
+plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
 
-plt.scatter(sim_ls*1e6, sim_lws*1e12, marker=".", color="firebrick", label="HWHM (simulated)")
+plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, capsize=3, fmt=".", color="firebrick", label="HWHM (simulated)")
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")
 plt.title("HWHM as a function of cavity length")

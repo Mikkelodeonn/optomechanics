@@ -18,11 +18,14 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 #params3 = M7.lossy_fit([952,952,0.6,1,0.1])
 
-params1[0] = 951.540
-params1[1] = 951.540 + 0.14
+λ_asymmetry_1 = params1[1]-params1[0]
+λ_asymmetry_2 = params2[1]-params2[0]
 
-params2[0] = 951.960
-params2[1] = 951.960 + 0.15
+params1[0] = 951.630
+params1[1] = 951.630 + λ_asymmetry_1
+
+params2[0] = 951.930
+params2[1] = 951.930 + λ_asymmetry_2
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelengths
@@ -31,10 +34,10 @@ params2[1] = 951.960 + 0.15
 # γλ -> width of guided mode resonance
 # α  -> loss factor 
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s4.txt")
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/25um/25s4_PI.txt")
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan.txt")
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250220/normalization/short_scan_PI.txt")
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250225/20um/20s5.txt")
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250225/20um/20s5_PI.txt")
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250225/normalization/short_scan.txt")
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250225/normalization/short_scan_PI.txt")
 PI_0 = PI_data[0,1]
 data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]
 norm[:,1] = [N/(PI/PI_0) for N,PI in zip(norm[:,1], norm_PI[:,1])]
@@ -43,7 +46,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(951.54, 951.96, 100)
+λs = np.linspace(params1[0], params2[0], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
@@ -872,7 +875,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
 
-#lmin=25
+#lmin=20
 #length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
 #Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
 
@@ -882,7 +885,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-lmin = 52.8
+lmin = 19.9
 length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
 
@@ -894,7 +897,7 @@ err = np.sqrt(np.diag(pcov))
 lw_err = round(err[4]*1e3,3)
 lw = round(popt[4]*1e3,3)
 legend = [lw, lw_err, round(length*1e-3,3)]
-#print("lw error: ", lw_err)
+print("lw error: ", lw_err)
 
 xs = np.linspace(λs[0], λs[-1], 1000)
  
