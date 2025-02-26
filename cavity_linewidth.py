@@ -92,7 +92,7 @@ def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: floa
 ## resonance wavelength [nm -> m]
 #λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
 ## length of cavity [μm -> m]
-l = np.linspace(10,300,10000)*1e-6
+l = np.linspace(15,800,10000)*1e-6
 ## losses in cavity
 #L = 0.15
 #L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
@@ -107,7 +107,7 @@ rd = np.sqrt(0.57)*np.sqrt(0.575)#np.sqrt(((0.57+0.575)/2))#np.sqrt(0.576)
 ## Broadband mirror transmission at resonance
 #Tm = tt_M5#0.049
 
-λres1, L1, Tg1, Tm1 = calc_params(λs, 951.535, 951.535 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
+λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
 λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 
