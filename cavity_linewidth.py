@@ -5,29 +5,29 @@ from scipy.optimize import fsolve
 import matplotlib.ticker as ticker
 from scipy.optimize import curve_fit
 
-#def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: float):
-#    M3_params = [λ01, λ11, td_1, γ_1, α_1]
-#    M5_params = [λ02, λ12, td_2, γ_2, α_2]
-#    rs_M3 = theoretical_reflection_values(M3_params, losses=True, loss_factor=0.05)[0]
-#    rs_M5 = theoretical_reflection_values(M5_params, losses=True, loss_factor=0.05)[0]
-#    ts_M3 = model(λs, *M3_params)
-#    ts_M5 = model(λs, *M5_params)
-#    idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
+def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: float):
+    M3_params = [λ01, λ11, td_1, γ_1, α_1]
+    M5_params = [λ02, λ12, td_2, γ_2, α_2]
+    rs_M3 = theoretical_reflection_values(M3_params, λs, losses=True, loss_factor=0.05)[0]
+    rs_M5 = theoretical_reflection_values(M5_params, λs, losses=True, loss_factor=0.05)[0]
+    ts_M3 = model(λs, *M3_params)
+    ts_M5 = model(λs, *M5_params)
+    idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
 
-#    rt_M3 = rs_M3[idx]
-#    rt_M5 = rs_M5[idx]
-#    tt_M3 = ts_M3[idx]
-#    tt_M5 = ts_M5[idx]
-#    print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
-#    print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
-#    print("trans. of M3 at trans. wavelength: ", tt_M3)
-#    print("trans. of M5 at trans. wavelength: ", tt_M5)
+    rt_M3 = rs_M3[idx]
+    rt_M5 = rs_M5[idx]
+    tt_M3 = ts_M3[idx]
+    tt_M5 = ts_M5[idx]
+    print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
+    print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
+    print("trans. of M3 at trans. wavelength: ", tt_M3)
+    print("trans. of M5 at trans. wavelength: ", tt_M5)
 
-#    λres = (λ01*1e-9 + λ02*1e-9)/2
-#    L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
-#    Tg = tt_M3
-#    Tm = tt_M5
-#    return λres, L, Tg, Tm
+    λres = (λ01*1e-9 + λ02*1e-9)/2
+    L = (1 - rt_M3) + (1 - rt_M5)
+    Tg = tt_M3
+    Tm = tt_M5
+    return λres, L, Tg, Tm
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -113,8 +113,8 @@ t_M5_trans = model(λt, *params2)
 r_M3_trans = theoretical_reflection_values(params1, λt)[0][0]
 r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
 
-#λ_asymmetry_1 = λ1_1-λ0_1
-#λ_asymmetry_2 = λ1_2-λ0_2
+λ_asymmetry_1 = λ1_1-λ0_1
+λ_asymmetry_2 = λ1_2-λ0_2
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
 
 
@@ -144,14 +144,15 @@ Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
 ## width of guided mode resonance [nm -> m]
 γλ = (γ_1*1e-9 + γ_2*1e-9)/2#0.485*1e-9
 ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
-rd = np.sqrt(0.57)*np.sqrt(0.575)
+rd = (1-td_2)*(1-td_2)#np.sqrt(0.57)*np.sqrt(0.575)
+print("rd: ", rd)
 #print(rd)
 ## Grating transmission at resonance
 Tg = t_M3_trans#0.049
 ## Broadband mirror transmission at resonance
 Tm = t_M5_trans#0.049
 
-#λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
+λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
 #λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 #λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 
@@ -221,12 +222,14 @@ sim_lw_errs = np.array([0.378, 0.290, 0.246, 0.131, 0.063, 0.328, 0.179, 0.228, 
 
 plt.figure(figsize=(10,6))
 
-plt.plot(l*1e6,lw_mirror(l,λres,Ls,Tg,Tm)*1e12, label="broadband cavity")
+#plt.plot(l*1e6,lw_mirror(l,λres,Ls,Tg,Tm)*1e12, label="broadband cavity")
 #plt.plot(l*1e6,lw_mirror(l,λres2,L2,Tg2,Tm2)*1e12, label="broadband cavity")
 #plt.plot(l*1e6,lw_mirror(l,λres3,L3,Tg3,Tm3)*1e12, label="broadband cavity")
+plt.plot(l*1e6,lw_mirror(l,λres1,L1,Tg1,Tm1)*1e12, label="broadband cavity")
 
 #plt.plot(l*1e6,lw_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label="single fano cavity")
-plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "double fano cavity")
+#plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "double fano cavity")
+plt.plot(l*1e6,double_fano(l,λres1,L1,γλ,rd,Tg1,Tm1)*1e12, label= "double fano cavity")
 #plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
