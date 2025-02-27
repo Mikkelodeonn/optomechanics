@@ -3,6 +3,31 @@ import matplotlib.pyplot as plt
 from fano_class import fano
 from scipy.optimize import fsolve
 import matplotlib.ticker as ticker
+from scipy.optimize import curve_fit
+
+#def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: float):
+#    M3_params = [λ01, λ11, td_1, γ_1, α_1]
+#    M5_params = [λ02, λ12, td_2, γ_2, α_2]
+#    rs_M3 = theoretical_reflection_values(M3_params, losses=True, loss_factor=0.05)[0]
+#    rs_M5 = theoretical_reflection_values(M5_params, losses=True, loss_factor=0.05)[0]
+#    ts_M3 = model(λs, *M3_params)
+#    ts_M5 = model(λs, *M5_params)
+#    idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
+
+#    rt_M3 = rs_M3[idx]
+#    rt_M5 = rs_M5[idx]
+#    tt_M3 = ts_M3[idx]
+#    tt_M5 = ts_M5[idx]
+#    print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
+#    print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
+#    print("trans. of M3 at trans. wavelength: ", tt_M3)
+#    print("trans. of M5 at trans. wavelength: ", tt_M5)
+
+#    λres = (λ01*1e-9 + λ02*1e-9)/2
+#    L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
+#    Tg = tt_M3
+#    Tm = tt_M5
+#    return λres, L, Tg, Tm
 
 def model(λ, λ0, λ1, td, γλ, β): 
     k = 2*np.pi / λ
@@ -12,7 +37,7 @@ def model(λ, λ0, λ1, td, γλ, β):
     t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
 
-def theoretical_reflection_values(params: list, losses=True, loss_factor=0.03):
+def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss_factor=0.05):
     λ0s, λ1s, tds, γλs, βs = params
     γs = 2*np.pi / λ1s**2 * γλs
     a = tds * ((2*np.pi / λ1s) - (2*np.pi / λ0s) + 1j*βs - 1j*γs)
@@ -45,37 +70,54 @@ def theoretical_reflection_values(params: list, losses=True, loss_factor=0.03):
 
     return (reflectivity_values, complex_reflectivity_amplitudes)
 
-M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
-M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
-λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
-λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
-λ_asymmetry_1 = λ1_1-λ0_1
-λ_asymmetry_2 = λ1_2-λ0_2
-λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
+#M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+#M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
-def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: float):
-    M3_params = [λ01, λ11, td_1, γ_1, α_1]
-    M5_params = [λ02, λ12, td_2, γ_2, α_2]
-    rs_M3 = theoretical_reflection_values(M3_params, losses=True, loss_factor=0.05)[0]
-    rs_M5 = theoretical_reflection_values(M5_params, losses=True, loss_factor=0.05)[0]
-    ts_M3 = model(λs, *M3_params)
-    ts_M5 = model(λs, *M5_params)
-    idx = int((list(ts_M3).index(np.min(ts_M3)) + list(ts_M5).index(np.min(ts_M5)))/2)
+M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans.txt")
+M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2.txt")
+M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans_PI.txt")
+M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2_PI.txt")
+M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
+M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
+M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
+M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
 
-    rt_M3 = rs_M3[idx]
-    rt_M5 = rs_M5[idx]
-    tt_M3 = ts_M3[idx]
-    tt_M5 = ts_M5[idx]
-    print("ref. of M3 at trans. wavelength:   ", rt_M3[0])
-    print("ref. of M5 at trans. wavelength:   ", rt_M5[0])
-    print("trans. of M3 at trans. wavelength: ", tt_M3)
-    print("trans. of M5 at trans. wavelength: ", tt_M5)
+M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
-    λres = (λ01*1e-9 + λ02*1e-9)/2
-    L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
-    Tg = tt_M3
-    Tm = tt_M5
-    return λres, L, Tg, Tm
+λs = np.linspace(M3[:,0][0], M3[:,0][-1], 1000)
+#λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+
+p0 = [952,952,0.6,1,0.1]
+params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
+params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
+
+#rs_M3 = theoretical_reflection_values(params1, λs)[0]
+#rs_M5 = theoretical_reflection_values(params2, λs)[0]
+#rs_M3 = [float(r) for r in rs_M3]
+#rs_M5 = [float(r) for r in rs_M5]
+
+#ts_M3 = model(λs, *params1)
+#ts_M5 = model(λs, *params2)
+
+#λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
+#λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
+λ0_1, λ1_1, td_1, γ_1, α_1 = params1
+λ0_2, λ1_2, td_2, γ_2, α_2 = params2
+
+λt = np.array([951.750])
+
+t_M3_trans = model(λt, *params1)
+t_M5_trans = model(λt, *params2)
+
+r_M3_trans = theoretical_reflection_values(params1, λt)[0][0]
+r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
+
+#λ_asymmetry_1 = λ1_1-λ0_1
+#λ_asymmetry_2 = λ1_2-λ0_2
+#λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
+
+
 
 #λ0_1 = 951.535 
 #λ1_1 = 951.535 + λ_asymmetry_1
@@ -91,25 +133,27 @@ def calc_params(λs: np.array, λ01: float, λ11: float, λ02: float, λ12: floa
 
 ## resonance wavelength [nm -> m]
 #λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
+λres = 951.750e-9
+print("resonant wavelength: ", λres)
 ## length of cavity [μm -> m]
 l = np.linspace(15,800,10000)*1e-6
 ## losses in cavity
 #L = 0.15
-#L = (1 - rt_M3 - tt_M3) + (1 - rt_M5 - tt_M5)
+Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
 #print("cavity losses at trans. wavelength:", L[0])
 ## width of guided mode resonance [nm -> m]
 γλ = (γ_1*1e-9 + γ_2*1e-9)/2#0.485*1e-9
 ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
-rd = np.sqrt(0.57)*np.sqrt(0.575)#np.sqrt(((0.57+0.575)/2))#np.sqrt(0.576)
+rd = np.sqrt(0.57)*np.sqrt(0.575)
 #print(rd)
 ## Grating transmission at resonance
-#Tg = tt_M3#0.049
+Tg = t_M3_trans#0.049
 ## Broadband mirror transmission at resonance
-#Tm = tt_M5#0.049
+Tm = t_M5_trans#0.049
 
-λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
-λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
-λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
+#λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
+#λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
+#λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 
 def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float): 
     δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
@@ -177,22 +221,22 @@ sim_lw_errs = np.array([0.378, 0.290, 0.246, 0.131, 0.063, 0.328, 0.179, 0.228, 
 
 plt.figure(figsize=(10,6))
 
-plt.plot(l*1e6,lw_mirror(l,λres1,L1,Tg1,Tm1)*1e12, label="broadband cavity")
-plt.plot(l*1e6,lw_mirror(l,λres2,L2,Tg2,Tm2)*1e12, label="broadband cavity")
-plt.plot(l*1e6,lw_mirror(l,λres3,L3,Tg3,Tm3)*1e12, label="broadband cavity")
+plt.plot(l*1e6,lw_mirror(l,λres,Ls,Tg,Tm)*1e12, label="broadband cavity")
+#plt.plot(l*1e6,lw_mirror(l,λres2,L2,Tg2,Tm2)*1e12, label="broadband cavity")
+#plt.plot(l*1e6,lw_mirror(l,λres3,L3,Tg3,Tm3)*1e12, label="broadband cavity")
 
 #plt.plot(l*1e6,lw_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label="single fano cavity")
-plt.plot(l*1e6,double_fano(l,λres1,L1,γλ,rd,Tg1,Tm1)*1e12, label= "double fano cavity")
-plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
-plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
+plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "double fano cavity")
+#plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
+#plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.errorbar(lengths*1e6,lws*1e12, lw_errs*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)")
-plt.errorbar(ls_0207*1e6, lws_0207*1e12, err_0207*1e12, xerr=ls_0207_err*1e6, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
-plt.errorbar(ls_0211*1e6, lws_0211*1e12, err_0211*1e12, xerr=ls_0211_err*1e6, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
-plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
-plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
-plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
+#plt.errorbar(ls_0207*1e6, lws_0207*1e12, err_0207*1e12, xerr=ls_0207_err*1e6, fmt=".", capsize=3, color="cyan", label="HWHM (measured on 7/2)")
+#plt.errorbar(ls_0211*1e6, lws_0211*1e12, err_0211*1e12, xerr=ls_0211_err*1e6, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
+#plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
+#plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
+#plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
 
-plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, capsize=3, fmt=".", color="firebrick", label="HWHM (simulated)")
+#plt.errorbar(sim_ls*1e6, sim_lws*1e12, sim_lw_errs*1e12, capsize=3, fmt=".", color="firebrick", label="HWHM (simulated)")
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")
 plt.title("HWHM as a function of cavity length")

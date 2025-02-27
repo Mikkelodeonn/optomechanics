@@ -21,11 +21,11 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 λ_asymmetry_1 = params1[1]-params1[0]
 λ_asymmetry_2 = params2[1]-params2[0]
 
-params1[0] = 951.630
-params1[1] = 951.630 + λ_asymmetry_1
+#params1[0] = 951.630
+#params1[1] = 951.630 + λ_asymmetry_1
 
-params2[0] = 951.930
-params2[1] = 951.930 + λ_asymmetry_2
+#params2[0] = 951.930
+#params2[1] = 951.930 + λ_asymmetry_2
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelengths
@@ -46,7 +46,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 
 #λs = np.linspace(951, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-λs = np.linspace(params1[0], params2[0], 100)
+λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
@@ -822,7 +822,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #### plotting the calculated reflection/transmission values ####
 
 #theoretical_reflection_values_plot(params3, λs)
-#theoretical_reflection_values_comparison_plot(params1, params2, λs)
+theoretical_reflection_values_comparison_plot(params1, params2, λs)
 
 #peak = fano("/Users/mikkelodeon/optomechanics/Single Fano cavities/Data/M4/70short.txt")
 #fitting_params = [950.99,950.99,0.5,1e-2,1e-7]
@@ -885,33 +885,33 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-lmin = 19.9
-length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
-Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
+#lmin = 19.9
+#length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
+#Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05)
 
-p0 = [0, 0, 0, 951.7, 100e-3]
+#p0 = [0, 0, 0, 951.7, 100e-3]
 #p0 = [951.7,951.7,0.6,0.1,1e-6]
 
-popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
-err = np.sqrt(np.diag(pcov))
-lw_err = round(err[4]*1e3,3)
-lw = round(popt[4]*1e3,3)
-legend = [lw, lw_err, round(length*1e-3,3)]
-print("lw error: ", lw_err)
+#popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=10000)
+#err = np.sqrt(np.diag(pcov))
+#lw_err = round(err[4]*1e3,3)
+#lw = round(popt[4]*1e3,3)
+#legend = [lw, lw_err, round(length*1e-3,3)]
+#print("lw error: ", lw_err)
 
-xs = np.linspace(λs[0], λs[-1], 1000)
+#xs = np.linspace(λs[0], λs[-1], 1000)
  
-plt.figure(figsize=(10,6))
-plt.scatter(λs, Ts, color="royalblue", label="theory")
-plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm, cavity length $\\approx$ %5.3fμm" % tuple(legend))
+#plt.figure(figsize=(10,6))
+#plt.scatter(λs, Ts, color="royalblue", label="theory")
+#plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm, cavity length $\\approx$ %5.3fμm" % tuple(legend))
 #plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
 #plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
 #plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission") 
-plt.xlabel("wavelength [nm]")
-plt.ylabel("normalized transmission [V]")
-plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
-plt.subplots_adjust(bottom=0.2)
-plt.show()
+#plt.title("M3/M5 double fano transmission") 
+#plt.xlabel("wavelength [nm]")
+#plt.ylabel("normalized transmission [V]")
+#plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
+#plt.subplots_adjust(bottom=0.2)
+#plt.show()
 
