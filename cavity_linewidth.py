@@ -255,8 +255,8 @@ lws_0226 = np.array([lw25,lw56,lw75,lw90,lw113,lw181,lw226,lw323,lw452,lw755])*1
 errs_0226 = np.array([err25,err56,err75,err90,err113,err181,err226,err323,err452,err755])*1e-12 ## standard deviation of all measurements (within reason)
 ls_0226 = np.array([24.612, 54.105, 67.149, 88.825, 106.709, 155.497, 196.168, 299.106, 412.991, 718.787])*1e-6 ## found from fsr scan and fit
 
-sim_ls = np.array([24.784, 54.291, 155.616, 299.309, 718.816])*1e-6
-sim_lws = np.array([99.942, 84.039, 61.223, 41.117, 27.169])*1e-12
+sim_ls = np.array([24.784, 54.291, 67.111, 155.616, 299.309, 718.816])*1e-6
+sim_lws = np.array([99.942, 84.039, 84.487, 61.223, 41.117, 27.169])*1e-12
 
 plt.figure(figsize=(10,6))
 
