@@ -23,17 +23,17 @@ params2 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 params1[0] = 951.635833090383
 params1[1] = 951.7808553381275
-#params1[2] = 0.8112460470002542 
-#params1[3] = 0.5127336548338813
-#params1[4] = 9.089548008029833e-07 
+params1[2] = 0.8112460470002542 
+params1[3] = 0.5127336548338813
+params1[4] = 9.089548008029833e-07 
 
 ###951.630 + λ_asymmetry_1
 
 params2[0] = 952.0676067923679
 params2[1] = 952.1863127407705
-#params2[2] = 0.8206794339330804
-#params2[3] = 0.6375760748025334
-#params2[4] = 2.4859509672570234e-06
+params2[2] = 0.8206794339330804
+params2[3] = 0.6375760748025334
+params2[4] = 2.4859509672570234e-06
 
 ### 951.870 + λ_asymmetry_2
 
@@ -59,7 +59,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(951.650, 951.950, 100)
-λs = np.linspace(951.600, 952.050, 50)
+λs = np.linspace(951.800, 952.150, 50)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -896,6 +896,23 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
+M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans.txt")
+M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2.txt")
+M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans_PI.txt")
+M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2_PI.txt")
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
+
+M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+
+#λs = np.linspace(M3[:,0][0], M3[:,0][-1], 50)
+#λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+
+p0 = [952,952,0.6,1,0.1]
+params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
+params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
+
 
 lmin = 24.6
 length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
@@ -906,10 +923,10 @@ p0 = [0, 0, 0, 951.7, 100e-3]
 bounds = [[0,0,-np.inf,0,0],[np.inf,np.inf,np.inf,np.inf,np.inf]]
 #p0 = [951.7,951.7,0.6,0.1,1e-6]
 
-popt, pcov = curve_fit(fit_model, λs, Ts, bounds=bounds, p0=p0, maxfev=100000)
+popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, bounds=bounds, maxfev=100000)
 err = np.sqrt(np.diag(pcov))
 lw_err = round(err[4]*1e3,3)
-lw = round(popt[4]*1e3,3)
+lw = np.abs(round(popt[4]*1e3,3))
 legend = [lw, lw_err, round(length*1e-3,3)]
 print("lw error: ", lw_err)
 print(popt)
@@ -923,7 +940,7 @@ plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\a
 #plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
 #plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission") 
+plt.title("M3/M5 double fano transmission $(l = l_{M3} + l_{M5})/2$") 
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)

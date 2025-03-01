@@ -113,7 +113,7 @@ print("tds: ", td_1, td_2)
 print("γs:  ", γ_1, γ_2)
 print("αs:  ", α_1, α_2)
 
-λt = np.array([951.650])
+λt = np.array([951.750])
 
 t_M3_trans = model(λt, *params1)
 t_M5_trans = model(λt, *params2)
@@ -121,8 +121,8 @@ t_M5_trans = model(λt, *params2)
 r_M3_trans = theoretical_reflection_values(params1, λt)[0][0]
 r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
 
-λ_asymmetry_1 = λ1_1-λ0_1
-λ_asymmetry_2 = λ1_2-λ0_2
+#λ_asymmetry_1 = λ1_1-λ0_1
+#λ_asymmetry_2 = λ1_2-λ0_2
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 1000)
 
 
@@ -141,7 +141,7 @@ r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
 
 ## resonance wavelength [nm -> m]
 #λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
-λres = 951.650e-9
+λres = 951.750e-9
 print("resonant wavelength: ", λres)
 ## length of cavity [μm -> m]
 l = np.linspace(15,800,10000)*1e-6
@@ -150,9 +150,11 @@ l = np.linspace(15,800,10000)*1e-6
 Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
 #print("cavity losses at trans. wavelength:", L[0])
 ## width of guided mode resonance [nm -> m]
-γλ = (γ_1*1e-9 + γ_2*1e-9)/2#0.485*1e-9
+γλ = (γ_1*1e-9 + γ_2*1e-9)/2
 ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
-rd = (1-td_2)*(1-td_2)#np.sqrt(0.57)*np.sqrt(0.575)
+r1 = (1-np.sqrt(td_1))
+r2 = (1-np.sqrt(td_2))
+rd = (r1 + r2 - 2*r1*r2)**2 / (1 - r1*r2)**2 ## the minimum reflectivity is assumed to be the case for the direct/off-resonance case.
 print("rd: ", rd)
 #print(rd)
 ## Grating transmission at resonance
@@ -160,7 +162,7 @@ Tg = t_M3_trans#0.049
 ## Broadband mirror transmission at resonance
 Tm = t_M5_trans#0.049
 
-λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
+#λres1, L1, Tg1, Tm1 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.870, 951.870 + λ_asymmetry_2)
 #λres2, L2, Tg2, Tm2 = calc_params(λs, 951.570, 951.570 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 #λres3, L3, Tg3, Tm3 = calc_params(λs, 951.630, 951.630 + λ_asymmetry_1, 951.950, 951.950 + λ_asymmetry_2)
 
@@ -226,10 +228,10 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: floa
 #sim_lws = np.array([81.548, 72.691, 67.455, 50.371, 35.678, 76.742, 58.431, 65.281, 66.436, 68.854, 88.797, 81.862, 76.420, 70.640, 74.150])*1e-12
 #sim_lw_errs = np.array([0.378, 0.290, 0.246, 0.131, 0.063, 0.328, 0.179, 0.228, 0.237, 0.257, 0.475, 0.382, 0.329, 0.278, 0.302])*1e-12
 
-### NOTE: all errors are found as errors of the fit only! ###
+### NOTE: only peaks which were succesfully fitted to the general double fano model was used (highly diverging line widths were excluded)
 
 err25 = stdev([82.505,140.995])
-err56 = stdev([92.978,131.930,50.198,127.991])
+err56 = stdev([92.978,131.930,127.991])
 err75 = stdev([129.352,113.418,98.231,124.844])
 err90 = stdev([118.522,127.537,123.208,143.508,144.028,156.626,150.353,128.158])
 err113 = stdev([121.088,119.276,128.153,134.716,138.369,143.275])
@@ -240,7 +242,7 @@ err452 = stdev([55.656,56.452,54.841,57.093])
 err755 = stdev([23.575,30.555,27.897,31.242,30.806,37.414,34.551,30.757,31.109,31.167])
 
 lw25 = mean([82.505,140.995])
-lw56 = mean([92.978,131.930,50.198,127.991])
+lw56 = mean([92.978,131.930,127.991])
 lw75 = mean([129.352,113.418,98.231,124.844])
 lw90 = mean([118.522,127.537,123.208,143.508,144.028,156.626,150.353,128.158])
 lw113 = mean([121.088,119.276,128.153,134.716,138.369,143.275])
@@ -250,13 +252,16 @@ lw323 = mean([60.452,52.197,60.835,64.421,68.542])
 lw452 = mean([55.656,56.452,54.841,57.093])
 lw755 = mean([23.575,30.555,27.897,31.242,30.806,37.414,34.551,30.757,31.109,31.167])
 
-#lws_0226 = np.array([82.505,92.978,98.231,118.522,119.276,75.386,81.864,52.197,54.841,27.897])*1e-12
 lws_0226 = np.array([lw25,lw56,lw75,lw90,lw113,lw181,lw226,lw323,lw452,lw755])*1e-12
 errs_0226 = np.array([err25,err56,err75,err90,err113,err181,err226,err323,err452,err755])*1e-12 ## standard deviation of all measurements (within reason)
 ls_0226 = np.array([24.612, 54.105, 67.149, 88.825, 106.709, 155.497, 196.168, 299.106, 412.991, 718.787])*1e-6 ## found from fsr scan and fit
 
-sim_ls = np.array([24.784, 54.291, 67.111, 155.616, 299.309, 718.816])*1e-6
-sim_lws = np.array([99.942, 84.039, 84.487, 61.223, 41.117, 27.169])*1e-12
+lws_0226_good = np.array([lw25,lw56,lw75,lw181,lw323,lw755])*1e-12
+errs_0226_good = np.array([err25, err56, err75, err181, err323, err755])*1e-12 ## standard deviation of all measurements (within reason)
+ls_0226_good = np.array([24.612, 54.105, 67.149, 155.497, 299.106, 718.787])*1e-6 ## found from fsr scan and fit
+
+sim_ls = np.array([24.791, 54.300, 67.626, 155.691, 299.436, 718.774])*1e-6
+sim_lws = np.array([148.912, 131.111, 123.677, 94.894, 62.615, 30.120])*1e-12
 
 plt.figure(figsize=(10,6))
 
@@ -264,10 +269,12 @@ plt.figure(figsize=(10,6))
 #plt.plot(l*1e6,lw_mirror(l,λres2,L2,Tg2,Tm2)*1e12, label="broadband cavity")
 #plt.plot(l*1e6,lw_mirror(l,λres3,L3,Tg3,Tm3)*1e12, label="broadband cavity")
 plt.plot(l*1e6,lw_mirror(l,λres,Ls,Tg,Tm)*1e12, label="broadband cavity")
-plt.errorbar(ls_0226*1e6, lws_0226*1e12, errs_0226*1e12, fmt=".", capsize=3, label="HWHM (measured on 26/2)")
+plt.errorbar(ls_0226*1e6, lws_0226*1e12, errs_0226*1e12, fmt=".", capsize=3, color="orange", label="HWHM (measured on 26/2)")
+plt.errorbar(ls_0226_good*1e6, lws_0226_good*1e12, errs_0226_good*1e12, fmt=".", color="magenta", capsize=3, label="HWHM (measured on 26/2)")
 
 plt.plot(l*1e6,lw_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
-plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "double fano cavity")
+plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "asymmetric double fano cavity")
+plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tg)*1e12, label= "symmetric double fano cavity")
 #plt.plot(l*1e6,double_fano(l,λres1,L1,γλ,rd,Tg1,Tm1)*1e12, label= "double fano cavity")
 #plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
@@ -278,7 +285,7 @@ plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "double fano c
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
 
-plt.scatter(sim_ls*1e6, sim_lws*1e12, marker=".", color="firebrick", label="HWHM (simulated)")
+plt.scatter(sim_ls*1e6, sim_lws*1e12, marker=".", color="limegreen", label="HWHM (simulated)", zorder=7)
 #plt.plot(λs, rs_M3, "ro")
 #plt.plot(λs, rs_M5, "bo")
 plt.title("HWHM as a function of cavity length")
