@@ -154,8 +154,8 @@ Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
 ## width of guided mode resonance [nm -> m]
 γλ = (γ_1*1e-9 + γ_2*1e-9)/2
 ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
-r1 = (1-np.sqrt(td_1))
-r2 = (1-np.sqrt(td_2))
+r1 = (1-td_1)
+r2 = (1-td_2)
 rd = (r1 + r2 - 2*r1*r2)**2 / (1 - r1*r2)**2 ## the minimum reflectivity is assumed to be the case for the direct/off-resonance case.
 print("rd: ", rd)
 #print(rd)
