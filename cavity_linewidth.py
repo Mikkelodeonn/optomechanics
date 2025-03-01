@@ -113,7 +113,9 @@ print("tds: ", td_1, td_2)
 print("γs:  ", γ_1, γ_2)
 print("αs:  ", α_1, α_2)
 
-λt = np.array([951.750])
+λt = np.array([(λ0_1 + λ0_2)/2]) #955.572e-9
+
+#λt = np.array([951.650])
 
 t_M3_trans = model(λt, *params1)
 t_M5_trans = model(λt, *params2)
@@ -140,8 +142,8 @@ r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
 
 
 ## resonance wavelength [nm -> m]
-#λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
-λres = 951.750e-9
+λres = (λ0_1*1e-9 + λ0_2*1e-9)/2 #955.572e-9
+#λres = 951.650e-9
 print("resonant wavelength: ", λres)
 ## length of cavity [μm -> m]
 l = np.linspace(15,800,10000)*1e-6
@@ -274,7 +276,7 @@ plt.errorbar(ls_0226_good*1e6, lws_0226_good*1e12, errs_0226_good*1e12, fmt=".",
 
 plt.plot(l*1e6,lw_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label="single fano cavity")
 plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12, label= "asymmetric double fano cavity")
-plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tg)*1e12, label= "symmetric double fano cavity")
+#plt.plot(l*1e6,double_fano(l,λres,Ls,γλ,rd,Tg,Tg)*1e12, label= "symmetric double fano cavity")
 #plt.plot(l*1e6,double_fano(l,λres1,L1,γλ,rd,Tg1,Tm1)*1e12, label= "double fano cavity")
 #plt.plot(l*1e6,double_fano(l,λres2,L2,γλ,rd,Tg2,Tm2)*1e12, label = "double fano cavity (adjusted detuning)")
 #plt.plot(l*1e6,double_fano(l,λres3,L3,γλ,rd,Tg3,Tm3)*1e12, label = "double fano cavity (adjusted detuning)")
