@@ -57,10 +57,10 @@ line_width_fit = False
 
 ## 1,2,3,4,5,7,8,9,10
 
-scan_num = 10
+scan_num = 4
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/755um/s"+str(scan_num)+".txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/755um/s"+str(scan_num)+"_PI.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/25um/s"+str(scan_num)+".txt")[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/25um/s"+str(scan_num)+"_PI.txt")[left:right]
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/short_scan.txt")[left:right]
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/short_scan.txt")[left:right]
 
@@ -141,7 +141,7 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 ### Fitting loaded data to the double fano transmission function
 
 if line_width_fit == False:
-    p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2,718e3, 0.05]
+    p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, 24.4e3, 0.05]
     popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
     fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 

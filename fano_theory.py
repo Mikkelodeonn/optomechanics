@@ -59,7 +59,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(951.650, 951.950, 100)
-λs = np.linspace(951.500, 951.800, 50)
+λs = np.linspace(951.600, 952.050, 50)
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -897,16 +897,16 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 #Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
-lmin = 67
-length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.8 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.2)
+lmin = 24.6
+length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
 print(length)
 Ts = dual_fano_transmission(params1, params2, length, λs, loss_factor=0.05, intracavity=False)
 
 p0 = [0, 0, 0, 951.7, 100e-3]
-#bounds = [[0,0,-np.inf,0,0],[np.inf,np.inf,np.inf,np.inf,np.inf]]
+bounds = [[0,0,-np.inf,0,0],[np.inf,np.inf,np.inf,np.inf,np.inf]]
 #p0 = [951.7,951.7,0.6,0.1,1e-6]
 
-popt, pcov = curve_fit(fit_model, λs, Ts, p0=p0, maxfev=100000)
+popt, pcov = curve_fit(fit_model, λs, Ts, bounds=bounds, p0=p0, maxfev=100000)
 err = np.sqrt(np.diag(pcov))
 lw_err = round(err[4]*1e3,3)
 lw = round(popt[4]*1e3,3)
