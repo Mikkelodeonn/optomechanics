@@ -12,7 +12,7 @@ def model(λ, λ0, λ1, td, γλ, β):
     t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
 
-def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss_factor=0.05):
+def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss_factor=0.04):
     λ0s, λ1s, tds, γλs, βs = params
     γs = 2*np.pi / λ1s**2 * γλs
     a = tds * ((2*np.pi / λ1s) - (2*np.pi / λ0s) + 1j*βs - 1j*γs)
@@ -46,13 +46,14 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
     return (reflectivity_values, complex_reflectivity_amplitudes)
 
 M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans.txt")
-M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2.txt")
 M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans_PI.txt")
-M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M5/M5_trans_2_PI.txt")
 M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
-M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
 M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
-M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
+
+M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/grating trans. spectra/M5/M5_trans_750.txt")
+M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/grating trans. spectra/M5/M5_trans_750_PI.txt")
+M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/normalization/grating_trans.txt")
+M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/normalization/grating_trans_PI.txt")
 
 M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
@@ -78,7 +79,7 @@ popt_t2, _ = curve_fit(model, λs, ts_M5, p0=[952,952,0.6,1,1e-7])
 popt_r1, _ = curve_fit(model, λs, rs_M3, p0=[952,952,0.6,1,1e-7])
 popt_r2, _ = curve_fit(model, λs, rs_M5, p0=[952,952,0.6,1,1e-7])
 
-λt = np.array([951.750])
+λt = np.array([951.650])
 
 t_M3_trans = model(λt, *params1)
 t_M5_trans = model(λt, *params2)
@@ -87,6 +88,8 @@ r_M3_trans = theoretical_reflection_values(params1, λt)[0][0]
 r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
 
 print(t_M3_trans, t_M5_trans, r_M3_trans, r_M5_trans)
+
+print(popt_t2)
 
 plt.figure(figsize=(10,6))
 plt.title("M3+M5 spectra in optimized double fano config. ($\\lambda_{trans} = \\frac{(\\lambda_{M3} + \\lambda_{M5})}{2} \\approx 951.750 nm$)")
