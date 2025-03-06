@@ -218,6 +218,9 @@ err_0218 = np.array([6.409594508045273, 6.4623500579952555, 7.026351242285626, 4
 lws_0220 = np.array([115.698, 79.858, 79.966, 67.24])*1e-12
 err_0220 = np.array([7.130991486232972, 8.382897672891941, 5.877895384766792, 9.143520307376802])*1e-12
 
+lws_0226 = np.array([82.505])*1e-12
+err_0226 = np.array([30.503])*1e-12
+
 err25 = stdev([43.242,82.505,140.995])
 err56 = stdev([92.978,131.930,50.198])
 err75 = stdev([129.352,113.418,98.231])
@@ -244,12 +247,12 @@ lws_0226 = np.array([lw25,lw56,lw75,lw90,lw113,lw181,lw226,lw323,lw452,lw755])*1
 errs_0226 = np.array([err25,err56,err75,err90,err113,err181,err226,err323,err452,err755])*1e-12 ## standard deviation of all measurements (within reason)
 ls_0226 = np.array([24.612, 54.105, 67.149, 88.825, 106.709, 155.497, 196.168, 299.106, 412.991, 718.787])*1e-6 ## found from fsr scan and fit
 
-the_good_data_points = list(lws_0211)+list(lws_0220)+list(lws_0218[:2])+list(lws_0207[3:])+[lw755*1e-12]#+[lw25*1e-12]+[lw56*1e-12]
-good_errs = list(err_0211)+list(err_0220)+list(err_0218[:2])+list(err_0207[3:])+[err755*1e-12]#+[err25*1e-12]+[err56*1e-12]
-the_good_lengths = list(ls_0211)+list(ls_0220)+list(ls_0218[:2])+list(ls_0207[3:])+[ls_0226[-1]]#+list(ls_0226[:2])
-print(len(the_good_data_points))
-print(len(good_errs))
-print(len(the_good_lengths))
+the_good_data_points = list(lws_0211)+list(lws_0220[1:])+list(lws_0218[:2])+list(lws_0207[3:])+[23.575*1e-12, 82.505*1e-12]#+[lw25*1e-12]+[lw56*1e-12]
+good_errs = list(err_0211)+list(err_0220[1:])+list(err_0218[:2])+list(err_0207[3:])+[1.927*1e-12, 30.503*1e-12]#+[err25*1e-12]+[err56*1e-12]
+the_good_lengths = list(ls_0211)+list(ls_0220[1:])+list(ls_0218[:2])+list(ls_0207[3:])+[718.787*1e-6, 24.612*1e-6]#+list(ls_0226[:2])
+#print(len(the_good_data_points))
+#print(len(good_errs))
+#print(len(the_good_lengths))
 
 dlws_0702, slws_0702, bblws_0702 = calc_lws(l, p1_0702, p2_0702)
 dlws_1102, slws_1102, bblws_1102 = calc_lws(l, p1_1102, p2_1102)
@@ -289,9 +292,9 @@ broadband_lws_m = (bblws_0702_m+bblws_1102_m+bblws_1802_m+bblws_2002_m+bblws_022
 
 plt.figure(figsize=(10,6))
 plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured)", zorder=7)
-plt.plot(l*1e6, broadband_lws, color="royalblue", label="broadband cavity")
-plt.plot(l*1e6,single_fano_lws, label="single fano cavity", color="orangered")
-plt.plot(l*1e6,double_fano_lws, label= "double fano cavity", color="forestgreen")
+plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
+plt.plot(l*1e6,single_fano_lws, linestyle="--", label="avg. single fano cavity", color="orangered")
+plt.plot(l*1e6,double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
 plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
@@ -300,7 +303,7 @@ plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen
 #plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
-plt.title("HWHM as a function of cavity length")
+plt.title("HWHM as a function of cavity length (averaged theoretical prediction)")
 plt.xlabel("Cavity length [μm]")
 plt.ylabel("HWHM [pm]")
 plt.xscale("log")
