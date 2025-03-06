@@ -50,19 +50,18 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 
 ### Load data from .txt file
 
-left = 4
+left = 12
 right = -13
-extrapolated = False
+extrapolated = True
 line_width_fit = True
 
-## 1,2,3,4,5,7,8,9,10
+scan_num = 1
+scan_type = "s"
 
-scan_num = 2
-
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/377um/s"+str(scan_num)+".txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/377um/s"+str(scan_num)+"_PI.txt")[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/normalization/short_scan.txt")[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/normalization/short_scan.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/"+str(scan_type)+str(scan_num)+".txt")[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/21um/"+str(scan_type)+str(scan_num)+"_PI.txt")[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/short_scan.txt")[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/short_scan.txt")[left:right]
 
 #PI_0 = PI_data[0,1]
 #PI_0_norm = norm[0,1]

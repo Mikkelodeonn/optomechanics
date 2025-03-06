@@ -206,8 +206,8 @@ ls_0218_err = np.array([0.496, 0.555, 0.342, 0.437])*1e-6
 ls_0220 = np.array([25.369, 41.054, 55.508, 73.002])*1e-6
 ls_0220_err = np.array([0.189, 0.205, 0.347, 0.516])*1e-6
 
-lws_0207 = np.array([148.169, 96.458, 90.403, 61.248, 48.223])*1e-12
-err_0207 = np.array([10.160799928638458, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
+lws_0207 = np.array([139.644, 96.458, 90.403, 61.248, 48.223])*1e-12
+err_0207 = np.array([5.019, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
 
 lws_0211 = np.array([79.985])*1e-12
 err_0211 = np.array([5.97499144083166])*1e-12
@@ -247,9 +247,9 @@ lws_0226 = np.array([lw25,lw56,lw75,lw90,lw113,lw181,lw226,lw323,lw452,lw755])*1
 errs_0226 = np.array([err25,err56,err75,err90,err113,err181,err226,err323,err452,err755])*1e-12 ## standard deviation of all measurements (within reason)
 ls_0226 = np.array([24.612, 54.105, 67.149, 88.825, 106.709, 155.497, 196.168, 299.106, 412.991, 718.787])*1e-6 ## found from fsr scan and fit
 
-the_good_data_points = list(lws_0211)+list(lws_0220[1:])+list(lws_0218[:2])+list(lws_0207[3:])+[23.575*1e-12, 82.505*1e-12]#+[lw25*1e-12]+[lw56*1e-12]
-good_errs = list(err_0211)+list(err_0220[1:])+list(err_0218[:2])+list(err_0207[3:])+[1.927*1e-12, 30.503*1e-12]#+[err25*1e-12]+[err56*1e-12]
-the_good_lengths = list(ls_0211)+list(ls_0220[1:])+list(ls_0218[:2])+list(ls_0207[3:])+[718.787*1e-6, 24.612*1e-6]#+list(ls_0226[:2])
+the_good_data_points = np.concatenate([lws_0211, lws_0220[1:], lws_0218[:2], lws_0207[3:], [lws_0207[0]], np.array([23.575, 82.505])*1e-12])
+good_errs = np.concatenate([err_0211, err_0220[1:], err_0218[:2], err_0207[3:], [err_0207[0]], np.array([1.927, 30.503])*1e-12])
+the_good_lengths = np.concatenate([ls_0211, ls_0220[1:], ls_0218[:2], ls_0207[3:], [ls_0207[0]], np.array([718.787, 24.612])*1e-6])
 #print(len(the_good_data_points))
 #print(len(good_errs))
 #print(len(the_good_lengths))
