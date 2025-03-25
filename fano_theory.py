@@ -50,7 +50,7 @@ def model(λ, λ0, λ1, td, γλ, β):
     t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
 
-def fit_model(λ, a, b, c, λ0, δλ): ## general fano model
+def fit_model(λ, a, b, c, λ0, δλ): ## generel fano model
     γ = 1 - c*((λ-λ0)/δλ)
     t = (a/(1 + ((λ-λ0)/(δλ*γ))**2)) + b
     return t

@@ -58,19 +58,20 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 
     return (reflectivity_values, complex_reflectivity_amplitudes)
 
-def lw_mirror(l: int, λres: float, L: float, Tg: float, Tm: float): 
-    δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
+def lw_mirror(l: int, λres: float, L: float, r1: float, r2: float): 
+    δγc = (λres**2/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     return δγc
 
-def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, Tm: float): 
-    δγc = ((λres**2)/(8*np.pi*l)) * (Tg + Tm + L) 
-    δγg = ((γλ/(2*(1-rd)))) * (Tg + Tm + L) 
+def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: float, r2: float): 
+    δγc = ((λres**2)/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
+    δγg = ((γλ/(2*(1-rd)))) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ 
 
-def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, Tg: float, Tm: float):
-    δγc = ((λres**2)/(8*np.pi*l)) * (Tg + Tm + L) 
-    δγg = (γλ/(2*(1-rd))) * (Tg + Tm + L) * 0.5
+def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: float, r2: float):
+    δγc = ((λres**2)/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
+    δγg = (γλ/(2*(1-rd))) * (1 - r1 + 1 - r2)*0.5 #(Tg + Tm + L) * 0.5
+    #print(δγg)
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ
 
@@ -78,7 +79,7 @@ def calc_lws(l, params1, params2):
     λ0_1 = params1[0]; γ_1 = params1[3]
     λ0_2 = params2[0]; γ_2 = params2[3]
 
-    λt = np.array([0.5*λ0_1 + 0.5*λ0_2]) 
+    λt = np.array([1*λ0_1 + 0*λ0_2]) 
 
     t_M3_trans = model(λt, *params1)
     t_M5_trans = model(λt, *params2)
@@ -95,19 +96,21 @@ def calc_lws(l, params1, params2):
     rparams2, _ = curve_fit(model, λs, r2s, p0=p0)
 
     ## resonance wavelength [nm -> m]
-    λres = 0.5*λ0_1*1e-9 + 0.5*λ0_2*1e-9
+    λres = 1*λ0_1*1e-9 + 0*λ0_2*1e-9
     #print("resonant wavelength: ", λres)
     ## length of cavity [μm -> m]
     ## losses in cavity
     Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
-    #print("cavity losses at trans. wavelength:", Ls)
+    print("cavity losses at trans. wavelength:", Ls)
     ## width of guided mode resonance [nm -> m]
-    γλ = (γ_1*1e-9 + γ_2*1e-9)/2
+    γλ = (1*γ_1*1e-9 + 0*γ_2*1e-9)
+    print("γ: ", γλ)
     ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
-    r1 = rparams1[2]
-    r2 = rparams2[2]
-    rd = (r1 + r2 - 2*r1*r2)**2 / (1 - r1*r2)**2 ## the minimum reflectivity is assumed to be the case for the direct/off-resonance case.
-    #print("rd: ", rd)
+    rd1 = rparams1[2]
+    rd2 = rparams2[2]
+    rd = (rd1 + rd2)/2
+    #rd = (rd1 + rd2 - 2*rd1*rd2)**2 / (1 - rd1*rd2)**2 ## the minimum reflectivity is assumed to be the case for the direct/off-resonance case.
+    print("rd: ", rd)
     #print(rd)
     ## Grating transmission at resonance
     Tg = t_M3_trans#0.049
@@ -116,15 +119,15 @@ def calc_lws(l, params1, params2):
     #print("Tg: ", Tg)
     #print("Tm: ", Tm)
 
-    double_fano_lws = double_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12
+    double_fano_lws = double_fano(l,λres,Ls,γλ,rd,r_M3_trans,r_M5_trans)*1e12
 
-    single_fano_lws = lw_fano(l,λres,Ls,γλ,rd,Tg,Tm)*1e12
+    single_fano_lws = lw_fano(l,λres,Ls,γλ,rd,r_M3_trans,r_M5_trans)*1e12
 
-    mirror_lws = lw_mirror(l, λres, Ls, Tg, Tm)*1e12
+    mirror_lws = lw_mirror(l, λres, Ls, r_M3_trans, r_M5_trans)*1e12
 
     return [double_fano_lws, single_fano_lws, mirror_lws]
 
-l = np.linspace(15,800,10000)*1e-6
+l = np.linspace(10,800,10000)*1e-6
 
 M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
@@ -174,15 +177,15 @@ asym2 = np.abs(params2_0226[1] - params2_0226[0])
 ## 18/02 -> M3 = 951.540, M5 = 951.800
 ## 20/02 -> M3 = 951.570, M5 = 951.950
 
-p1_0702 = params1_0305.copy(); p1_0702[0] = 951.535; p1_0702[1] = 951.535 + asym1
-p1_1102 = params1_0305.copy(); p1_1102[0] = 951.535; p1_1102[1] = 951.535 + asym1
-p1_1802 = params1_0305.copy(); p1_1802[0] = 951.540; p1_1802[1] = 951.540 + asym1
-p1_2002 = params1_0305.copy(); p1_2002[0] = 951.570; p1_2002[1] = 951.570 + asym1
+p1_0702 = params1_0226.copy(); p1_0702[0] = 951.535; p1_0702[1] = 951.535 + asym1
+p1_1102 = params1_0226.copy(); p1_1102[0] = 951.535; p1_1102[1] = 951.535 + asym1
+p1_1802 = params1_0226.copy(); p1_1802[0] = 951.540; p1_1802[1] = 951.540 + asym1
+p1_2002 = params1_0226.copy(); p1_2002[0] = 951.570; p1_2002[1] = 951.570 + asym1
 
-p2_0702 = params2_0305.copy(); p2_0702[0] = 951.875; p2_0702[1] = 951.875 + asym2 
-p2_1102 = params2_0305.copy(); p2_1102[0] = 951.800; p2_1102[1] = 951.800 + asym2 
-p2_1802 = params2_0305.copy(); p2_1802[0] = 951.800; p2_1802[1] = 951.800 + asym2 
-p2_2002 = params2_0305.copy(); p2_2002[0] = 951.950; p2_2002[1] = 951.950 + asym2 
+p2_0702 = params2_0226.copy(); p2_0702[0] = 951.875; p2_0702[1] = 951.875 + asym2 
+p2_1102 = params2_0226.copy(); p2_1102[0] = 951.800; p2_1102[1] = 951.800 + asym2 
+p2_1802 = params2_0226.copy(); p2_1802[0] = 951.800; p2_1802[1] = 951.800 + asym2 
+p2_2002 = params2_0226.copy(); p2_2002[0] = 951.950; p2_2002[1] = 951.950 + asym2 
 
 p1_errs = []
 p2_errs = []
@@ -206,6 +209,8 @@ ls_0218_err = np.array([0.496, 0.555, 0.342, 0.437])*1e-6
 ls_0220 = np.array([25.369, 41.054, 55.508, 73.002])*1e-6
 ls_0220_err = np.array([0.189, 0.205, 0.347, 0.516])*1e-6
 
+ls_0314 = np.array([92.162, 143.181])*1e-6
+
 lws_0207 = np.array([139.644, 96.458, 90.403, 61.248, 48.223])*1e-12
 err_0207 = np.array([5.019, 24.388186270739908, 7.375280567851888, 5.511886232010013, 5.047405715383159])*1e-12
 
@@ -220,6 +225,21 @@ err_0220 = np.array([7.130991486232972, 8.382897672891941, 5.877895384766792, 9.
 
 lws_0226 = np.array([82.505])*1e-12
 err_0226 = np.array([30.503])*1e-12
+
+### 20250314 ###
+
+lws100 = np.array([29.896, 15.429])*1e-12
+lws150 = np.array([22.217, 13.674, 42.052, 31.426])*1e-12
+
+lw100 = np.mean(lws100)
+lw150 = np.mean(lws150)
+
+err100 = stdev(lws100)
+err150 = stdev(lws150)
+
+lws_0314 = np.array([lw100, lw150])
+errs_0314 = np.array([err100, err150])
+################
 
 err25 = stdev([43.242,82.505,140.995])
 err56 = stdev([92.978,131.930,50.198])
@@ -291,13 +311,20 @@ single_fano_lws_m = (slws_0702_m+slws_1102_m+slws_1802_m+slws_2002_m+slws_0226_m
 broadband_lws_m = (bblws_0702_m+bblws_1102_m+bblws_1802_m+bblws_2002_m+bblws_0226_m+bblws_0305_m+bblws_origin_m)/7
 
 plt.figure(figsize=(10,6))
-plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured)", zorder=7)
+#plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured)", zorder=7)
 plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
 plt.plot(l*1e6,single_fano_lws, linestyle="--", label="avg. single fano cavity", color="orangered")
 plt.plot(l*1e6,double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
 plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
+plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
+#plt.scatter(180,55)
+#plt.scatter(251,48)
+#plt.plot(l*1e6, dlws_0702)
+#plt.plot(l*1e6, dlws_1102)
+#plt.plot(l*1e6, dlws_1802)
+#plt.plot(l*1e6, dlws_2002)
 #plt.errorbar(ls_0207*1e6, lws_0207*1e12, err_0207*1e12, xerr=ls_0207_err*1e6, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured on 7/2)")
 #plt.errorbar(ls_0211*1e6, lws_0211*1e12, err_0211*1e12, xerr=ls_0211_err*1e6, fmt=".", capsize=3, color="orange", label="HWHM (measured on 11/2)")
 #plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")

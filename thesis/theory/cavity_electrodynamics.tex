@@ -35,21 +35,27 @@ where $z$ is the distance from focus, $w_0$ is the beam waist at focus and $z_R$
         w_0\sqrt{2}, & \mbox{for } z=z_R,
     \end{cases}
 \end{equation}
-which shows that the beam waist diverges no more than by a factor of $\sqrt{2}$ from the optimal case, for $0\leq z \leq z_R$.
+which shows that the beam waist diverges no more than by a factor of $\sqrt{2}$ from the optimal case, for $0\leq z \leq z_R$. Considering the case where $z \neq 0$ but however much smaller than the Rayleigh range $z_R$, we can further inspect eq. (\ref{eq:gaussian beam waist}) and find that this leads to negligible changes in the waist of the beam. Specifically, it can fairly easily be seen that
+\begin{equation}
+    \left(\frac{z}{z_R}\right)^2 \approx 0, \: \text{  for } z << z_R
+\end{equation}
+which in turn leads to 
+\begin{equation}
+    w(z) \approx w_0.
+\end{equation}
 
 The Rayleigh range can be written as \cite{Pedrotti}
 \begin{equation}
     z_R = \frac{\pi w_0^2}{\lambda},
     \label{eq:Rayleigh range}
 \end{equation}
-which shows that a large beam waist will result in a long Rayleigh range. As an example, consider a beam of waist $w_0 = 200 \mu m$ and wavelength $\lambda = 950 nm$. This would result in a Rayleigh range of $z_R=13.23 cm$. 
+which, through the exponential dependence on $w_0$, shows that a large beam waist will result in a long Rayleigh range. As an example, consider a beam of waist $w_0 = 200 \mu m$ and wavelength $\lambda = 950 nm$. This would result in a Rayleigh range of $z_R=13.23 cm$. 
 
-Finally we can conclude, that for any optical cavity significantly shorter than the Rayleigh range of the incident beam, the spacial dependence of the field amplitude inside the cavity is negligible, and the fundamental mode can be described simply by a linearly polarized plane wave
+Finally we can conclude, that any optical cavity, for which the total distance travelled inside the cavity\footnote{For any optical cavity the incident light will travel a distance inside the cavity according to, not only the length of the cavity, but also the amount of round trips the light makes when confined inside the cavity.}, is significantly shorter than the Rayleigh range of the incident beam, the spacial dependence of the field amplitude inside the cavity is negligible, and the fundamental mode can be described simply by a linearly polarized plane wave
 \begin{equation}
     \vec{E} = E_0 \vec{\epsilon} e^{ikz}.
 \end{equation}
 This is often referred to as the \emph{large waist approximation} of a Gaussian beam, due to the dependence on $w_0$ of eq. (\ref{eq:Rayleigh range}).
-
 
 %%The physics of plane waves in an optical cavity is very well decribed by the theory of the Fabry Perot interferometer. 
 
