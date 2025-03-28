@@ -127,7 +127,7 @@ def calc_lws(l, params1, params2):
 
     return [double_fano_lws, single_fano_lws, mirror_lws]
 
-l = np.linspace(10,800,10000)*1e-6
+l = np.linspace(15,800,10000)*1e-6
 
 M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
@@ -154,8 +154,19 @@ M52_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/d
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/normalization/grating_trans.txt")
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250305/normalization/grating_trans_PI.txt")
 
+
+M3_0326 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans.txt")
+M5_0326 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans.txt")
+M3_0326_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans_PI.txt")
+M5_0326_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans_PI.txt")
+norm_0326 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
+norm_0326_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
+
 M32[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M32[:,1], M32_PI[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 M52[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M52[:,1], M52_PI[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity.
+
+M3_0326[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3_0326[:,1], M3_0326_PI[:,1], norm_0326[:,1], norm_0326_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+M5_0326[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5_0326[:,1], M5_0326_PI[:,1], norm_0326[:,1], norm_0326_PI[:,1])] ## norm. with respect to trans. w/o a cavity.
 
 λs = np.linspace(M31[:,0][0], M31[:,0][-1], 1000)
 
@@ -165,6 +176,10 @@ params2_0226, pcov2 = curve_fit(model, M51[:,0], M51[:,1], p0=p0)
 
 params1_0305, pcov1 = curve_fit(model, M32[:,0], M32[:,1], p0=p0)
 params2_0305, pcov2 = curve_fit(model, M52[:,0], M52[:,1], p0=p0)
+
+params1_0326, pcov1_0326 = curve_fit(model, M3_0326[:,0], M3_0326[:,1], p0=p0)
+params2_0326, pcov2_0326 = curve_fit(model, M5_0326[:,0], M5_0326[:,1], p0=p0)
+
 
 #print(params1_0226-params1_0305)
 #print(params2_0226-params2_0305)
@@ -191,8 +206,8 @@ p1_errs = []
 p2_errs = []
 
 for i in range(len(params1_0226)):
-    p1_err = stdev([params1_origin[i], params1_0226[i], params1_0305[i], p1_0702[i], p1_1102[i], p1_1802[i], p1_2002[i]])
-    p2_err = stdev([params1_origin[i], params2_0226[i], params2_0305[i], p2_0702[i], p2_1102[i], p2_1802[i], p2_2002[i]])
+    p1_err = stdev([params1_origin[i], params1_0226[i], params1_0305[i], p1_0702[i], p1_1102[i], p1_1802[i], p1_2002[i]], params1_0326[i])
+    p2_err = stdev([params1_origin[i], params2_0226[i], params2_0305[i], p2_0702[i], p2_1102[i], p2_1802[i], p2_2002[i]], params2_0326[i])
     p1_errs.append(p1_err)
     p2_errs.append(p2_err)
 
@@ -225,6 +240,20 @@ err_0220 = np.array([7.130991486232972, 8.382897672891941, 5.877895384766792, 9.
 
 lws_0226 = np.array([82.505])*1e-12
 err_0226 = np.array([30.503])*1e-12
+
+
+### 20250326 ###
+
+ls_0326 = np.array([])*1e-6
+
+lws21 = np.array([])*1e12
+lws33 = np.array([])*1e12
+lws53 = np.array([])*1e12
+lws83 = np.array([])*1e12
+lws251 = np.array([])*1e12
+lws323 = np.array([])*1e12
+lws453 = np.array([])*1e12
+
 
 ### 20250314 ###
 
@@ -281,6 +310,7 @@ dlws_2002, slws_2002, bblws_2002 = calc_lws(l, p1_2002, p2_2002)
 dlws_0226, slws_0226, bblws_0226 = calc_lws(l, params1_0226, params2_0226)
 dlws_0305, slws_0305, bblws_0305 = calc_lws(l, params1_0305, params2_0305)
 dlws_origin, slws_origin, bblws_origin = calc_lws(l, params1_origin, params2_origin)
+dlws_0326, slws_0326, bblws_0326 = calc_lws(l, params1_0326, params2_0326)
 
 dlws_0702_p, slws_0702_p, bblws_0702_p = calc_lws(l, p1_0702+p1_errs, p2_0702+p2_errs)
 dlws_1102_p, slws_1102_p, bblws_1102_p = calc_lws(l, p1_1102+p1_errs, p2_1102+p2_errs)
@@ -289,6 +319,7 @@ dlws_2002_p, slws_2002_p, bblws_2002_p = calc_lws(l, p1_2002+p1_errs, p2_2002+p2
 dlws_0226_p, slws_0226_p, bblws_0226_p = calc_lws(l, params1_0226+p1_errs, params2_0226+p2_errs)
 dlws_0305_p, slws_0305_p, bblws_0305_p = calc_lws(l, params1_0305+p1_errs, params2_0305+p2_errs)
 dlws_origin_p, slws_origin_p, bblws_origin_p = calc_lws(l, params1_origin+p1_errs, params2_origin+p2_errs)
+dlws_0326_p, slws_0326_p, bblws_0326_p = calc_lws(l, params1_0326+p1_errs, params2_0326+p2_errs)
 
 dlws_0702_m, slws_0702_m, bblws_0702_m = calc_lws(l, p1_0702-p1_errs, p2_0702-p2_errs)
 dlws_1102_m, slws_1102_m, bblws_1102_m = calc_lws(l, p1_1102-p1_errs, p2_1102-p2_errs)
@@ -297,28 +328,32 @@ dlws_2002_m, slws_2002_m, bblws_2002_m = calc_lws(l, p1_2002-p1_errs, p2_2002-p2
 dlws_0226_m, slws_0226_m, bblws_0226_m = calc_lws(l, params1_0226-p1_errs, params2_0226-p2_errs)
 dlws_0305_m, slws_0305_m, bblws_0305_m = calc_lws(l, params1_0305-p1_errs, params2_0305-p2_errs)
 dlws_origin_m, slws_origin_m, bblws_origin_m = calc_lws(l, params1_origin-p1_errs, params2_origin-p2_errs)
+dlws_0326_m, slws_0326_m, bblws_0326_m = calc_lws(l, params1_0326-p1_errs, params2_0326-p2_errs)
 
-double_fano_lws = (dlws_0702+dlws_1102+dlws_1802+dlws_2002+dlws_0226+dlws_0305+dlws_origin)/7
-single_fano_lws = (slws_0702+slws_1102+slws_1802+slws_2002+slws_0226+slws_0305+slws_origin)/7
-broadband_lws = (bblws_0702+bblws_1102+bblws_1802+bblws_2002+bblws_0226+bblws_0305+bblws_origin)/7
+double_fano_lws = (dlws_0702+dlws_1102+dlws_1802+dlws_2002+dlws_0226+dlws_0305+dlws_origin+dlws_0326)/8
+single_fano_lws = (slws_0702+slws_1102+slws_1802+slws_2002+slws_0226+slws_0305+slws_origin+slws_0326)/8
+broadband_lws = (bblws_0702+bblws_1102+bblws_1802+bblws_2002+bblws_0226+bblws_0305+bblws_origin+bblws_0326)/8
 
-double_fano_lws_p = (dlws_0702_p+dlws_1102_p+dlws_1802_p+dlws_2002_p+dlws_0226_p+dlws_0305_p+dlws_origin_p)/7
-single_fano_lws_p = (slws_0702_p+slws_1102_p+slws_1802_p+slws_2002_p+slws_0226_p+slws_0305_p+slws_origin_p)/7
-broadband_lws_p = (bblws_0702_p+bblws_1102_p+bblws_1802_p+bblws_2002_p+bblws_0226_p+bblws_0305_p+bblws_origin_p)/7
+double_fano_lws_p = (dlws_0702_p+dlws_1102_p+dlws_1802_p+dlws_2002_p+dlws_0226_p+dlws_0305_p+dlws_origin_p+dlws_0326_p)/8
+single_fano_lws_p = (slws_0702_p+slws_1102_p+slws_1802_p+slws_2002_p+slws_0226_p+slws_0305_p+slws_origin_p+slws_0326_p)/8
+broadband_lws_p = (bblws_0702_p+bblws_1102_p+bblws_1802_p+bblws_2002_p+bblws_0226_p+bblws_0305_p+bblws_origin_p+bblws_0326_p)/8
 
-double_fano_lws_m = (dlws_0702_m+dlws_1102_m+dlws_1802_m+dlws_2002_m+dlws_0226_m+dlws_0305_m+dlws_origin_m)/7
-single_fano_lws_m = (slws_0702_m+slws_1102_m+slws_1802_m+slws_2002_m+slws_0226_m+slws_0305_m+slws_origin_m)/7
-broadband_lws_m = (bblws_0702_m+bblws_1102_m+bblws_1802_m+bblws_2002_m+bblws_0226_m+bblws_0305_m+bblws_origin_m)/7
+double_fano_lws_m = (dlws_0702_m+dlws_1102_m+dlws_1802_m+dlws_2002_m+dlws_0226_m+dlws_0305_m+dlws_origin_m+dlws_0326_m)/8
+single_fano_lws_m = (slws_0702_m+slws_1102_m+slws_1802_m+slws_2002_m+slws_0226_m+slws_0305_m+slws_origin_m+slws_0326_m)/8
+broadband_lws_m = (bblws_0702_m+bblws_1102_m+bblws_1802_m+bblws_2002_m+bblws_0226_m+bblws_0305_m+bblws_origin_m+bblws_0326_m)/8
 
 plt.figure(figsize=(10,6))
-#plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured)", zorder=7)
+plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured)", zorder=7)
 plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
 plt.plot(l*1e6,single_fano_lws, linestyle="--", label="avg. single fano cavity", color="orangered")
 plt.plot(l*1e6,double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
 plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
-plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
+#plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
+#plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
+#plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
+#plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double fano cavity", color="forestgreen")
 #plt.scatter(180,55)
 #plt.scatter(251,48)
 #plt.plot(l*1e6, dlws_0702)

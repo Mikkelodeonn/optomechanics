@@ -21,17 +21,18 @@
 \contentsline {section}{\numberline {7}Cavity measurements}{11}{}%
 \contentsline {subsection}{\numberline {7.1}Parallelism study (deviation from normal incident)}{11}{}%
 \contentsline {subsection}{\numberline {7.2}Determining the cavity length from the FSR}{11}{}%
-\contentsline {subsection}{\numberline {7.3}Single Fano cavity transmission}{11}{}%
-\contentsline {subsection}{\numberline {7.4}Double Fano cavity transmission}{11}{}%
-\contentsline {subsubsection}{\numberline {7.4.1}Fabry-Perot cavity consisting of a grating and membrane (test of setup)}{11}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}Off-resonance Fabry-Perot cavity (alignment technique)}{11}{}%
-\contentsline {subsubsection}{\numberline {7.4.3}Centering of the top grating (pinhole method)}{11}{}%
-\contentsline {subsubsection}{\numberline {7.4.4}Noise reduction (coupled mechanical/acoustic vibration and the plexi-glass box)}{11}{}%
-\contentsline {section}{\numberline {8}Simulations}{12}{}%
-\contentsline {section}{\numberline {9}Experimental results}{13}{}%
-\contentsline {subsection}{\numberline {9.1}The single Fano cavity}{13}{}%
-\contentsline {subsection}{\numberline {9.2}The double Fano cavity}{13}{}%
-\contentsline {subsubsection}{\numberline {9.2.1}Realizing the double fano model}{13}{}%
-\contentsline {subsubsection}{\numberline {9.2.2}Double fano off-resonance Fabry-Perot cavity}{13}{}%
-\contentsline {subsubsection}{\numberline {9.2.3}The double fano linewidth}{13}{}%
-\contentsline {section}{\numberline {10}References}{14}{}%
+\contentsline {subsection}{\numberline {7.3}Spacial drift of the piezo ring}{11}{}%
+\contentsline {subsection}{\numberline {7.4}Single Fano cavity transmission}{12}{}%
+\contentsline {subsection}{\numberline {7.5}Double Fano cavity transmission}{12}{}%
+\contentsline {subsubsection}{\numberline {7.5.1}Fabry-Perot cavity consisting of a grating and membrane (test of setup)}{12}{}%
+\contentsline {subsubsection}{\numberline {7.5.2}Off-resonance Fabry-Perot cavity (alignment technique)}{12}{}%
+\contentsline {subsubsection}{\numberline {7.5.3}Centering of the top grating (pinhole method)}{12}{}%
+\contentsline {subsubsection}{\numberline {7.5.4}Noise reduction (coupled mechanical/acoustic vibration and the plexi-glass box)}{12}{}%
+\contentsline {section}{\numberline {8}Simulations}{13}{}%
+\contentsline {section}{\numberline {9}Experimental results}{14}{}%
+\contentsline {subsection}{\numberline {9.1}The single Fano cavity}{14}{}%
+\contentsline {subsection}{\numberline {9.2}The double Fano cavity}{14}{}%
+\contentsline {subsubsection}{\numberline {9.2.1}Realizing the double fano model}{14}{}%
+\contentsline {subsubsection}{\numberline {9.2.2}Double fano off-resonance Fabry-Perot cavity}{14}{}%
+\contentsline {subsubsection}{\numberline {9.2.3}The double fano linewidth}{14}{}%
+\contentsline {section}{\numberline {10}References}{15}{}%

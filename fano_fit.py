@@ -50,22 +50,22 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 
 ### Load data from .txt file
 
-left = 0
-right = -1
+left = 5
+right = -8
 extrapolated = False
 line_width_fit = True
 
-scan_num = 11
+scan_num = 9
 scan_type = "s"
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250314/75um/"+str(scan_type)+str(scan_num)+".txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250314/75um/"+str(scan_type)+str(scan_num)+"_PI.txt")[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250314/normalization/short_scan.txt")[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250314/normalization/short_scan.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/453um/"+str(scan_type)+str(scan_num)+".txt")[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/453um/"+str(scan_type)+str(scan_num)+"_PI.txt")[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/short_scan.txt")[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/short_scan.txt")[left:right]
 
 #PI_0 = PI_data[0,1]
-#PI_0_norm = norm[0,1]
-#data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], PI_data[:,1])]  ##  correcting for any fluctuations in laser power over time
+#PI_0 = norm[0,1]
+#data[:,1] = [dat/(PI/PI_0) for dat,PI in zip(data[:,1], norm_PI[:,1])]  ##  correcting for any fluctuations in laser power over time
 #norm[:,1] = [N/(PI/PI_0_norm) for N,PI in zip(norm[:,1], norm_PI[:,1])]      ##  from the main measurement to the normalization measurement.  
 
 data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
@@ -156,7 +156,7 @@ if line_width_fit == False:
     plt.subplots_adjust(bottom=0.2)
     plt.show()
 else:
-    p0 = [1, 0.1, 0, 951.9, 50e-3]
+    p0 = [1, 0.1, 0, 951.9, 10e-3]
     bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
     popt,pcov = curve_fit(fit_model, data[:,0], data[:,1], p0=p0, bounds=bounds, maxfev=1000000)
 

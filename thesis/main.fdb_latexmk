@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1737643433.10702 "main.bcf" "main.bbl" "main" 1742910681.47167 0
-  "main.bcf" 1742910681.23289 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
+["biber main"] 1737643433.10702 "main.bcf" "main.bbl" "main" 1743003003.00161 0
+  "main.bcf" 1743003002.64007 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
   "ref.bib" 1733419308.608 2153 ea777df09f5c4414886a6b0b9190dd8e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1742910679.64065 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1742910681.47207 0
+["pdflatex"] 1743003000.23496 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1743003003.00235 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1742910204.98641 2526 96c143e812626d2a5c8e60dfc1315e36 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -158,12 +158,12 @@
   "figures/setup_sketch.pdf" 1742901073.71063 34106 d47243dc163ed659eb2ef8980cb4d500 ""
   "figures/single_fano_sketch.pdf" 1742890650.92377 22983 bd5e38c88b08a16592fce1fe19edd44c ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1742910681.23015 7008 4a721ee9414666b136e3471c9dd3f8a9 "pdflatex"
+  "main.aux" 1743003002.63594 7133 e98233f0802630781368de03f0792847 "pdflatex"
   "main.bbl" 1737643461.61306 8107 b525fb0834d28063a093508429246b25 "biber main"
-  "main.run.xml" 1742910681.23413 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1743003002.64161 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1742910204.98641 2526 96c143e812626d2a5c8e60dfc1315e36 ""
-  "main.toc" 1742910681.23429 3387 60a018b206e7c48918f14587b3baded2 "pdflatex"
-  "method/experimental_setup.tex" 1742910677.55846 1330 c6c1acac3b8ef0281353dd22dabfcfe9 ""
+  "main.toc" 1743003002.64181 3471 8a297c9d1011a3efe09f9dce1a917c4b "pdflatex"
+  "method/experimental_setup.tex" 1743002999.81798 1582 2162ccc452531bb1e4f0914b90565e54 ""
   "results/experimental_results.tex" 1742910622.49195 1239 571bfd303137a41e60680d6c0c732843 ""
   "results/simulations.tex" 1742826325.47501 616 230317295bfde43bc6c03014449dc3a7 ""
   "theory/cavity_electrodynamics.tex" 1742827554.63089 4990 235d1de381d14406c6a5665ce214e4ad ""
