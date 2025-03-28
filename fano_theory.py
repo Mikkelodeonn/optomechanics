@@ -868,21 +868,21 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
 
-M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans.txt")
-M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans_PI.txt")
-M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans.txt")
-M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/normalization/grating_trans_PI.txt")
+M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans.txt")
+M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans_PI.txt")
+M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
+M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
 
-M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/grating trans. spectra/M5/M5_trans_onres.txt")
-M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/grating trans. spectra/M5/M5_trans_onres_PI.txt")
-M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/normalization/grating_trans.txt")
-M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/normalization/grating_trans_PI.txt")
+M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans.txt")
+M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans_PI.txt")
+M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
+M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
 
 M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
 #λs = np.linspace(M3[:,0][0], M3[:,0][-1], 50)
-#λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
 
 p0 = [952,952,0.6,1,0.1]
 params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
@@ -920,11 +920,15 @@ Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0
 plt.figure(figsize=(10,6))
 #plt.scatter(λs, Ts, color="royalblue", label="theory")
 #plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm, cavity length $\\approx$ %5.3fμm" % tuple(legend))
-plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
-plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
-plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
+#plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
+#plt.plot(λs, Ts_M5, color="seagreen", linestyle="-.", label="theory, $l = l_{M5}$")
+#plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
-plt.title("M3/M5 double fano transmission $(l = 9/10 \\cdot l_{M3} + 1/10 \\cdot l_{M5})$") 
+#plt.title("M3/M5 double fano transmission $(l = 9/10 \\cdot l_{M3} + 1/10 \\cdot l_{M5})$") 
+plt.scatter(M3[:,0], M3[:,1], label="M3 (top)")
+plt.scatter(M5[:,0], M5[:,1], label="M5 (bottom)")
+plt.plot(λs_fit, model(λs_fit, *params1), label="lw: %s(M3)" % (params1[0]))
+plt.plot(λs_fit, model(λs_fit, *params2), label="lw: %s(M5)" % (params2[0]))
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [V]")
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)

@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1737643433.10702 "main.bcf" "main.bbl" "main" 1743003003.00161 0
-  "main.bcf" 1743003002.64007 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
+["biber main"] 1743156512.60583 "main.bcf" "main.bbl" "main" 1743157003.0291 0
+  "main.bcf" 1743157002.80326 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
   "ref.bib" 1733419308.608 2153 ea777df09f5c4414886a6b0b9190dd8e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1743003000.23496 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1743003003.00235 0
-  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1742910204.98641 2526 96c143e812626d2a5c8e60dfc1315e36 ""
+["pdflatex"] 1743157001.29065 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1743157003.0295 0
+  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1743156510.36599 2566 7bbb6a1ac3c674a26fd9f573e396144e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -155,17 +155,18 @@
   "figures/broadband_sketch.pdf" 1742890626.28887 22698 f18952684a043ef1c885950fe5076678 ""
   "figures/double_fano_sketch.pdf" 1742890676.99641 22875 2220e4d897b4110e0335c54e7fb25a54 ""
   "figures/setup_skecth_zoomed.pdf" 1742901098.97668 31258 3d54d2fe92e58830bb312e0ffc3f430a ""
-  "figures/setup_sketch.pdf" 1742901073.71063 34106 d47243dc163ed659eb2ef8980cb4d500 ""
+  "figures/setup_sketch.pdf" 1743156194.44537 34245 5f04f2689356690051944e5ddbbf6832 ""
   "figures/single_fano_sketch.pdf" 1742890650.92377 22983 bd5e38c88b08a16592fce1fe19edd44c ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1743003002.63594 7133 e98233f0802630781368de03f0792847 "pdflatex"
-  "main.bbl" 1737643461.61306 8107 b525fb0834d28063a093508429246b25 "biber main"
-  "main.run.xml" 1743003002.64161 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
-  "main.tex" 1742910204.98641 2526 96c143e812626d2a5c8e60dfc1315e36 ""
-  "main.toc" 1743003002.64181 3471 8a297c9d1011a3efe09f9dce1a917c4b "pdflatex"
-  "method/experimental_setup.tex" 1743002999.81798 1582 2162ccc452531bb1e4f0914b90565e54 ""
+  "main.aux" 1743157002.80061 7916 5bef2b2274d9c46f0a77ac9125825de1 "pdflatex"
+  "main.bbl" 1743156540.75914 8107 b525fb0834d28063a093508429246b25 "biber main"
+  "main.run.xml" 1743157002.80433 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.tex" 1743156510.36599 2566 7bbb6a1ac3c674a26fd9f573e396144e ""
+  "main.toc" 1743157002.80445 4008 0a50fb4ad62b927d243b1418e247322a "pdflatex"
+  "method/experimental_setup.tex" 1743156848.85273 1439 cf322bae39d27827dadccd10e9fde677 ""
+  "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""
   "results/experimental_results.tex" 1742910622.49195 1239 571bfd303137a41e60680d6c0c732843 ""
-  "results/simulations.tex" 1742826325.47501 616 230317295bfde43bc6c03014449dc3a7 ""
+  "results/simulations.tex" 1743156999.02692 690 b1ebeb84f747662092da14b00dc7c538 ""
   "theory/cavity_electrodynamics.tex" 1742827554.63089 4990 235d1de381d14406c6a5665ce214e4ad ""
   "theory/fano_cavity.tex" 1742901627.43287 10366 5180f687158348bf63a7ed11f5172f2a ""
   (generated)

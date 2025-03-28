@@ -309,6 +309,9 @@ INPUT results/simulations.tex
 INPUT ./results/experimental_results.tex
 INPUT ./results/experimental_results.tex
 INPUT results/experimental_results.tex
+INPUT ./results/discussion.tex
+INPUT ./results/discussion.tex
+INPUT results/discussion.tex
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
