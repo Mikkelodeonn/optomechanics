@@ -1,6 +1,6 @@
-\section{The Fano mirror: a sub wavelength grating}
+\subsection{The Fano mirror: a sub wavelength grating}
 
-\subsection{Geometric optical analysis}
+\subsubsection{Geometric optical analysis}
 
 Considering an ideal grating with period \emph{d} in the sub-wavelength regime, it can be shown that only a single mode of reflection/transmission is supported. 
 
@@ -10,7 +10,7 @@ Any grating, of arbitrary dimensions, must comply with the very general \emph{gr
 \end{equation}
 for the special case of a linearly polarized plane wave incident on a grating placed normal to the direction of propagation. Now, inserting the sub-wavelength condition \emph{d << $\lambda$}, it is easily seen that the right side of the equation blows up for any order of reflection $|m| > 0$, effectively showing that this is the aforementioned single supported mode in this regime. Furthermore, it can be equally easily seen that the propagation direction of the 0'th order mode is the same as the incident beam, i.e. normal to the grating.
 
-\subsection{Reflection/transmission spectra and line shape analysis}
+\subsubsection{Reflection/transmission spectra and line shape analysis}
 
 \subsubsection{Lossless grating}
 
@@ -84,22 +84,39 @@ It is easily identified that eq. (\ref{eq:lossless couples diff. eqs.}) and eq. 
 In conclusion, the complete grating model consists of an expression for the transmission coefficients and a set of coupled differential equations for the reflection coefficients, shown in eq. (\ref{eq:lossy transmission coefficients}) and eq. (\ref{eq:lossy couples diff. eqs.}), respectively. The model on the form used for this project and subsequent thesis is derived in previous work by A. Darki et al. \cite{Darki} and more recently T. Mitra et al. \cite{Mitra}.
 
 \newpage
-\section{The Fano cavity}
+\subsection{The Fano cavity}
 
-\subsection{The Fano model}
+\subsubsection{The single Fano cavity: broadband mirror + fano mirror}
 
-\subsubsection{The single Fano model: broadband mirror + fano mirror}
+Figures:
+\begin{itemize}
+    \item Transmission of single fano and broadband cavities (long cavity - not in fano regime) (fig. 2a in 2018 paper)
+    \item Transmission of single fano and broadband cavities (short cavity - in fano regime) (fig. 2b in 2018 paper)
+    \item Analytical linewidth as a function of cavity length.
+\end{itemize}
 
-\subsubsection{The double Fano model: two fano mirrors}
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_1000um.pdf}
+        \caption{~1000um fano and broadband cavities.}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_5um.pdf}
+        \caption{~5um fano and broadband cavities.}
+    \end{subfigure}
+\end{figure}
 
-\subsection{The double Fano cavity}
+\subsection{The double Fano cavity: two fano mirrors}
+
+\subsubsection{The double fano transmission model}
 
 \subsubsection{Comparison between the double fano, single fano and broadband cavities (lossless + symmetric)}
 
 Figures:
 \begin{itemize}
     \item resonance peaks of all three cavities (maybe intracavity for easier comparison).
-    \item Off-resonance trans. of all three cavities.
+    \item Off-resonance trans. of all three cavities (maybe only single and double)
     \item linewidth as a function of cavity length of all three.
 \end{itemize}
 
@@ -108,7 +125,7 @@ Figures:
 Figures:
 \begin{itemize}
     \item Trans. spectra for different values of L.
-    \item linewidth as a function of L.
+    \item linewidth as a function of L. (plot den analytiske linjebredde sammen med)
 \end{itemize}
 
 \subsubsection{Spacial and spectral detuning - $l_{g} \geq l \geq l_{g}^{\prime}$ \& $\Delta \neq 0$ (lossless double fano cavity)}
@@ -126,3 +143,28 @@ Figures (spacial detuning):
     \item Cavity trans. spectra for different lengths (small/large detuning comparison).
     \item Linewidth as a function of cavity length ($l_g \rightarrow l_g^{\prime}$).
 \end{itemize}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[c]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/cmap_with_slice_indicators1.pdf}
+        \caption{cmap showing transmission as a function of wavelength for cavity lengths ranging $l_{g} \rightarrow l_{g}^{\prime}$.}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \centering
+        \includegraphics[width=0.49\textwidth]{figures/cmap_slice2.pdf}
+        \newline
+        \includegraphics[width=0.49\textwidth]{figures/cmap_slice1.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/cmap_slice3.pdf}
+        \caption{Slices of the cmap showing the optimal length and wavelength of double fano cavity (lossless). Magenta = 71.3pm, cyan = 71.3pm and lime = 58.6pm.}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/cmap_lw_vs_l_intracavity.pdf}
+    \caption{intracavity linewidth as a function of cavity length (same cavity as depicted in cmap above.)}
+\end{figure}
+

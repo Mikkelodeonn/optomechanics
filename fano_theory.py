@@ -13,8 +13,13 @@ M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 M7 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 trans.txt")
 
-params1 = M3.lossy_fit([952,952,0.6,1,0.1])
-params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+#params1 = M3.lossy_fit([952,952,0.6,1,0.1])
+#params2 = M5.lossy_fit([952,952,0.6,1,0.1])
+Δ = 0.3
+params1 = [951, 951, 0.8, 0.5, 1e-6]
+params2 = [951+Δ, 951+Δ, 0.8, 0.5, 1e-6]
+print("params1: ", params1)
+print("params2: " ,params2)
 
 ## grating parameters -> [λ0, λ1, td, γλ, α]
 # λ0 -> resonance wavelengths
@@ -38,7 +43,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(951.650, 951.950, 100)
-λs = np.linspace(950.250, 953.250, 1000)
+λs = np.linspace(950, 952, 10000) # 950, 952
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -181,8 +186,8 @@ def theoretical_reflection_values_comparison_plot(params1: list, params2: list, 
     plt.subplots_adjust(right=0.70)
     plt.show()
 
-def resonant_cavity_length(params: list, λs: np.array, lmin=50):
-    reflection_values = theoretical_reflection_values(params, losses=True)[1]
+def resonant_cavity_length(params: list, λs: np.array, lmin=50, losses=True):
+    reflection_values = theoretical_reflection_values(params, losses=losses)[1]
     transmission_values = np.sqrt(model(λs, *params))
 
     reflection_values = [complex(r) for r in reflection_values]
@@ -195,8 +200,8 @@ def resonant_cavity_length(params: list, λs: np.array, lmin=50):
 
     tg = transmission_values[idx]
     rg = reflection_values[idx]
-    tm = np.sqrt(0.08)
-    rm = np.sqrt(0.92)
+    tm = np.sqrt(0.05)
+    rm = np.sqrt(0.95)
 
     ls = list(np.linspace(lmin,lmin+1,100000)*1e3)
 
@@ -217,9 +222,9 @@ def resonant_cavity_length(params: list, λs: np.array, lmin=50):
 
     return resonance_length 
 
-def double_cavity_length(params1: list, params2: list, λs: np.array, lmin=50, loss_factor=0.05):
-    r1 = theoretical_reflection_values(params1, losses=True, loss_factor=loss_factor)[1]
-    r2 = theoretical_reflection_values(params2, losses=True, loss_factor=loss_factor)[1]
+def double_cavity_length(params1: list, params2: list, λs: np.array, lmin=50, loss_factor=0.05, losses=True):
+    r1 = theoretical_reflection_values(params1, losses=losses, loss_factor=loss_factor)[1]
+    r2 = theoretical_reflection_values(params2, losses=losses, loss_factor=loss_factor)[1]
     t1 = np.sqrt(model(λs, *params1))
     t2 = np.sqrt(model(λs, *params2))
 
@@ -329,14 +334,14 @@ def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intr
 
     if intracavity == False:
         def cavity_transmission(λ, rg, tg, l):
-            tm = np.sqrt(0.08)
-            rm = np.sqrt(0.92)
+            tm = np.sqrt(0.05)
+            rm = np.sqrt(0.95)
             T = np.abs(tm*tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
         
     if intracavity == True:
         def cavity_transmission(λ, rg, tg, l):
-            rm = np.sqrt(0.92)
+            rm = np.sqrt(0.95)
             tg = 1
             tm = 1
             T = np.abs(tg*tm*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
@@ -631,7 +636,7 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
 
     plt.figure(figsize=(10,6))
 
-    ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin), double_cavity_length(params2, params1, λs, lmin=lmin),20)
+    ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin, losses=losses), double_cavity_length(params2, params1, λs, lmin=lmin, losses=losses),20)
     Ts = []
     for l in ls:
         T = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
@@ -643,18 +648,29 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
         for k in range(len(Ts[h])):
             cmap[h,k] = Ts[h][k] 
 
-    l_labels = [round(l*1e-3,2) for l in ls]
+    l_labels = [round(l*1e-3,4) for l in ls]
     λ_labels = np.linspace(np.min(λs), np.max(λs),10)
     λ_labels = [round(label,2) for label in λ_labels]
 
+    #length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+    #length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+    #length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+
+    #ls1 = [length1 for _ in np.zeros(len(λs))]
+    #ls2 = [length2 for _ in np.zeros(len(λs))]
+    #ls3 = [length3 for _ in np.zeros(len(λs))]
+
+    #plt.plot(λs, ls1, color="lime", linestyle="-")
+    #plt.plot(λs, ls2, color="magenta", linestyle="-")
+    #plt.plot(λs, ls3, color="cyan", linestyle="-")
     plt.imshow(cmap, aspect="auto", extent=[np.min(λs), np.max(λs), np.min(ls), np.max(ls)])
     plt.xticks(λ_labels)
     plt.yticks(ls, l_labels)
     ax = plt.gca()
     ax.xaxis.set_ticks_position("both")
-    ax.tick_params(axis='x', direction='inout', which='both')
-    plt.xlabel("Wavelength [nm]")
-    plt.ylabel("Cavity length [μm]")
+    ax.tick_params(axis='x', direction='out', which='both')
+    plt.xlabel("wavelength [nm]")
+    plt.ylabel("cavity length [μm]")
     plt.colorbar()
     plt.show()
 
@@ -718,20 +734,20 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavity=True, losses=True):
     lws = []
     errs = []
-    lengths = np.linspace(double_cavity_length(params1, params2, λs, lmin=30), double_cavity_length(params2, params1, λs, lmin=30), 10)
+    lengths = np.linspace(double_cavity_length(params1, params2, λs, lmin=20, losses=losses), double_cavity_length(params2, params1, λs, lmin=20, losses=losses), 10)
 
     for length in lengths:
         Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
-        popt, pcov = curve_fit(model, λs, Ts, p0=(params1+params2)/2, maxfev=10000)
-        FWHM = np.abs(2*popt[3])*1e3
+        popt, pcov = curve_fit(model, λs, Ts, p0=(np.array(params1)+np.array(params2))/2, maxfev=10000)
+        HWHM = np.abs(popt[3])*1e3
         err = 2*np.sqrt(np.diag(pcov))[3]*1e3
-        lws.append(FWHM)
+        lws.append(HWHM)
         errs.append(err)
     
     plt.figure(figsize=(10,6))
-    plt.errorbar(lengths*1e-3, lws, errs, fmt="o", color="cornflowerblue", capsize=5)
-    plt.title("intracavity FWHM as a function of cavity length ($l = l_{M3} \\rightarrow l_{M5} \\approx 30μm$)")
-    plt.ylabel("FWHM [pm]")
+    plt.scatter(lengths*1e-3, lws, color="royalblue")
+    #plt.title("intracavity HWHM as a function of cavity length ($l = l_{M3} \\rightarrow l_{M5} \\approx 20μm$)")
+    plt.ylabel("HWHM [pm]")
     plt.xlabel("cavity length [μm]") 
     plt.show()
 
@@ -769,7 +785,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
 #l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=True, lmin=30)
-#double_fano_cmap(params1, params2, λs, intracavity=False, losses=True, lmin=30)
+#double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=20)
 
 
 #### Double/single fano cavity transmission plots ####
@@ -857,7 +873,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
 
-#linewidth_length_plot(params1, params2, λs)
+linewidth_length_plot(params1, params2, λs, losses=False)
 
 #theoretical_phase_plot(params1, λs)
 #length = resonant_cavity_length(params1, λs, lmin=30)
@@ -868,35 +884,35 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
 
-M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans.txt")
-M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans_PI.txt")
-M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
-M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
+#M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans.txt")
+#M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M3_trans_PI.txt")
+#M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
+#M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
 
-M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans.txt")
-M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans_PI.txt")
-M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
-M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
+#M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans.txt")
+#M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/grating trans. spectra/M5_trans_PI.txt")
+#M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans.txt")
+#M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/normalization/grating_trans_PI.txt")
 
-M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
-M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+#M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+#M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
 #λs = np.linspace(M3[:,0][0], M3[:,0][-1], 50)
-λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+#λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
 
-p0 = [952,952,0.6,1,0.1]
-params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
-params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
+#p0 = [952,952,0.6,1,0.1]
+#params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
+#params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
 
-lmin=128
-length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
-Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
+#lmin=128
+#length_M3 = (double_cavity_length(params1, params2, λs, lmin=lmin))
+#Ts_M3 = dual_fano_transmission(params1, params2, length_M3, λs, loss_factor=0.05)
 
-length_M5 = double_cavity_length(params2, params1, λs, lmin=lmin)
-Ts_M5 = dual_fano_transmission(params1, params2, length_M5, λs, loss_factor=0.05)
+#length_M5 = double_cavity_length(params2, params1, λs, lmin=lmin)
+#Ts_M5 = dual_fano_transmission(params1, params2, length_M5, λs, loss_factor=0.05)
 
-length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
-Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
+#length_mid = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.5 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.5)
+#Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0.05)
 
 #lmin = 718.7
 #length = (double_cavity_length(params1, params2, λs, lmin=lmin)*0.9 + double_cavity_length(params2, params1, λs, lmin=lmin)*0.1)
@@ -917,7 +933,7 @@ Ts_mid = dual_fano_transmission(params1, params2, length_mid, λs, loss_factor=0
 
 #xs = np.linspace(λs[0], λs[-1], 1000)
  
-plt.figure(figsize=(10,6))
+#plt.figure(figsize=(10,6))
 #plt.scatter(λs, Ts, color="royalblue", label="theory")
 #plt.plot(xs, fit_model(xs, *popt), color="cornflowerblue", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm, cavity length $\\approx$ %5.3fμm" % tuple(legend))
 #plt.plot(λs, Ts_M3, color="tomato", linestyle="-.", label="theory, $l = l_{M3}$")
@@ -925,13 +941,61 @@ plt.figure(figsize=(10,6))
 #plt.plot(λs, Ts_mid, color="royalblue", linestyle="--", label="theory, $l = (l_{M3} + l_{M5})/2$")
 #plt.scatter(data[:,0], data[:,1], marker='.', color="maroon", label="data", zorder=4)
 #plt.title("M3/M5 double fano transmission $(l = 9/10 \\cdot l_{M3} + 1/10 \\cdot l_{M5})$") 
-plt.scatter(M3[:,0], M3[:,1], label="M3 (top)")
-plt.scatter(M5[:,0], M5[:,1], label="M5 (bottom)")
-plt.plot(λs_fit, model(λs_fit, *params1), label="lw: %s(M3)" % (params1[0]))
-plt.plot(λs_fit, model(λs_fit, *params2), label="lw: %s(M5)" % (params2[0]))
-plt.xlabel("wavelength [nm]")
-plt.ylabel("normalized transmission [V]")
-plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
-plt.subplots_adjust(bottom=0.2)
-plt.show()
+#plt.scatter(M3[:,0], M3[:,1], label="M3 (top)")
+#plt.scatter(M5[:,0], M5[:,1], label="M5 (bottom)")
+#plt.plot(λs_fit, model(λs_fit, *params1), label="lw: %s(M3)" % (params1[0]))
+#plt.plot(λs_fit, model(λs_fit, *params2), label="lw: %s(M5)" % (params2[0]))
+#plt.xlabel("wavelength [nm]")
+#plt.ylabel("normalized transmission [V]")
+#plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
+#plt.subplots_adjust(bottom=0.2)
+#plt.show()
 
+
+#def broadband_transmission(λ, l, R): ## lossless
+#    rm = np.sqrt(R)
+#    tm = np.sqrt(1-R)
+#    T = np.abs(tm*tm*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rm*np.exp(2j*(2*np.pi/λ)*l)))**2
+#    return T 
+
+#lmin = 20
+#single_length = resonant_cavity_length(params1, λs, lmin=lmin, losses=False)
+#double_length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+#double_length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+#double_length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+#bb_ts = broadband_transmission(λs, single_length, 0.3)
+#bb_ts2 = broadband_transmission(λs, single_length, 0.90)
+#single_ts = fano_cavity_transmission(params1, single_length, λs, intracavity=False, losses=False)
+#double_ts1 = dual_fano_transmission(params1, params2, double_length1, λs, intracavity=False, losses=False)
+#double_ts2 = dual_fano_transmission(params1, params2, double_length2, λs, intracavity=False, losses=False)
+#double_ts3 = dual_fano_transmission(params1, params2, double_length3, λs, intracavity=False, losses=False)
+
+#rs = theoretical_reflection_values(params1, losses=False)[0]
+
+## Figure convention -> double fano: forestgreen, single fano: orangered, broadband: royalblue, grating_ref: blueviolet
+
+#popt1, pcov = curve_fit(model, λs[4800:6800], double_ts1[4800:6800], p0=[951,951,0.6,0.1,1e-6])
+#popt2, pcov = curve_fit(model, λs[4800:6800], double_ts2[4800:6800], p0=[951,951,0.6,0.1,1e-6])
+#popt3, pcov = curve_fit(model, λs[4800:6800], double_ts3[4800:6800], p0=[951,951,0.6,0.1,1e-6])
+
+#fig, ax = plt.subplots(figsize=(10,6))
+#x1, x2, y1, y2 = λs[4800], λs[6800], 0.115, 1.025
+#axins = ax.inset_axes([0.1, 0.65, 0.30, 0.30])
+#axins.plot(λs[4800:6800], model(λs[4800:6800], *popt), color="lime")
+#axins.set_xlim(x1,x2)
+#axins.set_ylim(y1,y2)
+#axins.set_xticklabels([])
+#axins.set_yticklabels([])
+#mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
+#plt.plot(λs, bb_ts, color="royalblue", linestyle="-", label="$|r|^2 = 0.30$")
+#plt.plot(λs, bb_ts2, color="firebrick", linestyle="-", label="$|r|^2 = 0.90$")
+#plt.plot(λs, single_ts, color="orangered", linestyle="-", label="single fano cavity")
+#plt.plot(λs, rs, color="blueviolet", linestyle="-.", label="grating reflectivity")
+#ax.plot(λs, double_ts1, color="lime")
+#ax.plot(λs, double_ts2, color="magenta", linestyle="--")
+#ax.plot(λs, double_ts3, color="cyan", linestyle="-.")
+#plt.title("Lossless cavity transmission comparison")
+#plt.xlabel("wavelength [nm]")
+#plt.ylabel("normalized transmission [arb. u.]")
+#plt.legend(loc="upper right")
+#plt.show()

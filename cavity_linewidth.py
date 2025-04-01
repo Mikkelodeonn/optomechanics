@@ -75,7 +75,7 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: floa
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ
 
-def calc_lws(l, params1, params2):
+def calc_lws(l, params1, params2, losses=True):
     λ0_1 = params1[0]; γ_1 = params1[3]
     λ0_2 = params2[0]; γ_2 = params2[3]
 
@@ -84,11 +84,11 @@ def calc_lws(l, params1, params2):
     t_M3_trans = model(λt, *params1)
     t_M5_trans = model(λt, *params2)
 
-    r_M3_trans = theoretical_reflection_values(params1, λt)[0][0]
-    r_M5_trans = theoretical_reflection_values(params2, λt)[0][0]
+    r_M3_trans = theoretical_reflection_values(params1, λt, losses=losses)[0][0]
+    r_M5_trans = theoretical_reflection_values(params2, λt, losses=losses)[0][0]
 
-    r1s = theoretical_reflection_values(params1, λs)[0]
-    r2s = theoretical_reflection_values(params2, λs)[0]
+    r1s = theoretical_reflection_values(params1, λs, losses=losses)[0]
+    r2s = theoretical_reflection_values(params2, λs, losses=losses)[0]
     r1s = [float(r) for r in r1s]
     r2s = [float(r) for r in r2s]
 
@@ -251,10 +251,11 @@ ls_0326 = np.array([21.390, 32.736, 51.396, 81.291, 245.305, 321.768])*1e-6
 
 lws21 = np.array([77.869, 55.452, 55.252, 73.609, 73.940, 54.196, 64.092, 64.803, 67.450, 68.652, 62.498, 62.435])
 lws33 = np.array([46.428, 65.247, 47.547, 79.556, 76.220, 83.444, 65.594, 82.781, 57.836, 65.532, 84.365, 80.165, 49.984, 69.228, 66.839])
-lws53 = np.array([69.904, 56.648, 63.267, 56.318, 41.177, 62.520, 31.800, 55.533])
-lws83 = np.array([48.060, 67.618, 73.128, 71.593, 48.218, 64.344, 67.277, ])
-lws251 = np.array([65.884, 57.904, 53.475])
-lws323 = np.array([60.886, 52.158, 64.180])
+lws53 = np.array([69.904, 56.648, 63.267, 56.318, 41.177, 62.520, 55.533])
+lws83 = np.array([48.060, 67.618, 73.128, 71.593, 48.218, 64.344, 67.277])
+lws251 = np.array([37.840, 46.683, 44.496])
+lws323 = np.array([39.196, 52.158, 56.468])
+lws453 = np.array([36.676, 36.491, 39.229])
 
 lw21 = mean(lws21)
 lw33 = mean(lws33)
@@ -262,6 +263,7 @@ lw53 = mean(lws53)
 lw83 = mean(lws83)
 lw251 = mean(lws251)
 lw323 = mean(lws323)
+lw453 = mean(lws453)
 
 err21 = stdev(lws21)
 err33 = stdev(lws33)
@@ -269,6 +271,7 @@ err53 = stdev(lws53)
 err83 = stdev(lws83)
 err251 = stdev(lws251)
 err323 = stdev(lws323)
+err453 = stdev(lws453)
 
 lws_0326 = np.array([lw21, lw33, lw53, lw83, lw251, lw323])*1e-12
 errs_0326 = np.array([err21, err33, err53, err83, err251, err323])*1e-12
@@ -394,7 +397,7 @@ plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3
 #plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
-plt.title("HWHM as a function of cavity length (averaged theoretical prediction)")
+plt.title("HWHM as a function of cavity length")
 plt.xlabel("Cavity length [μm]")
 plt.ylabel("HWHM [pm]")
 plt.xscale("log")
