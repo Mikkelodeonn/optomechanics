@@ -370,22 +370,35 @@ double_fano_lws_m = (dlws_0702_m+dlws_1102_m+dlws_1802_m+dlws_2002_m+dlws_0226_m
 single_fano_lws_m = (slws_0702_m+slws_1102_m+slws_1802_m+slws_2002_m+slws_0226_m+slws_0305_m+slws_origin_m+slws_0326_m)/8
 broadband_lws_m = (bblws_0702_m+bblws_1102_m+bblws_1802_m+bblws_2002_m+bblws_0226_m+bblws_0305_m+bblws_origin_m+bblws_0326_m)/8
 
+lengths = np.linspace(10,1100,10000)*1e-6
+
+params1_sim = [951, 951, 0.8, 0.5, 1e-6]
+
+sim_lengths = np.array([10.459954599545997, 30.430634306343062, 90.34577345773458, 150.25909259092592, 300.04239042390424, 700.4123041230414, 1000.4525645256452])
+sim_bblws = np.array([352.854, 121.299, 40.861, 24.568, 12.303, 5.271, 3.69])
+sim_slws = np.array([55.746, 45.459, 25.924, 18.455, 10.690, 5.035, 3.605])
+dlws, slws, bblws = calc_lws(lengths, params1_sim, params1_sim, losses=False)
+
 plt.figure(figsize=(10,6))
-plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)", zorder=7)
+plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="approx. broadband HWHM")
+plt.plot(lengths*1e6, slws, linestyle="--", color="orangered", alpha=0.5, label="approx. single fano HWHM")
+plt.scatter(sim_lengths, sim_bblws, marker=".", color="royalblue", label="simulated broadband HWHM")
+plt.scatter(sim_lengths, sim_slws, marker=".", color="orangered", label="simulated single fano HWHM")
+#plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)", zorder=7)
 #plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
 #plt.plot(l*1e6,single_fano_lws, linestyle="--", label="avg. single fano cavity", color="orangered")
 #plt.plot(l*1e6,double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
 #plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 #plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 #plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
-plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 26/3)", zorder=7)
+#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 26/3)", zorder=7)
 #plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
-plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
-plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
-plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double fano cavity", color="forestgreen")
-plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.3)
-plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.3)
-plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3)
+#plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
+#plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
+#plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double fano cavity", color="forestgreen")
+#plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.3)
+#plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.3)
+#plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3)
 #plt.scatter(180,55)
 #plt.scatter(251,48)
 #plt.plot(l*1e6, dlws_0702)
@@ -397,7 +410,7 @@ plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3
 #plt.errorbar(ls_0218*1e6, lws_0218*1e12, err_0218*1e12, xerr=ls_0218_err*1e6, fmt=".", capsize=3, color="limegreen", label="HWHM (measured on 18/2)")
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
-plt.title("HWHM as a function of cavity length")
+#plt.title("HWHM as a function of cavity length")
 plt.xlabel("Cavity length [μm]")
 plt.ylabel("HWHM [pm]")
 plt.xscale("log")

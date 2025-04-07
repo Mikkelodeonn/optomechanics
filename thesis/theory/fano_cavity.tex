@@ -1,4 +1,4 @@
-\subsection{The Fano mirror: a sub wavelength grating}
+\subsection{The Fano mirror: a sub wavelength grating}\label{sec:fano_mirror}
 
 \subsubsection{Geometric optical analysis}
 
@@ -21,7 +21,7 @@ We wish to analytically describe the wavelength-dependent spectra for the transm
 \end{equation}
 where the subscripts \emph{g} and \emph{d} indicate the \emph{grating} and \emph{direct} transmissions and reflectivities, respectively. It is implied that the direct coefficients are constants and describe the transmission and reflectivity when the incident wavelength is significantly detuned from any guided-mode resonance of the grating. Furthermore, it is also implied that the grating coefficients are functions of the incident wavelength.
 
-We now assume a normal incident beam on the grating as a linearly polarized monochromatic plane wave, with a wavelength close to a guided-mode resonance of the grating. In order to describe the coefficients $r_g$ and $t_g$ we follow the formalism presented by Fan and Joannopoulos \cite{Fan-Joannopoulos-guided-mode-resonance} and consider the likely paths of the incident light through the grating. It is quite intuitive to consider the case where the light is simply transmitted, and this shall be our first case hereafter denoted the \emph{direct pathway}. Another case one might consider is the one where the incident light excites the guided-mode resonance in the grating, thus causing interference. This case is denoted the \emph{indirect pathway} and decays more slowly than it's direct counterpart. 
+We now assume a normal incident beam on the grating as a linearly polarized monochromatic plane wave, with a wavelength close to a guided-mode resonance of the grating. In order to describe the coefficients $r_g$ and $t_g$ we follow the formalism presented by Fan and Joannopoulos \cite{Fan-Joannopoulos-guided-mode-resonance} and consider the likely paths of the incident light through the grating. It is quite intuitive to consider the case where the light is simply transmitted, and this shall be our first case hereafter denoted the \emph{direct pathway}. Another case one might consider is the one where the incident light excites the guided-mode resonance in the grating. This case is denoted the \emph{indirect pathway} and decays more slowly than it's direct counterpart. 
 
 The interference caused when the guided mode is excited is often referred to as \emph{Fano resonances}, due to its physical similarities to the description of interference between a discrete autoionized state and a bound continuum state first reported by Fano \cite{Fano-theory}. The cross section of inelastic scattering, when measured as a function of energy, showed characteristic asymmetric peaks. These were described as the aforementioned interference pattern between \emph{direct} (the discrete state) and \emph{indirect} (the continuum state) pathways. 
 
@@ -86,26 +86,85 @@ In conclusion, the complete grating model consists of an expression for the tran
 \newpage
 \subsection{The Fano cavity}
 
-\subsubsection{The single Fano cavity: broadband mirror + fano mirror}
+\subsubsection{The single Fano cavity model: broadband + fano mirror}
 
-Figures:
-\begin{itemize}
-    \item Transmission of single fano and broadband cavities (long cavity - not in fano regime) (fig. 2a in 2018 paper)
-    \item Transmission of single fano and broadband cavities (short cavity - in fano regime) (fig. 2b in 2018 paper)
-    \item Analytical linewidth as a function of cavity length.
-\end{itemize}
+The single Fano cavity consists of a planer broadband mirror, and a sub-wavelength grating, i.e. a Fano mirror, as described in section \ref{sec:fano_mirror}. While the broadband mirror has fixed optical properties, the Fano mirror has transmission and reflection coefficients dependent on the incident wavelength, according to solutions to the doupled differential equations of eq. (\ref{eq:lossy couples diff. eqs.}). In order to model the single Fano cavity transmission spectra, we therefore consider the transmission function of a normal incident and planer Fabry-Perot cavity in eq. (\ref{eq:fabry_perot_trans}) with $r,t \rightarrow r_m,t_m$ and $r^{\prime},t^{\prime} \rightarrow r_g(\lambda),t_g(\lambda)$. Here the subscript $m$ indicates the broadband \emph{mirror} coefficients, and $g$ is for \emph{grating}, which indicates the coefficients of the Fano mirror. Rewriting eq. (\ref{eq:fabry_perot_trans}) such that it describes the normalized transmission amplitude, through the single Fano cavity, $T_{cav} = |E_{out}|^2/|E_{0,in}|^2$ we get
+\begin{equation}
+    T_{cav} = \left|\frac{t_m t_g(\lambda) e^{i\phi}}{1 - r_m r_g e^{2i\phi}}\right|^2,
+    \label{eq:single_fano_trans}
+\end{equation}
+where $\phi = 2\delta = kl$, $k=2 \pi / \lambda$ and $l$ is the cavity length, as is consistent the general case described in section \ref{sec:fano_mirror}.
+
+\subsubsection{Single Fano cavity transmission linewidth (HWHM)}
+
+In order to analytically describe how the transmission spectrum at, or close to, overall resonance\footnote{This terminology is used for the scenario where the guided-mode, cavity mode and input laser mode all meet the resonance condition $\lambda_g \approx \lambda_c \approx \lambda_l$, where $g,c,l$ stands for grating/guided-mode, cavity and laser, respectively.} behaves as a function of the incident wavelength, we attempt to generalize the Fano model for this specific regime. Considering the case where the cavity resonance closely resembles the guided-mode resonance of the Fano mirror (the zero-transmission wavelength), eq. (\ref{eq:single_fano_trans}) can be approximated well by
+\begin{equation}
+    T_{cav} \approx \frac{A}{1 + \left( \frac{\Delta}{1 - \nu \Delta} \right)^2},
+    \label{eq:general_fano_model}
+\end{equation}
+where $\Delta = (\lambda - \lambda_c) / \delta \lambda$ is the detuning from the cavity resonance normalized by the HWHM $\delta \lambda$, and $\nu$ is a constant describing the asymmetry of the single Fano transmission spectrum. 
+
+From eq. (\ref{eq:general_fano_model}) it can be shown that the HWHM of the Fano transmission profile around the resonance wavelength $\delta \lambda$ is approximately given as
+\begin{equation}
+    \delta \lambda \approx \frac{1}{\frac{1}{\delta \lambda_c} + \frac{1}{\delta \lambda_g}},
+    \label{eq:analytical_linewidth}
+\end{equation}
+where $\delta \lambda_c$, $\delta \lambda_g$ are the contributions to the linewidth stemming from the broadband cavity and the Fano cavity in the Fano regime, respectively. It can be shown that there are two regimes of interest when examining the linewidth of the Fano cavity transmission profile. The first of these is the standard cavity regime, where the broadband and Fano cavity produces resonance transmission peaks of comparable, if not equal, linewidths. The other is the aforementioned Fano regime where a significant reduction in linewidth is found, when comparing the Fano and broadband cavity transmission profiles. In order to detemine where the transition between the standard and the Fano cavity regimes occur, we look at the expressions for $\delta \lambda_c$ and $\delta \lambda_g$ included in eq. (\ref{eq:analytical_linewidth}). The standard cavity linewidth is given as
+\begin{equation}
+    \delta \lambda_c = \frac{\lambda_0^2}{8 \pi l} (|t_g(\lambda_0)|^2 + |t_m|^2 + L),
+\end{equation}
+while the Fano cavity linewidth in the Fano regime is given as
+\begin{equation}
+    \delta \lambda_g = \frac{\gamma \lambda}{2 (1-r_d)}(|t_g(\lambda_0)|^2 + |t_m|^2 + L).
+\end{equation}
+Here $\lambda_0$ is the cavity resonance wavelength, $l$ is the cavity length, $L = 1 - |r_g(\lambda_0)|^2$ is the total losses of the cavity when on resonance, $\gamma \lambda$ is the width of the guided-mode resonance of the Fano mirror and $r_d$ is the off-resonance, or \emph{direct}, reflectivity of the Fano mirror.
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_1000um.pdf}
+        \caption{Broadband and single Fano transmissions for a cavity length of $\sim 1000 \mu m$, i.e. in the \emph{standard} regime.}
+        \label{fig:standard_regime_trans}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_5um.pdf}
+        \caption{Broadband and single Fano transmissions for a cavity length of $\sim 5 \mu m$, i.e. in the \emph{Fano} regime.}
+        \label{fig:fano_regime_trans}
+    \end{subfigure}
+\end{figure}
+
+Figures \ref{fig:standard_regime_trans} and \ref{fig:fano_regime_trans} depicts two examples of single Fano cavity transmission spectra together with their respective complimentary broadband cavity transmission profiles, and the reflectiviy amplitude of the Fano mirror used to model both profiles. As shown in section \ref{sec:fano_mirror} any Fano mirror, or grating, is described by five characterizing parameters. For the one used to model the transmission spectra in figures \ref{fig:standard_regime_trans} and \ref{fig:fano_regime_trans}  these are 
+\begin{equation}
+    \begin{split}
+    \lambda_0 = &951 nm,\:\: \lambda_1 = 951 nm,\:\: t_d = 80\%,\\ &\gamma \lambda = 0.5 nm\: \text{ and }\: \beta = 10^{-6},
+    \end{split}
+\end{equation}
+where we remember that $\lambda_{0,1}$ are the resonant wavelengths for, respectively, the cavity and guided-mode, $t_d$ is the direct transmission, $\gamma \lambda$ is the width of the guided-mode resonance and $\beta$ is a constant describing the losses of the grating, which here is neglected when solving the coupled differential equantions of eq. (\ref{eq:lossy couples diff. eqs.}). The broadband mirror parameters are chosen such that it perfectly resembles the transmission and reflectivity of the grating on resonance, which is arbitrarily chosen such that $|r_{m}|^2=95\%$ and $|t_{m}|^2 = 5\%$.
+
+ 
+%% Write about the approximate analytical linewidth, and show the plot together with the simulated linewidths of both the single fano and broadband cavities to show the power of the approximation. Talk about the different regimes and show the figure of the 1000um spectrum and the 5um spectrum. Remember to include the parameters used to simulate the figures in this section.
+
+It is clear from inspection of figure \ref{fig:standard_regime_trans} that the resonance transmission profile of the standard broadband cavity is not wavelength dependent, in the sense that all fringes, when cavity losses are neglected, appear to have the same high finesse $\mathcal{F}$, i.e. ratio between the FSR and HWHM. This is not the case for the Fano cavity which is, naturally, due to the wavelength dependence of the optical properties of the Fano mirror, as this causes the transmission and reflectivity to \emph{only} match those of the broadband mirror when on resonance. In figure \ref{fig:fano_regime_trans}, the transmission spectra of both cavities are shown \emph{in} the Fano regime, where it is clearly seen that while the standard cavity experiences broadening for shorter cavity lengths\footnote{This is a natural consequence of the shorter cavity as this causes the lifetime inside the cavity to fall and hense the transmission HWHM to rise. The HWHM is inversly proportional to the lifetime and goes as $\delta \lambda \propto 1/\tau$.}, this is not the case for the Fano cavity transmission peak.
 
 \begin{figure}
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_1000um.pdf}
-        \caption{~1000um fano and broadband cavities.}
+    \begin{subfigure}[c]{0.64\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/HWHM_broadband_vs_single_sim.pdf}
+        \caption{The approximate analytical resonance linewidths (eq. (\ref{eq:analytical_linewidth})) as a function of cavity length for the broadband and single Fano cavities are shown together with linewidths of transmission profiles simulated using eq. (\ref{eq:single_fano_trans}) and eq. (\ref{eq:fabry_perot_trans}) for comparison.}
+        \label{fig:HWHM_broadband_vs_single_fano}
     \end{subfigure}
-    \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{figures/fano_and_broadband_cavity_5um.pdf}
-        \caption{~5um fano and broadband cavities.}
+    \begin{subfigure}[c]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{figures/sim_single_vs_broadband_700um.pdf}
+        \caption{Transmission spectra of broadband and single Fano cavities of length $\sim 700 \mu m$.}
+        \label{fig:700um_broadband_and_single_fano_peak}
+        \includegraphics[width=\textwidth]{figures/sim_single_vs_broadband_10um.pdf}
+        \caption{Transmission spectra of broadband and single Fano cavities of length $\sim 10 \mu m$.}
+        \label{fig:10um_broadband_and_single_fano_peak}
     \end{subfigure}
 \end{figure}
+
+Figure \ref{fig:HWHM_broadband_vs_single_fano} models the behavior of the linewidth of the single Fano cavity compared with the one for a broadband cavity of similar optical properties, as a function of wavelength. Here it is easily seen where the linewidth of the single Fano begins to saturate, and hence deviate from the one of the broadband cavity. The plotted line in the figure is calculated using eq. (\ref{eq:analytical_linewidth}) while the points depicit linewidths found as a fitting parameter from a least squares fit of the general Fano model in eq. (\ref{eq:general_fano_model}) to transmission spectra simulated by the Fabry-Perot (eq. (\ref{eq:fabry_perot_trans})) and single Fano (eq. (\ref{eq:single_fano_trans})) transmission functions. Finally, it can be concluded that the approximate analytical expression for the linewidth of the broadband and single fano cavities in eq. (\ref{eq:analytical_linewidth}) correlates very well with the values found from the simulated spectra.
 
 \subsection{The double Fano cavity: two fano mirrors}
 
@@ -158,7 +217,7 @@ Figures (spacial detuning):
         \newline
         \includegraphics[width=0.49\textwidth]{figures/cmap_slice1.pdf}
         \includegraphics[width=0.49\textwidth]{figures/cmap_slice3.pdf}
-        \caption{Slices of the cmap showing the optimal length and wavelength of double fano cavity (lossless). Magenta = 71.3pm, cyan = 71.3pm and lime = 58.6pm.}
+        \caption{Slices of the cmap showing the optimal length and wavelength of double fano cavity (lossless). HWHMs -> Magenta = 71.3pm, cyan = 71.3pm and lime = 58.6pm.}
     \end{subfigure}
 \end{figure}
 

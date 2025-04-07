@@ -1,13 +1,112 @@
 \section{Theory}
-\subsection{An Optical Cavity}
+\subsection{The Fabry-Perot interferometer}
 
-An optical cavity is generally comprised of two highly reflective optical resonators. It is used for trapping any amount of light for an extended period of time, thus increasing the effective cross section of a given interaction between some object and the field inside the cavity. 
+The Fabry-Perot interferometer, also known as an optical cavity, is generally comprised of two reflective optical resonators. It might make use of the configuration sketched in figure \ref{fig:planar_fabry-perot}. 
 
-Another attribute of the optical cavity is that it gives rise to so-called eigenstates related to the length of the cavity\cite{Eichhorn}. As the cavity does not expand infinitely, the allowed modes inside the cavity are limited to ones which fulfill the identity \cite{Pedrotti}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/planar_fabry_perot.pdf}
+    \caption{Sketch of a planar Fabry-Perot cavity.}
+    \label{fig:planar_fabry-perot}
+\end{figure}
+
+Two planar slabs described by each their respective reflectivity \emph{r} and transmission \emph{t} are placed parallel and at a distance \emph{l} from eachother. The transmitted field $E_{out}$ is then given as a super position of all beams coupling into the cavity by $E_{in}$. In this way the Fabry-Perot cavity gives rise to so-called eigenstates\cite{Eichhorn} related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams throught the cavity. The allowed modes inside the cavity are generally limited to ones which fulfill the identity\cite{Pedrotti}
 \begin{equation}
-    2 d \cos \theta = m \lambda.
+    2 l \cos \theta = m \lambda.
+    \label{eq:general_cavity_condition}
 \end{equation}
-Here \emph{d} is the length of the cavity, $\theta$ is the incidence angle of the light coupling into the cavity, $\lambda$ is the wavelength of the light and $m = 1,2,3,...$ is a positive integer describing the order of the mode. For the rest of this thesis it will be assumed that the laser couples into the cavity at normal incidence, meaning that $\theta = 0^{\circ}$ and thus $\cos \theta = 1$.
+
+Here $\theta$ is the incidence angle of the light coupling into the cavity, $\lambda$ is the wavelength of the light and $m = 1,2,3,...$ is a positive integer describing the order of the allowed mode. For the rest of this thesis it will be assumed that the laser couples into the cavity at normal incidence, meaning that $\theta = 0^{\circ}$ and thus $\cos \theta = 1$, as depicted in figure \ref{fig:planar_fabry-perot}.
+
+\subsubsection{Transmission}
+
+In order to determine the transmission throught the Fabry-Perot interferometer, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further, initially, assumed that resonators are both lossless, such that
+\begin{equation}
+    |r|^2 + |t|^2 = |r|^{\prime 2} + |t|^{\prime 2} = 1.
+    \label{eq:lossless_condition}
+\end{equation}
+
+This means that all losses, e.g. absorption, associated with the interaction between the field and the resonators are neglected. 
+
+In order to formulate the transmitted field $E_{out}$ in terms of the ingoing one $E_{in}$, we first assume that the ingoing field can be described well by a plane-wave propagating in the z-direction
+\begin{equation}
+    E_{in} = E_{0,in} e^{ikz},
+\end{equation}
+
+where $k = 2 \pi / \lambda$ is the wave number and $E_{0,in}$ is the amplitude of the field. We then consider $E_{out}$ to be comprised of contributions for each roundtrip inside the cavity. This can be written as an infinite geometrical series given as
+\begin{equation}
+    \begin{split}
+        E_{out} & = tt^{\prime} E_{0,in} e^{ikz} + tt^{\prime} E_{0,in} e^{ikz} rr^{\prime} e^{i\delta}\\&+ tt^{\prime} E_{0,in} e^{ikz} \left(rr^{\prime} e^{i\delta}\right)^2 + tt^{\prime} E_{0,in} e^{ikz} \left(rr^{\prime} e^{i\delta}\right)^3 + ...\\& = tt^{\prime} E_{0,in} e^{ikz} \sum^{\infty}_{m=0}\left( rr^{\prime}e^{i\delta} \right)^m
+    \end{split}
+    \label{eq:transmission_as_geometric_series}
+\end{equation}
+where $\delta = 2kl$. The first term of the series corresponds to a direct transmission through the cavity, and each term thereafter corresponds to the respective contribution to the transmission after the $m'th$ round trip. 
+
+By evaluating the series it is seen that it indeed converges, and setting $z=l$ the final expression for the transmission through a planar Fabry-Perot cavity is found as
+\begin{equation}
+    E_{out} = E_{0,in}\frac{tt^{\prime} e^{i\delta /2}}{1 - rr^{\prime} e^{i\delta}}.
+    \label{eq:fabry_perot_trans}
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/fabry_perot_example.pdf}
+    \caption{Example of a Fabry-Perot cavity transmission (\~50um cavity length and $|r|^2 = 0.5$)}
+    \label{fig:generic_fabry_perot}
+\end{figure}
+
+Figure \ref{fig:generic_fabry_perot} shows an example of the normalized transmission $|E_{out}|^2/|E_{0,in}|^2$ of an arbitrary Fabry-Perot cavity of length $l \approx 50 \mu m$ with reflectivity $|r|^2 = 0.5$. The two defining features marked on the figure are the \emph{Free Spectral Range (FSR)} and \emph{Full Width at Half Maximum (FWHM)}. As clearly depicted on the figure, the FSR is defined as the, in this case, spectral distance between two peaks in the spectra\footnote{The definition of the FSR is not limited to the distance between peaks in wavelength. As seen in eq. (\ref{eq:general_cavity_condition}) the cavity length and the resonant wavelengths are linearly dependent, and the length can thus just as well be varied resulting in a similar spectrum for the cavity transmission.}, while the FWHM is simply the linewidth of each peak. 
+
+\subsubsection{Finesse}
+
+Another important characteristic of an optical cavity is the so-called \emph{finesse} $\mathcal{F}$, which generally describes the quality of the cavity by the number of round trips the light makes on average before being transmitted. It can thus be said that the finesse corresponds to the order $m$ in the geometrical series describing the transmitted field $E_{out}$ in eq. (\ref{eq:transmission_as_geometric_series}), making the series, in any practical sense, finite.
+
+There is a variety of ways one can obtain the finesse of a cavity. By examination of the spectrum one can find the finesse in terms of the FSR and FWHM, as seen in figure \ref{fig:generic_fabry_perot}, given as
+\begin{equation}
+    \mathcal{F} = \frac{FSR}{FWHM},
+    \label{eq:finesse_FSR_FWHM}
+\end{equation}
+which indicates the resulting peaks of a cavity of higher finesse are narrower for the same FSR.
+
+The finesse can also be expressed in terms of the reflectivity/transmission of the resonators of the cavity, as the defining phyisical action is that of the light either being transmittied from the cavity or not. The finesse in terms of $r$ and $t$, for both resonators, are given as
+\begin{equation}
+    \mathcal{F} = \frac{2 \pi}{1 - |r|^2 + 1 - |r^{\prime}|^2} = \frac{2 \pi}{|t|^2+|t^{\prime}|^2}.
+    \label{eq:lossless_finesse}
+\end{equation}
+
+Figure \ref{fig:fabry_perot_trans} shows an example of the transmission spectrum of a high finesse cavity of reflectivity $|r|^2 = 0.9$ together with a low finesse cavity of reflectivity $|r|^2 = 0.3$. It is clearly seen that the linewidth of the high finesse cavity is much narrower than the low finesse case, which follows the relation shown in eq. (\ref{eq:finesse_FSR_FWHM}).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/fabry_perot_high_and_low_finesse.pdf}
+    \caption{Comparison of an arbitrary Fabry-Perot cavity of high and low finesse, respectively. The high finesse cavity and a reflectivity of $|r|^2 = 0.90$, while for the low finesse cavity $|r|^2 = 0.30$.}
+    \label{fig:fabry_perot_trans}
+\end{figure}
+
+
+Eq. (\ref{eq:lossless_finesse}) however is only true for the case of a lossless cavity, i.e. when eq. (\ref{eq:lossless_condition}) is fulfilled. In practice, any cavity will have some amount of losses, which would have to be taken into account when calculating the finesse. When losses are present eq. (\ref{eq:lossless_condition}) instead generally reads
+\begin{eqnarray}
+    |r|^2 + |t|^2 + L + L^{\prime} = 1,
+\end{eqnarray}
+where $L$ and $L^{\prime}$ indicates the fractional losses of each resonator.
+
+In this case the finesse would be given as 
+\begin{equation}
+    \mathcal{F} = \frac{2 \pi}{1-|r|^2 + 1 - |r^{\prime}|^2} = \frac{2 \pi}{|t|^2 + |t^{\prime}|^2 + L_{total}}.
+\end{equation}
+
+The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach $1$, as some light is lost to i.g. absorption effects for each round trip of the cavity.
+
+\subsubsection{Cavity length}
+
+So far we have only considered effects that are independent of the length of the Fabry-Perot cavity, and by examining figure \ref{fig:fabry_perot_trans} it is seen that the only previously discussed feature that does not vary when changing the reflectivity and transmission (and by extension finesse) of the cavity, is the FSR. The FSR is defined as the distance between adjacent peaks of the transmission spectrum, and is given as
+\begin{equation}
+    FSR = \frac{c}{2nl},
+    \label{eq:FSR_formula}
+\end{equation}
+where $c$ is the speed of light in vacuum, $n$ is the refractive index of the medium inside the cavity and $l$ is the length of the cavity. The inverse proportionality of the cavity length $l$ and the FSR is easily seen, and since the finesse is constant when varying the cavity length, the same must apply for the FWHM. 
+
 
 \subsubsection{The Fundamental Mode: A Gaussian Beam in the Large Waist Approximation}
 
@@ -57,11 +156,3 @@ Finally we can conclude, that any optical cavity, for which the total distance t
     \vec{E} = E_0 \vec{\epsilon} e^{ikz}.
 \end{equation}
 This is often referred to as the \emph{large waist approximation} of a Gaussian beam, due to the dependence on $w_0$ of eq. (\ref{eq:Rayleigh range}).
-
-\subsubsection{The Fabry-Perot Interferometer}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\textwidth]{figures/fabry_perot_high_and_low_finesse.pdf}
-    \caption{Comparison of an arbitrary Fabry-Perot cavity of high and low finesse, respectively. The high finesse cavity and a reflectivity of $|r|^2 = 0.90$, while for the low finesse cavity $|r|^2 = 0.30$.}
-\end{figure}
