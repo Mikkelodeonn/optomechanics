@@ -23,7 +23,7 @@ Here $\theta$ is the incidence angle of the light coupling into the cavity, $\la
 
 In order to determine the transmission throught the Fabry-Perot interferometer, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further, initially, assumed that resonators are both lossless, such that
 \begin{equation}
-    |r|^2 + |t|^2 = |r|^{\prime 2} + |t|^{\prime 2} = 1.
+    |r|^2 + |t|^2 = |r^{\prime}|^2 + |t^{\prime}|^2 = 1.
     \label{eq:lossless_condition}
 \end{equation}
 
@@ -100,12 +100,26 @@ The effect on the transmission spectrum of a cavity with losses is that the leve
 
 \subsubsection{Cavity length}
 
-So far we have only considered effects that are independent of the length of the Fabry-Perot cavity, and by examining figure \ref{fig:fabry_perot_trans} it is seen that the only previously discussed feature that does not vary when changing the reflectivity and transmission (and by extension finesse) of the cavity, is the FSR. The FSR is defined as the distance between adjacent peaks of the transmission spectrum, and is given as
+So far we have only considered effects that are independent of the length of the Fabry-Perot cavity, and by examining figure \ref{fig:fabry_perot_trans} it is seen that the only previously discussed feature that does not vary when changing the reflectivity and transmission (and by extension also the finesse) of the cavity, is the FSR. The FSR is defined as the distance between adjacent peaks of the transmission spectrum, and is given as
 \begin{equation}
     FSR = \frac{c}{2nl},
     \label{eq:FSR_formula}
 \end{equation}
-where $c$ is the speed of light in vacuum, $n$ is the refractive index of the medium inside the cavity and $l$ is the length of the cavity. The inverse proportionality of the cavity length $l$ and the FSR is easily seen, and since the finesse is constant when varying the cavity length, the same must apply for the FWHM. 
+where $c$ is the speed of light in vacuum, $n$ is the refractive index of the medium inside the cavity and $l$ is the length of the cavity. The inverse proportionality of the cavity length $l$ and the FSR is easily seen, and since the finesse is constant when varying the cavity length, the same must apply for the FWHM. Figure \ref{fig:fabry_perot_FSR_comparison} shows a comparison of the transmission through two Fabry-Perot cavities of length $100\mu m$ and $150 \mu m$, respectively. It is evident that the FSR depends on the cavity length, as $FSR_{100 \mu m} > FSR_{150 \mu m}$. It is also seen, that while the FSR becomes smaller with increasing cavity lengths, the linewidth does too, this is a consequence of the finesse $\mathcal{F}$ being constant in terms of the cavity length. 
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/100um_broadband_trans.pdf}
+        \caption{$\sim 100 \mu m$ Fabry-Perot cavity transmission.}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/150um_broadband_trans.pdf}
+        \caption{$\sim 150 \mu m$ Fabry-Perot cavity transmission.}
+    \end{subfigure}
+    \caption{}
+    \label{fig:fabry_perot_FSR_comparison}
+\end{figure}
 
 
 \subsubsection{The Fundamental Mode: A Gaussian Beam in the Large Waist Approximation}
