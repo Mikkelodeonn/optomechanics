@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1744101505.72806 "main.bcf" "main.bbl" "main" 1744140971.66798 0
-  "main.bcf" 1744140971.18645 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
+["biber main"] 1744101505.72806 "main.bcf" "main.bbl" "main" 1744191148.9085 0
+  "main.bcf" 1744191148.56411 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
   "ref.bib" 1733419308.608 2153 ea777df09f5c4414886a6b0b9190dd8e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1744140967.93633 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1744140971.66889 0
+["pdflatex"] 1744191146.4525 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1744191148.90892 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1744101503.2151 2574 498ca1730983dd01e6ac06ebc4c33ad3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -63,6 +63,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -168,13 +169,17 @@
   "figures/cmap_slice2.pdf" 1743514529.6458 14540 287b3cfc73f1cd5c4fce1f1a4935c7ae ""
   "figures/cmap_slice3.pdf" 1743514568.62952 14555 2b6c8432fbb5a7065ed1a0a981a80738 ""
   "figures/cmap_with_slice_indicators1.pdf" 1743514321.88366 194688 1b923068ba9848e91380fc5ec2eaa053 ""
+  "figures/double_24_loss_30um.pdf" 1744184416.76013 19401 8f5d16da63230f0deacc7b8d374a3a2d ""
+  "figures/double_2_loss_30um.pdf" 1744184265.1559 19198 4be2bb58e6a20d8ded2f23c554f83728 ""
   "figures/double_fano_full_range_30um.pdf" 1744138602.6508 22559 6d29451ab1616030c84c0046475bb614 ""
+  "figures/double_fano_loss_scan.pdf" 1744187520.25655 25505 2618a25a82941beedd629a157a736321 ""
   "figures/double_fano_short_range_30um.pdf" 1744138649.21476 20425 565a999785221605c3182580637b5a97 ""
   "figures/double_fano_sketch.pdf" 1742890676.99641 22875 2220e4d897b4110e0335c54e7fb25a54 ""
   "figures/fabry_perot_example.pdf" 1743598022.34484 37048 6bd3658d7001a97fc94d76d5d6932ae5 ""
   "figures/fabry_perot_high_and_low_finesse.pdf" 1743597767.83049 19181 2fe88c3dee8defe03925efc21ebbf063 ""
   "figures/fano_and_broadband_cavity_1000um.pdf" 1743510250.37191 21111 ad0e99ba8adf41a293f44267d7732caa ""
   "figures/fano_and_broadband_cavity_5um.pdf" 1743509516.0374 16519 89a957ae83d8892903ca53127433d499 ""
+  "figures/linewidth_vs_losses.pdf" 1744187318.75152 16112 52339bf0caa7fb6ce71b7613e1a61358 ""
   "figures/planar_fabry_perot.pdf" 1743594464.01467 19328 a4018bae03474a8cfc3901edff04453d ""
   "figures/setup_skecth_zoomed.pdf" 1742901098.97668 31258 3d54d2fe92e58830bb312e0ffc3f430a ""
   "figures/setup_sketch.pdf" 1743598777.54694 32633 e5671b8b1fdb7d776d310fecad36f15c ""
@@ -186,17 +191,17 @@
   "figures/single_and_double_5um.pdf" 1744116198.93134 21537 6632db30dccb3aa468964ba6dcf13a5f ""
   "figures/single_fano_sketch.pdf" 1742890650.92377 22983 bd5e38c88b08a16592fce1fe19edd44c ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1744140971.17915 15108 28e7d0cc02ff16411680252409478f7a "pdflatex"
+  "main.aux" 1744191148.55999 15588 eda9da5fb674282ff313cd869565b8a5 "pdflatex"
   "main.bbl" 1744101509.30703 8107 b525fb0834d28063a093508429246b25 "biber main"
-  "main.run.xml" 1744140971.18989 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1744191148.5653 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1744101503.2151 2574 498ca1730983dd01e6ac06ebc4c33ad3 ""
-  "main.toc" 1744140971.19064 4667 3e51990e93bdf29f74e91d548ab1d0c5 "pdflatex"
+  "main.toc" 1744191148.56546 4624 1208b9d19d0a3a09876c36251687d417 "pdflatex"
   "method/experimental_setup.tex" 1743521321.92279 2083 e59045966ea448d5ffddc7ca4eedd441 ""
   "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""
   "results/experimental_results.tex" 1742910622.49195 1239 571bfd303137a41e60680d6c0c732843 ""
   "results/simulations.tex" 1743156999.02692 690 b1ebeb84f747662092da14b00dc7c538 ""
   "theory/cavity_electrodynamics.tex" 1744132993.83138 13456 05536319193ddfd7812bd04eed8a20c2 ""
-  "theory/fano_cavity.tex" 1744140967.28377 31326 e4ea95fa206d5ba97aba54893a3b6d1b ""
+  "theory/fano_cavity.tex" 1744191146.15885 33930 0c829b376894b64ed3c9c9acf10c531e ""
   (generated)
   "main.aux"
   "main.bcf"

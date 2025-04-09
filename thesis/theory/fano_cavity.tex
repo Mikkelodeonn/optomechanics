@@ -304,13 +304,53 @@ This is supported well by the simulation depicted in figure \ref{fig:HWHM_double
 
 Figures \ref{fig:700um_double_and_single_fano_peak} and \ref{fig:10um_double_and_single_fano_peak} contain examples of intracavity\footnote{The reason these are shown as intracavity spectra instead of transmission spectra is due to the immediate off-resonance behavior of the double Fano cavity transmission. The shape makes accurate fitting a challenge, and while the intracavity spectra cannot be measured in the lab, the linewidth when simulated is identical to the resulting transmission peaks.} spectra of single and double Fano cavities and corresponding fits to the general Fano model in order to determine their linewidths. 
 
-\subsubsection{Transmission as a function of losses (symmetric double fano cavity)}
+\subsubsection{Additional cavity losses}
 
-Figures:
-\begin{itemize}
-    \item Trans. spectra for different values of L.
-    \item linewidth as a function of L. (plot den analytiske linjebredde sammen med)
-\end{itemize}
+Thus far we have only examined a lossless double Fano cavity where
+\begin{equation}
+    |r_g|^2 + |t_g|^2 = 1
+\end{equation}
+is fulfilled for both Fano mirrors used to contruct the cavity.
+
+In this section we will investigate what happens when we introduce additional cavity losses\footnote{Not to be confused with the often used definition of cavity losses given as $L=1-|r|^2$ where anything not being reflected back into the cavity is considered to have a contribution to the losses.}
+\begin{equation}
+    L = 1 - |r_g|^2 - |t_g|^2,
+\end{equation}
+leading to the modified condition
+\begin{equation}
+    |r_g|^2 + |t_g|^2 + L = 1.
+\end{equation}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/double_fano_loss_scan.pdf}
+    \caption{}
+    \label{fig:double_loss_scan}
+\end{figure}
+
+Figure \ref{fig:double_loss_scan} shows double Fano transmisison spectra as a function of wavelength for a symmetric cavity with varying values for the additional cavity losses. It is readily seen that the maximum value reached in each spectrum is rapidly reduced with the introduction of these losses. 
+
+Since the linewidth is defined as the HWHM of the transmission profile, this will naturally vary as a function of additional cavity losses. This is depicted in figure \ref{fig:HWHM_vs_losses} where the HWHM is shown for different values of $L$. Examples of intracavity spectra taken for different values of $L$ are shown in figures \ref{fig:HWHM_vs_losses_whole_figure}b and \ref{fig:HWHM_vs_losses_whole_figure}c, along with their respective least squares fits of the general Fano model in eq. (\ref{eq:general_fano_model}) and linewidths found as fitting parameters hereof. 
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[c]{0.64\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/linewidth_vs_losses.pdf}
+        \caption{HWHM of a symmetric $\sim 30 \mu m$ double Fano cavity as a function of additional cavity losses $L = 2(|r_g|^2 - |t_g|^2)$. Improve this figure by adding the analytical prediction of the linewidth as a function of losses.}
+        \label{fig:HWHM_vs_losses}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{figures/double_2_loss_30um.pdf}
+        \caption{Double Fano transmission spectra with cavity length $\sim 30 \mu m$ and $L = 2\%$.}
+        \includegraphics[width=\textwidth]{figures/double_24_loss_30um.pdf}
+        \caption{Double Fano transmission spectra with cavity length $\sim 30 \mu m$ and $L = 24\%$.}
+    \end{subfigure}
+    \caption{}
+    \label{fig:HWHM_vs_losses_whole_figure}
+\end{figure}
+
+%% add the part where the simulated linewidths as a function of losses is compared with the analytical formula, when the analytical formula is added to the figure.
 
 \subsubsection{Spacial and spectral detuning - $l_{g} \geq l \geq l_{g}^{\prime}$ \& $\Delta \neq 0$ (lossless double fano cavity)}
 

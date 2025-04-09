@@ -75,6 +75,13 @@ def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: floa
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ
 
+def double_fano_losses(l: int, λres: float, L: float, γλ: float, rd: float, t1: float, t2: float):
+    δγc = ((λres**2)/(8*np.pi*l)) * (t1 + t2 + L) #(Tg + Tm + L) 
+    δγg = (γλ/(2*(1-rd))) * (t1 + t2 + L)*0.5 #(Tg + Tm + L) * 0.5
+    #print(δγg)
+    δγ = 1/((1/δγc) + (1/δγg)) 
+    return δγ
+
 def calc_lws(l, params1, params2, losses=True):
     λ0_1 = params1[0]; γ_1 = params1[3]
     λ0_2 = params2[0]; γ_2 = params2[3]
@@ -380,12 +387,33 @@ sim_slws = np.array([55.746, 45.459, 25.924, 18.455, 10.690, 5.035, 3.605])
 sim_dlws = np.array([30.987, 26.919, 19.224, 14.91, 9.517, 4.832, 3.529])
 dlws, slws, bblws = calc_lws(lengths, params1_sim, params1_sim, losses=False)
 
+losses = [0.0, 0.02, 0.06, 0.12, 0.24, 0.48] ## in percent
+lws = [26.9, 32.126, 42.732, 59.052, 93.306, 169.794] ## in pm
+
+linewidths = []
+
+Ls = np.linspace(0, 0.5, 1000)
+
+for L in Ls:
+    rs = theoretical_reflection_values(params1_sim, λs, losses=True, loss_factor=L/2)[0]
+    rs = [float(r) for r in rs]
+    r_trans = np.max(rs)
+    print(r_trans)
+    rparams, _ = curve_fit(model, λs, rs, p0=params1_sim, maxfev=10000)
+    rd = rparams[2]
+    lw = double_fano_losses(30*1e-6, 951*1e-9, 2*(1-r_trans), 0.5, rd, 0.05, 0.05)*1e12
+    linewidths.append(lw)
+
+
+
 plt.figure(figsize=(10,6))
-plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="broadband cavity")
-plt.plot(lengths*1e6, slws, linestyle="--", color="orangered", alpha=0.5, label="single fano cavity")
+plt.scatter(losses, lws, color="forestgreen", marker=".", label="$\\delta \\lambda (L)$")
+plt.plot(Ls, linewidths)
+#plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="broadband cavity")
+#plt.plot(lengths*1e6, slws, linestyle="--", color="orangered", alpha=0.5, label="single fano cavity")
 #plt.plot(lengths*1e6, dlws, linestyle="--", color="forestgreen", alpha=0.5, label="double fano cavity")
-plt.scatter(sim_lengths, sim_bblws, marker=".", color="royalblue", label="broadband cavity")
-plt.scatter(sim_lengths, sim_slws, marker=".", color="orangered", label="single fano cavity")
+#plt.scatter(sim_lengths, sim_bblws, marker=".", color="royalblue", label="broadband cavity")
+#plt.scatter(sim_lengths, sim_slws, marker=".", color="orangered", label="single fano cavity")
 #plt.scatter(sim_lengths, sim_dlws, marker=".", color="forestgreen", label="double fano cavity")
 #plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)", zorder=7)
 #plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
