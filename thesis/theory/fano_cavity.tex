@@ -64,6 +64,13 @@ where $k_0$ and $\beta$ are defined from the expression for $a$ found by solving
 \end{equation}
 Finally, this allows for non-zero transmission and non-unity reflectivity at wave number $k_0$.
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/grating_spectrum_lossless_example.pdf}
+    \caption{Simulated reflectiviy and transmission spectra of an arbitrary lossless grating.}
+    \label{fig:lossless_grating_spectrum}
+\end{figure}
+
 \subsubsection{Lossy grating}
 
 In order to modify the above model such that losses, e.g. due to absorption or thermal coupling effects, are accounted for, we add a resonant loss term to the energy conservation relation in eq. (\ref{eq:energy conservation}). For this we introduce the resonant loss level $L$, which must be known in order to accurately calculate the complex reflectivity coefficients. The energy conservation relation is modified such that
@@ -83,7 +90,13 @@ It is easily identified that eq. (\ref{eq:lossless couples diff. eqs.}) and eq. 
 
 In conclusion, the complete grating model consists of an expression for the transmission coefficients and a set of coupled differential equations for the reflection coefficients, shown in eq. (\ref{eq:lossy transmission coefficients}) and eq. (\ref{eq:lossy couples diff. eqs.}), respectively. The model on the form used for this project and subsequent thesis is derived in previous work by A. Darki et al. \cite{Darki} and more recently T. Mitra et al. \cite{Mitra}.
 
-\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/grating_spectrum_lossy_example.pdf}
+    \caption{Simulated reflectiviy and transmission spectra of an arbitrary lossy grating.}
+    \label{fig:lossy_grating_spectrum}
+\end{figure}
+
 \subsection{The Fano cavity}
 
 \subsubsection{The single Fano cavity model}
@@ -330,7 +343,7 @@ leading to the modified condition
 
 Figure \ref{fig:double_loss_scan} shows double Fano transmisison spectra as a function of wavelength for a symmetric cavity with varying values for the additional cavity losses. It is readily seen that the maximum value reached in each spectrum is rapidly reduced with the introduction of these losses. 
 
-Since the linewidth is defined as the HWHM of the transmission profile, this will naturally vary as a function of additional cavity losses. This is depicted in figure \ref{fig:HWHM_vs_losses} where the HWHM is shown for different values of $L$. Examples of intracavity spectra taken for different values of $L$ are shown in figures \ref{fig:HWHM_vs_losses_whole_figure}b and \ref{fig:HWHM_vs_losses_whole_figure}c, along with their respective least squares fits of the general Fano model in eq. (\ref{eq:general_fano_model}) and linewidths found as fitting parameters hereof. 
+Since the linewidth is defined as the HWHM of the transmission profile, this will naturally vary as a function of additional cavity losses. This is depicted in figure \ref{fig:HWHM_vs_losses} where the HWHM is shown for different values of $L$. Examples of intracavity spectra taken for different values of $L$ are shown in figures \ref{fig:HWHM_vs_losses_whole_figure}b and \ref{fig:HWHM_vs_losses_whole_figure}c, along with their respective least squares fits to the general Fano model in eq. (\ref{eq:general_fano_model}) and linewidths found as fitting parameters hereof. 
 
 \begin{figure}[h!]
     \centering
@@ -350,31 +363,122 @@ Since the linewidth is defined as the HWHM of the transmission profile, this wil
     \label{fig:HWHM_vs_losses_whole_figure}
 \end{figure}
 
-%% add the part where the simulated linewidths as a function of losses is compared with the analytical formula, when the analytical formula is added to the figure.
+Figure \ref{fig:HWHM_vs_losses} shows the simulated linewidths of intracavity spectra as a function of total cavity losses $L$, and is compared with the analytical formula for the double Fano linewidth in eq. (\ref{eq:analytical_linewidth_double}). It is seen that the analytical model proves, once again, to be a powerful predicting technique for the linewidth, and especially for cavities with relatively low losses. 
 
-\subsubsection{Spacial and spectral detuning - $l_{g} \geq l \geq l_{g}^{\prime}$ \& $\Delta \neq 0$ (lossless double fano cavity)}
+\subsubsection{Spectral and spacial detuning - $l_{g} \geq l \geq l_{g}^{\prime}$ \& $\Delta \neq 0$ (lossless double fano cavity)}
 
-Figures (spectral detuning): 
-\begin{itemize}
-    \item Constructed grating trans. spectra (showing the result of varying only the spectral parameters of one grating, $\lambda_0$ and $\lambda_1$).
-    \item Full range cavity transmission spectra of single + double fano cavities with grating transmission (note: resonance peak is between the trans. minima of the two gratings).
-    \item Cavity trans. spectra for different values of $\Delta$ (constant cavity length).
-    \item Linewidth as a function of spectral detuning $\Delta$.
-\end{itemize}
+Up until this point, it has been assumed that the Fano mirrors making up the double Fano cavity has been identical, namely the cavity has been \emph{symmetric}. However, in practice this is very unlikely to be the case, as any Fano mirror constructed is bound to have some uncertainties attached to the physical parameters describing it. For that reason we investigate the effect of an \emph{assymetric} cavity on the resulting transmission profile. Here we remember that each sub-wavelength grating is describes by a set of parameters, $\lambda_0$, $\lambda_1$, $t_d$, $\gamma \lambda$ and $\beta$, which respectively describe the cavity resonance wavelength, guided-mode resonance wavelength, direct transmission, guided-mode resonance linewidth and additional losses of each grating. In order to model only a spectral detuning, we therefore simply change the parameters regarding the cavity and guided-mode resonance wavelengths, $\lambda_0$ and $\lambda_1$ by an amount corresponding to the detuning we wish to study. For this section the parameters will be given as
+\begin{equation}
+    \begin{split}
+    \lambda_0 = &951 nm,\:\: \lambda_1 = 951 nm,\:\: t_d = 80\%,\\ &\gamma \lambda = 0.5 nm\: \text{ and }\: \beta = 10^{-6}
+    \end{split}
+    \label{eq:grating_params}
+\end{equation}
+for the unchanged Fano mirror, and
+\begin{equation}
+    \begin{split}
+    \lambda_0^{\prime} = &\lambda_0 + \Delta,\:\: \lambda_1^{\prime} = \lambda_1 + \Delta,\:\: t_d^{\prime} = t_d,\\ &\gamma \lambda^{\prime} = \gamma \lambda\: \text{ and }\: \beta^{\prime} = \beta
+    \end{split}
+    \label{eq:detuned_grating_params}
+\end{equation}
+for the \emph{detuned} Fano mirror. Figure \ref{fig:detuned_grating_spectra} shows the normalized reflectivity and transmission spectra of the Fano mirrors described by the parameters described in eqs. (\ref{eq:grating_params}) and (\ref{eq:detuned_grating_params}).
 
-Figures (spacial detuning):
-\begin{itemize}
-    \item Cavity trans. spectra for different lengths (small/large detuning comparison).
-    \item Linewidth as a function of cavity length ($l_g \rightarrow l_g^{\prime}$).
-\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/detuned_grating_spectra.pdf}
+    \caption{The normalized reflectivity and transmission spectra of the Fano mirrors described in eqs. (\ref{eq:grating_params}) and (\ref{eq:detuned_grating_params}) for a detuning given as $\Delta = 0.3nm$.}
+    \label{fig:detuned_grating_spectra}
+\end{figure}
 
+As has been observed in previous sections, the Fano resonance transmission peak is present at the point where the grating reflectivity $r_g(\lambda)$ is maximized and transmission $t_g(\lambda)$ minimized. However, when $\lambda_0 \neq \lambda_0^{\prime}$ and $\lambda_1 \neq \lambda_1^{\prime}$, this is no longer a trivial conclusion to draw. The question of whether the cavity resonance should be tuned to match the guided-mode resonance wavelength of one grating or the other, or maybe somewhere in between does not have an obvious answer. This will be further expanded upon later in this section, but in order to move forward with the investigation of the spectral detuning we, for now, accept that the optimal cavity length, is the one corresponding to a cavity resonance $\lambda_t$ given, exactly between the two guided-mode resonance wavelengths, as 
+\begin{equation}
+    \lambda_t = \frac{\lambda_{0,1} + \lambda_{0,1}^{\prime}}{2}.
+    \label{eq:transmission_wavelength}
+\end{equation}
+The subscribt \emph{0,1} indicate that the two are interchangable, as the two are assumed identical at this time, and \emph{t} is for \emph{transmission} as this is, later on, to be used experimentally as the \emph{transmission wavelength}. 
 
-\begin{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/detuned_full_range_double_trans.pdf}
+    \caption{The double Fano transmission spectra of a cavity detuned by $\Delta = 0.3nm$, as seen in figure \ref{fig:detuned_grating_spectra}, together with the reflectivity and transmission spectra of the Fano mirrors used for the simulation.}
+    \label{fig:detuned_double_fano_transmission}
+\end{figure}
+
+Figure \ref{fig:detuned_double_fano_transmission} shows the transmission spectrum of a detuned double Fano cavity with parameters corresponding to the transmission and reflectivity spectra in figure \ref{fig:detuned_grating_spectra}, meaning that $\Delta = 0.3nm$. The transmission wavelength $\lambda_t$ is chosen such that eq. (\ref{eq:transmission_wavelength}) is fulfilled, and correspndingly it is seen that the transmission peak is placed exactly between the maximum (minimum) reflectivites (transmissions) of the two grating, i.e. between the two guided-mode resonance wavelengths. Furthermore, it can be concluded that the detuning is chosen such that the overlap between the guided-mode resonances is still substantiel enough for them to couple and hence for the the overall Fano resonance to be excited. 
+
+While knowing that a detuning of $0.3nm$ is acceptable in terms of exciting the Fano resonance in the lossless case, it does not provide much in terms of estimating the acceptable detuning for any experimental purposes. In figure \ref{fig:detuning_scan} the double Fano transmission is shown for increasing detuning $\Delta$ and transmission wavelength $\lambda_t = (\lambda_{0,1} + \lambda_{0,1}^{\prime})/2$. 
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um.pdf}
+        \caption{Double Fano cavity transmission spectra for different values of the spectral detuning $\Delta$.}
+        \label{fig:detuning_scan}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/detuning_scan_intracavity_double_fano_30um.pdf}
+        \caption{Double Fano cavity intracavity spectra for different values of the spectral detuning $\Delta$.}
+        \label{fig:intracavity_detuning_scan}
+    \end{subfigure}
+    \caption{}
+    \label{fig:detuning_threshold_lossless}
+\end{figure}
+
+It is readily seen that with increasing detuning the peak shifts to the right, which is in itself a behavior which is trivial from eq. (\ref{eq:transmission_wavelength}). The linewidth is also seen to increase with larger detuning, and the peak eventually collapses when the overlap between the guided-mode resonance profiles of the two gratings becomes too small to sustain the Fano resonance. Figure \ref{fig:intracavity_detuning_scan} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan}, and provides valuable insight into the mode density inside the cavity for the different values of $\Delta$. It is clearly demonstrated by the two figures that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to sustain the Fano resonance modes. 
+
+%% Write about the spacial detuning (should the order of the spectral and spacial detuning be reversed?)
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_short.pdf}
+        \caption{$\Delta = 0.1nm$}
+        \label{fig:detuned_small_length_scan_long}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_long.pdf}
+        \caption{}
+        \label{fig:detuned_small_length_scan_short}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/detuned_length_scan_long.pdf}
+        \caption{$\Delta = 0.3nm$}
+        \label{fig:detuned_length_scan_long}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/detuned_length_scan_short.pdf}
+        \caption{}
+        \label{fig:detuned_length_scan_short}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/large_detuning_length_scan_long.pdf}
+        \caption{$\Delta = 0.8nm$}
+        \label{fig:detuned_large_length_scan_long}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/large_detuning_length_scan_short.pdf}
+        \caption{}
+        \label{fig:detuned_large_length_scan_short}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
+\begin{figure}[h!]
     \centering
     \begin{subfigure}[c]{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/cmap_with_slice_indicators1.pdf}
-        \caption{cmap showing transmission as a function of wavelength for cavity lengths ranging $l_{g} \rightarrow l_{g}^{\prime}$.}
+        \caption{cmap showing transmission as a function of wavelength for cavity lengths ranging $l_{g} \rightarrow l_{g}^{\prime}$ for $\Delta = 0.3nm$.}
     \end{subfigure}
     \begin{subfigure}[c]{0.49\textwidth}
         \centering

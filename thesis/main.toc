@@ -15,40 +15,40 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Transmission linewidth}{14}{}%
 \contentsline {subsection}{\numberline {2.4}The double Fano cavity}{17}{}%
 \contentsline {subsubsection}{\numberline {2.4.1}The double fano transmission model}{17}{}%
-\contentsline {subsubsection}{\numberline {2.4.2}Transmission linewidth}{18}{}%
-\contentsline {subsubsection}{\numberline {2.4.3}Single and double Fano cavity comparison}{18}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Transmission linewidth}{19}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}Single and double Fano cavity comparison}{19}{}%
 \contentsline {subsubsection}{\numberline {2.4.4}Additional cavity losses}{21}{}%
-\contentsline {subsubsection}{\numberline {2.4.5}Spacial and spectral detuning - $l_{g} \geq l \geq l_{g}^{\prime }$ \& $\Delta \neq 0$ (lossless double fano cavity)}{22}{}%
-\contentsline {section}{\numberline {3}Method}{24}{}%
-\contentsline {subsection}{\numberline {3.1}The experimental setup}{24}{}%
-\contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{24}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Obtaining normalized transmission/reflection spectra}{25}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Adjusting the beam waist - the optical telescope}{25}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}The alignment procedure}{25}{}%
-\contentsline {subsubsection}{\numberline {3.2.4}Normalization}{25}{}%
-\contentsline {subsection}{\numberline {3.3}Cavity measurements}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Determining the cavity length from the FSR}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Normalization}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Single fano cavity characterization}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}Aligning the cavity}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Double fano cavity characterization}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.6}Off-resonance Fabry-Perot cavity (alignment technique)}{25}{}%
-\contentsline {subsubsection}{\numberline {3.3.7}Centering of the top grating (pinhole method)}{25}{}%
-\contentsline {subsection}{\numberline {3.4}Parallelism study (deviation from normal incident)}{25}{}%
-\contentsline {section}{\numberline {4}Simulations}{26}{}%
-\contentsline {subsection}{\numberline {4.1}The single Fano cavity}{26}{}%
-\contentsline {subsection}{\numberline {4.2}The double Fano cavity}{26}{}%
-\contentsline {section}{\numberline {5}Experimental results}{27}{}%
-\contentsline {subsection}{\numberline {5.1}The single Fano cavity}{27}{}%
-\contentsline {subsection}{\numberline {5.2}The double Fano cavity}{27}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Realizing the double fano model}{27}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Double fano off-resonance Fabry-Perot cavity}{27}{}%
-\contentsline {subsubsection}{\numberline {5.2.3}The double fano linewidth}{27}{}%
-\contentsline {section}{\numberline {6}Discussion}{28}{}%
-\contentsline {subsection}{\numberline {6.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{28}{}%
-\contentsline {subsection}{\numberline {6.2}Spacial drift of the piezo ring}{28}{}%
-\contentsline {subsection}{\numberline {6.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{28}{}%
-\contentsline {subsection}{\numberline {6.4}Broadening sources (especially for long cavities)}{28}{}%
-\contentsline {subsection}{\numberline {6.5}Improvements to the setup}{28}{}%
-\contentsline {section}{\numberline {7}Appendix}{29}{}%
-\contentsline {section}{\numberline {8}References}{30}{}%
+\contentsline {subsubsection}{\numberline {2.4.5}Spectral and spacial detuning - $l_{g} \geq l \geq l_{g}^{\prime }$ \& $\Delta \neq 0$ (lossless double fano cavity)}{23}{}%
+\contentsline {section}{\numberline {3}Method}{27}{}%
+\contentsline {subsection}{\numberline {3.1}The experimental setup}{27}{}%
+\contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{27}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Obtaining normalized transmission/reflection spectra}{29}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Adjusting the beam waist - the optical telescope}{29}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}The alignment procedure}{29}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Normalization}{29}{}%
+\contentsline {subsection}{\numberline {3.3}Cavity measurements}{29}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Determining the cavity length from the FSR}{29}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Normalization}{29}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Single fano cavity characterization}{29}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Aligning the cavity}{29}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Double fano cavity characterization}{30}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Off-resonance Fabry-Perot cavity (alignment technique)}{30}{}%
+\contentsline {subsubsection}{\numberline {3.3.7}Centering of the top grating (pinhole method)}{30}{}%
+\contentsline {subsection}{\numberline {3.4}Parallelism study (deviation from normal incident)}{30}{}%
+\contentsline {section}{\numberline {4}Simulations}{31}{}%
+\contentsline {subsection}{\numberline {4.1}The single Fano cavity}{31}{}%
+\contentsline {subsection}{\numberline {4.2}The double Fano cavity}{31}{}%
+\contentsline {section}{\numberline {5}Experimental results}{32}{}%
+\contentsline {subsection}{\numberline {5.1}The single Fano cavity}{32}{}%
+\contentsline {subsection}{\numberline {5.2}The double Fano cavity}{32}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Realizing the double fano model}{32}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Double fano off-resonance Fabry-Perot cavity}{32}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}The double fano linewidth}{32}{}%
+\contentsline {section}{\numberline {6}Discussion}{33}{}%
+\contentsline {subsection}{\numberline {6.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{33}{}%
+\contentsline {subsection}{\numberline {6.2}Spacial drift of the piezo ring}{33}{}%
+\contentsline {subsection}{\numberline {6.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{33}{}%
+\contentsline {subsection}{\numberline {6.4}Broadening sources (especially for long cavities)}{33}{}%
+\contentsline {subsection}{\numberline {6.5}Improvements to the setup}{33}{}%
+\contentsline {section}{\numberline {7}Appendix}{34}{}%
+\contentsline {section}{\numberline {8}References}{35}{}%
