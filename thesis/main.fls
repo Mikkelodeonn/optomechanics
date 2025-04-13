@@ -491,6 +491,11 @@ INPUT ./figures/cmap_lw_vs_l_intracavity.pdf
 INPUT ./figures/cmap_lw_vs_l_intracavity.pdf
 INPUT ./figures/cmap_lw_vs_l_intracavity.pdf
 INPUT ./figures/cmap_lw_vs_l_intracavity.pdf
+INPUT ./figures/cmaps_detuning_30um.pdf
+INPUT ./figures/cmaps_detuning_30um.pdf
+INPUT ./figures/cmaps_detuning_30um.pdf
+INPUT ./figures/cmaps_detuning_30um.pdf
+INPUT ./figures/cmaps_detuning_30um.pdf
 INPUT ./method/experimental_setup.tex
 INPUT ./method/experimental_setup.tex
 INPUT ./method/experimental_setup.tex

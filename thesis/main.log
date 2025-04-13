@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  10 APR 2025 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  13 APR 2025 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -545,33 +545,33 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Info: Redefining \microtypecontext on input line 60.
-Package microtype Info: Applying patch `item' on input line 60.
-Package microtype Info: Applying patch `toc' on input line 60.
-Package microtype Info: Applying patch `eqnum' on input line 60.
-Package microtype Info: Applying patch `footnote' on input line 60.
-Package microtype Info: Applying patch `verbatim' on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Info: Redefining \microtypecontext on input line 62.
+Package microtype Info: Applying patch `item' on input line 62.
+Package microtype Info: Applying patch `toc' on input line 62.
+Package microtype Info: Applying patch `eqnum' on input line 62.
+Package microtype Info: Applying patch `footnote' on input line 62.
+Package microtype Info: Applying patch `verbatim' on input line 62.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 60.
+LaTeX Info: Redefining \showhyphens on input line 62.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -609,8 +609,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 60.
-Package biblatex Info: Reference segment=0 on input line 60.
+Package biblatex Info: Reference section=0 on input line 62.
+Package biblatex Info: Reference segment=0 on input line 62.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -651,7 +651,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 66.
+(Font)              size <17.28> substituted on input line 68.
 
 (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
@@ -905,69 +905,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/small_detuning_length_scan_short.pdf, id=1225, 722.7pt x 433.62pt>
 File: figures/small_detuning_length_scan_short.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 434.
+Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 432.
 (pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
 <figures/small_detuning_length_scan_long.pdf, id=1226, 722.7pt x 433.62pt>
 File: figures/small_detuning_length_scan_long.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 439.
+Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 437.
 (pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-<figures/detuned_length_scan_long.pdf, id=1227, 722.7pt x 433.62pt>
-File: figures/detuned_length_scan_long.pdf Graphic file (type pdf)
-<use figures/detuned_length_scan_long.pdf>
-Package pdftex.def Info: figures/detuned_length_scan_long.pdf  used on input line 449.
-(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-<figures/detuned_length_scan_short.pdf, id=1228, 722.7pt x 433.62pt>
-File: figures/detuned_length_scan_short.pdf Graphic file (type pdf)
-<use figures/detuned_length_scan_short.pdf>
-Package pdftex.def Info: figures/detuned_length_scan_short.pdf  used on input line 454.
-(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/large_detuning_length_scan_long.pdf, id=1229, 722.7pt x 433.62pt>
-File: figures/large_detuning_length_scan_long.pdf Graphic file (type pdf)
-<use figures/large_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 464.
-(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-<figures/large_detuning_length_scan_short.pdf, id=1230, 722.7pt x 433.62pt>
-File: figures/large_detuning_length_scan_short.pdf Graphic file (type pdf)
-<use figures/large_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 469.
-(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/cmap_with_slice_indicators1.pdf, id=1231, 722.7pt x 433.62pt>
-File: figures/cmap_with_slice_indicators1.pdf Graphic file (type pdf)
-<use figures/cmap_with_slice_indicators1.pdf>
-Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 480.
-(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
-<figures/cmap_slice2.pdf, id=1232, 722.7pt x 433.62pt>
-File: figures/cmap_slice2.pdf Graphic file (type pdf)
-<use figures/cmap_slice2.pdf>
-Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 485.
-(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
-<figures/cmap_slice1.pdf, id=1233, 722.7pt x 433.62pt>
-File: figures/cmap_slice1.pdf Graphic file (type pdf)
-<use figures/cmap_slice1.pdf>
-Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 487.
-(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
-<figures/cmap_slice3.pdf, id=1234, 722.7pt x 433.62pt>
-File: figures/cmap_slice3.pdf Graphic file (type pdf)
-<use figures/cmap_slice3.pdf>
-Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 488.
-(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/cmap_lw_vs_l_intracavity.pdf, id=1235, 722.7pt x 433.62pt>
-File: figures/cmap_lw_vs_l_intracavity.pdf Graphic file (type pdf)
-<use figures/cmap_lw_vs_l_intracavity.pdf>
-Package pdftex.def Info: figures/cmap_lw_vs_l_intracavity.pdf  used on input line 495.
-(pdftex.def)             Requested size: 216.81pt x 130.087pt.
-) [26 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_intracavity_double_fano_30um.pdf
+ [26 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_intracavity_double_fano_30um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/detuning_scan_intracavity_double_fano_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/small_detuning_length_scan_short.pdf
@@ -976,33 +921,56 @@ pdfTeX warning: pdflatex (file ./figures/small_detuning_length_scan_short.pdf): 
 > <./figures/small_detuning_length_scan_long.pdf
 
 pdfTeX warning: pdflatex (file ./figures/small_detuning_length_scan_long.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./method/experimental_setup.tex
-<figures/setup_sketch.pdf, id=1397, 392.46625pt x 347.2975pt>
-File: figures/setup_sketch.pdf Graphic file (type pdf)
-<use figures/setup_sketch.pdf>
-Package pdftex.def Info: figures/setup_sketch.pdf  used on input line 7.
-(pdftex.def)             Requested size: 173.44534pt x 153.48438pt.
-<figures/setup_skecth_zoomed.pdf, id=1398, 593.21625pt x 290.08376pt>
-File: figures/setup_skecth_zoomed.pdf Graphic file (type pdf)
-<use figures/setup_skecth_zoomed.pdf>
-Package pdftex.def Info: figures/setup_skecth_zoomed.pdf  used on input line 12.
-(pdftex.def)             Requested size: 255.83421pt x 125.10538pt.
-
-Overfull \vbox (21.63884pt too high) has occurred while \output is active []
-
+>]
+<figures/detuned_length_scan_long.pdf, id=1389, 722.7pt x 433.62pt>
+File: figures/detuned_length_scan_long.pdf Graphic file (type pdf)
+<use figures/detuned_length_scan_long.pdf>
+Package pdftex.def Info: figures/detuned_length_scan_long.pdf  used on input line 458.
+(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
+<figures/detuned_length_scan_short.pdf, id=1390, 722.7pt x 433.62pt>
+File: figures/detuned_length_scan_short.pdf Graphic file (type pdf)
+<use figures/detuned_length_scan_short.pdf>
+Package pdftex.def Info: figures/detuned_length_scan_short.pdf  used on input line 463.
+(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
  [27 <./figures/detuned_length_scan_long.pdf> <./figures/detuned_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/detuned_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/large_detuning_length_scan_long.pdf
-
-pdfTeX warning: pdflatex (file ./figures/large_detuning_length_scan_long.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/large_detuning_length_scan_short.pdf
+>]
+<figures/large_detuning_length_scan_long.pdf, id=1477, 722.7pt x 433.62pt>
+File: figures/large_detuning_length_scan_long.pdf Graphic file (type pdf)
+<use figures/large_detuning_length_scan_long.pdf>
+Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 478.
+(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
+<figures/large_detuning_length_scan_short.pdf, id=1478, 722.7pt x 433.62pt>
+File: figures/large_detuning_length_scan_short.pdf Graphic file (type pdf)
+<use figures/large_detuning_length_scan_short.pdf>
+Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 483.
+(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
+ [28 <./figures/large_detuning_length_scan_long.pdf> <./figures/large_detuning_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/large_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/cmap_with_slice_indicators1.pdf
-
-pdfTeX warning: pdflatex (file ./figures/cmap_with_slice_indicators1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/cmap_slice2.pdf
+>]
+<figures/cmap_with_slice_indicators1.pdf, id=1565, 722.7pt x 433.62pt>
+File: figures/cmap_with_slice_indicators1.pdf Graphic file (type pdf)
+<use figures/cmap_with_slice_indicators1.pdf>
+Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 499.
+(pdftex.def)             Requested size: 212.47618pt x 127.48671pt.
+<figures/cmap_slice2.pdf, id=1566, 722.7pt x 433.62pt>
+File: figures/cmap_slice2.pdf Graphic file (type pdf)
+<use figures/cmap_slice2.pdf>
+Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 505.
+(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
+<figures/cmap_slice1.pdf, id=1567, 722.7pt x 433.62pt>
+File: figures/cmap_slice1.pdf Graphic file (type pdf)
+<use figures/cmap_slice1.pdf>
+Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 507.
+(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
+<figures/cmap_slice3.pdf, id=1568, 722.7pt x 433.62pt>
+File: figures/cmap_slice3.pdf Graphic file (type pdf)
+<use figures/cmap_slice3.pdf>
+Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 508.
+(pdftex.def)             Requested size: 104.11449pt x 62.46637pt.
+ [29 <./figures/cmap_with_slice_indicators1.pdf> <./figures/cmap_slice2.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cmap_slice2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/cmap_slice1.pdf
@@ -1011,7 +979,30 @@ pdfTeX warning: pdflatex (file ./figures/cmap_slice1.pdf): PDF inclusion: multip
 > <./figures/cmap_slice3.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cmap_slice3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [28 <./figures/cmap_lw_vs_l_intracavity.pdf> <./figures/setup_sketch.pdf> <./figures/setup_skecth_zoomed.pdf>]) [29{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [30] (./results/simulations.tex) [31] (./results/experimental_results.tex) [32] (./results/discussion.tex) [33] (./Appendix.tex) [34] [35] (./main.aux)
+>]
+<figures/cmap_lw_vs_l_intracavity.pdf, id=1721, 722.7pt x 433.62pt>
+File: figures/cmap_lw_vs_l_intracavity.pdf Graphic file (type pdf)
+<use figures/cmap_lw_vs_l_intracavity.pdf>
+Package pdftex.def Info: figures/cmap_lw_vs_l_intracavity.pdf  used on input line 532.
+(pdftex.def)             Requested size: 260.17465pt x 156.10307pt.
+ [30 <./figures/cmap_lw_vs_l_intracavity.pdf>]
+<figures/cmaps_detuning_30um.pdf, id=1761, 997.32597pt x 578.16pt>
+File: figures/cmaps_detuning_30um.pdf Graphic file (type pdf)
+<use figures/cmaps_detuning_30um.pdf>
+Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 543.
+(pdftex.def)             Requested size: 346.89732pt x 201.09747pt.
+) [31 <./figures/cmaps_detuning_30um.pdf>] (./method/experimental_setup.tex
+<figures/setup_sketch.pdf, id=1821, 392.46625pt x 347.2975pt>
+File: figures/setup_sketch.pdf Graphic file (type pdf)
+<use figures/setup_sketch.pdf>
+Package pdftex.def Info: figures/setup_sketch.pdf  used on input line 7.
+(pdftex.def)             Requested size: 173.44534pt x 153.48438pt.
+<figures/setup_skecth_zoomed.pdf, id=1822, 593.21625pt x 290.08376pt>
+File: figures/setup_skecth_zoomed.pdf Graphic file (type pdf)
+<use figures/setup_skecth_zoomed.pdf>
+Package pdftex.def Info: figures/setup_skecth_zoomed.pdf  used on input line 12.
+(pdftex.def)             Requested size: 255.83421pt x 125.10538pt.
+ [32{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/setup_sketch.pdf> <./figures/setup_skecth_zoomed.pdf>]) [33] (./results/simulations.tex) [34] (./results/experimental_results.tex) [35] (./results/discussion.tex) [36] (./Appendix.tex) [37] [38] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1026,18 +1017,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17690 strings out of 474116
- 328239 string characters out of 5743682
+ 17717 strings out of 474116
+ 328854 string characters out of 5743682
  1938187 words of memory out of 5000000
- 39562 multiletter control sequences out of 15000+600000
- 588401 words of font info for 225 fonts, out of 8000000 for 9000
+ 39579 multiletter control sequences out of 15000+600000
+ 588681 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,81p,1373b,1243s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (37 pages, 1554482 bytes).
+Output written on main.pdf (40 pages, 2095659 bytes).
 PDF statistics:
- 1914 PDF objects out of 2073 (max. 8388607)
- 483 compressed objects within 5 object streams
+ 1983 PDF objects out of 2073 (max. 8388607)
+ 507 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
- 51416 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 51421 words of extra memory for PDF output out of 51595 (max. 10000000)
 

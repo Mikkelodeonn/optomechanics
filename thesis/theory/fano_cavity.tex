@@ -424,61 +424,81 @@ While knowing that a detuning of $0.3nm$ is acceptable in terms of exciting the 
     \label{fig:detuning_threshold_lossless}
 \end{figure}
 
-It is readily seen that with increasing detuning the peak shifts to the right, which is in itself a behavior which is trivial from eq. (\ref{eq:transmission_wavelength}). The linewidth is also seen to increase with larger detuning, and the peak eventually collapses when the overlap between the guided-mode resonance profiles of the two gratings becomes too small to sustain the Fano resonance. Figure \ref{fig:intracavity_detuning_scan} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan}, and provides valuable insight into the mode density inside the cavity for the different values of $\Delta$. It is clearly demonstrated by the two figures that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to sustain the Fano resonance modes. 
-
-%% Write about the spacial detuning (should the order of the spectral and spacial detuning be reversed?)
+It is readily seen that with increasing positive detuning, relative to the resonant wavelength of the unchanged grating, the peak shifts to higher wavelengths, which in itself is trivial from eq. (\ref{eq:transmission_wavelength}). The linewidth is also seen to increase with larger detuning, and the peak eventually collapses when the overlap between the guided-mode resonance profiles of the two gratings becomes too small to sustain the Fano resonance. Figure \ref{fig:intracavity_detuning_scan} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan}, and provides valuable insight into the mode density inside the cavity for the different values of $\Delta$. It is clearly demonstrated by the two figures that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to sustain the Fano resonance modes. 
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_short.pdf}
-        \caption{$\Delta = 0.1nm$}
+        \caption{Full-range transmission spectra of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.1nm$}
         \label{fig:detuned_small_length_scan_long}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_long.pdf}
-        \caption{}
+        \caption{Transmission spectra zoomed in on a range around the resonance wavelength of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.1nm$}
         \label{fig:detuned_small_length_scan_short}
     \end{subfigure}
     \caption{}
+    \label{fig:small_detuning_length_scans}
 \end{figure}
+
+As mentioned above, any spectral detuning givecs rise to the potential of a spacial detuning as $2l = m\lambda$ (eq. (\ref{eq:general_cavity_condition})) must be fulfilled for any sustained plane-wave mode inside a normal incident optical cavity. We denote the length corresponding to the resonance wavelength of the unchanged Fano mirror as simply $l$, while the one for the detuned Fano mirror will be denoted as $l^{\prime}$. Previously we assumed that the optimal length of a detuned double Fano cavity is the one where the so-called transmission wavelength is given as 
+\begin{equation}
+    \lambda_t = \frac{\lambda_{0,1} + \lambda_{0,1}^{\prime}}{2}.
+\end{equation}
+And while this does turn out to be the case, we must inverstigate the resonant length-dependence of the linewidth of the Fano resonance profile in order to arrive at this conclusion indefinitely. 
+
+Figure \ref{fig:small_detuning_length_scans} shows double Fano resonance transmission profiles for plottet for varying cavity length $l \rightarrow l^{\prime}$ with detuning $\Delta = 0.1nm$. Looking at figure \ref{fig:detuned_small_length_scan_long} we see the long range scan of the transmission profiles where there still appears to be a substantial overlab between the guided-modes of the two gratings. The main differences are seen as changes in the intensity in the immediate off-resonance regime. This is due to the heavy wavelength (and thus length) dependence in the areas close to the resonance position, which makes even very small changes visible on the spectra.
+
+Figure \ref{fig:detuned_small_length_scan_short} shows the same spectra, but enhanced around the resonance wavelength, and this too shows that the substantiel guided-mode overlap results in little visible change, except for shifting the peak position, when scanning between the resonant cavity lenghts. 
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/detuned_length_scan_long.pdf}
-        \caption{$\Delta = 0.3nm$}
+        \caption{Full-range transmission spectra of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.3nm$}
         \label{fig:detuned_length_scan_long}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/detuned_length_scan_short.pdf}
-        \caption{}
+        \caption{Transmission spectra zoomed in on a range around the resonance wavelength of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.3nm$}
         \label{fig:detuned_length_scan_short}
     \end{subfigure}
     \caption{}
+    \label{fig:mid_detuning_length_scans}
 \end{figure}
+
+Figure \ref{fig:mid_detuning_length_scans} show similar transmission profiles as figure \ref{fig:small_detuning_length_scans}, only with an increased detuning of $\Delta = 0.3nm$. Looking at the long range scan in figure {\ref{fig:detuned_length_scan_long}} and comparing with the one in figure \ref{fig:detuned_small_length_scan_long}, it is seen that the displacement of the off-resonance Fabry-Perot like fringes have increased with the slightly higher detuning. This is not surprising as the Fabry-Perot cavity modes, like any other interference pattern inside a cavity must fulfill the brightness identity $2l = m \lambda$. Furthermore, the immediate off-resonance regime shows a slight increase in the intensity displacement when compared with the less detuned example. 
+
+Figure \ref{fig:detuned_length_scan_short}, which shows the spectra enhanced around the resonance position, provides a more detailed image of what happens to the transmission profiles as a function of cavity length, for an increased detuning. Here it is seen that the peaks at the edge of the length interval have varied in both position and height, much more dramatically than the once in figure \ref{fig:detuned_small_length_scan_short}. In short, the increased detuning has also increased the length-dependence of the double Fano cavity, as the resonance transmission profile seem to change \emph{more} when varying the length of the cavity, in this case.
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/large_detuning_length_scan_long.pdf}
-        \caption{$\Delta = 0.8nm$}
+        \caption{Full-range transmission spectra of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.8nm$}
         \label{fig:detuned_large_length_scan_long}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/large_detuning_length_scan_short.pdf}
-        \caption{}
+        \caption{Transmission spectra zoomed in on a range around the resonance wavelength of double Fano cavities of lengths $l \rightarrow l^{\prime} \approx 30 \mu m$ with $\Delta = 0.8nm$}
         \label{fig:detuned_large_length_scan_short}
     \end{subfigure}
     \caption{}
+    \label{fig:large_detuning_length_scans}
 \end{figure}
+
+Figure \ref{fig:large_detuning_length_scans} shows the effect of a relatively large detuning of $\Delta = 0.9nm$. This is simply included for a visual representation of a detuning which is considered "too large" for any practical usage. The long range scan in figure \ref{fig:detuned_large_length_scan_long} shows that the Fabry-Perot like fringes are now too displaced to be compared in terms of their positions, and figure \ref{fig:detuned_large_length_scan_short} showing the spectra enhanced around the resonance wavelength shows roughly the same trend as in figure \ref{fig:detuned_length_scan_short}, only that this example is greatly broadened in comparison. It is though noted, that while broadened, the Fano resonance mode is sustained even for the relatively large detuning.
+
+In order to get a clear and qualitative picture of the double Fano cavity transmission profile as a function of both cavity length and wavelength we vary both depicted in a heat map and let the color indicate the transmission intensity. This is shown in figure \ref{fig:cmap_single} which depicts a lossless cavity of length $l\approx 30 \mu m$ and detuning $\Delta = 0.3nm$. Here the movement of the resonance peak as a function of the cavity length is clearly seen as a slope of the "line" representing the high intensity region due to the resonance. 
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[c]{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/cmap_with_slice_indicators1.pdf}
-        \caption{cmap showing transmission as a function of wavelength for cavity lengths ranging $l_{g} \rightarrow l_{g}^{\prime}$ for $\Delta = 0.3nm$.}
+        \caption{}
+        \label{fig:cmap_single}
     \end{subfigure}
     \begin{subfigure}[c]{0.49\textwidth}
         \centering
@@ -486,13 +506,44 @@ It is readily seen that with increasing detuning the peak shifts to the right, w
         \newline
         \includegraphics[width=0.49\textwidth]{figures/cmap_slice1.pdf}
         \includegraphics[width=0.49\textwidth]{figures/cmap_slice3.pdf}
-        \caption{Slices of the cmap showing the optimal length and wavelength of double fano cavity (lossless). HWHMs -> Magenta = 71.3pm, cyan = 71.3pm and lime = 58.6pm.}
+        \caption{}
+        \label{fig:cmap_slices}
     \end{subfigure}
+    \caption{(a) shows a heat map of the double Fano cavity transmission as a function of wavelength and cavity lengths ranging $l \rightarrow l^{\prime} \approx 30 \mu m$ for $\Delta = 0.3nm$. (b) show slices of the heat map for comparing different cavity lenghts, and are indicated by their respective color and linetype in (a). The respecitive cavity lengths and linewidths are given as: $l_{magenta} = (0.2l+0.8l^{\prime})$, $HWHM_{magenta} = 71.3pm$, $l_{cyan} = (0.8l+0.2l^{\prime})$, $HWHM_{cyan} = 71.3pm$ and $l_{lime} = (l+l^{\prime})/2$, $HWHM_{lime} = 58.6pm$.}
+    \label{fig:cmap_and_slices}
 \end{figure}
+
+Considering only the heat map it is not easily visible which cavity length is the optimal one, however, the \emph{magenta}, \emph{cyan}, and \emph{limegreen} lines across the heat map indicate slices which are depicted separately in figure \ref{fig:cmap_slices}. It is seen by analysing the transmission profiles of these cavities of specific lengths, how they vary in both position and linewidth. The resonance wavelength positions are given relative to the cavity lengths chosen. The lengths and corresponding linewidths are given as
+\begin{equation}
+    \begin{split}
+        l_{magenta} = 0.2 l + 0.8 l^{\prime} &\rightarrow HWHM_{magenta} = 71.3pm\\ l_{cyan} = 0.8 l + 0.2 l^{\prime} &\rightarrow HWHM_{cyan} = 71.3pm\\ l_{lime} = (l + l^{\prime})/2 &\rightarrow HWHM_{lime} = 58.6pm.
+    \end{split}
+\end{equation}
+It turns out that the linewidths of the cyan and magenta transmission profiles are identical\footnote{This is only exactly correct because the only varied parameter of the two Fano mirrors are the cavity- and guided-mode-resonant wavelengths $\lambda_0$ and $\lambda_1$. In a more realistic case where several parameters vary, the attributes of the transmission profiles are unlikely to act fully symmetrically when varying the length $l \rightarrow l^{\prime}$.}, while the limegreen transmission profile seem to have a narrower profile at resonance. 
+
+This trend is further examined in figure \ref{fig:lw_vs_l_scan} where the linewidths of intracavity spectra are shown as a function of the cavity length. The parameters used are the same as in figure \ref{fig:cmap_and_slices} and clearly indicates that the optimal cavity length of a detuned double Fano cavity is the one fulfilling 
+\begin{equation}
+    \lambda_t = \frac{\lambda_{0,1} + \lambda_{0,1}^{\prime}}{2},
+\end{equation}
+for the transmission wavelength $\lambda_t$, and thus chosen cavity length $l$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/cmap_lw_vs_l_intracavity.pdf}
+    \caption{Linewidths, found as fitting parameters of a least squares fit to the general Fano model, as a function of cavity length $l \rightarrow l^{\prime}$.}
+    \label{fig:lw_vs_l_scan}
+\end{figure}
+
+As a visual and qualitative representation of the effect of increasing the detuning $\Delta$, figure \ref{fig:cmaps_detuning} shows heat maps similar to the one in figure \ref{fig:cmap_and_slices}, but for a range of values for the detuning $\Delta=0.1nm \rightarrow \Delta=0.9nm$. It is readily seen that the aforementioned slope of the high intensity regien, indicating the resonance peak, increases with the detuning. This is a representation of the peak moving to higher wavelengths, both for the optimal transmission wavelength and for the one closer to the detuned Fano mirror guided-mode resonance. The broadening of the peak is also displayed in a way that is, while only qualitative, convincing. 
+
+The last image in figure \ref{fig:cmaps_detuning}, displays the case of $\Delta=0.9nm$. Here it is seen that the spectral overlap has become too small to sustain the Fano resonance inside the cavity, and the intensity at the optimal transmission wavelength is therefore at a minimum.  If however, we look at the areas of the heat map corresponding to cavity lengths of exactly $l$ or $l^{\prime}$ and wavelengths $\lambda_{0,1}$ or $\lambda_{0,1}^{\prime}$, we see that there is a slight increase in the transmission intensity. This is due to the fact that the cavity, in this position, corresponds to a single Fano cavity with a low finesse, as one of the Fano mirrors are exactly on resonance while the other is so far away that it acts as simply a poor "mirror". 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/cmap_lw_vs_l_intracavity.pdf}
-    \caption{intracavity linewidth as a function of cavity length (same cavity as depicted in cmap above.)}
+    \includegraphics[width=0.8\textwidth]{figures/cmaps_detuning_30um.pdf}
+    \caption{Series of heat maps showing double Fano transmission profiles for varying cavity lenghts and wavelengths for increasing detuning $\Delta$. The movement of the resonant wavelength is shown as the increasing slope of the high intensity regien representing the resonance, for increasing detuning $\Delta$. The broadening as a function of detuning is easily seen as it is qualitatively displayed in the series of figures until the spectral overlap makes the cavity inable of sustaining the Fano resonance.}
+    \label{fig:cmaps_detuning}
 \end{figure}
 
+
+%% make a figure of the series of cmaps showing the increasing of the detuning. When the line "breaks" it means the the overlap between the guided-modes became too small to sustain the fano resonance. What is seen are simply single Fano resonances with high losses at each resonance wavelength, but nothing "in between". 

@@ -15,7 +15,7 @@ M7 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 trans.
 
 #params1 = M3.lossy_fit([952,952,0.6,1,0.1])
 #params2 = M5.lossy_fit([952,952,0.6,1,0.1])
-Δ = 0.8
+Δ = 0.0
 params1 = [951, 951, 0.8, 0.5, 1e-6]
 params2 = [951+Δ, 951+Δ, 0.8, 0.5, 1e-6]
 print("params1: ", params1)
@@ -43,7 +43,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(951.650, 951.950, 100)
-λs = np.linspace(948, 954, 1000) # 950, 952
+λs = np.linspace(950, 953, 1000) # 950, 952
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -589,23 +589,23 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
     #plt.subplots_adjust(right=0.70)
     plt.show() 
 
-def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False, losses=True, lmin=50): 
-    params2[1] += 0.40
-    params2[0] += 0.40
-    Δs = 0.08
+def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False, losses=True, lmin=30): 
+    params2[1] += 0
+    params2[0] += 0
+    Δs = 0.1
     rows = 3
     columns = 3
-    Δ_label = 0.40
+    Δ_label = 0.0
     fig, ax = plt.subplots(rows,columns, figsize=(18,8))
     for i in range(rows):
         for j in range(columns):
-            params2[1] -= Δs
-            params2[0] -= Δs
-            Δ_label -= Δs
+            params2[1] += Δs
+            params2[0] += Δs
+            Δ_label += Δs
             if np.abs(Δ_label) < 1e-6:
-                ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin)-0.1, double_cavity_length(params2, params1, λs, lmin=lmin)+0.1, 20)
+                ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin, losses=losses)-0.1, double_cavity_length(params2, params1, λs, lmin=lmin, losses=losses)+0.1, 20)
             else:
-                ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin), double_cavity_length(params2, params1, λs, lmin=lmin), 20)
+                ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin, losses=losses), double_cavity_length(params2, params1, λs, lmin=lmin, losses=losses), 100)
             Ts = []
             for l in ls:
                 T = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
@@ -617,7 +617,7 @@ def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False
                 for k in range(len(Ts[h])):
                     cmap[h,k] = Ts[h][k] 
             
-            l_labels = [round(l*1e-3,2) for l in ls]
+            l_labels = [round(l*1e-3,4) for l in np.linspace(np.min(ls),np.max(ls),10)]
             λ_labels = np.linspace(np.min(λs), np.max(λs),10)
             λ_labels = [round(label,2) for label in λ_labels]
 
@@ -625,19 +625,19 @@ def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False
             ax[i,j].set_title("Δ = %snm" %(round(Δ_label,2)), fontsize=7)
             ax[i,j].set_xticks(np.linspace(np.min(λs), np.max(λs),10))
             ax[i,j].set_xticklabels(λ_labels, fontsize=5)
-            ax[i,j].set_yticks(ls)
+            ax[i,j].set_yticks(np.linspace(np.min(ls), np.max(ls),10))
             ax[i,j].set_yticklabels(l_labels, fontsize=5)    
     fig.subplots_adjust(right=0.8)
     cbar_ax = fig.add_axes([0.85, 0.15, 0.02, 0.7])
     fig.colorbar(im, cax=cbar_ax)
-    if intracavity == False and losses == False:
-        fig.text(0.5, 0.93, 'Double fano lossless transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
-    elif intracavity == False and losses == True:
-        fig.text(0.5, 0.93, 'Double fano transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
-    else: 
-        fig.text(0.5, 0.93, 'Double fano lossless intracavity intensity as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
-    fig.text(0.5, 0.06, 'Wavelength [nm]', ha='center', va='center', fontsize=10)
-    fig.text(0.08, 0.5, 'Cavity length [μm]', ha='center', va='center', fontsize=10, rotation="vertical")
+    #if intracavity == False and losses == False:
+    #    fig.text(0.5, 0.93, 'Double fano lossless transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
+    #elif intracavity == False and losses == True:
+    #    fig.text(0.5, 0.93, 'Double fano transmission as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
+    #else: 
+    #    fig.text(0.5, 0.93, 'Double fano lossless intracavity intensity as a function of cavity length for different values of Δ', ha='center', va='center', fontsize=16) 
+    fig.text(0.5, 0.06, 'wavelength [nm]', ha='center', va='center', fontsize=10)
+    fig.text(0.08, 0.5, 'cavity length [μm]', ha='center', va='center', fontsize=10, rotation="vertical")
     plt.show()
 
 def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=False, losses=True, lmin=50):
@@ -792,8 +792,8 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
-#l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=True, lmin=30)
-#double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=20)
+l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=30)
+#double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=30)
 
 
 #### Double/single fano cavity transmission plots ####
@@ -1066,7 +1066,7 @@ plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized transmission [arb. u.]")
 #plt.ylabel("$|E_{out}|^2/|E_{0,in}|^2$")
 plt.legend(loc="upper right")
-plt.show()
+#plt.show()
 
 Δs = [0, 0.2, 0.5, 0.8, 1.2]
 
