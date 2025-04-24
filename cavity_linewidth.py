@@ -409,6 +409,9 @@ Ls = np.linspace(0, 0.5, 1000)
 #    lw = double_fano(length, λres, cavity_losses, γλ, rd, r_trans, r_trans)*1e12
 #    linewidths.append(lw)
 
+lws_0422 = np.array([79.4, 67.689, 55.926, 86.445, 42.9, 52])
+ls_0422 = np.array([20,40,75,100,225,500]) ## approximate only!!
+
 plt.figure(figsize=(10,6))
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="HWHM as a function of L")
 #plt.plot(Ls, linewidths)
@@ -426,6 +429,7 @@ plt.figure(figsize=(10,6))
 #plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 #plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
 plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 26/3)", zorder=7)
+plt.scatter(ls_0422, lws_0422, color ="magenta", label="HWHM (measured on 22/4)")
 #plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
 plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
 plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
