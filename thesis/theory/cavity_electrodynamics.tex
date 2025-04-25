@@ -52,11 +52,11 @@ By evaluating the series it is seen that it indeed converges, and setting $z=l$ 
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{figures/fabry_perot_example.pdf}
-    \caption{Example of a Fabry-Perot cavity transmission (\~50um cavity length and $|r|^2 = 0.5$)}
+    \caption{Example of a Fabry-Perot cavity transmission spectrum for cavity length $l \approx 50 \mu m$ and reflectivity $|r|^2 = |r^{\prime}|^2 = 0.5$. The \emph{Free Spectral Range} and \emph{Full Width at Half Maximum} are indicated in the figure as \emph{FSR} and \emph{FWHM}, respectively.}
     \label{fig:generic_fabry_perot}
 \end{figure}
 
-Figure \ref{fig:generic_fabry_perot} shows an example of the normalized transmission $|E_{out}|^2/|E_{0,in}|^2$ of an arbitrary Fabry-Perot cavity of length $l \approx 50 \mu m$ with reflectivity $|r|^2 = 0.5$. The two defining features marked on the figure are the \emph{Free Spectral Range (FSR)} and \emph{Full Width at Half Maximum (FWHM)}. As clearly depicted on the figure, the FSR is defined as the, in this case, spectral distance between two peaks in the spectra\footnote{The definition of the FSR is not limited to the distance between peaks in wavelength. As seen in eq. (\ref{eq:general_cavity_condition}) the cavity length and the resonant wavelengths are linearly dependent, and the length can thus just as well be varied resulting in a similar spectrum for the cavity transmission.}, while the FWHM is simply the linewidth of each peak. 
+Figure \ref{fig:generic_fabry_perot} shows an example of the normalized transmission $|E_{out}|^2/|E_{0,in}|^2$ of an arbitrary Fabry-Perot cavity of length $l \approx 50 \mu m$ with reflectivity $|r|^2 = |r^{\prime}|^2 = 0.5$. The two defining features marked on the figure are the \emph{Free Spectral Range (FSR)} and \emph{Full Width at Half Maximum (FWHM)}. As clearly depicted on the figure, the FSR is defined as the, in this case, spectral distance between two peaks\footnote{The definition of the FSR is not limited to the distance between peaks in wavelength. As seen in eq. (\ref{eq:general_cavity_condition}) the cavity length and the resonant wavelengths are linearly dependent, and the length can thus just as well be varied resulting in a similar spectrum for the cavity transmission.}, while the FWHM is simply the linewidth of each peak. 
 
 \subsubsection{Finesse}
 
@@ -75,12 +75,12 @@ The finesse can also be expressed in terms of the reflectivity/transmission of t
     \label{eq:lossless_finesse}
 \end{equation}
 
-Figure \ref{fig:fabry_perot_trans} shows an example of the transmission spectrum of a high finesse cavity of reflectivity $|r|^2 = 0.9$ together with a low finesse cavity of reflectivity $|r|^2 = 0.3$. It is clearly seen that the linewidth of the high finesse cavity is much narrower than the low finesse case, which follows the relation shown in eq. (\ref{eq:finesse_FSR_FWHM}).
+Figure \ref{fig:fabry_perot_trans} shows an example of the transmission spectra of a high finesse cavity of reflectivity $|r|^2 = 0.9$ together with a cavity of relatively low finesse with reflectivity $|r|^2 = 0.3$. It is clearly seen that the linewidth of the high finesse cavity is much narrower than the low finesse case, which follows from eq. (\ref{eq:finesse_FSR_FWHM}).
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/fabry_perot_high_and_low_finesse.pdf}
-    \caption{Comparison of an arbitrary Fabry-Perot cavity of high and low finesse, respectively. The high finesse cavity and a reflectivity of $|r|^2 = 0.90$, while for the low finesse cavity $|r|^2 = 0.30$.}
+    \caption{The red line shows the transmission spectrum of a \emph{high} finesse Fabry-Perot cavity of reflectivity $|r|^2 = 0.90$, while the blue line shows the transmission spectrum of a \emph{low} finesse cavity with reflectivity $|r|^2 = 0.30$.}
     \label{fig:fabry_perot_trans}
 \end{figure}
 
@@ -93,8 +93,9 @@ where $L$ and $L^{\prime}$ indicates the fractional losses of each resonator.
 
 In this case the finesse would be given as 
 \begin{equation}
-    \mathcal{F} = \frac{2 \pi}{1-|r|^2 + 1 - |r^{\prime}|^2} = \frac{2 \pi}{|t|^2 + |t^{\prime}|^2 + L_{total}}.
+    \mathcal{F} = \frac{2 \pi}{1-|r|^2 + 1 - |r^{\prime}|^2} = \frac{2 \pi}{|t|^2 + |t^{\prime}|^2 + L_{total}},
 \end{equation}
+where $L_{total} = L + L^{\prime}$ are the total cavity losses.
 
 The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach $1$, as some light is lost to i.g. absorption effects for each round trip of the cavity.
 
@@ -111,13 +112,13 @@ where $c$ is the speed of light in vacuum, $n$ is the refractive index of the me
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/100um_broadband_trans.pdf}
-        \caption{$\sim 100 \mu m$ Fabry-Perot cavity transmission.}
+        \caption{}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/150um_broadband_trans.pdf}
-        \caption{$\sim 150 \mu m$ Fabry-Perot cavity transmission.}
+        \caption{}
     \end{subfigure}
-    \caption{}
+    \caption{(a) shows the transmission spectrum of a Fabry-Perot cavity of length $l \approx 100 \mu m$, while (b) shows the transmission spectrum of a cavity of length $l \approx 150 \mu m$.}
     \label{fig:fabry_perot_FSR_comparison}
 \end{figure}
 
@@ -134,7 +135,7 @@ given as
 \end{equation}
 Here $E_0(x,y,z)$ describes the electric field amplitude, $\vec{\epsilon}$ is denoted the polarization vector and $k=2 \pi / \lambda$ is the angular wave number of the field propagating along the z-axis. It is assumed that the electric field has a Gaussian transverse distribution\footnote{When this is the case, the laser is said to operate in the lowest possible mode denoted $TEM_{00}$. This implies the assumption of ideal lasing conditions.}.
 
-This is almost the simplest description of the propagating field, however, as the spacial dependence of the field amplitude still might cause problems, we consider the range in which this can be neglected. 
+This is almost the simplest description of the propagating field, however, as the spacial dependence of the field amplitude still might complicate things, we consider the range in which this can be neglected. 
 
 It can be shown from the derivation of the Gaussian distribution that the waist of the beam $w(z)$, which depends on the spacial coordinate in the direction of propagation, can be described as \cite{Eichhorn}
 \begin{equation}

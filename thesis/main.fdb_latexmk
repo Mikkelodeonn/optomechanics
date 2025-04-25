@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1744101505.72806 "main.bcf" "main.bbl" "main" 1744541762.21045 0
-  "main.bcf" 1744541761.89706 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
+["biber main"] 1744101505.72806 "main.bcf" "main.bbl" "main" 1745591769.18114 0
+  "main.bcf" 1745591768.75329 107712 d3a15ba2ffa1b6efff8611ad4174afae "pdflatex"
   "ref.bib" 1733419308.608 2153 ea777df09f5c4414886a6b0b9190dd8e ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1744541759.62025 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1744541762.21081 0
-  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1744541759.3198 2607 3318bb5911665f1dcd49436d0e6115db ""
+["pdflatex"] 1745591765.68856 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1745591769.18173 0
+  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1745566272.52855 2607 3318bb5911665f1dcd49436d0e6115db ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -18,7 +18,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm" 1136768653 3584 49064b465390a8e316a3c8417a050403 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1136768653 3584 3169d30142b88a27d4ab0e3468e963a2 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm" 1136768653 3072 828ba0ea87cf5b727c4bfd6367195ec2 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm" 1136768653 3072 3bce340d4c075dffe6d4ec732b4c32fe ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecti1440.tfm" 1136768653 3072 9a80c2966d6c06d677719db0a9b772d0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm" 1136768653 1536 3290a75021d32d016616fe527bc9884c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -79,7 +79,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb" 1215737283 164227 3df942b4ff2124425d8fb1b6d3e01c7a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb" 1215737283 131078 d96015a2fa5c350129e933ca070b2484 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb" 1215737283 187625 f02a8c2c788e6490af6fc4f5ed857a0c ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb" 1215737283 186554 e8f0fa8ca05e038f257a06405232745f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb" 1215737283 187615 3df8b496c716586eebd1546cd4031312 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -204,17 +204,17 @@
   "figures/small_detuning_length_scan_long.pdf" 1744280799.61446 20801 12a0f6fe90c6f56b88201cd767e9be31 ""
   "figures/small_detuning_length_scan_short.pdf" 1744280721.18042 30801 5f8ed8455f1e9296f266bef964a43f77 ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1744541761.89316 24046 541405802290448d9f36b3ffc27007d5 "pdflatex"
+  "main.aux" 1745591768.74755 24496 5e07e022e77137a51bc174da501a6160 "pdflatex"
   "main.bbl" 1744101509.30703 8107 b525fb0834d28063a093508429246b25 "biber main"
-  "main.run.xml" 1744541761.89799 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
-  "main.tex" 1744541759.3198 2607 3318bb5911665f1dcd49436d0e6115db ""
-  "main.toc" 1744541761.8981 4624 1cbd072e43a83deaedff251de8c2bffd "pdflatex"
+  "main.run.xml" 1745591768.75468 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.tex" 1745566272.52855 2607 3318bb5911665f1dcd49436d0e6115db ""
+  "main.toc" 1745591768.75485 4621 9411c490db95904dc47a3d34f2a3e64d "pdflatex"
   "method/experimental_setup.tex" 1743521321.92279 2083 e59045966ea448d5ffddc7ca4eedd441 ""
   "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""
   "results/experimental_results.tex" 1742910622.49195 1239 571bfd303137a41e60680d6c0c732843 ""
   "results/simulations.tex" 1743156999.02692 690 b1ebeb84f747662092da14b00dc7c538 ""
-  "theory/cavity_electrodynamics.tex" 1744132993.83138 13456 05536319193ddfd7812bd04eed8a20c2 ""
-  "theory/fano_cavity.tex" 1744541581.39835 52768 d4221dae305897cb90fed0d5b51156b5 ""
+  "theory/cavity_electrodynamics.tex" 1745588905.51921 13844 8c57e05e4984317d51f64a818fa98fdf ""
+  "theory/fano_cavity.tex" 1745591762.27948 54699 88ccac47662788bd198d7f93d4fd4470 ""
   (generated)
   "main.aux"
   "main.bcf"
