@@ -58,27 +58,25 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 
     return (reflectivity_values, complex_reflectivity_amplitudes)
 
-def lw_mirror(l: int, λres: float, L: float, r1: float, r2: float): 
+def lw_mirror(l: int, λres: float, r1: float, r2: float): 
     δγc = (λres**2/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     return δγc
 
-def lw_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: float, r2: float): 
+def lw_fano(l: int, λres: float, γλ: float, rd: float, r1: float, r2: float): 
     δγc = ((λres**2)/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     δγg = ((γλ/(2*(1-rd)))) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ 
 
-def double_fano(l: int, λres: float, L: float, γλ: float, rd: float, r1: float, r2: float):
+def double_fano(l: int, λres: float, γλ: float, rd: float, r1: float, r2: float):
     δγc = ((λres**2)/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     δγg = (γλ/(2*(1-rd))) * (1 - r1 + 1 - r2)*0.5 #(Tg + Tm + L) * 0.5
-    #print(δγg)
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ
 
 def double_fano_losses(l: int, λres: float, L: float, γλ: float, rd: float, t1: float, t2: float):
     δγc = ((λres**2)/(8*np.pi*l)) * (t1 + t2 + L) #(Tg + Tm + L) 
     δγg = (γλ/(2*(1-rd))) * (t1 + t2 + L)*0.5 #(Tg + Tm + L) * 0.5
-    #print(δγg)
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ
 
@@ -88,9 +86,8 @@ def calc_lws(l, params1, params2, losses=True):
 
     λt = np.array([0.5*λ0_1 + 0.5*λ0_2]) 
 
-    t_M3_trans = model(λt, *params1)
-    t_M5_trans = model(λt, *params2)
-
+    #t_M3_trans = model(λt, *params1)
+    #t_M5_trans = model(λt, *params2)
     r_M3_trans = theoretical_reflection_values(params1, λt, losses=losses)[0][0]
     r_M5_trans = theoretical_reflection_values(params2, λt, losses=losses)[0][0]
 
@@ -102,35 +99,17 @@ def calc_lws(l, params1, params2, losses=True):
     rparams1, _ = curve_fit(model, λs, r1s, p0=p0)
     rparams2, _ = curve_fit(model, λs, r2s, p0=p0)
 
-    ## resonance wavelength [nm -> m]
     λres = 0.5*λ0_1*1e-9 + 0.5*λ0_2*1e-9
-    #print("resonant wavelength: ", λres)
-    ## length of cavity [μm -> m]
-    ## losses in cavity
-    Ls = (1 - r_M3_trans) + (1 - r_M5_trans)
-    print("cavity losses at trans. wavelength:", Ls)
-    ## width of guided mode resonance [nm -> m]
     γλ = (0.5*γ_1*1e-9 + 0.5*γ_2*1e-9)
-    print("γ: ", γλ)
-    ## direct (off-resonance) reflectivity (from norm. trans/ref fit)
     rd1 = rparams1[2]
     rd2 = rparams2[2]
     rd = (rd1 + rd2)/2
-    #rd = (rd1 + rd2 - 2*rd1*rd2)**2 / (1 - rd1*rd2)**2 ## the minimum reflectivity is assumed to be the case for the direct/off-resonance case.
-    print("rd: ", rd)
-    #print(rd)
-    ## Grating transmission at resonance
-    Tg = t_M3_trans#0.049
-    ## Broadband mirror transmission at resonance
-    Tm = t_M5_trans#0.049
-    #print("Tg: ", Tg)
-    #print("Tm: ", Tm)
 
-    double_fano_lws = double_fano(l,λres,Ls,γλ,rd,r_M3_trans,r_M5_trans)*1e12
+    double_fano_lws = double_fano(l, λres, γλ, rd, r_M3_trans, r_M5_trans)*1e12
 
-    single_fano_lws = lw_fano(l,λres,Ls,γλ,rd,r_M3_trans,r_M5_trans)*1e12
+    single_fano_lws = lw_fano(l, λres, γλ, rd, r_M3_trans, r_M5_trans)*1e12
 
-    mirror_lws = lw_mirror(l, λres, Ls, r_M3_trans, r_M5_trans)*1e12
+    mirror_lws = lw_mirror(l, λres, r_M3_trans, r_M5_trans)*1e12
 
     return [double_fano_lws, single_fano_lws, mirror_lws]
 

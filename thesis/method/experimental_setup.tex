@@ -1,62 +1,42 @@
 \section{Method}
 \subsection{The experimental setup}
 
-\begin{figure}
+The experimental setup used to optically characterize the Fano mirrors, single- and double Fano cavity is illustrated in figure \ref{fig:experimental_setup} where the whole setup is sketched in figure \ref{fig:setup_sketch} and the specific part of the setup surrounding the cavity, outlined by the dashed line in figure \ref{fig:setup_sketch}, is subsequently shown in figure \ref{fig:setup_zoomed}. 
+
+In order to effectively conduct the experiments in this project, it is imperative to be able to control certain parameters. Each element in the experimental setup is thoroughly considered for each their purpose in this regard, these will be outlined in this section. 
+
+\begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{figures/setup_sketch.pdf}
-        \caption{Schematics of the experimental setup for measuringthe transmission through a double fano cavity. The cavity setup shown in (b) is located in position marked by the dotted line.}
+        \caption{}
+        \label{fig:setup_sketch}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.59\textwidth}
         \includegraphics[width=\textwidth]{figures/setup_skecth_zoomed.pdf}
-        \caption{Sketch of the part of the experimental setup containing the optical cavity.}
+        \caption{}
+        \label{fig:setup_zoomed}
     \end{subfigure}
+    \caption{(a) shows schematics of the experimental setup for measuring cavity transmission- and Fano mirrors transmission/reflectivity spectra. The dashed line indicate the location of the cavity for measurements, and the setup is seen in (b). Note, the setup is shown with an optical cavity present, and is thus modified accordingly when prepared for Fano mirror measurements.}
+    \label{fig:experimental_setup}
 \end{figure}
 
-\subsection{Characterization of sub-wavelength grating}
+As shown in figure \ref{fig:experimental_setup} the laser source used for the optical characterizations is coupled into the setup through an optical fiber. The laser used is a \emph{Toptica DLC Pro} tunable CW diode laser with a range of $910$ $-$ $980nm$. The optical fiber is a \emph{P3-780PM-FC-10} fiber from Thorlabs which is a single mode\footnote{A single mode fiber can only sustain the TEM00 mode, which means that the output is known to be perfectly Gaussian.} polarization-maintaining optical fiber with an effective range of $770$ $-$ $1100nm$. Between the Toptica laser and the incoupling end of the fiber, a $\lambda/2$\emph{-plate} (HWP) and \emph{polarizing beam splitter} (PBS) is placed in order to be able to control the incident power of the laser and to only couple linearly polarized light into the setup. 
 
-Figures:
-\begin{itemize}
-    \item Pictures of the membrane before patterning.
-    \item AFM profile of the grating after patterning. (talk about profilometry and the physical parameters of the grating and their meaning for project).
-    \item MAYBE: MIST simulation showing that the model accurately predicts the simulated spectra.
-\end{itemize}
+The light being emitted from the optical fiber is sent through another HWP and PBS in order to be able to control the resulting polarization in the setup even more precisely, should there be any discrepancies of the light coupled into the fiber. 
 
-\subsubsection{Obtaining normalized transmission/reflection spectra}
+A $\lambda/2$-plate, or HWP, is constructed of a so-called bi-refringent material (most commonly crystaline quartz), which means that it has slightly different refractive indicies for incident light of different polarization axis'. Generally a HWP will have a \emph{fast}- and \emph{slow axis}, where it is understood that light polarized along the fast axis experiences a lower refractive index (and hence moves faster), than that along the slow axis. In this way the HWP separates the components of unpolarized light that has perpendicular and parallel polarizations. 
 
-\subsubsection{Adjusting the beam waist - the optical telescope}
+The effect of the HWP on linearly polarized light, is an effective rotation of the polarization, this is sketched simply in figure \ref{fig:HWP}. It can be shown that the polarization axis is rotated according to the angle between the fast axis of the HWP and the incident polarization axis. A relative angle $\theta$ will thus result in a rotation of $2\theta$, e.g. if $\theta=45^{\circ}$, this will constitute a rotation from completely p-polarized light to completely s-polarized light. This is the specific scenario sketched in figure \ref{fig:HWP}\cite{edmund_optics}.
 
-\subsubsection{The alignment procedure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/HWP.pdf}
+    \caption{A simple sketch of the effect of a HWP on linearly polarized light.}
+    \label{fig:HWP}
+\end{figure}
 
-\subsubsection{Normalization}
 
-\subsection{Cavity measurements}
 
-\subsubsection{Determining the cavity length from the FSR}
-
-Figures: 
-\begin{itemize}
-    \item Linewidth as a function of "time" - to see the reduction of the linewidth as the piezo reaches an equilibrium where any time-dependent drift is reduced. 
-\end{itemize}
-
-\subsubsection{Normalization}
-
-\subsubsection{Single fano cavity characterization} 
-
-\subsubsection{Aligning the cavity}
-
-Incluce: 
-\begin{itemize}
-    \item Scan for optimal cavity length
-    \item Measure the spectral linewidth
-    \item 
-\end{itemize}
-
-\subsubsection{Double fano cavity characterization}
-
-\subsubsection{Off-resonance Fabry-Perot cavity (alignment technique)}
-
-\subsubsection{Centering of the top grating (pinhole method)}
-
-\subsection{Parallelism study (deviation from normal incident)}
+Polarization dependence reference: \cite{Ko}
