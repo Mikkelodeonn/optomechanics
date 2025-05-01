@@ -24,7 +24,7 @@ In order to effectively conduct the experiments in this project, it is imperativ
 
 \subsubsection{Tunable diode laser}
 
-As shown in figure \ref{fig:experimental_setup} the laser source used for the optical characterizations is coupled into the setup through an optical fiber. The laser used is a \emph{Toptica DLC Pro} tunable CW diode laser with a range of $910$ $-$ $980nm$. The optical fiber is a \emph{P3-780PM-FC-10} fiber from Thorlabs which is a single mode\footnote{A single mode fiber can only sustain the TEM00 mode, which means that the output is known to be perfectly Gaussian.} polarization-maintaining optical fiber with an effective range of $770$ $-$ $1100nm$. Between the Toptica laser and the incoupling end of the fiber, a $\lambda/2$\emph{-plate} (HWP) and \emph{polarizing beam splitter} (PBS) is placed in order to be able to control the incident power of the laser and to only couple linearly polarized light into the setup.  
+As shown in figure \ref{fig:experimental_setup} the laser source used for the optical characterizations is coupled into the setup through an optical fiber. The laser used is a \emph{Toptica DLC Pro} tunable CW diode laser with a range for the transmission wavelength of $910$ $-$ $980nm$. The optical fiber is a \emph{P3-780PM-FC-10} fiber from Thorlabs which is a single mode\footnote{A single mode fiber can only sustain the TEM00 mode, which means that the output is known to be perfectly Gaussian.} polarization-maintaining optical fiber with an effective range of $770$ $-$ $1100nm$. Between the Toptica laser and the incoupling end of the fiber, a $\lambda/2$\emph{-plate} (HWP) and \emph{polarizing beam splitter} (PBS) is placed in order to be able to control the incident power of the laser and to only couple linearly polarized light into the setup.  
 
 The light being emitted from the optical fiber is sent through another HWP and PBS in order to be able to control the resulting polarization in the setup even more precisely, should there be any discrepancies of the light coupled into the fiber. 
 
@@ -54,14 +54,40 @@ Figure \ref{fig:telescope} shows schematics of the general way an optical telesc
     \label{fig:telescope}
 \end{figure}
 
-When the incident beam hits $L_1$ it is focused according to the focal length $f$ of this lens, and by inserting another lens $L_2$ of a relatively longer focal length one can \emph{catch} the beam at the desired beam waist. If the focal length $f^{\prime}$ of $L_2$ is sufficently long, compared to the path of the beam after the lenses, the beam will be approximately collimated and remain at the waist obtained when incident on $L_2$.
+When the incident beam hits $L_1$ it is focused according to its focal length $f$, and by inserting another lens $L_2$ of a relatively longer focal length one can \emph{catch} the beam at the desired beam waist. If the focal length $f^{\prime}$ of $L_2$ is sufficently long, compared to the path of the beam after the lenses, the beam will be approximately collimated and remain at the waist obtained when incident on $L_2$.
 
-\subsubsection{Transmission, reflection and incident photo detectors}
+\subsubsection{Transmission, reflection and incident photo-detectors}
 
-After passing the optical telescope the beam reaches a simple 50/50 beam splitter (BS) which transmits 50\% of the light while reflecting another 50\%, which is then incident on the cavity or Fano mirror (target). 
+After passing the optical telescope the beam reaches a simple 50/50 beam splitter (BS) which transmits 50\% of the light while reflecting another 50\%. The reflected light is then incident on the cavity or Fano mirror (target). 
 
-The transmitted light passes through a lens $L_3$ which is focused on a detector $P_I$ used for reference measurements and later normalization. Since the tunable laser in nature varies in power with the wavelength, it is necesarry to keep track of these fluctuations and correct for them during data analysis. 
+The transmitted light passes through a lens $L_3$, which is focused on a photo-detector $P_I$ used for reference measurements and later normalization. Since the tunable laser in nature varies in power with the wavelength, it is necesarry to keep track of these fluctuations and correct for them in data analysis. 
 
 The transmitted light is sent through, yet another, HWP which in this case is used only to alter the polarization of the light incident on the target. After the beam, or a portion of it, has passed the target it is sent through a lens $L_5$ focused onto the transmission detector $P_T$.
 
 The part of the light incident on the target that is \emph{not} transmitted, is reflected back onto the BS which then transmits 50\% once again, and thus reflects the other 50\%. The transmitted part here is focused through the lens $L_4$ onto the reflection detector $P_R$.
+
+\subsubsection{The double Fano cavity measurement setup}
+
+The cavity measurement setup shown in figure \ref{fig:setup_zoomed} is the one used to measure the transmission spectrum of a double Fano cavity consisting of two Fano mirrors. This part of the setup consists of two sets of standard \emph{PT1} $\mu m$-stages from Thorlabs combined to provide precise movement of each Fano mirror in the xy-plane. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/setup_bottom.pdf}
+    \caption{}
+    \label{fig:setup_bottom}
+\end{figure}
+
+Examining the structure from the bottom (as it is built), a kinematic mirror mount is attached to the lower set of xy-stages, this is used to control the angular degrees of freedom of the Fano mirror which makes up the bottom of the cavity. On the mirror mount, a piezo ring is firmly attached and connected to a piezo driver and that to a function generater in order to control the expansion of the piezo ring both by application alternating and fixed current. Lastly, in order to be able to place the Fano mirror or simply membrane on the  piezo ring, a ceramic Macor membrane holder is used. The bottom part of the cavity setup is highlighted in figure \ref{fig:setup_bottom}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/setup_top.pdf}
+    \caption{}
+    \label{fig:setup_top}
+\end{figure}
+
+The part of the setup built to control the Fano mirror making up the top of the cavity is slightly more complicated, as this is the Fano mirror that is, for practical reasons, aligned last. This means that additional degrees of freedom must be controled by movement of the Fano mirror itself. The alignment procedure will be explained in detail in sections \ref{sec:grating_characterization} and \ref{sec:cavity_measurements}. 
+
+The top part of the cavity setup is attached to the second set of xy-stages and additionally to an \emph{NFL5DP20} stage from Thorlabs in the z-direction in order to be able to change the length of the cavity. As for the bottom part of the cavity setup, a kinematic mirror mount acts as the base of the construction. This is, once again, to control the angular degrees of freedom of the corresponding Fano mirror. On the mirror mount, a standard rotational mount with a 1 inch inner winding is attached in order to be able to control the rotational degree of freedom of the Fano mirror. An additional xy-adjustable mount is then used in order to effectively place the Fano mirror in the center of the rotational mount to ensure the rotational axis is in the center of the membrane. Finally, the Fano mirror is taped to a costume mount created to fit into the xy-adjustable mount. The top part of the cavity setup is highlighted in figure \ref{fig:setup_top}.
+
+What has been outlined here is the setup utilized to optically characterize the double Fano cavity. If one wishes to do so for the single Fano cavity instead, the setup would be modified such that the top part of the setup, highlighted in figure \ref{fig:setup_top}, would only consist of the kinematic mirror mount. Inside the mirror mount would then be placed a broadband mirror. The rotational- and xy-adjustable mounts would here be redundant due to the rotational symmetry of any standard broadband mirror.

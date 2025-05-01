@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  30 APR 2025 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  1 MAY 2025 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1007,38 +1007,44 @@ Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 557
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [32 <./figures/cmap_lw_vs_l_intracavity.pdf>] (./method/experimental_setup.tex
-<figures/setup_sketch.pdf, id=1766, 392.46625pt x 347.2975pt>
+) [32 <./figures/cmap_lw_vs_l_intracavity.pdf>] [33 <./figures/cmaps_detuning_30um.pdf>] (./method/experimental_setup.tex
+<figures/setup_sketch.pdf, id=1825, 392.46625pt x 347.2975pt>
 File: figures/setup_sketch.pdf Graphic file (type pdf)
 <use figures/setup_sketch.pdf>
 Package pdftex.def Info: figures/setup_sketch.pdf  used on input line 11.
 (pdftex.def)             Requested size: 173.44534pt x 153.48438pt.
-<figures/setup_skecth_zoomed.pdf, id=1767, 593.21625pt x 290.08376pt>
+<figures/setup_skecth_zoomed.pdf, id=1826, 593.21625pt x 290.08376pt>
 File: figures/setup_skecth_zoomed.pdf Graphic file (type pdf)
 <use figures/setup_skecth_zoomed.pdf>
 Package pdftex.def Info: figures/setup_skecth_zoomed.pdf  used on input line 17.
 (pdftex.def)             Requested size: 255.83421pt x 125.10538pt.
+ [34
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[33 <./figures/cmaps_detuning_30um.pdf>]
-<figures/HWP.pdf, id=1827, 591.20876pt x 229.85875pt>
+ <./figures/setup_sketch.pdf> <./figures/setup_skecth_zoomed.pdf>]
+<figures/HWP.pdf, id=1854, 591.20876pt x 229.85875pt>
 File: figures/HWP.pdf Graphic file (type pdf)
 <use figures/HWP.pdf>
 Package pdftex.def Info: figures/HWP.pdf  used on input line 37.
 (pdftex.def)             Requested size: 260.17465pt x 101.15569pt.
- [34 <./figures/setup_sketch.pdf> <./figures/setup_skecth_zoomed.pdf>]
-<figures/optical_telescope.pdf, id=1855, 630.355pt x 319.1925pt>
+ [35 <./figures/HWP.pdf>]
+<figures/optical_telescope.pdf, id=1871, 630.355pt x 319.1925pt>
 File: figures/optical_telescope.pdf Graphic file (type pdf)
 <use figures/optical_telescope.pdf>
 Package pdftex.def Info: figures/optical_telescope.pdf  used on input line 52.
 (pdftex.def)             Requested size: 216.81pt x 109.78546pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[35 <./figures/HWP.pdf>]) (./method/grating_characterization.tex [36{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/optical_telescope.pdf>]) (./method/cavity_measurements.tex) [37] (./results/simulations.tex) [38] (./results/experimental_results.tex) [39] (./results/discussion.tex) [40] (./Appendix.tex) [41]
+ [36 <./figures/optical_telescope.pdf>]
+<figures/setup_bottom.pdf, id=1886, 593.21625pt x 289.08pt>
+File: figures/setup_bottom.pdf Graphic file (type pdf)
+<use figures/setup_bottom.pdf>
+Package pdftex.def Info: figures/setup_bottom.pdf  used on input line 75.
+(pdftex.def)             Requested size: 260.17465pt x 126.78976pt.
+ [37 <./figures/setup_bottom.pdf>]
+<figures/setup_top.pdf, id=1897, 593.21625pt x 289.08pt>
+File: figures/setup_top.pdf Graphic file (type pdf)
+<use figures/setup_top.pdf>
+Package pdftex.def Info: figures/setup_top.pdf  used on input line 84.
+(pdftex.def)             Requested size: 260.17465pt x 126.78976pt.
+) (./method/grating_characterization.tex [38 <./figures/setup_top.pdf>]) (./method/cavity_measurements.tex [39{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [40] (./results/simulations.tex) [41] (./results/experimental_results.tex) [42] (./results/discussion.tex) [43] (./Appendix.tex) [44]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 103.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1047,7 +1053,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [42] (./main.aux)
+ [45] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1062,18 +1068,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17853 strings out of 474116
- 332089 string characters out of 5743682
+ 17873 strings out of 474116
+ 332666 string characters out of 5743682
  1938187 words of memory out of 5000000
- 39658 multiletter control sequences out of 15000+600000
- 591284 words of font info for 255 fonts, out of 8000000 for 9000
+ 39676 multiletter control sequences out of 15000+600000
+ 591417 words of font info for 256 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,81p,1375b,1243s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (45 pages, 2138132 bytes).
+Output written on main.pdf (48 pages, 2191976 bytes).
 PDF statistics:
- 2006 PDF objects out of 2073 (max. 8388607)
- 521 compressed objects within 6 object streams
+ 2031 PDF objects out of 2073 (max. 8388607)
+ 535 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
- 53991 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54001 words of extra memory for PDF output out of 61914 (max. 10000000)
 
