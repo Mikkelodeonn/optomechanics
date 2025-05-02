@@ -377,42 +377,88 @@
       \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
       \endverb
     \endentry
-    \entry{Ko}{article}{}
-      \name{author}{4}{}{%
-        {{hash=3ceb0057f2063b82097cde43c4b829c5}{%
-           family={Ko},
-           familyi={K\bibinitperiod},
-           given={Y.\bibnamedelimi H.},
-           giveni={Y\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=44daf9a7cf936cbdd5d6593eac6560fb}{%
-           family={Niraula},
-           familyi={N\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=953ddeb6c420b1fc96c80cc20ebc212c}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={K.\bibnamedelimi J.},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=d8bbf4b63d9d9c616fcbb49cf99c812a}{%
-           family={Magnusson},
+    \entry{Sadov}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ce24a9800917be87a93dd718f477ac0}{%
+           family={Sadov},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi Yu.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=ed8859a4623132d6e8788a53e5aa7496}{%
+           family={McGreer},
            familyi={M\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{aed1046685671d8bf927d2454d55efab}
-      \strng{fullhash}{95d8948ee8c12bd5cc190ce38a9f3211}
-      \strng{bibnamehash}{aed1046685671d8bf927d2454d55efab}
-      \strng{authorbibnamehash}{aed1046685671d8bf927d2454d55efab}
-      \strng{authornamehash}{aed1046685671d8bf927d2454d55efab}
-      \strng{authorfullhash}{95d8948ee8c12bd5cc190ce38a9f3211}
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{05158f4a7d58644933e03740707220ff}
+      \strng{fullhash}{05158f4a7d58644933e03740707220ff}
+      \strng{bibnamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authorbibnamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authornamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authorfullhash}{05158f4a7d58644933e03740707220ff}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Optical Society of America}
-      \field{title}{Properties of wideband resonant reflectors under fully conical light incidence}
-      \field{year}{2016}
+      \field{journaltitle}{J. Opt. Soc. Am. A}
+      \field{number}{9}
+      \field{title}{Polarization dependence of diffraction gratings that have total internal reflection facets}
+      \field{volume}{17}
+      \field{year}{2000}
+    \endentry
+    \entry{Forster}{article}{}
+      \name{author}{7}{}{%
+        {{hash=8d37416bb431a9d3372bdb33c6c0a179}{%
+           family={Forster},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0e41bd983f7e50a129b21c0d20c313b2}{%
+           family={Arif},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9c09e944de8f1d2029ac2e5b57ff004}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=01cb8f2905af52e64ef87b33ba3ed02f}{%
+           family={Bushuk},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1e0f357b011a6d5d5345b431afd2dff4}{%
+           family={Kouzmouk},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f78d09ab429076479116215cbcbbf4a}{%
+           family={Tatur},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=79313a8054278d92fbde5c9641beaf42}{%
+           family={Batishche},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{fullhash}{136f5c683f02be9ae16a4266affd5a23}
+      \strng{bibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authorbibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authornamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authorfullhash}{136f5c683f02be9ae16a4266affd5a23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{213 nm and 532 nm solid state laser treatment of biogenetical fibrous materials}
+      \field{year}{2010}
     \endentry
   \enddatalist
 \endrefsection
