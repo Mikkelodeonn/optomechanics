@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1746188188.68148 "main.bcf" "main.bbl" "main" 1746189739.06972 0
-  "main.bcf" 1746189738.731 108597 60d42c5ee5fcdb4b7cf9446a385d6c7d "pdflatex"
+["biber main"] 1746188188.68148 "main.bcf" "main.bbl" "main" 1746211365.47054 0
+  "main.bcf" 1746211365.07755 108597 60d42c5ee5fcdb4b7cf9446a385d6c7d "pdflatex"
   "ref.bib" 1746188180.40917 4400 9028c5d6171fb4ab3962dca733a6dc82 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1746189734.93948 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1746189739.07012 0
+["pdflatex"] 1746211360.42782 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1746211365.47111 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1746117961.31613 2655 b1d3031a8c8dc9a78e328703d2d3548e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -212,14 +212,14 @@
   "figures/small_detuning_length_scan_short.pdf" 1744280721.18042 30801 5f8ed8455f1e9296f266bef964a43f77 ""
   "figures/xy_alignment_sketch.pdf" 1746187639.47692 4517 f00073da16678bb2bf53987244b288f7 ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1746189738.72454 34251 cbce4dd24b4117aeb33e86c41e9aa56a "pdflatex"
+  "main.aux" 1746211365.07144 34251 cbce4dd24b4117aeb33e86c41e9aa56a "pdflatex"
   "main.bbl" 1746188191.44543 18951 fc238332c161540caf9c6270775cf128 "biber main"
-  "main.run.xml" 1746189738.73558 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1746211365.07951 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1746117961.31613 2655 b1d3031a8c8dc9a78e328703d2d3548e ""
-  "main.toc" 1746189738.73572 5106 88bc629dbfeb19d2eb689708f5944ba4 "pdflatex"
+  "main.toc" 1746211365.07968 5106 88bc629dbfeb19d2eb689708f5944ba4 "pdflatex"
   "method/cavity_measurements.tex" 1746117716.94809 837 590b0bae9c5a6dc07435bb21e7aac2b0 ""
   "method/experimental_setup.tex" 1746188657.30907 10131 4f6b5d94e1e6f0398d83615ffc422919 ""
-  "method/grating_characterization.tex" 1746189734.44065 10577 c27effa9439108318375411e9ab88c05 ""
+  "method/grating_characterization.tex" 1746211359.87707 10726 3b90696b8855bf3495d1ceebb4f4a9d5 ""
   "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""
   "results/experimental_results.tex" 1742910622.49195 1239 571bfd303137a41e60680d6c0c732843 ""
   "results/simulations.tex" 1743156999.02692 690 b1ebeb84f747662092da14b00dc7c538 ""
