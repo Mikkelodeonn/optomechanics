@@ -108,7 +108,22 @@ class fano:
 ## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
 ## (plots/fit are produced according to the chosen code/type).
 
-fitting_params = [951.2,951.2,0.1,0.04,1e-6]
+rdata = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
+tdata = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+
+rparams = rdata.lossy_fit([951,951,0.1,0.5,1e-6])
+tparams = tdata.lossy_fit([951,951,0.1,0.5,1e-6])
+
+plt.figure(figsize=(10,6))
+plt.scatter(rdata.data[:,0], rdata.data[:,1], marker=".", color="firebrick", label='ref. data')
+plt.plot(rdata.λ_fit, rdata.lossy_model(rdata.λ_fit, *rparams), 'firebrick', alpha=0.5, label="ref. fit")#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
+plt.scatter(tdata.data[:,0], tdata.data[:,1], marker=".", color="blueviolet", label='trans. data')
+plt.plot(tdata.λ_fit, tdata.lossy_model(tdata.λ_fit, *tparams), 'cornflowerblue', alpha=0.5, label="trans. fit")#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
+plt.legend(loc='upper right')
+plt.xlabel("wavelength [nm]")
+plt.ylabel("normalized ref./trans. [arb. u.]")
+plt.show()
+#fitting_params = [951.2,951.2,0.1,0.04,1e-6]
 #data = fano("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/1293um/1293 short.txt")
 #data = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 ref.txt")
 #params = data.lossy_fit(fitting_params)
@@ -124,7 +139,7 @@ fitting_params = [951.2,951.2,0.1,0.04,1e-6]
 #plt.plot(R.data[:,0], R.data[:,1], 'ro', label='Reflection data')
 #plt.plot(R.λ_fit, R.lossy_model(R.λ_fit, *rparams), 'darkred', label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
 
-plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), fancybox=True, shadow=True, ncol=2)
+#plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), fancybox=True, shadow=True, ncol=2)
 #plt.show()
 
 
