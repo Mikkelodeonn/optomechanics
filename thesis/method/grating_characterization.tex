@@ -65,13 +65,13 @@ For this reason the rotational alignment is vital to achieving the correct minim
 
 Since no rotaitonal degree of freedom is appointed the Fano mirror itself, and that this would greatly complicate the alignment procedure, the rotational alignment is achieved by changing the polarization of the incident light. This done by adjusting hte rotating HWP placed immediately before the light hits the Fano mirror surface and is possible due to its effect on linearly polarized light illustrated in figure \ref{fig:HWP}.
 
-\subsubsection{Adjusting and measuring the beam waist - the razor blade method and the optical telescope}\label{sec:beam_waist}
+\subsubsection{Adjusting and measuring the beam waist}\label{sec:beam_waist}
 
 In section \ref{sec:alignment} we assumed an optimal beam waist as the alignment procedure was outlined. This was due to the fact that the beam waist optimization is unecessary unless the entire setup is rebuilt or if the size of the Fano mirror is changed. Since the patterned area of the Fano mirrors characterized in this project was only $400$ x $400 \mu m$, the beam waist optimization was only done once.
 
-As is evident from figure \ref{fig:telescope} how an optical telecope was utilized to tune the waist size $w_0$ of the collimated laser beam. In order to determine the optimal value of $w_0$ the second lens $L_2$ was moved back and forth without diverging from the position where the optical axis passed through the center of the lens. The minimum transmission was recorded for each iteration, and the transmission would converge towards its minimum value (or at least the lowest achievable value). When the mininum transmission as a function of $w_0$ was found, this was recorded using the \emph{razor blade method}. The razor blade method is a simple tool to, fairly accurately, measure the beam waist of a Gaussion laser beam by \emph{cutting} the beam gradually with a razor blade. The distance the razor blade moves is recorded along with the transmitted intensity, and the two are thus directy correlated\cite{Forster}.
+As is evident from figure \ref{fig:telescope} how an optical telecope was utilized to tune the waist size $w_0$ of the collimated laser beam. In order to determine the optimal value of $w_0$ the second lens $L_2$ was moved back and forth without diverging from the position where the optical axis passed through the center of the lens. The minimum transmission was recorded for each iteration, and the transmission would converge towards its minimum value (or at least the lowest achievable value). When the mininum transmission as a function of $w_0$ was found, this was measured using the \emph{razor blade method}. The razor blade method is a simple tool to, fairly accurately, measure the beam waist of a Gaussion laser beam by \emph{cutting} the beam gradually with a blade. The distance the blade moves is recorded along with the transmitted intensity, and the two are thus directy correlated\cite{Forster}.
 
-An arbitrary Gaussian distribution, corresponding to a laser beam in the TEM00 mode, is shown on the left in figure \ref{fig:razor_blade_method}, while the right plot shows the integral of the distribution as a function of the razor blade position. 
+An arbitrary Gaussian distribution, corresponding to a laser beam in the TEM00 mode, is shown on the left in figure \ref{fig:razor_blade_method}, while the right plot shows the integral of the distribution as a function of the razor blade position, which corresponds to an error function. 
 
 \begin{figure}[h!]
     \centering
@@ -87,9 +87,20 @@ In practice the blade position was recorded by counting the turns made on a line
 
 \subsubsection{Obtaining normalized transmission/reflection spectra}
 
+When the Fano mirror and the surrounding setup is completely aligned, it is time for the optical characterization. In order to do so, a series of measurements is necessary to obtain normalized transmission and reflection spectra which rightfully represent the optical properties of the Fano mirror. The structure of such measurements is given as follows: 
+\begin{enumerate}
+    \item The tranmission and reflection intensities as a function of wavelength are measured using the reflection detector $P_R$ and the transmission detector $P_T$, while the light incident on the Fano mirror is measured using detector $P_I$. The positions of all detectors are shownin figure \ref{fig:setup_sketch}. 
+    \item The Fano mirror is removed and identical measurements are done for an "empty" setup. The purpose of this measurement is to measure the signal when \emph{all} the incident light is transmitted, and \emph{no} light is reflected. This data is used to normalize the transmission intensities obtained in the first measurement.
+    \item On the position of the Fano mirror, a highly reflective (HR) mirror is now placed, and the measurement is repeated. This is corresponding to \emph{all} the incident light being reflected, and \emph{no} light being transmitted. This data is used to normalize the reflection intensities obtained in the first measurement.
+    \item Lasty, a measurement of the background signal is taken, by simply blocking the laser before it enters the setup and repeating the measurements.
+\end{enumerate}
 
+The normalized transmission and relfectity values are now given as
+\begin{equation}
+    blah blah
+\end{equation}
 
-\subsubsection{Normalization}
+% include a normalized transmission spectrum of either M3 or M5, and explain which measurements are necessary to calculate the normalized signal (and how it is done obviously).
 
 % finding a match (include either as a section or as part of one)
 % should I include a section about problems I faced and how i fixed them? noise -> box + turning A/C off, etc. (maybe include in discussion instead)
