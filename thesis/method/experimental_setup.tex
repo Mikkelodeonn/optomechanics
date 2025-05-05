@@ -24,9 +24,33 @@ In order to effectively conduct the experiments in this project, it is imperativ
 
 \subsubsection{Tunable diode laser}
 
-As shown in figure \ref{fig:experimental_setup} the laser source used for the optical characterizations is coupled into the setup through an optical fiber. The laser used is a \emph{Toptica DLC Pro} tunable CW diode laser with a range for the transmission wavelength of $910$ $-$ $980nm$. The optical fiber is a \emph{P3-780PM-FC-10} fiber from Thorlabs which is a single mode\footnote{A single mode fiber can only sustain the TEM00 mode, which means that the output is known to be perfectly Gaussian.} polarization-maintaining optical fiber with an effective range of $770$ $-$ $1100nm$. Between the Toptica laser and the incoupling end of the fiber, a $\lambda/2$\emph{-plate} (HWP) and \emph{polarizing beam splitter} (PBS) is placed in order to be able to control the incident power of the laser and to only couple linearly polarized light into the setup.  
+As shown in figure \ref{fig:experimental_setup} the laser source used for the optical characterizations is coupled into the setup through an optical fiber. The laser used is a \emph{Toptica DLC Pro} tunable CW diode laser with a range for the transmission wavelength of $910$ $-$ $980nm$. The laser and controller are both depicted in figure \ref{fig:toptica_laser_and_controller}. The optical fiber is a \emph{P3-780PM-FC-10} fiber from Thorlabs which is a single mode\footnote{A single mode fiber can only sustain the TEM00 mode, which means that the output is known to be perfectly Gaussian.} polarization-maintaining optical fiber with an effective range of $770$ $-$ $1100nm$. Between the Toptica laser and the incoupling end of the fiber, a $\lambda/2$\emph{-plate} (HWP) and \emph{polarizing beam splitter} (PBS) is placed in order to be able to control the incident power of the laser and to only couple linearly polarized light into the setup.  
 
-The light being emitted from the optical fiber is sent through another HWP and PBS in order to be able to control the resulting polarization in the setup even more precisely, should there be any discrepancies of the light coupled into the fiber. 
+\begin{figure}[h!]
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/toptica_laser.pdf}
+        \caption{}
+        \label{fig:toptica_laser}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/toptica_controller.pdf}
+        \caption{}
+        \label{fig:toptica_controller}
+    \end{subfigure}
+    \caption{The Toptica DLC Pro tunable CW diode laser (a) and the controller (b) used to tune the wavelength of the output beam.}
+    \label{fig:toptica_laser_and_controller}
+\end{figure}
+
+The light being emitted from the optical fiber is sent through another HWP and PBS in order to be able to control the resulting polarization in the setup even more precisely, should there be any discrepancies of the light coupled into the fiber. The out-coupling fiber with the HWP and PBS is shown in figure \ref{fig:outcoupling_fiber}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/outcoupling_fiber.pdf}
+    \caption{The out-coupling end of the P3-780PM-FC-10 polarization maintaining optical fiber from Thorlabs along with the HWP and PBS ensuring linear polarizaed light incident on the cavity or Fano mirror.}
+    \label{fig:outcoupling_fiber}
+\end{figure}
 
 \subsubsection{$\lambda / 2$ - waveplate}
 
@@ -48,10 +72,20 @@ The linearly polarized light transmitted through the PBS passes through plano-co
 Figure \ref{fig:telescope} shows schematics of the general way an optical telescope is utilized to manipulate the beam waist of a laser beam.
 
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/optical_telescope.pdf}
-    \caption{}
-    \label{fig:telescope}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/optical_telescope.pdf}
+        \caption{}
+        \label{fig:telescope}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/optical_telescope_picture.pdf}
+        \caption{}
+        \label{fig:telescope_picture}
+    \end{subfigure}
+    \caption{(a) shows simple schematics of an optical telescope used to alter the waist of an incomming collimated beam, while (b) shows a picture taken of the actual optical telecope used in the setup.}
+    \label{fig:telescope_sketch_and_pic}
 \end{figure}
 
 When the incident beam hits $L_1$ it is focused according to its focal length $f$, and by inserting another lens $L_2$ of a relatively longer focal length one can \emph{catch} the beam at the desired beam waist. If the focal length $f^{\prime}$ of $L_2$ is sufficently long, compared to the path of the beam after the lenses, the beam will be approximately collimated and remain at the waist obtained when incident on $L_2$.
@@ -72,22 +106,97 @@ The cavity measurement setup shown in figure \ref{fig:setup_zoomed} is the one u
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/setup_bottom.pdf}
-    \caption{Schematics of the \emph{bottom} part of the double Fano cavity setup.}
-    \label{fig:setup_bottom}
+    \begin{subfigure}[b]{0.6\textwidth}
+        \includegraphics[width=\textwidth]{figures/setup_bottom.pdf}
+        \caption{}
+        \label{fig:setup_bottom}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{figures/cavity_setup_bottom_pic.pdf}
+        \caption{}
+        \label{fig:setup_bottom_pic}
+    \end{subfigure}
+    \caption{(b) shows a picture taken of the \emph{bottom} part of the double Fano cavity setup, while (a) depicts the corresponding schematics.}
+    \label{fig:setup_bottom_sketch_and_pic}
 \end{figure}
 
-Examining the structure from the bottom (as it is built), a kinematic mirror mount is attached to the lower set of xy-stages, this is used to control the angular degrees of freedom of the Fano mirror which makes up the bottom of the cavity. On the mirror mount, a piezo ring is firmly attached and connected to a piezo driver and that to a function generater in order to control the expansion of the piezo ring both by application alternating and fixed current. Lastly, in order to be able to place the Fano mirror or simply membrane on the  piezo ring, a ceramic Macor membrane holder is used. The bottom part of the cavity setup is highlighted in figure \ref{fig:setup_bottom}.
+Examining the structure from the bottom (as it is built), a kinematic mirror mount is attached to the lower set of xy-stages, this is used to control the angular degrees of freedom of the Fano mirror which makes up the bottom of the cavity. On the mirror mount, a piezo ring is firmly attached and connected to a piezo driver and that to a frequency generater in order to control the expansion of the piezo ring both by application alternating and fixed current. Lastly, in order to be able to place the Fano mirror or simply membrane on the  piezo ring, a ceramic Macor membrane holder is used. The bottom part of the cavity setup is highlighted in figure \ref{fig:setup_bottom}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/setup_top.pdf}
-    \caption{Schematics of the \emph{top} part of the double Fano cavity setup.}
-    \label{fig:setup_top}
+    \begin{subfigure}[b]{0.6\textwidth}
+        \includegraphics[width=\textwidth]{figures/setup_top.pdf}
+        \caption{}
+        \label{fig:setup_top}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{figures/cavity_setup_top_pic.pdf}
+        \caption{}
+        \label{fig:setup_top_pic}
+    \end{subfigure}
+    \caption{(b) shows a picture taken of the \emph{top} part of the double Fano cavity setup, while (a) depicts the corresponding schematics.}
+    \label{fig:setup_top_sketch_and_pic}
 \end{figure}
 
 The part of the setup built to control the Fano mirror making up the top of the cavity is slightly more complicated, as this is the Fano mirror that is, for practical reasons, aligned last. This means that additional degrees of freedom must be controled by movement of the Fano mirror itself. The alignment procedure will be explained in detail in sections \ref{sec:grating_characterization} and \ref{sec:cavity_measurements}. 
 
-The top part of the cavity setup is attached to the second set of xy-stages and additionally to an \emph{NFL5DP20} stage from Thorlabs in the z-direction in order to be able to change the length of the cavity. As for the bottom part of the cavity setup, a kinematic mirror mount acts as the base of the construction. This is, once again, to control the angular degrees of freedom of the corresponding Fano mirror. On the mirror mount, a standard rotational mount with a 1 inch inner winding is attached in order to be able to control the rotational degree of freedom of the Fano mirror. An additional xy-adjustable mount is then used in order to effectively place the Fano mirror in the center of the rotational mount to ensure the rotational axis is in the center of the membrane. Finally, the Fano mirror is taped to a costume mount created to fit into the xy-adjustable mount. The top part of the cavity setup is highlighted in figure \ref{fig:setup_top}.
+The top part of the cavity setup is attached to the second set of xy-stages and additionally to an \emph{NFL5DP20} stage from Thorlabs in the z-direction in order to be able to change the length of the cavity. As for the bottom part of the cavity setup, a kinematic mirror mount acts as the base of the construction. This is, once again, to control the angular degrees of freedom of the corresponding Fano mirror. This mirror mount is equipped with piezo elements to control the angular degrees of freedom, by applied voltage, with higher resolution than for the manual adjustments. On the mirror mount, a standard rotational mount with a 1 inch inner winding is attached in order to be able to control the rotational degree of freedom of the Fano mirror. An additional xy-adjustable mount is then used in order to effectively place the Fano mirror in the center of the rotational mount to ensure the rotational axis is in the center of the membrane. Finally, the Fano mirror is taped to a costume mount created to fit into the xy-adjustable mount. The top part of the cavity setup is highlighted in figure \ref{fig:setup_top}, and presented separate from the setup to show how the Fano mirror is attached in figure \ref{fig:cavity_setup_top_separate_pic}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/cavity_setup_top_separate_pic.pdf}
+    \caption{The top part of the cavity setup separated from the rest and flipped. Note that the Fano mirror attached with the tape is shown. The three wires visible are then ones that connect the piezo elemehts with a driver.}
+    \label{fig:cavity_setup_top_separate_pic}    
+\end{figure}
 
 What has been outlined here is the setup utilized to optically characterize the double Fano cavity. If one wishes to do so for the single Fano cavity instead, the setup would be modified such that the top part of the setup, highlighted in figure \ref{fig:setup_top}, would only consist of the kinematic mirror mount. Inside the mirror mount would then be placed a broadband mirror. The rotational- and xy-adjustable mounts would here be redundant due to the rotational symmetry of any standard broadband mirror.
+
+\subsubsection{Noise reduction}
+
+When the cavity measurements were conducted it was apparent that the double Fano cavity was particularly prone to noise. While noise is not a very precise definition in its own, it did seem that the most prominent source was associated with the length of the cavity $l$. When applying a constant voltage to the piezo element depicted in figure \ref{fig:setup_bottom_sketch_and_pic}, in order to achieve the correct length for sustaining the Fano resonance, the level started to fluctuate dramatically when approaching the resonance. 
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{figures/noise_box_front.pdf}
+        \caption{}
+        \label{fig:box_front}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{figures/noise_box_side.pdf}
+        \caption{}
+        \label{fig:box_side}
+    \end{subfigure}
+    \caption{Front- (a) and side (b) views of the plexi-glass box used to reduce the acoustic noise in the setup.}
+    \label{fig:noise_box}
+\end{figure}
+
+By examining the characteristics of the noise when apparent, the source appeared to be acoustic in origin, i.e. making a sudden sound in close vicinity of the setup caused a spike in the noise level.
+
+In order to reduce the acoustic noise, a plexi-glas box was placed around the entire setup as seen in figure \ref{fig:noise_box}. This proved to reduce the noise, and this improve the signal-to-noise, ratio substantially.
+
+\subsubsection{Additional equipment used}
+
+In order to record a measurement of any kind in the setup, a \emph{Keysight InfiniiVision DSOX2024A} oscilloscope was connected with all the detectors $P_T$, $P_R$ and $P_I$ in the setup. The oscilloscope, along with the Toptica laser, was then controlled by a Matlab script implemented by previous students/researchers of the lab. 
+
+Scanning the piezo element, by application of an altertnating current also required additional equipment, and more specifically a frequency generator capable of generating a triangular signal with an offset. The frequency generator used was a \emph{Keysight 33500B Waveform Generator}. Insight on scanning the cavity length using the piezo will be provided in section \ref{sec:cavity_measurements}. The oscilloscope and frequency generater is shown in figure \ref{fig:scope_and_freq_generator}.
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/scope.pdf}
+        \caption{}
+        \label{fig:scope}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/frequency_generator.pdf}
+        \caption{}
+        \label{fig:freq_generator}
+    \end{subfigure}
+    \caption{Pictures of the oscilloscope (a) and frequency generator (b) used during experimental investigations in this project.}
+    \label{fig:scope_and_freq_generator}
+\end{figure}

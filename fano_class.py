@@ -122,7 +122,7 @@ plt.plot(tdata.λ_fit, tdata.lossy_model(tdata.λ_fit, *tparams), 'cornflowerblu
 plt.legend(loc='upper right')
 plt.xlabel("wavelength [nm]")
 plt.ylabel("normalized ref./trans. [arb. u.]")
-plt.show()
+#plt.show()
 #fitting_params = [951.2,951.2,0.1,0.04,1e-6]
 #data = fano("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/1293um/1293 short.txt")
 #data = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 ref.txt")
