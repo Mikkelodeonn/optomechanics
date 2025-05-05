@@ -20,26 +20,30 @@ for blade_pos in blade_positions:
     transmitted_power.append(power)
 
 # Step 4: Plot the Gaussian beam profile and transmitted power
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(10, 7))
 
 # Plot 1: Gaussian beam profile with a razor blade
-plt.subplot(1, 2, 1)
+#plt.subplot(1, 2, 1)
 plt.plot(x, gaussian_intensity(x, beam_waist), label="gaussian intensity")
-plt.axvline(0, color="red", linestyle="--", label="beam Center")
+plt.axvline(0, color="red", linestyle="--", label="beam center")
 #plt.title("Gaussian Beam Profile")
-plt.xlabel("position (x)")
-plt.ylabel("intensity")
-plt.legend()
+plt.xlabel("position (x)", fontsize=28)
+plt.ylabel("intensity", fontsize=28)
+plt.xticks(fontsize=21)
+plt.yticks(fontsize=21)
+
 #plt.grid()
 
 # Plot 2: Transmitted power vs blade position
-plt.subplot(1, 2, 2)
-plt.plot(blade_positions, transmitted_power, label="transmitted power")
+#plt.subplot(1, 2, 2)
+#plt.plot(blade_positions, transmitted_power, label="transmitted power")
 #plt.title("Transmitted Power vs Razor Blade Position")
-plt.xlabel("blade position (x)")
-plt.ylabel("transmitted power")
-plt.legend()
+#plt.xlabel("blade position (x)", fontsize=28)
+#plt.ylabel("trans. power", fontsize=28)
+#plt.legend()
+plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+plt.subplots_adjust(bottom=0.3)
 #plt.grid()
 
-plt.tight_layout()
+#plt.tight_layout()
 plt.show()
