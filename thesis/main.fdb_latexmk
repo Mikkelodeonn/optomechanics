@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1746531017.97241 "main.bcf" "main.bbl" "main" 1746531120.59423 0
-  "main.bcf" 1746531120.25891 108721 ad1ef21b6e96b36ee195da18547f7396 "pdflatex"
+["biber main"] 1746531017.97241 "main.bcf" "main.bbl" "main" 1746545940.37596 0
+  "main.bcf" 1746545939.89092 108721 ad1ef21b6e96b36ee195da18547f7396 "pdflatex"
   "ref.bib" 1746188180.40917 4400 9028c5d6171fb4ab3962dca733a6dc82 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1746531116.18927 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1746531120.59462 0
+["pdflatex"] 1746545933.9408 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1746545940.37709 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1746526878.94515 2649 544994e30903535e8dc16cc9eecddae4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -210,8 +210,15 @@
   "figures/optical_telescope_picture.pdf" 1746438941.07851 156499 c5da41a15e3079d1179859afbab95118 ""
   "figures/outcoupling_fiber.pdf" 1746438964.2292 196088 aaafcf7c0af5ca65f208fffb92396485 ""
   "figures/packaged_membrane_picture.png" 1746169455.84387 3166152 c50f3623a8031597d96f2d295611d8a6 ""
+  "figures/pinhole_position_on_gaussian.pdf" 1746544745.70728 16544 8f37e5e6af871b38b02fb317e5af80d8 ""
+  "figures/pinhole_sketch.pdf" 1746542668.83444 7127 e99ae2d9ce0f2ace2b48dc24f0a9cf08 ""
   "figures/placerholder.png" 1746434623.09511 123494 dcbbb98ca6571eeb31e1d4978a192d45 ""
   "figures/planar_fabry_perot.pdf" 1743594464.01467 19328 a4018bae03474a8cfc3901edff04453d ""
+  "figures/raw_data_cavity_trans.pdf" 1746537264.767 14732 462246abdb40970bce584e4e35ca356d ""
+  "figures/raw_data_incident_light_cavity.pdf" 1746537288.48909 14756 4d64aa0339bb56275d5a1efb10cf54ee ""
+  "figures/raw_data_incident_light_no_cavity.pdf" 1746537348.35067 16189 487d650133b9fc9f31f5ee50407cb86a ""
+  "figures/raw_data_normalized_transmission.pdf" 1746536723.98984 14005 fedc68092bfd9a01a3957c8ff747afbd ""
+  "figures/raw_data_transmission_no_cavity.pdf" 1746537320.14142 16116 60a8ab11f0d9aff827b6440354d8ade5 ""
   "figures/razor_blade_err_function.pdf" 1746464165.22158 12947 264704899671b5b7038deeda8636c827 ""
   "figures/scope.pdf" 1746438988.15264 60041 dc011228d2ecd5dbebe473ae1d2edc0c ""
   "figures/setup_bottom.pdf" 1746464632.26128 25857 39c5aa77ee9659234e440add02d8a92e ""
@@ -231,12 +238,12 @@
   "figures/toptica_laser.pdf" 1746438908.23576 62073 794aa741895e3c57c6cc8b568a3d5118 ""
   "figures/xy_alignment_sketch.pdf" 1746187639.47692 4517 f00073da16678bb2bf53987244b288f7 ""
   "introduction.tex" 1742824959.72414 612 451399c922e372898b11098789261fe6 ""
-  "main.aux" 1746531120.25273 42748 79b9d88be01b7ab2a886e09d597a0b10 "pdflatex"
+  "main.aux" 1746545939.8821 45727 00fc6ddec91bdaaa5a8cce0cb58ec923 "pdflatex"
   "main.bbl" 1746531021.36558 20211 76f036ca9ac1de6136cc5c20e3eb4fa8 "biber main"
-  "main.run.xml" 1746531120.26025 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1746545939.89244 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1746526878.94515 2649 544994e30903535e8dc16cc9eecddae4 ""
-  "main.toc" 1746531120.26042 5073 849269986ce23f87a2ee34e44313fbba "pdflatex"
-  "method/cavity_measurements.tex" 1746531111.51625 14833 44fc4065cac63fcd5318421ce3143ed0 ""
+  "main.toc" 1746545939.89276 5013 29aeab829f3d8ae3e54cc09ba7f43a10 "pdflatex"
+  "method/cavity_measurements.tex" 1746545933.50689 20932 efc7122db762c8b2818f9dc51b28f6d7 ""
   "method/experimental_setup.tex" 1746512408.10992 17655 0ae703cab0977ac068d6bec20253ac21 ""
   "method/grating_characterization.tex" 1746455060.21735 13848 70024f262bb5bc2ad5fa9745046691c9 ""
   "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""

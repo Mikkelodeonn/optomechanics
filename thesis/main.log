@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  6 MAY 2025 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  6 MAY 2025 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1202,10 +1202,65 @@ File: figures/length_from_fsr_example_40um.pdf Graphic file (type pdf)
 <use figures/length_from_fsr_example_40um.pdf>
 Package pdftex.def Info: figures/length_from_fsr_example_40um.pdf  used on input line 84.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [52] [53{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
+ [52] [53 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/length_from_fsr_example_40um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [54] (./results/simulations.tex) [55] (./results/experimental_results.tex) [56] (./results/discussion.tex) [57] (./Appendix.tex) [58]
+>]
+<figures/raw_data_cavity_trans.pdf, id=2305, 794.97pt x 505.89pt>
+File: figures/raw_data_cavity_trans.pdf Graphic file (type pdf)
+<use figures/raw_data_cavity_trans.pdf>
+Package pdftex.def Info: figures/raw_data_cavity_trans.pdf  used on input line 106.
+(pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
+<figures/raw_data_incident_light_cavity.pdf, id=2306, 794.97pt x 505.89pt>
+File: figures/raw_data_incident_light_cavity.pdf Graphic file (type pdf)
+<use figures/raw_data_incident_light_cavity.pdf>
+Package pdftex.def Info: figures/raw_data_incident_light_cavity.pdf  used on input line 111.
+(pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
+<figures/raw_data_transmission_no_cavity.pdf, id=2307, 794.97pt x 505.89pt>
+File: figures/raw_data_transmission_no_cavity.pdf Graphic file (type pdf)
+<use figures/raw_data_transmission_no_cavity.pdf>
+Package pdftex.def Info: figures/raw_data_transmission_no_cavity.pdf  used on input line 116.
+(pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
+<figures/raw_data_incident_light_no_cavity.pdf, id=2308, 794.97pt x 505.89pt>
+File: figures/raw_data_incident_light_no_cavity.pdf Graphic file (type pdf)
+<use figures/raw_data_incident_light_no_cavity.pdf>
+Package pdftex.def Info: figures/raw_data_incident_light_no_cavity.pdf  used on input line 121.
+(pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
+ [54 <./figures/raw_data_cavity_trans.pdf> <./figures/raw_data_incident_light_cavity.pdf
+
+pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/raw_data_transmission_no_cavity.pdf
+
+pdfTeX warning: pdflatex (file ./figures/raw_data_transmission_no_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/raw_data_incident_light_no_cavity.pdf
+
+pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_no_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/raw_data_normalized_transmission.pdf, id=2481, 794.97pt x 505.89pt>
+File: figures/raw_data_normalized_transmission.pdf Graphic file (type pdf)
+<use figures/raw_data_normalized_transmission.pdf>
+Package pdftex.def Info: figures/raw_data_normalized_transmission.pdf  used on input line 138.
+(pdftex.def)             Requested size: 328.82707pt x 209.26114pt.
+<figures/pinhole_sketch.pdf, id=2482, 439.6425pt x 346.29375pt>
+File: figures/pinhole_sketch.pdf Graphic file (type pdf)
+<use figures/pinhole_sketch.pdf>
+Package pdftex.def Info: figures/pinhole_sketch.pdf  used on input line 149.
+(pdftex.def)             Requested size: 234.8775pt x 185.00375pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[55 <./figures/raw_data_normalized_transmission.pdf>]
+<figures/pinhole_position_on_gaussian.pdf, id=2527, 722.7pt x 505.89pt>
+File: figures/pinhole_position_on_gaussian.pdf Graphic file (type pdf)
+<use figures/pinhole_position_on_gaussian.pdf>
+Package pdftex.def Info: figures/pinhole_position_on_gaussian.pdf  used on input line 158.
+(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [56{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/pinhole_sketch.pdf>] (./results/simulations.tex [57 <./figures/pinhole_position_on_gaussian.pdf>]) [58] (./results/experimental_results.tex) [59] (./results/discussion.tex) [60] (./Appendix.tex) [61]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 102.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1219,7 +1274,7 @@ Overfull \hbox (18.30638pt too wide) in paragraph at lines 102--102
 []\T1/cmr/m/sc/14.4 (-20) url\T1/cmr/m/n/14.4 (-20) : $\T1/cmtt/m/n/14.4 https : / / www . edmundoptics . com / knowledge -[] center / application -[]
  []
 
-[59] [60] (./main.aux)
+[62] [63] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1237,18 +1292,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18091 strings out of 474116
- 341154 string characters out of 5743682
+ 18157 strings out of 474116
+ 344018 string characters out of 5743682
  1939187 words of memory out of 5000000
- 39916 multiletter control sequences out of 15000+600000
- 590990 words of font info for 245 fonts, out of 8000000 for 9000
+ 39978 multiletter control sequences out of 15000+600000
+ 591159 words of font info for 247 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,81p,1377b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (62 pages, 9978658 bytes).
+Output written on main.pdf (65 pages, 10057547 bytes).
 PDF statistics:
- 2428 PDF objects out of 2487 (max. 8388607)
- 645 compressed objects within 7 object streams
+ 2695 PDF objects out of 2984 (max. 8388607)
+ 712 compressed objects within 8 object streams
  0 named destinations out of 1000 (max. 500000)
- 54121 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54156 words of extra memory for PDF output out of 61914 (max. 10000000)
 
