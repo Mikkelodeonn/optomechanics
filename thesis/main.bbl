@@ -460,6 +460,35 @@
       \field{title}{213 nm and 532 nm solid state laser treatment of biogenetical fibrous materials}
       \field{year}{2010}
     \endentry
+    \entry{Hughes}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=175127d678a3def46a9d442233eec546}{%
+           family={Hase},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima P.A.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{fullhash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{bibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authorbibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authornamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authorfullhash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measurements and their Uncertainties - A Practical Guide to Modern Error Analysis}
+      \field{year}{2010}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

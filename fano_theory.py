@@ -313,17 +313,19 @@ def double_fano_length_scan(params1: list, params2: list, ls: np.array, λs: np.
     resonance_length = double_cavity_length(params1, params2, λs, lmin=ls[0]*1e-3)*1e-3
     resonance_length_2 = double_cavity_length(params2, params1, λs, lmin=ls[0]*1e-3)*1e-3
 
-    plt.figure(figsize=(15,6))
+    plt.figure(figsize=(10,7))
     if plot_both_gratings == True:
-        plt.plot(ls*1e-3, Ts, "cornflowerblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
+        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
         plt.plot(ls*1e-3, Ts_2, "--", color="lightcoral", label="$l_{res,M5}$: %sμm" % str(round(resonance_length_2,3)))
     else:
-        plt.plot(ls*1e-3, Ts, "cornflowerblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
-    plt.title("Double fano cavity transmission as a function of cavity length")
-    plt.xlabel("cavity length [μm]")
-    plt.ylabel("Transmission [arb. u.]")
-    plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
-    plt.subplots_adjust(right=0.70)
+        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
+    #plt.title("Double fano cavity transmission as a function of cavity length")
+    plt.xlabel("cavity length [μm]", fontsize=24)
+    plt.ylabel("transmission [arb. u.]", fontsize=24)
+    plt.xticks(fontsize=21)
+    plt.yticks(fontsize=21)
+    #plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+    #plt.subplots_adjust(bottom=0.3)
     plt.show()
  
 def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
@@ -792,7 +794,7 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
-l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=30)
+#l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=30)
 #double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=30)
 
 
@@ -830,9 +832,9 @@ l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=30)
 
 #### length scan of the single and double fano cavities
 
-#l=30
-#ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
-#double_fano_length_scan(params1, params2, ls, λs, plot_both_gratings=True)
+l=100
+ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
+double_fano_length_scan(params1, params1, ls, λs, plot_both_gratings=False)
 #single_fano_length_scan(params1, ls, λs)
 
 

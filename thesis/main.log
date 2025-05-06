@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  5 MAY 2025 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  6 MAY 2025 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1174,30 +1174,38 @@ File: figures/norm_ref_and_trans_M3.pdf Graphic file (type pdf)
 <use figures/norm_ref_and_trans_M3.pdf>
 Package pdftex.def Info: figures/norm_ref_and_trans_M3.pdf  used on input line 103.
 (pdftex.def)             Requested size: 375.80544pt x 263.0643pt.
- [46 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex
-<figures/length_from_fsr_example_100um.pdf, id=2118, 722.7pt x 505.89pt>
-File: figures/length_from_fsr_example_100um.pdf Graphic file (type pdf)
-<use figures/length_from_fsr_example_100um.pdf>
-Package pdftex.def Info: figures/length_from_fsr_example_100um.pdf  used on input line 8.
+ [46 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex [47] [48] [49]
+<figures/length_scan_symmetric_lossless.pdf, id=2129, 722.7pt x 505.89pt>
+File: figures/length_scan_symmetric_lossless.pdf Graphic file (type pdf)
+<use figures/length_scan_symmetric_lossless.pdf>
+Package pdftex.def Info: figures/length_scan_symmetric_lossless.pdf  used on input line 36.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/length_from_fsr_example_40um.pdf, id=2119, 722.7pt x 505.89pt>
-File: figures/length_from_fsr_example_40um.pdf Graphic file (type pdf)
-<use figures/length_from_fsr_example_40um.pdf>
-Package pdftex.def Info: figures/length_from_fsr_example_40um.pdf  used on input line 13.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/placerholder.png, id=2120, 474.573pt x 265.866pt>
+<figures/placerholder.png, id=2130, 474.573pt x 265.866pt>
 File: figures/placerholder.png Graphic file (type png)
 <use figures/placerholder.png>
-Package pdftex.def Info: figures/placerholder.png  used on input line 34.
-(pdftex.def)             Requested size: 281.85587pt x 157.90216pt.
-[47{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [48 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
+Package pdftex.def Info: figures/placerholder.png  used on input line 41.
+(pdftex.def)             Requested size: 230.18253pt x 128.95296pt.
+ [50 <./figures/length_scan_symmetric_lossless.pdf> <./figures/placerholder.png>]
+<figures/HWHM_vs_time_20250266_452um.pdf, id=2170, 722.7pt x 505.89pt>
+File: figures/HWHM_vs_time_20250266_452um.pdf Graphic file (type pdf)
+<use figures/HWHM_vs_time_20250266_452um.pdf>
+Package pdftex.def Info: figures/HWHM_vs_time_20250266_452um.pdf  used on input line 53.
+(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
+ [51 <./figures/HWHM_vs_time_20250266_452um.pdf>]
+<figures/length_from_fsr_example_100um.pdf, id=2208, 722.7pt x 505.89pt>
+File: figures/length_from_fsr_example_100um.pdf Graphic file (type pdf)
+<use figures/length_from_fsr_example_100um.pdf>
+Package pdftex.def Info: figures/length_from_fsr_example_100um.pdf  used on input line 79.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/length_from_fsr_example_40um.pdf, id=2209, 722.7pt x 505.89pt>
+File: figures/length_from_fsr_example_40um.pdf Graphic file (type pdf)
+<use figures/length_from_fsr_example_40um.pdf>
+Package pdftex.def Info: figures/length_from_fsr_example_40um.pdf  used on input line 84.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+ [52] [53{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/length_from_fsr_example_40um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/placerholder.png>] [49] (./results/simulations.tex) [50] (./results/experimental_results.tex) [51] (./results/discussion.tex) [52] (./Appendix.tex) [53]
+>]) [54] (./results/simulations.tex) [55] (./results/experimental_results.tex) [56] (./results/discussion.tex) [57] (./Appendix.tex) [58]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 102.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1211,7 +1219,7 @@ Overfull \hbox (18.30638pt too wide) in paragraph at lines 102--102
 []\T1/cmr/m/sc/14.4 (-20) url\T1/cmr/m/n/14.4 (-20) : $\T1/cmtt/m/n/14.4 https : / / www . edmundoptics . com / knowledge -[] center / application -[]
  []
 
-[54] (./main.aux)
+[59] [60] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1229,18 +1237,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18051 strings out of 474116
- 339992 string characters out of 5743682
+ 18091 strings out of 474116
+ 341154 string characters out of 5743682
  1939187 words of memory out of 5000000
- 39889 multiletter control sequences out of 15000+600000
- 589780 words of font info for 238 fonts, out of 8000000 for 9000
+ 39916 multiletter control sequences out of 15000+600000
+ 590990 words of font info for 245 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,81p,1377b,1243s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (56 pages, 9928178 bytes).
+ 67i,17n,81p,1377b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on main.pdf (62 pages, 9978658 bytes).
 PDF statistics:
- 2333 PDF objects out of 2487 (max. 8388607)
- 617 compressed objects within 7 object streams
+ 2428 PDF objects out of 2487 (max. 8388607)
+ 645 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
- 52063 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54121 words of extra memory for PDF output out of 61914 (max. 10000000)
 
