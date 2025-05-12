@@ -62,9 +62,19 @@ def lw_mirror(l: int, λres: float, r1: float, r2: float):
     δγc = (λres**2/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     return δγc
 
+def lw_mirror_single(l: int, λres: float, Tm: float, Tg: float, L: float): 
+    δγc = (λres**2/(8*np.pi*l)) * (Tg + Tm + L) 
+    return δγc
+
 def lw_fano(l: int, λres: float, γλ: float, rd: float, r1: float, r2: float): 
     δγc = ((λres**2)/(8*np.pi*l)) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
     δγg = ((γλ/(2*(1-rd)))) * (1 - r1 + 1 - r2) #(Tg + Tm + L) 
+    δγ = 1/((1/δγc) + (1/δγg)) 
+    return δγ 
+
+def lw_single_fano(l: int, λres: float, γλ: float, rd: float, Tm: float, Tg: float, L: float): 
+    δγc = ((λres**2)/(8*np.pi*l)) * (Tg + Tm + L) 
+    δγg = ((γλ/(2*(1-rd)))) * (Tg + Tm + L) 
     δγ = 1/((1/δγc) + (1/δγg)) 
     return δγ 
 
@@ -113,10 +123,37 @@ def calc_lws(l, params1, params2, losses=True):
 
     return [double_fano_lws, single_fano_lws, mirror_lws]
 
-l = np.linspace(15,500,1000)*1e-6
+def calc_lws_single(l, params, Tm: float, losses=True): ## define L and Tm and Tg
+    λ0 = params[0]; γ = params[3]
+
+    Tg = model(λ0, *params)
+    rt = theoretical_reflection_values(params, [λ0], losses=losses)[0][0]
+
+    rs = theoretical_reflection_values(params, λs, losses=losses)[0]
+    rs = [float(r) for r in rs]
+
+    L = 1 - rt - Tg
+
+    rparams, _ = curve_fit(model, λs, rs, p0=p0)
+
+    λres = λ0*1e-9
+    γλ = γ*1e-9
+    rd = rparams[2]
+
+    single_fano_lws = lw_single_fano(l, λres, γλ, rd, Tm, Tg, L)*1e12
+
+    mirror_lws = lw_mirror_single(l, λres, Tm, Tg, L)*1e12
+
+    return [single_fano_lws, mirror_lws]
+
+l = np.linspace(15,400,1000)*1e-6
 
 M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
+
+M5_single = fano("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/grating trans/M5_trans.txt")
+M5_single_params = M5_single.lossy_fit([952, 952, 0.6, 1, 0.1])
+print(M5_single_params)
 
 params1_origin = M3.lossy_fit([952,952,0.6,1,0.1])
 params2_origin = M5.lossy_fit([952,952,0.6,1,0.1])
@@ -416,7 +453,46 @@ lws_0422 = np.array([lw_0422_20, lw_0422_40, lw_0422_75, lw_0422_100, lw_0422_11
 errs_0422 = np.array([err_0422_20, err_0422_40, err_0422_75, err_0422_100, err_0422_110, err_0422_225, err_0422_500])
 ls_0422 = np.array([20,40,75,100,110,225,500]) ## approximate only!!
 
-plt.figure(figsize=(10,6))
+### Single fano measurements 20250512
+
+single_lengths = np.array([24.05, 57.40, 116.31, 211.98, 385.96])
+lengths_err = np.array([0.54, 1.55, 1.19, 3.16, 2.90])
+
+lws_5um = np.array([27.444, 30.931, 36.847, 37.665])
+lws_60um = np.array([33.341, 18.664, 21.935, 20.055])
+lws_120um = np.array([18.026, 15.785, 20.336])
+lws_220um = np.array([13.348, 17.245, 17.815, 11.952])
+lws_380um = np.array([7.828, 9.441, 10.247, 9.806])
+
+lws_5um_err = stdev(lws_5um)
+lws_60um_err = stdev(lws_60um)
+lws_120um_err = stdev(lws_120um)
+lws_220um_err = stdev(lws_220um)
+lws_380um_err = stdev(lws_380um)
+
+lw_5um = np.mean(lws_5um)
+lw_60um = np.mean(lws_60um)
+lw_120um = np.mean(lws_120um)
+lw_220um = np.mean(lws_220um)
+lw_380um = np.mean(lws_380um)
+
+lws_0512 = [lw_5um, lw_60um, lw_120um, lw_220um, lw_380um]
+errs_0512 = [lws_5um_err, lws_60um_err, lws_120um_err, lws_220um_err, lws_380um_err]
+
+slws_0512, bblws_0512 = calc_lws_single(l, params2_origin, Tm = 0.0)
+slws_0512_m, bblws_0512_m = calc_lws_single(l, params2_origin-p2_errs, Tm=0.0)
+slws_0512_p, bblws_0512_p = calc_lws_single(l, params2_origin+p2_errs, Tm=0.0)
+
+
+
+###
+
+plt.figure(figsize=(10,7))
+plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="HWHM (data)")
+plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
+plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
+plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
+plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="HWHM as a function of L")
 #plt.plot(Ls, linewidths)
 #plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="broadband cavity")
@@ -432,15 +508,15 @@ plt.figure(figsize=(10,6))
 #plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 #plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 #plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
-plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 26/3)", zorder=7)
-plt.errorbar(ls_0422, lws_0422, errs_0422, fmt=".", capsize=3, color ="magenta", label="HWHM (measured on 22/4)")
+#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 26/3)", zorder=7)
+#plt.errorbar(ls_0422, lws_0422, errs_0422, fmt=".", capsize=3, color ="magenta", label="HWHM (measured on 22/4)")
 #plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
-plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
-plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
-plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double fano cavity", color="forestgreen")
-plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.3)
-plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.3)
-plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3)
+#plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband cavity")
+#plt.plot(l*1e6, slws_0326, linestyle="--", label="single fano cavity", color="orangered")
+#plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double fano cavity", color="forestgreen")
+#plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.3)
+#plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.3)
+#plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3)
 #plt.scatter(180,55)
 #plt.scatter(251,48)
 #plt.plot(l*1e6, dlws_0702)
@@ -453,16 +529,19 @@ plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.3
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
 #plt.title("HWHM as a function of cavity length")
-plt.xlabel("cavity length [μm]")
+plt.xlabel("cavity length [μm]", fontsize=28)
 #plt.xlabel("cavity losses, $L = 2(1 - |r_g|^2)$")
-plt.ylabel("HWHM [pm]")
+plt.ylabel("HWHM [pm]", fontsize=28)
 plt.xscale("log")
 plt.yscale("log")
 ax = plt.gca()
 ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
 ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
 plt.ticklabel_format(style='plain', axis="both")
-plt.legend()
+plt.xticks(fontsize=21)
+plt.yticks(fontsize=21)
+plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+plt.subplots_adjust(bottom=0.3)
 plt.show()
 
 

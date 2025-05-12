@@ -20,7 +20,7 @@ In order to effectively conduct the experiments in this project, it is imperativ
         \label{fig:setup_zoomed}
     \end{subfigure}
     \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=\textwidth]{figures/cavity_setup_pic.pdf}
+        \includegraphics[width=\textwidth]{figures/setup_cavity_picture.pdf}
         \caption{}
         \label{fig:cavity_setup_picture}
     \end{subfigure}
@@ -126,7 +126,7 @@ The cavity measurement setup shown in figure \ref{fig:setup_zoomed} is the one u
     \label{fig:setup_bottom_sketch_and_pic}
 \end{figure}
 
-Examining the structure from the bottom (as it is built), a kinematic mirror mount is attached to the lower set of xy-stages, this is used to control the angular degrees of freedom of the Fano mirror which makes up the bottom of the cavity. On the mirror mount, a piezo ring is firmly attached and connected to a piezo driver and that to a frequency generater in order to control the expansion of the piezo ring both by application alternating and fixed current. Lastly, in order to be able to place the Fano mirror or simply membrane on the  piezo ring, a ceramic Macor membrane holder is used. The bottom part of the cavity setup is highlighted in figure \ref{fig:setup_bottom}.
+Examining the structure from the bottom (as it is built), a kinematic mirror mount is attached to the lower set of xy-stages, this is used to control the angular degrees of freedom of the Fano mirror which makes up the bottom of the cavity. On the mirror mount, a \emph{NAC2123} piezo ring actuator from Noliac is firmly attached and connected to a piezo driver. The driver is capable of applying a fixed current, and thus manually controlling the piezo expansion, but is also connected to a frequency generator. The signal from the frequency generator can be used to modulate the piezo expansion by an alternating current, which practically scans the cavity length in a range according to the effective free stroke of the piezo ring\footnote{The NAC2123 piezo ring has an outer/inner diameter of $12mm/6mm$ and a height of $2mm$. Its listed free stroke is $3.3 \mu m$, which practically is likely slightly limited in the configuration used. To obtain the precise free stroke one can simply count the number of fringes resolved during one period as the length-dependent FSR is known to be $\lambda/2$.}. Lastly, in order to be able to place the Fano mirror on the  piezo ring, a ceramic Macor membrane holder is used. The bottom part of the cavity setup is highlighted in figure \ref{fig:setup_bottom}.
 
 The part of the setup built to control the Fano mirror making up the top of the cavity is slightly more complicated, as this is the Fano mirror that is, for practical reasons, aligned last. This means that additional degrees of freedom must be controled by movement of the Fano mirror itself. The alignment procedure will be explained in detail in sections \ref{sec:grating_characterization} and \ref{sec:cavity_measurements}.
 
@@ -138,7 +138,7 @@ The part of the setup built to control the Fano mirror making up the top of the 
         \label{fig:setup_top}
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{figures/cavity_setup_top_pic.pdf}
+        \includegraphics[width=\textwidth]{figures/setup_top_pic.pdf}
         \caption{}
         \label{fig:setup_top_pic}
     \end{subfigure}
@@ -187,7 +187,7 @@ In order to reduce the acoustic noise, a plexi-glas box was placed around the en
 
 In order to record a measurement of any kind in the setup, a \emph{Keysight InfiniiVision DSOX2024A} oscilloscope was connected with all the detectors $P_T$, $P_R$ and $P_I$ in the setup. The oscilloscope, along with the Toptica laser, was then controlled by a Matlab script implemented by previous students/researchers of the lab. 
 
-Scanning the piezo element, by application of an altertnating current also required additional equipment, and more specifically a frequency generator capable of generating a triangular signal with an offset. The frequency generator used was a \emph{Keysight 33500B Waveform Generator}. Insight on scanning the cavity length using the piezo will be provided in section \ref{sec:cavity_measurements}. The oscilloscope and frequency generater is shown in figure \ref{fig:scope_and_freq_generator}.
+Scanning the piezo element, by application of an altertnating current also required additional equipment, and more specifically a frequency generator capable of generating a triangular signal with an offset. The frequency generator used was a \emph{Keysight 33500B Waveform Generator}. Insight on scanning the cavity length using the piezo will be provided in section \ref{sec:cavity_measurements}. The oscilloscope and frequency generater are shown in figure \ref{fig:scope_and_freq_generator}.
 
 \begin{figure}[h!]
     \centering

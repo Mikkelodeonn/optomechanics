@@ -15,14 +15,21 @@ Before considering beginning to align the double Fano cavity, it is imperative t
 Assuming a match is found, which we denote $G_1$ and $G_2$\footnote{$G$ here stands for \emph{grating} while $1,2$ is indicative of the destinction between the two arbitrary Fano mirrors.}, the alingment process is given as follows: 
 \begin{enumerate}
     \item The bottom, i.e. the arbitrary Fano mirror $G_1$, of the cavity is aligned according to the procedure outlined in section \ref{sec:grating_characterization}. This means that the incident beam is centered on and normal\footnote{A trick to determine the degree of accuracy of the angular alignment is to periodically block the light reflected from the Fano mirror, and thus make this flicker. This way the flickering light is easily distinguishable from the incoming light and by examining the light at apertures $I_2$ and $I_1$ from all sides perpendicular to the propagation direction, the needed angular adjustments become clear.} to $G_1$, and the polarization of the light is aligned such that the electric field is perpendicular to the grating lines. The wavelength of the laser is scanned, and the one corresponding to the guided-mode resonance of $G_1$ is recorded.  
-    \item The bottom grating position is marked and the macor membrane holder (see figure \ref{fig:setup_zoomed}) containing $G_1$ is removed and stored safely. Now the laser polarization and spacial coordinates of $G_1$ are fixed and must not be changed in the following steps of the alignment procedure.
+    \item The bottom grating position is marked and the macor membrane holder (the macor membrane holder can be seen in figure \ref{fig:setup_zoomed}) containing $G_1$ is removed and stored safely. Now the laser polarization and spacial coordinates of $G_1$ are fixed and must not be changed in the following steps of the alignment procedure. The marks used to indicate the position of $G_1$ is shown in figure \ref{fig:bottom_with_alginment_mark}.
     \item The top part of the cavity is inserted, but \emph{without} the other Fano mirror $G_2$ in place, as the kinetic mirror- and rotational mounts first need to be centered in the beam. This is done by inserting a $100 \mu m$ pinhole, specifically designed for the purpose, into the rotational mount. The spacial and angular coordinates of the top mount is thus changed to maximize the signal through the pinhole. The centering is then tested by rotating the pinhole and ensuring that the signal does not change, i.e. that the center of the rotational mount does not move out of the beam by rotating it. When this is satisfied, the top mount is removed and the spacial coordinates are considered aligned and thus fixed. The so-called \emph{pinholde alingment method} will be explaied in greater detail in section \ref{sec:pinhole_method}.
     \item The Fano mirror $G_2$ is placed, with tape, onto the xy-adjustable mount (see figure \ref{fig:setup_zoomed}), which is then fastened to the rotational mount. The top mount now completely resembles the one shown in figure \ref{fig:cavity_setup_top_separate_pic}. $G_2$ is now aligned following a similar structure as the one outlined in section \ref{sec:grating_characterization}, but with the contraint of the above parameters being fixed. $G_2$ is moved into a position where it is centered with respect to the incident beam by adjusting the xy-adjustable mount, and the Fano mirror itself is now rotated to match the polarization of the laser. The angular alignment is done very similarly to that of $G_1$, as the kinetic mirror mount is here used. When $G_2$ is aligned, the wavelength is once again scanned, and the one matching the guided-mode of $G_2$ is recorded.
     \item The top mount, including $G_2$, is now removed from the setup and all degrees of freedom are expected to be aligned. The trick to make sure that the angular alignment is preserved when re-inserting the top mount is that the back reflection is centered in the aperture $I_4$ depicted in figure \ref{fig:setup_sketch}, this way one can quite easily regain the approximate angular alignment.
-    \item The macor mebrane holder, with $G_1$ placed on it, is now re-inserted into the bottom of the setup and the Toptica laser is set to the guided-mode resonance wavelength according to $G_1$. In this way $G_1$ is carefully placed according to the marked position and adjusted, by hand, to achieve the same minimum transmission as before it was removed. 
+    \item The macor mebrane holder, with $G_1$ placed on it, is now re-inserted into the bottom of the setup and the Toptica laser is set to the guided-mode resonance wavelength according to $G_1$. In this way $G_1$ is carefully placed according to the marked position (see figure \ref{fig:bottom_with_alginment_mark}) and adjusted, by hand, to achieve the same minimum transmission as before it was removed. 
     \item The top mount, including $G_2$, is now too re-inserted, and adjusted by hand such that the back-reflected beam overlaps with the aperture $I_4$. 
     \item The wavelength of the Toptica laser is now set to the transmission wavelength given in eq. (\ref{eq:transmission_wavelength}), the wavelength exactly between the guided-mode resonance wavelengths of $G_1$ and $G_2$, i.e. $\lambda_t = (\lambda_{0,G_1} + \lambda_{0,G_2})/2$. 
 \end{enumerate}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/bottom_with_alignement_mark.pdf}
+    \caption{A close-up of the bottom part of the cavity with a Fano mirror placed on the macor membrane holder. Note the marks used to re-insert the bottom part of the cavity as mentioned in steps 2 and 6.}
+    \label{fig:bottom_with_alignment_mark}
+\end{figure}
 
 \subsubsection{Cavity resonance - the piezo ring}
 
@@ -146,9 +153,21 @@ When aligning the top part of the cavity setup seen in figure \ref{fig:setup_top
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/pinhole_sketch.pdf}
-    \caption{Sketch of the pinhole used for centering the rotational- and kinetic mirror mounts in the incident beam. The side view of the pinhole is included to mark the pinhole diameter clearly while the angled view provides a visual representation of the actual component.}
-    \label{fig:pinhole_sketch}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=6cm]{figures/pinhole_sketch.pdf}
+        \caption{}
+        \label{fig:pinhole_sketch}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[height=6cm]{figures/pinhole_picture.pdf}
+        \caption{}
+        \label{fig:pinhole_picture}
+    \end{subfigure}
+    \caption{In (a) is a sketch of the pinhole used for centering the rotational- and kinetic mirror mounts in the incident beam. The side view of the pinhole is included to mark the pinhole diameter clearly while the angled view provides a visual representation of the actual component. (b) shows a picture of the rotational mount, seen from the top, with the pinhole inserted.}
+    \label{fig:pinhole_sketch_and_picture}
 \end{figure}
 
 By moving the xy-stages in the cavity setup, it proved possible to achieve the centering of the rotational mount by moving the setup, with the pinhole inserted, until the transmission signal was maximized. Another test of the alignment was here to rotate the mount and thus pinhole and ensure that the signal intensity was as close to rotationally invariant as possible. Figure \ref{fig:pinhole_position_on_gaussian} shows an arbitrary gaussian distribution resembling the transverse distribution of a laser beam in the TEM00 mode and two shaded regions imitating the position of the pinhole. The red shaded region shows an \emph{unaligned} pinhole position while the green one is perfectly \emph{aligned} in the center of the beam. It is shown on the figure that the red area covers an intensity corresponding to $15.8\%$ of the maximum intensity, while this value for the aligned green region is approximately double at $30.53\%$.
@@ -160,11 +179,41 @@ By moving the xy-stages in the cavity setup, it proved possible to achieve the c
     \label{fig:pinhole_position_on_gaussian}
 \end{figure}
 
-\subsubsection{Parallelism study (deviation from normal incident) - include this as an alignment technique (off-resonance Fabry-Perot)}\label{sec:parallelism}
+\subsubsection{Estimating parallelism}\label{sec:parallelism}
 
-Figure/equations:
-\begin{itemize}
-    \item Calculate/plot the maximum intensity for the direct reflectivities for M3 and M5. 
-    \item plot the best found FSR spectrum to compare and calculate the angle away from normal according to the formula from the paper. 
-\end{itemize}
+A key difference between the single and double Fano cavity transmission spectra, is the off-resonance behavior. While the maximum transmission intensity for the single Fano will generally be lower than the Fano resonance peak, the opposite tends to be the case for the double Fano cavity. The direct reflectivities and transmissions $r_d$ and $t_d$ are similar, if not identical, for the two Fano mirrors, which means that the off-resonance Fabry-Perot-like transmission reaches a maximum of close to unity. The initial alignment of the cavity can thus be done by maximizing the off-resonance fringes. Due to the much broader peaks in this spectral regime, the fringes will be much less sensitive than the resonance peak. For this reason additional optimization is likely necessary. 
 
+Nair et al. \cite{Nair} has proposed an analytical formula to estimate the wedge angle by considering the maximum transmission $T_{MAX}$ of these Fabry-Perot fringes. $T_{MAX}$ is given as 
+\begin{equation}
+    T_{MAX} \approx 1 - \left(\frac{F \pi w_0}{\lambda}\right)^2 \varepsilon^2,
+\end{equation}
+for a cavity of identical resonators, and as this is not necesarrily the case for an arbitrary double Fano cavity we make the substitution $1 \rightarrow T_{MAX}^{optimal}$ to include the highest possible transmission given a set of compatible Fano mirrors. The expression now simply reads
+\begin{equation}
+    T_{MAX} \approx T_{MAX}^{optimal} - \left(\frac{F \pi w_0}{\lambda}\right)^2 \varepsilon^2,
+\end{equation}
+where $T_{MAX}^{optimal}$ is the maximum transmission for a wedge angle of $0$, $w_0$ is the beam waist, $\lambda$ is the wavelength, $\varepsilon$ is the wedge angle in radians and $F$ is the coefficient of finesse \cite{Pedrotti} given as
+\begin{equation}
+    F = \frac{4R}{(1-R)^2}.
+\end{equation}
+Rearranging this, for the wedge angle $\varepsilon$ we get
+\begin{equation}
+    \varepsilon \approx \sqrt{\left(T_{MAX}^{optimal} - T_{MAX} \right)} \left(\frac{\lambda}{F \pi w_0}\right).
+\end{equation}
+An example of a normalized off-resonance transmission spectrum of a double Fano cavity is shown in figure \ref{fig:parallelism_plot}. The blue line indicates a least squares fit of the data points to the Fabry-Perot transmission function seen in eq. (\ref{eq:fabry_perot_trans}), while the red line indicates the optimal transmission for the same Fano mirrors as was used for the measurement. The maximum transmission recorded and the optimal value was found as
+\begin{equation}
+    T_{MAX} = 83.3\% \hspace{0.5cm} \text{and} \hspace{0.5cm} T_{MAX}^{optimal} = 97.1\%,
+\end{equation}
+which yields for the wedge angle 
+\begin{equation}
+    \varepsilon \approx 0.24 \: \text{mrad} = 0.014^{\circ},
+\end{equation}
+assuming a beam waist of $w_0 = 160 \mu m$ and direct refletivities and transmissions $r_d = 57\%$, $r_d^{\prime} = 57.5\%$ and $t_d = t_d^{\prime} = 81.4\%$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/parallelism_plot.pdf}
+    \caption{Example of a normalized off-resonance transmission peak of a double Fano cavity of direct reflectivities $r_d = 57\%$ and $r_d^{\prime}=57.5\%$ and direct transmissions $t_d = t_d^{\prime} = 81.4\%$. The blue line is a least squares fit of the data to the Fabry-Perot transmission function while the red line is the optimal value of the same function. The red shaded area indicate the differnce between the two.}
+    \label{fig:parallelism_plot}
+\end{figure}
+
+It is thus clear that while the sensitivity is of the off-resonance Fabry-Perot fringes is lower than that of the Fano resonance peak, they still provide a significant measure of the parallelism and is thus useful for initial cavity alignment.

@@ -489,6 +489,40 @@
       \field{title}{Measurements and their Uncertainties - A Practical Guide to Modern Error Analysis}
       \field{year}{2010}
     \endentry
+    \entry{Nair}{article}{}
+      \name{author}{3}{}{%
+        {{hash=46807388cfa003ccb2796375ea2a8964}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=44676957c65c010f1927f30b34b0492b}{%
+           family={Naesby},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{fullhash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{bibnamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authorbibnamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authornamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authorfullhash}{9e01d878851fa33384ec47f56505b71e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Letter}
+      \field{number}{7}
+      \field{title}{Optomechanical characterization of silicon nitride membrane arrays}
+      \field{volume}{42}
+      \field{year}{2017}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

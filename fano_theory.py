@@ -43,7 +43,7 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
 #λs = np.linspace(951.650, 951.950, 100)
-λs = np.linspace(950, 953, 1000) # 950, 952
+λs = np.linspace(950.500, 951.500, 90) # 950, 952
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
 
@@ -832,9 +832,9 @@ def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavi
 
 #### length scan of the single and double fano cavities
 
-l=100
-ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
-double_fano_length_scan(params1, params1, ls, λs, plot_both_gratings=False)
+#l=100
+#ls = np.linspace(l*1e3, (l+1)*1e3, 10000)
+#double_fano_length_scan(params1, params1, ls, λs, plot_both_gratings=False)
 #single_fano_length_scan(params1, ls, λs)
 
 
@@ -969,7 +969,7 @@ def broadband_transmission(λ, l, R): ## lossless
     T = np.abs(tm**2*np.exp(1j*(2*np.pi/λ)*l)/(1-rm**2*np.exp(2j*(2*np.pi/λ)*l)))**2
     return T 
 
-lmin = 30
+lmin = 10
 single_length = resonant_cavity_length(params1, λs, lmin=lmin, losses=False)
 print("single fano length: ", single_length*1e-3, "μm") 
 double_length = double_cavity_length(params1, params1, λs, lmin=lmin, losses=False)# + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
@@ -980,10 +980,10 @@ print("double fano length", double_length*1e-3, "μm")
 #double_length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
 #double_length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
 #double_length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
-bb_ts = broadband_transmission(λs, single_length, 0.60)
+bb_ts = broadband_transmission(λs, single_length, 0.95)
 #bb_ts2 = broadband_transmission(λs, single_length, 0.90)
-single_ts = fano_cavity_transmission(params1, single_length, λs, intracavity=False, losses=False)
-double_ts = dual_fano_transmission(params1, params1, double_length, λs, intracavity=False, losses=False)
+single_ts = fano_cavity_transmission(params1, single_length, λs, intracavity=True, losses=False)
+double_ts = dual_fano_transmission(params1, params1, double_length, λs, intracavity=True, losses=False)
 #double_ts1 = dual_fano_transmission(params1, params2, double_length1, λs, intracavity=False, losses=False)
 #double_ts2 = dual_fano_transmission(params1, params2, double_length2, λs, intracavity=False, losses=False)
 #double_ts3 = dual_fano_transmission(params1, params2, double_length3, λs, intracavity=False, losses=False)
@@ -1003,16 +1003,15 @@ percentile_loss = round((1-r_max-t_min)*1e2,2) ## in percent
 losses = [0.0, 0.02, 0.06, 0.12, 0.24, 0.48] ## in percent
 lws = [26.9, 32.126, 42.732, 59.052, 93.306, 169.794] ## in pm
 
-
 ## Figure convention -> double fano: forestgreen, single fano: orangered, broadband: royalblue, grating_ref: blueviolet
 
 #popt1, pcov = curve_fit(model, λs[4800:6800], double_ts1[4800:6800], p0=[951,951,0.6,0.1,1e-6])
 #popt2, pcov = curve_fit(model, λs[4800:6800], double_ts2[4800:6800], p0=[951,951,0.6,0.1,1e-6])
 #popt3, pcov = curve_fit(model, λs[4800:6800], double_ts3[4800:6800], p0=[951,951,0.6,0.1,1e-6])
 
-popt, pcov = curve_fit(model, λs, grating_trans1, p0=params1, maxfev=10000)
-popt1, _ = curve_fit(model, λs, grating_trans2, p0=params1, maxfev=10000)
-popt2, _1 = curve_fit(model, λs, rs1, p0=params1, maxfev=10000)
+popt, pcov = curve_fit(model, λs, bb_ts, p0=params1, maxfev=10000)
+popt1, _ = curve_fit(model, λs, single_ts, p0=params1, maxfev=10000)
+popt2, _1 = curve_fit(model, λs, double_ts, p0=params1, maxfev=10000)
 popt3, _2 = curve_fit(model, λs, rs2, p0=params1, maxfev=10000)
 
 
@@ -1022,9 +1021,9 @@ popt3, _2 = curve_fit(model, λs, rs2, p0=params1, maxfev=10000)
 
 print(min(grating_trans1) + max(rs1) + max(grating_losses))
 
-fig, ax = plt.subplots(figsize=(10,6))
-plt.plot(λs, rs1, color="steelblue", label="reflectivity: $|r_{max}|^2 =$ %s%%" % str(round(max(rs1)*1e2,2)))
-plt.plot(λs, grating_trans1, color="maroon", label="transmission: $|t_{min}|^2 =$ %s%%" %str(round(min(grating_trans1)*1e2,2)))
+fig, ax = plt.subplots(figsize=(10,7))
+#plt.plot(λs, rs1, color="steelblue", label="reflectivity: $|r_{max}|^2 =$ %s%%" % str(round(max(rs1)*1e2,2)))
+#plt.plot(λs, grating_trans1, color="maroon", label="transmission: $|t_{min}|^2 =$ %s%%" %str(round(min(grating_trans1)*1e2,2)))
 #plt.plot(λs, grating_losses, color="blueviolet", label="losses: $L_{max} =$ %s%%" % str(round(max(grating_losses)*1e2,2)))
 #plt.scatter(λs, rs2, color="lightskyblue", marker=".")
 #plt.scatter(λs, grating_trans2, color="indianred", marker=".")
@@ -1046,14 +1045,15 @@ plt.plot(λs, grating_trans1, color="maroon", label="transmission: $|t_{min}|^2 
 
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="$\\delta \\lambda (L)$")
 
-#plt.plot(λs, bb_ts, color="royalblue", linestyle="-", label="broadband simulation")
+#plt.scatter(λs, bb_ts, color="royalblue", marker=".", label="broadband sim.")
 #plt.scatter(λs, ts, color="forestgreen", marker=".", label="double fano: $L_{total}$ = %s%%" %str(2*abs(percentile_loss)))
-#plt.plot(λs, rs1, color="blueviolet", linestyle=":", label="grating reflectivity", zorder=1)
-#plt.plot(λs, double_ts, color="forestgreen", linestyle="-", label="double fano simulation",zorder=2)
-#plt.plot(λs, single_ts, color="orangered", linestyle="-.", label="single fano simulation",zorder=3)
+#plt.plot(λs, rs1, color="blueviolet", linestyle="-.", label="grating reflectivity", zorder=1)
+plt.scatter(λs, double_ts, color="forestgreen", marker=".", label="double Fano sim.",zorder=2)
+plt.scatter(λs, single_ts, color="orangered", marker=".", label="single Fano sim.",zorder=3)
 
-#plt.plot(λ_fit, model(λ_fit, *popt), color="royalblue", alpha=0.5, label="fit: HWHM $\\approx$ %spm" % str(round(abs(popt[3])*1e3,3)))
-#plt.plot(λ_fit, model(λ_fit, *popt1), color="orangered", alpha=0.5, label="single fano cavity: HWHM $\\approx$ %spm" % str(round(abs(popt1[3])*1e3,3)))
+#plt.plot(λs_fit, model(λs_fit, *popt), color="royalblue", alpha=0.5, label="$HWHM_{broadband} \\approx$ %spm" % str(round(abs(popt[3])*1e3,3)))
+plt.plot(λs_fit, model(λs_fit, *popt1), color="orangered", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(popt1[3])*1e3,3)))
+plt.plot(λs_fit, model(λs_fit, *popt2), color="forestgreen", alpha=0.5, label="$HWHM_{double} \\approx$ %spm" % str(round(abs(popt2[3])*1e3,3)))
 
 #plt.plot(λs, bb_ts2, color="firebrick", linestyle="-", label="$|r|^2 = 0.90$")
 #plt.plot(λs, single_ts, color="orangered", linestyle="-", label="single fano cavity")
@@ -1062,21 +1062,26 @@ plt.plot(λs, grating_trans1, color="maroon", label="transmission: $|t_{min}|^2 
 #ax.plot(λs, double_ts2, color="magenta", linestyle="--")
 #ax.plot(λs, double_ts3, color="cyan", linestyle="-.")
 #plt.title("Lossless cavity transmission comparison")
-plt.xlabel("wavelength [nm]")
+#plt.xlabel("wavelength [nm]")
 #plt.xlabel("cavity losses, $L = 2(1 - |r_g|^2 - |t_g|^2)$")
 #plt.ylabel("HWHM [pm]")
-plt.ylabel("normalized transmission [arb. u.]")
+#plt.ylabel("normalized transmission [arb. u.]")
 #plt.ylabel("$|E_{out}|^2/|E_{0,in}|^2$")
-plt.legend(loc="upper right")
-#plt.show()
+plt.xlabel("wavelength [nm]", fontsize=28)
+plt.xticks(fontsize=21)
+plt.yticks(fontsize=21)
+plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=2)
+plt.subplots_adjust(bottom=0.3)
+plt.show()
 
 Δs = [0, 0.2, 0.5, 0.8, 1.2]
 
 #detuning_plot(Δs, params1, λs, intracavity=True, losses=False, lmin=30)
 
-l1 = double_cavity_length(params1, params2, λs, lmin=30, losses=False)
-l2 = double_cavity_length(params2, params1, λs, lmin=30, losses=False)
-ls = np.linspace(l1,l2,5)
+#l1 = double_cavity_length(params1, params2, λs, lmin=30, losses=False)
+#l2 = double_cavity_length(params2, params1, λs, lmin=30, losses=False)
+#ls = np.linspace(l1,l2,5)
 #cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=False, zoom=False)
 #dual_fano_transmission_plot(params1, params2, double_length, λs, intracavity=False, losses=False, zoom=True, grating_trans=True)
 
