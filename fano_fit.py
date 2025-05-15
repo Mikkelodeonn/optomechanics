@@ -57,11 +57,11 @@ line_width_fit = True
 
 cavity_length_guess = 500
 
-scan_num = 5
+scan_num = 4
 scan_type = "s"
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/5um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/5um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/220um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/220um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
 
@@ -160,8 +160,8 @@ if line_width_fit == False:
     plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
     plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
     #plt.title("M3/M5 double fano transmission")  
-    plt.xlabel("wavelength [nm]", fontsize=28)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+    plt.xlabel("wavelength [nm]", fontsize=24)
+    plt.ylabel("norm. trans. [arb. u.]", fontsize=24)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
@@ -171,7 +171,7 @@ if line_width_fit == False:
     plt.yticks(fontsize=21)
     plt.show()
 else:
-    p0 = [1, 0.1, 0, 951.830, 30e-3]
+    p0 = [1, 0.1, 0, 951.830, 20e-3]
     bounds = [[0, 0, -np.inf, 0, 0],[np.inf, np.inf, np.inf, np.inf, np.inf]]
     popt,pcov = curve_fit(fit_model, data[left:right][:,0], data[left:right][:,1], p0=p0, bounds=bounds, maxfev=1000000)
 
@@ -191,8 +191,8 @@ else:
     plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
     plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
-    plt.xlabel("wavelength [nm]", fontsize=28)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+    plt.xlabel("wavelength [nm]", fontsize=24)
+    plt.ylabel("norm. trans. [arb. u.]", fontsize=24)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)

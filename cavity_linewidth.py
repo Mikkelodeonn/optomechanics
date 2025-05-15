@@ -151,12 +151,20 @@ l = np.linspace(15,400,1000)*1e-6
 M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
-M5_single = fano("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/grating trans/M5_trans.txt")
-M5_single_params = M5_single.lossy_fit([952, 952, 0.6, 1, 0.1])
+M5_single = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/grating trans/M5_trans.txt")
+M5_single_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/grating trans/M5_trans_PI.txt")
+M5_single_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/grating_trans_PI.txt")
+M5_single_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/grating_trans_PI.txt")
+M5_single[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5_single[:,1], M5_single_PI[:,1], M5_single_norm[:,1], M5_single_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+
+M5_single_params, pcov_M5_single = curve_fit(model, M5_single[:,0], M5_single[:,1], p0=[951.8, 951.8, 0.1, 0.5, 1e-6])
+M5_single_errs = np.sqrt(np.diag(pcov_M5_single))
 print(M5_single_params)
 
 params1_origin = M3.lossy_fit([952,952,0.6,1,0.1])
-params2_origin = M5.lossy_fit([952,952,0.6,1,0.1])
+params2_origin, params2_origin_errs = M5.lossy_fit([952,952,0.6,1,0.1], with_errors=True)
+
+
 
 M31 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250226/grating trans. spectra/M3/M3_trans.txt")
 M51 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250303/grating trans. spectra/M5/M5_trans_630.txt")
@@ -479,16 +487,14 @@ lw_380um = np.mean(lws_380um)
 lws_0512 = [lw_5um, lw_60um, lw_120um, lw_220um, lw_380um]
 errs_0512 = [lws_5um_err, lws_60um_err, lws_120um_err, lws_220um_err, lws_380um_err]
 
-slws_0512, bblws_0512 = calc_lws_single(l, params2_origin, Tm = 0.0)
-slws_0512_m, bblws_0512_m = calc_lws_single(l, params2_origin-p2_errs, Tm=0.0)
-slws_0512_p, bblws_0512_p = calc_lws_single(l, params2_origin+p2_errs, Tm=0.0)
-
-
+slws_0512, bblws_0512 = calc_lws_single(l, params2_origin, Tm = 0.005)
+slws_0512_m, bblws_0512_m = calc_lws_single(l, params2_origin-params2_origin_errs, Tm=0.005)
+slws_0512_p, bblws_0512_p = calc_lws_single(l, params2_origin+params2_origin_errs, Tm=0.005)
 
 ###
 
 plt.figure(figsize=(10,7))
-plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="HWHM (data)")
+plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="data")
 plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
 plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
 plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)

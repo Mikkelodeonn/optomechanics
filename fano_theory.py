@@ -55,6 +55,14 @@ def model(λ, λ0, λ1, td, γλ, β):
     t = td * (k - k0 + 1j * β) / (k - k1 + 1j * γ)
     return np.abs(t)**2
 
+def lossless_model(λ, λ0, λ1, td, γλ): 
+    k = 2*np.pi / λ
+    k0 = 2*np.pi / λ0
+    k1 = 2*np.pi / λ1
+    γ = 2*np.pi / λ1**2 * γλ
+    t = td * (k - k0) / (k - k1 + 1j * γ)
+    return np.abs(t)**2
+
 def fit_model(λ, a, b, c, λ0, δλ): ## generel fano model
     γ = 1 - c*((λ-λ0)/δλ)
     t = (a/(1 + ((λ-λ0)/(δλ*γ))**2)) + b
@@ -318,14 +326,14 @@ def double_fano_length_scan(params1: list, params2: list, ls: np.array, λs: np.
         plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
         plt.plot(ls*1e-3, Ts_2, "--", color="lightcoral", label="$l_{res,M5}$: %sμm" % str(round(resonance_length_2,3)))
     else:
-        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
+        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res}$: %sμm" % str(round(resonance_length,3)))
     #plt.title("Double fano cavity transmission as a function of cavity length")
     plt.xlabel("cavity length [μm]", fontsize=24)
     plt.ylabel("transmission [arb. u.]", fontsize=24)
     plt.xticks(fontsize=21)
     plt.yticks(fontsize=21)
-    #plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
-    #plt.subplots_adjust(bottom=0.3)
+    plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+    plt.subplots_adjust(bottom=0.3)
     plt.show()
  
 def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
@@ -1043,17 +1051,41 @@ fig, ax = plt.subplots(figsize=(10,7))
 #axins.set_yticklabels([])
 #mark_inset(ax, axins, loc1=1, loc2=3, edgecolor="black", alpha=0.3)
 
+mist_data = np.loadtxt("/Users/mikkelodeon/optomechanics/MIST/data/MIST_ref.txt", skiprows=1)
+mist_ref = [np.zeros(len(mist_data)),np.zeros(len(mist_data))]
+mist_ref[0] = [d[0]*1e3 for d in mist_data]; mist_ref[1] = [d[1] for d in mist_data]
+
+mist_trans = np.copy(mist_ref)
+mist_trans[1] = [1-r for r in mist_trans[1]]
+
+tparams, _ = curve_fit(model, mist_trans[0], mist_trans[1], p0=[951.2, 951.2, 0.7, 0.5, 0], maxfev=10000)
+rparams, _ = curve_fit(model, mist_ref[0], mist_ref[1], p0=[951.2, 951.2, 0.3, 0.5, 0], maxfev=10000)
+
+xfit = np.linspace(mist_ref[0][0], mist_ref[0][-1], 10000)
+
+plt.scatter(mist_trans[0], mist_trans[1], marker=".", color="royalblue", label="ref. MIST")
+plt.scatter(mist_ref[0], mist_ref[1], marker=".", color="firebrick", label="trans. MIST")
+plt.plot(xfit, model(xfit, *rparams), color="firebrick", alpha=0.4, label="ref. fit")#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $r_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(rparams[:-1])) 
+plt.plot(xfit, model(xfit, *tparams), color="royalblue", alpha=0.4, label="trans. fit")#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $t_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(tparams[:-1]))
+
+
+
+print("λ0 = ", tparams[0], "λ1 = ", tparams[1], "td = ", tparams[2], "rd = ", rparams[2], "γλ = ", tparams[3])
+
+#print(tparams)
+#print(rparams)
+
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="$\\delta \\lambda (L)$")
 
 #plt.scatter(λs, bb_ts, color="royalblue", marker=".", label="broadband sim.")
 #plt.scatter(λs, ts, color="forestgreen", marker=".", label="double fano: $L_{total}$ = %s%%" %str(2*abs(percentile_loss)))
 #plt.plot(λs, rs1, color="blueviolet", linestyle="-.", label="grating reflectivity", zorder=1)
-plt.scatter(λs, double_ts, color="forestgreen", marker=".", label="double Fano sim.",zorder=2)
-plt.scatter(λs, single_ts, color="orangered", marker=".", label="single Fano sim.",zorder=3)
+#plt.scatter(λs, double_ts, color="forestgreen", marker=".", label="double Fano sim.",zorder=2)
+#plt.scatter(λs, single_ts, color="orangered", marker=".", label="single Fano sim.",zorder=3)
 
 #plt.plot(λs_fit, model(λs_fit, *popt), color="royalblue", alpha=0.5, label="$HWHM_{broadband} \\approx$ %spm" % str(round(abs(popt[3])*1e3,3)))
-plt.plot(λs_fit, model(λs_fit, *popt1), color="orangered", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(popt1[3])*1e3,3)))
-plt.plot(λs_fit, model(λs_fit, *popt2), color="forestgreen", alpha=0.5, label="$HWHM_{double} \\approx$ %spm" % str(round(abs(popt2[3])*1e3,3)))
+#plt.plot(λs_fit, model(λs_fit, *popt1), color="orangered", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(popt1[3])*1e3,3)))
+#plt.plot(λs_fit, model(λs_fit, *popt2), color="forestgreen", alpha=0.5, label="$HWHM_{double} \\approx$ %spm" % str(round(abs(popt2[3])*1e3,3)))
 
 #plt.plot(λs, bb_ts2, color="firebrick", linestyle="-", label="$|r|^2 = 0.90$")
 #plt.plot(λs, single_ts, color="orangered", linestyle="-", label="single fano cavity")
@@ -1070,12 +1102,12 @@ plt.plot(λs_fit, model(λs_fit, *popt2), color="forestgreen", alpha=0.5, label=
 plt.xlabel("wavelength [nm]", fontsize=28)
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
-plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
-plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=2)
+plt.ylabel("norm. ref./trans. [arb. u.]", fontsize=28)
+plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
 plt.subplots_adjust(bottom=0.3)
 plt.show()
 
-Δs = [0, 0.2, 0.5, 0.8, 1.2]
+#Δs = [0, 0.2, 0.5, 0.8, 1.2]
 
 #detuning_plot(Δs, params1, λs, intracavity=True, losses=False, lmin=30)
 
