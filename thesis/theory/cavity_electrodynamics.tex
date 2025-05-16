@@ -10,19 +10,19 @@ The Fabry-Perot interferometer, also known as an optical cavity, is generally co
     \label{fig:planar_fabry-perot}
 \end{figure}
 
-The two mirrors are described by each their respective reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$\cite{Eichhorn} \cite{Pedrotti}. The Fabry-Perot cavity furthermore gives rise to so-called eigenstates related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams throught the cavity. Any allowed mode inside the cavity, and thus transmitted, must fulfill the brightness condition $2l = m \lambda$, where $\lambda$ is the wavelength of the incident field and $m=1,2,3,...$ is a positive integer.  
+The two mirrors are described by each their respective reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$\cite{Eichhorn}\cite{Pedrotti}. The Fabry-Perot cavity furthermore gives rise to so-called eigenstates related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams through the cavity. Any allowed mode inside the cavity, and thus transmitted, must fulfill the brightness condition $2l = m \lambda$, where $\lambda$ is the wavelength of the incident field and $m=1,2,3,...$ is a positive integer.  
 
 \subsubsection{Transmission}
 
-In order to determine the transmission throught the Fabry-Perot interferometer, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further, initially, assumed that resonators are both lossless, such that
+In order to determine the transmission throught the Fabry-Perot cavity, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further, initially, assumed that the mirrors are both lossless, such that
 \begin{equation}
     |r|^2 + |t|^2 = |r^{\prime}|^2 + |t^{\prime}|^2 = 1.
     \label{eq:lossless_condition}
 \end{equation}
 
-This means that all losses, e.g. absorption, are neglected. 
+This means that all losses, e.g. due to absorption or scattering, are neglected. 
 
-In order to formulate the field transmitted at the 2nd mirror $E_{out}$ in terms of the incident field at the 1st mirror $E_{in}$, we first consider the incident field as a propagating plane-wave
+In order to formulate $E_{out}$ in terms of $E_{in}$, we first consider the incident field as a propagating plane-wave
 \begin{equation}
     E_{in} = E_{0,in} e^{ik},
 \end{equation}
@@ -42,12 +42,12 @@ By evaluating the series it is seen that it converges to the final expression fo
     \label{eq:fabry_perot_trans}
 \end{equation}
 
-The intensity of the transmission is now taken as the square of the norm of the field amplitude $|E_{out}|^2$ and normalizing with respect to the incident field intensity $|E_{0,in}|^2$ we arrive at an expression for the transmission intensity which is recognized to be given as an \emph{Airy function}\cite{Pedrotti}
+The intensity of the transmission is now taken as the square of the norm of the field amplitude $|E_{out}|^2$ and normalizing with respect to the incident field intensity $|E_{0,in}|^2$. We arrive at an expression for the transmission intensity which is recognized to be given on the form of an \emph{Airy function}\cite{Pedrotti}
 \begin{equation}
     T = \frac{|E_{out}|^2}{|E_{0,in}|^2} = \left|\frac{tt^{\prime}e^{i\delta/2}}{1 - rr^{\prime}e^{i \delta}}\right|^2 = \frac{(1-|r|^2)(1-|r^{\prime}|^2)}{(1-|rr^{\prime}|)^2 + 4|rr^{\prime}|sin^2(\delta)},
     \label{eq:airy_function}
 \end{equation}
-where $\delta$ is the phase shift for each round trip inside the cavity.
+where $\delta$ is the phase shift associated with each round trip inside the cavity.
 
 \begin{figure}[h!]
     \centering
@@ -63,7 +63,7 @@ Figure \ref{fig:fabry_perot_trans} displays the Airy function in eq. (\ref{eq:ai
 \end{equation}
 where $FSR$ is the so-called \emph{Free Spectral Range} indicating the spectral distance between two peaks and $\delta_{\lambda}$ refers to the \emph{Full Width at Half Maximum (FWHM)} which, as the name suggests, is the linewidth defined at $T=1/2$, i.e. at half the maximum value. 
 
-Considering the Airy function in eq. (\ref{eq:airy_function}) for the high finesse case where $|r|^2 = |r^{\prime}|^2 \rightarrow 1$ we furthermore see that each individual peak resembles a Lorentzian distribution. 
+Considering the Airy function in eq. (\ref{eq:airy_function}) for the high finesse case where $|r|^2 = |r^{\prime}|^2 \rightarrow 1$ we furthermore see that each individual peak closely resembles a Lorentzian distribution. 
 
 \subsubsection{Varying the cavity length}
 
@@ -72,9 +72,9 @@ In order to relate the resonance transmission profile to the length of the cavit
     \nu_n = n \frac{c}{2l},
     \label{eq:resonance_freq}
 \end{equation}
-where $c$ is the speed of light, $n$ is a positive integer refering to the order of the resonance frequency and $l$ is the cavity length. This corresponds to a peak occuring at times related to each round trip inside the cavity. 
+where $c$ is the speed of light, $n$ is a positive integer refering to the order of the resonance frequency and $l$ is the cavity length. This corresponds to resonance occuring at times related to each round trip inside the cavity. 
 
-Since the FSR is defined as the spectral distance between each peak, it follows from eq. (\ref{eq:resonance_freq}) that it can be be expressed in terms of the resonance frequencies as 
+Since the FSR is defined as the spectral distance between each peak, it follows from eq. (\ref{eq:resonance_freq}) that it can be be expressed in units of frequency as 
 \begin{equation}
     FSR_{\nu} = \frac{c}{2l},
     \label{eq:FSR_vs_cavity_length}
@@ -123,6 +123,7 @@ The coefficient of finess $F$ is not to be confused with the finesse $\mathcal{F
 Rewriting the Airy function in terms of the coefficient of finesse yields
 \begin{equation}
     T_{\lambda} = \frac{1}{1+ F sin^2 \left(\delta / 2\right)},
+    \label{eq:simplified_airy_function}
 \end{equation}
 where the round trip phase shift $\delta$ is related to the wavelength $\lambda$ of the incident light by
 \begin{equation}
@@ -130,7 +131,7 @@ where the round trip phase shift $\delta$ is related to the wavelength $\lambda$
 \end{equation}
 as $k = 2 \pi / \lambda$ is the incident wave number.
 
-Re-writing the general cavity brightness condition, it can be shown that the resonant wavelengths for a cavity at normal incident are given as
+Re-writing the general cavity brightness condition, it can be shown that the resonant wavelengths for a cavity at normal incidence are given as
 \begin{equation}
     \lambda_n = \frac{2l}{n},
 \end{equation}
@@ -142,10 +143,9 @@ Since $\nu = c / \lambda$, the relation between the linewidth in wavelength spac
 \end{equation}
 Finally we consider the definition for the finesse $\mathcal{F}$ and the expression given in eq. (\ref{eq:lossless_finesse}), in order to show that the $FSR$ in wavelength space is given as 
 \begin{equation}
-    FSR_{\lambda} = \delta_{\lambda} \cdot \mathcal{F} =  \frac{\lambda^2}{2l}.
+    FSR_{\lambda} \equiv \delta_{\lambda} \cdot \mathcal{F} =  \frac{\lambda^2}{2l}.
 \end{equation}
-
-
+Figure \ref{fig:airy_trans_vs_wavelength} shows an example of the Airy function given in eq. (\ref{eq:simplified_airy_function}) as a function of the wavelength for a Fabry-Perot cavity of reflectivies $|r|^2 = |r^{\prime}|^2 = 90\%$ and length $l=100 \mu m$.
 
 \begin{figure}[h!]
     \centering
@@ -160,12 +160,12 @@ In eq. (\ref{eq:lossless_finesse}) we assume the case of a lossless cavity, i.e.
 \begin{eqnarray}
     |r|^2 + |t|^2 + L + L^{\prime} = 1,
 \end{eqnarray}
-where $L$ and $L^{\prime}$ indicates the fractional losses of each resonator.
+where $L$ and $L^{\prime}$ indicates the fractional losses of each mirror.
 
 In this case the finesse would be given as 
 \begin{equation}
     \mathcal{F} = \frac{2 \pi}{|t|^2 + |t^{\prime}|^2 + L_{total}},
 \end{equation}
-where $L_{total} = L + L^{\prime}$ are the total cavity losses.
+where $L_{total} = L + L^{\prime}$ are the total additional cavity losses.
 
-The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach unity, as some light is lost to i.g. absorption or scattering for each round trip of the cavity.
+The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach unity, as some light is lost to e.g. absorption or scattering for each round trip of the cavity.

@@ -1,27 +1,13 @@
+\clearpage
 \subsection{The Fano mirror: a sub wavelength grating}\label{sec:fano_mirror}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/MIST_grating_sim.pdf}
-    \caption{MIST simulation -> grating parameters: $\lambda_0 = 951.206$nm, $\lambda_1 = 951.356$nm, $t_d = 0.807$, $r_d = 0.590$ and $\gamma_{\lambda} = 0.528$}
-    \label{fig:MIST_sim_of_grating}
-\end{figure}
-
-\subsubsection{Geometric optical analysis}
-
-Considering an ideal grating with period \emph{d} in the sub-wavelength regime, it can be shown that only a single mode of reflection/transmission is supported. 
-
-Any grating, of arbitrary dimensions, must comply with the very general \emph{grating equation}\cite{Pedrotti} given as
-\begin{equation}
-    \sin \theta_m = m \frac{\lambda}{d},
-\end{equation}
-for the special case of a linearly polarized plane wave incident on a grating placed normal to the direction of propagation. Now, inserting the sub-wavelength condition \emph{d << $\lambda$}, it is easily seen that the right side of the equation blows up for any order of reflection $|m| > 0$, effectively showing that this is the aforementioned single supported mode in this regime. Furthermore, it can be equally easily seen that the propagation direction of the 0'th order mode is the same as the incident beam, i.e. normal to the grating.
 
 \subsubsection{Reflection/transmission spectra and line shape analysis}
 
 \subsubsection{Lossless grating}
 
-We wish to analytically describe the wavelength-dependent spectra for the transmission and reflectivity of an infinite sub-wavelength grating. By first considering the case where absorption and thermal coupling effects are neglected, i.e. a lossless grating, we can assume conservation of energy and thereby the relations
+We wish to analytically describe the wavelength-dependent spectra for the transmission and reflectivity of an infinite sub-wavelength grating. The wavelength dependence arises from the fact that any incident light will be subject to interactions with the so-called \emph{guided-mode} of the grating. The grating is, in this way, said to act as an effective $\text{TM}_0$ waveguide, ensuring resonant modes will only be reflected in the 0'th order. 
+
+By first considering the case where absorption and thermal coupling effects are neglected, i.e. a lossless grating, we can assume conservation of energy and thereby the relations
 \begin{equation}
     |r_g|^2+|t_g|^2=1 \hspace{0.5cm} \text{and} \hspace{0.5cm} |r_d|^2+|t_d|^2=1,
     \label{eq:energy conservation}
@@ -39,7 +25,7 @@ By generalizing the model of Fan and Joannopoulos \cite{Fan-Joannopoulos-guided-
 \end{equation}
 where $k=2\pi/\lambda$ is the incident wave number, $k_1 = 2\pi/\lambda_1$ is the wave number according to the guided-mode resonance and $\gamma$ is the HWHM (half width at half maximum) of the guided-mode resonance. Complex coefficients $a$ and $b$ describe the interference between the directly transmitted or reflected waves and the guided mode of the grating. 
 
-Note that in eq. (\ref{eq:ref/trans}) the right side of the expression for each coefficient corresponds to the continuum state i.e. the indirect pathway, while the direct transmission and reflection coefficients take the role of the autoionized discrete state, i.e. the direct pathway\footnote{The general eigenvector of a state comprised of a super-position between a discrete state and a continuum, i.e. a state vector corresponding to a Fano resonance, is given as $\Psi_E = a\phi + \int dE^{\prime} b_{E^{\prime}} \psi_{E^{\prime}}$, given in eq. (2) in ref. \cite{Fano-theory}, where $a$ and $b_{E^{\prime}}$ describes the probability of either pathway.} \cite{Fano-theory}
+Note that in eq. (\ref{eq:ref/trans}) the right side of the expression for each coefficient corresponds to the continuum state i.e. the indirect pathway, while the direct transmission and reflection coefficients take the role of the autoionized discrete state, i.e. the direct pathway\cite{Fano-theory}.
 
 As we are dealing with an ideal, lossless, grating, we assume coefficients $a$ and $b$ to be equal, meaning that we specifically assume vertical symmetry throughout the grating. By considering eq. (\ref{eq:energy conservation}) this in turn leads to 
 \begin{equation}
@@ -63,7 +49,7 @@ To generalize eq. (\ref{eq:lossless transmission coefficient}) to include non-un
 where $\{x,y\}_{a,b}$ respectively denotes the real and imaginary parts of the coefficients $a$ and $b$. Solving eqs. (\ref{eq:lossless couples diff. eqs.}) leads to the correct complex reflectivity coefficients and the expression for the transmission coefficient amplitudes now reads
 \begin{equation}
     t_g = t_d \frac{k - k_0 + i \beta}{k - k_1 + i \gamma},
-    \label{eq:lossy transmission coefficients}
+    \label{eq:transmission_coefficients_non_zero_values}
 \end{equation}
 where $k_0$ and $\beta$ are defined from the expression for $a$ found by solving eqs. (\ref{eq:lossless couples diff. eqs.}), given as
 \begin{equation}
@@ -71,12 +57,50 @@ where $k_0$ and $\beta$ are defined from the expression for $a$ found by solving
 \end{equation}
 Finally, this allows for non-zero transmission and non-unity reflectivity at wave number $k_0$.
 
+To show the validity of the model at this point, we introduce a periodic grating which is arbitrarily sketched in figure \ref{fig:MIST_grating_sketch}. The sketch indicates the period of the grating $\Lambda$, the top finger width $w_t$, the offset between the finger top and the bottom of the grating $x$, the total grating thickness $t$ and finger depth $d$. Furthermore, the grating is patterned in a \emph{silicon nitride (SiN)} membrane  of refractive index $n_{SiN}$. 
+
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/grating_spectrum_lossless_example.pdf}
-    \caption{Simulated reflectiviy and transmission spectra of an arbitrary lossless grating.}
-    \label{fig:lossless_grating_spectrum}
+    \includegraphics[width=0.7\textwidth]{figures/grating_MIST_sketch.pdf}
+    \caption{Schematics of a periodic optical $SiN$ grating with phyiscal parameters: $\Lambda = 857$nm, $w_t = 623$nm, $h = 55.1$nm, $t = 152$nm, $d = 67$nm, $n_{SiN} = 2.15$.}
+    \label{fig:MIST_grating_sketch}
 \end{figure}
+
+
+In order to simulate the transmission and reflectivity profiles as a function of the incident wavelength, we utilize the \emph{Modeled Integrated Scatter Tool (MIST)} developed by the \emph{National Institute of Standards and Technology (NIST)}\cite{MIST}. The simulation solves Maxwell's equations for any pre-defined infinite periodic structure. 
+
+MIST assumes an incident plane-wave, and hence predicts the \emph{ideal} spectra for the transmission and reflectivity, i.e. zero and unity when on resonance, respectively. In order to include effects related to the Gaussian behaviour of a more realistic incident beam, such as collimation and finite-size effects\cite{Toft-Vandborg}, one would have to solve Maxwell's equations for a Gaussian distribution. We safely assume an incident plane-wave for reasons related to the order of magnitude for the \emph{Rayleigh range} of the beam used, compared with that of the spacial range of the conducted experiments.
+
+In reality, the interference inside the cavity however cannot be perfect, as any Gaussian beam can be represented by a number rays, infinitesimal in size, which would all track differently through the grating, resulting in non-unity reflectivity and non-zero transmission. In order to synthetically correct for this we scale each transmission value found by MIST according to
+\begin{equation}
+    t_g = (1 - \varepsilon) \cdot t_{MIST} + \varepsilon,
+    \label{eq:trans_correction_MIST}
+\end{equation}
+where we define the correction to be arbitrarily small as $\varepsilon = 1\%$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/MIST_grating_sim.pdf}
+    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.208$nm, $\lambda_1 = 951.356$nm, $t_d = 80.94\%$, $r_d = 52.7\%$, $\gamma_{\lambda} = 0.527$, and $\beta = 4.42 \cdot 10^{-7}$.}
+    \label{fig:MIST_sim_of_grating}
+\end{figure}
+
+Figure \ref{fig:MIST_sim_of_grating} shows the scaled and unscaled results of the simulation using MIST for the following physical grating parameters:
+\begin{equation}
+    \begin{split}
+    \Lambda = &857 \text{nm},\:\: w_t = 623 \text{nm},\:\: h = 55.1 \text{nm},\\ &t = 152 \text{nm},\:\: d = 67 \text{nm}\: \text{ and }\: n_{SiN} = 2.15,
+    \end{split}
+    \label{eq:physical_grating_params}
+\end{equation}
+
+The reflectivity- and (corrected) transmission values were then fitted to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}) using a least squares fitting method, and plotted along with the simulated values. The resulting grating parameters were found as
+\begin{equation}
+    \begin{split}
+    \lambda_0 = &951.208 \text{nm},\:\: \lambda_1 = 951.356 \text{nm},\:\: t_d = 80.94\%,\\ &r_d = 52.7\%,\:\: \gamma_{\lambda} = 0.527 \text{nm}\: \text{ and }\: \beta = 4.42 \cdot 10^{-7},
+    \end{split}
+    \label{eq:optical_grating_params}
+\end{equation}
+where $\lambda_0$ is the cavity mode resonance wavelength, $\lambda_1$ is the guided-mode resonance wavelength, $r_d$ ($t_d$) is the direct reflectivity (transmission), $\gamma_{\lambda}$ is the width of the guided-mode resonance and $\beta$ is a constant associated with non-unity reflectivity and non-zero transmission. 
 
 \subsubsection{Lossy grating}
 
@@ -95,20 +119,21 @@ where the coefficient $c^2 = L((k-k_1)^2 + \gamma^2)$ includes the resonant loss
 \end{equation}
 It is easily identified that eq. (\ref{eq:lossless couples diff. eqs.}) and eq. (\ref{eq:lossy couples diff. eqs.}) differ only by the addition of coefficient $c^2$, and thereby the losses. Solving eq. (\ref{eq:lossy couples diff. eqs.}) leads to the correct complex reflectivity coefficients, except that they now account for any losses associated with the grating. 
 
-In conclusion, the complete grating model consists of an expression for the transmission coefficients and a set of coupled differential equations for the reflection coefficients, shown in eq. (\ref{eq:lossy transmission coefficients}) and eq. (\ref{eq:lossy couples diff. eqs.}), respectively. The model on the form used for this project and subsequent thesis is derived in previous work by A. Darki et al. \cite{Darki} and more recently T. Mitra et al. \cite{Mitra}.
+In conclusion, the complete grating model consists of an expression for the transmission coefficients and a set of coupled differential equations for the reflection coefficients, shown in eq. (\ref{eq:transmission_coefficients_non_zero_values}) and eq. (\ref{eq:lossy couples diff. eqs.}), respectively. The model on the form used for this project and subsequent thesis is derived in previous work by A. Darki et al. \cite{Darki} and more recently T. Mitra et al. \cite{Mitra}.
 
+Figure \ref{fig:lossy_grating_spectrum} shows reflection and transmission spectra of a grating of parameters given in eq. \ref{eq:optical_grating_params} with a synthetic non-zero resonance loss term in order to show the effect of including losses. It is seen from the added \emph{loss curve} that the losses increase when approaching the resonance wavelength, as the interaction with the guided-mode, and thus the grating, gets stronger in this region. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/grating_spectrum_lossy_example.pdf}
-    \caption{Simulated reflectiviy and transmission spectra of an arbitrary lossy grating.}
+    \includegraphics[width=0.7\textwidth]{figures/arbitrary_lossy_grating_ref_trans.pdf}
+    \caption{Simulated reflectiviy and transmission spectra of a grating of parameters given in eq. (\ref{eq:optical_grating_params}) with a synthetically added non-zero loss term, and the corresponding grating losses.}
     \label{fig:lossy_grating_spectrum}
 \end{figure}
 
-\subsection{The Fano cavity}
+\subsection{The single Fano cavity}
 
 \subsubsection{The single Fano cavity model}
 
-The single Fano cavity consists of a planer broadband mirror, and a sub-wavelength grating, i.e. a Fano mirror, as described in section \ref{sec:fano_mirror} and seen in figure \ref{fig:broadband_and_single_fano_sketch} where schematics of the single Fano and broadband cavity configurations are shown. While the broadband mirror has fixed optical properties, the Fano mirror has transmission and reflection coefficients dependent on the incident wavelength, according to solutions to the coupled differential equations of eq. (\ref{eq:lossy couples diff. eqs.}). 
+The single Fano cavity consists of a planar broadband mirror, and a sub-wavelength grating, i.e. a Fano mirror, as described in section \ref{sec:fano_mirror} and seen in figure \ref{fig:broadband_and_single_fano_sketch} where schematics of the single Fano and broadband cavity configurations are shown. While the broadband mirror has fixed optical properties, the Fano mirror has transmission and reflection coefficients dependent on the incident wavelength, according to solutions to the coupled differential equations of eq. (\ref{eq:lossy couples diff. eqs.}). 
 
 \begin{figure}[h!]
     \centering
@@ -155,7 +180,7 @@ where
 \end{equation}
 is the HWHM of a broadband cavity and
 \begin{equation}
-    \delta \lambda_g = \frac{\gamma \lambda}{2 (1-r_d)}(|t_g(\lambda_0)|^2 + |t_m|^2 + L)
+    \delta \lambda_g = \frac{\gamma_{\lambda}}{2 (1-r_d)}(|t_g(\lambda_0)|^2 + |t_m|^2 + L)
     \label{eq:analytical_linewidth_single_fano}
 \end{equation}
 is the HWHM of the Fano cavity in the so-called Fano regime.\cite{Mitra}\cite{Darki} In eqs. (\ref{eq:analytical_linewidth})-(\ref{eq:analytical_linewidth_single_fano}) $\lambda_0$ is the Fano cavity resonance wavelength, $l$ is the cavity length, $L = \left(1 - |r_g(\lambda_0)|^2 - |t_g(\lambda_0)|^2\right)$ is the total additional losses of the cavity when on resonance, $\gamma \lambda$ is the width of the guided-mode resonance of the Fano mirror and $r_d$ is the off-resonance, or \emph{direct}, reflectivity of the Fano mirror.
@@ -184,7 +209,7 @@ where we remember that $\lambda_{0,1}$ are the resonant wavelengths for, respect
         \caption{}
         \label{fig:fano_regime_trans}
     \end{subfigure}
-    \caption{In (a) is seen the comparison of broadband and single Fano cavity transmisison spectra for a cavity length of $l \approx 1000 \mu m$, i.e. in the \emph{standard} regime. (b) shows the same comparison, but for a cavity length of $l \approx 5 \mu m$, i.e. in the so-called \emph{Fano} regime.}
+    \caption{In (a) is seen the comparison of broadband and single Fano cavity transmission spectra for a cavity length of $l \approx 1000 \mu m$, i.e. in the \emph{standard} regime. (b) shows the same comparison, but for a cavity length of $l \approx 5 \mu m$, i.e. in the so-called \emph{Fano} regime.}
 \end{figure}
 
 Figure \ref{fig:standard_regime_trans} shows the transmission spectra of the two cavities for a length of $l \approx 1000\mu m$, i.e. in the standard regime. It is clear from inspection of the figure that the resonance transmission profile of the standard broadband cavity is not wavelength dependent, in the sense that all fringes appear to have the same high finesse $\mathcal{F}$, i.e. ratio between the FSR and HWHM. This is not the case for the Fano cavity which is due to the wavelength dependence of the optical properties of the Fano mirror, as this causes the transmission and reflectivity to \emph{only} match those of the broadband mirror when on resonance. Furthermore, no significant difference in linewidth is seen for the transmission of the two cavities on resonance, as predicted by eq. (\ref{eq:analytical_linewidth}).
@@ -214,7 +239,7 @@ Figure \ref{fig:HWHM_broadband_vs_single_fano} models the behavior of the linewi
 
 \subsection{The double Fano cavity}
 
-\subsubsection{The double fano transmission model}
+\subsubsection{The double Fano cavity model}
 
 While the single Fano cavity is usually known in the appropriate litterature as simply a \emph{Fano cavity}, I have insisted on including the fact that it contains only one Fano mirror, and hence denoted it the \emph{single} Fano cavity. This addition is justified by the contents of this section, and namely that we now move on to the \emph{double} Fano cavity, which as the name suggests consists of two Fano mirrors. The schematics of this configuration is shown together with the one for the single Fano cavity in figure \ref{fig:single_and_double_fano_sketch}.
 

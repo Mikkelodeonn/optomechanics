@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  15 MAY 2025 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  16 MAY 2025 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -727,72 +727,75 @@ File: figures/airy_function_vs_wavelength.pdf Graphic file (type pdf)
 <use figures/airy_function_vs_wavelength.pdf>
 Package pdftex.def Info: figures/airy_function_vs_wavelength.pdf  used on input line 152.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-) (./theory/fano_cavity.tex
-<figures/MIST_grating_sim.pdf, id=303, 722.7pt x 505.89pt>
-File: figures/MIST_grating_sim.pdf Graphic file (type pdf)
-<use figures/MIST_grating_sim.pdf>
-Package pdftex.def Info: figures/MIST_grating_sim.pdf  used on input line 5.
-(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
- [7 <./figures/airy_function_vs_wavelength.pdf>] [8 <./figures/MIST_grating_sim.pdf>] [9]
-Overfull \hbox (31.09633pt too wide) in paragraph at lines 52--54
+) (./theory/fano_cavity.tex [7 <./figures/airy_function_vs_wavelength.pdf>] [8] [9
+
+]
+Overfull \hbox (31.09633pt too wide) in paragraph at lines 38--40
 \T1/cmr/m/n/14.4 (-20) Here, the newly in-tro-duced $\OML/cmm/m/it/14.4 k[] \OT1/cmr/m/n/14.4 (-20) = 2\OML/cmm/m/it/14.4 ^^Y=^^U[] \OT1/cmr/m/n/14.4 (-20) = \OML/cmm/m/it/14.4 k[] \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 i^^M\OT1/cmr/m/n/14.4 (-20) (\OML/cmm/m/it/14.4 r[]=t[]\OT1/cmr/m/n/14.4 (-20) )$ \T1/cmr/m/n/14.4 (-20) is the zero-transmission/unity-
  []
 
 [10]
-<figures/grating_spectrum_lossless_example.pdf, id=416, 722.7pt x 433.62pt>
-File: figures/grating_spectrum_lossless_example.pdf Graphic file (type pdf)
-<use figures/grating_spectrum_lossless_example.pdf>
-Package pdftex.def Info: figures/grating_spectrum_lossless_example.pdf  used on input line 76.
-(pdftex.def)             Requested size: 281.85587pt x 169.11111pt.
- [11 <./figures/grating_spectrum_lossless_example.pdf>]
-<figures/grating_spectrum_lossy_example.pdf, id=476, 722.7pt x 433.62pt>
-File: figures/grating_spectrum_lossy_example.pdf Graphic file (type pdf)
-<use figures/grating_spectrum_lossy_example.pdf>
-Package pdftex.def Info: figures/grating_spectrum_lossy_example.pdf  used on input line 102.
-(pdftex.def)             Requested size: 281.85587pt x 169.11111pt.
+<figures/grating_MIST_sketch.pdf, id=368, 457.71pt x 276.03125pt>
+File: figures/grating_MIST_sketch.pdf Graphic file (type pdf)
+<use figures/grating_MIST_sketch.pdf>
+Package pdftex.def Info: figures/grating_MIST_sketch.pdf  used on input line 64.
+(pdftex.def)             Requested size: 328.82707pt x 198.31273pt.
+ [11 <./figures/grating_MIST_sketch.pdf>]
+<figures/MIST_grating_sim.pdf, id=384, 722.7pt x 505.89pt>
+File: figures/MIST_grating_sim.pdf Graphic file (type pdf)
+<use figures/MIST_grating_sim.pdf>
+Package pdftex.def Info: figures/MIST_grating_sim.pdf  used on input line 83.
+(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
+ [12 <./figures/MIST_grating_sim.pdf>]
+<figures/arbitrary_lossy_grating_ref_trans.pdf, id=443, 722.7pt x 505.89pt>
+File: figures/arbitrary_lossy_grating_ref_trans.pdf Graphic file (type pdf)
+<use figures/arbitrary_lossy_grating_ref_trans.pdf>
+Package pdftex.def Info: figures/arbitrary_lossy_grating_ref_trans.pdf  used on input line 127.
+(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
+ [13]
 File: figures/broadband_sketch.pdf Graphic file (type pdf)
 <use figures/broadband_sketch.pdf>
-Package pdftex.def Info: figures/broadband_sketch.pdf  used on input line 116.
+Package pdftex.def Info: figures/broadband_sketch.pdf  used on input line 141.
 (pdftex.def)             Requested size: 140.92793pt x 133.89552pt.
 File: figures/single_fano_sketch.pdf Graphic file (type pdf)
 <use figures/single_fano_sketch.pdf>
-Package pdftex.def Info: figures/single_fano_sketch.pdf  used on input line 122.
+Package pdftex.def Info: figures/single_fano_sketch.pdf  used on input line 147.
 (pdftex.def)             Requested size: 140.92793pt x 133.89552pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./figures/grating_spectrum_lossy_example.pdf>] [13] [14]
-<figures/fano_and_broadband_cavity_1000um.pdf, id=542, 722.7pt x 433.62pt>
+[14 <./figures/arbitrary_lossy_grating_ref_trans.pdf>] [15] [16]
+<figures/fano_and_broadband_cavity_1000um.pdf, id=508, 722.7pt x 505.89pt>
 File: figures/fano_and_broadband_cavity_1000um.pdf Graphic file (type pdf)
 <use figures/fano_and_broadband_cavity_1000um.pdf>
-Package pdftex.def Info: figures/fano_and_broadband_cavity_1000um.pdf  used on input line 178.
-(pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/fano_and_broadband_cavity_5um.pdf, id=543, 722.7pt x 433.62pt>
+Package pdftex.def Info: figures/fano_and_broadband_cavity_1000um.pdf  used on input line 203.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/fano_and_broadband_cavity_5um.pdf, id=509, 722.7pt x 505.89pt>
 File: figures/fano_and_broadband_cavity_5um.pdf Graphic file (type pdf)
 <use figures/fano_and_broadband_cavity_5um.pdf>
-Package pdftex.def Info: figures/fano_and_broadband_cavity_5um.pdf  used on input line 183.
-(pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
- [15 <./figures/fano_and_broadband_cavity_1000um.pdf> <./figures/fano_and_broadband_cavity_5um.pdf
+Package pdftex.def Info: figures/fano_and_broadband_cavity_5um.pdf  used on input line 208.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+ [17 <./figures/fano_and_broadband_cavity_1000um.pdf> <./figures/fano_and_broadband_cavity_5um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/fano_and_broadband_cavity_5um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/HWHM_broadband_vs_single_sim.pdf, id=624, 722.7pt x 433.62pt>
+<figures/HWHM_broadband_vs_single_sim.pdf, id=589, 722.7pt x 433.62pt>
 File: figures/HWHM_broadband_vs_single_sim.pdf Graphic file (type pdf)
 <use figures/HWHM_broadband_vs_single_sim.pdf>
-Package pdftex.def Info: figures/HWHM_broadband_vs_single_sim.pdf  used on input line 198.
+Package pdftex.def Info: figures/HWHM_broadband_vs_single_sim.pdf  used on input line 223.
 (pdftex.def)             Requested size: 300.64291pt x 180.38564pt.
-<figures/sim_single_vs_broadband_700um.pdf, id=625, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_700um.pdf, id=590, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_700um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_700um.pdf>
-Package pdftex.def Info: figures/sim_single_vs_broadband_700um.pdf  used on input line 203.
+Package pdftex.def Info: figures/sim_single_vs_broadband_700um.pdf  used on input line 228.
 (pdftex.def)             Requested size: 159.71498pt x 111.79788pt.
-<figures/sim_single_vs_broadband_10um.pdf, id=626, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_10um.pdf, id=591, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_10um.pdf>
-Package pdftex.def Info: figures/sim_single_vs_broadband_10um.pdf  used on input line 206.
+Package pdftex.def Info: figures/sim_single_vs_broadband_10um.pdf  used on input line 231.
 (pdftex.def)             Requested size: 159.71498pt x 111.79788pt.
- [16 <./figures/HWHM_broadband_vs_single_sim.pdf> <./figures/sim_single_vs_broadband_700um.pdf
+ [18 <./figures/HWHM_broadband_vs_single_sim.pdf> <./figures/sim_single_vs_broadband_700um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_700um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/sim_single_vs_broadband_10um.pdf
@@ -801,206 +804,206 @@ pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_10um.pdf): PDF 
 >]
 File: figures/single_fano_sketch.pdf Graphic file (type pdf)
 <use figures/single_fano_sketch.pdf>
-Package pdftex.def Info: figures/single_fano_sketch.pdf  used on input line 224.
+Package pdftex.def Info: figures/single_fano_sketch.pdf  used on input line 249.
 (pdftex.def)             Requested size: 140.92793pt x 133.89552pt.
 File: figures/double_fano_sketch.pdf Graphic file (type pdf)
 <use figures/double_fano_sketch.pdf>
-Package pdftex.def Info: figures/double_fano_sketch.pdf  used on input line 230.
+Package pdftex.def Info: figures/double_fano_sketch.pdf  used on input line 255.
 (pdftex.def)             Requested size: 140.92793pt x 134.16527pt.
- [17]
-<figures/double_fano_full_range_30um.pdf, id=788, 722.7pt x 433.62pt>
+ [19]
+<figures/double_fano_full_range_30um.pdf, id=752, 722.7pt x 433.62pt>
 File: figures/double_fano_full_range_30um.pdf Graphic file (type pdf)
 <use figures/double_fano_full_range_30um.pdf>
-Package pdftex.def Info: figures/double_fano_full_range_30um.pdf  used on input line 249.
+Package pdftex.def Info: figures/double_fano_full_range_30um.pdf  used on input line 274.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/double_fano_short_range_30um.pdf, id=789, 722.7pt x 433.62pt>
+<figures/double_fano_short_range_30um.pdf, id=753, 722.7pt x 433.62pt>
 File: figures/double_fano_short_range_30um.pdf Graphic file (type pdf)
 <use figures/double_fano_short_range_30um.pdf>
-Package pdftex.def Info: figures/double_fano_short_range_30um.pdf  used on input line 254.
+Package pdftex.def Info: figures/double_fano_short_range_30um.pdf  used on input line 279.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
- [18 <./figures/double_fano_full_range_30um.pdf> <./figures/double_fano_short_range_30um.pdf
+ [20 <./figures/double_fano_full_range_30um.pdf> <./figures/double_fano_short_range_30um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/double_fano_short_range_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/single_and_double_1000um.pdf, id=874, 722.7pt x 433.62pt>
+<figures/single_and_double_1000um.pdf, id=838, 722.7pt x 433.62pt>
 File: figures/single_and_double_1000um.pdf Graphic file (type pdf)
 <use figures/single_and_double_1000um.pdf>
-Package pdftex.def Info: figures/single_and_double_1000um.pdf  used on input line 295.
+Package pdftex.def Info: figures/single_and_double_1000um.pdf  used on input line 320.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/single_and_double_5um.pdf, id=875, 722.7pt x 433.62pt>
+<figures/single_and_double_5um.pdf, id=839, 722.7pt x 433.62pt>
 File: figures/single_and_double_5um.pdf Graphic file (type pdf)
 <use figures/single_and_double_5um.pdf>
-Package pdftex.def Info: figures/single_and_double_5um.pdf  used on input line 300.
+Package pdftex.def Info: figures/single_and_double_5um.pdf  used on input line 325.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19]
-<figures/HWHM_broadband_vs_single_vs_double_sim.pdf, id=879, 722.7pt x 433.62pt>
+[21]
+<figures/HWHM_broadband_vs_single_vs_double_sim.pdf, id=843, 722.7pt x 433.62pt>
 File: figures/HWHM_broadband_vs_single_vs_double_sim.pdf Graphic file (type pdf)
 <use figures/HWHM_broadband_vs_single_vs_double_sim.pdf>
-Package pdftex.def Info: figures/HWHM_broadband_vs_single_vs_double_sim.pdf  used on input line 318.
+Package pdftex.def Info: figures/HWHM_broadband_vs_single_vs_double_sim.pdf  used on input line 343.
 (pdftex.def)             Requested size: 300.64291pt x 180.38564pt.
-<figures/sim_single_vs_double_700um.png, id=880, 722.7pt x 433.62pt>
+<figures/sim_single_vs_double_700um.png, id=844, 722.7pt x 433.62pt>
 File: figures/sim_single_vs_double_700um.png Graphic file (type png)
 <use figures/sim_single_vs_double_700um.png>
-Package pdftex.def Info: figures/sim_single_vs_double_700um.png  used on input line 323.
+Package pdftex.def Info: figures/sim_single_vs_double_700um.png  used on input line 348.
 (pdftex.def)             Requested size: 159.71498pt x 95.82677pt.
-<figures/sim_single_vs_double_10um.png, id=882, 722.7pt x 433.62pt>
+<figures/sim_single_vs_double_10um.png, id=846, 722.7pt x 433.62pt>
 File: figures/sim_single_vs_double_10um.png Graphic file (type png)
 <use figures/sim_single_vs_double_10um.png>
-Package pdftex.def Info: figures/sim_single_vs_double_10um.png  used on input line 326.
+Package pdftex.def Info: figures/sim_single_vs_double_10um.png  used on input line 351.
 (pdftex.def)             Requested size: 159.71498pt x 95.82677pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20 <./figures/single_and_double_1000um.pdf> <./figures/single_and_double_5um.pdf
+[22 <./figures/single_and_double_1000um.pdf> <./figures/single_and_double_5um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/single_and_double_5um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [21 <./figures/HWHM_broadband_vs_single_vs_double_sim.pdf> <./figures/sim_single_vs_double_700um.png> <./figures/sim_single_vs_double_10um.png>]
-<figures/double_fano_loss_scan.pdf, id=1009, 722.7pt x 433.62pt>
+>] [23 <./figures/HWHM_broadband_vs_single_vs_double_sim.pdf> <./figures/sim_single_vs_double_700um.png> <./figures/sim_single_vs_double_10um.png>]
+<figures/double_fano_loss_scan.pdf, id=974, 722.7pt x 433.62pt>
 File: figures/double_fano_loss_scan.pdf Graphic file (type pdf)
 <use figures/double_fano_loss_scan.pdf>
-Package pdftex.def Info: figures/double_fano_loss_scan.pdf  used on input line 351.
+Package pdftex.def Info: figures/double_fano_loss_scan.pdf  used on input line 376.
 (pdftex.def)             Requested size: 281.85587pt x 169.11111pt.
-<figures/linewidth_vs_losses.pdf, id=1010, 722.7pt x 433.62pt>
+<figures/linewidth_vs_losses.pdf, id=975, 722.7pt x 433.62pt>
 File: figures/linewidth_vs_losses.pdf Graphic file (type pdf)
 <use figures/linewidth_vs_losses.pdf>
-Package pdftex.def Info: figures/linewidth_vs_losses.pdf  used on input line 373.
+Package pdftex.def Info: figures/linewidth_vs_losses.pdf  used on input line 398.
 (pdftex.def)             Requested size: 300.64291pt x 180.38564pt.
-<figures/double_2_loss_30um.pdf, id=1011, 722.7pt x 433.62pt>
+<figures/double_2_loss_30um.pdf, id=976, 722.7pt x 433.62pt>
 File: figures/double_2_loss_30um.pdf Graphic file (type pdf)
 <use figures/double_2_loss_30um.pdf>
-Package pdftex.def Info: figures/double_2_loss_30um.pdf  used on input line 378.
+Package pdftex.def Info: figures/double_2_loss_30um.pdf  used on input line 403.
 (pdftex.def)             Requested size: 159.71498pt x 95.82677pt.
-<figures/double_24_loss_30um.pdf, id=1012, 722.7pt x 433.62pt>
+<figures/double_24_loss_30um.pdf, id=977, 722.7pt x 433.62pt>
 File: figures/double_24_loss_30um.pdf Graphic file (type pdf)
 <use figures/double_24_loss_30um.pdf>
-Package pdftex.def Info: figures/double_24_loss_30um.pdf  used on input line 380.
+Package pdftex.def Info: figures/double_24_loss_30um.pdf  used on input line 405.
 (pdftex.def)             Requested size: 159.71498pt x 95.82677pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <./figures/double_fano_loss_scan.pdf>] [23 <./figures/linewidth_vs_losses.pdf> <./figures/double_2_loss_30um.pdf
+[24 <./figures/double_fano_loss_scan.pdf>] [25 <./figures/linewidth_vs_losses.pdf> <./figures/double_2_loss_30um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/double_2_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/double_24_loss_30um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/double_24_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/detuned_grating_spectra.pdf, id=1203, 722.7pt x 433.62pt>
+<figures/detuned_grating_spectra.pdf, id=1167, 722.7pt x 433.62pt>
 File: figures/detuned_grating_spectra.pdf Graphic file (type pdf)
 <use figures/detuned_grating_spectra.pdf>
-Package pdftex.def Info: figures/detuned_grating_spectra.pdf  used on input line 409.
+Package pdftex.def Info: figures/detuned_grating_spectra.pdf  used on input line 434.
 (pdftex.def)             Requested size: 328.82707pt x 197.29741pt.
- [24 <./figures/detuned_grating_spectra.pdf>]
-<figures/detuned_full_range_double_trans.pdf, id=1263, 722.7pt x 433.62pt>
+ [26 <./figures/detuned_grating_spectra.pdf>]
+<figures/detuned_full_range_double_trans.pdf, id=1227, 722.7pt x 433.62pt>
 File: figures/detuned_full_range_double_trans.pdf Graphic file (type pdf)
 <use figures/detuned_full_range_double_trans.pdf>
-Package pdftex.def Info: figures/detuned_full_range_double_trans.pdf  used on input line 423.
+Package pdftex.def Info: figures/detuned_full_range_double_trans.pdf  used on input line 448.
 (pdftex.def)             Requested size: 328.82707pt x 197.29741pt.
- [25 <./figures/detuned_full_range_double_trans.pdf>]
-<figures/detuning_scan_double_fano_30um.pdf, id=1325, 722.7pt x 433.62pt>
+ [27 <./figures/detuned_full_range_double_trans.pdf>]
+<figures/detuning_scan_double_fano_30um.pdf, id=1290, 722.7pt x 433.62pt>
 File: figures/detuning_scan_double_fano_30um.pdf Graphic file (type pdf)
 <use figures/detuning_scan_double_fano_30um.pdf>
-Package pdftex.def Info: figures/detuning_scan_double_fano_30um.pdf  used on input line 435.
+Package pdftex.def Info: figures/detuning_scan_double_fano_30um.pdf  used on input line 460.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/detuning_scan_intracavity_double_fano_30um.pdf, id=1326, 722.7pt x 433.62pt>
+<figures/detuning_scan_intracavity_double_fano_30um.pdf, id=1291, 722.7pt x 433.62pt>
 File: figures/detuning_scan_intracavity_double_fano_30um.pdf Graphic file (type pdf)
 <use figures/detuning_scan_intracavity_double_fano_30um.pdf>
-Package pdftex.def Info: figures/detuning_scan_intracavity_double_fano_30um.pdf  used on input line 440.
+Package pdftex.def Info: figures/detuning_scan_intracavity_double_fano_30um.pdf  used on input line 465.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
 
 
-LaTeX Warning: Reference `eq:general_cavity_condition' on page 26 undefined on input line 452.
+LaTeX Warning: Reference `eq:general_cavity_condition' on page 28 undefined on input line 477.
 
-[26 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_intracavity_double_fano_30um.pdf
+[28 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_intracavity_double_fano_30um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/detuning_scan_intracavity_double_fano_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/small_detuning_length_scan_short.pdf, id=1406, 722.7pt x 433.62pt>
+<figures/small_detuning_length_scan_short.pdf, id=1370, 722.7pt x 433.62pt>
 File: figures/small_detuning_length_scan_short.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 461.
+Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 486.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/small_detuning_length_scan_long.pdf, id=1407, 722.7pt x 433.62pt>
+<figures/small_detuning_length_scan_long.pdf, id=1371, 722.7pt x 433.62pt>
 File: figures/small_detuning_length_scan_long.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 466.
+Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 491.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/detuned_length_scan_long.pdf, id=1408, 722.7pt x 433.62pt>
+<figures/detuned_length_scan_long.pdf, id=1372, 722.7pt x 433.62pt>
 File: figures/detuned_length_scan_long.pdf Graphic file (type pdf)
 <use figures/detuned_length_scan_long.pdf>
-Package pdftex.def Info: figures/detuned_length_scan_long.pdf  used on input line 481.
+Package pdftex.def Info: figures/detuned_length_scan_long.pdf  used on input line 506.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/detuned_length_scan_short.pdf, id=1409, 722.7pt x 433.62pt>
+<figures/detuned_length_scan_short.pdf, id=1373, 722.7pt x 433.62pt>
 File: figures/detuned_length_scan_short.pdf Graphic file (type pdf)
 <use figures/detuned_length_scan_short.pdf>
-Package pdftex.def Info: figures/detuned_length_scan_short.pdf  used on input line 486.
+Package pdftex.def Info: figures/detuned_length_scan_short.pdf  used on input line 511.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <./figures/small_detuning_length_scan_short.pdf> <./figures/small_detuning_length_scan_long.pdf
+[29 <./figures/small_detuning_length_scan_short.pdf> <./figures/small_detuning_length_scan_long.pdf
 
 pdfTeX warning: pdflatex (file ./figures/small_detuning_length_scan_long.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/large_detuning_length_scan_long.pdf, id=1496, 722.7pt x 433.62pt>
+<figures/large_detuning_length_scan_long.pdf, id=1461, 722.7pt x 433.62pt>
 File: figures/large_detuning_length_scan_long.pdf Graphic file (type pdf)
 <use figures/large_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 501.
+Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 526.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/large_detuning_length_scan_short.pdf, id=1497, 722.7pt x 433.62pt>
+<figures/large_detuning_length_scan_short.pdf, id=1462, 722.7pt x 433.62pt>
 File: figures/large_detuning_length_scan_short.pdf Graphic file (type pdf)
 <use figures/large_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 506.
+Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 531.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28 <./figures/detuned_length_scan_long.pdf> <./figures/detuned_length_scan_short.pdf
+[30 <./figures/detuned_length_scan_long.pdf> <./figures/detuned_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/detuned_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/cmap_with_slice_indicators1.pdf, id=1584, 722.7pt x 433.62pt>
+<figures/cmap_with_slice_indicators1.pdf, id=1549, 722.7pt x 433.62pt>
 File: figures/cmap_with_slice_indicators1.pdf Graphic file (type pdf)
 <use figures/cmap_with_slice_indicators1.pdf>
-Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 522.
+Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 547.
 (pdftex.def)             Requested size: 230.18253pt x 138.1062pt.
-<figures/cmap_slice2.pdf, id=1585, 722.7pt x 433.62pt>
+<figures/cmap_slice2.pdf, id=1550, 722.7pt x 433.62pt>
 File: figures/cmap_slice2.pdf Graphic file (type pdf)
 <use figures/cmap_slice2.pdf>
-Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 528.
+Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 553.
 (pdftex.def)             Requested size: 112.7907pt x 67.67355pt.
-<figures/cmap_slice1.pdf, id=1586, 722.7pt x 433.62pt>
+<figures/cmap_slice1.pdf, id=1551, 722.7pt x 433.62pt>
 File: figures/cmap_slice1.pdf Graphic file (type pdf)
 <use figures/cmap_slice1.pdf>
-Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 530.
+Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 555.
 (pdftex.def)             Requested size: 112.7907pt x 67.67355pt.
-<figures/cmap_slice3.pdf, id=1587, 722.7pt x 433.62pt>
+<figures/cmap_slice3.pdf, id=1552, 722.7pt x 433.62pt>
 File: figures/cmap_slice3.pdf Graphic file (type pdf)
 <use figures/cmap_slice3.pdf>
-Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 531.
+Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 556.
 (pdftex.def)             Requested size: 112.7907pt x 67.67355pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./figures/large_detuning_length_scan_long.pdf> <./figures/large_detuning_length_scan_short.pdf
+[31 <./figures/large_detuning_length_scan_long.pdf> <./figures/large_detuning_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/large_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/cmap_lw_vs_l_intracavity.pdf, id=1675, 722.7pt x 433.62pt>
+<figures/cmap_lw_vs_l_intracavity.pdf, id=1639, 722.7pt x 433.62pt>
 File: figures/cmap_lw_vs_l_intracavity.pdf Graphic file (type pdf)
 <use figures/cmap_lw_vs_l_intracavity.pdf>
-Package pdftex.def Info: figures/cmap_lw_vs_l_intracavity.pdf  used on input line 549.
+Package pdftex.def Info: figures/cmap_lw_vs_l_intracavity.pdf  used on input line 574.
 (pdftex.def)             Requested size: 281.85587pt x 169.11111pt.
- [30 <./figures/cmap_with_slice_indicators1.pdf> <./figures/cmap_slice2.pdf
+ [32 <./figures/cmap_with_slice_indicators1.pdf> <./figures/cmap_slice2.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cmap_slice2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/cmap_slice1.pdf
@@ -1013,26 +1016,26 @@ pdfTeX warning: pdflatex (file ./figures/cmap_slice3.pdf): PDF inclusion: multip
 
 pdfTeX warning: pdflatex (file ./figures/cmap_lw_vs_l_intracavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/cmaps_detuning_30um.pdf, id=1862, 997.32597pt x 578.16pt>
+<figures/cmaps_detuning_30um.pdf, id=1827, 997.32597pt x 578.16pt>
 File: figures/cmaps_detuning_30um.pdf Graphic file (type pdf)
 <use figures/cmaps_detuning_30um.pdf>
-Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 564.
+Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 589.
 (pdftex.def)             Requested size: 375.80544pt x 217.85928pt.
- [31 <./figures/cmaps_detuning_30um.pdf>]) [32] (./method/experimental_setup.tex
+ [33 <./figures/cmaps_detuning_30um.pdf>]) [34] (./method/experimental_setup.tex
 
-LaTeX Warning: Reference `fig:experimental_setup' on page 33 undefined on input line 4.
+LaTeX Warning: Reference `fig:experimental_setup' on page 35 undefined on input line 4.
 
-<figures/setup_sketch.pdf, id=1926, 392.46625pt x 347.2975pt>
+<figures/setup_sketch.pdf, id=1891, 392.46625pt x 347.2975pt>
 File: figures/setup_sketch.pdf Graphic file (type pdf)
 <use figures/setup_sketch.pdf>
 Package pdftex.def Info: figures/setup_sketch.pdf  used on input line 10.
 (pdftex.def)             Requested size: 281.85587pt x 249.43398pt.
-<figures/setup_skecth_zoomed.pdf, id=1927, 686.565pt x 319.1925pt>
+<figures/setup_skecth_zoomed.pdf, id=1892, 686.565pt x 319.1925pt>
 File: figures/setup_skecth_zoomed.pdf Graphic file (type pdf)
 <use figures/setup_skecth_zoomed.pdf>
 Package pdftex.def Info: figures/setup_skecth_zoomed.pdf  used on input line 18.
 (pdftex.def)             Requested size: 347.62129pt x 161.61223pt.
-<figures/setup_cavity_picture.pdf, id=1928, 355.3275pt x 465.74pt>
+<figures/setup_cavity_picture.pdf, id=1893, 355.3275pt x 465.74pt>
 File: figures/setup_cavity_picture.pdf Graphic file (type pdf)
 <use figures/setup_cavity_picture.pdf>
 Package pdftex.def Info: figures/setup_cavity_picture.pdf  used on input line 23.
@@ -1040,15 +1043,15 @@ Package pdftex.def Info: figures/setup_cavity_picture.pdf  used on input line 23
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33
+[35
 
  <./figures/setup_sketch.pdf>]
-<figures/toptica_laser.pdf, id=1947, 274.02374pt x 213.79875pt>
+<figures/toptica_laser.pdf, id=1913, 274.02374pt x 213.79875pt>
 File: figures/toptica_laser.pdf Graphic file (type pdf)
 <use figures/toptica_laser.pdf>
 Package pdftex.def Info: figures/toptica_laser.pdf  used on input line 38.
 (pdftex.def)             Requested size: 145.86743pt x 113.81102pt.
-<figures/toptica_controller.pdf, id=1948, 355.3275pt x 213.79875pt>
+<figures/toptica_controller.pdf, id=1914, 355.3275pt x 213.79875pt>
 File: figures/toptica_controller.pdf Graphic file (type pdf)
 <use figures/toptica_controller.pdf>
 Package pdftex.def Info: figures/toptica_controller.pdf  used on input line 44.
@@ -1057,14 +1060,14 @@ Package pdftex.def Info: figures/toptica_controller.pdf  used on input line 44.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./figures/setup_skecth_zoomed.pdf> <./figures/setup_cavity_picture.pdf>]
-<figures/outcoupling_fiber.pdf, id=1963, 533.995pt x 331.2375pt>
+[36 <./figures/setup_skecth_zoomed.pdf> <./figures/setup_cavity_picture.pdf>]
+<figures/outcoupling_fiber.pdf, id=1929, 533.995pt x 331.2375pt>
 File: figures/outcoupling_fiber.pdf Graphic file (type pdf)
 <use figures/outcoupling_fiber.pdf>
 Package pdftex.def Info: figures/outcoupling_fiber.pdf  used on input line 56.
 (pdftex.def)             Requested size: 234.8775pt x 145.6944pt.
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 61.
-<figures/HWP.pdf, id=1964, 610.28pt x 248.93pt>
+<figures/HWP.pdf, id=1930, 610.28pt x 248.93pt>
 File: figures/HWP.pdf Graphic file (type pdf)
 <use figures/HWP.pdf>
 Package pdftex.def Info: figures/HWP.pdf  used on input line 67.
@@ -1073,8 +1076,8 @@ Package pdftex.def Info: figures/HWP.pdf  used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[35 <./figures/toptica_laser.pdf> <./figures/toptica_controller.pdf> <./figures/outcoupling_fiber.pdf>]
-<figures/optical_telescope.pdf, id=1981, 648.4225pt x 319.1925pt>
+[37 <./figures/toptica_laser.pdf> <./figures/toptica_controller.pdf> <./figures/outcoupling_fiber.pdf>]
+<figures/optical_telescope.pdf, id=1946, 648.4225pt x 319.1925pt>
 File: figures/optical_telescope.pdf Graphic file (type pdf)
 <use figures/optical_telescope.pdf>
 Package pdftex.def Info: figures/optical_telescope.pdf  used on input line 83.
@@ -1084,7 +1087,7 @@ Overfull \hbox (1.01332pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-<figures/optical_telescope_picture.pdf, id=1982, 386.44376pt x 289.08pt>
+<figures/optical_telescope_picture.pdf, id=1947, 386.44376pt x 289.08pt>
 File: figures/optical_telescope_picture.pdf Graphic file (type pdf)
 <use figures/optical_telescope_picture.pdf>
 Package pdftex.def Info: figures/optical_telescope_picture.pdf  used on input line 89.
@@ -1092,13 +1095,13 @@ Package pdftex.def Info: figures/optical_telescope_picture.pdf  used on input li
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36 <./figures/HWP.pdf>]
-<figures/setup_bottom.pdf, id=1999, 679.53876pt x 289.08pt>
+[38 <./figures/HWP.pdf>]
+<figures/setup_bottom.pdf, id=1964, 679.53876pt x 289.08pt>
 File: figures/setup_bottom.pdf Graphic file (type pdf)
 <use figures/setup_bottom.pdf>
 Package pdftex.def Info: figures/setup_bottom.pdf  used on input line 116.
 (pdftex.def)             Requested size: 281.85587pt x 119.9042pt.
-<figures/cavity_setup_bottom_pic.pdf, id=2000, 428.60126pt x 396.48125pt>
+<figures/cavity_setup_bottom_pic.pdf, id=1965, 428.60126pt x 396.48125pt>
 File: figures/cavity_setup_bottom_pic.pdf Graphic file (type pdf)
 <use figures/cavity_setup_bottom_pic.pdf>
 Package pdftex.def Info: figures/cavity_setup_bottom_pic.pdf  used on input line 121.
@@ -1107,13 +1110,13 @@ Package pdftex.def Info: figures/cavity_setup_bottom_pic.pdf  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37 <./figures/optical_telescope.pdf> <./figures/optical_telescope_picture.pdf>]
-<figures/setup_top.pdf, id=2019, 683.55376pt x 289.08pt>
+[39 <./figures/optical_telescope.pdf> <./figures/optical_telescope_picture.pdf>]
+<figures/setup_top.pdf, id=1984, 683.55376pt x 289.08pt>
 File: figures/setup_top.pdf Graphic file (type pdf)
 <use figures/setup_top.pdf>
 Package pdftex.def Info: figures/setup_top.pdf  used on input line 136.
 (pdftex.def)             Requested size: 281.85587pt x 119.19844pt.
-<figures/setup_top_pic.pdf, id=2020, 356.33125pt x 353.32pt>
+<figures/setup_top_pic.pdf, id=1985, 356.33125pt x 353.32pt>
 File: figures/setup_top_pic.pdf Graphic file (type pdf)
 <use figures/setup_top_pic.pdf>
 Package pdftex.def Info: figures/setup_top_pic.pdf  used on input line 141.
@@ -1122,14 +1125,14 @@ Package pdftex.def Info: figures/setup_top_pic.pdf  used on input line 141.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38 <./figures/setup_bottom.pdf> <./figures/cavity_setup_bottom_pic.pdf>]
-<figures/cavity_setup_top_separate_pic.pdf, id=2035, 235.88126pt x 221.82875pt>
+[40 <./figures/setup_bottom.pdf> <./figures/cavity_setup_bottom_pic.pdf>]
+<figures/cavity_setup_top_separate_pic.pdf, id=2000, 235.88126pt x 221.82875pt>
 File: figures/cavity_setup_top_separate_pic.pdf Graphic file (type pdf)
 <use figures/cavity_setup_top_separate_pic.pdf>
 Package pdftex.def Info: figures/cavity_setup_top_separate_pic.pdf  used on input line 153.
 (pdftex.def)             Requested size: 187.89914pt x 176.7084pt.
- [39 <./figures/setup_top.pdf> <./figures/setup_top_pic.pdf> <./figures/cavity_setup_top_separate_pic.pdf>]
-<figures/noise_box_front.pdf, id=2054, 341.275pt x 185.69376pt>
+ [41 <./figures/setup_top.pdf> <./figures/setup_top_pic.pdf> <./figures/cavity_setup_top_separate_pic.pdf>]
+<figures/noise_box_front.pdf, id=2020, 341.275pt x 185.69376pt>
 File: figures/noise_box_front.pdf Graphic file (type pdf)
 <use figures/noise_box_front.pdf>
 Package pdftex.def Info: figures/noise_box_front.pdf  used on input line 168.
@@ -1139,29 +1142,29 @@ Overfull \hbox (5.13603pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-<figures/noise_box_side.pdf, id=2055, 329.23pt x 257.96375pt>
+<figures/noise_box_side.pdf, id=2021, 329.23pt x 257.96375pt>
 File: figures/noise_box_side.pdf Graphic file (type pdf)
 <use figures/noise_box_side.pdf>
 Package pdftex.def Info: figures/noise_box_side.pdf  used on input line 174.
 (pdftex.def)             Requested size: 163.41394pt x 128.0374pt.
-[40 <./figures/noise_box_front.pdf> <./figures/noise_box_side.pdf>]
-<figures/scope.pdf, id=2067, 294.09875pt x 165.61874pt>
+[42 <./figures/noise_box_front.pdf> <./figures/noise_box_side.pdf>]
+<figures/scope.pdf, id=2033, 294.09875pt x 165.61874pt>
 File: figures/scope.pdf Graphic file (type pdf)
 <use figures/scope.pdf>
 Package pdftex.def Info: figures/scope.pdf  used on input line 196.
 (pdftex.def)             Requested size: 202.09814pt x 113.81102pt.
-<figures/frequency_generator.pdf, id=2068, 304.13625pt x 165.61874pt>
+<figures/frequency_generator.pdf, id=2034, 304.13625pt x 165.61874pt>
 File: figures/frequency_generator.pdf Graphic file (type pdf)
 <use figures/frequency_generator.pdf>
 Package pdftex.def Info: figures/frequency_generator.pdf  used on input line 202.
 (pdftex.def)             Requested size: 208.9957pt x 113.81102pt.
 ) (./method/grating_characterization.tex
-<figures/packaged_membrane_picture.png, id=2069, 785.93625pt x 589.20125pt>
+<figures/packaged_membrane_picture.png, id=2035, 785.93625pt x 589.20125pt>
 File: figures/packaged_membrane_picture.png Graphic file (type png)
 <use figures/packaged_membrane_picture.png>
 Package pdftex.def Info: figures/packaged_membrane_picture.png  used on input line 8.
 (pdftex.def)             Requested size: 164.41711pt x 123.25941pt.
-<figures/membrane_picture.png, id=2070, 784.9325pt x 673.51625pt>
+<figures/membrane_picture.png, id=2036, 784.9325pt x 673.51625pt>
 File: figures/membrane_picture.png Graphic file (type png)
 <use figures/membrane_picture.png>
 Package pdftex.def Info: figures/membrane_picture.png  used on input line 14.
@@ -1170,7 +1173,7 @@ Package pdftex.def Info: figures/membrane_picture.png  used on input line 14.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/grating_sketch.pdf, id=2071, 580.1675pt x 143.53625pt>
+<figures/grating_sketch.pdf, id=2037, 580.1675pt x 143.53625pt>
 File: figures/grating_sketch.pdf Graphic file (type pdf)
 <use figures/grating_sketch.pdf>
 Package pdftex.def Info: figures/grating_sketch.pdf  used on input line 26.
@@ -1178,8 +1181,8 @@ Package pdftex.def Info: figures/grating_sketch.pdf  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41 <./figures/scope.pdf> <./figures/frequency_generator.pdf>] [42 <./figures/packaged_membrane_picture.png> <./figures/membrane_picture.png> <./figures/grating_sketch.pdf>]
-<figures/xy_alignment_sketch.pdf, id=2100, 351.3125pt x 290.08376pt>
+[43 <./figures/scope.pdf> <./figures/frequency_generator.pdf>] [44 <./figures/packaged_membrane_picture.png> <./figures/membrane_picture.png> <./figures/grating_sketch.pdf>]
+<figures/xy_alignment_sketch.pdf, id=2065, 351.3125pt x 290.08376pt>
 File: figures/xy_alignment_sketch.pdf Graphic file (type pdf)
 <use figures/xy_alignment_sketch.pdf>
 Package pdftex.def Info: figures/xy_alignment_sketch.pdf  used on input line 51.
@@ -1188,38 +1191,38 @@ Package pdftex.def Info: figures/xy_alignment_sketch.pdf  used on input line 51.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[43] [44 <./figures/xy_alignment_sketch.pdf>]
-<figures/arbitrary_gaussian.pdf, id=2110, 722.7pt x 505.89pt>
+[45] [46 <./figures/xy_alignment_sketch.pdf>]
+<figures/arbitrary_gaussian.pdf, id=2075, 722.7pt x 505.89pt>
 File: figures/arbitrary_gaussian.pdf Graphic file (type pdf)
 <use figures/arbitrary_gaussian.pdf>
 Package pdftex.def Info: figures/arbitrary_gaussian.pdf  used on input line 79.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/razor_blade_err_function.pdf, id=2111, 722.7pt x 505.89pt>
+<figures/razor_blade_err_function.pdf, id=2076, 722.7pt x 505.89pt>
 File: figures/razor_blade_err_function.pdf Graphic file (type pdf)
 <use figures/razor_blade_err_function.pdf>
 Package pdftex.def Info: figures/razor_blade_err_function.pdf  used on input line 84.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [45 <./figures/arbitrary_gaussian.pdf> <./figures/razor_blade_err_function.pdf
+ [47 <./figures/arbitrary_gaussian.pdf> <./figures/razor_blade_err_function.pdf
 
 pdfTeX warning: pdflatex (file ./figures/razor_blade_err_function.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/norm_ref_and_trans_M3.pdf, id=2182, 722.7pt x 505.89pt>
+<figures/norm_ref_and_trans_M3.pdf, id=2148, 722.7pt x 505.89pt>
 File: figures/norm_ref_and_trans_M3.pdf Graphic file (type pdf)
 <use figures/norm_ref_and_trans_M3.pdf>
 Package pdftex.def Info: figures/norm_ref_and_trans_M3.pdf  used on input line 103.
 (pdftex.def)             Requested size: 375.80544pt x 263.0643pt.
- [46 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex [47] [48] [49]
-<figures/bottom_with_alignement_mark.pdf, id=2237, 346.29375pt x 261.97874pt>
+ [48 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex [49] [50] [51]
+<figures/bottom_with_alignement_mark.pdf, id=2202, 346.29375pt x 261.97874pt>
 File: figures/bottom_with_alignement_mark.pdf Graphic file (type pdf)
 <use figures/bottom_with_alignement_mark.pdf>
 Package pdftex.def Info: figures/bottom_with_alignement_mark.pdf  used on input line 29.
 (pdftex.def)             Requested size: 234.8775pt x 177.69547pt.
-<figures/length_scan_symmetric_lossless.pdf, id=2238, 722.7pt x 505.89pt>
+<figures/length_scan_symmetric_lossless.pdf, id=2203, 722.7pt x 505.89pt>
 File: figures/length_scan_symmetric_lossless.pdf Graphic file (type pdf)
 <use figures/length_scan_symmetric_lossless.pdf>
 Package pdftex.def Info: figures/length_scan_symmetric_lossless.pdf  used on input line 43.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/scope_screenshot.pdf, id=2239, 722.7pt x 505.89pt>
+<figures/scope_screenshot.pdf, id=2204, 722.7pt x 505.89pt>
 File: figures/scope_screenshot.pdf Graphic file (type pdf)
 <use figures/scope_screenshot.pdf>
 Package pdftex.def Info: figures/scope_screenshot.pdf  used on input line 48.
@@ -1228,8 +1231,8 @@ Package pdftex.def Info: figures/scope_screenshot.pdf  used on input line 48.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50 <./figures/bottom_with_alignement_mark.pdf>]
-<figures/HWHM_vs_time_20250266_452um.pdf, id=2247, 722.7pt x 505.89pt>
+[52 <./figures/bottom_with_alignement_mark.pdf>]
+<figures/HWHM_vs_time_20250266_452um.pdf, id=2212, 722.7pt x 505.89pt>
 File: figures/HWHM_vs_time_20250266_452um.pdf Graphic file (type pdf)
 <use figures/HWHM_vs_time_20250266_452um.pdf>
 Package pdftex.def Info: figures/HWHM_vs_time_20250266_452um.pdf  used on input line 60.
@@ -1238,49 +1241,49 @@ Package pdftex.def Info: figures/HWHM_vs_time_20250266_452um.pdf  used on input 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[51 <./figures/length_scan_symmetric_lossless.pdf> <./figures/scope_screenshot.pdf
+[53 <./figures/length_scan_symmetric_lossless.pdf> <./figures/scope_screenshot.pdf
 
 pdfTeX warning: pdflatex (file ./figures/scope_screenshot.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [52 <./figures/HWHM_vs_time_20250266_452um.pdf>]
+>] [54 <./figures/HWHM_vs_time_20250266_452um.pdf>]
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 53 undefined on input line 73.
+LaTeX Warning: Reference `eq:FSR_formula' on page 55 undefined on input line 73.
 
-<figures/length_from_fsr_example_100um.pdf, id=2365, 722.7pt x 505.89pt>
+<figures/length_from_fsr_example_100um.pdf, id=2331, 722.7pt x 505.89pt>
 File: figures/length_from_fsr_example_100um.pdf Graphic file (type pdf)
 <use figures/length_from_fsr_example_100um.pdf>
 Package pdftex.def Info: figures/length_from_fsr_example_100um.pdf  used on input line 86.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/length_from_fsr_example_40um.pdf, id=2366, 722.7pt x 505.89pt>
+<figures/length_from_fsr_example_40um.pdf, id=2332, 722.7pt x 505.89pt>
 File: figures/length_from_fsr_example_40um.pdf Graphic file (type pdf)
 <use figures/length_from_fsr_example_40um.pdf>
 Package pdftex.def Info: figures/length_from_fsr_example_40um.pdf  used on input line 91.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 53 undefined on input line 95.
+LaTeX Warning: Reference `eq:FSR_formula' on page 55 undefined on input line 95.
 
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 53 undefined on input line 95.
+LaTeX Warning: Reference `eq:FSR_formula' on page 55 undefined on input line 95.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[53]
-<figures/raw_data_cavity_trans.pdf, id=2371, 794.97pt x 505.89pt>
+[55]
+<figures/raw_data_cavity_trans.pdf, id=2336, 794.97pt x 505.89pt>
 File: figures/raw_data_cavity_trans.pdf Graphic file (type pdf)
 <use figures/raw_data_cavity_trans.pdf>
 Package pdftex.def Info: figures/raw_data_cavity_trans.pdf  used on input line 113.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_incident_light_cavity.pdf, id=2372, 794.97pt x 505.89pt>
+<figures/raw_data_incident_light_cavity.pdf, id=2337, 794.97pt x 505.89pt>
 File: figures/raw_data_incident_light_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_incident_light_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_incident_light_cavity.pdf  used on input line 118.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_transmission_no_cavity.pdf, id=2373, 794.97pt x 505.89pt>
+<figures/raw_data_transmission_no_cavity.pdf, id=2338, 794.97pt x 505.89pt>
 File: figures/raw_data_transmission_no_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_transmission_no_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_transmission_no_cavity.pdf  used on input line 123.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_incident_light_no_cavity.pdf, id=2374, 794.97pt x 505.89pt>
+<figures/raw_data_incident_light_no_cavity.pdf, id=2339, 794.97pt x 505.89pt>
 File: figures/raw_data_incident_light_no_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_incident_light_no_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_incident_light_no_cavity.pdf  used on input line 128.
@@ -1289,7 +1292,7 @@ Package pdftex.def Info: figures/raw_data_incident_light_no_cavity.pdf  used on 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/raw_data_normalized_transmission.pdf, id=2375, 794.97pt x 505.89pt>
+<figures/raw_data_normalized_transmission.pdf, id=2340, 794.97pt x 505.89pt>
 File: figures/raw_data_normalized_transmission.pdf Graphic file (type pdf)
 <use figures/raw_data_normalized_transmission.pdf>
 Package pdftex.def Info: figures/raw_data_normalized_transmission.pdf  used on input line 145.
@@ -1297,10 +1300,10 @@ Package pdftex.def Info: figures/raw_data_normalized_transmission.pdf  used on i
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[54 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
+[56 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/length_from_fsr_example_40um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [55 <./figures/raw_data_cavity_trans.pdf> <./figures/raw_data_incident_light_cavity.pdf
+>] [57 <./figures/raw_data_cavity_trans.pdf> <./figures/raw_data_incident_light_cavity.pdf
 
 pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/raw_data_transmission_no_cavity.pdf
@@ -1310,12 +1313,12 @@ pdfTeX warning: pdflatex (file ./figures/raw_data_transmission_no_cavity.pdf): P
 
 pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_no_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/pinhole_sketch.pdf, id=2640, 439.6425pt x 346.29375pt>
+<figures/pinhole_sketch.pdf, id=2605, 439.6425pt x 346.29375pt>
 File: figures/pinhole_sketch.pdf Graphic file (type pdf)
 <use figures/pinhole_sketch.pdf>
 Package pdftex.def Info: figures/pinhole_sketch.pdf  used on input line 158.
 (pdftex.def)             Requested size: 216.74155pt x 170.71652pt.
-<figures/pinhole_picture.pdf, id=2641, 363.3575pt x 348.30125pt>
+<figures/pinhole_picture.pdf, id=2606, 363.3575pt x 348.30125pt>
 File: figures/pinhole_picture.pdf Graphic file (type pdf)
 <use figures/pinhole_picture.pdf>
 Package pdftex.def Info: figures/pinhole_picture.pdf  used on input line 165.
@@ -1324,7 +1327,7 @@ Package pdftex.def Info: figures/pinhole_picture.pdf  used on input line 165.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pinhole_position_on_gaussian.pdf, id=2642, 722.7pt x 505.89pt>
+<figures/pinhole_position_on_gaussian.pdf, id=2607, 722.7pt x 505.89pt>
 File: figures/pinhole_position_on_gaussian.pdf Graphic file (type pdf)
 <use figures/pinhole_position_on_gaussian.pdf>
 Package pdftex.def Info: figures/pinhole_position_on_gaussian.pdf  used on input line 177.
@@ -1332,40 +1335,40 @@ Package pdftex.def Info: figures/pinhole_position_on_gaussian.pdf  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56 <./figures/raw_data_normalized_transmission.pdf>]
+[58 <./figures/raw_data_normalized_transmission.pdf>]
 
-LaTeX Warning: Text page 57 contains only floats.
+LaTeX Warning: Text page 59 contains only floats.
 
-[57 <./figures/pinhole_sketch.pdf> <./figures/pinhole_picture.pdf> <./figures/pinhole_position_on_gaussian.pdf>] [58]
-<figures/parallelism_plot.pdf, id=2737, 722.7pt x 505.89pt>
+[59 <./figures/pinhole_sketch.pdf> <./figures/pinhole_picture.pdf> <./figures/pinhole_position_on_gaussian.pdf>] [60]
+<figures/parallelism_plot.pdf, id=2703, 722.7pt x 505.89pt>
 File: figures/parallelism_plot.pdf Graphic file (type pdf)
 <use figures/parallelism_plot.pdf>
 Package pdftex.def Info: figures/parallelism_plot.pdf  used on input line 214.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-) [59 <./figures/parallelism_plot.pdf>] (./results/simulations.tex) [60
+) [61 <./figures/parallelism_plot.pdf>] (./results/simulations.tex) [62
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./results/experimental_results.tex
-<figures/60um_M5_FSR_fit.pdf, id=2805, 722.7pt x 505.89pt>
+<figures/60um_M5_FSR_fit.pdf, id=2770, 722.7pt x 505.89pt>
 File: figures/60um_M5_FSR_fit.pdf Graphic file (type pdf)
 <use figures/60um_M5_FSR_fit.pdf>
 Package pdftex.def Info: figures/60um_M5_FSR_fit.pdf  used on input line 17.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/220um_M5_FSR_fit.pdf, id=2806, 722.7pt x 505.89pt>
+<figures/220um_M5_FSR_fit.pdf, id=2771, 722.7pt x 505.89pt>
 File: figures/220um_M5_FSR_fit.pdf Graphic file (type pdf)
 <use figures/220um_M5_FSR_fit.pdf>
 Package pdftex.def Info: figures/220um_M5_FSR_fit.pdf  used on input line 23.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/60um_M5_fit_1.pdf, id=2807, 722.7pt x 505.89pt>
+<figures/60um_M5_fit_1.pdf, id=2772, 722.7pt x 505.89pt>
 File: figures/60um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/60um_M5_fit_1.pdf>
 Package pdftex.def Info: figures/60um_M5_fit_1.pdf  used on input line 33.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/220um_M5_fit_4.pdf, id=2808, 722.7pt x 505.89pt>
+<figures/220um_M5_fit_4.pdf, id=2773, 722.7pt x 505.89pt>
 File: figures/220um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/220um_M5_fit_4.pdf>
 Package pdftex.def Info: figures/220um_M5_fit_4.pdf  used on input line 39.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/HWHM_vs_cavity_length_single_fano.pdf, id=2809, 722.7pt x 505.89pt>
+<figures/HWHM_vs_cavity_length_single_fano.pdf, id=2774, 722.7pt x 505.89pt>
 File: figures/HWHM_vs_cavity_length_single_fano.pdf Graphic file (type pdf)
 <use figures/HWHM_vs_cavity_length_single_fano.pdf>
 Package pdftex.def Info: figures/HWHM_vs_cavity_length_single_fano.pdf  used on input line 47.
@@ -1374,7 +1377,7 @@ Package pdftex.def Info: figures/HWHM_vs_cavity_length_single_fano.pdf  used on 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61 <./figures/60um_M5_FSR_fit.pdf> <./figures/220um_M5_FSR_fit.pdf
+[63 <./figures/60um_M5_FSR_fit.pdf> <./figures/220um_M5_FSR_fit.pdf
 
 pdfTeX warning: pdflatex (file ./figures/220um_M5_FSR_fit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/60um_M5_fit_1.pdf
@@ -1383,32 +1386,32 @@ pdfTeX warning: pdflatex (file ./figures/60um_M5_fit_1.pdf): PDF inclusion: mult
 > <./figures/220um_M5_fit_4.pdf
 
 pdfTeX warning: pdflatex (file ./figures/220um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [62 <./figures/HWHM_vs_cavity_length_single_fano.pdf>] (./results/discussion.tex
+>]) [64 <./figures/HWHM_vs_cavity_length_single_fano.pdf>] (./results/discussion.tex
 Overfull \hbox (27.59802pt too wide) in paragraph at lines 7--7
 |[]\T1/cmr/bx/n/17.28 (-20) Noise re-duc-tion - cou-pled/uncoupled me-chan-i-cal/acoustic
  []
 
-) [63] (./Appendix.tex
+) [65] (./Appendix.tex
 File: figures/sim_single_vs_broadband_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_10um.pdf  used on input line 8.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_30um.pdf, id=3038, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_30um.pdf, id=3004, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_30um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_30um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_30um.pdf  used on input line 13.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_90um.pdf, id=3039, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_90um.pdf, id=3005, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_90um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_90um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_90um.pdf  used on input line 22.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_150um.pdf, id=3040, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_150um.pdf, id=3006, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_150um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_150um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_150um.pdf  used on input line 27.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_300um.pdf, id=3041, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_300um.pdf, id=3007, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_300um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_300um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_300um.pdf  used on input line 36.
@@ -1421,12 +1424,12 @@ Package pdftex.def Info: figures/sim_single_vs_broadband_700um.pdf  used on inpu
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/sim_single_vs_broadband_1000um.pdf, id=3042, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_1000um.pdf, id=3008, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_1000um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_1000um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_1000um.pdf  used on input line 50.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf, id=3043, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf, id=3009, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf  used on input line 55.
@@ -1434,50 +1437,50 @@ Package pdftex.def Info: figures/sim_single_vs_broadband_1000um_with_reflectivit
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64 <./figures/sim_single_vs_broadband_30um.pdf> <./figures/sim_single_vs_broadband_90um.pdf
+[66 <./figures/sim_single_vs_broadband_30um.pdf> <./figures/sim_single_vs_broadband_90um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_90um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/sim_single_vs_broadband_150um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_150um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [65 <./figures/sim_single_vs_broadband_300um.pdf> <./figures/sim_single_vs_broadband_1000um.pdf
+>] [67 <./figures/sim_single_vs_broadband_300um.pdf> <./figures/sim_single_vs_broadband_1000um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_1000um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_1000um_with_reflectivity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/sim_single_vs_double_10um.pdf, id=3403, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_10um.pdf, id=3368, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_10um.pdf  used on input line 67.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_30um.pdf, id=3404, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_30um.pdf, id=3369, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_30um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_30um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_30um.pdf  used on input line 72.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_90um.pdf, id=3405, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_90um.pdf, id=3370, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_90um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_90um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_90um.pdf  used on input line 81.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_150um.pdf, id=3406, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_150um.pdf, id=3371, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_150um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_150um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_150um.pdf  used on input line 86.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_300um.pdf, id=3407, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_300um.pdf, id=3372, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_300um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_300um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_300um.pdf  used on input line 95.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_700um.pdf, id=3408, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_700um.pdf, id=3373, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_700um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_700um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_700um.pdf  used on input line 100.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_1000um.pdf, id=3409, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_1000um.pdf, id=3374, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_1000um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_1000um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_1000um.pdf  used on input line 108.
@@ -1486,7 +1489,7 @@ Package pdftex.def Info: figures/sim_single_vs_double_1000um.pdf  used on input 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[66
+[68
 
  <./figures/sim_single_vs_double_10um.pdf> <./figures/sim_single_vs_double_30um.pdf
 
@@ -1503,7 +1506,7 @@ pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_300um.pdf): PDF in
 > <./figures/sim_single_vs_double_700um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_700um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [67 <./figures/sim_single_vs_double_1000um.pdf>]
+>]) [69 <./figures/sim_single_vs_double_1000um.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 102.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1517,7 +1520,7 @@ Overfull \hbox (18.30638pt too wide) in paragraph at lines 102--102
 []\T1/cmr/m/sc/14.4 (-20) url\T1/cmr/m/n/14.4 (-20) : $\T1/cmtt/m/n/14.4 https : / / www . edmundoptics . com / knowledge -[] center / application -[]
  []
 
-[68] [69] (./main.aux)
+[70] [71] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1535,18 +1538,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18308 strings out of 474116
- 352777 string characters out of 5743682
+ 18320 strings out of 474116
+ 353081 string characters out of 5743682
  1939187 words of memory out of 5000000
- 40162 multiletter control sequences out of 15000+600000
- 585561 words of font info for 220 fonts, out of 8000000 for 9000
+ 40172 multiletter control sequences out of 15000+600000
+ 585681 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,81p,1413b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (71 pages, 10945732 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
+Output written on main.pdf (73 pages, 10929835 bytes).
 PDF statistics:
- 3927 PDF objects out of 4296 (max. 8388607)
- 915 compressed objects within 10 object streams
+ 3890 PDF objects out of 4296 (max. 8388607)
+ 918 compressed objects within 10 object streams
  0 named destinations out of 1000 (max. 500000)
  50170 words of extra memory for PDF output out of 51595 (max. 10000000)
 
