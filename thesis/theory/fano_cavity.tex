@@ -502,12 +502,12 @@ And while this does turn out to be the case, we must inverstigate the resonant l
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_short.pdf}
+        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_long.pdf}
         \caption{}
         \label{fig:detuned_small_length_scan_long}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_long.pdf}
+        \includegraphics[width=\textwidth]{figures/small_detuning_length_scan_short.pdf}
         \caption{}
         \label{fig:detuned_small_length_scan_short}
     \end{subfigure}
@@ -522,12 +522,12 @@ Figure \ref{fig:detuned_small_length_scan_short} shows the same spectra, but enh
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuned_length_scan_long.pdf}
+        \includegraphics[width=\textwidth]{figures/medium_detuning_length_scan_long.pdf}
         \caption{}
         \label{fig:detuned_length_scan_long}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuned_length_scan_short.pdf}
+        \includegraphics[width=\textwidth]{figures/medium_detuning_length_scan_short.pdf}
         \caption{}
         \label{fig:detuned_length_scan_short}
     \end{subfigure}
@@ -561,20 +561,30 @@ In order to get a clear and qualitative picture of the double Fano cavity transm
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[c]{0.49\textwidth}
+    \includegraphics[width=0.7\textwidth]{figures/cmap_with_slice_indicators1.pdf}
+    \caption{}
+    \label{fig:cmap_single}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/cmap_with_slice_indicators1.pdf}
+        \includegraphics[width=\textwidth]{figures/cmap_slice1.pdf}
         \caption{}
-        \label{fig:cmap_single}
+        \label{fig:cmap_slice1}
     \end{subfigure}
-    \begin{subfigure}[c]{0.49\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=0.49\textwidth]{figures/cmap_slice2.pdf}
-        \newline
-        \includegraphics[width=0.49\textwidth]{figures/cmap_slice1.pdf}
-        \includegraphics[width=0.49\textwidth]{figures/cmap_slice3.pdf}
+        \includegraphics[width=\textwidth]{figures/cmap_slice2.pdf}
         \caption{}
-        \label{fig:cmap_slices}
+        \label{fig:cmap_slice2}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/cmap_slice3.pdf}
+        \caption{}
+        \label{fig:cmap_slice3}
     \end{subfigure}
     \caption{(a) shows a heat map of the lossless double Fano cavity transmission as a function of wavelength and cavity lengths ranging $l \rightarrow l^{\prime} \approx 20 \mu m$ for $\Delta = 0.3nm$. (b) show slices of the heat map for comparing different cavity lenghts, and are indicated by their respective color and linetype in (a). The respecitive cavity lengths and linewidths are given as: $l_{magenta} = (0.2l+0.8l^{\prime})$, $HWHM_{magenta} = 71.3pm$, $l_{cyan} = (0.8l+0.2l^{\prime})$, $HWHM_{cyan} = 71.3pm$ and $l_{lime} = (l+l^{\prime})/2$, $HWHM_{lime} = 58.6pm$.}
     \label{fig:cmap_and_slices}
@@ -590,7 +600,7 @@ It turns out that the linewidths of the cyan and magenta transmission profiles a
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/cmap_lw_vs_l_intracavity.pdf}
+    \includegraphics[width=0.7\textwidth]{figures/lw_vs_length_intracavity.pdf}
     \caption{Linewidth as a function of cavity length $l \rightarrow l^{\prime}$. Each point is found as a fitting parameter from a least squares fit of the intracavity lossless double Fano spectrum for each respective cavity length, to the generalized Fano model in eq. (\ref{eq:general_fano_model}).}
     \label{fig:lw_vs_l_scan}
 \end{figure}

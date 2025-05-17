@@ -53,9 +53,10 @@ mist_t = [(1-eps)*t+eps for t in mist_trans[1]]
 #λs = np.linspace(951.65, 951.95, 500)
 #λs = np.linspace(M3.data[:,0][0], M3.data[:,0][-1], 100)
 #λs = np.linspace(data[:,0][0], data[:,0][-1], 1000)
-λs = np.linspace(950.5, 953, 10000)
-lmin = 29
+λs = np.linspace(950, 953, 10000)
+lmin = 29.9
 L = 0.016
+Δ = 0.3
 #λs = np.linspace(950.500, 951.500, 90) # 950, 952
 #λs = np.linspace(910, 980, 10000)
 #λs = np.linspace(951.68, 951.90, 200)
@@ -626,7 +627,7 @@ def loss_factor_scan(params: list, loss_list: list, λs: np.array, lmin=50): ## 
     plt.show()
 
 def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, intracavity=False, losses=True, zoom=False):
-    fig, ax = plt.subplots(figsize=(10,6))
+    fig, ax = plt.subplots(figsize=(10,7))
     linestyles = ["-.", "--", "-", "--", "-."]
     #linestyles = [":", "-.", "--", "-"]
     colors = ["skyblue","royalblue","forestgreen", "firebrick", "lightcoral"]
@@ -634,7 +635,7 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
     Ts_inset = []
     for l, paint, style in zip(ls, colors, linestyles):
         Ts = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
-        ax.plot(λs, Ts, color=paint, linestyle=style, label="cavity length: %sμm" % str(round(l*1e-3,3)))
+        ax.plot(λs, Ts, color=paint, linestyle=style, label="l = %sμm" % str(round(l*1e-3,3)))
         Ts_inset.append(Ts)
     if zoom == True:
         axins = ax.inset_axes([0.05, 0.05, 0.35, 0.35])
@@ -648,12 +649,14 @@ def cavity_length_plot(ls: list, params1: list, params2: list, λs: np.array, in
         mark_inset(ax, axins, loc1=2, loc2=4, edgecolor="black", alpha=0.3)
     #plt.title("Double fano transmission for different cavity lengths %s" %("$l_{M3} \\rightarrow l_{M5}$")) 
     #plt.title("Double fano transmission for different cavity lengths:  %s" %("$(l_{M3} + l_{M5})/2$")) 
-    plt.xlabel("wavelength [nm]")
-    plt.ylabel("normalized transmission [arb.u.]")
-    #plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
-    plt.legend(loc="upper right")
-    #plt.subplots_adjust(right=0.70)
-    plt.show() 
+    plt.xlabel("wavelength [nm]", fontsize=28)
+    plt.xticks(fontsize=21)
+    plt.yticks(fontsize=21)
+    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+    plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
+    plt.subplots_adjust(bottom=0.3)
+    plt.locator_params(axis='x', tight=True, nbins=8)
+    plt.show()
 
 def l_vs_λ_cmaps(params1: list, params2: list, λs: np.array, intracavity=False, losses=True, lmin=30): 
     params2[1] += 0
@@ -726,26 +729,28 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
     λ_labels = np.linspace(np.min(λs), np.max(λs),10)
     λ_labels = [round(label,2) for label in λ_labels]
 
-    #length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
-    #length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
-    #length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+    length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+    length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+    length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
 
-    #ls1 = [length1 for _ in np.zeros(len(λs))]
-    #ls2 = [length2 for _ in np.zeros(len(λs))]
-    #ls3 = [length3 for _ in np.zeros(len(λs))]
+    l1 = [length1 for _ in np.zeros(len(λs))]
+    l2 = [length2 for _ in np.zeros(len(λs))]
+    l3 = [length3 for _ in np.zeros(len(λs))]
 
-    #plt.plot(λs, ls1, color="lime", linestyle="-")
-    #plt.plot(λs, ls2, color="magenta", linestyle="-")
-    #plt.plot(λs, ls3, color="cyan", linestyle="-")
+    plt.plot(λs, l1, color="lime", linestyle="-", lw=4)
+    plt.plot(λs, l2, color="magenta", linestyle="--", lw=4)
+    plt.plot(λs, l3, color="cyan", linestyle="-.", lw=4)
     plt.imshow(cmap, aspect="auto", extent=[np.min(λs), np.max(λs), np.min(ls), np.max(ls)])
-    plt.xticks(λ_labels)
-    plt.yticks(ls, l_labels)
+    plt.xticks(λ_labels, fontsize=21)
+    plt.yticks(ls, l_labels, fontsize=21)
     ax = plt.gca()
     ax.xaxis.set_ticks_position("both")
     ax.tick_params(axis='x', direction='out', which='both')
-    plt.xlabel("wavelength [nm]")
-    plt.ylabel("cavity length [μm]")
-    plt.colorbar()
+    plt.xlabel("wavelength [nm]", fontsize=28)
+    plt.ylabel("cavity length [μm]", fontsize=28) 
+    #plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
+    plt.subplots_adjust(left=0.2, bottom=0.2)
+    plt.locator_params(axis='both', nbins=8)
     plt.show()
 
 def line_width_double(params1: list, params2: list, λs: np.array, length: float, intracavity=False, losses=True): 
@@ -808,24 +813,27 @@ def line_width_comparison(params1: list, params2: list, length: float, intracavi
 def linewidth_length_plot(params1: list, params2: list, λs: np.array, intracavity=True, losses=True):
     lws = []
     errs = []
-    lengths = np.linspace(double_cavity_length(params1, params2, λs, lmin=20, losses=losses), double_cavity_length(params2, params1, λs, lmin=20, losses=losses), 10)
+    lengths = np.linspace(double_cavity_length(params1, params2, λs, lmin=29.9, losses=losses), double_cavity_length(params2, params1, λs, lmin=29.9, losses=losses), 11)
 
     for length in lengths:
         Ts =  dual_fano_transmission(params1, params2, length, λs, intracavity=intracavity, losses=losses)
         popt, pcov = curve_fit(model, λs, Ts, p0=(np.array(params1)+np.array(params2))/2, maxfev=10000)
         HWHM = np.abs(popt[3])*1e3
-        err = 2*np.sqrt(np.diag(pcov))[3]*1e3
+        err = np.sqrt(np.diag(pcov))[3]*1e3
         lws.append(HWHM)
         errs.append(err)
     
-    plt.figure(figsize=(10,6))
-    plt.scatter(lengths*1e-3, lws, color="royalblue")
+    plt.figure(figsize=(10,7))
+    plt.errorbar(lengths*1e-3, lws, errs, fmt="o", capsize=3, color="royalblue")
     #plt.title("intracavity HWHM as a function of cavity length ($l = l_{M3} \\rightarrow l_{M5} \\approx 20μm$)")
-    plt.ylabel("HWHM [pm]")
-    plt.xlabel("cavity length [μm]") 
+    plt.xlabel("cavity length [μm]", fontsize=28)
+    plt.ylabel("HWHM [pm]", fontsize=28)
+    plt.xticks(fontsize=21)
+    plt.yticks(fontsize=21)
+    plt.subplots_adjust(bottom=0.2)
+    plt.locator_params(axis='x', tight=True, nbins=8)
     plt.show()
 
-Δ = 0.3
 params1, _ = curve_fit(model, mist_trans[0], mist_t, p0=[951.2, 951.2, 0.7, 0.5, 1e-6], maxfev=10000)
 #r_params, _ = curve_fit(model, mist_trans[0], mist_ref[1], p0=[951.2, 951.2, 0.7, 0.5, 1e-6], maxfev=10000)
 #print("rd=",r_params[3])
@@ -859,13 +867,13 @@ fig, ax = plt.subplots(figsize=(10,7))
 
 #Δs = np.linspace(-1.5, 1.5, 5) # low resolution
 #Δs = np.linspace(-0.3, 0.3, 5) # high resolution
-Δs = np.linspace(0, 1, 5)
-detuning_plot(Δs, params1, λs, intracavity=False, losses=False, lmin=29)
+#Δs = np.linspace(0, 1, 5)
+#detuning_plot(Δs, params1, λs, intracavity=False, losses=False, lmin=29)
 
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
 #l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=30)
-#double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=30)
+#double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=lmin)
 
 #### length scan of the single and double fano cavities
 
@@ -920,13 +928,12 @@ detuning_plot(Δs, params1, λs, intracavity=False, losses=False, lmin=29)
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
 
-#linewidth_length_plot(params1, params2, λs, losses=False)
+#linewidth_length_plot(params1, params2, λs, intracavity=True, losses=False)
 
 #theoretical_phase_plot(params1, λs)
 #length = resonant_cavity_length(params1, λs, lmin=30)
 #single_fano_phase_plot(params1, length, λs)
 
-#lmin=30
 #length = (double_cavity_length(params1, params2, λs, lmin=lmin) + double_cavity_length(params2, params1, λs, lmin=lmin))/2
 #length = double_cavity_length(params2, params1, λs, lmin=lmin)
 #double_fano_phase_plot(params1, params2, length, λs)
@@ -1001,13 +1008,17 @@ detuning_plot(Δs, params1, λs, intracavity=False, losses=False, lmin=29)
 ## examined lengths for simulated linewidths comparison: 10, 30, 90, 270, 810
 
 
-#double_length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
-#double_length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
-#double_length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+double_length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+double_length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
+double_length3 = 0.8*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.2*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
 
-#double_ts1 = dual_fano_transmission(params1, params2, double_length1, λs, intracavity=False, losses=False)
-#double_ts2 = dual_fano_transmission(params1, params2, double_length2, λs, intracavity=False, losses=False)
-#double_ts3 = dual_fano_transmission(params1, params2, double_length3, λs, intracavity=False, losses=False)
+double_ts1 = dual_fano_transmission(params1, params2, double_length1, λs, intracavity=False, losses=False)
+double_ts2 = dual_fano_transmission(params1, params2, double_length2, λs, intracavity=False, losses=False)
+double_ts3 = dual_fano_transmission(params1, params2, double_length3, λs, intracavity=False, losses=False)
+
+#plt.plot(λs, double_ts1, linestyle="-", lw=3, color="lime")
+#plt.plot(λs, double_ts2, linestyle="--", lw=3, color="magenta")
+#plt.plot(λs, double_ts2, linestyle="-.", lw=3, color="cyan")
 
 rs1 = [float(r) for r in theoretical_reflection_values(params1, losses=False, loss_factor=0.03)[0]]
 grating_trans1 = model(λs, *params1)
@@ -1047,9 +1058,9 @@ popt4, _4 = curve_fit(model, λs, ts, p0=params1, maxfev=10000)
 
 #plt.plot(λs, bb_ts, color="royalblue", linestyle="--", label="broadband trans.")
 #plt.plot(λs, single_ts, color="orangered", linestyle="--", label="single Fano trans.", zorder=3)
-plt.plot(λs, double_ts, color="forestgreen", label="$|E_{out}|^2/|E_{0,in}|^2$")
-plt.plot(λs, rs1, color="steelblue", linestyle="--", label="$|r_g|^2$")
-plt.plot(λs, rs2, color="lightskyblue", linestyle="--", label="$|r_g^{\prime}|^2$")
+#plt.plot(λs, double_ts, color="forestgreen", label="$|E_{out}|^2/|E_{0,in}|^2$")
+#plt.plot(λs, rs1, color="steelblue", linestyle="--", label="$|r_g|^2$")
+#plt.plot(λs, rs2, color="lightskyblue", linestyle="--", label="$|r_g^{\prime}|^2$")
 #x1, x2, y1, y2 = params1[0]-0.15, params1[0]+0.15, 0.01, 1.03
 #axins = ax.inset_axes([0.02, 0.70, 0.4, 0.4])
 #axins.plot(λs[5250:5750], double_ts[5250:5750], color="forestgreen")
@@ -1142,9 +1153,9 @@ plt.xlabel("wavelength [nm]", fontsize=28)
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
 #plt.ylabel("norm. ref./trans. [arb. u.]", fontsize=28)
-plt.ylabel("norm. ref./trans. [arb. u.]", fontsize=28)
-plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
-plt.subplots_adjust(bottom=0.3)
+plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+#plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
+plt.subplots_adjust(bottom=0.2)
 plt.locator_params(axis='x', tight=True, nbins=8)
 plt.show()
 
@@ -1152,8 +1163,8 @@ plt.show()
 
 #detuning_plot(Δs, params1, λs, intracavity=True, losses=False, lmin=30)
 
-#l1 = double_cavity_length(params1, params2, λs, lmin=30, losses=False)
-#l2 = double_cavity_length(params2, params1, λs, lmin=30, losses=False)
+#l1 = double_cavity_length(params1, params2, λs, lmin=29.9, losses=False)
+#l2 = double_cavity_length(params2, params1, λs, lmin=29.9, losses=False)
 #ls = np.linspace(l1,l2,5)
 #cavity_length_plot(ls, params1, params2, λs, intracavity=False, losses=False, zoom=False)
 #dual_fano_transmission_plot(params1, params2, double_length, λs, intracavity=False, losses=False, zoom=True, grating_trans=True)
