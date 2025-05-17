@@ -57,7 +57,7 @@ where $k_0$ and $\beta$ are defined from the expression for $a$ found by solving
 \end{equation}
 Finally, this allows for non-zero transmission and non-unity reflectivity at wave number $k_0$.
 
-To show the validity of the model at this point, we introduce a periodic grating which is arbitrarily sketched in figure \ref{fig:MIST_grating_sketch}. The sketch indicates the period of the grating $\Lambda$, the top finger width $w_t$, the offset between the finger top and the bottom of the grating $x$, the total grating thickness $t$ and finger depth $d$. Furthermore, the grating is patterned in a \emph{silicon nitride (SiN)} membrane  of refractive index $n_{SiN}$. 
+To show the validity of the model at this point, we introduce a periodic grating which is arbitrarily sketched in figure \ref{fig:MIST_grating_sketch}. The sketch indicates the period of the grating $\Lambda$, the top finger width $w_t$, the offset between the finger top and the bottom of the grating $x$, the total grating thickness $t$ and finger depth $d$. Furthermore, the grating is patterned on a \emph{silicon nitride (SiN)} membrane  of refractive index $n_{SiN}$. 
 
 \begin{figure}[h!]
     \centering
@@ -81,14 +81,14 @@ where we define the correction to be arbitrarily small as $\varepsilon = 1\%$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/MIST_grating_sim.pdf}
-    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.208$nm, $\lambda_1 = 951.356$nm, $t_d = 80.94\%$, $r_d = 52.7\%$, $\gamma_{\lambda} = 0.527$, and $\beta = 4.42 \cdot 10^{-7}$.}
+    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.208$nm, $\lambda_1 = 951.356$nm, $t_d = 0.8094$, $r_d = 0.527$, $\gamma_{\lambda} = 0.527$nm, and $\beta = 4.42 \cdot 10^{-7}$.}
     \label{fig:MIST_sim_of_grating}
 \end{figure}
 
 Figure \ref{fig:MIST_sim_of_grating} shows the scaled and unscaled results of the simulation using MIST for the following physical grating parameters:
 \begin{equation}
     \begin{split}
-    \Lambda = &857 \text{nm},\:\: w_t = 623 \text{nm},\:\: h = 55.1 \text{nm},\\ &t = 152 \text{nm},\:\: d = 67 \text{nm}\: \text{ and }\: n_{SiN} = 2.15,
+    &\Lambda = 857 \text{nm},\:\: w_t = 623 \text{nm},\:\: h = 55.1 \text{nm},\\ &t = 152 \text{nm},\:\: d = 67 \text{nm}\: \text{ and }\: n_{SiN} = 2.15,
     \end{split}
     \label{eq:physical_grating_params}
 \end{equation}
@@ -96,7 +96,7 @@ Figure \ref{fig:MIST_sim_of_grating} shows the scaled and unscaled results of th
 The reflectivity- and (corrected) transmission values were then fitted to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}) using a least squares fitting method, and plotted along with the simulated values. The resulting grating parameters were found as
 \begin{equation}
     \begin{split}
-    \lambda_0 = &951.208 \text{nm},\:\: \lambda_1 = 951.356 \text{nm},\:\: t_d = 80.94\%,\\ &r_d = 52.7\%,\:\: \gamma_{\lambda} = 0.527 \text{nm}\: \text{ and }\: \beta = 4.42 \cdot 10^{-7},
+    &\lambda_0 = 951.208 \text{nm},\:\: \lambda_1 = 951.356 \text{nm},\:\: t_d = 0.8094,\\ &r_d = 0.527,\:\: \gamma_{\lambda} = 0.527 \text{nm}\: \text{ and }\: \beta = 4.42 \cdot 10^{-7},
     \end{split}
     \label{eq:optical_grating_params}
 \end{equation}
@@ -218,21 +218,23 @@ In figure \ref{fig:fano_regime_trans}, the transmission spectra of both cavities
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[c]{0.64\textwidth}
+    \begin{subfigure}[c]{0.7\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/HWHM_broadband_vs_single_sim.pdf}
         \caption{}
         \label{fig:HWHM_broadband_vs_single_fano}
     \end{subfigure}
-    \begin{subfigure}[c]{0.34\textwidth}
-        \includegraphics[width=\textwidth]{figures/sim_single_vs_broadband_700um.pdf}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/sim_single_vs_broadband_270um.pdf}
         \caption{}
-        \label{fig:700um_broadband_and_single_fano_peak}
+        \label{fig:270um_broadband_and_single_fano_peak}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/sim_single_vs_broadband_10um.pdf}
         \caption{}
         \label{fig:10um_broadband_and_single_fano_peak}
     \end{subfigure}
-    \caption{(a) shows the approximate analytical resonance linewidths (eq. (\ref{eq:analytical_linewidth})) as a function of cavity length for the broadband and single Fano cavities together with linewidths of transmission profiles simulated using eq. (\ref{eq:single_fano_trans}) and eq. (\ref{eq:fabry_perot_trans}), found as parameters of least squares fits, for comparison. In (b) and (c) is seen transmission spectra of broadband and single Fano cavities of lengths $\sim 700 \mu m$ and $\sim 10 \mu m$, respectively. The spectra shown indicate each their respective linewidths, and are examples of the values plotted in (a).}
+    \caption{(a) shows the approximate analytical resonance linewidths (eq. (\ref{eq:analytical_linewidth})) as a function of cavity length for the broadband and single Fano cavities together with linewidths of transmission profiles simulated using eq. (\ref{eq:single_fano_trans}) and eq. (\ref{eq:fabry_perot_trans}), found as parameters of least squares fits, for comparison. In (b) and (c) is seen transmission spectra of broadband and single Fano cavities of lengths $\sim 270 \mu m$ and $\sim 10 \mu m$, respectively. The spectra shown indicate each their respective linewidths, and are examples of the values plotted in (a).}
 \end{figure}
 
 Figure \ref{fig:HWHM_broadband_vs_single_fano} models the behavior of the linewidth of the single Fano cavity compared with the one for a broadband cavity of similar optical properties, as a function of wavelength. Here it is easily seen where the linewidth of the single Fano transmission begins to saturate, and hence deviate from the one of the broadband cavity. The plotted line in the figure is calculated using eq. (\ref{eq:analytical_linewidth}) while the points depicit linewidths found as a fitting parameter from a least squares fit of the general Fano model in eq. (\ref{eq:general_fano_model}) to transmission spectra simulated by the Fabry-Perot (eq. (\ref{eq:fabry_perot_trans})) and single Fano (eq. (\ref{eq:single_fano_trans})) transmission functions. Finally, it can be concluded that the approximate analytical expression for the linewidth of the broadband and single fano cavities in eq. (\ref{eq:analytical_linewidth}) correlates very well with the values found from the simulated spectra.
@@ -322,11 +324,22 @@ Using the analytical expression for the double Fano cavity transmission in eq. (
         \label{fig:double_in_standard_regime}
     \end{subfigure}
     \begin{subfigure}[c]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/single_and_double_5um.pdf}
+        \includegraphics[width=\textwidth]{figures/single_and_double_1000um_zoomed.pdf}
         \caption{}
         \label{fig:double_in_fano_regime}
     \end{subfigure}
-    \caption{Comparison of the single and double Fano transmission spectra in the \emph{standard} and \emph{Fano} regimes. (a) shows the spectral comparison for an $\sim 1000 \mu m$ cavity, i.e. in the \emph{standard} regime, while (b) shows the same for an $\sim 5 \mu m$ cavity, i.e. in the \emph{Fano} regime. The Fano mirror reflectivity is depicted in both (a) and (b).}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/single_and_double_5um.pdf}
+        \caption{}
+        \label{fig:double_in_standard_regime}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/single_and_double_5um_zoomed.pdf}
+        \caption{}
+        \label{fig:double_in_fano_regime}
+    \end{subfigure}
+    \caption{Comparison of the single and double Fano transmission spectra in the \emph{standard} and \emph{Fano} regimes. (a) and (b) shows the spectral comparison for an $\sim 1000 \mu m$ cavity, i.e. in the \emph{standard} regime, while (c) and (d) shows the same for an $\sim 5 \mu m$ cavity, i.e. in the \emph{Fano} regime. (b) and (c) show spectra zoomed around the resonance peak, and the Fano mirror reflectivity is depicted in all figures.}
     \label{fig:double_in_standard_and_fano_regimes}
 \end{figure}
 
@@ -338,21 +351,23 @@ Figure \ref{fig:double_in_fano_regime} shows the transmission of a double Fano c
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[c]{0.64\textwidth}
+    \begin{subfigure}[c]{0.7\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/HWHM_broadband_vs_single_vs_double_sim.pdf}
         \caption{}
         \label{fig:HWHM_double_vs_single_vs_broadband}
     \end{subfigure}
-    \begin{subfigure}[c]{0.34\textwidth}
-        \includegraphics[width=\textwidth]{figures/sim_single_vs_double_700um.png}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/sim_single_vs_double_270um.pdf}
         \caption{}
         \label{fig:700um_double_and_single_fano_peak}
-        \includegraphics[width=\textwidth]{figures/sim_single_vs_double_10um.png}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/sim_single_vs_double_10um.pdf}
         \caption{}
         \label{fig:10um_double_and_single_fano_peak}
     \end{subfigure}
-    \caption{(a) shows the analytical resonance linewidths (eqs. (\ref{eq:analytical_linewidth}), (\ref{eq:analytical_linewidth_double}), and (\ref{eq:analytical_linewidth_broadband})) as a function of the cavity length for the broadband, single and double Fano cavities together with linewidths of corresponding profiles simulated using eqs. (\ref{eq:single_fano_trans}), (\ref{eq:double_fano_transmission}), and (\ref{eq:fabry_perot_trans}) for comparison. In (b) and (c) is seen intracavity spectra of single and double Fano cavities of lengths $\sim 700 \mu m$, and $\sim 10 \mu m$, respectively. The spectra shown indicate each their respective linewidths, and are examples of the values plotted in (a). Note however, that the broadband cavity peak has been left out of (b) and (c).}
+    \caption{(a) shows the analytical resonance linewidths (eqs. (\ref{eq:analytical_linewidth}), (\ref{eq:analytical_linewidth_double}), and (\ref{eq:analytical_linewidth_broadband})) as a function of the cavity length for the broadband, single and double Fano cavities together with linewidths of corresponding profiles simulated using eqs. (\ref{eq:single_fano_trans}), (\ref{eq:double_fano_transmission}), and (\ref{eq:fabry_perot_trans}) for comparison. In (b) and (c) is seen intracavity spectra of single and double Fano cavities of lengths $\sim 270 \mu m$, and $\sim 10 \mu m$, respectively. The spectra shown indicate each their respective linewidths, and are examples of the values plotted in (a). Note however, that the broadband cavity peak has been left out of (b) and (c).}
 \end{figure}
 
 Figure \ref{fig:HWHM_double_vs_single_vs_broadband} shows the analytical linewidth calculated and compared for the broadband, single Fano, and double Fano cavities, calculated using eqs. (\ref{eq:analytical_linewidth_broadband}), (\ref{eq:analytical_linewidth}), (\ref{eq:analytical_linewidth_double}). These are compared with linewidths found as fitting parameters from a least squares fit of the general Fano transmission formula given in eq. (\ref{eq:general_fano_model}) to transmission spectra calculated using eqs. (\ref{eq:fabry_perot_trans}), (\ref{eq:single_fano_trans}), and (\ref{eq:double_fano_transmission}). According to eq. (\ref{eq:analytical_linewidth_double}) the linewidth of the double Fano cavity transmission should converge to exactly half that of the single Fano cavity, meaning that
@@ -374,7 +389,7 @@ is fulfilled for both Fano mirrors used to contruct the cavity.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/double_fano_loss_scan.pdf}
-    \caption{Resonant transmission spectra for different values of the additional loss term $L$, of a symmetric double Fano cavity of length $\sim 30 \mu m$.}
+    \caption{Resonant transmission spectra for different values of the additional resonant loss term $L$, of a symmetric double Fano cavity of length $\sim 30 \mu m$.}
     \label{fig:double_loss_scan}
 \end{figure}
 
@@ -393,16 +408,18 @@ Since the linewidth is defined as the HWHM of the transmission profile, this wil
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[c]{0.64\textwidth}
+    \begin{subfigure}[c]{0.7\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/linewidth_vs_losses.pdf}
         \caption{}
         \label{fig:HWHM_vs_losses}
     \end{subfigure}
-    \begin{subfigure}[c]{0.34\textwidth}
-        \includegraphics[width=\textwidth]{figures/double_2_loss_30um.pdf}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/double_02_percent_loss_30um.pdf}
         \caption{}
-        \includegraphics[width=\textwidth]{figures/double_24_loss_30um.pdf}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/double_32_percent_loss_30um.pdf}
         \caption{}
     \end{subfigure}
     \caption{(a) shows the linewidth (HWHM) of a symmetric double Fano cavity of length $\sim 30 \mu m$  as a function of additional cavity losses $L = 2(|r_g|^2 - |t_g|^2)$. Each point is found as a fitting parameter of a least squares fit of the intracavity double Fano spectrum for a certain value of $L$ to the general Fano model. The plotted line indicates the analytical value of the linewidth (eq. \ref{eq:analytical_linewidth}) as a function of $L$, for comparison. In (b) and (c) are seen examples of intracavity double Fano spectra, with their respective linewidths, for cavities of $L=2\%$ and $L=24\%$, respectively.}
@@ -445,8 +462,19 @@ The subscribt \emph{0,1} indicate that the two are interchangable, as the two ar
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/detuned_full_range_double_trans.pdf}
-    \caption{The double Fano transmission spectra of a cavity detuned by $\Delta = 0.3nm$, as seen in figure \ref{fig:detuned_grating_spectra}, together with the reflectivity and transmission spectra of the Fano mirrors used for the simulation.}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/detuned_full_range_double_trans.pdf}
+        \caption{}
+        \label{fig:full_range_detuned_trans}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/detuned_short_range_double_trans.pdf}
+        \caption{}
+        \label{fig:short_range_detuned_trans}
+    \end{subfigure}
+    \caption{The double Fano transmission spectra of a cavity of length $l = 30 \mu m$ and detuned by $\Delta = 0.3$nm, as seen in figure \ref{fig:detuned_grating_spectra}, together with the reflectivity spectra of the Fano mirrors used for the simulation.}
     \label{fig:detuned_double_fano_transmission}
 \end{figure}
 
@@ -456,18 +484,9 @@ While knowing that a detuning of $0.3nm$ is acceptable in terms of exciting the 
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um.pdf}
-        \caption{}
-        \label{fig:detuning_scan}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuning_scan_intracavity_double_fano_30um.pdf}
-        \caption{}
-        \label{fig:intracavity_detuning_scan}
-    \end{subfigure}
+    \includegraphics[width=0.7\textwidth]{figures/detuning_scan_double_fano_30um.pdf}
     \caption{In (a) is seen lossless double Fano transmission spectra for increasing value of the detuning $\Delta = |\lambda_{0,1} - \lambda_{0,1}^{\prime}|$. It is readily seen that the transmission wavelength $\lambda_t = (\lambda_{0,1} + \lambda_{0,1}^{\prime})/2$ goes up, and that the linewidth likewise becomes larger with increasing detuning. The spectrum for $\Delta = 1.2nm$ shows the effect of the detuning becoming too large for the guided-modes of the two Fano mirrors to have substantial overlap and thus to sustain the Fano resonance. (b) shows the intracavity spectra corresponding to the transmission spectra in (a).}
-    \label{fig:detuning_threshold_lossless}
+    \label{fig:detuning_scan}
 \end{figure}
 
 It is readily seen that with increasing positive detuning, relative to the resonant wavelength of the unchanged Fano mirror, the peak shifts to higher wavelengths, which in itself is trivial from eq. (\ref{eq:transmission_wavelength}). The linewidth is also seen to increase with the detuning, and the peak eventually collapses when the overlap between the guided-mode resonance profiles of the two Fano mirrors becomes too small to sustain the Fano resonance. Figure \ref{fig:intracavity_detuning_scan} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan}, and provides valuable insight into the mode density inside the cavity for the different values of $\Delta$. It is clearly demonstrated by the two figures that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to sustain the Fano resonance modes. 

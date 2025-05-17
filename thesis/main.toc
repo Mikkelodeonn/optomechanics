@@ -12,49 +12,50 @@
 \contentsline {subsection}{\numberline {2.3}The single Fano cavity}{14}{}%
 \contentsline {subsubsection}{\numberline {2.3.1}The single Fano cavity model}{14}{}%
 \contentsline {subsubsection}{\numberline {2.3.2}Transmission linewidth}{15}{}%
-\contentsline {subsection}{\numberline {2.4}The double Fano cavity}{19}{}%
-\contentsline {subsubsection}{\numberline {2.4.1}The double Fano cavity model}{19}{}%
-\contentsline {subsubsection}{\numberline {2.4.2}Transmission linewidth}{20}{}%
+\contentsline {subsection}{\numberline {2.4}The double Fano cavity}{18}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}The double Fano cavity model}{18}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Transmission linewidth}{21}{}%
 \contentsline {subsubsection}{\numberline {2.4.3}Single and double Fano cavity comparison}{21}{}%
 \contentsline {subsubsection}{\numberline {2.4.4}Additional cavity losses}{24}{}%
-\contentsline {subsubsection}{\numberline {2.4.5}Spectral detuning (lossless)}{25}{}%
-\contentsline {subsubsection}{\numberline {2.4.6}Spacial detuning (lossless)}{28}{}%
-\contentsline {section}{\numberline {3}Method}{35}{}%
-\contentsline {subsection}{\numberline {3.1}The experimental setup}{35}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}Tunable diode laser}{36}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}$\lambda / 2$ - waveplate}{37}{}%
-\contentsline {subsubsection}{\numberline {3.1.3}Optical telescope}{38}{}%
-\contentsline {subsubsection}{\numberline {3.1.4}Transmission, reflection and incident photo-detectors}{38}{}%
-\contentsline {subsubsection}{\numberline {3.1.5}The double Fano cavity measurement setup}{39}{}%
-\contentsline {subsubsection}{\numberline {3.1.6}Acoustic noise reduction}{42}{}%
-\contentsline {subsubsection}{\numberline {3.1.7}Additional equipment used}{42}{}%
-\contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{43}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}The alignment procedure}{43}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Adjusting and measuring the beam waist}{46}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}Obtaining normalized transmission/reflection spectra}{48}{}%
-\contentsline {subsection}{\numberline {3.3}Cavity measurements}{49}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Aligning the double Fano cavity}{50}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Cavity resonance - the piezo ring}{52}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Determining the cavity length}{55}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}Recording normalized spectra}{55}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Centering of the top grating}{57}{}%
-\contentsline {subsubsection}{\numberline {3.3.6}Estimating parallelism}{60}{}%
-\contentsline {section}{\numberline {4}Simulations}{62}{}%
-\contentsline {subsection}{\numberline {4.1}The single Fano cavity}{62}{}%
-\contentsline {subsection}{\numberline {4.2}The double Fano cavity}{62}{}%
-\contentsline {section}{\numberline {5}Experimental results}{63}{}%
-\contentsline {subsection}{\numberline {5.1}The single Fano cavity}{63}{}%
-\contentsline {subsection}{\numberline {5.2}The double Fano cavity}{63}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Realizing the double fano model}{63}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Double fano off-resonance Fabry-Perot cavity}{64}{}%
-\contentsline {subsubsection}{\numberline {5.2.3}The double fano linewidth}{64}{}%
-\contentsline {section}{\numberline {6}Discussion}{65}{}%
-\contentsline {subsection}{\numberline {6.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{65}{}%
-\contentsline {subsection}{\numberline {6.2}Spacial drift of the piezo ring}{65}{}%
-\contentsline {subsection}{\numberline {6.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{65}{}%
-\contentsline {subsection}{\numberline {6.4}Broadening sources (especially for long cavities)}{65}{}%
-\contentsline {subsection}{\numberline {6.5}Improvements to the setup}{65}{}%
-\contentsline {section}{\numberline {7}Appendix}{66}{}%
-\contentsline {subsection}{\numberline {7.1}Simulated broadband and single Fano cavity resonance transmission spectra}{66}{}%
-\contentsline {subsection}{\numberline {7.2}Simulated single and double Fano cavity resonance intracavity spectra}{68}{}%
-\contentsline {section}{\numberline {8}References}{70}{}%
+\contentsline {subsubsection}{\numberline {2.4.5}Spectral detuning (lossless)}{27}{}%
+\contentsline {subsubsection}{\numberline {2.4.6}Spacial detuning (lossless)}{30}{}%
+\contentsline {section}{\numberline {3}Method}{36}{}%
+\contentsline {subsection}{\numberline {3.1}The experimental setup}{36}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Tunable diode laser}{37}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}$\lambda / 2$ - waveplate}{38}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Optical telescope}{39}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Transmission, reflection and incident photo-detectors}{39}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}The double Fano cavity measurement setup}{40}{}%
+\contentsline {subsubsection}{\numberline {3.1.6}Acoustic noise reduction}{43}{}%
+\contentsline {subsubsection}{\numberline {3.1.7}Additional equipment used}{43}{}%
+\contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{44}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}The alignment procedure}{44}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Adjusting and measuring the beam waist}{47}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Obtaining normalized transmission/reflection spectra}{49}{}%
+\contentsline {subsection}{\numberline {3.3}Cavity measurements}{50}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Aligning the double Fano cavity}{51}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Cavity resonance - the piezo ring}{53}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Determining the cavity length}{56}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Recording normalized spectra}{56}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Centering of the top grating}{58}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Estimating parallelism}{61}{}%
+\contentsline {section}{\numberline {4}Simulations}{63}{}%
+\contentsline {subsection}{\numberline {4.1}The single Fano cavity}{63}{}%
+\contentsline {subsection}{\numberline {4.2}The double Fano cavity}{63}{}%
+\contentsline {section}{\numberline {5}Experimental results}{64}{}%
+\contentsline {subsection}{\numberline {5.1}The single Fano cavity}{64}{}%
+\contentsline {subsection}{\numberline {5.2}The double Fano cavity}{64}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Realizing the double fano model}{64}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Double fano off-resonance Fabry-Perot cavity}{65}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}The double fano linewidth}{65}{}%
+\contentsline {section}{\numberline {6}Discussion}{66}{}%
+\contentsline {subsection}{\numberline {6.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{66}{}%
+\contentsline {subsection}{\numberline {6.2}Spacial drift of the piezo ring}{66}{}%
+\contentsline {subsection}{\numberline {6.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{66}{}%
+\contentsline {subsection}{\numberline {6.4}Broadening sources (especially for long cavities)}{66}{}%
+\contentsline {subsection}{\numberline {6.5}Improvements to the setup}{66}{}%
+\contentsline {section}{\numberline {7}Appendix}{67}{}%
+\contentsline {subsection}{\numberline {7.1}Simulated broadband and single Fano cavity resonance transmission spectra}{67}{}%
+\contentsline {subsection}{\numberline {7.2}Simulated single and double Fano cavity resonance transmission spectra}{69}{}%
+\contentsline {subsection}{\numberline {7.3}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{70}{}%
+\contentsline {section}{\numberline {8}References}{72}{}%
