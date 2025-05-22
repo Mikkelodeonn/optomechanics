@@ -215,6 +215,9 @@ OUTPUT main.pdf
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 OUTPUT main.toc
+INPUT ./abstract.tex
+INPUT ./abstract.tex
+INPUT abstract.tex
 INPUT ./introduction.tex
 INPUT ./introduction.tex
 INPUT ./introduction.tex
@@ -788,6 +791,14 @@ INPUT ./figures/results/34um_long_scan_sim_comparison.pdf
 INPUT ./results/discussion.tex
 INPUT ./results/discussion.tex
 INPUT results/discussion.tex
+INPUT ./outlook.tex
+INPUT ./outlook.tex
+INPUT outlook.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/eccc1440.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1440.tfm
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
@@ -867,11 +878,6 @@ INPUT ./figures/double_32_percent_loss_30um.pdf
 INPUT ./figures/double_32_percent_loss_30um.pdf
 INPUT ./figures/double_32_percent_loss_30um.pdf
 INPUT ./figures/double_32_percent_loss_30um.pdf
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/eccc1440.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1440.tfm
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml

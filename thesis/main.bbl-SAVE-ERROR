@@ -19,64 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{Eichhorn}{book}{}
-      \name{author}{1}{}{%
-        {{hash=63bccb9e585d8efcf0b0f0f208f04eee}{%
-           family={Eichhorn},
-           familyi={E\bibinitperiod},
-           given={Marc},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing Switzerland}%
-      }
-      \strng{namehash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \strng{fullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \strng{bibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \strng{authorbibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \strng{authornamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \strng{authorfullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Laser Physics - From Principles to Practical Work in the Lab}
-      \field{year}{2014}
-    \endentry
-    \entry{Pedrotti}{book}{}
-      \name{author}{3}{}{%
-        {{hash=c3be4ff5736ba25426151cb98ccade72}{%
-           family={Pedrotti},
-           familyi={P\bibinitperiod},
-           given={Frank\bibnamedelima L.},
-           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=7dadcf78604c09cde6200ed114b44f92}{%
-           family={Pedrotti},
-           familyi={P\bibinitperiod},
-           given={Leno\bibnamedelima M.},
-           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=464252ee04186f10fa523b249bfa606d}{%
-           family={Pedrotti},
-           familyi={P\bibinitperiod},
-           given={Leno\bibnamedelima S.},
-           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{3939ebe7044db99b8c906f36251096b9}
-      \strng{fullhash}{3939ebe7044db99b8c906f36251096b9}
-      \strng{bibnamehash}{3939ebe7044db99b8c906f36251096b9}
-      \strng{authorbibnamehash}{3939ebe7044db99b8c906f36251096b9}
-      \strng{authornamehash}{3939ebe7044db99b8c906f36251096b9}
-      \strng{authorfullhash}{3939ebe7044db99b8c906f36251096b9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Introduction to Optics, 3rd edition}
-      \field{year}{2018}
-    \endentry
     \entry{Fan-Joannopoulos-guided-mode-resonance}{article}{}
       \name{author}{2}{}{%
         {{hash=f949287454ec425b0cf7493a1d881de9}{%
@@ -96,8 +38,8 @@
       \strng{authorbibnamehash}{08b0db1a9c739336fed3737cf153d10f}
       \strng{authornamehash}{08b0db1a9c739336fed3737cf153d10f}
       \strng{authorfullhash}{08b0db1a9c739336fed3737cf153d10f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Physical Review B}
@@ -105,55 +47,39 @@
       \field{volume}{65}
       \field{year}{2002}
     \endentry
-    \entry{Fano-theory}{article}{}
-      \name{author}{1}{}{%
-        {{hash=03418cb202199cfed79c143ad9c82e96}{%
-           family={Fano},
+    \entry{Fan-Joannopoulos-fano-resonance}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f949287454ec425b0cf7493a1d881de9}{%
+           family={Fan},
            familyi={F\bibinitperiod},
-           given={U.},
-           giveni={U\bibinitperiod}}}%
+           given={Shanhui},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4c0ebbc04ed7c8c80fe54b33abae01cb}{%
+           family={suh},
+           familyi={s\bibinitperiod},
+           given={Wonjoo},
+           giveni={W\bibinitperiod}}}%
+        {{hash=bc2d5931b89f57220ca190721e241846}{%
+           family={Joannopoulos},
+           familyi={J\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{03418cb202199cfed79c143ad9c82e96}
-      \strng{fullhash}{03418cb202199cfed79c143ad9c82e96}
-      \strng{bibnamehash}{03418cb202199cfed79c143ad9c82e96}
-      \strng{authorbibnamehash}{03418cb202199cfed79c143ad9c82e96}
-      \strng{authornamehash}{03418cb202199cfed79c143ad9c82e96}
-      \strng{authorfullhash}{03418cb202199cfed79c143ad9c82e96}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{namehash}{ab81feda70860141e21b0a428a7d77a4}
+      \strng{fullhash}{ab81feda70860141e21b0a428a7d77a4}
+      \strng{bibnamehash}{ab81feda70860141e21b0a428a7d77a4}
+      \strng{authorbibnamehash}{ab81feda70860141e21b0a428a7d77a4}
+      \strng{authornamehash}{ab81feda70860141e21b0a428a7d77a4}
+      \strng{authorfullhash}{ab81feda70860141e21b0a428a7d77a4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Physical Review}
-      \field{number}{6}
-      \field{title}{Effects of Configuration Interaction on Intensities and Phase Shifts*}
-      \field{volume}{124}
-      \field{year}{1961}
-    \endentry
-    \entry{Darki}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=d5124032891d32e300aca36b46b86d1a}{%
-           family={Darki},
-           familyi={D\bibinitperiod},
-           given={Ali\bibnamedelima Akbar},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{institution}{2}{%
-        {Department of Physics}%
-        {Astronomy - Aarhus University}%
-      }
-      \strng{namehash}{d5124032891d32e300aca36b46b86d1a}
-      \strng{fullhash}{d5124032891d32e300aca36b46b86d1a}
-      \strng{bibnamehash}{d5124032891d32e300aca36b46b86d1a}
-      \strng{authorbibnamehash}{d5124032891d32e300aca36b46b86d1a}
-      \strng{authornamehash}{d5124032891d32e300aca36b46b86d1a}
-      \strng{authorfullhash}{d5124032891d32e300aca36b46b86d1a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Nanostructured tramplines for photonics and sensing}
-      \field{type}{phdthesis}
-      \field{year}{2022}
+      \field{journaltitle}{Optical Society of America}
+      \field{number}{3}
+      \field{title}{Temporal coupled-mode theory for the Fano resonance in optical resonators}
+      \field{volume}{20}
+      \field{year}{2003}
     \endentry
     \entry{Mitra}{article}{}
       \name{author}{5}{}{%
@@ -189,8 +115,8 @@
       \strng{authorbibnamehash}{86c76d1b0399015c408049b202a8da43}
       \strng{authornamehash}{86c76d1b0399015c408049b202a8da43}
       \strng{authorfullhash}{77e47ae6673f56a63ee04d94721fd010}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Optics Express}
@@ -198,6 +124,487 @@
       \field{title}{Narrow-linewidth Fano microcavities with resonant subwavelength grating mirror}
       \field{volume}{32}
       \field{year}{2024}
+    \endentry
+    \entry{Eichhorn}{book}{}
+      \name{author}{1}{}{%
+        {{hash=63bccb9e585d8efcf0b0f0f208f04eee}{%
+           family={Eichhorn},
+           familyi={E\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing Switzerland}%
+      }
+      \strng{namehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{fullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{bibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authorbibnamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authornamehash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \strng{authorfullhash}{63bccb9e585d8efcf0b0f0f208f04eee}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Laser Physics - From Principles to Practical Work in the Lab}
+      \field{year}{2014}
+    \endentry
+    \entry{Pedrotti}{book}{}
+      \name{author}{3}{}{%
+        {{hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{fullhash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{bibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorbibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authornamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorfullhash}{3939ebe7044db99b8c906f36251096b9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Optics, 3rd edition}
+      \field{year}{2018}
+    \endentry
+    \entry{Fano-theory}{article}{}
+      \name{author}{1}{}{%
+        {{hash=03418cb202199cfed79c143ad9c82e96}{%
+           family={Fano},
+           familyi={F\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{fullhash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{bibnamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authorbibnamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authornamehash}{03418cb202199cfed79c143ad9c82e96}
+      \strng{authorfullhash}{03418cb202199cfed79c143ad9c82e96}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review}
+      \field{number}{6}
+      \field{title}{Effects of Configuration Interaction on Intensities and Phase Shifts*}
+      \field{volume}{124}
+      \field{year}{1961}
+    \endentry
+    \entry{Bykov}{article}{}
+      \name{author}{2}{}{%
+        {{hash=239ba1b62f862828e4d066fece3d7648}{%
+           family={Bykov},
+           familyi={B\bibinitperiod},
+           given={Dimitry\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6d1f237155107077c4b05f01d284d5f7}{%
+           family={Doskolovich},
+           familyi={D\bibinitperiod},
+           given={Leonid\bibnamedelima L.},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{186e333325029a70e8547bf098692311}
+      \strng{fullhash}{186e333325029a70e8547bf098692311}
+      \strng{bibnamehash}{186e333325029a70e8547bf098692311}
+      \strng{authorbibnamehash}{186e333325029a70e8547bf098692311}
+      \strng{authornamehash}{186e333325029a70e8547bf098692311}
+      \strng{authorfullhash}{186e333325029a70e8547bf098692311}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optical Society of America}
+      \field{number}{3}
+      \field{title}{Spatiotemporal coupled-mode theory of guided-mode resonant gratings}
+      \field{volume}{14}
+      \field{year}{2015}
+    \endentry
+    \entry{Darki2}{article}{}
+      \name{author}{4}{}{%
+        {{hash=49a273c32f879cd46e1def2cf24a7945}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9e88231399b5343f2236c7176197f799}{%
+           family={Parthenopoulos},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f6b9da65594f615809c19edb853a65ee}{%
+           family={Nygaard},
+           familyi={N\bibinitperiod},
+           given={J.\bibnamedelimi V.},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf9e421331f1f101dc9c5e1705725fe8}
+      \strng{fullhash}{de8da45cd125180401738e2f64a2b7de}
+      \strng{bibnamehash}{cf9e421331f1f101dc9c5e1705725fe8}
+      \strng{authorbibnamehash}{cf9e421331f1f101dc9c5e1705725fe8}
+      \strng{authornamehash}{cf9e421331f1f101dc9c5e1705725fe8}
+      \strng{authorfullhash}{de8da45cd125180401738e2f64a2b7de}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{title}{Profilometry and stress analysis of suspended nanostructured thin films}
+      \field{year}{2021}
+    \endentry
+    \entry{Parthenopoulos}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9e88231399b5343f2236c7176197f799}{%
+           family={Parthenopoulos},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=49a273c32f879cd46e1def2cf24a7945}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c7f83f0f89bcc94de43f71efa6246dea}{%
+           family={Jeppesen},
+           familyi={J\bibinitperiod},
+           given={B.\bibnamedelimi R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f381718683de2e9f77f66b08ce0cfca5}
+      \strng{fullhash}{eaf2237725a68dc663a8256903db4414}
+      \strng{bibnamehash}{f381718683de2e9f77f66b08ce0cfca5}
+      \strng{authorbibnamehash}{f381718683de2e9f77f66b08ce0cfca5}
+      \strng{authornamehash}{f381718683de2e9f77f66b08ce0cfca5}
+      \strng{authorfullhash}{eaf2237725a68dc663a8256903db4414}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Express}
+      \field{number}{5}
+      \field{title}{Optical spatial differentiation with suspended subwavelength gratings}
+      \field{volume}{29}
+      \field{year}{2021}
+    \endentry
+    \entry{Popov}{article}{}
+      \name{author}{3}{}{%
+        {{hash=eebea0eceac707479e04dc8d19a3a524}{%
+           family={Popov},
+           familyi={P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=eb03a2d9823b92f5f7422576de4ad463}{%
+           family={Mashev},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f6a537a0b128747b361db836cdbae567}{%
+           family={Maystre},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{40a388db0dab500e47caaf8ea0319d9d}
+      \strng{fullhash}{40a388db0dab500e47caaf8ea0319d9d}
+      \strng{bibnamehash}{40a388db0dab500e47caaf8ea0319d9d}
+      \strng{authorbibnamehash}{40a388db0dab500e47caaf8ea0319d9d}
+      \strng{authornamehash}{40a388db0dab500e47caaf8ea0319d9d}
+      \strng{authorfullhash}{40a388db0dab500e47caaf8ea0319d9d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optica Acta: International Journal of Optics}
+      \field{number}{5}
+      \field{title}{Theoretical Study of the Anomalies of Coated Dielectric Gratings}
+      \field{volume}{33}
+      \field{year}{1986}
+    \endentry
+    \entry{MIST}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \verb{urlraw}
+      \verb https://pages.nist.gov/ScatterMIST/docs/index.htm
+      \endverb
+      \verb{url}
+      \verb https://pages.nist.gov/ScatterMIST/docs/index.htm
+      \endverb
+    \endentry
+    \entry{Toft-Vandborg}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b75881123d72ebc50369919716f1908b}{%
+           family={Toft-Vandborg},
+           familyi={T\bibinithyphendelim V\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9e88231399b5343f2236c7176197f799}{%
+           family={Parthenopoulos},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=49a273c32f879cd46e1def2cf24a7945}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d11619f7a39f34d24d0551be202972aa}
+      \strng{fullhash}{7b6eb01f2db0a98d724dfd151f5fd08a}
+      \strng{bibnamehash}{d11619f7a39f34d24d0551be202972aa}
+      \strng{authorbibnamehash}{d11619f7a39f34d24d0551be202972aa}
+      \strng{authornamehash}{d11619f7a39f34d24d0551be202972aa}
+      \strng{authorfullhash}{7b6eb01f2db0a98d724dfd151f5fd08a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Optical Society of America}
+      \field{number}{11}
+      \field{title}{Collimation and finite-size effects in suspended resonant guided-mode gratings}
+      \field{volume}{38}
+      \field{year}{2021}
+    \endentry
+    \entry{Darki}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d5124032891d32e300aca36b46b86d1a}{%
+           family={Darki},
+           familyi={D\bibinitperiod},
+           given={Ali\bibnamedelima Akbar},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Department of Physics}%
+        {Astronomy - Aarhus University}%
+      }
+      \strng{namehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{fullhash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{bibnamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authorbibnamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authornamehash}{d5124032891d32e300aca36b46b86d1a}
+      \strng{authorfullhash}{d5124032891d32e300aca36b46b86d1a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nanostructured tramplines for photonics and sensing}
+      \field{type}{phdthesis}
+      \field{year}{2022}
+    \endentry
+    \entry{Naesby}{article}{}
+      \name{author}{2}{}{%
+        {{hash=44676957c65c010f1927f30b34b0492b}{%
+           family={Naesby},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d786a8de19bfa805899204c0b6ea475f}
+      \strng{fullhash}{d786a8de19bfa805899204c0b6ea475f}
+      \strng{bibnamehash}{d786a8de19bfa805899204c0b6ea475f}
+      \strng{authorbibnamehash}{d786a8de19bfa805899204c0b6ea475f}
+      \strng{authornamehash}{d786a8de19bfa805899204c0b6ea475f}
+      \strng{authorfullhash}{d786a8de19bfa805899204c0b6ea475f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Express}
+      \field{number}{23}
+      \field{title}{Microcavities with suspended subwavelength structured mirrors}
+      \field{volume}{26}
+      \field{year}{2018}
+    \endentry
+    \entry{edmund_optics}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \verb{urlraw}
+      \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
+      \endverb
+      \verb{url}
+      \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
+      \endverb
+    \endentry
+    \entry{Sadov}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ce24a9800917be87a93dd718f477ac0}{%
+           family={Sadov},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi Yu.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=ed8859a4623132d6e8788a53e5aa7496}{%
+           family={McGreer},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{05158f4a7d58644933e03740707220ff}
+      \strng{fullhash}{05158f4a7d58644933e03740707220ff}
+      \strng{bibnamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authorbibnamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authornamehash}{05158f4a7d58644933e03740707220ff}
+      \strng{authorfullhash}{05158f4a7d58644933e03740707220ff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Opt. Soc. Am. A}
+      \field{number}{9}
+      \field{title}{Polarization dependence of diffraction gratings that have total internal reflection facets}
+      \field{volume}{17}
+      \field{year}{2000}
+    \endentry
+    \entry{Forster}{article}{}
+      \name{author}{7}{}{%
+        {{hash=8d37416bb431a9d3372bdb33c6c0a179}{%
+           family={Forster},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0e41bd983f7e50a129b21c0d20c313b2}{%
+           family={Arif},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9c09e944de8f1d2029ac2e5b57ff004}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=01cb8f2905af52e64ef87b33ba3ed02f}{%
+           family={Bushuk},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1e0f357b011a6d5d5345b431afd2dff4}{%
+           family={Kouzmouk},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f78d09ab429076479116215cbcbbf4a}{%
+           family={Tatur},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=79313a8054278d92fbde5c9641beaf42}{%
+           family={Batishche},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{fullhash}{136f5c683f02be9ae16a4266affd5a23}
+      \strng{bibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authorbibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authornamehash}{2055001139a1ec9bb7f96e93eabe2266}
+      \strng{authorfullhash}{136f5c683f02be9ae16a4266affd5a23}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{213 nm and 532 nm solid state laser treatment of biogenetical fibrous materials}
+      \field{year}{2010}
+    \endentry
+    \entry{Hughes}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=175127d678a3def46a9d442233eec546}{%
+           family={Hase},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima P.A.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{fullhash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{bibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authorbibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authornamehash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \strng{authorfullhash}{1b1d3769e8af49081bccd1e1c4b97677}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measurements and their Uncertainties - A Practical Guide to Modern Error Analysis}
+      \field{year}{2010}
+    \endentry
+    \entry{Nair}{article}{}
+      \name{author}{3}{}{%
+        {{hash=46807388cfa003ccb2796375ea2a8964}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=44676957c65c010f1927f30b34b0492b}{%
+           family={Naesby},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f8c84aa1bbabf16dd5d03d48ea89bfa9}{%
+           family={Dantan},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{fullhash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{bibnamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authorbibnamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authornamehash}{9e01d878851fa33384ec47f56505b71e}
+      \strng{authorfullhash}{9e01d878851fa33384ec47f56505b71e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Letter}
+      \field{number}{7}
+      \field{title}{Optomechanical characterization of silicon nitride membrane arrays}
+      \field{volume}{42}
+      \field{year}{2017}
     \endentry
   \enddatalist
 \endrefsection

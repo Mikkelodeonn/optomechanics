@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1747908624.09541 "main.bcf" "main.bbl" "main" 1747908641.19716 0
-  "main.bcf" 1747908640.67319 109021 0ea5893a53907698520bbba55be8776f "pdflatex"
+["biber main"] 1747917323.02357 "main.bcf" "main.bbl" "main" 1747931261.31428 0
+  "main.bcf" 1747931260.73553 109021 0ea5893a53907698520bbba55be8776f "pdflatex"
   "ref.bib" 1747410512.60877 5045 f0c53a5929d4efe10c6caa846878ed58 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1747908634.88944 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1747908641.19775 0
-  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1746693051.98972 2651 c42ac27dd65a7c02bd0258fc099333d5 ""
+["pdflatex"] 1747931255.37236 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1747931261.31485 0
+  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1747917739.52817 2656 c696b38a5eb7d2d29d748034f66df456 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -144,6 +144,7 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733415012 8221426 2de44a46bb09f90001162557916019bf ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "Appendix.tex" 1747720354.64635 3977 40f719148dc52a7fdb212ba886d6c440 ""
+  "abstract.tex" 1747917737.41196 18 99b6d0b3ebbb3a82de1293dcebd92c83 ""
   "figures/100um_fabry_perot_trans_vs_freq.pdf" 1747300231.95266 21473 c034d09b82aa1e2f51243b25e422147b ""
   "figures/150um_fabry_perot_trans_vs_freq.pdf" 1747300341.47693 22431 a28faea7de073bd95fdad148cf7f567d ""
   "figures/HWHM_broadband_vs_single_sim.pdf" 1747478665.01455 13755 1f2f4290bde9d49d7b37edfea9fcdda6 ""
@@ -253,15 +254,16 @@
   "figures/toptica_controller.pdf" 1746438918.19334 52114 45f2cc1c182cbe9fc6e4d243039bff2f ""
   "figures/toptica_laser.pdf" 1746438908.23576 62073 794aa741895e3c57c6cc8b568a3d5118 ""
   "figures/xy_alignment_sketch.pdf" 1746187639.47692 4517 f00073da16678bb2bf53987244b288f7 ""
-  "introduction.tex" 1747908617.41113 3570 23bf482eefb15be0e790efc08f2586e3 ""
-  "main.aux" 1747908640.66172 58813 00d5495fbbb489e31922b415c5be62c9 "pdflatex"
-  "main.bbl" 1747908628.79998 24981 56e64bde2c5bb0f498b2c6fdc9c363a0 "biber main"
-  "main.run.xml" 1747908640.67481 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
-  "main.tex" 1746693051.98972 2651 c42ac27dd65a7c02bd0258fc099333d5 ""
-  "main.toc" 1747908640.67502 5221 7fccad7da2961db8110629cc74d58ffa "pdflatex"
+  "introduction.tex" 1747931254.96426 5613 431456052c86d5e12dee8955d5579487 ""
+  "main.aux" 1747931260.7253 59601 5db989c48c1c068d6ac31f39ddaf167b "pdflatex"
+  "main.bbl" 1747917327.85732 24981 56e64bde2c5bb0f498b2c6fdc9c363a0 "biber main"
+  "main.run.xml" 1747931260.73719 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.tex" 1747917739.52817 2656 c696b38a5eb7d2d29d748034f66df456 ""
+  "main.toc" 1747931260.73744 5339 55fc841ba377bb462aa5f44168e9a0cd "pdflatex"
   "method/cavity_measurements.tex" 1747203031.58744 26015 4c5f25d9ae67f05ec3bef395b203d88a ""
   "method/experimental_setup.tex" 1747903989.18084 18199 c5f064ba69dbb7dde636b2c5d0c3b868 ""
   "method/grating_characterization.tex" 1746620264.96877 13879 22e549a825437e804fa0232f3b055f04 ""
+  "outlook.tex" 1747917623.496 251 28816c4787d7e94f5852d5f6f4009e39 ""
   "results/discussion.tex" 1743156797.1565 374 b6048bf5f1c6a875f4483dd6512d40e8 ""
   "results/experimental_results.tex" 1747894770.78752 4734 039be8554e2388e298203aa465f42906 ""
   "results/simulations.tex" 1743156999.02692 690 b1ebeb84f747662092da14b00dc7c538 ""
