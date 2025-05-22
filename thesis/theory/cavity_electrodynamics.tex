@@ -10,7 +10,7 @@ The Fabry-Perot interferometer, also known as an optical cavity, is generally co
     \label{fig:planar_fabry-perot}
 \end{figure}
 
-The two mirrors are described by each their respective reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$\cite{Eichhorn}\cite{Pedrotti}. The Fabry-Perot cavity furthermore gives rise to so-called eigenstates related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams through the cavity. Any allowed mode inside the cavity, and thus transmitted, must fulfill the brightness condition $2l = m \lambda$, where $\lambda$ is the wavelength of the incident field and $m=1,2,3,...$ is a positive integer.  
+The two mirrors are described by each their respective reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$. The Fabry-Perot cavity furthermore gives rise to so-called eigenstates related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams through the cavity. Any allowed mode inside the cavity, and thus transmitted, must fulfill the brightness condition $2l = m \lambda$, where $\lambda$ is the wavelength of the incident field and $m=1,2,3,...$ is a positive integer.\cite{Eichhorn}\cite{Pedrotti}
 
 \subsubsection{Transmission}
 
@@ -36,7 +36,7 @@ where $k = 2 \pi / \lambda$ is the wave number and $E_{0,in}$ is the amplitude o
 \end{equation}
 where $\delta = 2kl$. The first term of the series corresponds to a direct transmission through the cavity, and each term thereafter corresponds to the respective contribution to the transmission after the $m'th$ round trip. 
 
-By evaluating the series it is seen that it converges to the final expression for the transmitted field through a planar Fabry-Perot cavity found as
+By evaluating the series it is seen that it converges to the final expression for the transmitted field through a planar Fabry-Perot cavity
 \begin{equation}
     E_{out} = E_{0,in}\frac{tt^{\prime} e^{i\delta /2}}{1 - rr^{\prime} e^{i\delta}}.
     \label{eq:fabry_perot_trans}
@@ -61,7 +61,7 @@ Figure \ref{fig:fabry_perot_trans} displays the Airy function in eq. (\ref{eq:ai
     \mathcal{F} \equiv \frac{FSR}{\delta_{\lambda}},
     \label{eq:finesse_definition}
 \end{equation}
-where $FSR$ is the so-called \emph{Free Spectral Range} indicating the spectral distance between two peaks and $\delta_{\lambda}$ refers to the \emph{Full Width at Half Maximum (FWHM)} which, as the name suggests, is the linewidth defined at $T=1/2$, i.e. at half the maximum value. 
+where $FSR$ is the so-called \emph{Free Spectral Range} indicating the spectral distance between two peaks and $\delta_{\lambda}$ refers to the \emph{Full Width at Half Maximum (FWHM)} which, as the name suggests, is the linewidth defined at a normalized transmission $T=1/2$, i.e. at half the maximum value. 
 
 Considering the Airy function in eq. (\ref{eq:airy_function}) for the high finesse case where $|r|^2 = |r^{\prime}|^2 \rightarrow 1$ we furthermore see that each individual peak closely resembles a Lorentzian distribution. 
 
@@ -104,7 +104,7 @@ Note here that the relation between the FSR and the cavity length $l$ is clearly
         \includegraphics[width=\textwidth]{figures/150um_fabry_perot_trans_vs_freq.pdf}
         \caption{}
     \end{subfigure}
-    \caption{(a) shows the transmission spectrum of a Fabry-Perot cavity of length $l \approx 100 \mu m$ as a function of the frequency $\nu$, while (b) shows the transmission spectrum of a cavity of length $l \approx 150 \mu m$ for the same range of frequencies. Note here how the FSR is invrsely proportional to the cavity length.}
+    \caption{(a) shows the transmission spectrum of a Fabry-Perot cavity of length $l \approx 100 \mu m$ as a function of the frequency $\nu$, while (b) shows the transmission spectrum of a cavity of length $l \approx 150 \mu m$ for the same range of frequencies. Note here how the FSR is inversely proportional to the cavity length.}
     \label{fig:fabry_perot_FSR_comparison}
 \end{figure}
 
@@ -131,7 +131,7 @@ where the round trip phase shift $\delta$ is related to the wavelength $\lambda$
 \end{equation}
 as $k = 2 \pi / \lambda$ is the incident wave number.
 
-Re-writing the general cavity brightness condition, it can be shown that the resonant wavelengths for a cavity at normal incidence are given as
+Re-writing the general cavity brightness condition, it can easily be shown that the resonant wavelengths for a cavity at normal incidence are given as
 \begin{equation}
     \lambda_n = \frac{2l}{n},
 \end{equation}
@@ -150,7 +150,7 @@ Figure \ref{fig:airy_trans_vs_wavelength} shows an example of the Airy function 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/airy_function_vs_wavelength.pdf}
-    \caption{}
+    \caption{The Fabry-Perot transmission function on the form of an Airy function as seen in eq. (\ref{eq:simplified_airy_function}) as a function of the incident wavelength.}
     \label{fig:airy_trans_vs_wavelength}
 \end{figure}
 

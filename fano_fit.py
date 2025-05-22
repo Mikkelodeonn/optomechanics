@@ -53,17 +53,19 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 left = 0
 right = -1
 extrapolated = False
-line_width_fit = True
+line_width_fit = False
 
-cavity_length_guess = 500
+cavity_length_guess = 32
 
 scan_num = 4
 scan_type = "s"
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/220um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/220um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
+#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250207/220um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250207/220um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/34um/34l.txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/34um/34l_PI.txt")#[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/normalization/long_scan.txt")#[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/normalization/long_scan_PI.txt")#[left:right]
 
 if not np.allclose(data[:,0], norm[:,0]):
     raise Exception("Normalization and data files do not match!")
@@ -74,7 +76,6 @@ if not np.allclose(data[:,0], norm[:,0]):
 #norm[:,1] = [N/(PI/PI_0_norm) for N,PI in zip(norm[:,1], norm_PI[:,1])]      ##  from the main measurement to the normalization measurement.  
 
 data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[:,1], norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
-
 #output = np.column_stack((data[:,0], data[:,1]))
 
 #np.savetxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250422/normalized data/500um/" + str(scan_type) + str(scan_num) + "_normalized.txt", output, fmt="%.6e", comments='')
@@ -82,32 +83,34 @@ data[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(data[:,1], PI_data[:,1], norm[
 
 ### Calculate the parameters used for fitting the fano transmission function 
 
-#M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
-#M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
+M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
-#λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
-#λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
-M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M3_trans.txt")
-M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M5_trans.txt")
-M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M3_trans_PI.txt")
-M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M5_trans_PI.txt")
-M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans.txt")
-M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans.txt")
-M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans_PI.txt")
-M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans_PI.txt")
 
-M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
-M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
-λs = np.linspace(M3[:,0][0], M3[:,0][-1], 50)
-λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+λ0_1, λ1_1, td_1, γ_1, α_1 = M3.lossy_fit([952,952,0.6,1,0.1])
+λ0_2, λ1_2, td_2, γ_2, α_2 = M5.lossy_fit([952,952,0.6,1,0.1])
+#M3 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M3_trans.txt")
+#M5 = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M5_trans.txt")
+#M3_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M3_trans_PI.txt")
+#M5_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/grating trans. spectra/M5_trans_PI.txt")
+#M3_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans.txt")
+#M5_norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans.txt")
+#M3_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans_PI.txt")
+#M5_norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250311/normalization/grating_trans_PI.txt")
 
-p0 = [951.83,951.83,0.6,1,0.1]
-params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
-params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
+#M3[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M3[:,1], M3_PI[:,1], M3_norm[:,1], M3_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
+#M5[:,1] = [(d/pi)/(n/pi_) for d,pi,n,pi_ in zip(M5[:,1], M5_PI[:,1], M5_norm[:,1], M5_norm_PI[:,1])] ## norm. with respect to trans. w/o a cavity. 
 
-λ0_1, λ1_1, td_1, γ_1, α_1 = params1
-λ0_2, λ1_2, td_2, γ_2, α_2 = params2
+#λs = np.linspace(M3[:,0][0], M3[:,0][-1], 50)
+#λs_fit = np.linspace(M3[:,0][0], M3[:,0][-1], 10000)
+
+#p0 = [951.83,951.83,0.6,1,0.1]
+#params1, pcov1 = curve_fit(model, M3[:,0], M3[:,1], p0=p0)
+#params2, pcov2 = curve_fit(model, M5[:,0], M5[:,1], p0=p0)
+
+#λ0_1, λ1_1, td_1, γ_1, α_1 = params1
+#λ0_2, λ1_2, td_2, γ_2, α_2 = params2
 
 #λ0_1 = 951.630
 #λ1_1 = 951.630 + 0.14
@@ -127,8 +130,8 @@ def fit_model(λ, a, b, c, λ0, δλ):
 def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, length, loss_factor): ## params -> [λ0, λ1, td, γ, α]
     params1 = [λ0_1, λ1_1, td_1, γ_1, α_1]
     params2 = [λ0_2, λ1_2, td_2, γ_2, α_2]
-    print("params1:",params1)
-    print("params2:",params2)
+    #print("params1:",params1)
+    #print("params2:",params2)
     
     reflection_values1 = theoretical_reflection_values(params1, λs, losses=True, loss_factor=loss_factor)[1]
     transmission_values1 = np.sqrt(model(λs, *params1))
@@ -150,23 +153,29 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 ### Fitting loaded data to the double fano transmission function
 
 if line_width_fit == False:
-    p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, cavity_length_guess*1e3, 0.05]
+    p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, cavity_length_guess*1e3, 0.1]
+    bounds = ([0,0,0,0,0,0,0,0,0,0,0,0],[np.inf, np.inf, 1, np.inf, 1, np.inf, np.inf, 1, np.inf, 1, np.inf, 1])
     popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
+    errs = np.sqrt(np.diag(pcov))
     fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 
     xs = np.linspace(data[:,0][0], data[:,0][-1], 10000) 
 
     plt.figure(figsize=(10,7))
-    plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
-    plt.plot(xs, double_fano(xs, *popt), color="firebrick", label="fit: $λ_{0,M5}=$%5.3fnm, $λ_{1,M5}=$%5.3fnm, $λ_{0,M3}=$%5.3fnm, $λ_{1,M3}=$%5.3fnm, $l_{c}$=%5.3fμm" % tuple(fit_params))
+    plt.scatter(data[:,0], data[:,1], color="maroon", marker=".", label="data")
+    plt.plot(xs, double_fano(xs, *popt), color="orangered", alpha=0.7, label="fit")
+    print("G1: \nλ0 = ",popt[0], "+/-", errs[0], "nm", "\nλ1 = ",popt[1], "+/-", errs[1], "nm", "\ntd = ", popt[2], "+/-", errs[2], "\nγλ = ", popt[3], "+/-", errs[3], "nm", "\nα = ", popt[4], "+/-", errs[4])  
+    print("G2: \nλ0 = ",popt[5], "+/-", errs[5], "nm", "\nλ1 = ",popt[6], "+/-", errs[6], "nm", "\ntd = ", popt[7], "+/-", errs[7], "\nγλ = ", popt[8], "+/-", errs[8], "nm", "\nα = ", popt[9], "+/-", errs[9])
+    print("cavity length: ", popt[10]*1e-3, "+/-", errs[10]*1e-3, "μm") 
+    print("losses: ", popt[11]*2, "+/-", errs[11]*2)
     #plt.title("M3/M5 double fano transmission")  
-    plt.xlabel("wavelength [nm]", fontsize=24)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=24)
+    plt.xlabel("wavelength [nm]", fontsize=28)
+    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
     plt.subplots_adjust(bottom=0.3)
-    plt.ticklabel_format(style="sci", axis="y", scilimits=(0,0))
+    #plt.ticklabel_format(style="sci", axis="y", scilimits=(0,0))
     plt.xticks(fontsize=21)
     plt.yticks(fontsize=21)
     plt.show()
@@ -191,8 +200,8 @@ else:
     plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
     plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
-    plt.xlabel("wavelength [nm]", fontsize=24)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=24)
+    plt.xlabel("wavelength [nm]", fontsize=28)
+    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
