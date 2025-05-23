@@ -53,19 +53,19 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 left = 0
 right = -1
 extrapolated = False
-line_width_fit = False
+line_width_fit = True
 
-cavity_length_guess = 32
+cavity_length_guess = 139
 
-scan_num = 4
+scan_num = 1
 scan_type = "s"
 
-#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250207/220um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250207/220um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/34um/34l.txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/34um/34l_PI.txt")#[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/normalization/long_scan.txt")#[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250211/normalization/long_scan_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l.txt")#[left:right]
+#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l_PI.txt")#[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250523/normalization/short_scan.txt")#[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250523/normalization/short_scan_PI.txt")#[left:right]
 
 if not np.allclose(data[:,0], norm[:,0]):
     raise Exception("Normalization and data files do not match!")
@@ -197,16 +197,17 @@ else:
         xs = np.linspace(data[:,0][0]-1, data[:,0][-1]+1, 10000) 
 
     plt.figure(figsize=(10,7))
-    plt.scatter(data[:,0], data[:,1], color="royalblue", label="data", zorder=1)
-    plt.plot(xs, fit_model(xs, *popt), color="firebrick", label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
+    plt.scatter(data[:,0], data[:,1], color="maroon", marker=".", label="data", zorder=1)
+    plt.plot(xs, fit_model(xs, *popt), color="orangered", alpha=0.7, label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
     plt.xlabel("wavelength [nm]", fontsize=28)
     plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
-    plt.subplots_adjust(bottom=0.3)
-    plt.ticklabel_format(style="sci", axis="y", scilimits=(0,0))
+    plt.subplots_adjust(bottom=0.3, left=0.15)
+    plt.locator_params(axis='x', tight=True, nbins=7)
+    #plt.ticklabel_format(style="sci", axis="y", scilimits=(0,0))
     plt.xticks(fontsize=21)
     plt.yticks(fontsize=21)
     plt.show()
