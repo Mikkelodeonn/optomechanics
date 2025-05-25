@@ -469,15 +469,15 @@ slws_0512_p, bblws_0512_p = calc_lws_single(l, params2_origin+params2_origin_err
 
 ############################## 20250326 ##############################  
 
-ls_0326 = np.array([21.390, 32.736, 51.396, 81.291])*1e-6#, 245.305, 321.768])*1e-6
+ls_0326 = np.array([21.45, 32.71, 52.22, 80.63, 244.89, 320.25, 450.48])*1e-6
 
-lws21 = np.array([77.869, 55.452, 55.252, 73.609, 73.940, 54.196, 64.092, 64.803, 67.450, 68.652, 62.498, 62.435])
-lws33 = np.array([46.428, 65.247, 47.547, 79.556, 76.220, 83.444, 65.594, 82.781, 57.836, 65.532, 84.365, 80.165, 49.984, 69.228, 66.839])
-lws53 = np.array([69.904, 56.648, 63.267, 56.318, 41.177, 62.520, 55.533, 90.238, 31.800, 80.296]) #3
-lws83 = np.array([48.060, 67.618, 73.128, 71.593, 48.218, 64.344, 67.277, 74.224, 78.159, 78.144]) #3
-lws251 = np.array([37.840, 46.683, 44.496])
-lws323 = np.array([39.196, 52.158, 56.468])
-lws453 = np.array([36.676, 36.491, 39.229])
+lws21 = np.array([68.829, 74.187, 48.436, 48.777, 71.753, 65.673, 46.808, 54.260, 61.337, 68.750, 56.628, 63.813, 56.939, 62.304])
+lws33 = np.array([37.528, 78.588, 52.193, 58.226, 74.592, 68.143, 47.219, 54.553, 62.793, 62.023, 45.564, 71.124, 60.410, 85.821, 59.870])
+lws53 = np.array([55.869, 54.361, 76.880, 51.404, 34.751, 52.525, 35.218, 48.779, 69.359, 50.462]) 
+lws83 = np.array([54.756, 53.092, 78.517, 62.764, 58.174, 58.751, 47.061, 52.086, 62.370, 47.063, 82.582]) 
+lws251 = np.array([58.619, 77.617, 76.209, 67.744, 51.382, 45.476, 77.490, 80.531, 76.911, 77.461])
+lws323 = np.array([52.294, 48.373, 77.932, 65.202, 54.043, 53.608])
+lws453 = np.array([78.216, 75.434, 79.108, 69.476, 61.065, 49.889, 45.614, 48.903])
 
 lw21 = mean(lws21)
 lw33 = mean(lws33)
@@ -495,8 +495,8 @@ err251 = stdev(lws251)
 err323 = stdev(lws323)
 err453 = stdev(lws453)
 
-lws_0326 = np.array([lw21, lw33, lw53, lw83])*1e-12
-errs_0326 = np.array([err21, err33, err53, err83])*1e-12
+lws_0326 = np.array([lw21, lw33, lw53, lw83, lw251, lw323, lw453])*1e-12
+errs_0326 = np.array([err21, err33, err53, err83, err251, err323, err453])*1e-12
 
 ############################## 20250523 ##############################    
 
@@ -519,15 +519,13 @@ params2_0523_errs = np.sqrt(np.diag(pcov2_0523))
 lengths_0523 = np.array([17.04, 65.75, 120.64, 239.63, 308.03, 539.10, 976.44])
 lengths_err_0523 = np.array([0.23, 0.37, 0.73, 1.04, 0.92, 2.33, 1.88])
 
-### removed datapoint is due to piezo drift. 
-
 lws_30um_0523 = np.array([64.426, 77.152, 81.624, 77.141])
-lws_70um_0523 = np.array([76.125, 76.445, 82.870, 83.290, 89.122]) #2
-lws_120um_0523 = np.array([75.125, 76.341, 51.018, 70.269, 76.894 , 82.675, 80.490]) #3
-lws_250um_0523 = np.array([51.241, 54.200, 60.249 ,61.325, 74.371, 67.691]) #3
-lws_320um_0523 = np.array([51.095, 54.529, 56.557, 57.702, 57.924, 65.618]) #1
+lws_70um_0523 = np.array([76.125, 76.445, 82.870, 83.290, 89.122]) 
+lws_120um_0523 = np.array([75.125, 76.341, 51.018, 70.269, 76.894 , 82.675, 80.490]) 
+lws_250um_0523 = np.array([51.241, 54.200, 60.249 ,61.325, 74.371, 67.691]) 
+lws_320um_0523 = np.array([51.095, 54.529, 56.557, 57.702, 57.924, 65.618]) 
 lws_550um_0523 = np.array([30.623, 36.088, 36.920, 34.302, 36.522])
-lws_1000um_0523 = np.array([25.999, 29.563, 26.448, 27.875, 34.471]) #1
+lws_1000um_0523 = np.array([25.999, 29.563, 26.448, 27.875, 34.471]) 
 
 lws_30um_err_0523 = stdev(lws_30um_0523)
 lws_70um_err_0523 = stdev(lws_70um_0523)
@@ -553,20 +551,59 @@ dlws_0523_p, slws_0523_p, bblws_0523_p = calc_lws(l, params1_0523+params1_0523_e
 dlws_0523_m, slws_0523_m, bblws_0523_m = calc_lws(l, params1_0523-params1_0523_errs, params2_0523-params2_0523_errs)
 
 #####################################################################   
+############################ Averaged ###############################
+
+bblws = (bblws_0523 + bblws_0326)/2
+slws = (slws_0523 + slws_0326)/2
+dlws = (dlws_0523 + dlws_0326)/2
+
+bblws_p = (bblws_0523_p + bblws_0326_p)/2
+slws_p = (slws_0523_p + slws_0326_p)/2
+dlws_p = (dlws_0523_p + dlws_0326_p)/2
+
+bblws_m = (bblws_0523_m + bblws_0326_m)/2
+slws_m = (slws_0523_m + slws_0326_m)/2
+dlws_m = (dlws_0523_m + dlws_0326_m)/2
+
+##################################################################### 
 
 plt.figure(figsize=(10,7))
-#plt.errorbar(lengths_0523, lws_0523, errs_0523, fmt=".", capsize=3, color="firebrick", label="HWHM (1st measurement)", zorder=7) # measured on 23/5
-#plt.plot(l*1e6, bblws_0523, linestyle="--", color="royalblue", label="broadband cavity")
-#plt.plot(l*1e6, slws_0523, linestyle="--", label="single fano cavity", color="orangered")
-#plt.plot(l*1e6, dlws_0523, linestyle="--", label= "double fano cavity", color="forestgreen")
-#plt.fill_between(l*1e6, bblws_0523_p, bblws_0523_m, color="royalblue", alpha=0.3)
-#plt.fill_between(l*1e6, slws_0523_p, slws_0523_m, color="orangered", alpha=0.3)
-#plt.fill_between(l*1e6, dlws_0523_p, dlws_0523_m, color="forestgreen", alpha=0.3)
-plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="data")
-plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
-plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
-plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
-plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
+plt.errorbar(lengths_0523, lws_0523, errs_0523, fmt=".", capsize=3, color="firebrick", label="HWHM (1st measurement)", zorder=7) # measured on 23/5
+plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband")
+plt.plot(l*1e6, slws_0326, linestyle="--", label="single Fano", color="orangered")
+plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double Fano", color="forestgreen")
+plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.1)
+plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.1)
+plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.1)
+
+#plt.plot(l*1e6, bblws, linestyle="--", color="royalblue", label="broadband")
+#plt.plot(l*1e6, slws, linestyle="--", label="single Fano", color="orangered")
+#plt.plot(l*1e6, dlws, linestyle="--", label= "double Fano", color="forestgreen")
+#plt.fill_between(l*1e6, bblws_p, bblws_m, color="royalblue", alpha=0.1)
+#plt.fill_between(l*1e6, slws_p, slws_m, color="orangered", alpha=0.1)
+#plt.fill_between(l*1e6, dlws_p, dlws_m, color="forestgreen", alpha=0.1)
+#plt.fill_between(l*1e6, bblws_0523, bblws_0326, color="royalblue", alpha=0.1)
+#plt.fill_between(l*1e6, slws_0523, slws_0326, color="orangered", alpha=0.1)
+#plt.fill_between(l*1e6, dlws_0523, dlws_0326, color="forestgreen", alpha=0.1)
+
+#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="darkviolet", label="HWHM (2nd measurement)", zorder=7) # measured on 26/3
+#plt.plot(l*1e6, bblws_0523, linestyle="--", color="royalblue", label="broadband")
+#plt.plot(l*1e6, slws_0523, linestyle="--", label="single Fano", color="orangered")
+#plt.plot(l*1e6, dlws_0523, linestyle="--", label= "double Fano", color="forestgreen")
+#plt.fill_between(l*1e6, bblws_0523_p, bblws_0523_m, color="royalblue", alpha=0.1)
+#plt.fill_between(l*1e6, slws_0523_p, slws_0523_m, color="orangered", alpha=0.1)
+#plt.fill_between(l*1e6, dlws_0523_p, dlws_0523_m, color="forestgreen", alpha=0.1)
+
+
+
+#plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="data")
+#plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
+#plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
+#plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
+#plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
+
+
+
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="simulated")
 #plt.plot(Ls, linewidths, color="forestgreen", alpha=0.5, label="analytical")
 #plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="broadband analytical")
@@ -582,15 +619,9 @@ plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
 #plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 #plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 #plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
-#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="darkviolet", label="HWHM (2nd measurement)", zorder=7) # measured on 26/3
 #plt.errorbar(ls_0422, lws_0422, errs_0422, fmt=".", capsize=3, color ="magenta", label="HWHM (measured on 22/4)")
 #plt.errorbar(ls_0314*1e6, lws_0314*1e12, errs_0314*1e12, fmt=".", capsize=3, color="firebrick", label="HWHM (measured on 14/3)", zorder=7)
-#plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband")
-#plt.plot(l*1e6, slws_0326, linestyle="--", label="single Fano", color="orangered")
-#plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double Fano", color="forestgreen")
-#plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.1)
-#plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.1)
-#plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.1)
+
 #plt.scatter(180,55)
 #plt.scatter(251,48)
 #plt.plot(l*1e6, dlws_0702)

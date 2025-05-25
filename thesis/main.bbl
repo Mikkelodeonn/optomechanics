@@ -1546,6 +1546,204 @@
       \verb https://arxiv.org/abs/2211.10485
       \endverb
     \endentry
+    \entry{Xu}{article}{}
+      \name{author}{6}{}{%
+        {{hash=cce961d6267a4e54c37ef515dfe94d2c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jipeng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a3d14d7394dc5c9d2f725b6058385076}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=89de18282fd67a3acad015a769c4c77e}{%
+           family={Sang},
+           familyi={S\bibinitperiod},
+           given={You},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=07971d54b11fc1cf079f2d33de217414}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Zhongqi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c74456a47785075c24dab2a74846d98c}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Chu},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3be38f5c2a28fd88e432befd1aca7659}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zhihong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd5d4b8504f61cb5358c3b869f13645e}
+      \strng{fullhash}{90b49b0c2d1c20aac15537e6f0d3f8c5}
+      \strng{bibnamehash}{bd5d4b8504f61cb5358c3b869f13645e}
+      \strng{authorbibnamehash}{bd5d4b8504f61cb5358c3b869f13645e}
+      \strng{authornamehash}{bd5d4b8504f61cb5358c3b869f13645e}
+      \strng{authorfullhash}{90b49b0c2d1c20aac15537e6f0d3f8c5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics Letters}
+      \field{month}{10}
+      \field{title}{Millimeter-scale ultrathin suspended metasurface integrated high-finesse optomechanical cavity}
+      \field{volume}{47}
+      \field{year}{2022}
+      \field{pages}{5481\bibrangedash 5484}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1364/OL.465567
+      \endverb
+    \endentry
+    \entry{Sang}{article}{}
+      \name{author}{8}{}{%
+        {{hash=89de18282fd67a3acad015a769c4c77e}{%
+           family={Sang},
+           familyi={S\bibinitperiod},
+           given={You},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=cce961d6267a4e54c37ef515dfe94d2c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jipeng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a3d14d7394dc5c9d2f725b6058385076}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4d9fb37e1a30167977eea6097b4a7fa0}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3be38f5c2a28fd88e432befd1aca7659}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zhihong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c98b8df825976ea7cb8362592da21cc7}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=59a2d090727d0d208f7031e5945ec827}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jianfa},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{65b207a87266ce54f4e91add825e77eb}
+      \strng{fullhash}{986eaf041f852985f8423cd5bb6757c6}
+      \strng{bibnamehash}{65b207a87266ce54f4e91add825e77eb}
+      \strng{authorbibnamehash}{65b207a87266ce54f4e91add825e77eb}
+      \strng{authornamehash}{65b207a87266ce54f4e91add825e77eb}
+      \strng{authorfullhash}{986eaf041f852985f8423cd5bb6757c6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Optical Materials}
+      \field{month}{09}
+      \field{title}{Spatial Nonreciprocal Transmission and Optical Bistability Based on Millimeter‐Scale Suspended Metasurface}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{2201523}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1002/adom.202201523
+      \endverb
+    \endentry
+    \entry{Enzian}{article}{}
+      \name{author}{9}{}{%
+        {{hash=5f9a44110c5c25bf9e6c1bb3c20f1b59}{%
+           family={Enzian},
+           familyi={E\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=118cf5b00980f4c7a1e9983296cef241}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zihua},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9f42701df749ad12969baccaa0ece26a}{%
+           family={Simonsen},
+           familyi={S\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=71ac1138e8c1babbc26630e3f2bbe4ac}{%
+           family={Mathiassen},
+           familyi={M\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=affbefd7017a5d755fa416b975c46c9a}{%
+           family={Vibel},
+           familyi={V\bibinitperiod},
+           given={Toke},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0f17e05615b4ebf73051e0498c25a2c6}{%
+           family={Tsaturyan},
+           familyi={T\bibinitperiod},
+           given={Yeghishe},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=39d6778991b1ca6707f51a7460a12012}{%
+           family={Tagantsev},
+           familyi={T\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2c4bbb878e4422db7f301c9d9068885c}{%
+           family={Schliesser},
+           familyi={S\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0e2343b74760639ad1efa14c67de7e19}{%
+           family={Polzik},
+           familyi={P\bibinitperiod},
+           given={Eugene\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{a5ad6f664a1cbf30fb1a30ed047908c2}
+      \strng{fullhash}{a1b53867aa3154ac1d787a45f6880aaf}
+      \strng{bibnamehash}{a5ad6f664a1cbf30fb1a30ed047908c2}
+      \strng{authorbibnamehash}{a5ad6f664a1cbf30fb1a30ed047908c2}
+      \strng{authornamehash}{a5ad6f664a1cbf30fb1a30ed047908c2}
+      \strng{authorfullhash}{a1b53867aa3154ac1d787a45f6880aaf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1094-4087}
+      \field{journaltitle}{Optics Express}
+      \field{month}{4}
+      \field{number}{8}
+      \field{title}{Phononically shielded photonic-crystal mirror membranes for cavity quantum optomechanics}
+      \field{volume}{31}
+      \field{year}{2023}
+      \field{pages}{13040}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1364/oe.484369
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1364/OE.484369
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1364/OE.484369
+      \endverb
+    \endentry
     \entry{Fan-Joannopoulos-guided-mode-resonance}{article}{}
       \name{author}{2}{}{%
         {{hash=f949287454ec425b0cf7493a1d881de9}{%
@@ -1651,6 +1849,81 @@
       \field{title}{Narrow-linewidth Fano microcavities with resonant subwavelength grating mirror}
       \field{volume}{32}
       \field{year}{2024}
+    \endentry
+    \entry{Manjeshwar}{article}{}
+      \name{author}{8}{}{%
+        {{hash=39eaf5eaa695b5b123b697828c36fe84}{%
+           family={Manjeshwar},
+           familyi={M\bibinitperiod},
+           given={Sushanth\bibnamedelima Kini},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=734c1a4c9352eae8f7707d7f36e65827}{%
+           family={Ciers},
+           familyi={C\bibinitperiod},
+           given={Anastasiia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=535c162dd2f41fc45f9b5ebd2359bb06}{%
+           family={Monsel},
+           familyi={M\bibinitperiod},
+           given={Juliette},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4a58f9eb1eae579ec7f714a25249a1c8}{%
+           family={Pfeifer},
+           familyi={P\bibinitperiod},
+           given={Hannes},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e790c8d5b9e46d4caca92a2f67fb02c2}{%
+           family={Peralle},
+           familyi={P\bibinitperiod},
+           given={Cindy},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8e6999ead5042bdbe84d26783a6ac32b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shu\bibnamedelima Min},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=21ca84df397d89f9842fb99bc1636560}{%
+           family={Tassin},
+           familyi={T\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=13d5e20d224007ae44efbe292d03034c}{%
+           family={Wieczorek},
+           familyi={W\bibinitperiod},
+           given={Witlef},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{bbf0a288adfb5594fc1826357e20e3d5}
+      \strng{fullhash}{0ae95911e280c25465994c02e6b441be}
+      \strng{bibnamehash}{bbf0a288adfb5594fc1826357e20e3d5}
+      \strng{authorbibnamehash}{bbf0a288adfb5594fc1826357e20e3d5}
+      \strng{authornamehash}{bbf0a288adfb5594fc1826357e20e3d5}
+      \strng{authorfullhash}{0ae95911e280c25465994c02e6b441be}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Opt. Express}
+      \field{month}{9}
+      \field{number}{19}
+      \field{title}{Integrated microcavity optomechanics with a suspended photonic crystal mirror above a distributed Bragg reflector}
+      \field{volume}{31}
+      \field{year}{2023}
+      \field{pages}{30212\bibrangedash 30226}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1364/OE.496447
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-31-19-30212
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-31-19-30212
+      \endverb
+      \keyw{Optical confinement; Photonic crystal cavities; Photonic crystals; Vertical cavity surface emitting lasers; Waveguide modes; Whispering gallery modes}
     \endentry
     \entry{Eichhorn}{book}{}
       \name{author}{1}{}{%
@@ -1912,8 +2185,8 @@
       \strng{authorbibnamehash}{d11619f7a39f34d24d0551be202972aa}
       \strng{authornamehash}{d11619f7a39f34d24d0551be202972aa}
       \strng{authorfullhash}{7b6eb01f2db0a98d724dfd151f5fd08a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Optical Society of America}
@@ -1940,8 +2213,8 @@
       \strng{authorbibnamehash}{d5124032891d32e300aca36b46b86d1a}
       \strng{authornamehash}{d5124032891d32e300aca36b46b86d1a}
       \strng{authorfullhash}{d5124032891d32e300aca36b46b86d1a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Nanostructured tramplines for photonics and sensing}
@@ -2009,8 +2282,8 @@
       \strng{authorbibnamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authornamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authorfullhash}{05158f4a7d58644933e03740707220ff}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Opt. Soc. Am. A}
