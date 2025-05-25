@@ -60,8 +60,8 @@ cavity_length_guess = 139
 scan_num = 1
 scan_type = "s"
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/1000um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/1000um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
 #data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l.txt")#[left:right]
 #PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l_PI.txt")#[left:right]
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250523/normalization/short_scan.txt")#[left:right]

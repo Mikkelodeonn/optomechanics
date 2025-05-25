@@ -48,16 +48,19 @@
 \contentsline {subsection}{\numberline {6.2}The double Fano cavity}{67}{}%
 \contentsline {subsubsection}{\numberline {6.2.1}Realizing the double fano model}{67}{}%
 \contentsline {subsubsection}{\numberline {6.2.2}Double fano off-resonance Fabry-Perot cavity}{70}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}The double fano linewidth}{71}{}%
-\contentsline {section}{\numberline {7}Discussion}{73}{}%
-\contentsline {subsection}{\numberline {7.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{73}{}%
-\contentsline {subsection}{\numberline {7.2}Spacial drift of the piezo ring}{73}{}%
-\contentsline {subsection}{\numberline {7.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{73}{}%
-\contentsline {subsection}{\numberline {7.4}Broadening sources (especially for long cavities)}{73}{}%
-\contentsline {subsection}{\numberline {7.5}Improvements to the setup}{73}{}%
-\contentsline {section}{\numberline {8}Outlook}{74}{}%
-\contentsline {section}{\numberline {9}References}{75}{}%
-\contentsline {section}{\numberline {10}Appendix}{77}{}%
-\contentsline {subsection}{\numberline {10.1}Simulated broadband and single Fano cavity resonance transmission spectra}{77}{}%
-\contentsline {subsection}{\numberline {10.2}Simulated single and double Fano cavity resonance transmission spectra}{78}{}%
-\contentsline {subsection}{\numberline {10.3}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{79}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}The double fano linewidth}{70}{}%
+\contentsline {section}{\numberline {7}Discussion}{71}{}%
+\contentsline {subsection}{\numberline {7.1}Optimal configuration for double fano cavity - spacial limitation for the cavity length}{71}{}%
+\contentsline {subsection}{\numberline {7.2}Spacial drift of the piezo ring}{71}{}%
+\contentsline {subsection}{\numberline {7.3}Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)}{71}{}%
+\contentsline {subsection}{\numberline {7.4}Broadening sources (especially for long cavities)}{71}{}%
+\contentsline {subsection}{\numberline {7.5}Improvements to the setup}{71}{}%
+\contentsline {section}{\numberline {8}Outlook}{72}{}%
+\contentsline {subsection}{\numberline {8.1}Conclussion}{73}{}%
+\contentsline {section}{\numberline {9}References}{74}{}%
+\contentsline {section}{\numberline {10}Appendix}{79}{}%
+\contentsline {subsection}{\numberline {10.1}Simulated broadband and single Fano cavity resonance transmission spectra}{79}{}%
+\contentsline {subsection}{\numberline {10.2}Simulated single and double Fano cavity resonance transmission spectra}{80}{}%
+\contentsline {subsection}{\numberline {10.3}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{81}{}%
+\contentsline {subsection}{\numberline {10.4}Single Fano data + fits}{82}{}%
+\contentsline {subsection}{\numberline {10.5}Double Fano data + fits}{88}{}%

@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/fsr.txt")#[2:-3]
-PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/fsr_PI.txt")#[2:-3]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/fsr3.txt")#[2:-3]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/fsr3.txt")#[2:-3]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/1000um/fsr.txt")#[2:-3]
+PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/1000um/fsr_PI.txt")#[2:-3]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/fsr6.txt")#[2:-3]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/fsr6.txt")#[2:-3]
 
 #PI0 = norm_PI[0,1]
 #data[:,1] = [d/(pi/PI0) for d,pi in zip(data[:,1], PI[:,1])]
@@ -17,7 +17,7 @@ def fabry_perot(λ, r, t, l, φ):
     T = np.abs((t**2)/(1-r**2*np.exp(2j* ((2 * np.pi / λ) * l + φ))))**2
     return T
 
-p0 = [np.sqrt(0.3), np.sqrt(0.7), 30e3, np.pi/2]
+p0 = [np.sqrt(0.3), np.sqrt(0.7), 1000e3, np.pi/2]
 popt, pcov = curve_fit(fabry_perot, data[:,0], data[:,1], p0=p0, maxfev=1000000)
 xs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
