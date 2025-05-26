@@ -80,7 +80,7 @@ where we define the correction to be arbitrarily small as $\varepsilon = 1\%$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/MIST_grating_sim.pdf}
-    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.208$nm, $\lambda_1 = 951.356$nm, $t_d = 0.8094$, $r_d = 0.527$, $\gamma_{\lambda} = 0.527$nm, and $\beta = 4.42 \cdot 10^{-7}$.}
+    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.217$nm, $\lambda_1 = 951.356$nm, $t_d = 0.818$, $r_d = 0.527$, $\gamma_{\lambda} = 0.527$nm, and $\beta = 1.03 \cdot 10^{-6}$.}
     \label{fig:MIST_sim_of_grating}
 \end{figure}
 
@@ -410,16 +410,16 @@ Since the linewidth is defined as the HWHM of the transmission profile, this wil
         \label{fig:HWHM_vs_losses}
     \end{subfigure}
     \begin{subfigure}[c]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/double_02_percent_loss_30um.pdf}
+        \includegraphics[width=\textwidth]{figures/double_1percent_loss_30um.pdf}
         \caption{}
         \label{fig:lossy_spectrum_0.2percent}
     \end{subfigure}
     \begin{subfigure}[c]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/double_32_percent_loss_30um.pdf}
+        \includegraphics[width=\textwidth]{figures/double_8percent_loss_30um.pdf}
         \caption{}
         \label{fig:lossy_spectrum_3.2percent}
     \end{subfigure}
-    \caption{(a) shows the linewidth (HWHM) of a symmetric double Fano cavity of length $l \approx 30 \mu m$  as a function of additional cavity losses $L = 2(|r_g|^2 - |t_g|^2)$. Each point is found as a fitting parameter of a least squares fit of the double Fano transmission spectrum for a certain value of $L$ to the general Fano model. The plotted line indicates the analytical value of the linewidth (eq. \ref{eq:analytical_linewidth}) as a function of $L$, for comparison. In (b) and (c) are seen examples of double Fano transmission spectra, with their respective linewidths, for cavities of $L=0.2\%$ and $L=3.2\%$, respectively.}
+    \caption{(a) shows the linewidth (HWHM) of a symmetric double Fano cavity of length $l \approx 30 \mu m$  as a function of additional cavity losses $L = 2(1 - |r_g|^2 - |t_g|^2)$. Each point is found as a fitting parameter of a least squares fit of the double Fano intracavity spectrum for a certain value of $L$ to the general Fano model. The plotted line indicates the analytical value of the linewidth (eq. \ref{eq:analytical_linewidth}) as a function of $L$, for comparison. In (b) and (c) are seen examples of double Fano transmission spectra, with their respective linewidths, for cavities of $L=1\%$ and $L=8\%$, respectively.}
     \label{fig:HWHM_vs_losses_whole_figure}
 \end{figure}
 
@@ -474,20 +474,15 @@ While knowing that a detuning of $0.3$nm is acceptable in terms of exciting the 
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.7\textwidth}
+    \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um.pdf}
         \caption{}
         \label{fig:detuning_scan}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf}
+        \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um_intracavity.pdf}
         \caption{}
-        \label{fig:detuning_scan_intracavity_normalized}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf}
-        \caption{}
-        \label{fig:detuning_scan_intracavity_max_values}
+        \label{fig:detuning_scan_intracavity}
     \end{subfigure}
     \caption{In (a) is seen lossless double Fano transmission spectra for increasing value of the detuning $\Delta = |\lambda_{0} - \lambda_{0}^{\prime}|$. It is readily seen that the transmission wavelength $\lambda_t = (\lambda_{0} + \lambda_{0}^{\prime})/2$ becomes higher, and that the linewidth likewise becomes larger with increasing detuning. (b) shows the intracavity spectra corresponding to the transmission spectra in (a) normalized by each their maximum value, shown in (c), in order to preserve readability.}
     \label{fig:detuning_scans}

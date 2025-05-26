@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  25 MAY 2025 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.5)  26 MAY 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,7 +766,7 @@ Package pdftex.def Info: figures/MIST_grating_sim.pdf  used on input line 82.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14 <./figures/grating_MIST_sketch.pdf>] [15 <./figures/MIST_grating_sim.pdf>]
-<figures/arbitrary_lossy_grating_ref_trans.pdf, id=464, 722.7pt x 505.89pt>
+<figures/arbitrary_lossy_grating_ref_trans.pdf, id=461, 722.7pt x 505.89pt>
 File: figures/arbitrary_lossy_grating_ref_trans.pdf Graphic file (type pdf)
 <use figures/arbitrary_lossy_grating_ref_trans.pdf>
 Package pdftex.def Info: figures/arbitrary_lossy_grating_ref_trans.pdf  used on input line 126.
@@ -781,27 +781,27 @@ File: figures/single_fano_sketch.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/single_fano_sketch.pdf  used on input line 146.
 (pdftex.def)             Requested size: 140.92793pt x 133.89552pt.
  [17] [18]
-<figures/fano_and_broadband_cavity_1000um.pdf, id=524, 722.7pt x 505.89pt>
+<figures/fano_and_broadband_cavity_1000um.pdf, id=518, 722.7pt x 505.89pt>
 File: figures/fano_and_broadband_cavity_1000um.pdf Graphic file (type pdf)
 <use figures/fano_and_broadband_cavity_1000um.pdf>
 Package pdftex.def Info: figures/fano_and_broadband_cavity_1000um.pdf  used on input line 196.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/fano_and_broadband_cavity_5um.pdf, id=525, 722.7pt x 505.89pt>
+<figures/fano_and_broadband_cavity_5um.pdf, id=519, 722.7pt x 505.89pt>
 File: figures/fano_and_broadband_cavity_5um.pdf Graphic file (type pdf)
 <use figures/fano_and_broadband_cavity_5um.pdf>
 Package pdftex.def Info: figures/fano_and_broadband_cavity_5um.pdf  used on input line 201.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/HWHM_broadband_vs_single_sim.pdf, id=526, 722.7pt x 505.89pt>
+<figures/HWHM_broadband_vs_single_sim.pdf, id=520, 722.7pt x 505.89pt>
 File: figures/HWHM_broadband_vs_single_sim.pdf Graphic file (type pdf)
 <use figures/HWHM_broadband_vs_single_sim.pdf>
 Package pdftex.def Info: figures/HWHM_broadband_vs_single_sim.pdf  used on input line 216.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-<figures/sim_single_vs_broadband_270um.pdf, id=527, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_270um.pdf, id=521, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_270um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_270um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_270um.pdf  used on input line 221.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_10um.pdf, id=528, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_10um.pdf, id=522, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_10um.pdf  used on input line 226.
@@ -825,12 +825,12 @@ File: figures/double_fano_sketch.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/double_fano_sketch.pdf  used on input line 250.
 (pdftex.def)             Requested size: 140.92793pt x 134.16527pt.
  [21]
-<figures/double_fano_full_range_30um.pdf, id=767, 722.7pt x 505.89pt>
+<figures/double_fano_full_range_30um.pdf, id=760, 722.7pt x 505.89pt>
 File: figures/double_fano_full_range_30um.pdf Graphic file (type pdf)
 <use figures/double_fano_full_range_30um.pdf>
 Package pdftex.def Info: figures/double_fano_full_range_30um.pdf  used on input line 271.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/double_fano_short_range_30um.pdf, id=768, 722.7pt x 505.89pt>
+<figures/double_fano_short_range_30um.pdf, id=761, 722.7pt x 505.89pt>
 File: figures/double_fano_short_range_30um.pdf Graphic file (type pdf)
 <use figures/double_fano_short_range_30um.pdf>
 Package pdftex.def Info: figures/double_fano_short_range_30um.pdf  used on input line 276.
@@ -839,22 +839,22 @@ Package pdftex.def Info: figures/double_fano_short_range_30um.pdf  used on input
 
 pdfTeX warning: pdflatex (file ./figures/double_fano_short_range_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/single_and_double_1000um.pdf, id=850, 722.7pt x 505.89pt>
+<figures/single_and_double_1000um.pdf, id=843, 722.7pt x 505.89pt>
 File: figures/single_and_double_1000um.pdf Graphic file (type pdf)
 <use figures/single_and_double_1000um.pdf>
 Package pdftex.def Info: figures/single_and_double_1000um.pdf  used on input line 317.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/single_and_double_1000um_zoomed.pdf, id=851, 722.7pt x 505.89pt>
+<figures/single_and_double_1000um_zoomed.pdf, id=844, 722.7pt x 505.89pt>
 File: figures/single_and_double_1000um_zoomed.pdf Graphic file (type pdf)
 <use figures/single_and_double_1000um_zoomed.pdf>
 Package pdftex.def Info: figures/single_and_double_1000um_zoomed.pdf  used on input line 322.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/single_and_double_5um.pdf, id=852, 722.7pt x 505.89pt>
+<figures/single_and_double_5um.pdf, id=845, 722.7pt x 505.89pt>
 File: figures/single_and_double_5um.pdf Graphic file (type pdf)
 <use figures/single_and_double_5um.pdf>
 Package pdftex.def Info: figures/single_and_double_5um.pdf  used on input line 328.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/single_and_double_5um_zoomed.pdf, id=853, 722.7pt x 505.89pt>
+<figures/single_and_double_5um_zoomed.pdf, id=846, 722.7pt x 505.89pt>
 File: figures/single_and_double_5um_zoomed.pdf Graphic file (type pdf)
 <use figures/single_and_double_5um_zoomed.pdf>
 Package pdftex.def Info: figures/single_and_double_5um_zoomed.pdf  used on input line 333.
@@ -873,17 +873,17 @@ pdfTeX warning: pdflatex (file ./figures/single_and_double_5um.pdf): PDF inclusi
 
 pdfTeX warning: pdflatex (file ./figures/single_and_double_5um_zoomed.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/HWHM_broadband_vs_single_vs_double_sim.pdf, id=1013, 722.7pt x 505.89pt>
+<figures/HWHM_broadband_vs_single_vs_double_sim.pdf, id=1006, 722.7pt x 505.89pt>
 File: figures/HWHM_broadband_vs_single_vs_double_sim.pdf Graphic file (type pdf)
 <use figures/HWHM_broadband_vs_single_vs_double_sim.pdf>
 Package pdftex.def Info: figures/HWHM_broadband_vs_single_vs_double_sim.pdf  used on input line 351.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-<figures/sim_single_vs_double_270um.pdf, id=1014, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_270um.pdf, id=1007, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_270um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_270um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_270um.pdf  used on input line 356.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_10um.pdf, id=1015, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_10um.pdf, id=1008, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_10um.pdf  used on input line 361.
@@ -892,7 +892,7 @@ Package pdftex.def Info: figures/sim_single_vs_double_10um.pdf  used on input li
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/double_fano_loss_scan.pdf, id=1016, 722.7pt x 505.89pt>
+<figures/double_fano_loss_scan.pdf, id=1009, 722.7pt x 505.89pt>
 File: figures/double_fano_loss_scan.pdf Graphic file (type pdf)
 <use figures/double_fano_loss_scan.pdf>
 Package pdftex.def Info: figures/double_fano_loss_scan.pdf  used on input line 386.
@@ -908,44 +908,44 @@ pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_270um.pdf): PDF in
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_10um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/linewidth_vs_losses.pdf, id=1176, 722.7pt x 505.89pt>
+<figures/linewidth_vs_losses.pdf, id=1171, 722.7pt x 505.89pt>
 File: figures/linewidth_vs_losses.pdf Graphic file (type pdf)
 <use figures/linewidth_vs_losses.pdf>
 Package pdftex.def Info: figures/linewidth_vs_losses.pdf  used on input line 408.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-<figures/double_02_percent_loss_30um.pdf, id=1177, 722.7pt x 505.89pt>
-File: figures/double_02_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_02_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_02_percent_loss_30um.pdf  used on input line 413.
+<figures/double_1percent_loss_30um.pdf, id=1172, 722.7pt x 505.89pt>
+File: figures/double_1percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_1percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_1percent_loss_30um.pdf  used on input line 413.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/double_32_percent_loss_30um.pdf, id=1178, 722.7pt x 505.89pt>
-File: figures/double_32_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_32_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_32_percent_loss_30um.pdf  used on input line 418.
+<figures/double_8percent_loss_30um.pdf, id=1173, 722.7pt x 505.89pt>
+File: figures/double_8percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_8percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_8percent_loss_30um.pdf  used on input line 418.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <./figures/double_fano_loss_scan.pdf>] [28 <./figures/linewidth_vs_losses.pdf> <./figures/double_02_percent_loss_30um.pdf
+[27 <./figures/double_fano_loss_scan.pdf>] [28 <./figures/linewidth_vs_losses.pdf> <./figures/double_1percent_loss_30um.pdf
 
-pdfTeX warning: pdflatex (file ./figures/double_02_percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/double_32_percent_loss_30um.pdf
+pdfTeX warning: pdflatex (file ./figures/double_1percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/double_8percent_loss_30um.pdf
 
-pdfTeX warning: pdflatex (file ./figures/double_32_percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./figures/double_8percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/detuned_grating_spectra.pdf, id=1387, 722.7pt x 505.89pt>
+<figures/detuned_grating_spectra.pdf, id=1358, 722.7pt x 505.89pt>
 File: figures/detuned_grating_spectra.pdf Graphic file (type pdf)
 <use figures/detuned_grating_spectra.pdf>
 Package pdftex.def Info: figures/detuned_grating_spectra.pdf  used on input line 441.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
  [29 <./figures/detuned_grating_spectra.pdf>]
-<figures/detuned_full_range_double_trans.pdf, id=1444, 722.7pt x 505.89pt>
+<figures/detuned_full_range_double_trans.pdf, id=1413, 722.7pt x 505.89pt>
 File: figures/detuned_full_range_double_trans.pdf Graphic file (type pdf)
 <use figures/detuned_full_range_double_trans.pdf>
 Package pdftex.def Info: figures/detuned_full_range_double_trans.pdf  used on input line 457.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/detuned_short_range_double_trans.pdf, id=1445, 722.7pt x 505.89pt>
+<figures/detuned_short_range_double_trans.pdf, id=1414, 722.7pt x 505.89pt>
 File: figures/detuned_short_range_double_trans.pdf Graphic file (type pdf)
 <use figures/detuned_short_range_double_trans.pdf>
 Package pdftex.def Info: figures/detuned_short_range_double_trans.pdf  used on input line 463.
@@ -954,116 +954,129 @@ Package pdftex.def Info: figures/detuned_short_range_double_trans.pdf  used on i
 
 pdfTeX warning: pdflatex (file ./figures/detuned_short_range_double_trans.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/detuning_scan_double_fano_30um.pdf, id=1559, 722.7pt x 505.89pt>
+<figures/detuning_scan_double_fano_30um.pdf, id=1518, 722.7pt x 505.89pt>
 File: figures/detuning_scan_double_fano_30um.pdf Graphic file (type pdf)
 <use figures/detuning_scan_double_fano_30um.pdf>
 Package pdftex.def Info: figures/detuning_scan_double_fano_30um.pdf  used on input line 478.
-(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-<figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf, id=1560, 722.7pt x 505.89pt>
-File: figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf Graphic file (type pdf)
-<use figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf>
-Package pdftex.def Info: figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf  used on input line 483.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf, id=1561, 722.7pt x 505.89pt>
-File: figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf Graphic file (type pdf)
-<use figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf>
-Package pdftex.def Info: figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf  used on input line 488.
+<figures/detuning_scan_double_fano_30um_intracavity.pdf, id=1519, 722.7pt x 505.89pt>
+File: figures/detuning_scan_double_fano_30um_intracavity.pdf Graphic file (type pdf)
+<use figures/detuning_scan_double_fano_30um_intracavity.pdf>
+Package pdftex.def Info: figures/detuning_scan_double_fano_30um_intracavity.pdf  used on input line 483.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [31 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf
 
-pdfTeX warning: pdflatex (file ./figures/detuning_scan_double_fano_30um_intracavity_normalized.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf
 
-pdfTeX warning: pdflatex (file ./figures/detuning_scan_double_fano_30um_intracavity_max_values.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+LaTeX Warning: Reference `fig:detuning_scan_intracavity_normalized' on page 31 undefined on input line 491.
+
+
+LaTeX Warning: Reference `fig:detuning_scan_intracavity_max_values' on page 31 undefined on input line 491.
+
+
+LaTeX Warning: Reference `fig:detuning_scan_intracavity_max_values' on page 31 undefined on input line 491.
+
+
+LaTeX Warning: Reference `fig:detuning_scan_intracavity_normalized' on page 31 undefined on input line 493.
+
+
+LaTeX Warning: Reference `fig:detuning_scan_intracavity_max_values' on page 31 undefined on input line 493.
+
+[31 <./figures/detuning_scan_double_fano_30um.pdf> <./figures/detuning_scan_double_fano_30um_intracavity.pdf
+
+pdfTeX warning: pdflatex (file ./figures/detuning_scan_double_fano_30um_intracavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/small_detuning_length_scan_long.pdf, id=1671, 722.7pt x 505.89pt>
+<figures/small_detuning_length_scan_long.pdf, id=1595, 722.7pt x 505.89pt>
 File: figures/small_detuning_length_scan_long.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 511.
+Package pdftex.def Info: figures/small_detuning_length_scan_long.pdf  used on input line 506.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/small_detuning_length_scan_short.pdf, id=1672, 722.7pt x 505.89pt>
+<figures/small_detuning_length_scan_short.pdf, id=1596, 722.7pt x 505.89pt>
 File: figures/small_detuning_length_scan_short.pdf Graphic file (type pdf)
 <use figures/small_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 516.
+Package pdftex.def Info: figures/small_detuning_length_scan_short.pdf  used on input line 511.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[32]
-<figures/medium_detuning_length_scan_long.pdf, id=1676, 722.7pt x 505.89pt>
-File: figures/medium_detuning_length_scan_long.pdf Graphic file (type pdf)
-<use figures/medium_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/medium_detuning_length_scan_long.pdf  used on input line 531.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/medium_detuning_length_scan_short.pdf, id=1677, 722.7pt x 505.89pt>
-File: figures/medium_detuning_length_scan_short.pdf Graphic file (type pdf)
-<use figures/medium_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/medium_detuning_length_scan_short.pdf  used on input line 536.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [33 <./figures/small_detuning_length_scan_long.pdf> <./figures/small_detuning_length_scan_short.pdf
+ [32 <./figures/small_detuning_length_scan_long.pdf> <./figures/small_detuning_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/small_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/medium_detuning_length_scan_long.pdf
-
-pdfTeX warning: pdflatex (file ./figures/medium_detuning_length_scan_long.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/medium_detuning_length_scan_short.pdf
+>]
+<figures/medium_detuning_length_scan_long.pdf, id=1668, 722.7pt x 505.89pt>
+File: figures/medium_detuning_length_scan_long.pdf Graphic file (type pdf)
+<use figures/medium_detuning_length_scan_long.pdf>
+Package pdftex.def Info: figures/medium_detuning_length_scan_long.pdf  used on input line 526.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/medium_detuning_length_scan_short.pdf, id=1669, 722.7pt x 505.89pt>
+File: figures/medium_detuning_length_scan_short.pdf Graphic file (type pdf)
+<use figures/medium_detuning_length_scan_short.pdf>
+Package pdftex.def Info: figures/medium_detuning_length_scan_short.pdf  used on input line 531.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+ [33 <./figures/medium_detuning_length_scan_long.pdf> <./figures/medium_detuning_length_scan_short.pdf
 
 pdfTeX warning: pdflatex (file ./figures/medium_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/large_detuning_length_scan_long.pdf, id=1825, 722.7pt x 505.89pt>
+<figures/large_detuning_length_scan_long.pdf, id=1743, 722.7pt x 505.89pt>
 File: figures/large_detuning_length_scan_long.pdf Graphic file (type pdf)
 <use figures/large_detuning_length_scan_long.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 551.
+Package pdftex.def Info: figures/large_detuning_length_scan_long.pdf  used on input line 546.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/large_detuning_length_scan_short.pdf, id=1826, 722.7pt x 505.89pt>
+<figures/large_detuning_length_scan_short.pdf, id=1744, 722.7pt x 505.89pt>
 File: figures/large_detuning_length_scan_short.pdf Graphic file (type pdf)
 <use figures/large_detuning_length_scan_short.pdf>
-Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 556.
+Package pdftex.def Info: figures/large_detuning_length_scan_short.pdf  used on input line 551.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [34 <./figures/large_detuning_length_scan_long.pdf> <./figures/large_detuning_length_scan_short.pdf
-
-pdfTeX warning: pdflatex (file ./figures/large_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figures/cmap_with_slice_indicators1.pdf, id=1904, 722.7pt x 433.62pt>
+<figures/cmap_with_slice_indicators1.pdf, id=1745, 722.7pt x 433.62pt>
 File: figures/cmap_with_slice_indicators1.pdf Graphic file (type pdf)
 <use figures/cmap_with_slice_indicators1.pdf>
-Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 570.
+Package pdftex.def Info: figures/cmap_with_slice_indicators1.pdf  used on input line 565.
 (pdftex.def)             Requested size: 328.82707pt x 197.29741pt.
-<figures/cmap_slice1.pdf, id=1905, 722.7pt x 505.89pt>
-File: figures/cmap_slice1.pdf Graphic file (type pdf)
-<use figures/cmap_slice1.pdf>
-Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 579.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/cmap_slice2.pdf, id=1906, 722.7pt x 505.89pt>
-File: figures/cmap_slice2.pdf Graphic file (type pdf)
-<use figures/cmap_slice2.pdf>
-Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 585.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/cmap_slice3.pdf, id=1907, 722.7pt x 505.89pt>
-File: figures/cmap_slice3.pdf Graphic file (type pdf)
-<use figures/cmap_slice3.pdf>
-Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 591.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/cmap_lws.pdf, id=1908, 722.7pt x 505.89pt>
-File: figures/cmap_lws.pdf Graphic file (type pdf)
-<use figures/cmap_lws.pdf>
-Package pdftex.def Info: figures/cmap_lws.pdf  used on input line 597.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/lw_vs_length_intracavity.pdf, id=1909, 722.7pt x 505.89pt>
+<figures/cmap_slice1.pdf, id=1746, 722.7pt x 505.89pt>
+File: figures/cmap_slice1.pdf Graphic file (type pdf)
+<use figures/cmap_slice1.pdf>
+Package pdftex.def Info: figures/cmap_slice1.pdf  used on input line 574.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/cmap_slice2.pdf, id=1747, 722.7pt x 505.89pt>
+File: figures/cmap_slice2.pdf Graphic file (type pdf)
+<use figures/cmap_slice2.pdf>
+Package pdftex.def Info: figures/cmap_slice2.pdf  used on input line 580.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/cmap_slice3.pdf, id=1748, 722.7pt x 505.89pt>
+File: figures/cmap_slice3.pdf Graphic file (type pdf)
+<use figures/cmap_slice3.pdf>
+Package pdftex.def Info: figures/cmap_slice3.pdf  used on input line 586.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+<figures/cmap_lws.pdf, id=1749, 722.7pt x 505.89pt>
+File: figures/cmap_lws.pdf Graphic file (type pdf)
+<use figures/cmap_lws.pdf>
+Package pdftex.def Info: figures/cmap_lws.pdf  used on input line 592.
+(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34 <./figures/large_detuning_length_scan_long.pdf> <./figures/large_detuning_length_scan_short.pdf
+
+pdfTeX warning: pdflatex (file ./figures/large_detuning_length_scan_short.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/lw_vs_length_intracavity.pdf, id=1823, 722.7pt x 505.89pt>
 File: figures/lw_vs_length_intracavity.pdf Graphic file (type pdf)
 <use figures/lw_vs_length_intracavity.pdf>
-Package pdftex.def Info: figures/lw_vs_length_intracavity.pdf  used on input line 615.
+Package pdftex.def Info: figures/lw_vs_length_intracavity.pdf  used on input line 610.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/cmaps_detuning_30um.pdf, id=1824, 997.32597pt x 578.16pt>
+File: figures/cmaps_detuning_30um.pdf Graphic file (type pdf)
+<use figures/cmaps_detuning_30um.pdf>
+Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 621.
+(pdftex.def)             Requested size: 446.26582pt x 258.70514pt.
 [35 <./figures/cmap_with_slice_indicators1.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36 <./figures/cmap_slice1.pdf> <./figures/cmap_slice2.pdf
+) [36 <./figures/cmap_slice1.pdf> <./figures/cmap_slice2.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cmap_slice2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/cmap_slice3.pdf
@@ -1072,28 +1085,21 @@ pdfTeX warning: pdflatex (file ./figures/cmap_slice3.pdf): PDF inclusion: multip
 > <./figures/cmap_lws.pdf
 
 pdfTeX warning: pdflatex (file ./figures/cmap_lws.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figures/cmaps_detuning_30um.pdf, id=2144, 997.32597pt x 578.16pt>
-File: figures/cmaps_detuning_30um.pdf Graphic file (type pdf)
-<use figures/cmaps_detuning_30um.pdf>
-Package pdftex.def Info: figures/cmaps_detuning_30um.pdf  used on input line 626.
-(pdftex.def)             Requested size: 446.26582pt x 258.70514pt.
+>] [37 <./figures/lw_vs_length_intracavity.pdf> <./figures/cmaps_detuning_30um.pdf
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [37 <./figures/lw_vs_length_intracavity.pdf>] [38 <./figures/cmaps_detuning_30um.pdf>] (./method/experimental_setup.tex
-<figures/setup_sketch.pdf, id=2244, 392.46625pt x 347.2975pt>
+pdfTeX warning: pdflatex (file ./figures/cmaps_detuning_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./method/experimental_setup.tex
+<figures/setup_sketch.pdf, id=2154, 392.46625pt x 347.2975pt>
 File: figures/setup_sketch.pdf Graphic file (type pdf)
 <use figures/setup_sketch.pdf>
 Package pdftex.def Info: figures/setup_sketch.pdf  used on input line 10.
 (pdftex.def)             Requested size: 281.85587pt x 249.43398pt.
-<figures/setup_skecth_zoomed.pdf, id=2245, 686.565pt x 319.1925pt>
+<figures/setup_skecth_zoomed.pdf, id=2155, 686.565pt x 319.1925pt>
 File: figures/setup_skecth_zoomed.pdf Graphic file (type pdf)
 <use figures/setup_skecth_zoomed.pdf>
 Package pdftex.def Info: figures/setup_skecth_zoomed.pdf  used on input line 18.
 (pdftex.def)             Requested size: 347.62129pt x 161.61223pt.
-<figures/setup_cavity_picture.pdf, id=2246, 355.3275pt x 465.74pt>
+<figures/setup_cavity_picture.pdf, id=2156, 355.3275pt x 465.74pt>
 File: figures/setup_cavity_picture.pdf Graphic file (type pdf)
 <use figures/setup_cavity_picture.pdf>
 Package pdftex.def Info: figures/setup_cavity_picture.pdf  used on input line 23.
@@ -1102,15 +1108,15 @@ Package pdftex.def Info: figures/setup_cavity_picture.pdf  used on input line 23
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39
+[38
 
  <./figures/setup_sketch.pdf>]
-<figures/toptica_laser.pdf, id=2267, 274.02374pt x 213.79875pt>
+<figures/toptica_laser.pdf, id=2175, 274.02374pt x 213.79875pt>
 File: figures/toptica_laser.pdf Graphic file (type pdf)
 <use figures/toptica_laser.pdf>
 Package pdftex.def Info: figures/toptica_laser.pdf  used on input line 38.
 (pdftex.def)             Requested size: 145.86743pt x 113.81102pt.
-<figures/toptica_controller.pdf, id=2268, 355.3275pt x 213.79875pt>
+<figures/toptica_controller.pdf, id=2176, 355.3275pt x 213.79875pt>
 File: figures/toptica_controller.pdf Graphic file (type pdf)
 <use figures/toptica_controller.pdf>
 Package pdftex.def Info: figures/toptica_controller.pdf  used on input line 44.
@@ -1119,14 +1125,14 @@ Package pdftex.def Info: figures/toptica_controller.pdf  used on input line 44.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40 <./figures/setup_skecth_zoomed.pdf> <./figures/setup_cavity_picture.pdf>]
-<figures/outcoupling_fiber.pdf, id=2285, 533.995pt x 331.2375pt>
+[39 <./figures/setup_skecth_zoomed.pdf> <./figures/setup_cavity_picture.pdf>]
+<figures/outcoupling_fiber.pdf, id=2195, 533.995pt x 331.2375pt>
 File: figures/outcoupling_fiber.pdf Graphic file (type pdf)
 <use figures/outcoupling_fiber.pdf>
 Package pdftex.def Info: figures/outcoupling_fiber.pdf  used on input line 56.
 (pdftex.def)             Requested size: 234.8775pt x 145.6944pt.
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 61.
-<figures/HWP.pdf, id=2286, 610.28pt x 248.93pt>
+<figures/HWP.pdf, id=2196, 610.28pt x 248.93pt>
 File: figures/HWP.pdf Graphic file (type pdf)
 <use figures/HWP.pdf>
 Package pdftex.def Info: figures/HWP.pdf  used on input line 67.
@@ -1135,8 +1141,8 @@ Package pdftex.def Info: figures/HWP.pdf  used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41 <./figures/toptica_laser.pdf> <./figures/toptica_controller.pdf> <./figures/outcoupling_fiber.pdf>]
-<figures/optical_telescope.pdf, id=2302, 648.4225pt x 319.1925pt>
+[40 <./figures/toptica_laser.pdf> <./figures/toptica_controller.pdf> <./figures/outcoupling_fiber.pdf>]
+<figures/optical_telescope.pdf, id=2212, 648.4225pt x 319.1925pt>
 File: figures/optical_telescope.pdf Graphic file (type pdf)
 <use figures/optical_telescope.pdf>
 Package pdftex.def Info: figures/optical_telescope.pdf  used on input line 83.
@@ -1146,7 +1152,7 @@ Overfull \hbox (1.01332pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-<figures/optical_telescope_picture.pdf, id=2303, 386.44376pt x 289.08pt>
+<figures/optical_telescope_picture.pdf, id=2213, 386.44376pt x 289.08pt>
 File: figures/optical_telescope_picture.pdf Graphic file (type pdf)
 <use figures/optical_telescope_picture.pdf>
 Package pdftex.def Info: figures/optical_telescope_picture.pdf  used on input line 89.
@@ -1154,13 +1160,13 @@ Package pdftex.def Info: figures/optical_telescope_picture.pdf  used on input li
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[42 <./figures/HWP.pdf>]
-<figures/setup_bottom.pdf, id=2320, 679.53876pt x 289.08pt>
+[41 <./figures/HWP.pdf>]
+<figures/setup_bottom.pdf, id=2230, 679.53876pt x 289.08pt>
 File: figures/setup_bottom.pdf Graphic file (type pdf)
 <use figures/setup_bottom.pdf>
 Package pdftex.def Info: figures/setup_bottom.pdf  used on input line 116.
 (pdftex.def)             Requested size: 281.85587pt x 119.9042pt.
-<figures/cavity_setup_bottom_pic.pdf, id=2321, 428.60126pt x 396.48125pt>
+<figures/cavity_setup_bottom_pic.pdf, id=2231, 428.60126pt x 396.48125pt>
 File: figures/cavity_setup_bottom_pic.pdf Graphic file (type pdf)
 <use figures/cavity_setup_bottom_pic.pdf>
 Package pdftex.def Info: figures/cavity_setup_bottom_pic.pdf  used on input line 121.
@@ -1169,13 +1175,13 @@ Package pdftex.def Info: figures/cavity_setup_bottom_pic.pdf  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[43 <./figures/optical_telescope.pdf> <./figures/optical_telescope_picture.pdf>]
-<figures/setup_top.pdf, id=2340, 683.55376pt x 289.08pt>
+[42 <./figures/optical_telescope.pdf> <./figures/optical_telescope_picture.pdf>]
+<figures/setup_top.pdf, id=2250, 683.55376pt x 289.08pt>
 File: figures/setup_top.pdf Graphic file (type pdf)
 <use figures/setup_top.pdf>
 Package pdftex.def Info: figures/setup_top.pdf  used on input line 136.
 (pdftex.def)             Requested size: 281.85587pt x 119.19844pt.
-<figures/setup_top_pic.pdf, id=2341, 356.33125pt x 353.32pt>
+<figures/setup_top_pic.pdf, id=2251, 356.33125pt x 353.32pt>
 File: figures/setup_top_pic.pdf Graphic file (type pdf)
 <use figures/setup_top_pic.pdf>
 Package pdftex.def Info: figures/setup_top_pic.pdf  used on input line 141.
@@ -1184,14 +1190,14 @@ Package pdftex.def Info: figures/setup_top_pic.pdf  used on input line 141.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44 <./figures/setup_bottom.pdf> <./figures/cavity_setup_bottom_pic.pdf>]
-<figures/cavity_setup_top_separate_pic.pdf, id=2356, 235.88126pt x 221.82875pt>
+[43 <./figures/setup_bottom.pdf> <./figures/cavity_setup_bottom_pic.pdf>]
+<figures/cavity_setup_top_separate_pic.pdf, id=2266, 235.88126pt x 221.82875pt>
 File: figures/cavity_setup_top_separate_pic.pdf Graphic file (type pdf)
 <use figures/cavity_setup_top_separate_pic.pdf>
 Package pdftex.def Info: figures/cavity_setup_top_separate_pic.pdf  used on input line 153.
 (pdftex.def)             Requested size: 187.89914pt x 176.7084pt.
- [45 <./figures/setup_top.pdf> <./figures/setup_top_pic.pdf> <./figures/cavity_setup_top_separate_pic.pdf>]
-<figures/noise_box_front.pdf, id=2376, 341.275pt x 185.69376pt>
+ [44 <./figures/setup_top.pdf> <./figures/setup_top_pic.pdf> <./figures/cavity_setup_top_separate_pic.pdf>]
+<figures/noise_box_front.pdf, id=2285, 341.275pt x 185.69376pt>
 File: figures/noise_box_front.pdf Graphic file (type pdf)
 <use figures/noise_box_front.pdf>
 Package pdftex.def Info: figures/noise_box_front.pdf  used on input line 168.
@@ -1201,29 +1207,29 @@ Overfull \hbox (5.13603pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-<figures/noise_box_side.pdf, id=2377, 329.23pt x 257.96375pt>
+<figures/noise_box_side.pdf, id=2286, 329.23pt x 257.96375pt>
 File: figures/noise_box_side.pdf Graphic file (type pdf)
 <use figures/noise_box_side.pdf>
 Package pdftex.def Info: figures/noise_box_side.pdf  used on input line 174.
 (pdftex.def)             Requested size: 163.41394pt x 128.0374pt.
-[46 <./figures/noise_box_front.pdf> <./figures/noise_box_side.pdf>]
-<figures/scope.pdf, id=2389, 294.09875pt x 165.61874pt>
+[45 <./figures/noise_box_front.pdf> <./figures/noise_box_side.pdf>]
+<figures/scope.pdf, id=2299, 294.09875pt x 165.61874pt>
 File: figures/scope.pdf Graphic file (type pdf)
 <use figures/scope.pdf>
 Package pdftex.def Info: figures/scope.pdf  used on input line 196.
 (pdftex.def)             Requested size: 202.09814pt x 113.81102pt.
-<figures/frequency_generator.pdf, id=2390, 304.13625pt x 165.61874pt>
+<figures/frequency_generator.pdf, id=2300, 304.13625pt x 165.61874pt>
 File: figures/frequency_generator.pdf Graphic file (type pdf)
 <use figures/frequency_generator.pdf>
 Package pdftex.def Info: figures/frequency_generator.pdf  used on input line 202.
 (pdftex.def)             Requested size: 208.9957pt x 113.81102pt.
 ) (./method/grating_characterization.tex
-<figures/packaged_membrane_picture.png, id=2391, 785.93625pt x 589.20125pt>
+<figures/packaged_membrane_picture.png, id=2301, 785.93625pt x 589.20125pt>
 File: figures/packaged_membrane_picture.png Graphic file (type png)
 <use figures/packaged_membrane_picture.png>
 Package pdftex.def Info: figures/packaged_membrane_picture.png  used on input line 8.
 (pdftex.def)             Requested size: 164.41711pt x 123.25941pt.
-<figures/membrane_picture.png, id=2392, 784.9325pt x 673.51625pt>
+<figures/membrane_picture.png, id=2302, 784.9325pt x 673.51625pt>
 File: figures/membrane_picture.png Graphic file (type png)
 <use figures/membrane_picture.png>
 Package pdftex.def Info: figures/membrane_picture.png  used on input line 14.
@@ -1232,7 +1238,7 @@ Package pdftex.def Info: figures/membrane_picture.png  used on input line 14.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/grating_sketch.pdf, id=2393, 580.1675pt x 143.53625pt>
+<figures/grating_sketch.pdf, id=2303, 580.1675pt x 143.53625pt>
 File: figures/grating_sketch.pdf Graphic file (type pdf)
 <use figures/grating_sketch.pdf>
 Package pdftex.def Info: figures/grating_sketch.pdf  used on input line 26.
@@ -1240,8 +1246,8 @@ Package pdftex.def Info: figures/grating_sketch.pdf  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[47 <./figures/scope.pdf> <./figures/frequency_generator.pdf>] [48 <./figures/packaged_membrane_picture.png> <./figures/membrane_picture.png> <./figures/grating_sketch.pdf>]
-<figures/xy_alignment_sketch.pdf, id=2421, 351.3125pt x 290.08376pt>
+[46 <./figures/scope.pdf> <./figures/frequency_generator.pdf>] [47 <./figures/packaged_membrane_picture.png> <./figures/membrane_picture.png> <./figures/grating_sketch.pdf>]
+<figures/xy_alignment_sketch.pdf, id=2331, 351.3125pt x 290.08376pt>
 File: figures/xy_alignment_sketch.pdf Graphic file (type pdf)
 <use figures/xy_alignment_sketch.pdf>
 Package pdftex.def Info: figures/xy_alignment_sketch.pdf  used on input line 51.
@@ -1250,38 +1256,38 @@ Package pdftex.def Info: figures/xy_alignment_sketch.pdf  used on input line 51.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49] [50 <./figures/xy_alignment_sketch.pdf>]
-<figures/arbitrary_gaussian.pdf, id=2431, 722.7pt x 505.89pt>
+[48] [49 <./figures/xy_alignment_sketch.pdf>]
+<figures/arbitrary_gaussian.pdf, id=2341, 722.7pt x 505.89pt>
 File: figures/arbitrary_gaussian.pdf Graphic file (type pdf)
 <use figures/arbitrary_gaussian.pdf>
 Package pdftex.def Info: figures/arbitrary_gaussian.pdf  used on input line 79.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/razor_blade_err_function.pdf, id=2432, 722.7pt x 505.89pt>
+<figures/razor_blade_err_function.pdf, id=2342, 722.7pt x 505.89pt>
 File: figures/razor_blade_err_function.pdf Graphic file (type pdf)
 <use figures/razor_blade_err_function.pdf>
 Package pdftex.def Info: figures/razor_blade_err_function.pdf  used on input line 84.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [51 <./figures/arbitrary_gaussian.pdf> <./figures/razor_blade_err_function.pdf
+ [50 <./figures/arbitrary_gaussian.pdf> <./figures/razor_blade_err_function.pdf
 
 pdfTeX warning: pdflatex (file ./figures/razor_blade_err_function.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/norm_ref_and_trans_M3.pdf, id=2503, 722.7pt x 505.89pt>
+<figures/norm_ref_and_trans_M3.pdf, id=2412, 722.7pt x 505.89pt>
 File: figures/norm_ref_and_trans_M3.pdf Graphic file (type pdf)
 <use figures/norm_ref_and_trans_M3.pdf>
 Package pdftex.def Info: figures/norm_ref_and_trans_M3.pdf  used on input line 103.
 (pdftex.def)             Requested size: 375.80544pt x 263.0643pt.
- [52 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex [53] [54] [55]
-<figures/bottom_with_alignement_mark.pdf, id=2559, 346.29375pt x 261.97874pt>
+ [51 <./figures/norm_ref_and_trans_M3.pdf>]) (./method/cavity_measurements.tex [52] [53] [54]
+<figures/bottom_with_alignement_mark.pdf, id=2469, 346.29375pt x 261.97874pt>
 File: figures/bottom_with_alignement_mark.pdf Graphic file (type pdf)
 <use figures/bottom_with_alignement_mark.pdf>
 Package pdftex.def Info: figures/bottom_with_alignement_mark.pdf  used on input line 29.
 (pdftex.def)             Requested size: 234.8775pt x 177.69547pt.
-<figures/length_scan_symmetric_lossless.pdf, id=2560, 722.7pt x 505.89pt>
+<figures/length_scan_symmetric_lossless.pdf, id=2470, 722.7pt x 505.89pt>
 File: figures/length_scan_symmetric_lossless.pdf Graphic file (type pdf)
 <use figures/length_scan_symmetric_lossless.pdf>
 Package pdftex.def Info: figures/length_scan_symmetric_lossless.pdf  used on input line 43.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/scope_screenshot.pdf, id=2561, 722.7pt x 505.89pt>
+<figures/scope_screenshot.pdf, id=2471, 722.7pt x 505.89pt>
 File: figures/scope_screenshot.pdf Graphic file (type pdf)
 <use figures/scope_screenshot.pdf>
 Package pdftex.def Info: figures/scope_screenshot.pdf  used on input line 48.
@@ -1290,8 +1296,8 @@ Package pdftex.def Info: figures/scope_screenshot.pdf  used on input line 48.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56 <./figures/bottom_with_alignement_mark.pdf>]
-<figures/HWHM_vs_time_20250266_452um.pdf, id=2569, 722.7pt x 505.89pt>
+[55 <./figures/bottom_with_alignement_mark.pdf>]
+<figures/HWHM_vs_time_20250266_452um.pdf, id=2479, 722.7pt x 505.89pt>
 File: figures/HWHM_vs_time_20250266_452um.pdf Graphic file (type pdf)
 <use figures/HWHM_vs_time_20250266_452um.pdf>
 Package pdftex.def Info: figures/HWHM_vs_time_20250266_452um.pdf  used on input line 60.
@@ -1300,49 +1306,49 @@ Package pdftex.def Info: figures/HWHM_vs_time_20250266_452um.pdf  used on input 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[57 <./figures/length_scan_symmetric_lossless.pdf> <./figures/scope_screenshot.pdf
+[56 <./figures/length_scan_symmetric_lossless.pdf> <./figures/scope_screenshot.pdf
 
 pdfTeX warning: pdflatex (file ./figures/scope_screenshot.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [58 <./figures/HWHM_vs_time_20250266_452um.pdf>]
+>] [57 <./figures/HWHM_vs_time_20250266_452um.pdf>]
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 59 undefined on input line 73.
+LaTeX Warning: Reference `eq:FSR_formula' on page 58 undefined on input line 73.
 
-<figures/length_from_fsr_example_100um.pdf, id=2688, 722.7pt x 505.89pt>
+<figures/length_from_fsr_example_100um.pdf, id=2598, 722.7pt x 505.89pt>
 File: figures/length_from_fsr_example_100um.pdf Graphic file (type pdf)
 <use figures/length_from_fsr_example_100um.pdf>
 Package pdftex.def Info: figures/length_from_fsr_example_100um.pdf  used on input line 86.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/length_from_fsr_example_40um.pdf, id=2689, 722.7pt x 505.89pt>
+<figures/length_from_fsr_example_40um.pdf, id=2599, 722.7pt x 505.89pt>
 File: figures/length_from_fsr_example_40um.pdf Graphic file (type pdf)
 <use figures/length_from_fsr_example_40um.pdf>
 Package pdftex.def Info: figures/length_from_fsr_example_40um.pdf  used on input line 91.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 59 undefined on input line 95.
+LaTeX Warning: Reference `eq:FSR_formula' on page 58 undefined on input line 95.
 
 
-LaTeX Warning: Reference `eq:FSR_formula' on page 59 undefined on input line 95.
+LaTeX Warning: Reference `eq:FSR_formula' on page 58 undefined on input line 95.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[59]
-<figures/raw_data_cavity_trans.pdf, id=2693, 794.97pt x 505.89pt>
+[58]
+<figures/raw_data_cavity_trans.pdf, id=2603, 794.97pt x 505.89pt>
 File: figures/raw_data_cavity_trans.pdf Graphic file (type pdf)
 <use figures/raw_data_cavity_trans.pdf>
 Package pdftex.def Info: figures/raw_data_cavity_trans.pdf  used on input line 113.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_incident_light_cavity.pdf, id=2694, 794.97pt x 505.89pt>
+<figures/raw_data_incident_light_cavity.pdf, id=2604, 794.97pt x 505.89pt>
 File: figures/raw_data_incident_light_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_incident_light_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_incident_light_cavity.pdf  used on input line 118.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_transmission_no_cavity.pdf, id=2695, 794.97pt x 505.89pt>
+<figures/raw_data_transmission_no_cavity.pdf, id=2605, 794.97pt x 505.89pt>
 File: figures/raw_data_transmission_no_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_transmission_no_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_transmission_no_cavity.pdf  used on input line 123.
 (pdftex.def)             Requested size: 230.18253pt x 146.48047pt.
-<figures/raw_data_incident_light_no_cavity.pdf, id=2696, 794.97pt x 505.89pt>
+<figures/raw_data_incident_light_no_cavity.pdf, id=2606, 794.97pt x 505.89pt>
 File: figures/raw_data_incident_light_no_cavity.pdf Graphic file (type pdf)
 <use figures/raw_data_incident_light_no_cavity.pdf>
 Package pdftex.def Info: figures/raw_data_incident_light_no_cavity.pdf  used on input line 128.
@@ -1351,7 +1357,7 @@ Package pdftex.def Info: figures/raw_data_incident_light_no_cavity.pdf  used on 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/raw_data_normalized_transmission.pdf, id=2697, 794.97pt x 505.89pt>
+<figures/raw_data_normalized_transmission.pdf, id=2607, 794.97pt x 505.89pt>
 File: figures/raw_data_normalized_transmission.pdf Graphic file (type pdf)
 <use figures/raw_data_normalized_transmission.pdf>
 Package pdftex.def Info: figures/raw_data_normalized_transmission.pdf  used on input line 145.
@@ -1359,10 +1365,10 @@ Package pdftex.def Info: figures/raw_data_normalized_transmission.pdf  used on i
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[60 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
+[59 <./figures/length_from_fsr_example_100um.pdf> <./figures/length_from_fsr_example_40um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/length_from_fsr_example_40um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [61 <./figures/raw_data_cavity_trans.pdf> <./figures/raw_data_incident_light_cavity.pdf
+>] [60 <./figures/raw_data_cavity_trans.pdf> <./figures/raw_data_incident_light_cavity.pdf
 
 pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/raw_data_transmission_no_cavity.pdf
@@ -1372,12 +1378,12 @@ pdfTeX warning: pdflatex (file ./figures/raw_data_transmission_no_cavity.pdf): P
 
 pdfTeX warning: pdflatex (file ./figures/raw_data_incident_light_no_cavity.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/pinhole_sketch.pdf, id=2962, 439.6425pt x 346.29375pt>
+<figures/pinhole_sketch.pdf, id=2872, 439.6425pt x 346.29375pt>
 File: figures/pinhole_sketch.pdf Graphic file (type pdf)
 <use figures/pinhole_sketch.pdf>
 Package pdftex.def Info: figures/pinhole_sketch.pdf  used on input line 158.
 (pdftex.def)             Requested size: 216.74155pt x 170.71652pt.
-<figures/pinhole_picture.pdf, id=2963, 363.3575pt x 348.30125pt>
+<figures/pinhole_picture.pdf, id=2873, 363.3575pt x 348.30125pt>
 File: figures/pinhole_picture.pdf Graphic file (type pdf)
 <use figures/pinhole_picture.pdf>
 Package pdftex.def Info: figures/pinhole_picture.pdf  used on input line 165.
@@ -1386,7 +1392,7 @@ Package pdftex.def Info: figures/pinhole_picture.pdf  used on input line 165.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/pinhole_position_on_gaussian.pdf, id=2964, 722.7pt x 505.89pt>
+<figures/pinhole_position_on_gaussian.pdf, id=2874, 722.7pt x 505.89pt>
 File: figures/pinhole_position_on_gaussian.pdf Graphic file (type pdf)
 <use figures/pinhole_position_on_gaussian.pdf>
 Package pdftex.def Info: figures/pinhole_position_on_gaussian.pdf  used on input line 177.
@@ -1394,40 +1400,40 @@ Package pdftex.def Info: figures/pinhole_position_on_gaussian.pdf  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[62 <./figures/raw_data_normalized_transmission.pdf>]
+[61 <./figures/raw_data_normalized_transmission.pdf>]
 
-LaTeX Warning: Text page 63 contains only floats.
+LaTeX Warning: Text page 62 contains only floats.
 
-[63 <./figures/pinhole_sketch.pdf> <./figures/pinhole_picture.pdf> <./figures/pinhole_position_on_gaussian.pdf>] [64]
-<figures/parallelism_plot.pdf, id=3060, 722.7pt x 505.89pt>
+[62 <./figures/pinhole_sketch.pdf> <./figures/pinhole_picture.pdf> <./figures/pinhole_position_on_gaussian.pdf>] [63]
+<figures/parallelism_plot.pdf, id=2970, 722.7pt x 505.89pt>
 File: figures/parallelism_plot.pdf Graphic file (type pdf)
 <use figures/parallelism_plot.pdf>
 Package pdftex.def Info: figures/parallelism_plot.pdf  used on input line 214.
 (pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-) [65 <./figures/parallelism_plot.pdf>] (./results/simulations.tex) [66
+) [64 <./figures/parallelism_plot.pdf>] (./results/simulations.tex) [65
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./results/experimental_results.tex
-<figures/results/60um_M5_FSR_fit.pdf, id=3127, 722.7pt x 505.89pt>
+<figures/results/60um_M5_FSR_fit.pdf, id=3037, 722.7pt x 505.89pt>
 File: figures/results/60um_M5_FSR_fit.pdf Graphic file (type pdf)
 <use figures/results/60um_M5_FSR_fit.pdf>
 Package pdftex.def Info: figures/results/60um_M5_FSR_fit.pdf  used on input line 17.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/220um_M5_FSR_fit.pdf, id=3128, 722.7pt x 505.89pt>
+<figures/results/220um_M5_FSR_fit.pdf, id=3038, 722.7pt x 505.89pt>
 File: figures/results/220um_M5_FSR_fit.pdf Graphic file (type pdf)
 <use figures/results/220um_M5_FSR_fit.pdf>
 Package pdftex.def Info: figures/results/220um_M5_FSR_fit.pdf  used on input line 23.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/60um_M5_fit_1.pdf, id=3129, 722.7pt x 505.89pt>
+<figures/results/60um_M5_fit_1.pdf, id=3039, 722.7pt x 505.89pt>
 File: figures/results/60um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/60um_M5_fit_1.pdf>
 Package pdftex.def Info: figures/results/60um_M5_fit_1.pdf  used on input line 33.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/220um_M5_fit_4.pdf, id=3130, 722.7pt x 505.89pt>
+<figures/results/220um_M5_fit_4.pdf, id=3040, 722.7pt x 505.89pt>
 File: figures/results/220um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/220um_M5_fit_4.pdf>
 Package pdftex.def Info: figures/results/220um_M5_fit_4.pdf  used on input line 39.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/HWHM_vs_cavity_length_single_fano.pdf, id=3131, 722.7pt x 505.89pt>
+<figures/results/HWHM_vs_cavity_length_single_fano.pdf, id=3041, 722.7pt x 505.89pt>
 File: figures/results/HWHM_vs_cavity_length_single_fano.pdf Graphic file (type pdf)
 <use figures/results/HWHM_vs_cavity_length_single_fano.pdf>
 Package pdftex.def Info: figures/results/HWHM_vs_cavity_length_single_fano.pdf  used on input line 47.
@@ -1436,7 +1442,7 @@ Package pdftex.def Info: figures/results/HWHM_vs_cavity_length_single_fano.pdf  
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67 <./figures/results/60um_M5_FSR_fit.pdf> <./figures/results/220um_M5_FSR_fit.pdf
+[66 <./figures/results/60um_M5_FSR_fit.pdf> <./figures/results/220um_M5_FSR_fit.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/220um_M5_FSR_fit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/60um_M5_fit_1.pdf
@@ -1446,39 +1452,39 @@ pdfTeX warning: pdflatex (file ./figures/results/60um_M5_fit_1.pdf): PDF inclusi
 
 pdfTeX warning: pdflatex (file ./figures/results/220um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/238um_long_scan_sim_comparison.pdf, id=3319, 722.7pt x 505.89pt>
+<figures/results/238um_long_scan_sim_comparison.pdf, id=3229, 722.7pt x 505.89pt>
 File: figures/results/238um_long_scan_sim_comparison.pdf Graphic file (type pdf)
 <use figures/results/238um_long_scan_sim_comparison.pdf>
 Package pdftex.def Info: figures/results/238um_long_scan_sim_comparison.pdf  used on input line 65.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/238um_long_scan_fit.pdf, id=3320, 722.7pt x 505.89pt>
+<figures/results/238um_long_scan_fit.pdf, id=3230, 722.7pt x 505.89pt>
 File: figures/results/238um_long_scan_fit.pdf Graphic file (type pdf)
 <use figures/results/238um_long_scan_fit.pdf>
 Package pdftex.def Info: figures/results/238um_long_scan_fit.pdf  used on input line 71.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [68 <./figures/results/HWHM_vs_cavity_length_single_fano.pdf> <./figures/results/238um_long_scan_sim_comparison.pdf
+ [67 <./figures/results/HWHM_vs_cavity_length_single_fano.pdf> <./figures/results/238um_long_scan_sim_comparison.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/238um_long_scan_sim_comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/238um_long_scan_fit.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/238um_long_scan_fit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/129um_long_scan_sim_comparison.pdf, id=3444, 722.7pt x 505.89pt>
+<figures/results/129um_long_scan_sim_comparison.pdf, id=3353, 722.7pt x 505.89pt>
 File: figures/results/129um_long_scan_sim_comparison.pdf Graphic file (type pdf)
 <use figures/results/129um_long_scan_sim_comparison.pdf>
 Package pdftex.def Info: figures/results/129um_long_scan_sim_comparison.pdf  used on input line 101.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/129um_long_scan_fit.pdf, id=3445, 722.7pt x 505.89pt>
+<figures/results/129um_long_scan_fit.pdf, id=3354, 722.7pt x 505.89pt>
 File: figures/results/129um_long_scan_fit.pdf Graphic file (type pdf)
 <use figures/results/129um_long_scan_fit.pdf>
 Package pdftex.def Info: figures/results/129um_long_scan_fit.pdf  used on input line 107.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/34um_long_scan_sim_comparison.pdf, id=3446, 722.7pt x 505.89pt>
+<figures/results/34um_long_scan_sim_comparison.pdf, id=3355, 722.7pt x 505.89pt>
 File: figures/results/34um_long_scan_sim_comparison.pdf Graphic file (type pdf)
 <use figures/results/34um_long_scan_sim_comparison.pdf>
 Package pdftex.def Info: figures/results/34um_long_scan_sim_comparison.pdf  used on input line 136.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/34um_long_scan_fit.pdf, id=3447, 722.7pt x 505.89pt>
+<figures/results/34um_long_scan_fit.pdf, id=3356, 722.7pt x 505.89pt>
 File: figures/results/34um_long_scan_fit.pdf Graphic file (type pdf)
 <use figures/results/34um_long_scan_fit.pdf>
 Package pdftex.def Info: figures/results/34um_long_scan_fit.pdf  used on input line 142.
@@ -1487,26 +1493,26 @@ Package pdftex.def Info: figures/results/34um_long_scan_fit.pdf  used on input l
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69 <./figures/results/129um_long_scan_sim_comparison.pdf> <./figures/results/129um_long_scan_fit.pdf
+[68 <./figures/results/129um_long_scan_sim_comparison.pdf> <./figures/results/129um_long_scan_fit.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/129um_long_scan_fit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf, id=3535, 722.7pt x 505.89pt>
+<figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf, id=3444, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf>
 Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf  used on input line 162.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf, id=3536, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf, id=3445, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf>
 Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf  used on input line 168.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/30um_M3:M5_fit_4.pdf, id=3537, 722.7pt x 505.89pt>
+<figures/results/double fano fits/30um_M3:M5_fit_4.pdf, id=3446, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/30um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_fit_4.pdf>
 Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_4.pdf  used on input line 178.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_fit_1.pdf, id=3538, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_fit_1.pdf, id=3447, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_1.pdf>
 Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_1.pdf  used on input line 184.
@@ -1515,7 +1521,7 @@ Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_1.pdf 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf, id=3539, 722.7pt x 505.89pt>
+<figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf, id=3448, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf>
 Package pdftex.def Info: figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf  used on input line 194.
@@ -1523,7 +1529,7 @@ Package pdftex.def Info: figures/results/double fano fits/HWHM_vs_cavity_length_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf, id=3540, 722.7pt x 505.89pt>
+<figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf, id=3449, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf>
 Package pdftex.def Info: figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf  used on input line 203.
@@ -1531,15 +1537,7 @@ Package pdftex.def Info: figures/results/double fano fits/HWHM_vs_cavity_length_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf, id=3541, 722.7pt x 505.89pt>
-File: figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf Graphic file (type pdf)
-<use figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf>
-Package pdftex.def Info: figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf  used on input line 211.
-(pdftex.def)             Requested size: 328.82707pt x 230.1803pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[70 <./figures/results/34um_long_scan_sim_comparison.pdf> <./figures/results/34um_long_scan_fit.pdf
+[69 <./figures/results/34um_long_scan_sim_comparison.pdf> <./figures/results/34um_long_scan_fit.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/34um_long_scan_fit.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
@@ -1548,7 +1546,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/30um_M3:M5_FSR
 > <./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [71 <./figures/results/double fano fits/30um_M3:M5_fit_4.pdf> <./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
+>]) [70 <./figures/results/double fano fits/30um_M3:M5_fit_4.pdf> <./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
@@ -1559,13 +1557,7 @@ Overfull \hbox (27.59802pt too wide) in paragraph at lines 7--7
 |[]\T1/cmr/bx/n/17.28 (-20) Noise re-duc-tion - cou-pled/uncoupled me-chan-i-cal/acoustic
  []
 
-)
-Overfull \vbox (68.01323pt too high) has occurred while \output is active []
-
- [72 <./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf> <./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
-
-pdfTeX warning: pdflatex (file ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./outlook.tex) [73] (./conclussion_and_outlook.tex) [74]
+) [71 <./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf>] (./outlook.tex) [72] (./conclussion_and_outlook.tex) [73]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 103.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1579,32 +1571,32 @@ Overfull \hbox (0.295pt too wide) in paragraph at lines 103--103
 []\T1/cmr/m/n/14.4 (-20) Andrew T. Land et al. ``Sub-ppm Nanomechanical Absorption Spectroscopy
  []
 
-[75]
+[74]
 Overfull \hbox (9.5144pt too wide) in paragraph at lines 103--103
 []\T1/cmr/m/n/14.4 (-20) Mitul Dey Chowd-hury, Aman R. Agrawal, and Dalziel J. Wil-son. ``Membrane-
  []
 
-[76]
+[75]
 Overfull \hbox (28.42435pt too wide) in paragraph at lines 103--103
 \T1/cmr/m/it/14.4 (-20) tiv-ity pho-tonic crys-tal mem-brane\T1/cmr/m/n/14.4 (-20) . 2022. arXiv: $\T1/cmtt/m/n/14.4 2211 . 10485$ [physics.optics]\T1/cmr/m/n/14.4 (-20) .
  []
 
-[77] [78]
+[76] [77]
 Overfull \hbox (18.30638pt too wide) in paragraph at lines 103--103
 []\T1/cmr/m/sc/14.4 (-20) url\T1/cmr/m/n/14.4 (-20) : $\T1/cmtt/m/n/14.4 https : / / www . edmundoptics . com / knowledge -[] center / application -[]
  []
 
-[79] (./Appendix.tex
+[78] (./Appendix.tex
 File: figures/sim_single_vs_broadband_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_10um.pdf  used on input line 8.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_30um.pdf, id=3965, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_30um.pdf, id=3827, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_30um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_30um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_30um.pdf  used on input line 13.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_90um.pdf, id=3966, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_90um.pdf, id=3828, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_90um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_90um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_90um.pdf  used on input line 18.
@@ -1613,7 +1605,7 @@ File: figures/sim_single_vs_broadband_270um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_270um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_270um.pdf  used on input line 23.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_broadband_810um.pdf, id=3967, 722.7pt x 505.89pt>
+<figures/sim_single_vs_broadband_810um.pdf, id=3829, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_broadband_810um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_broadband_810um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_broadband_810um.pdf  used on input line 27.
@@ -1622,12 +1614,12 @@ File: figures/sim_single_vs_double_10um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_10um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_10um.pdf  used on input line 37.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_30um.pdf, id=3968, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_30um.pdf, id=3830, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_30um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_30um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_30um.pdf  used on input line 42.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_90um.pdf, id=3969, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_90um.pdf, id=3831, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_90um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_90um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_90um.pdf  used on input line 47.
@@ -1636,87 +1628,79 @@ File: figures/sim_single_vs_double_270um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_270um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_270um.pdf  used on input line 52.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/sim_single_vs_double_810um.pdf, id=3970, 722.7pt x 505.89pt>
+<figures/sim_single_vs_double_810um.pdf, id=3832, 722.7pt x 505.89pt>
 File: figures/sim_single_vs_double_810um.pdf Graphic file (type pdf)
 <use figures/sim_single_vs_double_810um.pdf>
 Package pdftex.def Info: figures/sim_single_vs_double_810um.pdf  used on input line 56.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [80 <./figures/sim_single_vs_broadband_30um.pdf> <./figures/sim_single_vs_broadband_90um.pdf
+ [79 <./figures/sim_single_vs_broadband_30um.pdf> <./figures/sim_single_vs_broadband_90um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_90um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/sim_single_vs_broadband_810um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_broadband_810um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [81 <./figures/sim_single_vs_double_30um.pdf> <./figures/sim_single_vs_double_90um.pdf
+>] [80 <./figures/sim_single_vs_double_30um.pdf> <./figures/sim_single_vs_double_90um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_90um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/sim_single_vs_double_810um.pdf
 
 pdfTeX warning: pdflatex (file ./figures/sim_single_vs_double_810um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/double_01_percent_loss_30um.pdf, id=4329, 722.7pt x 505.89pt>
-File: figures/double_01_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_01_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_01_percent_loss_30um.pdf  used on input line 67.
+File: figures/double_1percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_1percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_1percent_loss_30um.pdf  used on input line 67.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-File: figures/double_02_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_02_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_02_percent_loss_30um.pdf  used on input line 72.
+<figures/double_2percent_loss_30um.pdf, id=4187, 722.7pt x 505.89pt>
+File: figures/double_2percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_2percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_2percent_loss_30um.pdf  used on input line 72.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/double_04_percent_loss_30um.pdf, id=4330, 722.7pt x 505.89pt>
-File: figures/double_04_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_04_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_04_percent_loss_30um.pdf  used on input line 77.
+<figures/double_4percent_loss_30um.pdf, id=4188, 722.7pt x 505.89pt>
+File: figures/double_4percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_4percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_4percent_loss_30um.pdf  used on input line 77.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/double_08_percent_loss_30um.pdf, id=4331, 722.7pt x 505.89pt>
-File: figures/double_08_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_08_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_08_percent_loss_30um.pdf  used on input line 82.
+File: figures/double_8percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_8percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_8percent_loss_30um.pdf  used on input line 82.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/double_16_percent_loss_30um.pdf, id=4332, 722.7pt x 505.89pt>
-File: figures/double_16_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_16_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_16_percent_loss_30um.pdf  used on input line 87.
+<figures/double_16percent_loss_30um.pdf, id=4189, 722.7pt x 505.89pt>
+File: figures/double_16percent_loss_30um.pdf Graphic file (type pdf)
+<use figures/double_16percent_loss_30um.pdf>
+Package pdftex.def Info: figures/double_16percent_loss_30um.pdf  used on input line 87.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-File: figures/double_32_percent_loss_30um.pdf Graphic file (type pdf)
-<use figures/double_32_percent_loss_30um.pdf>
-Package pdftex.def Info: figures/double_32_percent_loss_30um.pdf  used on input line 92.
-(pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/380um_off_res_fabry_perot.pdf, id=4333, 722.7pt x 505.89pt>
+<figures/results/single fano fits/380um_off_res_fabry_perot.pdf, id=4190, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/380um_off_res_fabry_perot.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/380um_off_res_fabry_perot.pdf>
-Package pdftex.def Info: figures/results/single fano fits/380um_off_res_fabry_perot.pdf  used on input line 105.
+Package pdftex.def Info: figures/results/single fano fits/380um_off_res_fabry_perot.pdf  used on input line 100.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/220um_off_res_fabry_perot.pdf, id=4334, 722.7pt x 505.89pt>
+<figures/results/single fano fits/220um_off_res_fabry_perot.pdf, id=4191, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/220um_off_res_fabry_perot.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/220um_off_res_fabry_perot.pdf>
-Package pdftex.def Info: figures/results/single fano fits/220um_off_res_fabry_perot.pdf  used on input line 110.
+Package pdftex.def Info: figures/results/single fano fits/220um_off_res_fabry_perot.pdf  used on input line 105.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/120um_off_res_fabry_perot.pdf, id=4335, 722.7pt x 505.89pt>
+<figures/results/single fano fits/120um_off_res_fabry_perot.pdf, id=4192, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/120um_off_res_fabry_perot.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/120um_off_res_fabry_perot.pdf>
-Package pdftex.def Info: figures/results/single fano fits/120um_off_res_fabry_perot.pdf  used on input line 115.
+Package pdftex.def Info: figures/results/single fano fits/120um_off_res_fabry_perot.pdf  used on input line 110.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/60um_off_res_fabry_perot.pdf, id=4336, 722.7pt x 505.89pt>
+<figures/results/single fano fits/60um_off_res_fabry_perot.pdf, id=4193, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/60um_off_res_fabry_perot.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/60um_off_res_fabry_perot.pdf>
-Package pdftex.def Info: figures/results/single fano fits/60um_off_res_fabry_perot.pdf  used on input line 120.
+Package pdftex.def Info: figures/results/single fano fits/60um_off_res_fabry_perot.pdf  used on input line 115.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/5um_off_res_fabry_perot.pdf, id=4337, 722.7pt x 505.89pt>
+<figures/results/single fano fits/5um_off_res_fabry_perot.pdf, id=4194, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/5um_off_res_fabry_perot.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/5um_off_res_fabry_perot.pdf>
-Package pdftex.def Info: figures/results/single fano fits/5um_off_res_fabry_perot.pdf  used on input line 125.
+Package pdftex.def Info: figures/results/single fano fits/5um_off_res_fabry_perot.pdf  used on input line 120.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [82 <./figures/double_01_percent_loss_30um.pdf> <./figures/double_04_percent_loss_30um.pdf
+ [81 <./figures/double_2percent_loss_30um.pdf> <./figures/double_4percent_loss_30um.pdf
 
-pdfTeX warning: pdflatex (file ./figures/double_04_percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/double_08_percent_loss_30um.pdf
+pdfTeX warning: pdflatex (file ./figures/double_4percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/double_16percent_loss_30um.pdf
 
-pdfTeX warning: pdflatex (file ./figures/double_08_percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/double_16_percent_loss_30um.pdf
-
-pdfTeX warning: pdflatex (file ./figures/double_16_percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [83 <./figures/results/single fano fits/380um_off_res_fabry_perot.pdf> <./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+pdfTeX warning: pdflatex (file ./figures/double_16percent_loss_30um.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [82 <./figures/results/single fano fits/380um_off_res_fabry_perot.pdf> <./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
@@ -1729,27 +1713,27 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/60um_off_res_f
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/single fano fits/380um_M5_fit_1.pdf, id=4795, 722.7pt x 505.89pt>
+<figures/results/single fano fits/380um_M5_fit_1.pdf, id=4581, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/380um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/380um_M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_1.pdf  used on input line 137.
+Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_1.pdf  used on input line 132.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/380um_M5_fit_2.pdf, id=4796, 722.7pt x 505.89pt>
+<figures/results/single fano fits/380um_M5_fit_2.pdf, id=4582, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/380um_M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/380um_M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_2.pdf  used on input line 142.
+Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_2.pdf  used on input line 137.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/380um_M5_fit_3.pdf, id=4797, 722.7pt x 505.89pt>
+<figures/results/single fano fits/380um_M5_fit_3.pdf, id=4583, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/380um_M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/380um_M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_3.pdf  used on input line 147.
+Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_3.pdf  used on input line 142.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/380um_M5_fit_4.pdf, id=4798, 722.7pt x 505.89pt>
+<figures/results/single fano fits/380um_M5_fit_4.pdf, id=4584, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/380um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/380um_M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_4.pdf  used on input line 152.
+Package pdftex.def Info: figures/results/single fano fits/380um_M5_fit_4.pdf  used on input line 147.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [84
+ [83
 
  <./figures/results/single fano fits/380um_M5_fit_1.pdf> <./figures/results/single fano fits/380um_M5_fit_2.pdf
 
@@ -1761,27 +1745,27 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/380um_M5_fit_3
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/380um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/single fano fits/220um_M5_fit_1.pdf, id=4993, 722.7pt x 505.89pt>
+<figures/results/single fano fits/220um_M5_fit_1.pdf, id=4779, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/220um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/220um_M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_1.pdf  used on input line 164.
+Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_1.pdf  used on input line 159.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/220um_M5_fit_2.pdf, id=4994, 722.7pt x 505.89pt>
+<figures/results/single fano fits/220um_M5_fit_2.pdf, id=4780, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/220um_M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/220um_M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_2.pdf  used on input line 169.
+Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_2.pdf  used on input line 164.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/220um_M5_fit_3.pdf, id=4995, 722.7pt x 505.89pt>
+<figures/results/single fano fits/220um_M5_fit_3.pdf, id=4781, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/220um_M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/220um_M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_3.pdf  used on input line 174.
+Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_3.pdf  used on input line 169.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/220um_M5_fit_4.pdf, id=4996, 722.7pt x 505.89pt>
+<figures/results/single fano fits/220um_M5_fit_4.pdf, id=4782, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/220um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/220um_M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_4.pdf  used on input line 179.
+Package pdftex.def Info: figures/results/single fano fits/220um_M5_fit_4.pdf  used on input line 174.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [85
+ [84
 
  <./figures/results/single fano fits/220um_M5_fit_1.pdf> <./figures/results/single fano fits/220um_M5_fit_2.pdf
 
@@ -1793,22 +1777,22 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/220um_M5_fit_3
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/220um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/single fano fits/120um_M5_fit_1.pdf, id=5192, 722.7pt x 505.89pt>
+<figures/results/single fano fits/120um_M5_fit_1.pdf, id=4978, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/120um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/120um_M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_1.pdf  used on input line 191.
+Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_1.pdf  used on input line 186.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/120um_M5_fit_2.pdf, id=5193, 722.7pt x 505.89pt>
+<figures/results/single fano fits/120um_M5_fit_2.pdf, id=4979, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/120um_M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/120um_M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_2.pdf  used on input line 196.
+Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_2.pdf  used on input line 191.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/120um_M5_fit_3.pdf, id=5194, 722.7pt x 505.89pt>
+<figures/results/single fano fits/120um_M5_fit_3.pdf, id=4980, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/120um_M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/120um_M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_3.pdf  used on input line 201.
+Package pdftex.def Info: figures/results/single fano fits/120um_M5_fit_3.pdf  used on input line 196.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [86
+ [85
 
  <./figures/results/single fano fits/120um_M5_fit_1.pdf> <./figures/results/single fano fits/120um_M5_fit_2.pdf
 
@@ -1817,27 +1801,27 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/120um_M5_fit_2
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/120um_M5_fit_3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/single fano fits/60um_M5_fit_1.pdf, id=5342, 722.7pt x 505.89pt>
+<figures/results/single fano fits/60um_M5_fit_1.pdf, id=5127, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/60um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/60um_M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_1.pdf  used on input line 213.
+Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_1.pdf  used on input line 208.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/60um_M5_fit_2.pdf, id=5343, 722.7pt x 505.89pt>
+<figures/results/single fano fits/60um_M5_fit_2.pdf, id=5128, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/60um_M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/60um_M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_2.pdf  used on input line 218.
+Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_2.pdf  used on input line 213.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/60um_M5_fit_3.pdf, id=5344, 722.7pt x 505.89pt>
+<figures/results/single fano fits/60um_M5_fit_3.pdf, id=5129, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/60um_M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/60um_M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_3.pdf  used on input line 223.
+Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_3.pdf  used on input line 218.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/60um_M5_fit_4.pdf, id=5345, 722.7pt x 505.89pt>
+<figures/results/single fano fits/60um_M5_fit_4.pdf, id=5130, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/60um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/60um_M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_4.pdf  used on input line 228.
+Package pdftex.def Info: figures/results/single fano fits/60um_M5_fit_4.pdf  used on input line 223.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [87
+ [86
 
  <./figures/results/single fano fits/60um_M5_fit_1.pdf> <./figures/results/single fano fits/60um_M5_fit_2.pdf
 
@@ -1849,27 +1833,27 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/60um_M5_fit_3.
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/60um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/single fano fits/5um_M5_fit_1.pdf, id=5542, 722.7pt x 505.89pt>
+<figures/results/single fano fits/5um_M5_fit_1.pdf, id=5327, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/5um_M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/5um_M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_1.pdf  used on input line 240.
+Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_1.pdf  used on input line 235.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/5um_M5_fit_2.pdf, id=5543, 722.7pt x 505.89pt>
+<figures/results/single fano fits/5um_M5_fit_2.pdf, id=5328, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/5um_M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/5um_M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_2.pdf  used on input line 245.
+Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_2.pdf  used on input line 240.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/5um_M5_fit_3.pdf, id=5544, 722.7pt x 505.89pt>
+<figures/results/single fano fits/5um_M5_fit_3.pdf, id=5329, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/5um_M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/5um_M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_3.pdf  used on input line 250.
+Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_3.pdf  used on input line 245.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/single fano fits/5um_M5_fit_4.pdf, id=5545, 722.7pt x 505.89pt>
+<figures/results/single fano fits/5um_M5_fit_4.pdf, id=5330, 722.7pt x 505.89pt>
 File: figures/results/single fano fits/5um_M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/single fano fits/5um_M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_4.pdf  used on input line 255.
+Package pdftex.def Info: figures/results/single fano fits/5um_M5_fit_4.pdf  used on input line 250.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [88
+ [87
 
  <./figures/results/single fano fits/5um_M5_fit_1.pdf> <./figures/results/single fano fits/5um_M5_fit_2.pdf
 
@@ -1881,44 +1865,44 @@ pdfTeX warning: pdflatex (file ./figures/results/single fano fits/5um_M5_fit_3.p
 
 pdfTeX warning: pdflatex (file ./figures/results/single fano fits/5um_M5_fit_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf, id=5742, 722.7pt x 505.89pt>
+<figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf, id=5528, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf  used on input line 271.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf  used on input line 266.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 File: figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf  used on input line 276.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf  used on input line 271.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf, id=5743, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf, id=5529, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf  used on input line 281.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf  used on input line 276.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf, id=5744, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf, id=5530, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf  used on input line 286.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf  used on input line 281.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf, id=5745, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf, id=5531, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf  used on input line 291.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf  used on input line 286.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf, id=5746, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf, id=5532, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf  used on input line 296.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf  used on input line 291.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 File: figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf  used on input line 304.
+Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf  used on input line 299.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[89
+[88
 
  <./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf> <./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
 
@@ -1932,33 +1916,33 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/120um_M3:M5_FS
 > <./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [90]
-<figures/results/double fano fits/1000um_M3:M5_fit_1.pdf, id=5976, 722.7pt x 505.89pt>
+>] [89]
+<figures/results/double fano fits/1000um_M3:M5_fit_1.pdf, id=5761, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_1.pdf  used on input line 316.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_1.pdf  used on input line 311.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/1000um_M3:M5_fit_2.pdf, id=5977, 722.7pt x 505.89pt>
+<figures/results/double fano fits/1000um_M3:M5_fit_2.pdf, id=5762, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_2.pdf  used on input line 321.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_2.pdf  used on input line 316.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/1000um_M3:M5_fit_3.pdf, id=5978, 722.7pt x 505.89pt>
+<figures/results/double fano fits/1000um_M3:M5_fit_3.pdf, id=5763, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_3.pdf  used on input line 326.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_3.pdf  used on input line 321.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/1000um_M3:M5_fit_4.pdf, id=5979, 722.7pt x 505.89pt>
+<figures/results/double fano fits/1000um_M3:M5_fit_4.pdf, id=5764, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_4.pdf  used on input line 331.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_4.pdf  used on input line 326.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/1000um_M3:M5_fit_5.pdf, id=5980, 722.7pt x 505.89pt>
+<figures/results/double fano fits/1000um_M3:M5_fit_5.pdf, id=5765, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/1000um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/1000um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_5.pdf  used on input line 336.
+Package pdftex.def Info: figures/results/double fano fits/1000um_M3:M5_fit_5.pdf  used on input line 331.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [91
+ [90
 
  <./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
 
@@ -1975,29 +1959,29 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/1000um_M3:M5_f
 >]
 File: figures/results/double fano fits/550um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_1.pdf  used on input line 348.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_1.pdf  used on input line 343.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_fit_2.pdf, id=6215, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_fit_2.pdf, id=6001, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_2.pdf  used on input line 353.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_2.pdf  used on input line 348.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_fit_3.pdf, id=6216, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_fit_3.pdf, id=6002, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_3.pdf  used on input line 358.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_3.pdf  used on input line 353.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_fit_4.pdf, id=6217, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_fit_4.pdf, id=6003, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_4.pdf  used on input line 363.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_4.pdf  used on input line 358.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/550um_M3:M5_fit_5.pdf, id=6218, 722.7pt x 505.89pt>
+<figures/results/double fano fits/550um_M3:M5_fit_5.pdf, id=6004, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/550um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/550um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_5.pdf  used on input line 368.
+Package pdftex.def Info: figures/results/double fano fits/550um_M3:M5_fit_5.pdf  used on input line 363.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [92
+ [91
 
  <./figures/results/double fano fits/550um_M3:M5_fit_2.pdf> <./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
 
@@ -2009,37 +1993,37 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/550um_M3:M5_fi
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/320um_M3:M5_fit_1.pdf, id=6410, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_1.pdf, id=6196, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_1.pdf  used on input line 380.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_1.pdf  used on input line 375.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_fit_2.pdf, id=6411, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_2.pdf, id=6197, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_2.pdf  used on input line 385.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_2.pdf  used on input line 380.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_fit_3.pdf, id=6412, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_3.pdf, id=6198, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_3.pdf  used on input line 390.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_3.pdf  used on input line 385.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_fit_4.pdf, id=6413, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_4.pdf, id=6199, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_4.pdf  used on input line 395.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_4.pdf  used on input line 390.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_fit_5.pdf, id=6414, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_5.pdf, id=6200, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_5.pdf  used on input line 400.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_5.pdf  used on input line 395.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/320um_M3:M5_fit_6.pdf, id=6415, 722.7pt x 505.89pt>
+<figures/results/double fano fits/320um_M3:M5_fit_6.pdf, id=6201, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/320um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/320um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_6.pdf  used on input line 405.
+Package pdftex.def Info: figures/results/double fano fits/320um_M3:M5_fit_6.pdf  used on input line 400.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [93
+ [92
 
  <./figures/results/double fano fits/320um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
 
@@ -2057,37 +2041,37 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/320um_M3:M5_fi
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/250um_M3:M5_fit_1.pdf, id=6695, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_1.pdf, id=6480, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_1.pdf  used on input line 417.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_1.pdf  used on input line 412.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_fit_2.pdf, id=6696, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_2.pdf, id=6481, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_2.pdf  used on input line 422.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_2.pdf  used on input line 417.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_fit_3.pdf, id=6697, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_3.pdf, id=6482, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_3.pdf  used on input line 427.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_3.pdf  used on input line 422.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_fit_4.pdf, id=6698, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_4.pdf, id=6483, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_4.pdf  used on input line 432.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_4.pdf  used on input line 427.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_fit_5.pdf, id=6699, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_5.pdf, id=6484, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_5.pdf  used on input line 437.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_5.pdf  used on input line 432.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/250um_M3:M5_fit_6.pdf, id=6700, 722.7pt x 505.89pt>
+<figures/results/double fano fits/250um_M3:M5_fit_6.pdf, id=6485, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/250um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/250um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_6.pdf  used on input line 442.
+Package pdftex.def Info: figures/results/double fano fits/250um_M3:M5_fit_6.pdf  used on input line 437.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [94
+ [93
 
  <./figures/results/double fano fits/250um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
 
@@ -2105,37 +2089,37 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/250um_M3:M5_fi
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/120um_M3:M5_fit_1.pdf, id=6985, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_1.pdf, id=6770, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_1.pdf  used on input line 454.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_1.pdf  used on input line 449.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_fit_2.pdf, id=6986, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_2.pdf, id=6771, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_2.pdf  used on input line 459.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_2.pdf  used on input line 454.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_fit_3.pdf, id=6987, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_3.pdf, id=6772, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_3.pdf  used on input line 464.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_3.pdf  used on input line 459.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_fit_4.pdf, id=6988, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_4.pdf, id=6773, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_4.pdf  used on input line 469.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_4.pdf  used on input line 464.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_fit_5.pdf, id=6989, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_5.pdf, id=6774, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_5.pdf  used on input line 474.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_5.pdf  used on input line 469.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/120um_M3:M5_fit_6.pdf, id=6990, 722.7pt x 505.89pt>
+<figures/results/double fano fits/120um_M3:M5_fit_6.pdf, id=6775, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/120um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/120um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_6.pdf  used on input line 479.
+Package pdftex.def Info: figures/results/double fano fits/120um_M3:M5_fit_6.pdf  used on input line 474.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [95
+ [94
 
  <./figures/results/double fano fits/120um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
 
@@ -2153,32 +2137,32 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/120um_M3:M5_fi
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/70um_M3:M5_fit_1.pdf, id=7275, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_fit_1.pdf, id=7061, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_1.pdf  used on input line 491.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_1.pdf  used on input line 486.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/70um_M3:M5_fit_2.pdf, id=7276, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_fit_2.pdf, id=7062, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_2.pdf  used on input line 496.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_2.pdf  used on input line 491.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/70um_M3:M5_fit_4.pdf, id=7277, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_fit_4.pdf, id=7063, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_4.pdf  used on input line 501.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_4.pdf  used on input line 496.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/70um_M3:M5_fit_5.pdf, id=7278, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_fit_5.pdf, id=7064, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_5.pdf  used on input line 506.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_5.pdf  used on input line 501.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/70um_M3:M5_fit_7.pdf, id=7279, 722.7pt x 505.89pt>
+<figures/results/double fano fits/70um_M3:M5_fit_7.pdf, id=7065, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/70um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/70um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_7.pdf  used on input line 511.
+Package pdftex.def Info: figures/results/double fano fits/70um_M3:M5_fit_7.pdf  used on input line 506.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [96
+ [95
 
  <./figures/results/double fano fits/70um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
 
@@ -2193,26 +2177,26 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/70um_M3:M5_fit
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/30um_M3:M5_fit_1.pdf, id=7516, 722.7pt x 505.89pt>
+<figures/results/double fano fits/30um_M3:M5_fit_1.pdf, id=7302, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/30um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_1.pdf  used on input line 523.
+Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_1.pdf  used on input line 518.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/30um_M3:M5_fit_2.pdf, id=7517, 722.7pt x 505.89pt>
+<figures/results/double fano fits/30um_M3:M5_fit_2.pdf, id=7303, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/30um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_2.pdf  used on input line 528.
+Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_2.pdf  used on input line 523.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/30um_M3:M5_fit_3.pdf, id=7518, 722.7pt x 505.89pt>
+<figures/results/double fano fits/30um_M3:M5_fit_3.pdf, id=7304, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/30um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_3.pdf  used on input line 533.
+Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_3.pdf  used on input line 528.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 File: figures/results/double fano fits/30um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/30um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_4.pdf  used on input line 538.
+Package pdftex.def Info: figures/results/double fano fits/30um_M3:M5_fit_4.pdf  used on input line 533.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [97
+ [96
 
  <./figures/results/double fano fits/30um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
 
@@ -2221,46 +2205,46 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/30um_M3:M5_fit
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf, id=7663, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf, id=7448, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf  used on input line 552.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf  used on input line 547.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf, id=7664, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf, id=7449, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf  used on input line 557.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf  used on input line 552.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf, id=7665, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf, id=7450, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf  used on input line 562.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf  used on input line 557.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf, id=7666, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf, id=7451, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf  used on input line 567.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf  used on input line 562.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf, id=7667, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf, id=7452, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf  used on input line 572.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf  used on input line 567.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf, id=7668, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf, id=7453, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf  used on input line 577.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf  used on input line 572.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf, id=7669, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf, id=7454, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf  used on input line 585.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf  used on input line 580.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[98
+[97
 
  <./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf> <./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
 
@@ -2277,52 +2261,52 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_
 > <./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [99 <./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf>]
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf, id=7985, 722.7pt x 505.89pt>
+>] [98 <./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf>]
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf, id=7770, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf  used on input line 597.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf  used on input line 592.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf, id=7986, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf, id=7771, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf  used on input line 602.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf  used on input line 597.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf, id=7987, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf, id=7772, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf  used on input line 607.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf  used on input line 602.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf, id=7988, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf, id=7773, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf  used on input line 612.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf  used on input line 607.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf, id=7989, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf, id=7774, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf  used on input line 617.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf  used on input line 612.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf, id=7990, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf, id=7775, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf  used on input line 622.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf  used on input line 617.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf, id=7991, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf, id=7776, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf  used on input line 630.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf  used on input line 625.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf, id=7992, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf, id=7777, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf  used on input line 635.
+Package pdftex.def Info: figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf  used on input line 630.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[100
+[99
 
  <./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
 
@@ -2339,41 +2323,41 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/453um
 > <./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [101 <./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+>] [100 <./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf, id=8373, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf, id=8158, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf  used on input line 647.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf  used on input line 642.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf, id=8374, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf, id=8159, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf  used on input line 652.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf  used on input line 647.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf, id=8375, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf, id=8160, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf  used on input line 657.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf  used on input line 652.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf, id=8376, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf, id=8161, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf  used on input line 662.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf  used on input line 657.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf, id=8377, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf, id=8162, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf  used on input line 667.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf  used on input line 662.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf, id=8378, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf, id=8163, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf  used on input line 672.
+Package pdftex.def Info: figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf  used on input line 667.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
- [102
+ [101
 
  <./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
 
@@ -2391,61 +2375,61 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/323um
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf, id=8665, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf, id=8451, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf  used on input line 684.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf  used on input line 679.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf, id=8666, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf, id=8452, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf  used on input line 689.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf  used on input line 684.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf, id=8667, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf, id=8453, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf  used on input line 694.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf  used on input line 689.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf, id=8668, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf, id=8454, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf  used on input line 699.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf  used on input line 694.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf, id=8669, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf, id=8455, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf  used on input line 704.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf  used on input line 699.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf, id=8670, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf, id=8456, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf  used on input line 709.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf  used on input line 704.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf, id=8671, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf, id=8457, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf  used on input line 717.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf  used on input line 712.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf, id=8672, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf, id=8458, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf  used on input line 722.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf  used on input line 717.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf, id=8673, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf, id=8459, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf  used on input line 727.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf  used on input line 722.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf, id=8674, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf, id=8460, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf  used on input line 732.
+Package pdftex.def Info: figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf  used on input line 727.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[103
+[102
 
  <./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
 
@@ -2462,7 +2446,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/251um
 > <./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [104 <./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+>] [103 <./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
@@ -2472,66 +2456,66 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/251um
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf, id=9153, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf, id=8938, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf  used on input line 744.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf  used on input line 739.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf, id=9154, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf, id=8939, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf  used on input line 749.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf  used on input line 744.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf, id=9155, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf, id=8940, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf  used on input line 754.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf  used on input line 749.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf, id=9156, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf, id=8941, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf  used on input line 759.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf  used on input line 754.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf, id=9157, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf, id=8942, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf  used on input line 764.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf  used on input line 759.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf, id=9158, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf, id=8943, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf  used on input line 769.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf  used on input line 764.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf, id=9159, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf, id=8944, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf  used on input line 777.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf  used on input line 772.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf, id=9160, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf, id=8945, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf  used on input line 782.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf  used on input line 777.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf, id=9161, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf, id=8946, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf  used on input line 787.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf  used on input line 782.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf, id=9162, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf, id=8947, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf  used on input line 792.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf  used on input line 787.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf, id=9163, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf, id=8948, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf  used on input line 797.
+Package pdftex.def Info: figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf  used on input line 792.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[105
+[104
 
  <./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
 
@@ -2548,7 +2532,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/83um_
 > <./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [106 <./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+>] [105 <./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
@@ -2561,61 +2545,61 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/83um_
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf, id=9688, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf, id=9474, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf  used on input line 809.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf  used on input line 804.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf, id=9689, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf, id=9475, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf  used on input line 814.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf  used on input line 809.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf, id=9690, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf, id=9476, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf  used on input line 819.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf  used on input line 814.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf, id=9691, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf, id=9477, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf  used on input line 824.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf  used on input line 819.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf, id=9692, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf, id=9478, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf  used on input line 829.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf  used on input line 824.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf, id=9693, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf, id=9479, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf  used on input line 834.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf  used on input line 829.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf, id=9694, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf, id=9480, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf  used on input line 842.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf  used on input line 837.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf, id=9695, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf, id=9481, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf  used on input line 847.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf  used on input line 842.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf, id=9696, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf, id=9482, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf  used on input line 852.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf  used on input line 847.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf, id=9697, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf, id=9483, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf  used on input line 857.
+Package pdftex.def Info: figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf  used on input line 852.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[107
+[106
 
  <./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
 
@@ -2632,7 +2616,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_
 > <./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [108 <./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+>] [107 <./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
@@ -2642,89 +2626,89 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf, id=10177, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf, id=9962, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf  used on input line 869.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf  used on input line 864.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf, id=10178, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf, id=9963, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf  used on input line 874.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf  used on input line 869.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf, id=10179, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf, id=9964, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf  used on input line 879.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf  used on input line 874.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf, id=10180, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf, id=9965, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf  used on input line 884.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf  used on input line 879.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf, id=10181, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf, id=9966, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf  used on input line 889.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf  used on input line 884.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf, id=10182, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf, id=9967, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf  used on input line 894.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf  used on input line 889.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf, id=10183, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf, id=9968, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf  used on input line 902.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf  used on input line 897.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf, id=10184, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf, id=9969, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf  used on input line 907.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf  used on input line 902.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf, id=10185, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf, id=9970, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf  used on input line 912.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf  used on input line 907.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf, id=10186, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf, id=9971, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf  used on input line 917.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf  used on input line 912.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf, id=10187, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf, id=9972, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf  used on input line 922.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf  used on input line 917.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf, id=10188, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf, id=9973, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf  used on input line 927.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf  used on input line 922.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf, id=10189, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf, id=9974, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf  used on input line 935.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf  used on input line 930.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf, id=10190, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf, id=9975, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf  used on input line 940.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf  used on input line 935.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf, id=10191, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf, id=9976, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf  used on input line 945.
+Package pdftex.def Info: figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf  used on input line 940.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[109
+[108
 
  <./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
 
@@ -2741,7 +2725,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_
 > <./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [110 <./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+>] [109 <./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
@@ -2756,91 +2740,91 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_
 > <./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [111 <./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf> <./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+>] [110 <./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf> <./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf, id=10905, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf, id=10689, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf  used on input line 957.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf  used on input line 952.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf, id=10906, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf, id=10690, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf  used on input line 962.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf  used on input line 957.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf, id=10907, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf, id=10691, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf  used on input line 967.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf  used on input line 962.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf, id=10908, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf, id=10692, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf  used on input line 972.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf  used on input line 967.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf, id=10909, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf, id=10693, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf  used on input line 977.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf  used on input line 972.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf, id=10910, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf, id=10694, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf  used on input line 982.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf  used on input line 977.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf, id=10911, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf, id=10695, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf  used on input line 990.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf  used on input line 985.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf, id=10912, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf, id=10696, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf  used on input line 995.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf  used on input line 990.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf, id=10913, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf, id=10697, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf  used on input line 1000.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf  used on input line 995.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf, id=10914, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf, id=10698, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf  used on input line 1005.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf  used on input line 1000.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf, id=10915, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf, id=10699, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf  used on input line 1010.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf  used on input line 1005.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf, id=10916, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf, id=10700, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf  used on input line 1015.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf  used on input line 1010.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf, id=10917, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf, id=10701, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf  used on input line 1023.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf  used on input line 1018.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
-<figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf, id=10918, 722.7pt x 505.89pt>
+<figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf, id=10702, 722.7pt x 505.89pt>
 File: figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf Graphic file (type pdf)
 <use figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf>
-Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf  used on input line 1028.
+Package pdftex.def Info: figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf  used on input line 1023.
 (pdftex.def)             Requested size: 230.18253pt x 161.12389pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[112
+[111
 
  <./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf> <./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
 
@@ -2857,7 +2841,7 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_
 > <./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [113 <./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+>] [112 <./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf> <./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
@@ -2872,10 +2856,10 @@ pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_
 > <./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [114 <./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf> <./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+>] [113 <./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf> <./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 
 pdfTeX warning: pdflatex (file ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [115
+>]) [114
 
 ] (./main.aux (./titlepage.aux))
  ***********
@@ -2895,18 +2879,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20083 strings out of 474116
- 446847 string characters out of 5743682
+ 20057 strings out of 474116
+ 445168 string characters out of 5743682
  1939187 words of memory out of 5000000
- 41849 multiletter control sequences out of 15000+600000
- 598454 words of font info for 280 fonts, out of 8000000 for 9000
+ 41825 multiletter control sequences out of 15000+600000
+ 598405 words of font info for 279 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,17n,81p,1465b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx3583.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on main.pdf (119 pages, 13236117 bytes).
+Output written on main.pdf (118 pages, 13122377 bytes).
 PDF statistics:
- 11691 PDF objects out of 12825 (max. 8388607)
- 1991 compressed objects within 20 object streams
+ 11477 PDF objects out of 12825 (max. 8388607)
+ 1966 compressed objects within 20 object streams
  0 named destinations out of 1000 (max. 500000)
- 71455 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 71440 words of extra memory for PDF output out of 74296 (max. 10000000)
 
