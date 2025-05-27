@@ -442,6 +442,7 @@ ls_0422 = np.array([20,40,75,100,110,225,500]) ## approximate only!!
 
 single_lengths = np.array([24.05, 57.40, 116.31, 211.98, 385.96])
 lengths_err = np.array([0.54, 1.55, 1.19, 3.16, 2.90])
+sim_lws_single = np.array([34.603, 25.785, 17.583, 11.563, 7.127])
 
 lws_5um = np.array([28.766, 32.682, 38.827, 39.827])
 lws_60um = np.array([33.907, 18.958, 22.349, 20.412])
@@ -600,7 +601,7 @@ plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano
 plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
 plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
 plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
-plt.scatter(single_lengths, sim_lws_single, marker=".", color="black", label="simulation")
+plt.scatter(single_lengths, sim_lws_single, marker="o", color="black", label="simulation")
 
 
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="simulated")
@@ -645,7 +646,7 @@ ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
 #plt.ticklabel_format(style='plain', axis="both")
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
-plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
+plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=2)
 plt.subplots_adjust(bottom=0.3, left=0.15)
 plt.grid(True, which="both", ls="--", alpha=0.2)
 plt.show()

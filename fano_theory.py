@@ -67,7 +67,7 @@ mist_r = [(1-eps)*r for r in mist_ref[1]]
 #λs = np.linspace(951.65, 951.95, 500)
 #λs = np.linspace(g1data[:,0][0]-1, g1data[:,0][-1]+1, 100)
 #λs = np.linspace(mist_ref[0][0], mist_ref[0][-1], len(mist_ref[0]))
-λs = np.linspace(951, 953, 10000)
+λs = np.linspace(951.4, 952.1, 100)
 lmin = 29.9
 #L = 0.016
 Δ = 0.0
@@ -272,8 +272,8 @@ def resonant_cavity_length(params: list, λs: np.array, lmin=50, losses=True):
 
     tg = transmission_values[idx]
     rg = reflection_values[idx]
-    tm = np.sqrt(0.05)
-    rm = np.sqrt(0.95)
+    tm = np.sqrt(0.01)
+    rm = np.sqrt(0.99)
 
     ls = list(np.linspace(lmin,lmin+1,10000)*1e3)
 
@@ -408,8 +408,8 @@ def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intr
 
     if intracavity == False:
         def cavity_transmission(λ, rg, tg, l):
-            tm = np.sqrt(0.05)
-            rm = np.sqrt(0.95)
+            tm = np.sqrt(0.01)
+            rm = np.sqrt(0.99)
             T = np.abs(tm*tg*np.exp(1j*(2*np.pi/λ)*l)/(1-rm*rg*np.exp(2j*(2*np.pi/λ)*l)))**2
             return T 
         
@@ -981,7 +981,7 @@ rg2 = theoretical_reflection_values(G2, losses=True, loss_factor=0.04)[0]
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
 
-linewidth_length_plot(G1, G2, λs, intracavity=True, losses=True)
+#linewidth_length_plot(G1, G2, λs, intracavity=True, losses=True)
 
 #theoretical_phase_plot(params1, λs)
 #length = resonant_cavity_length(params1, λs, lmin=30)
@@ -1263,27 +1263,28 @@ rparamsg2, rpcovg2 = curve_fit(model, λs, rs_g2, p0=p0)
 #plt.plot(λs_fit, model(λs_fit, *rparamsg2), color="darkred", alpha=0.4)
 #plt.scatter(g1data[:,0], g1data[:,1], marker=".", color="royalblue", label="$T_{G1}$ (data)")
 #plt.scatter(g2data[:,0], g2data[:,1], marker=".", color="blueviolet", label="$T_{G2}$ (data)")
-#lmin=24
 
-#g1params, g1pcov = curve_fit(model, g1data[:,0], g1data[:,1], p0=p0)
+lmin=385
+
+g1params, g1pcov = curve_fit(model, g1data[:,0], g1data[:,1], p0=p0)
 #g2params, g2pcov = curve_fit(model, g2data[:,0], g2data[:,1], p0=p0)
 
 #g1g2_double_length = 0.5*double_cavity_length(g1params, g2params, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(g2params, g1params, λs, lmin=lmin, losses=False)
 
-#g1_single_length = resonant_cavity_length(G1, λs, lmin=lmin, losses=False)
+g1_single_length = resonant_cavity_length(G1, λs, lmin=lmin, losses=True)
 
 #ts = dual_fano_transmission(g1params, g2params, g1g2_double_length, λs, intracavity=True, losses=True, loss_factor=0.04)
-#ts2 = fano_cavity_transmission(G1, g1_single_length, λs, intracavity=False, losses=False)
+ts2 = fano_cavity_transmission(G1, g1_single_length, λs, intracavity=False, losses=True)
 
 #g12tparams, g12tpcov = curve_fit(model, λs, ts, p0=[951.86,951.86,0.5,0.1,1e-6], maxfev=10000)
-#g1tparams, g1tpcov = curve_fit(model, λs, ts2, p0=[951.86,951.86,0.5,0.1,1e-6], maxfev=10000)
+g1tparams, g1tpcov = curve_fit(model, λs, ts2, p0=[951.86,951.86,0.5,0.1,1e-6], maxfev=10000)
 
 
 #plt.scatter(λs, ts, marker=".", color="forestgreen", label="double Fano sim.")
 #plt.plot(λs_fit, model(λs_fit, *g12tparams), color="forestgreen", alpha=0.5, label="$HWHM_{double} \\approx$ %spm" % str(round(abs(g12tparams[3])*1e3,3)))
 
-#plt.scatter(λs, ts2, marker=".", color="royalblue", label="single Fano sim.")
-#plt.plot(λs_fit, model(λs_fit, *g1tparams), color="royalblue", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(g1tparams[3])*1e3,3)))
+plt.scatter(λs, ts2, marker=".", color="royalblue", label="single Fano sim.")
+plt.plot(λs_fit, model(λs_fit, *g1tparams), color="royalblue", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(g1tparams[3])*1e3,3)))
 
 
 
@@ -1316,9 +1317,9 @@ rparamsg2, rpcovg2 = curve_fit(model, λs, rs_g2, p0=p0)
 plt.xlabel("wavelength [nm]", fontsize=28)
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
-plt.ylabel("norm. ref./trans.", fontsize=28)
+#plt.ylabel("norm. ref./trans.", fontsize=28)
 #plt.ylim((0,1))
-#plt.ylabel("norm. trans.", fontsize=28)
+plt.ylabel("norm. trans.", fontsize=28)
 #plt.ylabel("intensity [arb. u.]", fontsize=28)
 plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
 plt.subplots_adjust(bottom=0.3)
