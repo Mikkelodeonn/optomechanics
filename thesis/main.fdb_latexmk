@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1748187884.28247 "main.bcf" "main.bbl" "main" 1748356972.78033 0
-  "main.bcf" 1748356972.13815 111152 78efdd8ebb025b62cc6c58128b40d987 "pdflatex"
+["biber main"] 1748187884.28247 "main.bcf" "main.bbl" "main" 1748357609.80262 0
+  "main.bcf" 1748357609.25144 111152 78efdd8ebb025b62cc6c58128b40d987 "pdflatex"
   "ref.bib" 1748187863.2504 19193 92f562567375c3bd79497f3143afb260 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748356966.48867 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1748356972.78077 0
-  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1748349953.87519 2598 4420bd6a63e75483b6c78f9a96ef297f ""
+["pdflatex"] 1748357604.50606 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1748357609.80306 0
+  "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1748357464.91259 2663 0754cfba15bd03d505d14a870a389d47 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -163,8 +163,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733415260.83091 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733415012 8221426 2de44a46bb09f90001162557916019bf ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Appendix.tex" 1748349508.34733 43097 58c2281134f26b48ab81938cd7b1784e ""
-  "abstract.tex" 1747917737.41196 18 99b6d0b3ebbb3a82de1293dcebd92c83 ""
+  "Appendix.tex" 1748357598.29733 43200 52f3557d1c90f833f9eb5886d9d43d55 ""
+  "abstract.tex" 1748357411.69623 81 7cf50eab6e66f74172bca59129f80ddb ""
   "conclussion_and_outlook.tex" 1748356959.95028 43 c9a3dfd97e7cf6f2551d920230c0d02d ""
   "figures/100um_fabry_perot_trans_vs_freq.pdf" 1747300231.95266 21473 c034d09b82aa1e2f51243b25e422147b ""
   "figures/150um_fabry_perot_trans_vs_freq.pdf" 1747300341.47693 22431 a28faea7de073bd95fdad148cf7f567d ""
@@ -441,18 +441,18 @@
   "figures/toptica_laser.pdf" 1746438908.23576 62073 794aa741895e3c57c6cc8b568a3d5118 ""
   "figures/xy_alignment_sketch.pdf" 1746187639.47692 4517 f00073da16678bb2bf53987244b288f7 ""
   "introduction.tex" 1748188790.07261 5960 dad648089b182f554f128b9609c94d30 ""
-  "main.aux" 1748356972.12432 79958 9b01386ac61e437840435ae24c96adca "pdflatex"
+  "main.aux" 1748357609.23942 79933 e88aa7030e4090aeb8d46180ad7fc7cc "pdflatex"
   "main.bbl" 1748187889.20893 95962 0ff1789709955bb881c22a1fb0e9f5b8 "biber main"
-  "main.run.xml" 1748356972.13924 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
-  "main.tex" 1748349953.87519 2598 4420bd6a63e75483b6c78f9a96ef297f ""
-  "main.toc" 1748356972.13937 4762 5c5863f3c3e4e9f5fd8ca7c2ab402d8b "pdflatex"
+  "main.run.xml" 1748357609.25325 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.tex" 1748357464.91259 2663 0754cfba15bd03d505d14a870a389d47 ""
+  "main.toc" 1748357609.2534 4737 feef3ef09a5ae5819824ab0ef0548bc9 "pdflatex"
   "method/cavity_measurements.tex" 1748331682.30891 26015 4c5f25d9ae67f05ec3bef395b203d88a ""
   "method/experimental_setup.tex" 1747903989.18084 18199 c5f064ba69dbb7dde636b2c5d0c3b868 ""
   "method/grating_characterization.tex" 1748330618.16808 13884 bdb06b7c5f79b0ad4dc077d1974d7c14 ""
   "results/experimental_results.tex" 1748356960.04918 8174 ddbd15a108b19f1123a1b174c628d491 ""
   "theory/cavity_electrodynamics.tex" 1747834430.98312 12117 c3c42b738e4a9f2b0a478faf2cd3d79c ""
   "theory/fano_cavity.tex" 1748329753.40962 60708 ada166de32f7c9ce24c6af530797cfc7 ""
-  "titlepage.aux" 1748356968.35887 3796 e3938c3a3d67da400035d92f3a6a16dc "pdflatex"
+  "titlepage.aux" 1748357605.95709 3796 e3938c3a3d67da400035d92f3a6a16dc "pdflatex"
   "titlepage.tex" 1747979240.23421 899 b685c0c7c96f7e72d5eaaf4303854741 ""
   (generated)
   "main.aux"
