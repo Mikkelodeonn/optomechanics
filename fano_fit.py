@@ -50,28 +50,28 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 
 ### Load data from .txt file
 
-left = 7
-right = -6
+left = 0 #7
+right = -1 #-6
 extrapolated = False
 line_width_fit = True
 
 cavity_length_guess = 139
 
-scan_num = 1
+scan_num = 4
 ### fit FSR scans for all lengths from 20250326 -> plot in HWHM vs. cavity length figure
 scan_type = "s"
 
-#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/5um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/5um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/380um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/380um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
 #norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
 #norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan_PI.txt")#[left:right]
 
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/453um/"+str(scan_type)+str(scan_num)+".txt")[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250326/453um/"+str(scan_type)+str(scan_num)+"_PI.txt")[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
 #data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l.txt")#[left:right]
 #PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250207/129um/129l_PI.txt")#[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250326/normalization/short_scan.txt")[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250326/normalization/short_scan_PI.txt")[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250523/normalization/short_scan.txt")#[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/20250523/normalization/short_scan_PI.txt")#[left:right]
 
 if not np.allclose(data[:,0], norm[:,0]):
     raise Exception("Normalization and data files do not match!")
@@ -177,7 +177,7 @@ if line_width_fit == False:
     print("losses: ", popt[11]*2, "+/-", errs[11]*2)
     #plt.title("M3/M5 double fano transmission")  
     plt.xlabel("wavelength [nm]", fontsize=28)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+    plt.ylabel("norm. trans.", fontsize=28)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
@@ -208,7 +208,7 @@ else:
     plt.plot(xs, fit_model(xs, *popt), color="orangered", alpha=0.7, label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
     plt.xlabel("wavelength [nm]", fontsize=28)
-    plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+    plt.ylabel("norm. trans.", fontsize=28)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)

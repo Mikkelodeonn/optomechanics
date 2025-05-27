@@ -112,23 +112,36 @@ class fano:
 ## fano.lossless_fit only works for transmission data, while fano.lossy_fit can handle both transmission and reflectivity data 
 ## (plots/fit are produced according to the chosen code/type).
 
-#rdata = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
+#rdata1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 ref.txt")
+#tdata1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
+#rdata2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
+#tdata2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
 #tdata = fano("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/grating trans/M5_trans.txt")
 
-#rparams = rdata.lossy_fit([951,951,0.1,0.5,1e-6])
-#tparams = tdata.lossy_fit([951,951,0.1,0.5,1e-6])
+#rparams1 = rdata1.lossy_fit([951,951,0.1,0.5,1e-6])
+#tparams1 = tdata1.lossy_fit([951,951,0.1,0.5,1e-6])
+
+#rparams2 = rdata2.lossy_fit([951,951,0.1,0.5,1e-6])
+#tparams2 = tdata2.lossy_fit([951,951,0.1,0.5,1e-6])
 
 #plt.figure(figsize=(10,7))
-#plt.scatter(rdata.data[:,0], rdata.data[:,1], marker=".", color="firebrick", label='ref. data')
-#plt.plot(rdata.λ_fit, rdata.lossy_model(rdata.λ_fit, *rparams), 'firebrick', alpha=0.5, label="ref. fit")#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
-#plt.scatter(tdata.data[:,0], tdata.data[:,1], marker=".", color="blueviolet", label='trans. data')
-#plt.plot(tdata.λ_fit, tdata.lossy_model(tdata.λ_fit, *tparams), 'cornflowerblue', alpha=0.5, label="trans. fit")#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
-#plt.xlabel("wavelength [nm]", fontsize=24)
-#plt.ylabel("norm. ref./trans. [arb. u.]", fontsize=24)
+
+#plt.scatter(rdata1.data[:,0], rdata1.data[:,1], marker=".", color="lightcoral", label='$R_{G1}$')
+#plt.plot(rdata1.λ_fit, rdata1.lossy_model(rdata1.λ_fit, *rparams1), 'lightcoral', alpha=0.4)#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
+#plt.scatter(tdata1.data[:,0], tdata1.data[:,1], marker=".", color="skyblue", label='$T_{G1}$')
+#plt.plot(tdata1.λ_fit, tdata1.lossy_model(tdata1.λ_fit, *tparams1), 'skyblue', alpha=0.4, label="$\\lambda_0 = $ %snm" % str(round(tparams1[0],2)))#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
+
+#plt.scatter(rdata2.data[:,0], rdata2.data[:,1], marker=".", color="darkred", label='$R_{G2}$')
+#plt.plot(rdata2.λ_fit, rdata2.lossy_model(rdata2.λ_fit, *rparams2), 'darkred', alpha=0.4)#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
+#plt.scatter(tdata2.data[:,0], tdata2.data[:,1], marker=".", color="darkblue", label='$T_{G2}$')
+#plt.plot(tdata2.λ_fit, tdata2.lossy_model(tdata2.λ_fit, *tparams2), 'darkblue', alpha=0.4, label="$\\lambda_0^{\\prime} = $ %snm" % str(round(tparams2[0],2)))#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
+#plt.xlabel("wavelength [nm]", fontsize=28)
+#plt.ylabel("norm. ref./trans.", fontsize=28)
 #plt.xticks(fontsize=21)
 #plt.yticks(fontsize=21)
-#plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+#plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
 #plt.subplots_adjust(bottom=0.3)
+#plt.grid(alpha=0.3)
 #plt.show()
 #fitting_params = [951.2,951.2,0.1,0.04,1e-6]
 #data = fano("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/Data/1293um/1293 short.txt")

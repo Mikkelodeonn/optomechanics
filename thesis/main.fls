@@ -735,41 +735,54 @@ INPUT ./figures/parallelism_plot.pdf
 INPUT ./figures/parallelism_plot.pdf
 INPUT ./figures/parallelism_plot.pdf
 INPUT ./figures/parallelism_plot.pdf
-INPUT ./results/simulations.tex
-INPUT ./results/simulations.tex
-INPUT ./results/simulations.tex
-INPUT ./results/simulations.tex
-INPUT results/simulations.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./results/experimental_results.tex
 INPUT ./results/experimental_results.tex
 INPUT results/experimental_results.tex
-INPUT ./figures/results/60um_M5_FSR_fit.pdf
-INPUT ./figures/results/60um_M5_FSR_fit.pdf
-INPUT ./figures/results/60um_M5_FSR_fit.pdf
-INPUT ./figures/results/60um_M5_FSR_fit.pdf
-INPUT ./figures/results/60um_M5_FSR_fit.pdf
-INPUT ./figures/results/220um_M5_FSR_fit.pdf
-INPUT ./figures/results/220um_M5_FSR_fit.pdf
-INPUT ./figures/results/220um_M5_FSR_fit.pdf
-INPUT ./figures/results/220um_M5_FSR_fit.pdf
-INPUT ./figures/results/220um_M5_FSR_fit.pdf
-INPUT ./figures/results/60um_M5_fit_1.pdf
-INPUT ./figures/results/60um_M5_fit_1.pdf
-INPUT ./figures/results/60um_M5_fit_1.pdf
-INPUT ./figures/results/60um_M5_fit_1.pdf
-INPUT ./figures/results/60um_M5_fit_1.pdf
-INPUT ./figures/results/220um_M5_fit_4.pdf
-INPUT ./figures/results/220um_M5_fit_4.pdf
-INPUT ./figures/results/220um_M5_fit_4.pdf
-INPUT ./figures/results/220um_M5_fit_4.pdf
-INPUT ./figures/results/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
 INPUT ./figures/results/HWHM_vs_cavity_length_single_fano.pdf
 INPUT ./figures/results/HWHM_vs_cavity_length_single_fano.pdf
 INPUT ./figures/results/HWHM_vs_cavity_length_single_fano.pdf
 INPUT ./figures/results/HWHM_vs_cavity_length_single_fano.pdf
 INPUT ./figures/results/HWHM_vs_cavity_length_single_fano.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_long.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_long.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_long.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_long.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_long.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_short.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_short.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_short.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_short.pdf
+INPUT ./figures/results/M3:M5/M3:M5_sim_spectra_short.pdf
+INPUT ./figures/results/M3:M5/M3:M5_lw_vs_length.pdf
+INPUT ./figures/results/M3:M5/M3:M5_lw_vs_length.pdf
+INPUT ./figures/results/M3:M5/M3:M5_lw_vs_length.pdf
+INPUT ./figures/results/M3:M5/M3:M5_lw_vs_length.pdf
+INPUT ./figures/results/M3:M5/M3:M5_lw_vs_length.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
@@ -847,22 +860,30 @@ INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
+INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
+INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
+INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
+INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
+INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./results/discussion.tex
-INPUT ./results/discussion.tex
-INPUT results/discussion.tex
-INPUT ./outlook.tex
-INPUT ./outlook.tex
-INPUT outlook.tex
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
 INPUT ./conclussion_and_outlook.tex
 INPUT ./conclussion_and_outlook.tex
 INPUT conclussion_and_outlook.tex
@@ -954,7 +975,6 @@ INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
@@ -964,12 +984,36 @@ INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
 INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
 INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
@@ -1009,7 +1053,6 @@ INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
 INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
 INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
 INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
@@ -1025,7 +1068,6 @@ INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
 INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
 INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
@@ -1098,6 +1140,41 @@ INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
 INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
 INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
 INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
 INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
@@ -1237,6 +1314,11 @@ INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
 INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
 INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
 INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
 INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
 INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
@@ -1686,6 +1768,8 @@ INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT main.aux
 INPUT ./titlepage.aux
 INPUT ./titlepage.aux

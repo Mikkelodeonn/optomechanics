@@ -1,26 +1,18 @@
-\section{Experimental results}
+\section{Results}
 
 \subsection{The single Fano cavity}
-
-Figures:
-\begin{itemize}
-    \item Single fano cavity transmission as a function of wavelength.
-    \item Short scan of the single fano cavity tranmission, with found linewidth.
-    \item Long scan Fabry-Perot fringes for determining FSR -> cavity length. 
-    \item linewidth as a function of cavity length (compare with broadban cavity).
-\end{itemize}
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/60um_M5_FSR_fit.pdf}
+        \includegraphics[width=\textwidth]{figures/results/single fano fits/60um_off_res_fabry_perot.pdf}
         \caption{}
         \label{fig:short_single_fano_FSR}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/220um_M5_FSR_fit.pdf}
+        \includegraphics[width=\textwidth]{figures/results/single fano fits/220um_off_res_fabry_perot.pdf}
         \caption{}
         \label{fig:long_single_fano_FSR}
     \end{subfigure}
@@ -30,13 +22,13 @@ Figures:
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/60um_M5_fit_1.pdf}
+        \includegraphics[width=\textwidth]{figures/results/single fano fits/60um_M5_fit_1.pdf}
         \caption{}
         \label{fig:short_single_fano_trans}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/220um_M5_fit_4.pdf}
+        \includegraphics[width=\textwidth]{figures/results/single fano fits/220um_M5_fit_4.pdf}
         \caption{}
         \label{fig:long_single_fano_trans}
     \end{subfigure}
@@ -51,12 +43,39 @@ Figures:
 
 \subsection{The double Fano cavity}
 
-\subsubsection{Realizing the double fano model}
+\subsection{Matching Fano mirrors}
 
-Figures: 
-\begin{itemize}
-    \item Fit of the double fano model (long + short cavity)
-\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/results/M3:M5/M3:M5_initial_spectra.pdf}
+    \caption{}
+    \label{}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_sim_spectra_long.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_sim_spectra_short.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \caption{}
+    \label{}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/results/M3:M5/M3:M5_lw_vs_length.pdf}
+    \caption{}
+    \label{}
+\end{figure}
+
+\subsubsection{Realizing the double fano model}
 
 \begin{figure}[h!]
     \centering
@@ -73,7 +92,6 @@ Figures:
         \label{fig:238um_long_scan_fit}
     \end{subfigure}
 \end{figure}
-
 
 Fano mirror \emph{G1} fitting parameters:
 \begin{equation}
@@ -145,14 +163,6 @@ Cavity parameters:
     \end{subfigure}
 \end{figure}
 
-
-\subsubsection{Double fano off-resonance Fabry-Perot cavity}
-
-Figures:
-\begin{itemize}
-    \item Off-resonance double fano transmission as a function of wavelength (show that the off resonance transmission goes close to 100 percent for a well-aligned cavity).
-\end{itemize}
-
 \subsubsection{The double fano linewidth}
 
 \begin{figure}[h!]
@@ -187,16 +197,30 @@ Figures:
     \end{subfigure}
 \end{figure}
 
-Measurement 1:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf}
+    \caption{}
+    \label{fig:HWHM_vs_l_double_fano_result}
+\end{figure}
+
+\subsection{Discussion}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/results/double fano fits/HWHM_vs_cavity_length_result_1st_measurement_only.pdf}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_initial_spectra.pdf}
+        \caption{Individually measuret spectra of G1 and G2.}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf}
+        \caption{Spectra of G1 and G2 in the double Fano config. i.e. where G2 is upside down.}
+        \label{}
+    \end{subfigure}
     \caption{}
-    \label{fig:HWHM_vs_l_double_fano_result_1st}
+    \label{}
 \end{figure}
-
-Measurement 2: 
 
 \begin{figure}[h!]
     \centering
@@ -205,10 +229,20 @@ Measurement 2:
     \label{fig:HWHM_vs_l_double_fano_result_2nd}
 \end{figure}
 
-Figures: 
-\begin{itemize}
-    \item "Semi-short" scan data, fit to the double fano transmission model. 
-    \item Short scan data, fit to the Fano function (for measuring linewidth).
-    \item Linewidth as a function of cavity length (compare double fano, single fano and broadband cavitites).
-\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/results/noise_on_resonance.pdf}
+    \caption{}
+    \label{fig:noise_on_resonance}
+\end{figure}
+
+Spacial drift of the piezo ring
+
+Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)
+
+Broadening sources (especially for long cavities)
+
+Improvements to the setup
+
+The effect of flipping a fano mirror upside down
 

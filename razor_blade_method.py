@@ -37,7 +37,7 @@ plt.fill_between(np.linspace(-50,50,100), [0]*100, [1]*100, color="forestgreen",
 #plt.axvline(0, color="firebrick", linestyle="--", label="beam center")
 #plt.title("Gaussian Beam Profile")
 plt.xlabel("position [μm]", fontsize=28)
-plt.ylabel("norm. trans. [arb. u.]", fontsize=28)
+plt.ylabel("norm. trans.", fontsize=28)
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
 
