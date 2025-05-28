@@ -17,6 +17,12 @@ G2 = M3.lossy_fit([952,952,0.6,1,0.1])
 G1 = M5.lossy_fit([952,952,0.6,1,0.1])
 print("G1: ", G1)
 print("G2: ", G2)
+
+paramsM1 = M1.lossy_fit([952,952,0.6,1,0.1])
+paramsM2 = M2.lossy_fit([952,952,0.6,1,0.1])
+paramsM4 = M4.lossy_fit([952,952,0.6,1,0.1])
+paramsM7 = M7.lossy_fit([952,952,0.6,1,0.1])
+
 #Δ = 0.0
 #params1 = [951.206, 951.356, 0.807, 0.528, 1e-10]
 #params2 = [951.206+Δ, 951.356+Δ, 0.807, 0.528, 1e-10]
@@ -67,7 +73,7 @@ mist_r = [(1-eps)*r for r in mist_ref[1]]
 #λs = np.linspace(951.65, 951.95, 500)
 #λs = np.linspace(g1data[:,0][0]-1, g1data[:,0][-1]+1, 100)
 #λs = np.linspace(mist_ref[0][0], mist_ref[0][-1], len(mist_ref[0]))
-λs = np.linspace(951.4, 952.1, 100)
+λs = np.linspace(951.5, 952.1, 10000)
 lmin = 29.9
 #L = 0.016
 Δ = 0.0
@@ -387,17 +393,18 @@ def double_fano_length_scan(params1: list, params2: list, ls: np.array, λs: np.
 
     plt.figure(figsize=(10,7))
     if plot_both_gratings == True:
-        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res,M3}$: %sμm" % str(round(resonance_length,3)))
-        plt.plot(ls*1e-3, Ts_2, "--", color="lightcoral", label="$l_{res,M5}$: %sμm" % str(round(resonance_length_2,3)))
+        plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{G1} \\approx $ %sμm" % str(round(resonance_length,3)))
+        plt.plot(ls*1e-3, Ts_2, "--", color="lightcoral", label="$l_{G2} \\approx $ %sμm" % str(round(resonance_length_2,3)))
     else:
         plt.plot(ls*1e-3, Ts, "royalblue", label="$l_{res}$: %sμm" % str(round(resonance_length,3)))
     #plt.title("Double fano cavity transmission as a function of cavity length")
-    plt.xlabel("cavity length [μm]", fontsize=24)
-    plt.ylabel("transmission [arb. u.]", fontsize=24)
+    plt.xlabel("cavity length [μm]", fontsize=28)
+    plt.ylabel("norm. trans.", fontsize=28)
     plt.xticks(fontsize=21)
     plt.yticks(fontsize=21)
+    plt.grid(alpha=0.3)
     plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
-    plt.subplots_adjust(bottom=0.3)
+    plt.subplots_adjust(bottom=0.3, left=0.15)
     plt.show()
  
 def fano_cavity_transmission(params: list, length: np.array, λs: np.array, intracavity=False, losses=True):
@@ -741,7 +748,7 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
 
     plt.figure(figsize=(10,6))
 
-    ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin, losses=losses), double_cavity_length(params2, params1, λs, lmin=lmin, losses=losses),20)
+    ls = np.linspace(double_cavity_length(params1, params2, λs, lmin=lmin, losses=losses), double_cavity_length(params2, params1, λs, lmin=lmin, losses=losses),100)
     Ts = []
     for l in ls:
         T = dual_fano_transmission(params1, params2, l, λs, intracavity=intracavity, losses=losses)
@@ -753,9 +760,8 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
         for k in range(len(Ts[h])):
             cmap[h,k] = Ts[h][k] 
 
-    l_labels = [round(l*1e-3,4) for l in ls]
-    λ_labels = np.linspace(np.min(λs), np.max(λs),10)
-    λ_labels = [round(label,2) for label in λ_labels]
+    l_labels = [round(l*1e-3,4) for l in np.linspace(ls[0], ls[-1], 10)]
+    λ_labels = [round(λ,2) for λ in np.linspace(λs[0], λs[-1],10)]
 
     length1 = 0.5*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.5*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
     length2 = 0.2*double_cavity_length(params1, params2, λs, lmin=lmin, losses=False) + 0.8*double_cavity_length(params2, params1, λs, lmin=lmin, losses=False)
@@ -765,9 +771,9 @@ def double_fano_cmap(params1: list, params2: list, λs: np.array, intracavity=Fa
     l2 = [length2 for _ in np.zeros(len(λs))]
     l3 = [length3 for _ in np.zeros(len(λs))]
 
-    plt.plot(λs, l1, color="lime", linestyle="-", lw=4)
-    plt.plot(λs, l2, color="magenta", linestyle="--", lw=4)
-    plt.plot(λs, l3, color="cyan", linestyle="-.", lw=4)
+    #plt.plot(λs, l1, color="lime", linestyle="-", lw=4)
+    #plt.plot(λs, l2, color="magenta", linestyle="--", lw=4)
+    #plt.plot(λs, l3, color="cyan", linestyle="-.", lw=4)
     plt.imshow(cmap, aspect="auto", extent=[np.min(λs), np.max(λs), np.min(ls), np.max(ls)])
     plt.xticks(λ_labels, fontsize=21)
     plt.yticks(ls, l_labels, fontsize=21)
@@ -927,6 +933,8 @@ rg2 = theoretical_reflection_values(G2, losses=True, loss_factor=0.04)[0]
 
 #l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=lmin)
 #double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=lmin)
+#lmin=29.9
+#double_fano_cmap(G1, G2, λs, intracavity=False, losses=True, lmin=lmin)
 
 #### length scan of the single and double fano cavities
 
@@ -980,6 +988,11 @@ rg2 = theoretical_reflection_values(G2, losses=True, loss_factor=0.04)[0]
 #plt.ylabel("FWHM [pm]")
 #plt.xlabel("cavity length [μm]")      
 #plt.show()
+
+
+#l=29.9
+#ls = np.linspace(l*1e3, (l+0.7)*1e3, 10000)
+#double_fano_length_scan(G1, G2, ls, λs, plot_both_gratings=True)
 
 #linewidth_length_plot(G1, G2, λs, intracavity=True, losses=True)
 
@@ -1223,9 +1236,9 @@ data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/dat
 PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")
-#λs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
+λs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
-#lmin = 33
+lmin = 33
 l1 = (double_cavity_length(G1, G2, λs, lmin=lmin, losses=True) + double_cavity_length(G2, G1, λs, lmin=lmin, losses=True))/2
 l2 = double_cavity_length(G1, G2, λs, lmin=lmin, losses=True) 
 l3 = double_cavity_length(G2, G1, λs, lmin=lmin, losses=True)
@@ -1283,8 +1296,8 @@ g1tparams, g1tpcov = curve_fit(model, λs, ts2, p0=[951.86,951.86,0.5,0.1,1e-6],
 #plt.scatter(λs, ts, marker=".", color="forestgreen", label="double Fano sim.")
 #plt.plot(λs_fit, model(λs_fit, *g12tparams), color="forestgreen", alpha=0.5, label="$HWHM_{double} \\approx$ %spm" % str(round(abs(g12tparams[3])*1e3,3)))
 
-plt.scatter(λs, ts2, marker=".", color="royalblue", label="single Fano sim.")
-plt.plot(λs_fit, model(λs_fit, *g1tparams), color="royalblue", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(g1tparams[3])*1e3,3)))
+#plt.scatter(λs, ts2, marker=".", color="royalblue", label="single Fano sim.")
+#plt.plot(λs_fit, model(λs_fit, *g1tparams), color="royalblue", alpha=0.5, label="$HWHM_{single} \\approx$ %spm" % str(round(abs(g1tparams[3])*1e3,3)))
 
 
 
@@ -1309,10 +1322,10 @@ plt.plot(λs_fit, model(λs_fit, *g1tparams), color="royalblue", alpha=0.5, labe
 #plt.scatter(M3_0523[:,0], rdata2, marker=".", color="darkred", label='$R_{G2}$ (sim.)')
 #plt.plot(λs_fit, model(λs_fit, *rparams2), 'darkred', alpha=0.4)
 
-#plt.plot(λs, G_ts1, color="forestgreen", linestyle="--", label="$l = (l_{G1} + l_{G2})/2$")
-#plt.plot(λs, G_ts2, color="orangered", linestyle="-.", label="$l = l_{G1}$")
-#plt.plot(λs, G_ts3, color="cornflowerblue", linestyle="-.", label="$l = l_{G2}$")
-#plt.scatter(data[:,0], data[:,1], marker=".", color="maroon", label="data", zorder=4)
+plt.plot(λs, G_ts1, color="forestgreen", linestyle="--", label="$l = (l_{G1} + l_{G2})/2$")
+plt.plot(λs, G_ts2, color="orangered", linestyle="-.", label="$l = l_{G1}$")
+plt.plot(λs, G_ts3, color="cornflowerblue", linestyle="-.", label="$l = l_{G2}$")
+plt.scatter(data[:,0], data[:,1], marker=".", color="maroon", label="data", zorder=4)
 
 plt.xlabel("wavelength [nm]", fontsize=28)
 plt.xticks(fontsize=21)

@@ -549,6 +549,8 @@ lw_1000um_0523 = np.mean(lws_1000um_0523)
 lws_0523 = [lw_30um_0523, lw_70um_0523, lw_120um_0523, lw_250um_0523, lw_320um_0523, lw_550um_0523, lw_1000um_0523]
 errs_0523 = [lws_30um_err_0523, lws_70um_err_0523, lws_120um_err_0523, lws_250um_err_0523, lws_320um_err_0523, lws_550um_err_0523, lws_1000um_err_0523]
 
+print(np.array(lws_0523)-sim_lws_0523)
+
 dlws_0523, slws_0523, bblws_0523 = calc_lws(l, params1_0523, params2_0523)
 dlws_0523_p, slws_0523_p, bblws_0523_p = calc_lws(l, params1_0523+params1_0523_errs, params2_0523+params2_0523_errs)
 dlws_0523_m, slws_0523_m, bblws_0523_m = calc_lws(l, params1_0523-params1_0523_errs, params2_0523-params2_0523_errs)
