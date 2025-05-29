@@ -340,7 +340,7 @@ Figure \ref{fig:double_fano_trans_data} shows examples of resonance transmission
 
 Figure \ref{fig:HWHM_vs_l_double_fano_result} shows the average of results for the linewidths of a number of recorded spectra taken for cavity lengths in the approximate range $15 \mu m \leq l \leq 1000 \mu m$. The error of each data point depicted is determined as the standard deviation of all values found for the HWHM. The error in the x-direction, i.e. for the cavity lengths found from fits as the ones shown in figure \ref{fig:double_fano_fsr_scans} were of negligible size and are thus indicated rightly in the size of the data points themselves. The blue dashed line depict the analytical linewidth of a broadband cavity of losses similar to the double Fano cavity realized experimentally, the line is representative of eq. (\ref{eq:analytical_linewidth_broadband}). The orange dashed line similarly shows the analytical linewidth of the single Fano cavity calculated using eq. (\ref{eq:analytical_linewidth_single_fano}) for a cavity of similar losses. Lastly, the green dashed line indicate the analytical linewidth of the double Fano cavity transmission spectra comparable with the data points depicted. The black points are linewidths found by fitting double Fano transmission profiles simulated using eq. (\ref{eq:double_fano_transmission}) to the generalized Fano model in eq. (\ref{eq:general_fano_model}) for comparison.
 
-It is seen that the analytical and simulated linewidths are strongly correlated, which indicates that both describe the transmission spectra well. This is also indicated in section \ref{sec:realizing_the_double_fano_model} where the realization of the double Fano model is shown to correlate well with the spectra produced. However,
+It is seen that the analytical and simulated linewidths are strongly correlated, which indicates that both describe the transmission spectra well. This is also indicated in section \ref{sec:realizing_the_double_fano_model} where the realization of the double Fano model is shown to correlate well with the spectra produced. 
 
 \begin{figure}[h!]
     \centering
@@ -349,30 +349,35 @@ It is seen that the analytical and simulated linewidths are strongly correlated,
     \label{fig:HWHM_vs_l_double_fano_result}
 \end{figure}
 
-\subsection{Discussion}
+However, when examining the measured linewidths of the double Fano cavity resonance transmission profile, it is clear that it deviates from the analytical and simulated ones. The double Fano cavity has shown to be very sensitive to vibrational and acoustic noise, and this becomes more apparent when increasing the cavity length. Note that the correlation between the analytical and measured linewidths becomes correspondingly stronger for decreasing linewidths, and that they overlap almost completely when considering the spectra at $l \approx 17 \mu m$. This indicates that analytical double Fano cavity linewidths are roughly realizable inside the Fano regime. It is also noted that the behavior of the measured linewidth as a function of cavity length follows the trend of the analytical one, indicating that the Fano- and standard regimes are still applicable for the double Fano cavity. 
+
+While vibrational and acoustic noise definitely claims their part of the reason for the experienced broadening, the method used in order to align the double Fano cavity outlined in section \ref{sec:alignment} has potential for improvement. When going through the process of aligning the cavity, one relies on the assumption that the top and bottom parts of the cavity setup can be removed and re-inserted without loss of alignment in either of the numerous degrees of freedom. This is of course not always the case and is therefore a cause of misalignment of the cavity and thus broadening. 
+
+Designing a setup with complete independent control of all degrees of freedom is therefore an area of improvement that could drastically reduce the dicrepancy of the analytical/simulated and measured linewidths of the double Fano cavity resonance transmission spectra.
+
+\subsection{Additional discussion}
+
+\subsubsection{Vibrational noise}
+
+The aforementioned vibrational noise was apparent from the intial iteration of the double Fano cavity setup and it was quickly concluded that it was specifically related to the modifications made to the single Fano cavity setup in order to be able to control additional degrees of freedom needed (spacial and rotational of the top part of the cavity setup seen in figure \ref{fig:setup_top_sketch_and_pic}). 
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_initial_spectra.pdf}
-        \caption{Individually measuret spectra of G1 and G2.}
-        \label{}
+        \includegraphics[width=\textwidth]{figures/double_fano_sketch_discussion.pdf}
+        \caption{}
+        \label{fig:double_fano_discussion}
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf}
-        \caption{Spectra of G1 and G2 in the double Fano config. i.e. where G2 is upside down.}
-        \label{}
+        \includegraphics[width=\textwidth]{figures/single_fano_sketch_discussion.pdf}
+        \caption{}
+        \label{fig:single_fano_discussion}
     \end{subfigure}
     \caption{}
-    \label{}
+    \label{fig:single_vs_double_sketch}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf}
-    \caption{}
-    \label{fig:HWHM_vs_l_double_fano_result_2nd}
-\end{figure}
+Especially the spacial degrees of freedom seemed to be the source of the vibrations, as the need to control these for the bottom and top Fano mirrors independently introduced the possibility of \emph{uncoupled mechanical vibrations}. It is assumed that the noise was always apparent in the setup, but since the broadband- and Fano mirrors of the single Fano cavity only ever had the need for relative motion in the z-direction, this was never expressed as a change in the cavity length, and this was thus constant during measurements. The linear stage used in the z-direction (\emph{NFL5DP20}) was specifically chosen to include a piezo actuator for high resolution motion control for very short cavity lengths, and this proved to be virtually stable in terms of vibrations. While a number of different stages, with a longer maximum travel range, was tested for the xy-directions, none proved stable enough to completely cancel the uncoupled vibrations. Figures \ref{fig:single_vs_double_sketch} shows sketches of the single- and double Fano cavity setups and it is here shown how the top and bottom of the setup was \emph{uncoupled} through the addition of the xy-stages for aligning the top Fano mirror, while for the single Fano setup they were \emph{coupled} as they were both attached to the same set of xy-stages. 
 
 \begin{figure}[h!]
     \centering
@@ -381,13 +386,61 @@ It is seen that the analytical and simulated linewidths are strongly correlated,
     \label{fig:noise_on_resonance}
 \end{figure}
 
-Spacial drift of the piezo ring
+Initially, the vibrations had an amplitude comparable with the free stroke of the piezo actuator. This means that the fringes stemming from scanning the cavity length would hardly change when turning off the alternating current applied to the actuator, and thus a stable measurement was deemed impossible. At this point it was unclear whether the noise was acoustic in nature or if the vibrations originated somehow from the optical table. In order to rule out, or reduce, acoustic vibrations the setup was enclosed inside a plexi-glas box which was further equipped with a piece of noise reducing foam. This addition proved helpful as it roughly reduced the noise by a factor of 2, thus making the spectral profile resolvable and measurements possible. 
 
-Noise reduction - coupled/uncoupled mechanical/acoustic vibration (the plexi-glass box)
+Additional measures were taken in order to reduce any vibrations originating from the optical table by the addition of teflon slabs between the optical table and the first set of xy-stages, and between these and the second set of xy-stages. This further reduced the noise slightly and the resulting signal, shown as the raw data from the oscilloscope screen, is seen in figure \ref{fig:noise_on_resonance}.
 
-Broadening sources (especially for long cavities)
+It is assumed that the optimal cavity length is the one that produces the highest signal when the cavity length is constant. Keeping this in mind it is easily deduced from the figure that further noise reduction will increase the quality of the meaured spectra. Since the intrinsicly narrower linewidths of the longer optical cavity (both standard- and Fano cavities) makes these more sensitive to noise as the kind depicted in figure \ref{fig:noise_on_resonance}, this hints toward an explanation for the increased deviation from the analytical linewidth for longer cavity lengths seen in figure \ref{fig:HWHM_vs_l_double_fano_result}.
 
-Improvements to the setup
+A brief decsription of the plexi-glas box and teflon slabs are found in section \ref{sec:vibrational_noise_reduction}.
 
-The effect of flipping a fano mirror upside down
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf}
+    \caption{}
+    \label{fig:HWHM_vs_l_double_fano_noisy}
+\end{figure}
 
+Figure \ref{fig:HWHM_vs_l_double_fano_noisy} shows the best obtained measurement series taken with the setup \emph{without} teflon slabs, and while the cavity lengths considered does not range as far as the measurement series in figure \ref{fig:HWHM_vs_l_double_fano_result}, the trend of increased broadening in the standard regime is apparent. It also shows that even for the case of increased vibrational noise, it is possible to record spectra of linewidths in agreement with the analytical prediction, when inside the Fano regime. Note here that the errorbars on the figure are representative of the standard deviations of all values recorded at each cavity length, and thus the noisy measurement is seen to fluctuate more resulting in higher uncertainties. 
+
+\subsubsection{Guided-mode resonance shift}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_initial_spectra.pdf}
+        \caption{Individually measuret spectra of G1 and G2.}
+        \label{fig:G1_and_G2_initial_discussion}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf}
+        \caption{Spectra of G1 and G2 in the double Fano config. i.e. where G2 is upside down.}
+        \label{fig:G1_and_G2_double_fano_config_discussion}
+    \end{subfigure}
+    \caption{}
+    \label{fig:G1_and_G2_spectra_individual_and_in_double_fano_config}
+\end{figure}
+
+The spectra for G1 and G2 shown in figure \ref{fig:G1_and_G2_spectral_comparison} are taken individually and in the intial part of the project where finding a matching pair of Fano mirrors was the task at hand. Figure \ref{fig:G1_and_G2_initial_discussion} shows, once again, the spectra of G1 and G2 taken individually, while figure \ref{fig:G1_and_G2_double_fano_config_discussion} shows spectra taken for the two in the double Fano configuration, i.e. where G2 is placed upside down. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/upside_down_membrane_sketch.pdf}
+    \caption{}
+    \label{fig:upside_down_membrane_sketch}
+\end{figure}
+
+It is apparent that while the spectra for G1 is virtually unchanged, the same cannot be said for the spectra of G2 as this has clearly shifted to a slightly higher guided-mode resonance. This artifact of the double Fano cavity configuration has not been investigated in depth, but it can be argued that the interface from bare SiN into patterned SiN is not invariant from its opposite. The two scenarios are simply sketched in figure \ref{fig:upside_down_membrane_sketch}, outlining the claim that these somehow does not produce identical spectra.
+
+\subsubsection{Potential broadening due to walk-off effect}
+
+Another potential source of broadening is the so-called \emph{walk-off effect} which is apparent, in this case, for the scenario of a wedge angle between G1 and G2. For a non-zero wedge angle the beam will be reflected inside the cavity and propagate according to said wedge angle as shown in figure \ref{fig:walk_off_sketch}, which would result in an effective change in beam waist and thus broadening of the recorded spectra.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/walk_off_sketch.pdf}
+    \caption{}
+    \label{fig:walk_off_sketch}
+\end{figure}
+
+A small, if not negligible, wedge angle is assumed for any experimentally realized cavity, but for the double Fano cavity with a non-zero detuning $\Delta$ this might be enhanced by the method it self. In \cite{Parthenopoulos} it is shown that the resonance wavelength will increase for a Fano mirror of a non-zero incident angle at the cost of a higher (lower) minimum (maximum) transmission (reflectivity) when on resonance. The argument can be made that the optimal double Fano configuration for a non-zero detuning is not necessarily normal to the optical axis, but rather at a wedge angle which optimizes the spectral overlap of the two Fano mirrors. For this reason the angle between G1 and G2 might be increased when on-resonance measurements are recorded and hence the walk-off effect might contribute to the broadening seen in figure \ref{fig:HWHM_vs_l_double_fano_result}. The walk-off effect will, if apparent, naturally increase with the cavity length, as a simple geometric consequence of the configuration considered. 

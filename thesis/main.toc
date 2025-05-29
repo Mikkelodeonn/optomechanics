@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Optical telescope}{41}{}%
 \contentsline {subsubsection}{\numberline {3.1.4}Transmission, reflection and incident photo-detectors}{41}{}%
 \contentsline {subsubsection}{\numberline {3.1.5}The double Fano cavity measurement setup}{42}{}%
-\contentsline {subsubsection}{\numberline {3.1.6}Acoustic noise reduction}{45}{}%
+\contentsline {subsubsection}{\numberline {3.1.6}Vibrational noise reduction}{45}{}%
 \contentsline {subsubsection}{\numberline {3.1.7}Additional equipment used}{45}{}%
 \contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{46}{}%
 \contentsline {subsubsection}{\numberline {3.2.1}The alignment procedure}{46}{}%
@@ -46,13 +46,16 @@
 \contentsline {subsection}{\numberline {4.3}The double Fano cavity}{71}{}%
 \contentsline {subsubsection}{\numberline {4.3.1}Realizing the double fano model}{73}{}%
 \contentsline {subsubsection}{\numberline {4.3.2}The double fano linewidth}{77}{}%
-\contentsline {subsection}{\numberline {4.4}Discussion}{79}{}%
-\contentsline {section}{\numberline {5}Conclussion}{80}{}%
-\contentsline {subsection}{\numberline {5.1}Outlook}{80}{}%
-\contentsline {section}{\numberline {}References}{81}{}%
-\contentsline {section}{Appendices}{87}{}%
-\contentsline {subsection}{\numberline {A}Simulated broadband and single Fano cavity resonance transmission spectra}{87}{}%
-\contentsline {subsection}{\numberline {B}Simulated single and double Fano cavity resonance transmission spectra}{88}{}%
-\contentsline {subsection}{\numberline {C}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{89}{}%
-\contentsline {subsection}{\numberline {D}Single Fano data + fits}{90}{}%
-\contentsline {subsection}{\numberline {E}Double Fano data + fits}{97}{}%
+\contentsline {subsection}{\numberline {4.4}Additional discussion}{80}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Vibrational noise}{80}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Guided-mode resonance shift}{83}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Potential broadening due to walk-off effect}{84}{}%
+\contentsline {section}{\numberline {5}Conclussion}{85}{}%
+\contentsline {subsection}{\numberline {5.1}Outlook}{85}{}%
+\contentsline {section}{\numberline {}References}{86}{}%
+\contentsline {section}{Appendices}{91}{}%
+\contentsline {subsection}{\numberline {A}Simulated broadband and single Fano cavity resonance transmission spectra}{91}{}%
+\contentsline {subsection}{\numberline {B}Simulated single and double Fano cavity resonance transmission spectra}{92}{}%
+\contentsline {subsection}{\numberline {C}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{93}{}%
+\contentsline {subsection}{\numberline {D}Single Fano data + fits}{94}{}%
+\contentsline {subsection}{\numberline {E}Double Fano data + fits}{101}{}%

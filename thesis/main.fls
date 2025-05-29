@@ -858,6 +858,26 @@ INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
 INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf
+INPUT ./figures/double_fano_sketch_discussion.pdf
+INPUT ./figures/double_fano_sketch_discussion.pdf
+INPUT ./figures/double_fano_sketch_discussion.pdf
+INPUT ./figures/double_fano_sketch_discussion.pdf
+INPUT ./figures/double_fano_sketch_discussion.pdf
+INPUT ./figures/single_fano_sketch_discussion.pdf
+INPUT ./figures/single_fano_sketch_discussion.pdf
+INPUT ./figures/single_fano_sketch_discussion.pdf
+INPUT ./figures/single_fano_sketch_discussion.pdf
+INPUT ./figures/single_fano_sketch_discussion.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
+INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
 INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
 INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
 INPUT ./figures/results/M3:M5/M3:M5_initial_spectra.pdf
@@ -867,16 +887,16 @@ INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./figures/results/double fano fits/HWHM_vs_cavity_length_result_2nd_measurement_only.pdf
-INPUT ./figures/results/noise_on_resonance.pdf
-INPUT ./figures/results/noise_on_resonance.pdf
-INPUT ./figures/results/noise_on_resonance.pdf
-INPUT ./figures/results/noise_on_resonance.pdf
-INPUT ./figures/results/noise_on_resonance.pdf
+INPUT ./figures/upside_down_membrane_sketch.pdf
+INPUT ./figures/upside_down_membrane_sketch.pdf
+INPUT ./figures/upside_down_membrane_sketch.pdf
+INPUT ./figures/upside_down_membrane_sketch.pdf
+INPUT ./figures/upside_down_membrane_sketch.pdf
+INPUT ./figures/walk_off_sketch.pdf
+INPUT ./figures/walk_off_sketch.pdf
+INPUT ./figures/walk_off_sketch.pdf
+INPUT ./figures/walk_off_sketch.pdf
+INPUT ./figures/walk_off_sketch.pdf
 INPUT ./conclussion_and_outlook.tex
 INPUT ./conclussion_and_outlook.tex
 INPUT conclussion_and_outlook.tex
