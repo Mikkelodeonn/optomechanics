@@ -2406,6 +2406,103 @@
       \field{volume}{42}
       \field{year}{2017}
     \endentry
+    \entry{Hsu}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d8aab08828167049c3f8e9102246eb5b}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Chia\bibnamedelima Wei},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=96fe8ee2677d46dc47ad63107fd377ad}{%
+           family={Zhen},
+           familyi={Z\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e69d165a40b78d84dc629ed90b2c9f42}{%
+           family={Stone},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi Douglas},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=692b1b2f0de1014d9e4580b95d1dba67}{%
+           family={Joannopoulos},
+           familyi={J\bibinitperiod},
+           given={John\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=d4bb6bd2724f026f198fb2fddbe7a5f7}{%
+           family={Soljačić},
+           familyi={S\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e676949616c3f89a5b5a3cc055a96499}
+      \strng{fullhash}{0ad0c27b58f56349139cdd67282e2a9a}
+      \strng{bibnamehash}{e676949616c3f89a5b5a3cc055a96499}
+      \strng{authorbibnamehash}{e676949616c3f89a5b5a3cc055a96499}
+      \strng{authornamehash}{e676949616c3f89a5b5a3cc055a96499}
+      \strng{authorfullhash}{0ad0c27b58f56349139cdd67282e2a9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Materials}
+      \field{number}{9}
+      \field{title}{Bound states in the continuum}
+      \field{volume}{1}
+      \field{year}{2016}
+      \field{pages}{16048}
+      \range{pages}{1}
+    \endentry
+    \entry{Yu}{article}{}
+      \name{author}{6}{}{%
+        {{hash=916378086e2e03d46164f07e1684afe6}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=02c766822532e5675e3ab476567eb611}{%
+           family={Sakanas},
+           familyi={S\bibinitperiod},
+           given={Aurimas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fdc3be95caea68bca385bcaa84afd3f9}{%
+           family={Zali},
+           familyi={Z\bibinitperiod},
+           given={Aref\bibnamedelima Rasoulzadeh},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=07c549c05fba13d3d97804dc5454e9ba}{%
+           family={Semenova},
+           familyi={S\bibinitperiod},
+           given={Elizaveta},
+           giveni={E\bibinitperiod}}}%
+        {{hash=817823c15993f77a6c17875094d00c5d}{%
+           family={Yvind},
+           familyi={Y\bibinitperiod},
+           given={Kresten},
+           giveni={K\bibinitperiod}}}%
+        {{hash=85e3303a836d55d006f586cf84b50ce6}{%
+           family={M{ø}rk},
+           familyi={M\bibinitperiod},
+           given={Jesper},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f28c506088d9275445f9218f7ec6c8f3}
+      \strng{fullhash}{610b85e45a8429a135163cc2cc01ed1d}
+      \strng{bibnamehash}{f28c506088d9275445f9218f7ec6c8f3}
+      \strng{authorbibnamehash}{f28c506088d9275445f9218f7ec6c8f3}
+      \strng{authornamehash}{f28c506088d9275445f9218f7ec6c8f3}
+      \strng{authorfullhash}{610b85e45a8429a135163cc2cc01ed1d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Photonics}
+      \field{number}{10}
+      \field{title}{Ultra-coherent Fano laser based on a bound state in the continuum}
+      \field{volume}{15}
+      \field{year}{2021}
+      \field{pages}{758\bibrangedash 764}
+      \range{pages}{7}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
