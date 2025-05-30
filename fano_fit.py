@@ -55,7 +55,7 @@ right = -1 #-6
 extrapolated = False
 line_width_fit = False
 
-cavity_length_guess = 239#139#31
+cavity_length_guess = 30#139#31
 
 scan_num = 4
 ### fit FSR scans for all lengths from 20250326 -> plot in HWHM vs. cavity length figure
@@ -68,10 +68,10 @@ scan_type = "s"
 
 #data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
 #PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/238um/238l.txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/238um/238l_PI.txt")#[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan.txt")#[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250207/normalization/long_scan_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")#[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")#[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")#[left:right]
 
 if not np.allclose(data[:,0], norm[:,0]):
     raise Exception("Normalization and data files do not match!")
@@ -134,7 +134,7 @@ def fit_model(λ, a, b, c, λ0, δλ):
 
 ### Double Fano fitting function
 
-def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, length, loss_factor): ## params -> [λ0, λ1, td, γ, α]
+def double_fano(λs, λ0_1, λ1_1, λ0_2, λ1_2, td_1, td_2, γ_1, α_1, γ_2, α_2, length, loss_factor): ## params -> [λ0, λ1, td, γ, α]
     params1 = [λ0_1, λ1_1, td_1, γ_1, α_1]
     params2 = [λ0_2, λ1_2, td_2, γ_2, α_2]
     #print("params1:",params1)
@@ -160,11 +160,11 @@ def double_fano(λs , λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, 
 ### Fitting loaded data to the double fano transmission function
 
 if line_width_fit == False:
-    p0 = [λ0_1, λ1_1, td_1, γ_1, α_1, λ0_2, λ1_2, td_2, γ_2, α_2, cavity_length_guess*1e3, 0.1]
+    p0 = [λ0_1, λ1_1, λ0_2, λ1_2, td_1, td_2, γ_1, α_1, γ_2, α_2, cavity_length_guess*1e3, 0.2]
     bounds = ([0,0,0,0,0,0,0,0,0,0,0,0],[np.inf, np.inf, 1, np.inf, 1, np.inf, np.inf, 1, np.inf, 1, np.inf, 1])
     popt,pcov = curve_fit(double_fano, data[:,0], data[:,1], p0=p0, maxfev=10000000)
     errs = np.sqrt(np.diag(pcov))
-    fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
+    #fit_params = [popt[0], popt[1], popt[5], popt[6], popt[10]*1e-3]
 
     xs = np.linspace(data[:,0][0], data[:,0][-1], 10000) 
 
@@ -172,15 +172,17 @@ if line_width_fit == False:
     ss_res = np.sum(residuals**2)
     ss_tot = np.sum((data[:,1]-np.mean(data[:,1]))**2)
     r_squared = 1 - (ss_res/ss_tot)
-    print("$r^2 = $", r_squared)
+    print("r^2 = ", r_squared)
 
     plt.figure(figsize=(10,7))
     plt.scatter(data[:,0], data[:,1], color="maroon", marker=".", label="data")
     plt.plot(xs, double_fano(xs, *popt), color="orangered", alpha=0.7, label="fit")
-    print("G1: \nλ0 = ",popt[0], "+/-", errs[0], "nm", "\nλ1 = ",popt[1], "+/-", errs[1], "nm", "\ntd = ", popt[2], "+/-", errs[2], "\nγλ = ", popt[3], "+/-", errs[3], "nm", "\nα = ", popt[4], "+/-", errs[4])  
-    print("G2: \nλ0 = ",popt[5], "+/-", errs[5], "nm", "\nλ1 = ",popt[6], "+/-", errs[6], "nm", "\ntd = ", popt[7], "+/-", errs[7], "\nγλ = ", popt[8], "+/-", errs[8], "nm", "\nα = ", popt[9], "+/-", errs[9])
+    #print("G1: \nλ0 = ",popt[0], "+/-", errs[0], "nm", "\nλ1 = ",popt[1], "+/-", errs[1], "nm", "\ntd = ", popt[2], "+/-", errs[2], "\nγλ = ", popt[3], "+/-", errs[3], "nm", "\nα = ", popt[4], "+/-", errs[4])  
+    #print("G2: \nλ0 = ",popt[5], "+/-", errs[5], "nm", "\nλ1 = ",popt[6], "+/-", errs[6], "nm", "\ntd = ", popt[7], "+/-", errs[7], "\nγλ = ", popt[8], "+/-", errs[8], "nm", "\nα = ", popt[9], "+/-", errs[9])
     print("cavity length: ", popt[10]*1e-3, "+/-", errs[10]*1e-3, "μm") 
     print("losses: ", popt[11]*2, "+/-", errs[11]*2)
+    print("λ0_G1 ", popt[0], "+/-", errs[0],"  λ1_G1: ", popt[1], "+/-", errs[1])
+    print("λ0_G2 ", popt[2], "+/-", errs[2],"  λ1_G2: ", popt[3], "+/-", errs[3])
     #plt.title("M3/M5 double fano transmission")  
     plt.xlabel("wavelength [nm]", fontsize=28)
     plt.ylabel("norm. trans.", fontsize=28)

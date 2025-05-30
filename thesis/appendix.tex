@@ -3,7 +3,47 @@
 \addcontentsline{toc}{section}{Appendices}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-\subsection{Simulated broadband and single Fano cavity resonance transmission spectra}
+\subsection{GitHub}\label{appendix:GitHub}
+
+During this project I have stored all my data and produced code in a public GitHub repository. The repository is named "optomechanics" after the group at the Department of Physics and Astronomi at Aarhus University in which I have made this Master's project.
+
+Links/terminal commands to clone repository: 
+\begin{itemize}
+    \item HTTPS: https://github.com/Mikkelodeonn/optomechanics.git 
+    \item SSH: git@github.com:Mikkelodeonn/optomechanics.git
+    \item GitHub CLI: gh repo clone Mikkelodeonn/optomechanics
+\end{itemize}
+
+\clearpage
+\subsection{Additional Fano mirror spectra}\label{appendix:Additional Fano mirror characterizations}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/fano_mirror_M1_spectra.pdf}
+        \caption{}
+        \label{fig:M1_spectra}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/fano_mirror_M2_spectra.pdf}
+        \caption{}
+        \label{fig:M2_spectra}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/fano_mirror_M4_spectra.pdf}
+        \caption{}
+        \label{fig:M4_spectra}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{figures/results/fano_mirror_M7_spectra.pdf}
+        \caption{}
+        \label{fig_M7_spectra}
+    \end{subfigure}
+\end{figure}
+
+
+\clearpage
+\subsection{Simulated broadband and single Fano cavity resonance transmission spectra}\label{appendix:Simulated broadband and single Fano cavity resonance transmission spectra}
 
 \subsubsection*{(Figure \ref{fig:HWHM_broadband_vs_single_fano} in section \ref{sec:single_fano_cavity_trans_linewidth})}
 
@@ -38,7 +78,7 @@
 \end{figure}
 
 \clearpage
-\subsection{Simulated single and double Fano cavity resonance transmission spectra}
+\subsection{Simulated single and double Fano cavity resonance transmission spectra}\label{appendix:Simulated single and double Fano cavity resonance transmission spectra}
 
 \subsubsection*{(Figure \ref{fig:HWHM_double_vs_single_vs_broadband} in section \ref{sec:single_vs_double_comparison_theory})}
 
@@ -70,7 +110,7 @@
 \end{figure}
 
 \clearpage
-\subsection{Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}
+\subsection{Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}\label{appendix:Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}
 
 \subsubsection*{(Figure \ref{fig:HWHM_vs_losses_whole_figure} in section \ref{sec:additional_losses_theory})}
 
@@ -104,7 +144,7 @@
 \end{figure}
 
 \clearpage
-\subsection{Measured single Fano transmission data}
+\subsection{Measured single Fano transmission data}\label{appendix:Measured single Fano transmission data}
 
 \subsubsection*{(Figure \ref{fig:HWHM_vs_length_single_fano_data} in section \ref{sec:the_single_fano_cavity_results})}
 
@@ -302,7 +342,7 @@
 \end{figure}
 
 \clearpage
-\subsection{Measured double Fano transmission data}
+\subsection{Measured double Fano transmission data}\label{appendix:Measured double Fano transmission data}
 
 \subsubsection*{(Figure \ref{fig:HWHM_vs_l_double_fano_result} in section \ref{sec:the_double_fano_cavity_results})}
 
@@ -1125,12 +1165,3 @@
         \label{fig:21um_M3:M5_fit_14}
     \end{subfigure}
 \end{figure}
-
-\clearpage
-Things to add to appendix:
-\begin{itemize}
-    \item The derivation of equation \ref{eq:general_fano_model}
-    \item The derivation of equation \ref{eq:analytical_linewidth}
-    \item Same derivations for the double fano cavity.
-    \item Link to GitHub repo (data, scripts, figures, etc.)
-\end{itemize}

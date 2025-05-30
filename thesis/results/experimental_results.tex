@@ -20,7 +20,7 @@ The first important step in realizing the double Fano cavity, is to locate a mat
         \caption{}
         \label{}
     \end{subfigure}
-    \caption{(a) shows the normalized reflection and transmission spectra of Fano mirror G1 along with its optical parameters found as fitting parameters from a least squares fit to the model derived in section \ref{sec:fano_mirror}. (b) shows the same for Fano mirror G2.}
+    \caption{(a) shows the normalized reflection and transmission spectra of Fano mirror G1 along with its optical parameters found as fitting parameters from a least squares fit to the model derived in section \ref{sec:fano_mirror}. (b) shows the same for Fano mirror G2. Spectra of Fano mirrors that were characterized but not included in further experiments can be found in Appendix \ref{appendix:Additional Fano mirror characterizations}.}
     \label{fig:individual_G1_and_G2_spectra}
 \end{figure}
 
@@ -66,7 +66,7 @@ As is shown in section \ref{sec:spacial_detuning}, a spectral detuning leads to 
     \label{fig:G1/G2_length_scan}
 \end{figure}
 
-
+\clearpage
 \subsection{The single Fano cavity}\label{sec:the_single_fano_cavity_results}
 
 We recall that the single fano cavity consists of a Fano mirror and a broadband mirror in a plane-plane configurations where each mirror is perpendicular to the optical axis. The single Fano cavity configuration is briefly outlined in section \ref{sec:cavity_measurements} and otherwise shown in \cite{Mitra}, it however resembles the double Fano cavity setup shown in figure \ref{fig:cavity_setup}, except only the bottom two xy-stages are used, and the top ones are therefore removed.   
@@ -120,7 +120,7 @@ It is seen that the analytical model, the theoretically found linewidths and the
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/results/HWHM_vs_cavity_length_single_fano.pdf}
-    \caption{The linewidth (HWHM) as a function of resonant cavity length. The blue dashed line indicates the analytical linewidth for broadband cavity, and the orange dashed line shows the corresponding analytical linewidth for a single Fano cavity of similar losses to the one realized experimentally. The blue points and corresponding errorbars shows the measured linewidths found as averages of all recorded values at each length and the error is found as the standard deviation of these. The black points are the linewidths of simulated spectra.}
+    \caption{The linewidth (HWHM) as a function of resonant cavity length. The blue dashed line indicates the analytical linewidth for broadband cavity, and the orange dashed line shows the corresponding analytical linewidth for a single Fano cavity of similar losses to the one realized experimentally. The blue points and corresponding errorbars shows the measured linewidths found as averages of all recorded values at each length and the error is found as the standard deviation of these. The black points are the linewidths of simulated spectra. The spectra used to determine the points depicted can be found in Appendix \ref{appendix:Measured single Fano transmission data}.}
     \label{fig:HWHM_vs_length_single_fano_data}
 \end{figure}
 
@@ -165,9 +165,10 @@ The colormap provides a qualitative and intuitive image of the behaviour of the 
     \label{fig:G1/G2_lw_vs_cavity_length}
 \end{figure}
 
+\clearpage
 \subsubsection{Realizing the double fano model}\label{sec:realizing_the_double_fano_model}
 
-In order to realize the double Fano model in a satisfying way the whole spectrum is examined as the off-resonance profile resembling a low-finesse Fabry-Perot transmission spectrum, with near-unity transmission levels at each "Fabry-Perot" peak, is considered a defining feature of the double Fano cavity. In this section I will present three spectra obtained experimentally and compared with their corresponding simulated spectra for lengths $l=l_{G1}$, $l=l_{G2}$ and $l=(l_{G1} + l_{G2})/2$. Furthermore, I present the same spectra fitted to the double Fano cavity transmission model with fitting parameters given as the two sets of Fano mirror parameters, the cavity length and the resonant loss term $L$. The Fano mirror parameters found by the fitting function will thus be those that produce the reflection and transmission amplitude coefficients that best fit the data. 
+In order to realize the double Fano model in a satisfying way the whole spectrum is examined as the off-resonance profile resembling a low-finesse Fabry-Perot transmission spectrum, with near-unity transmission levels at each "Fabry-Perot" peak, is considered a defining feature of the double Fano cavity. In this section I will present three spectra obtained experimentally and compared with their corresponding simulated spectra for lengths $l=l_{G1}$, $l=l_{G2}$ and $l=(l_{G1} + l_{G2})/2$. Furthermore, I present the same spectra fitted to the double Fano cavity transmission model with varied fitting parameters. The first two spectra presented have been fitted with fitting parameters given as $\lambda_0$, $\lambda_1$, $\lambda_0^{\prime}$, $\lambda_1^{\prime}$, $l$ and $L$, where $l$ is the cavity length and $L = 1-|r|^2$ is the cavity losses. The last spectrum presented proved unable to agree well with the model given the aforementioned fitting parameters, and for this reason all Fano mirror parameters for both G1 and G2 are considered variable in this fit along with the cavity length $l$ and cavity losses $L$.
 
 \begin{figure}[h!]
     \centering
@@ -179,7 +180,7 @@ In order to realize the double Fano model in a satisfying way the whole spectrum
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/238um_long_scan_fit.pdf}
+        \includegraphics[width=\textwidth]{figures/results/238um_long_scan_fit2.pdf}
         \caption{}
         \label{fig:238um_long_scan_fit}
     \end{subfigure}
@@ -187,26 +188,23 @@ In order to realize the double Fano model in a satisfying way the whole spectrum
     \label{fig:238um_cavity_fit_and_sim}
 \end{figure}
 
-Figure \ref{fig:238um_long_scan_sim_comparison} show the comparison of data and simulation for a cavity of lengths given as $l_{G1} = 239.3975 \mu m$, $l_{G2} = 239.4317 \mu m$, $(l_{G1} + l_{G2})/2 = 239.4146 \mu m$. Figure \ref{fig:238um_long_scan_fit} shows a least squares fit of the data to the double Fano transmission function with fitting parameters related to each Fano mirror, and the cavity as follows.
-
-Fitting parameters related to Fano mirror G1:
+Figure \ref{fig:238um_long_scan_sim_comparison} show the comparison of data and simulation for a cavity of lengths given as $l_{G1} = 239.3975 \mu m$, $l_{G2} = 239.4317 \mu m$, $(l_{G1} + l_{G2})/2 = 239.4146 \mu m$. Figure \ref{fig:238um_long_scan_fit} shows a least squares fit of the recorded data to the double Fano transmission function with fitting parameters found as 
 \begin{equation}
-    \begin{split}
-        \lambda_0 = 9&51.330 \pm 0.072 \text{nm}, \:\: \lambda_1 = 951.328 \pm 0.110 \text{nm}, \:\: t_d = 0.827 \pm 0.016, \:\: \\&\gamma_{\lambda} = 0.641 \pm 0.131 \text{nm}, \:\: \beta = 1.819 \cdot 10^{-6} \pm 9.314 \cdot 10^{-7} \text{m}^{-1}.
-    \end{split}
+    \lambda_0 = 951.509 \pm 0.036 \text{nm}, \:\: \lambda_1 = 951.586 \pm 0.107 \text{nm}
 \end{equation}
 
-Fitting parameters related to Fano mirror G2:
+for Fano mirror G1,
+
 \begin{equation}
-    \begin{split}
-        \lambda_0 = 9&51.728 \pm 0.027 \text{nm}, \:\: \lambda_1 = 951.943 \pm 0.0428 \text{nm}, \:\: t_d = 0.823 \pm 0.015, \:\: \\&\gamma_{\lambda} = 0.535 \pm 0.056 \text{nm}, \:\: \beta = 7.788 \cdot 10^{-7} \pm 1.480 \cdot 10^{-7} \text{m}^{-1}.
-    \end{split}
+    \lambda_0 = 951.782 \pm 0.041 \text{nm}, \:\: \lambda_1 = 951.934 \pm 0.058 \text{nm}
 \end{equation}
 
-Fitting parameters related to the cavity configuration:
+for Fano mirror G2, and
+
 \begin{equation}
-    l = 238.924 \pm 0.002 \mu m, \:\: L = 0.039 \pm 0.099.
+    l = 238.925 \pm 0.002 \mu m, \:\: L = 0.178 \pm 0.038
 \end{equation}
+for the cavity configuration.
 
 \begin{figure}[h!]
     \centering
@@ -218,7 +216,7 @@ Fitting parameters related to the cavity configuration:
     \end{subfigure}
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures/results/129um_long_scan_fit.pdf}
+        \includegraphics[width=\textwidth]{figures/results/129um_long_scan_fit2.pdf}
         \caption{}
         \label{fig:129um_long_scan_fit}
     \end{subfigure}
@@ -226,26 +224,27 @@ Fitting parameters related to the cavity configuration:
     \label{fig:129um_cavity_fit_and_sim}
 \end{figure}
 
-Figure \ref{fig:129um_long_scan_sim_comparison} show the comparison of data and simulation for a cavity of lengths given as $l_{G1} = 140.4152 \mu m$, $l_{G2} = 140.4401 \mu m$, $(l_{G1} + l_{G2})/2 = 140.4277 \mu m$. Figure \ref{fig:129um_long_scan_fit} shows a least squares fit of the data to the double Fano transmission function with fitting parameters related to each Fano mirror, and the cavity as follows.
+Figure \ref{fig:129um_long_scan_sim_comparison} show the comparison of data and simulation for a cavity of lengths given as $l_{G1} = 140.4152 \mu m$, $l_{G2} = 140.4401 \mu m$, $(l_{G1} + l_{G2})/2 = 140.4277 \mu m$. Figure \ref{fig:129um_long_scan_fit} shows a least squares fit of the recorded data to the double Fano transmission function with fitting parameters found as 
 
-Fitting parameters related to Fano mirror G1:
 \begin{equation}
-    \begin{split}
-        \lambda_0 = 9&51.485 \pm 0.035 \text{nm}, \:\: \lambda_1 = 951.709 \pm 0.036 \text{nm}, \:\: t_d = 0.823 \pm 0.009, \:\: \\&\gamma_{\lambda} = 0.549 \pm 0.039 \text{nm}, \:\: \beta = 1.187 \cdot 10^{-6} \pm 2.810 \cdot 10^{-7} \text{m}^{-1}.
-    \end{split}
+    \lambda_0 = 951.546 \pm 0.015 \text{nm}, \:\: \lambda_1 = 951.719 \pm 0.040 \text{nm}
 \end{equation}
 
-Fitting parameters related to Fano mirror G2:
+for Fano mirror G1,
+
 \begin{equation}
-    \begin{split}
-        \lambda_0 = 9&51.799 \pm 0.020 \text{nm}, \:\: \lambda_1 = 951.852 \pm 0.0433 \text{nm}, \:\: t_d = 0.816 \pm 0.010, \:\: \\&\gamma_{\lambda} = 0.548 \pm 0.043 \text{nm}, \:\: \beta = 8.335 \cdot 10^{-7} \pm 1.105 \cdot 10^{-7} \text{m}^{-1}.
-    \end{split}
+    \lambda_0 = 951.868 \pm 0.016 \text{nm}, \:\: \lambda_1 = 951.963 \pm 0.039 \text{nm}
 \end{equation}
 
-Fitting parameters related to the cavity configuration:
+for Fano mirror G2, and
+
 \begin{equation}
-    l = 139.003 \pm 0.001 \mu m, \:\: L = 0.143 \pm 0.037.
+    l = 139.953 \pm 0.001 \mu m, \:\: L = 0.293 \pm 0.033
 \end{equation}
+
+for the cavity configuration.
+
+The additional optical parameters for G1 and G2, $t_d$, $\gamma_{\lambda}$ and $\beta$, are kept constant for the cavities of lengths $l\approx 239 \mu m$ and $l \approx 139 \mu m$, and thus identical for both cavities and their values given in eqs. (\ref{eq:G1_params}) and (\ref{eq:G2_params}). The choice of fixed and variable parameters in the least squares fits to the double Fano transmission model is justificed due to the angular dependence of the guided-mode resonance wavelength outlined in \cite{Parthenopoulos}, and this parameter will therefore potentially shift for different measurements. The additional optical parameters mentioned above have shown to be mostly constant, even for a slight misalignment, and these are thus kept constant. 
 
 \begin{figure}[h!]
     \centering
@@ -286,13 +285,15 @@ Cavity parameters:
     l = 30.984 \pm 0.006 \mu m, \:\: L = 0.017 \pm 0.184.
 \end{equation}
 
+As all parameters describing each Fano mirror and the cavity configuration are kept as variables, it is not surprising that this fit agrees very well with the recorded data. However, even though this discredits the validity of this fit as an argument for the realization of the presented model, it is worth noting that most of the parameters agree well with the ones presented in figure \ref{fig:individual_G1_and_G2_spectra}, within errors. The only exceptions are $\lambda_{0,G1}$, $\lambda_{1,G1}$ and $t_{d,G2}$, and considering that the discrepancy of the guided-mode resonance wavelength can be argued to be due to alignment variations, this fit too presents promising results for the realization of the model.
+
 \subsubsection*{Comparison with simulations}
 
 In all cases shown above the data and corresponding simulation shows remarkable overlap and agreement, as most data points are placed within, or very close to, the area enclosed by the simulations for the three considered cavity lengths. While this is only a qualitative measure, it indicates a high level of predictive strength of the model outlined in section \ref{sec:fano_mirror} and eq. (\ref{eq:double_fano_transmission}) and likewise for the experimental method used shown in section \ref{sec:cavity_measurements}.
 
 \subsubsection*{Fits to the double Fano model}
-
-All optical parameters for G1 and G2 found as fitting parameters of the double Fano model are approximately in agreement with the ones found for G1 and G2 in section \ref{sec:results_fano_mirror_characterization} which are the used to simulate the transmission spectra and assumed the baseline for determining the validity of the values found in this section. While they are only approximately in agreenment, the values tend to shift a little but based on the alignment of the experimental setup. With this in mind the optical parameters found provide a satisfactory foundation, along with the comparisons to the simulations, to conclude that the data recorded and analysed in fact realize the double Fano model proposed. Furthermore, the \emph{coefficient of determination}, or $r^2$-value of each of the fits are all >0.99. The $r^2$-value can also be creditted to the large number of free parameters in the fitting function, but it is nontheless strongly indicative that the data is well-described by the model. 
+ 
+All optical parameters for G1 and G2 found as fitting parameters of the double Fano model are approximately in agreement with the ones found for G1 and G2 in section \ref{sec:results_fano_mirror_characterization} which are the used to simulate the transmission spectra and assumed the baseline for determining the validity of the values found in this section. While they are only approximately in agreenment, the values tend to shift slightly based on the alignment of the experimental setup. With this in mind the optical parameters found provide a satisfactory foundation, along with the comparisons to the simulations, to present a strong argument for the realization of the double Fano model proposed. It must thought me noted that for a definitive realization, further experimental investigation and analysis is needed. 
 
 \subsubsection{The double fano linewidth}
 
@@ -345,7 +346,7 @@ It is seen that the analytical and simulated linewidths are strongly correlated,
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/results/double fano fits/HWHM_vs_cavity_length_result.pdf}
-    \caption{The linewidth (HWHM) as a function of resonant cavity length. The blue, orange and green dashed lines show the analytical linewidths of a broadband-, single Fano- and double Fano cavity of similar losses calculated using eqs. (\ref{eq:analytical_linewidth_broadband}), (\ref{eq:analytical_linewidth_single_fano}) and (\ref{eq:analytical_linewidth_double}) with the optical parameters for G1 and G2, respecitvely. The dark red point and corresponding errorbars shows the measured linewidths found as averages of all recorded values at each length and the error is found as the standard deviation of these. The black points are the linewidths of simulated spectra.}
+    \caption{The linewidth (HWHM) as a function of resonant cavity length. The blue, orange and green dashed lines show the analytical linewidths of a broadband-, single Fano- and double Fano cavity of similar losses calculated using eqs. (\ref{eq:analytical_linewidth_broadband}), (\ref{eq:analytical_linewidth_single_fano}) and (\ref{eq:analytical_linewidth_double}) with the optical parameters for G1 and G2, respecitvely. The dark red point and corresponding errorbars shows the measured linewidths found as averages of all recorded values at each length and the error is found as the standard deviation of these. The black points are the linewidths of simulated spectra. The spectra used to determine the points depicted can be found in Appendix \ref{appendix:Measured double Fano transmission data}.}
     \label{fig:HWHM_vs_l_double_fano_result}
 \end{figure}
 
@@ -417,20 +418,13 @@ Figure \ref{fig:HWHM_vs_l_double_fano_noisy} shows the best obtained measurement
         \caption{}
         \label{fig:G1_and_G2_double_fano_config_discussion}
     \end{subfigure}
-    \caption{(a) shows spectra of G1 and G2 measured individually. (b) shows spectra of G1 and G2 in the double Fano configuration i.e. where G2 is upside down.}
+    \caption{(a) shows spectra of G1 and G2 measured individually. (b) shows spectra of G1 and G2 in the double Fano configuration at a later time.}
     \label{fig:G1_and_G2_spectra_individual_and_in_double_fano_config}
 \end{figure}
 
-The spectra for G1 and G2 shown in figure \ref{fig:G1_and_G2_spectral_comparison} are taken individually and in the intial part of the project where finding a matching pair of Fano mirrors was the task at hand. Figure \ref{fig:G1_and_G2_initial_discussion} shows, once again, the spectra of G1 and G2 taken individually, while figure \ref{fig:G1_and_G2_double_fano_config_discussion} shows spectra taken for the two in the double Fano configuration, i.e. where G2 is placed upside down. 
+The spectra for G1 and G2 shown in figure \ref{fig:G1_and_G2_spectral_comparison} are taken individually and in the intial part of the project where finding a matching pair of Fano mirrors was the task at hand. Figure \ref{fig:G1_and_G2_initial_discussion} shows, once again, the spectra of G1 and G2 taken individually, while figure \ref{fig:G1_and_G2_double_fano_config_discussion} shows spectra taken for the two in the double Fano configuration at a later time.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/upside_down_membrane_sketch.pdf}
-    \caption{Sketch illustrating the dicrepancy between measuring the spectra of a given Fano mirror for the scenario where the beam enters the bare SiN membrane first, then patterned SiN membrane, and the opposite scenario. It seems that the direction of incidence when characterizing the Fano mirrors shifts the guided-mode resonance wavelength slightly.}
-    \label{fig:upside_down_membrane_sketch}
-\end{figure}
-
-It is apparent that while the spectra for G1 is virtually unchanged, the same cannot be said for the spectra of G2 as this has clearly shifted to a slightly higher guided-mode resonance. This artifact of the double Fano cavity configuration has not been investigated in depth, but it can be argued that the interface from bare SiN into patterned SiN is not invariant from its opposite. The two scenarios are simply sketched in figure \ref{fig:upside_down_membrane_sketch}, outlining the claim that these somehow does not produce identical spectra.
+It is apparent that while the spectra for G1 is virtually unchanged, the same cannot be said for the spectra of G2 as this has clearly shifted to a slightly higher guided-mode resonance. This artifact has been observed several times in both this project and related projects in the same lab, as the resonance wavelength of \emph{some} SiN sub-wavelength gratings tends to shift with time. An in-depth investigation of this behavior have to my knowledge not been conducted, however it is something that must be taken into account when evaluating recorded data. One considerable consequence of this is that all data presented must be recorded in the same measurement series, as measurements done on different days cannot be compared. It must be noted that the resonant guided-mode wavelength is very dependent on the alignment of a given Fano mirror, which could influence this apparent artifact, it is however also apparent that the resonance tends to systematically shift to higher wavelengths only. 
 
 \subsubsection{Potential broadening due to walk-off effect}
 

@@ -14,12 +14,12 @@ In order to effectively conduct the experiments in this project, it is imperativ
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.74\textwidth}
+    \begin{subfigure}[b]{0.72\textwidth}
         \includegraphics[width=\textwidth]{figures/setup_skecth_zoomed.pdf}
         \caption{}
         \label{fig:setup_zoomed}
     \end{subfigure}
-    \begin{subfigure}[b]{0.25\textwidth}
+    \begin{subfigure}[b]{0.27\textwidth}
         \includegraphics[width=\textwidth]{figures/setup_cavity_picture.pdf}
         \caption{}
         \label{fig:cavity_setup_picture}
@@ -108,7 +108,7 @@ The part of the light incident on the target that is \emph{not} transmitted, is 
 
 \subsubsection{The double Fano cavity measurement setup}
 
-The cavity measurement setup shown in figure \ref{fig:setup_zoomed} is the one used to measure the transmission spectrum of a double Fano cavity consisting of two Fano mirrors. This part of the setup consists of two sets of standard \emph{PT1} $\mu m$-stages from Thorlabs combined to provide precise movement of each Fano mirror in the xy-plane. 
+The cavity measurement setup shown in figure \ref{fig:setup_zoomed} is the one used to measure the transmission spectrum of a double Fano cavity consisting of two Fano mirrors. This part of the setup consists of one set of standard \emph{PT1} $\mu m$-stages from Thorlabs combined with an additional set of \emph{XRN25/M} stages, also from Thorlabs, to provide precise movement of each Fano mirror in the xy-plane. 
 
 \begin{figure}[h!]
     \centering
@@ -159,7 +159,7 @@ What has been outlined here is the setup utilized to optically characterize the 
 
 \subsubsection{Vibrational noise reduction}\label{sec:vibrational_noise_reduction}
 
-When the cavity measurements were conducted it was apparent that the double Fano cavity was particularly prone to noise. While noise is not a very precise definition in its own, it did seem that the most prominent source was associated with the length of the cavity $l$. When applying a constant voltage to the piezo element depicted in figure \ref{fig:setup_bottom_sketch_and_pic}, in order to achieve the correct length for sustaining the Fano resonance, the level started to fluctuate dramatically when approaching the resonance. 
+When the cavity measurements were conducted it was apparent that the double Fano cavity was particularly prone to noise. While noise is not a very precise definition in its own, it did seem that the most prominent source was associated with the length of the cavity $l$. When applying a constant voltage to the piezo element depicted in figure \ref{fig:setup_bottom_sketch_and_pic}, in order to achieve the correct length for sustaining the Fano resonance, the signal started to fluctuate dramatically when approaching the resonance. 
 
 \begin{figure}[h!]
     \centering
@@ -181,7 +181,9 @@ When the cavity measurements were conducted it was apparent that the double Fano
 
 By examining the characteristics of the noise when apparent, the source appeared to be acoustic in origin, i.e. making a sudden sound in close vicinity of the setup caused a spike in the noise level.
 
-In order to reduce the acoustic noise, a plexi-glas box was placed around the entire setup as seen in figure \ref{fig:noise_box}. This proved to reduce the noise, and this improve the signal-to-noise, ratio substantially.
+In order to reduce the acoustic noise, a plexi-glas box was placed around the entire setup as seen in figure \ref{fig:noise_box}. This proved to reduce the noise, and this improve the signal-to-noise ratio substantially.
+
+While the signal-to-noise ratio was improved, the noise was still there, and thus additional measures in order to reduce this was taken. Two slabs of \emph{teflon} were introduced into the setup, one between the optical table and the first xy-stage in the cavity setup, and the next between the first and second xy-stage. The reasononing behind this imlpementation relied on the difference in acoustic impedence of teflon relative to aluminum. A high change in acoustic impedence creates an interface which should reflect any unwanted vibrations propagating through the optical table. This further reduced the noise, while it regretably did not remove it completely. 
 
 \subsubsection{Additional equipment used}
 

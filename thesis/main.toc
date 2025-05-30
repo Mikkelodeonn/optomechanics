@@ -1,4 +1,4 @@
-\contentsline {section}{\numberline {}Abstract}{iii}{}%
+\contentsline {section}{\numberline {}Abstract}{iv}{}%
 \contentsline {section}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {2}Theory}{4}{}%
 \contentsline {subsection}{\numberline {2.1}The Fabry-Perot interferometer}{4}{}%
@@ -28,38 +28,40 @@
 \contentsline {subsubsection}{\numberline {3.1.4}Transmission, reflection and incident photo-detectors}{40}{}%
 \contentsline {subsubsection}{\numberline {3.1.5}The double Fano cavity measurement setup}{41}{}%
 \contentsline {subsubsection}{\numberline {3.1.6}Vibrational noise reduction}{44}{}%
-\contentsline {subsubsection}{\numberline {3.1.7}Additional equipment used}{44}{}%
+\contentsline {subsubsection}{\numberline {3.1.7}Additional equipment used}{45}{}%
 \contentsline {subsection}{\numberline {3.2}Characterization of sub-wavelength grating}{45}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}The alignment procedure}{45}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Adjusting and measuring the beam waist}{48}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}The alignment procedure}{46}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Adjusting and measuring the beam waist}{49}{}%
 \contentsline {subsubsection}{\numberline {3.2.3}Obtaining normalized transmission/reflection spectra}{50}{}%
-\contentsline {subsection}{\numberline {3.3}Cavity measurements}{51}{}%
+\contentsline {subsection}{\numberline {3.3}Cavity measurements}{52}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Aligning the double Fano cavity}{52}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Cavity resonance - the piezo ring}{54}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Cavity resonance - the piezo ring}{55}{}%
 \contentsline {subsubsection}{\numberline {3.3.3}Determining the cavity length}{57}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}Recording normalized spectra}{57}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Centering of the top grating}{59}{}%
-\contentsline {subsubsection}{\numberline {3.3.6}Estimating parallelism}{62}{}%
-\contentsline {section}{\numberline {4}Results}{64}{}%
-\contentsline {subsection}{\numberline {4.1}Fano mirror characterization}{64}{}%
-\contentsline {subsection}{\numberline {4.2}The single Fano cavity}{66}{}%
-\contentsline {subsection}{\numberline {4.3}The double Fano cavity}{70}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Realizing the double fano model}{72}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}The double fano linewidth}{77}{}%
-\contentsline {subsection}{\numberline {4.4}Additional discussion}{80}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Vibrational noise}{80}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Guided-mode resonance shift}{82}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Potential broadening due to walk-off effect}{84}{}%
-\contentsline {section}{\numberline {5}Conclussion}{86}{}%
-\contentsline {subsection}{\numberline {5.1}Outlook}{86}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Matching analytical and experimental linewidths}{86}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}Optomechanics with the double Fano cavity}{87}{}%
-\contentsline {subsubsection}{\numberline {5.1.3}Sensing applications of the double Fano cavity}{87}{}%
-\contentsline {subsubsection}{\numberline {5.1.4}Fano laser based on bound states in the continuum}{87}{}%
-\contentsline {section}{\numberline {}References}{89}{}%
-\contentsline {section}{Appendices}{94}{}%
-\contentsline {subsection}{\numberline {A}Simulated broadband and single Fano cavity resonance transmission spectra}{94}{}%
-\contentsline {subsection}{\numberline {B}Simulated single and double Fano cavity resonance transmission spectra}{96}{}%
-\contentsline {subsection}{\numberline {C}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{97}{}%
-\contentsline {subsection}{\numberline {D}Measured single Fano transmission data}{98}{}%
-\contentsline {subsection}{\numberline {E}Measured double Fano transmission data}{105}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Recording normalized spectra}{58}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Centering of the top grating}{60}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Estimating parallelism}{61}{}%
+\contentsline {section}{\numberline {4}Results}{65}{}%
+\contentsline {subsection}{\numberline {4.1}Fano mirror characterization}{65}{}%
+\contentsline {subsection}{\numberline {4.2}The single Fano cavity}{69}{}%
+\contentsline {subsection}{\numberline {4.3}The double Fano cavity}{72}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Realizing the double fano model}{76}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}The double fano linewidth}{80}{}%
+\contentsline {subsection}{\numberline {4.4}Additional discussion}{83}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Vibrational noise}{83}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Guided-mode resonance shift}{86}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Potential broadening due to walk-off effect}{87}{}%
+\contentsline {section}{\numberline {5}Conclusion}{89}{}%
+\contentsline {subsection}{\numberline {5.1}Outlook}{89}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Matching analytical and experimental linewidths}{89}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Optomechanics with the double Fano cavity}{90}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}Sensing applications of the double Fano cavity}{90}{}%
+\contentsline {subsubsection}{\numberline {5.1.4}Fano laser based on bound states in the continuum}{90}{}%
+\contentsline {section}{\numberline {}References}{92}{}%
+\contentsline {section}{Appendices}{97}{}%
+\contentsline {subsection}{\numberline {A}GitHub}{97}{}%
+\contentsline {subsection}{\numberline {B}Additional Fano mirror spectra}{98}{}%
+\contentsline {subsection}{\numberline {C}Simulated broadband and single Fano cavity resonance transmission spectra}{99}{}%
+\contentsline {subsection}{\numberline {D}Simulated single and double Fano cavity resonance transmission spectra}{101}{}%
+\contentsline {subsection}{\numberline {E}Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}{102}{}%
+\contentsline {subsection}{\numberline {F}Measured single Fano transmission data}{103}{}%
+\contentsline {subsection}{\numberline {G}Measured double Fano transmission data}{110}{}%

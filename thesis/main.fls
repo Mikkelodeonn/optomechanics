@@ -183,8 +183,8 @@ OUTPUT titlepage.aux
 INPUT ./titlepage.tex
 INPUT ./titlepage.tex
 INPUT titlepage.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm3583.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx3583.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm2986.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx2986.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT ./figures/au_logo.png
@@ -808,21 +808,21 @@ INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/238um_long_scan_sim_comparison.pdf
-INPUT ./figures/results/238um_long_scan_fit.pdf
-INPUT ./figures/results/238um_long_scan_fit.pdf
-INPUT ./figures/results/238um_long_scan_fit.pdf
-INPUT ./figures/results/238um_long_scan_fit.pdf
-INPUT ./figures/results/238um_long_scan_fit.pdf
+INPUT ./figures/results/238um_long_scan_fit2.pdf
+INPUT ./figures/results/238um_long_scan_fit2.pdf
+INPUT ./figures/results/238um_long_scan_fit2.pdf
+INPUT ./figures/results/238um_long_scan_fit2.pdf
+INPUT ./figures/results/238um_long_scan_fit2.pdf
 INPUT ./figures/results/129um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/129um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/129um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/129um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/129um_long_scan_sim_comparison.pdf
-INPUT ./figures/results/129um_long_scan_fit.pdf
-INPUT ./figures/results/129um_long_scan_fit.pdf
-INPUT ./figures/results/129um_long_scan_fit.pdf
-INPUT ./figures/results/129um_long_scan_fit.pdf
-INPUT ./figures/results/129um_long_scan_fit.pdf
+INPUT ./figures/results/129um_long_scan_fit2.pdf
+INPUT ./figures/results/129um_long_scan_fit2.pdf
+INPUT ./figures/results/129um_long_scan_fit2.pdf
+INPUT ./figures/results/129um_long_scan_fit2.pdf
+INPUT ./figures/results/129um_long_scan_fit2.pdf
 INPUT ./figures/results/34um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/34um_long_scan_sim_comparison.pdf
 INPUT ./figures/results/34um_long_scan_sim_comparison.pdf
@@ -887,11 +887,6 @@ INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
 INPUT ./figures/results/M3:M5/M3:M5_spectra_at_measurement.pdf
-INPUT ./figures/upside_down_membrane_sketch.pdf
-INPUT ./figures/upside_down_membrane_sketch.pdf
-INPUT ./figures/upside_down_membrane_sketch.pdf
-INPUT ./figures/upside_down_membrane_sketch.pdf
-INPUT ./figures/upside_down_membrane_sketch.pdf
 INPUT ./figures/walk_off_sketch.pdf
 INPUT ./figures/walk_off_sketch.pdf
 INPUT ./figures/walk_off_sketch.pdf
@@ -915,879 +910,899 @@ INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT Appendix.tex
-INPUT ./figures/sim_single_vs_broadband_10um.pdf
-INPUT ./figures/sim_single_vs_broadband_10um.pdf
-INPUT ./figures/sim_single_vs_broadband_10um.pdf
-INPUT ./figures/sim_single_vs_broadband_10um.pdf
-INPUT ./figures/sim_single_vs_broadband_30um.pdf
-INPUT ./figures/sim_single_vs_broadband_30um.pdf
-INPUT ./figures/sim_single_vs_broadband_30um.pdf
-INPUT ./figures/sim_single_vs_broadband_30um.pdf
-INPUT ./figures/sim_single_vs_broadband_30um.pdf
-INPUT ./figures/sim_single_vs_broadband_90um.pdf
-INPUT ./figures/sim_single_vs_broadband_90um.pdf
-INPUT ./figures/sim_single_vs_broadband_90um.pdf
-INPUT ./figures/sim_single_vs_broadband_90um.pdf
-INPUT ./figures/sim_single_vs_broadband_90um.pdf
-INPUT ./figures/sim_single_vs_broadband_270um.pdf
-INPUT ./figures/sim_single_vs_broadband_270um.pdf
-INPUT ./figures/sim_single_vs_broadband_270um.pdf
-INPUT ./figures/sim_single_vs_broadband_270um.pdf
-INPUT ./figures/sim_single_vs_broadband_810um.pdf
-INPUT ./figures/sim_single_vs_broadband_810um.pdf
-INPUT ./figures/sim_single_vs_broadband_810um.pdf
-INPUT ./figures/sim_single_vs_broadband_810um.pdf
-INPUT ./figures/sim_single_vs_broadband_810um.pdf
-INPUT ./figures/sim_single_vs_double_10um.pdf
-INPUT ./figures/sim_single_vs_double_10um.pdf
-INPUT ./figures/sim_single_vs_double_10um.pdf
-INPUT ./figures/sim_single_vs_double_10um.pdf
-INPUT ./figures/sim_single_vs_double_30um.pdf
-INPUT ./figures/sim_single_vs_double_30um.pdf
-INPUT ./figures/sim_single_vs_double_30um.pdf
-INPUT ./figures/sim_single_vs_double_30um.pdf
-INPUT ./figures/sim_single_vs_double_30um.pdf
-INPUT ./figures/sim_single_vs_double_90um.pdf
-INPUT ./figures/sim_single_vs_double_90um.pdf
-INPUT ./figures/sim_single_vs_double_90um.pdf
-INPUT ./figures/sim_single_vs_double_90um.pdf
-INPUT ./figures/sim_single_vs_double_90um.pdf
-INPUT ./figures/sim_single_vs_double_270um.pdf
-INPUT ./figures/sim_single_vs_double_270um.pdf
-INPUT ./figures/sim_single_vs_double_270um.pdf
-INPUT ./figures/sim_single_vs_double_270um.pdf
-INPUT ./figures/sim_single_vs_double_810um.pdf
-INPUT ./figures/sim_single_vs_double_810um.pdf
-INPUT ./figures/sim_single_vs_double_810um.pdf
-INPUT ./figures/sim_single_vs_double_810um.pdf
-INPUT ./figures/sim_single_vs_double_810um.pdf
-INPUT ./figures/double_1percent_loss_30um.pdf
-INPUT ./figures/double_1percent_loss_30um.pdf
-INPUT ./figures/double_1percent_loss_30um.pdf
-INPUT ./figures/double_1percent_loss_30um.pdf
-INPUT ./figures/double_2percent_loss_30um.pdf
-INPUT ./figures/double_2percent_loss_30um.pdf
-INPUT ./figures/double_2percent_loss_30um.pdf
-INPUT ./figures/double_2percent_loss_30um.pdf
-INPUT ./figures/double_2percent_loss_30um.pdf
-INPUT ./figures/double_4percent_loss_30um.pdf
-INPUT ./figures/double_4percent_loss_30um.pdf
-INPUT ./figures/double_4percent_loss_30um.pdf
-INPUT ./figures/double_4percent_loss_30um.pdf
-INPUT ./figures/double_4percent_loss_30um.pdf
-INPUT ./figures/double_8percent_loss_30um.pdf
-INPUT ./figures/double_8percent_loss_30um.pdf
-INPUT ./figures/double_8percent_loss_30um.pdf
-INPUT ./figures/double_8percent_loss_30um.pdf
-INPUT ./figures/double_16percent_loss_30um.pdf
-INPUT ./figures/double_16percent_loss_30um.pdf
-INPUT ./figures/double_16percent_loss_30um.pdf
-INPUT ./figures/double_16percent_loss_30um.pdf
-INPUT ./figures/double_16percent_loss_30um.pdf
-INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
-INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
-INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
-INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
-INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT ./figures/results/fano_mirror_M1_spectra.pdf
+INPUT ./figures/results/fano_mirror_M1_spectra.pdf
+INPUT ./figures/results/fano_mirror_M1_spectra.pdf
+INPUT ./figures/results/fano_mirror_M1_spectra.pdf
+INPUT ./figures/results/fano_mirror_M1_spectra.pdf
+INPUT ./figures/results/fano_mirror_M2_spectra.pdf
+INPUT ./figures/results/fano_mirror_M2_spectra.pdf
+INPUT ./figures/results/fano_mirror_M2_spectra.pdf
+INPUT ./figures/results/fano_mirror_M2_spectra.pdf
+INPUT ./figures/results/fano_mirror_M2_spectra.pdf
+INPUT ./figures/results/fano_mirror_M4_spectra.pdf
+INPUT ./figures/results/fano_mirror_M4_spectra.pdf
+INPUT ./figures/results/fano_mirror_M4_spectra.pdf
+INPUT ./figures/results/fano_mirror_M4_spectra.pdf
+INPUT ./figures/results/fano_mirror_M4_spectra.pdf
+INPUT ./figures/results/fano_mirror_M7_spectra.pdf
+INPUT ./figures/results/fano_mirror_M7_spectra.pdf
+INPUT ./figures/results/fano_mirror_M7_spectra.pdf
+INPUT ./figures/results/fano_mirror_M7_spectra.pdf
+INPUT ./figures/results/fano_mirror_M7_spectra.pdf
+INPUT ./figures/sim_single_vs_broadband_10um.pdf
+INPUT ./figures/sim_single_vs_broadband_10um.pdf
+INPUT ./figures/sim_single_vs_broadband_10um.pdf
+INPUT ./figures/sim_single_vs_broadband_10um.pdf
+INPUT ./figures/sim_single_vs_broadband_30um.pdf
+INPUT ./figures/sim_single_vs_broadband_30um.pdf
+INPUT ./figures/sim_single_vs_broadband_30um.pdf
+INPUT ./figures/sim_single_vs_broadband_30um.pdf
+INPUT ./figures/sim_single_vs_broadband_30um.pdf
+INPUT ./figures/sim_single_vs_broadband_90um.pdf
+INPUT ./figures/sim_single_vs_broadband_90um.pdf
+INPUT ./figures/sim_single_vs_broadband_90um.pdf
+INPUT ./figures/sim_single_vs_broadband_90um.pdf
+INPUT ./figures/sim_single_vs_broadband_90um.pdf
+INPUT ./figures/sim_single_vs_broadband_270um.pdf
+INPUT ./figures/sim_single_vs_broadband_270um.pdf
+INPUT ./figures/sim_single_vs_broadband_270um.pdf
+INPUT ./figures/sim_single_vs_broadband_270um.pdf
+INPUT ./figures/sim_single_vs_broadband_810um.pdf
+INPUT ./figures/sim_single_vs_broadband_810um.pdf
+INPUT ./figures/sim_single_vs_broadband_810um.pdf
+INPUT ./figures/sim_single_vs_broadband_810um.pdf
+INPUT ./figures/sim_single_vs_broadband_810um.pdf
+INPUT ./figures/sim_single_vs_double_10um.pdf
+INPUT ./figures/sim_single_vs_double_10um.pdf
+INPUT ./figures/sim_single_vs_double_10um.pdf
+INPUT ./figures/sim_single_vs_double_10um.pdf
+INPUT ./figures/sim_single_vs_double_30um.pdf
+INPUT ./figures/sim_single_vs_double_30um.pdf
+INPUT ./figures/sim_single_vs_double_30um.pdf
+INPUT ./figures/sim_single_vs_double_30um.pdf
+INPUT ./figures/sim_single_vs_double_30um.pdf
+INPUT ./figures/sim_single_vs_double_90um.pdf
+INPUT ./figures/sim_single_vs_double_90um.pdf
+INPUT ./figures/sim_single_vs_double_90um.pdf
+INPUT ./figures/sim_single_vs_double_90um.pdf
+INPUT ./figures/sim_single_vs_double_90um.pdf
+INPUT ./figures/sim_single_vs_double_270um.pdf
+INPUT ./figures/sim_single_vs_double_270um.pdf
+INPUT ./figures/sim_single_vs_double_270um.pdf
+INPUT ./figures/sim_single_vs_double_270um.pdf
+INPUT ./figures/sim_single_vs_double_810um.pdf
+INPUT ./figures/sim_single_vs_double_810um.pdf
+INPUT ./figures/sim_single_vs_double_810um.pdf
+INPUT ./figures/sim_single_vs_double_810um.pdf
+INPUT ./figures/sim_single_vs_double_810um.pdf
+INPUT ./figures/double_1percent_loss_30um.pdf
+INPUT ./figures/double_1percent_loss_30um.pdf
+INPUT ./figures/double_1percent_loss_30um.pdf
+INPUT ./figures/double_1percent_loss_30um.pdf
+INPUT ./figures/double_2percent_loss_30um.pdf
+INPUT ./figures/double_2percent_loss_30um.pdf
+INPUT ./figures/double_2percent_loss_30um.pdf
+INPUT ./figures/double_2percent_loss_30um.pdf
+INPUT ./figures/double_2percent_loss_30um.pdf
+INPUT ./figures/double_4percent_loss_30um.pdf
+INPUT ./figures/double_4percent_loss_30um.pdf
+INPUT ./figures/double_4percent_loss_30um.pdf
+INPUT ./figures/double_4percent_loss_30um.pdf
+INPUT ./figures/double_4percent_loss_30um.pdf
+INPUT ./figures/double_8percent_loss_30um.pdf
+INPUT ./figures/double_8percent_loss_30um.pdf
+INPUT ./figures/double_8percent_loss_30um.pdf
+INPUT ./figures/double_8percent_loss_30um.pdf
+INPUT ./figures/double_16percent_loss_30um.pdf
+INPUT ./figures/double_16percent_loss_30um.pdf
+INPUT ./figures/double_16percent_loss_30um.pdf
+INPUT ./figures/double_16percent_loss_30um.pdf
+INPUT ./figures/double_16percent_loss_30um.pdf
+INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/220um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/120um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/60um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/5um_off_res_fabry_perot.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/220um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/120um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/60um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/5um_M5_simfit.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/380um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/220um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/120um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/60um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_1.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_2.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_3.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
+INPUT ./figures/results/single fano fits/5um_M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_simfit.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/1000um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/550um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/320um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/250um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/120um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/70um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/30um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_FSR_scan.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/453um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/323um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/251um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/83um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/53um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
+INPUT ./figures/results/double fano fits/20250326/33um_M3:M5_fit_15.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_1.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_2.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_3.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_4.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_5.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_6.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_7.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_8.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_9.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_10.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_11.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_12.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_13.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
+INPUT ./figures/results/double fano fits/20250326/21um_M3:M5_fit_14.pdf
 INPUT main.aux
 INPUT ./titlepage.aux
 INPUT ./titlepage.aux
@@ -1806,7 +1821,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx3583.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
