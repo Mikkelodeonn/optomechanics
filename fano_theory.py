@@ -71,9 +71,9 @@ mist_r = [(1-eps)*r for r in mist_ref[1]]
 
 #λs = np.linspace(, 952.5, 500)
 #λs = np.linspace(951.65, 951.95, 500)
-#λs = np.linspace(g1data[:,0][0]-1, g1data[:,0][-1]+1, 100)
+λs = np.linspace(g1data[:,0][0], g1data[:,0][-1], len(g1data[:,0]))
 #λs = np.linspace(mist_ref[0][0], mist_ref[0][-1], len(mist_ref[0]))
-λs = np.linspace(951.5, 952.1, 10000)
+#λs = np.linspace(951.5, 952.1, 10000)
 lmin = 29.9
 #L = 0.016
 Δ = 0.0
@@ -1236,7 +1236,7 @@ data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/dat
 PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")
 norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")
 norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")
-λs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
+#λs = np.linspace(data[:,0][0], data[:,0][-1], 10000)
 
 lmin = 33
 l1 = (double_cavity_length(G1, G2, λs, lmin=lmin, losses=True) + double_cavity_length(G2, G1, λs, lmin=lmin, losses=True))/2
@@ -1268,14 +1268,14 @@ ts_g2 = model(λs_fit, *paramsg2)
 rparamsg1, rpcovg1 = curve_fit(model, λs, rs_g1, p0=p0)
 rparamsg2, rpcovg2 = curve_fit(model, λs, rs_g2, p0=p0)
 
-#plt.scatter(λs, rs_g1, marker=".", color="firebrick", label="$R_{G1}$ (sim.)")
-#plt.scatter(λs, rs_g2, marker=".", color="darkred", label="$R_{G2}$ (sim.)")
-#plt.plot(λs_fit, ts_g1, color="royalblue", alpha=0.4)
-#plt.plot(λs_fit, ts_g2, color="blueviolet", alpha=0.4)
-#plt.plot(λs_fit, model(λs_fit, *rparamsg1), color="firebrick", alpha=0.4)
-#plt.plot(λs_fit, model(λs_fit, *rparamsg2), color="darkred", alpha=0.4)
-#plt.scatter(g1data[:,0], g1data[:,1], marker=".", color="royalblue", label="$T_{G1}$ (data)")
-#plt.scatter(g2data[:,0], g2data[:,1], marker=".", color="blueviolet", label="$T_{G2}$ (data)")
+plt.scatter(λs, rs_g1, marker=".", color="indianred", label="$R_{G1}$ (sim.)")
+plt.scatter(λs, rs_g2, marker=".", color="darkred", label="$R_{G2}$ (sim.)")
+plt.plot(λs_fit, ts_g1, color="skyblue", alpha=0.5, label = "$\\lambda_{0,G1} =$ %snm" % str(round(paramsg1[0],3)))
+plt.plot(λs_fit, ts_g2, color="darkblue", alpha=0.5, label = "$\\lambda_{0,G2} =$ %snm" % str(round(paramsg2[0],3)))
+plt.plot(λs_fit, model(λs_fit, *rparamsg1), color="indianred", alpha=0.4)
+plt.plot(λs_fit, model(λs_fit, *rparamsg2), color="darkred", alpha=0.4)
+plt.scatter(g1data[:,0], g1data[:,1], marker=".", color="skyblue", label="$T_{G1}$ (data)")
+plt.scatter(g2data[:,0], g2data[:,1], marker=".", color="darkblue", label="$T_{G2}$ (data)")
 
 lmin=385
 
@@ -1322,22 +1322,23 @@ g1tparams, g1tpcov = curve_fit(model, λs, ts2, p0=[951.86,951.86,0.5,0.1,1e-6],
 #plt.scatter(M3_0523[:,0], rdata2, marker=".", color="darkred", label='$R_{G2}$ (sim.)')
 #plt.plot(λs_fit, model(λs_fit, *rparams2), 'darkred', alpha=0.4)
 
-plt.plot(λs, G_ts1, color="forestgreen", linestyle="--", label="$l = (l_{G1} + l_{G2})/2$")
-plt.plot(λs, G_ts2, color="orangered", linestyle="-.", label="$l = l_{G1}$")
-plt.plot(λs, G_ts3, color="cornflowerblue", linestyle="-.", label="$l = l_{G2}$")
-plt.scatter(data[:,0], data[:,1], marker=".", color="maroon", label="data", zorder=4)
+#plt.plot(λs, G_ts1, color="forestgreen", linestyle="--", label="$l = (l_{G1} + l_{G2})/2$")
+#plt.plot(λs, G_ts2, color="orangered", linestyle="-.", label="$l = l_{G1}$")
+#plt.plot(λs, G_ts3, color="cornflowerblue", linestyle="-.", label="$l = l_{G2}$")
+#plt.scatter(data[:,0], data[:,1], marker=".", color="maroon", label="data", zorder=4)
 
 plt.xlabel("wavelength [nm]", fontsize=28)
 plt.xticks(fontsize=21)
 plt.yticks(fontsize=21)
-#plt.ylabel("norm. ref./trans.", fontsize=28)
+plt.ylabel("norm. ref./trans.", fontsize=28)
 #plt.ylim((0,1))
-plt.ylabel("norm. trans.", fontsize=28)
+#plt.ylabel("norm. trans.", fontsize=28)
 #plt.ylabel("intensity [arb. u.]", fontsize=28)
 plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
 plt.subplots_adjust(bottom=0.3)
 plt.grid(alpha=0.3)
 plt.locator_params(axis='x', tight=True, nbins=8)
+plt.ylim((0,1))
 plt.show()
 
 #Δs = [0, 0.2, 0.5, 0.8, 1.2]

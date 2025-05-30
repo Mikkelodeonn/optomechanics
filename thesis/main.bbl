@@ -2250,14 +2250,104 @@
       \field{volume}{26}
       \field{year}{2018}
     \endentry
-    \entry{edmund_optics}{online}{}
+    \entry{Toptica_laser}{online}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \verb{urlraw}
+      \verb https://www.toptica.com/products/tunable-diode-lasers/ecdl-dfb-lasers/dl-pro
+      \endverb
+      \verb{url}
+      \verb https://www.toptica.com/products/tunable-diode-lasers/ecdl-dfb-lasers/dl-pro
+      \endverb
+    \endentry
+    \entry{single_mode_fiber}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=P3-780PM-FC-10
+      \endverb
+      \verb{url}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=P3-780PM-FC-10
+      \endverb
+    \endentry
+    \entry{edmund_optics}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \verb{urlraw}
       \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
       \endverb
       \verb{url}
       \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
+      \endverb
+    \endentry
+    \entry{thorlabs_stage1}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=PT1#ad-image
+      \endverb
+      \verb{url}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=PT1#ad-image
+      \endverb
+    \endentry
+    \entry{thorlabs_stage2}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=11015
+      \endverb
+      \verb{url}
+      \verb https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=11015
+      \endverb
+    \endentry
+    \entry{piezo_actuator}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb http://www.noliac.com/card/show/nac2123/
+      \endverb
+      \verb{url}
+      \verb http://www.noliac.com/card/show/nac2123/
+      \endverb
+    \endentry
+    \entry{z_stage}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=NFL5DP20/M
+      \endverb
+      \verb{url}
+      \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=NFL5DP20/M
+      \endverb
+    \endentry
+    \entry{oscilloscope}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.keysight.com/us/en/product/DSOX2024A/oscilloscope-200-mhz-4-analog-channels.html
+      \endverb
+      \verb{url}
+      \verb https://www.keysight.com/us/en/product/DSOX2024A/oscilloscope-200-mhz-4-analog-channels.html
+      \endverb
+    \endentry
+    \entry{frequency_generator}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.keysight.com/us/en/assets/7018-05928/data-sheets/5992-2572.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.keysight.com/us/en/assets/7018-05928/data-sheets/5992-2572.pdf
+      \endverb
+    \endentry
+    \entry{power_meter}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \verb{urlraw}
+      \verb https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3341
+      \endverb
+      \verb{url}
+      \verb https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3341
       \endverb
     \endentry
     \entry{Sadov}{article}{}
@@ -2282,8 +2372,8 @@
       \strng{authorbibnamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authornamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authorfullhash}{05158f4a7d58644933e03740707220ff}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Opt. Soc. Am. A}
@@ -2336,8 +2426,8 @@
       \strng{authorbibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
       \strng{authornamehash}{2055001139a1ec9bb7f96e93eabe2266}
       \strng{authorfullhash}{136f5c683f02be9ae16a4266affd5a23}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{213 nm and 532 nm solid state laser treatment of biogenetical fibrous materials}
@@ -2365,8 +2455,8 @@
       \strng{authorbibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
       \strng{authornamehash}{1b1d3769e8af49081bccd1e1c4b97677}
       \strng{authorfullhash}{1b1d3769e8af49081bccd1e1c4b97677}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Measurements and their Uncertainties - A Practical Guide to Modern Error Analysis}
@@ -2396,8 +2486,8 @@
       \strng{authorbibnamehash}{9e01d878851fa33384ec47f56505b71e}
       \strng{authornamehash}{9e01d878851fa33384ec47f56505b71e}
       \strng{authorfullhash}{9e01d878851fa33384ec47f56505b71e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Optics Letter}
@@ -2440,8 +2530,8 @@
       \strng{authorbibnamehash}{e676949616c3f89a5b5a3cc055a96499}
       \strng{authornamehash}{e676949616c3f89a5b5a3cc055a96499}
       \strng{authorfullhash}{0ad0c27b58f56349139cdd67282e2a9a}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature Reviews Materials}
@@ -2491,8 +2581,8 @@
       \strng{authorbibnamehash}{f28c506088d9275445f9218f7ec6c8f3}
       \strng{authornamehash}{f28c506088d9275445f9218f7ec6c8f3}
       \strng{authorfullhash}{610b85e45a8429a135163cc2cc01ed1d}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature Photonics}

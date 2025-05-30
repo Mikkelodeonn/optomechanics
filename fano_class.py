@@ -116,22 +116,30 @@ M1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1/400_M1 trans.
 M2 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 trans.txt")
 M4 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 trans.txt")
 M7 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 trans.txt")
+M3 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 trans.txt")
+M5 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
 
 M1ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M1/400_M1 ref.txt")
 M2ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M2/400_M2 ref.txt")
 M4ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M4/400_M4 ref.txt")
 M7ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M7/400_M7 ref.txt")
+M3ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M3/400_M3 ref.txt")
+M5ref = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 ref.txt")
 
 
 tparamsM1 = M1.lossy_fit([952,952,0.6,1,0.1])
 tparamsM2 = M2.lossy_fit([952,952,0.6,1,0.1])
 tparamsM4 = M4.lossy_fit([952,952,0.6,1,0.1])
 tparamsM7 = M7.lossy_fit([952,952,0.6,1,0.1])
+tparamsM3 = M3.lossy_fit([952,952,0.6,1,0.1])
+tparamsM5 = M5.lossy_fit([952,952,0.6,1,0.1])
 
 rparamsM1 = M1ref.lossy_fit([952,952,0.6,1,1e-6])
 rparamsM2 = M2ref.lossy_fit([952,952,0.6,1,1e-6])
 rparamsM4 = M4ref.lossy_fit([952,952,0.6,1,1e-6])
 rparamsM7 = M7ref.lossy_fit([952,952,0.6,1,1e-6])
+rparamsM3 = M3ref.lossy_fit([952,952,0.6,1,1e-6])
+rparamsM5 = M5ref.lossy_fit([952,952,0.6,1,1e-6])
 
 #rdata1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 ref.txt")
 #tdata1 = fano("/Users/mikkelodeon/optomechanics/400um gratings/Data/M5/400_M5 trans.txt")
@@ -148,23 +156,39 @@ rparamsM7 = M7ref.lossy_fit([952,952,0.6,1,1e-6])
 #print("rd1: ", rparams1[2])
 #print("rd2: ", rparams2[2])
 
-#rparams = rparamsM7
-#tparams = tparamsM7
-#λ_fit = M7ref.λ_fit
+rparams = rparamsM3
+tparams = tparamsM3
+λ_fit = M3ref.λ_fit
 
-#rdata = M7ref.data
-#rfit = M7ref.lossy_model(λ_fit, *rparams)
+rdata = M3ref.data
+rfit = M3ref.lossy_model(λ_fit, *rparams)
 
-#tdata = M7.data
-#tfit = M7.lossy_model(M7.λ_fit, *tparams)
+tdata = M3.data
+tfit = M3.lossy_model(λ_fit, *tparams)
+
+rparams2 = rparamsM5
+tparams2 = tparamsM5
+λ_fit2 = M5ref.λ_fit
+
+rdata2 = M5ref.data
+rfit2 = M5ref.lossy_model(λ_fit2, *rparams2)
+
+tdata2 = M5.data
+tfit2 = M5.lossy_model(λ_fit2, *tparams2)
 
 #plt.figure(figsize=(10,7))
 
-#plt.scatter(rdata[:,0], rdata[:,1], marker=".", color="firebrick", label='Fano mirror ref.')
-#plt.plot(λ_fit, rfit, 'firebrick', alpha=0.3)#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
-#plt.plot(rdata1.λ_fit, rdata1.lossy_model(rdata1.λ_fit, *rparams1), 'lightcoral', alpha=0.4)#, label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams1))
-#plt.scatter(tdata[:,0], tdata[:,1], marker=".", color="royalblue", label='Fano mirror trans.')
-#plt.plot(λ_fit, tfit, 'royalblue', alpha=0.3, label="$\\lambda_0 = $ %snm" % str(round(tparams[0],2)))#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(tparams))
+#plt.scatter(rdata2[:,0], rdata2[:,1], marker=".", color="indianred", label='$R_{G1}$')
+#plt.plot(λ_fit2, rfit2, 'indianred', alpha=0.5)#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
+#plt.plot(λ_fit, rdata1.lossy_model(rdata1.λ_fit, *rparams1), 'lightcoral', alpha=0.4)#, label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams1))
+#plt.scatter(tdata2[:,0], tdata2[:,1], marker=".", color="skyblue", label='$T_{G1}$')
+#plt.plot(λ_fit2, tfit2, 'skyblue', alpha=0.5, label = "$\\lambda_{0,G1} =$ %snm" % str(round(tparams2[0],3)))#, label='$\\lambda_0 = $%5.3fnm, $\\lambda_1 = $%5.3fnm, $t_d = $%5.3f, $\\gamma_{\\lambda} = $%5.3fnm, $\\beta = $%.0e$m^{-1}$' % tuple(tparams2))
+
+#plt.scatter(rdata[:,0], rdata[:,1], marker=".", color="darkred", label='$R_{G2}$')
+#plt.plot(λ_fit, rfit, 'darkred', alpha=0.5)#label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams))
+#plt.plot(λ_fit, rdata1.lossy_model(rdata1.λ_fit, *rparams1), 'lightcoral', alpha=0.4)#, label='fit: λ0=%5.3f, λ1=%5.3f, td=%5.3f, γ=%5.3f, α=%5.3f' % tuple(rparams1))
+#plt.scatter(tdata[:,0], tdata[:,1], marker=".", color="darkblue", label='$T_{G2}$')
+#plt.plot(λ_fit, tfit, 'darkblue', alpha=0.5, label = "$\\lambda_{0,G2} =$ %snm" % str(round(tparams[0],3)))#, label='$\\lambda_0 = $%5.3fnm, $\\lambda_1 = $%5.3fnm, $t_d = $%5.3f, $\\gamma_{\\lambda} = $%5.3fnm, $\\beta = $%.0e$m^{-1}$' % tuple(tparams))
 #plt.plot(λ_fit, #lossy_model(tdata1.λ_fit, *tparams1), 'skyblue', alpha=0.4, label='$\\lambda_0 = $%5.3fnm, $\\lambda_1 = $%5.3fnm, $t_d = $%5.3f, $\\gamma_{\\lambda} = $%5.3fnm, $\\beta = $%.0e$m^{-1}$' % tuple(tparams1))
 
 #plt.scatter(rdata2.data[:,0], rdata2.data[:,1], marker=".", color="darkred")#, label='$R_{G2}$')
@@ -180,6 +204,7 @@ rparamsM7 = M7ref.lossy_fit([952,952,0.6,1,1e-6])
 #plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=3)
 #plt.subplots_adjust(bottom=0.3)
 #plt.grid(alpha=0.3)
+#plt.ylim((0,1))
 #plt.show()
 
 
