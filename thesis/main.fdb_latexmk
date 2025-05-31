@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1748633920.79812 "main.bcf" "main.bbl" "main" 1748637950.83238 0
-  "main.bcf" 1748637950.33427 112538 52c63895126af2021bf38d127215ee60 "pdflatex"
+["biber main"] 1748633920.79812 "main.bcf" "main.bbl" "main" 1748684647.50067 0
+  "main.bcf" 1748684646.96625 112538 52c63895126af2021bf38d127215ee60 "pdflatex"
   "ref.bib" 1748633659.75294 20732 c343adfda2afc60b01acca93e36d5546 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748637945.38611 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1748637950.83283 0
+["pdflatex"] 1748684641.72966 "/Users/mikkelodeon/optomechanics/thesis/main.tex" "main.pdf" "main" 1748684647.50108 0
   "/Users/mikkelodeon/optomechanics/thesis/main.tex" 1748516915.93959 2663 e4f80b4aaaffda49cfa7edd46bf751fe ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -428,18 +428,18 @@
   "figures/walk_off_sketch.pdf" 1748516505.80952 4848 2c71f991c64beab6970993c708d97911 ""
   "figures/xy_alignment_sketch.pdf" 1746187639.47692 4517 f00073da16678bb2bf53987244b288f7 ""
   "introduction.tex" 1748188790.07261 5960 dad648089b182f554f128b9609c94d30 ""
-  "main.aux" 1748637950.32039 94757 b687044f266b40739daebee6656ef47d "pdflatex"
+  "main.aux" 1748684646.95189 95132 f6d6e8a02b59941af469673cffe56ec1 "pdflatex"
   "main.bbl" 1748633923.96313 103143 d9c9b7109ceabbbd496750507645a46b "biber main"
-  "main.run.xml" 1748637950.33533 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
+  "main.run.xml" 1748684646.96726 2332 ad4aa38c1157da5db73722f09610e5bd "pdflatex"
   "main.tex" 1748516915.93959 2663 e4f80b4aaaffda49cfa7edd46bf751fe ""
-  "main.toc" 1748637950.33545 5605 21cac329ff31cd226403c6c12a66d930 "pdflatex"
+  "main.toc" 1748684646.96738 5605 21cac329ff31cd226403c6c12a66d930 "pdflatex"
   "method/cavity_measurements.tex" 1748637939.26721 25115 0a75236e130d33d137eaff97e7361a5e ""
   "method/experimental_setup.tex" 1748633359.51823 18632 fec20b54243a6b718f9cee6e31021d9c ""
   "method/grating_characterization.tex" 1748635515.16123 13329 c9a7bb3a2fb2f95b251c03a9ba9d3b0d ""
-  "results/experimental_results.tex" 1748625926.11528 47045 83ffd6c0c9377e16e1a9d00d3fcfa15b ""
+  "results/experimental_results.tex" 1748684641.21751 48042 48e0bc19313eada8f815af5f4a387f92 ""
   "theory/cavity_electrodynamics.tex" 1747834430.98312 12117 c3c42b738e4a9f2b0a478faf2cd3d79c ""
   "theory/fano_cavity.tex" 1748612872.65441 61342 4ad3841bc90276d3decb8345730af351 ""
-  "titlepage.aux" 1748637946.82982 3796 e3938c3a3d67da400035d92f3a6a16dc "pdflatex"
+  "titlepage.aux" 1748684643.31756 3796 e3938c3a3d67da400035d92f3a6a16dc "pdflatex"
   "titlepage.tex" 1748615111.19228 770 ee896ab5ef25406417d042b7a8746c0e ""
   (generated)
   "main.aux"
