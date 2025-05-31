@@ -4,18 +4,25 @@
 
 \subsubsection{Lossless grating}
 
-We wish to analytically describe the wavelength-dependent spectra for the transmission and reflectivity of an infinite sub-wavelength grating. The wavelength dependence arises from the fact that any incident light will be subject to interactions with the so-called \emph{guided-mode} of the grating. The grating is, in this way, said to act as an effective $\text{TM}_0$ waveguide, ensuring resonant modes will only be reflected in the 0'th order. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/TM0_waveguide.pdf}
+    \caption{A simple sketch of a sub-wavelength grating with a guided-mode of wave number $k_1$ and a TM-polarized incident wave of wave number $k$. It is illustated how the sub-wavelength grating acts as an effective $TM_0$ waveguide for an incident beam with a polarization perpendicular to the grating lines.}
+    \label{fig:TM0_waveguide}
+\end{figure}
+
+We wish to analytically describe the wavelength-dependent spectra for the transmission and reflectivity of an infinite sub-wavelength grating. The wavelength dependence arises from the fact that any incident light will be subject to interactions with the so-called \emph{guided-mode} of the grating. The grating is, in this way, said to act as an effective $\text{TM}_0$ waveguide for the resonance that we wish to leverage and study. This is sketched in figure \ref{fig:TM0_waveguide}. 
 
 By first considering the case where absorption and thermal coupling effects are neglected, i.e. a lossless grating, we can assume conservation of energy and thereby the relations
 \begin{equation}
     |r_g|^2+|t_g|^2=1 \hspace{0.5cm} \text{and} \hspace{0.5cm} |r_d|^2+|t_d|^2=1,
     \label{eq:energy conservation}
 \end{equation}
-where the subscripts \emph{g} and \emph{d} indicate the \emph{grating} and \emph{direct} transmissions and reflectivities, respectively. It is implied that the direct coefficients are constants and describe the transmission and reflectivity when the incident wavelength is significantly detuned from any guided-mode resonance of the grating. Furthermore, it is also implied that the grating coefficients are functions of the incident wavelength.
+where the subscripts \emph{g} and \emph{d} indicate the \emph{grating} and \emph{direct} transmissions and reflectivities, respectively. It is implied that the direct coefficients are constants and describe the transmission and reflectivity when the incident wavelength is significantly detuned from any guided-mode resonance of the grating. Furthermore, it is also implied that the grating coefficients arise from the interaction between the guided-mode and the incident light and are thus functions of the incident wavelength.
 
 We now assume a normal incident beam on the grating as a linearly polarized monochromatic plane wave, with a wavelength close to a guided-mode resonance of the grating. In order to describe the coefficients $r_g$ and $t_g$ we follow the formalism presented by Fan and Joannopoulos \cite{Fan-Joannopoulos-guided-mode-resonance} and consider the likely paths of the incident light through the grating. It is quite intuitive to consider the case where the light is simply transmitted, and this shall be our first case hereafter denoted the \emph{direct pathway}. Another case one might consider is the one where the incident light excites the guided-mode resonance in the grating. This case is denoted the \emph{indirect pathway} and decays more slowly than it's direct counterpart. 
 
-The interference caused when the guided mode is excited is often referred to as \emph{Fano resonances}, due to its physical similarities to the description of interference between a discrete autoionized state and a bound continuum state first reported by Fano \cite{Fano-theory}. The cross section of inelastic scattering, when measured as a function of energy, showed characteristic asymmetric peaks. These were described as the aforementioned interference pattern between \emph{direct} (the discrete state) and \emph{indirect} (the continuum state) pathways. 
+The interference caused when the guided mode is excited gives rise to a \emph{Fano resonance}, due to its physical similarities to the description of interference between a discrete autoionized state and a bound continuum state first reported by Fano \cite{Fano-theory}. The cross section of inelastic scattering, when measured as a function of energy, showed characteristic asymmetric peaks. These were described as the aforementioned interference pattern between \emph{direct} (the discrete state) and \emph{indirect} (the continuum state) pathways. 
 
 By generalizing the model of Fan and Joannopoulos \cite{Fan-Joannopoulos-guided-mode-resonance} we describe the transmission and reflectivity coefficent amplitudes as 
 \begin{equation}
@@ -61,16 +68,16 @@ To show the validity of the model at this point, we introduce a periodic grating
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/grating_MIST_sketch.pdf}
-    \caption{Schematics of a periodic optical $SiN$ grating with phyiscal parameters: $\Lambda = 857$nm, $w_t = 623$nm, $h = 55.1$nm, $t = 152$nm, $d = 67$nm, $n_{SiN} = 2.15$.}
+    \caption{Schematics of a periodic optical $SiN$ grating with phyiscal parameters: $\Lambda = 857$nm, $w_t = 623$nm, $d = 55.1$nm, $t = 152$nm, $x = 67$nm, $n_{SiN} = 2.15$.}
     \label{fig:MIST_grating_sketch}
 \end{figure}
 
 
 In order to simulate the transmission and reflectivity profiles as a function of the incident wavelength, we utilize the \emph{Modeled Integrated Scatter Tool (MIST)} developed by the \emph{National Institute of Standards and Technology (NIST)}\cite{MIST}. The simulation solves Maxwell's equations for any pre-defined infinite periodic structure. 
 
-MIST assumes an incident plane-wave, and hence predicts the \emph{ideal} spectra for the transmission and reflectivity, i.e. zero and unity when on resonance, respectively. In order to include effects related to the Gaussian behaviour of a more realistic incident beam, such as collimation and finite-size effects\cite{Toft-Vandborg}, one would have to solve Maxwell's equations for a Gaussian distribution. We safely assume an incident plane-wave for reasons related to the order of magnitude for the \emph{Rayleigh range} of the beam used, compared with that of the spacial range of the conducted experiments.
+MIST assumes an incident plane-wave, and hence predicts the \emph{ideal} spectra for the transmission and reflectivity, i.e. zero and unity when on resonance, respectively. In order to include effects related to the Gaussian behaviour of a more realistic incident beam, such as collimation and finite-size effects\cite{Toft-Vandborg}, one would have to solve Maxwell's equations for a Gaussian distribution. We safely assume an incident plane-wave for reasons related to the order of magnitude for the \emph{Rayleigh range} of the beam used, compared with that of the typical cavity length.
 
-In reality, the interference inside the cavity however cannot be perfect, as any Gaussian beam can be represented by a number rays, infinitesimal in size, which would all track differently through the grating, resulting in non-unity reflectivity and non-zero transmission. In order to synthetically correct for this we scale each transmission value found by MIST according to
+In reality, the interference inside the cavity however cannot be perfect, as any Gaussian beam can be represented by a number rays, infinitesimal in size, which would all track differently through the grating, resulting in non-unity reflectivity and non-zero transmission. In order to phenomenologically model this we scale each transmission value found by MIST according to
 \begin{equation}
     t_g = (1 - \varepsilon) \cdot t_{MIST} + \varepsilon,
     \label{eq:trans_correction_MIST}
@@ -80,7 +87,7 @@ where we define the correction to be arbitrarily small as $\varepsilon = 1\%$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/MIST_grating_sim.pdf}
-    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.217$nm, $\lambda_1 = 951.356$nm, $t_d = 0.818$, $r_d = 0.527$, $\gamma_{\lambda} = 0.527$nm, and $\beta = 1.03 \cdot 10^{-6}$.}
+    \caption{Reflectivity and transmission values (scaled and unscaled) found from a MIST simulation plotted with the corresponding least squares fit to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}). The resulting grating parameters are given as $\lambda_0 = 951.217$nm, $\lambda_1 = 951.356$nm, $t_d = 0.818$, $r_d = 0.527$, $\gamma_{\lambda} = \left( \lambda_1^2/2 \pi \right) \gamma = 0.527$nm, and $\beta = 1.03 \cdot 10^{-6}$nm$^1$.}
     \label{fig:MIST_sim_of_grating}
 \end{figure}
 
@@ -95,7 +102,7 @@ Figure \ref{fig:MIST_sim_of_grating} shows the scaled and unscaled results of th
 The reflectivity- and (corrected) transmission values were then fitted to the model in eq. (\ref{eq:transmission_coefficients_non_zero_values}) using a least squares fitting method, and plotted along with the simulated values. The resulting grating parameters were found as
 \begin{equation}
     \begin{split}
-    &\lambda_0 = 951.208 \text{nm},\:\: \lambda_1 = 951.356 \text{nm},\:\: t_d = 0.8094,\\ &r_d = 0.527,\:\: \gamma_{\lambda} = 0.527 \text{nm}\: \text{ and }\: \beta = 4.42 \cdot 10^{-7},
+    &\lambda_0 = 951.208 \text{nm},\:\: \lambda_1 = 951.356 \text{nm},\:\: t_d = 0.8094,\\ &r_d = 0.527,\:\: \gamma_{\lambda} = 0.527 \text{nm}\: \text{ and }\: \beta = 4.42 \cdot 10^{-7}\text{nm}^1,
     \end{split}
     \label{eq:optical_grating_params}
 \end{equation}
@@ -188,7 +195,7 @@ The \emph{Fano regime} and its counterpart the so-called \emph{standard regime} 
 
 Generally the Fano regime describes the cavity lengths for which eq. (\ref{eq:analytical_linewidth}) shows a significant divergence from the broadband linewidth in eq. (\ref{eq:analytical_linewidth_broadband}). Oppositely, when in the standard regime the broadband and Fano cavity produces resonance transmission peaks of comparable, if not equal, linewidths.
 
-We now introduce a single Fano cavity consisting of the Fano mirror introduced in section \ref{sec:fano_mirror} and sketched in figure \ref{fig:MIST_grating_sketch}, and a broadband mirror of reflectivity $|r|^2=90\%$ and transmission $|t|^2=1\%$. Figures \ref{fig:standard_regime_trans} and \ref{fig:fano_regime_trans} depicts examples of the transmission spectra in the standard and Fano regimes together with their respective complimentary broadband cavity transmission profiles. The reflectiviy amplitude of the Fano mirror is shown in both figures.
+We now introduce a single Fano cavity consisting of the Fano mirror introduced in section \ref{sec:fano_mirror} and sketched in figure \ref{fig:MIST_grating_sketch}, and a broadband mirror of reflectivity $|r|^2=90\%$ and transmission $|t|^2=1\%$. Figures \ref{fig:standard_regime_trans} and \ref{fig:fano_regime_trans} depicts examples of the transmission spectra in the standard and Fano regimes together with their respective corresponding broadband cavity transmission profiles. The reflectivity of the Fano mirror is shown in both figures.
 
 \begin{figure}[h!]
     \centering
@@ -236,7 +243,7 @@ Figure \ref{fig:HWHM_broadband_vs_single_fano} models the behavior of the linewi
 
 \subsubsection{The double Fano cavity model}
 
-While the single Fano cavity is usually known in the appropriate litterature as simply a \emph{Fano cavity}, I have insisted on including the fact that it contains only one Fano mirror, and hence denoted it the \emph{single} Fano cavity. This addition is justified by the contents of this section, and namely that we now move on to the \emph{double} Fano cavity, which as the name suggests consists of two Fano mirrors. The schematics of this configuration is shown together with the one for the single Fano cavity in figure \ref{fig:single_and_double_fano_sketch}.
+We now consider a \emph{double Fano cavity} consisting of two Fano mirrors, or sub-wavelength gratings. The schematics of this configuration is shown together with the one for the single Fano cavity in figure \ref{fig:single_and_double_fano_sketch}.
 
 \begin{figure}[h!]
     \centering
@@ -251,16 +258,15 @@ While the single Fano cavity is usually known in the appropriate litterature as 
         \caption{}
         \label{fig:double_fano_sketch}
     \end{subfigure}
-    \caption{(a) shows schematics of the single Fano cavity consisting of a broadband mirror with transmission and reflectivity coefficients $t_m$, $r_m$ and a Fano mirror with coefficients $t_g$, $r_g$. (b) shows the schematics of the double Fano cavity consisting of two Fano mirrors with coefficients $t_g$, $r_g$, $t_g^{\prime}$, $r_g^{\prime}$. Both cavities are separated by a cavity length $l$.}
+    \caption{(a) shows schematics of the single Fano cavity consisting of a broadband mirror with transmission and reflectivity coefficients $t_m$, $r_m$ and a Fano mirror with coefficients $t_g$, $r_g$. (b) shows the schematics of the double Fano cavity consisting of two Fano mirrors with coefficients $t_g$, $r_g$, $t_g^{\prime}$, $r_g^{\prime}$. Both cavities have lengths denoted $l$.}
     \label{fig:single_and_double_fano_sketch}
 \end{figure}
 
 Here it is evident that instead of having one set of reflectivity and transmission coefficients that depend on the incident wavelength, we now have two. In order to model the transmission of the double Fano cavity, we once again consider the transmission function for the normal incident and planar Fabry-Perot cavity in eq. (\ref{eq:fabry_perot_trans}), this time with $r,t \rightarrow r_g(\lambda),t_g(\lambda)$ and $r^{\prime},t^{\prime} \rightarrow r_g^{\prime}(\lambda),t_g^{\prime}(\lambda)$\cite{Naesby}. We rewrite the Fabry-Perot transmission function with the addressed substitutions of the optical coefficients and such that it decribes the normalized transmission amplitudes $T_{cav} = |E_{out}|^2/|E_{0,in}|^2$ and get
 \begin{equation}
-    T_{cav} = \frac{t_g(\lambda) t_g^{\prime}(\lambda) e^{i\phi}}{1 - r_g(\lambda)r_g^{\prime}(\lambda) e^{2 i \phi}}.
+    T_{cav} = \left|\frac{t_g(\lambda) t_g^{\prime}(\lambda) e^{i\phi}}{1 - r_g(\lambda)r_g^{\prime}(\lambda) e^{2 i \phi}}\right|^2.
     \label{eq:double_fano_transmission}
 \end{equation}
-The subscript $g$ indicates a grating transmission or reflectivity.
 
 We now introduce a double Fano cavity consisting of two identical Fano mirrors, each as sketched in figure \ref{fig:MIST_grating_sketch} in section \ref{sec:fano_mirror}, and thus with optical parameters given in eq. (\ref{eq:optical_grating_params}). Figure \ref{fig:double_fano_transmission} shows an example of the normalized transmission spectrum of this double Fano cavity on- and off-resonance for a cavity length of $l \approx 30 \mu m$. The spectrum was found using eq. (\ref{eq:double_fano_transmission}).
 
@@ -277,7 +283,7 @@ We now introduce a double Fano cavity consisting of two identical Fano mirrors, 
         \caption{}
         \label{fig:double_short_range}
     \end{subfigure}
-    \caption{An example of a normalized double Fano transmission spectrum of a cavity of length $l \approx 30 \mu m$. (a) shows a long-range wavelength scan, depicting both the on- and off-resonance behaviour of the double Fano cavity transmission. Note that the broadband cavity transmission for a cavity of optical properties given by the direct reflectivity $r_d$ and direct transmission $t_d$ of the Fano mirror is shown. It is readily seen that the resonance peak is placed on a "background" consisting of this function, displaced by a small phase. (b) shows the transmission focussed specifically around the resonance wavelength. Both examples are shown together with the reflectivity of the Fano mirror used to model them.}
+    \caption{An example of a normalized double Fano transmission spectrum of a cavity of length $l \approx 30 \mu m$. (a) shows a long-range wavelength scan, depicting both the on- and off-resonance behaviour of the double Fano cavity transmission. Note that the off-resonance spectrum perfectly resembles the transmission of a low-finesse Fabry-Perot cavity with optical amplitude coefficients given by the direct transmission $t_d$ and reflectivity $r_d$ of the Fano mirror used, only displaced by a small phase. This is shown as a blue dashed line in (a). (b) shows the transmission focussed specifically around the resonance wavelength. Both examples are shown together with the reflectivity of the Fano mirror used to model them.}
     \label{fig:double_fano_transmission}
 \end{figure}
 
@@ -294,12 +300,12 @@ where
 \end{equation}
 is still the HWHM of a broadband cavity and
 \begin{equation}
-    \delta \lambda_g^{double} = \frac{\gamma \lambda}{4 (1-r_d)}(|t_g(\lambda_0)|^2 + |t_g^{\prime}(\lambda_0)|^2 + L).
+    \delta \lambda_g^{double} = \frac{\gamma_{\lambda}}{4 (1-r_d)}(|t_g(\lambda_0)|^2 + |t_g^{\prime}(\lambda_0)|^2 + L).
     \label{eq:double_fano_linewidth_contribution}
 \end{equation}
 is the HWHM of the double Fano cavity in the Fano regime. Note that $\delta \lambda^{double} = \delta \lambda^{single}/2$ for $l \rightarrow 0$ when eq. (\ref{eq:analytical_linewidth_double}) is predominantly given by eq. (\ref{eq:double_fano_linewidth_contribution}). In this brief evaluation of the estimated analytical linewidth of the double Fano transmission profile it is assumed that all defining parameters of the two Fano mirrors are identical, except for the cavity and guided-mode resonance wavelengths $\lambda_{0,1}$. Namely the following relevant parameters are assumed identical,
 \begin{equation}
-    r_d = r_d^{\prime} \: \text{ and } \: \gamma \lambda = \gamma \lambda^{\prime}.
+    r_d = r_d^{\prime} \: \text{ and } \: \gamma_{\lambda} = \gamma_{\lambda}^{\prime}.
 \end{equation}
 In this way any spectral detuning of the two Fano mirrors used to make a cavity is included in the analytical expression. The spectral detuning, and the effect hereof, will be further described in section \ref{sec:spectral_detuning}.
 
@@ -340,7 +346,7 @@ Using the analytical expression for the double Fano cavity transmission in eq. (
 
 Figure \ref{fig:double_in_standard_and_fano_regimes} shows the transmission of the ideal double Fano cavity and the corresponding single Fano cavity for comparison. 
 
-Figures \ref{fig:double_in_standard_regime} and \ref{fig:double_in_standard_regime_zoomed} shows the transmission for a cavity length of $l \approx 1000 \mu m$ which is well-inside the standard regime outlined in section \ref{sec:single_fano_cavity_trans_linewidth}, where the standard, broadband and single Fano cavities produce transmission spectra of roughly identical linewidths. In this regime, due to the $1/l$ proportionality of the FSR, the off-resonance behavior of the double Fano cavity transmission is visible in the range plottet. It is seen, contrary to the single Fano cavity, that the transmission at each cavity resonance reaches a normalized transmission of $|E_{out}|^2/|E_{0,in}|^2=1$. This is due to the fact that the two Fano mirrors, while they have wavelength dependent transmission and reflectivity coefficients, always have identical ones for the ideal case. This maximizes the Fabry-Perot transmission function and ensures unity transmission at any cavity resonance. The minimum level of the cavity changes according to the coefficient of finesse, and thus only the Fano mirror reflectivity, hence the HWHM also changes as we move further from the guided-mode resonance. Both the minimum transmission level and the HWHM converge when moving away from the resonance wavelength, when $r \rightarrow r_d$ becomes constant. 
+Figures \ref{fig:double_in_standard_regime} and \ref{fig:double_in_standard_regime_zoomed} shows the transmission for a cavity length of $l \approx 1000 \mu m$ which is well-inside the standard regime outlined in section \ref{sec:single_fano_cavity_trans_linewidth}, where the standard, broadband and single Fano cavities produce transmission spectra of roughly identical linewidths. In this regime, due to the $1/l$ proportionality of the FSR, the off-resonance behavior of the double Fano cavity transmission is visible in the range plotted. It is seen that the transmission at each cavity resonance reaches a normalized transmission of $|E_{out}|^2/|E_{0,in}|^2=1$. This is due to the fact that the two Fano mirrors, while they have wavelength dependent transmission and reflectivity coefficients, always have identical ones for the ideal case. This maximizes the Fabry-Perot transmission function and ensures unity transmission at any cavity resonance. The minimum level of the cavity changes according to the coefficient of finesse, and thus only the Fano mirror reflectivity, hence the HWHM also changes as we move further from the guided-mode resonance. Both the minimum transmission level and the HWHM converge when moving away from the resonance wavelength, when $r \rightarrow r_d$ becomes constant. 
 
 Figures \ref{fig:double_in_fano_regime} and \ref{fig:double_in_fano_regime_zoomed} shows the transmission of a double Fano cavity of length $l \approx 5 \mu m$, i.e. well within the Fano regime. It is seen that the double Fano cavity transmission produces a resonance peak with a HWHM narrower than the one for the single Fano cavity, as is predicted in eq. (\ref{eq:double_fano_linewidth_contribution}). Furthermore, the immediate off-resonance behavior of the double Fano cavity transmission in the Fano regime, is drastically different than for the single Fano cavity. This is due to the collective higher transmission in this region compared with the single Fano case where the broadband mirror has a constant, and often high, reflectivity and hence a correspondingly low transmission.
 
@@ -390,11 +396,7 @@ is fulfilled for both Fano mirrors used to contruct the cavity.
 
 In this section we will investigate what happens when we introduce \emph{additional} cavity losses, not to be confused with the often used definition of cavity losses defined as $L=1-|r|^2$ where anything not being reflected back into the cavity is considered as "losses". Additional cavity losses, as described in this section, is given as
 \begin{equation}
-    L = 1 - |r_g|^2 - |t_g|^2,
-\end{equation}
-leading to the modified conervation condition
-\begin{equation}
-    |r_g|^2 + |t_g|^2 + L = 1.
+    L = 1 - |r_g|^2 - |t_g|^2.
 \end{equation}
 
 Figure \ref{fig:double_loss_scan} shows double Fano transmission spectra for a symmetric cavity with varying values for the additional cavity losses. It is readily seen that the maximum value reached in each spectrum is rapidly reduced with the introduction of these losses. 
@@ -419,7 +421,7 @@ Since the linewidth is defined as the HWHM of the transmission profile, this wil
         \caption{}
         \label{fig:lossy_spectrum_3.2percent}
     \end{subfigure}
-    \caption{(a) shows the linewidth (HWHM) of a symmetric double Fano cavity of length $l \approx 30 \mu m$  as a function of additional cavity losses $L = 2(1 - |r_g|^2 - |t_g|^2)$. Each point is found as a fitting parameter of a least squares fit of the double Fano intracavity spectrum for a certain value of $L$ to the general Fano model. The plotted line indicates the analytical value of the linewidth (eq. \ref{eq:analytical_linewidth}) as a function of $L$, for comparison. In (b) and (c) are seen examples of double Fano transmission spectra, with their respective linewidths, for cavities of $L=1\%$ and $L=8\%$, respectively. The spectra used to determine the points in (a) can be found in Appendix \ref{appendix:Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}.}
+    \caption{(a) shows the linewidth (HWHM) of a symmetric double Fano cavity of length $l \approx 30 \mu m$  as a function of additional cavity losses $L = 2(1 - |r_g|^2 - |t_g|^2)$. Each point is found as a fitting parameter of a least squares fit of the double Fano intracavity spectrum (eq. (\ref{eq:intracavity_intensity})) for a certain value of $L$ to the general Fano model. The plotted line indicates the analytical value of the linewidth (eq. \ref{eq:analytical_linewidth}) as a function of $L$, for comparison. In (b) and (c) are seen examples of double Fano transmission spectra, with their respective linewidths, for cavities of $L=1\%$ and $L=8\%$, respectively. The spectra used to determine the points in (a) can be found in Appendix \ref{appendix:Simulated double Fano cavity resonance transmission spectra for different values of the resonant loss term}.}
     \label{fig:HWHM_vs_losses_whole_figure}
 \end{figure}
 
@@ -427,10 +429,10 @@ Figure \ref{fig:HWHM_vs_losses} shows the simulated linewidths of resonance tran
 
 \subsubsection{Spectral detuning (lossless)} \label{sec:spectral_detuning}
 
-Up until this point, it has been assumed that the Fano mirrors making up the double Fano cavity has been identical, namely the cavity has been \emph{symmetrical}. However, in practice this is very unlikely to be the case, as any Fano mirror constructed is bound to have some uncertainties attached to the physical parameters describing it (see eq. (\ref{eq:physical_grating_params})). For that reason we investigate the effect of an \emph{assymetric} cavity on the resulting transmission profile. Here we remember that each Fano mirror is describes by a set of parameters, $\lambda_0$, $\lambda_1$, $t_d$, $\gamma \lambda$ and $\beta$, which respectively describe the cavity resonance wavelength, guided-mode resonance wavelength, direct transmission, guided-mode resonance linewidth and additional losses of each grating. In order to model only a spectral detuning, we therefore simply change the parameters regarding the cavity and guided-mode resonance wavelengths, $\lambda_0$ and $\lambda_1$ by an amount corresponding to the detuning we wish to study. For this section the parameters will be given by the ones for the Fano mirror skecthed in figure \ref{fig:MIST_grating_sketch}, and thus given in eq. (\ref{eq:optical_grating_params}) for the unchanged Fano mirror, and
+Up until this point, it has been assumed that the Fano mirrors making up the double Fano cavity have been identical, namely the cavity has been \emph{symmetrical}. However, in practice this is very unlikely to be the case, as any Fano mirror constructed is bound to have some uncertainties attached to the physical parameters describing it (see eq. (\ref{eq:physical_grating_params})). For that reason we investigate the effect of an \emph{assymetric} cavity on the resulting transmission profile. Here we remember that each Fano mirror is describes by a set of parameters, $\lambda_0$, $\lambda_1$, $t_d$, $\gamma \lambda$ and $\beta$, which respectively describe the cavity resonance wavelength, guided-mode resonance wavelength, direct transmission, guided-mode resonance linewidth and additional losses of each grating. In order to model only a spectral detuning, we therefore simply change the parameters regarding the cavity and guided-mode resonance wavelengths, $\lambda_0$ and $\lambda_1$ by an amount corresponding to the detuning we wish to study. For this section the parameters will be given by the ones for the Fano mirror skecthed in figure \ref{fig:MIST_grating_sketch}, and thus given in eq. (\ref{eq:optical_grating_params}) for the unchanged Fano mirror, and
 \begin{equation}
     \begin{split}
-    \lambda_0^{\prime} = &\lambda_0 + \Delta,\:\: \lambda_1^{\prime} = \lambda_1 + \Delta,\:\: t_d^{\prime} = t_d,\\ &\gamma \lambda^{\prime} = \gamma \lambda\: \text{ and }\: \beta^{\prime} = \beta
+    \lambda_0^{\prime} = &\lambda_0 + \Delta,\:\: \lambda_1^{\prime} = \lambda_1 + \Delta,\:\: t_d^{\prime} = t_d,\\ &\gamma_{\lambda}^{\prime} = \gamma_{\lambda}\: \text{ and }\: \beta^{\prime} = \beta
     \end{split}
     \label{eq:detuned_grating_params}
 \end{equation}
@@ -484,17 +486,15 @@ While knowing that a detuning of $0.3$nm is acceptable in terms of exciting the 
         \caption{}
         \label{fig:detuning_scan_intracavity}
     \end{subfigure}
-    \caption{In (a) is seen lossless double Fano transmission spectra for increasing value of the detuning $\Delta = |\lambda_{0} - \lambda_{0}^{\prime}|$. It is readily seen that the transmission wavelength $\lambda_t = (\lambda_{0} + \lambda_{0}^{\prime})/2$ becomes higher, and that the linewidth likewise becomes larger with increasing detuning. (b) shows the intracavity spectra corresponding to the transmission spectra in (a) normalized by each their maximum value, shown in (c), in order to preserve readability.}
+    \caption{In (a) is seen lossless double Fano transmission spectra for increasing value of the detuning $\Delta = |\lambda_{0} - \lambda_{0}^{\prime}|$. It is readily seen that the transmission wavelength $\lambda_t = (\lambda_{0} + \lambda_{0}^{\prime})/2$ becomes higher, and that the linewidth likewise becomes larger with increasing detuning. (b) shows the intracavity spectra (eq. (\ref{eq:intracavity_intensity})) corresponding to the transmission spectra in (a) normalized by each their maximum value, shown in (c), in order to preserve readability.}
     \label{fig:detuning_scans}
 \end{figure}
 
-It is readily seen that with increasing positive detuning, relative to the resonant wavelength of the unchanged Fano mirror, the peak shifts to higher wavelengths, which in itself is easily seen from eq. (\ref{eq:transmission_wavelength}). The linewidth is also seen to increase with the detuning, and the peak will eventually collapse when the overlap between the guided-mode resonance profiles of the two Fano mirrors becomes too small to sustain the Fano resonance. This collapse was seen for examples of higher losses, and will be evident in later sections. Figure \ref{fig:detuning_scan_intracavity_normalized} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan} normalized by their respective maximum values plotted in figure \ref{fig:detuning_scan_intracavity_max_values} in order to preserve readability. The intracavity spectra provides valuable insight into the mode density inside the cavity for the different values of $\Delta$, and considering the significant difference of $\propto 10^4$ in the maximum value for the intensity, a mode density decrease is, though qualitative, clearly shown by figure \ref{fig:detuning_scan_intracavity_max_values}.  
+It is readily seen that with increasing positive detuning, relative to the resonant wavelength of the unchanged Fano mirror, that the peak shifts to higher wavelengths. This in itself is easily seen from eq. (\ref{eq:transmission_wavelength}), but it is apparent from the figure that the linewidth also increases with the detuning. Figure \ref{fig:detuning_scan_intracavity} shows the intracavity spectra corresponding to the transmission spectra in figure \ref{fig:detuning_scan}, and provides valuable insight into the mode density inside the cavity for different values of $\Delta$. It is clearly demonstated by the two figures that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to sustain the Fano resonance. 
 
-It is clearly demonstrated by figures \ref{fig:detuning_scan}, \ref{fig:detuning_scan_intracavity_normalized} and \ref{fig:detuning_scan_intracavity_max_values} that the spectral overlap is a very crucial parameter of the double Fano cavity, and is paramount in describing the cavity's ability to produce narrow Fano resonant structures. 
+\subsubsection{Spatial detuning (lossless)} \label{sec:spacial_detuning}
 
-\subsubsection{Spacial detuning (lossless)} \label{sec:spacial_detuning}
-
-As mentioned above in section \ref{sec:spectral_detuning}, any spectral detuning gives rise to the potential of a spacial detuning as $2l = m\lambda$ must be fulfilled for any sustained plane-wave mode inside a normal incident optical cavity. We denote the length corresponding to the resonance wavelength of the unchanged Fano mirror as simply $l$, while the one for the detuned Fano mirror will be denoted as $l^{\prime}$. Previously we assumed that the optimal length of a detuned double Fano cavity is the one where the so-called transmission wavelength is given as 
+As mentioned above in section \ref{sec:spectral_detuning}, any spectral detuning gives rise to the potential of a spatial detuning as $2l = m\lambda$ must be fulfilled for any sustained plane-wave mode inside a normal incident optical cavity. We denote the length corresponding to the resonance wavelength of the unchanged Fano mirror as simply $l$, while the one for the detuned Fano mirror will be denoted as $l^{\prime}$. Previously we assumed that the optimal length of a detuned double Fano cavity is the one where the so-called transmission wavelength is given as 
 \begin{equation}
     \lambda_t = \frac{\lambda_{0} + \lambda_{0}^{\prime}}{2}.
 \end{equation}

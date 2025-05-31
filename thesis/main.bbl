@@ -2185,8 +2185,8 @@
       \strng{authorbibnamehash}{d11619f7a39f34d24d0551be202972aa}
       \strng{authornamehash}{d11619f7a39f34d24d0551be202972aa}
       \strng{authorfullhash}{7b6eb01f2db0a98d724dfd151f5fd08a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Optical Society of America}
@@ -2261,8 +2261,8 @@
       \endverb
     \endentry
     \entry{single_mode_fiber}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \verb{urlraw}
       \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=P3-780PM-FC-10
       \endverb
@@ -2372,8 +2372,8 @@
       \strng{authorbibnamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authornamehash}{05158f4a7d58644933e03740707220ff}
       \strng{authorfullhash}{05158f4a7d58644933e03740707220ff}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Opt. Soc. Am. A}

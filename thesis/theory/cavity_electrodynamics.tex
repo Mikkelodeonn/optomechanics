@@ -10,7 +10,7 @@ The Fabry-Perot interferometer, also known as an optical cavity, is generally co
     \label{fig:planar_fabry-perot}
 \end{figure}
 
-The two mirrors are described by each their respective reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$. The Fabry-Perot cavity furthermore gives rise to so-called eigenstates related to it's length \emph{l}, derived from considering the path difference between succesive parallel beams through the cavity. Any allowed mode inside the cavity, and thus transmitted, must fulfill the brightness condition $2l = m \lambda$, where $\lambda$ is the wavelength of the incident field and $m=1,2,3,...$ is a positive integer.\cite{Eichhorn}\cite{Pedrotti}
+The two mirrors are described by each their respective amplitude coefficients for the reflectivity \emph{r} and transmission \emph{t} and are placed parallel at a distance \emph{l} from each other. The field at the second mirror, i.e. the transmitted field $E_{out}$ can then be described as a function of the field at the first mirror, i.e. the incident field $E_{in}$\cite{Eichhorn,Pedrotti}. 
 
 \subsubsection{Transmission}
 
@@ -22,15 +22,10 @@ In order to determine the transmission throught the Fabry-Perot cavity, we once 
 
 This means that all losses, e.g. due to absorption or scattering, are neglected. 
 
-In order to formulate $E_{out}$ in terms of $E_{in}$, we first consider the incident field as a propagating plane-wave
-\begin{equation}
-    E_{in} = E_{0,in} e^{ik},
-\end{equation}
-
-where $k = 2 \pi / \lambda$ is the wave number and $E_{0,in}$ is the amplitude of the field. We then consider $E_{out}$ to be comprised of contributions for each roundtrip inside the cavity. This can be written as an infinite geometrical series given as
+In order to formulate $E_{out}$ in terms of $E_{in}$, we first consider the incident field as a propagating plane-wave with wave number $k = 2 \pi / \lambda$. We then consider $E_{out}$ to be comprised of contributions for each roundtrip inside the cavity. This can be written as an infinite geometrical series given as
 \begin{equation}
     \begin{split}
-        E_{out} & = tt^{\prime} E_{0,in} e^{ik} + tt^{\prime} E_{0,in} e^{ik} rr^{\prime} e^{i\delta}\\&+ tt^{\prime} E_{0,in} e^{ik} \left(rr^{\prime} e^{i\delta}\right)^2 + tt^{\prime} E_{0,in} e^{ik} \left(rr^{\prime} e^{i\delta}\right)^3 + ...\\& = tt^{\prime} E_{0,in} e^{ik} \sum^{\infty}_{m=0}\left( rr^{\prime}e^{i\delta} \right)^m
+        E_{out} & = tt^{\prime} E_{in} e^{ik \delta / 2} + tt^{\prime} E_{in} e^{ik \delta / 2} rr^{\prime} e^{i\delta}\\&+ tt^{\prime} E_{in} e^{ik \delta / 2} \left(rr^{\prime} e^{i\delta}\right)^2 + tt^{\prime} E_{in} e^{ik \delta / 2} \left(rr^{\prime} e^{i\delta}\right)^3 + ...\\& = tt^{\prime} E_{in} e^{ik \delta / 2} \sum^{\infty}_{m=0}\left( rr^{\prime}e^{i\delta} \right)^m
     \end{split}
     \label{eq:transmission_as_geometric_series}
 \end{equation}
@@ -38,13 +33,13 @@ where $\delta = 2kl$. The first term of the series corresponds to a direct trans
 
 By evaluating the series it is seen that it converges to the final expression for the transmitted field through a planar Fabry-Perot cavity
 \begin{equation}
-    E_{out} = E_{0,in}\frac{tt^{\prime} e^{i\delta /2}}{1 - rr^{\prime} e^{i\delta}}.
+    E_{out} = E_{in}\frac{tt^{\prime} e^{i\delta /2}}{1 - rr^{\prime} e^{i\delta}}.
     \label{eq:fabry_perot_trans}
 \end{equation}
 
-The intensity of the transmission is now taken as the square of the norm of the field amplitude $|E_{out}|^2$ and normalizing with respect to the incident field intensity $|E_{0,in}|^2$. We arrive at an expression for the transmission intensity which is recognized to be given on the form of an \emph{Airy function}\cite{Pedrotti}
+The intensity of the transmission is now taken as the square of the norm of the field intensity $|E_{out}|^2$ and normalizing with respect to the incident field intensity $|E_{in}|^2$. We arrive at an expression for the transmission intensity which is an \emph{Airy function}\cite{Pedrotti}
 \begin{equation}
-    T = \frac{|E_{out}|^2}{|E_{0,in}|^2} = \left|\frac{tt^{\prime}e^{i\delta/2}}{1 - rr^{\prime}e^{i \delta}}\right|^2 = \frac{(1-|r|^2)(1-|r^{\prime}|^2)}{(1-|rr^{\prime}|)^2 + 4|rr^{\prime}|sin^2(\delta)},
+    T = \frac{|E_{out}|^2}{|E_{in}|^2} = \left|\frac{tt^{\prime}e^{i\delta/2}}{1 - rr^{\prime}e^{i \delta}}\right|^2 = \frac{(1-|r|^2)(1-|r^{\prime}|^2)}{(1-|rr^{\prime}|)^2 + 4|rr^{\prime}|sin^2(\delta)},
     \label{eq:airy_function}
 \end{equation}
 where $\delta$ is the phase shift associated with each round trip inside the cavity.
@@ -56,14 +51,20 @@ where $\delta$ is the phase shift associated with each round trip inside the cav
     \label{fig:fabry_perot_trans}
 \end{figure}
 
-Figure \ref{fig:fabry_perot_trans} displays the Airy function in eq. (\ref{eq:airy_function}), of a lossless cavity of reflectivities $r^{\prime} = r$, as a function of $\delta$ in units of $\pi$. The function is plotted for the cases of $|r|^2 = 50 \%$, shown in blue, and $|r|^2 = 90 \%$, shown in red. It is readily seen that the transmission is maximized for $\delta = n 2 \pi$ and that the two cases shown differ significantly as the red profile is much narrower than the blue. The red profile is hence said to have a higher \emph{finesse} $\mathcal{F}$ than the blue profile. The finesse is defined as
+Figure \ref{fig:fabry_perot_trans} displays the Airy function in eq. (\ref{eq:airy_function}), of a lossless cavity with mirrors of equal reflectivities $r^{\prime} = r$, as a function of $\delta$ in units of $\pi$. The function is plotted for the cases of $|r|^2 = 50 \%$, shown in blue, and $|r|^2 = 90 \%$, shown in red. It is readily seen that the transmission is maximized for $\delta = n 2 \pi$, which corresponds to standing wave modes with $\lambda_n = 2l/n$. It is further seen that the two cases shown differ significantly as the red profile is much narrower than the blue. The red profile is hence said to have a higher \emph{finesse} $\mathcal{F}$ than the blue profile. The finesse is a measure of the quality of a cavity by the distance between succesive resonance peaks relative to their width. It is thus defined as
 \begin{equation}
     \mathcal{F} \equiv \frac{FSR}{\delta_{\lambda}},
     \label{eq:finesse_definition}
 \end{equation}
-where $FSR$ is the so-called \emph{Free Spectral Range} indicating the spectral distance between two peaks and $\delta_{\lambda}$ refers to the \emph{Full Width at Half Maximum (FWHM)} which, as the name suggests, is the linewidth defined at a normalized transmission $T=1/2$, i.e. at half the maximum value. 
+where $FSR$ is the so-called \emph{Free Spectral Range} indicating the spectral distance between two peaks and $\delta_{\lambda}$ refers to the \emph{Full Width at Half Maximum (FWHM)} which, as the name suggests, is the linewidth defined at half the maximum value for the normalized transmission.
 
-Considering the Airy function in eq. (\ref{eq:airy_function}) for the high finesse case where $|r|^2 = |r^{\prime}|^2 \rightarrow 1$ we furthermore see that each individual peak closely resembles a Lorentzian distribution. 
+Considering the Airy function in eq. (\ref{eq:airy_function}) for the high finesse case where $|r|^2 = |r^{\prime}|^2 \rightarrow 1$ we furthermore see that each individual peak closely resembles a Lorentzian function. 
+
+Note here that the field intensity inside the cavity is closely related to the Fabry-Perot transmission function, this is denoted the so-called \emph{intracavity} intensity. It is representative of the field build-up inside the cavity and is defined as 
+\begin{equation}
+    |E_{cav}|^2 \equiv |E_{in}|^2 \left|\frac{1}{1-rr^{\prime}e^{i\delta}}\right|^2.
+    \label{eq:intracavity_intensity}
+\end{equation}
 
 \subsubsection{Varying the cavity length}
 
@@ -96,15 +97,8 @@ Note here that the relation between the FSR and the cavity length $l$ is clearly
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/100um_fabry_perot_trans_vs_freq.pdf}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{figures/150um_fabry_perot_trans_vs_freq.pdf}
-        \caption{}
-    \end{subfigure}
-    \caption{(a) shows the transmission spectrum of a Fabry-Perot cavity of length $l \approx 100 \mu m$ as a function of the frequency $\nu$, while (b) shows the transmission spectrum of a cavity of length $l \approx 150 \mu m$ for the same range of frequencies. Note here how the FSR is inversely proportional to the cavity length.}
+    \includegraphics[width=0.7\textwidth]{figures/100um_and_200um_fabry_perot_trans_vs_freq.pdf}
+    \caption{Fabry-Perot transmission spectra for cavities of lengths $l = 100 \mu m$ and $l = 200 \mu m$. It is clearly seen that the FSR is inversly proportional with the cavity length as it is apparent that $FSR_{100 \mu m} = 2 \cdot FSR_{200 \mu m}$.}
     \label{fig:fabry_perot_FSR_comparison}
 \end{figure}
 
@@ -115,7 +109,7 @@ In order to simplify the Airy function in eq. (\ref{eq:airy_function}) we introd
     F = \frac{4 |rr^{\prime}|}{(1-|rr^{\prime}|)^2}.
 \end{equation}
 
-The coefficient of finess $F$ is not to be confused with the finesse $\mathcal{F}$. While the finesse is related to the sharpness of the transmission peaks, the coefficient of finesse refers to the contrast of the peaks in the sense that the difference between the minimum and maximum transmitance level increases with $F$. The coefficient of finesse is related to the finesse as 
+The coefficient of finesse $F$ is not to be confused with the finesse $\mathcal{F}$, as they are not equal, but rather related by
 \begin{equation}
     \mathcal{F} = \frac{\pi}{2} \sqrt{F}.
 \end{equation}
@@ -145,16 +139,16 @@ Finally we consider the definition for the finesse $\mathcal{F}$ and the express
 \begin{equation}
     FSR_{\lambda} \equiv \delta_{\lambda} \cdot \mathcal{F} =  \frac{\lambda^2}{2l}.
 \end{equation}
-Figure \ref{fig:airy_trans_vs_wavelength} shows an example of the Airy function given in eq. (\ref{eq:simplified_airy_function}) as a function of the wavelength for a Fabry-Perot cavity of reflectivies $|r|^2 = |r^{\prime}|^2 = 90\%$ and length $l=100 \mu m$.
+Figure \ref{fig:airy_trans_vs_wavelength} shows an example of the Airy function given in eq. (\ref{eq:simplified_airy_function}) as a function of the wavelength for a lossless Fabry-Perot cavity of reflectivity intensites $|r|^2 = |r^{\prime}|^2 = 90\%$, transmission intensities $|t|^2 = |t^{\prime}|^2 = 10\%$ and length $l=100 \mu m$. It also includes an example of the transmission function with non-zero cavity losses, this is outlined further in section \ref{sec:cavity_losses} below.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/airy_function_vs_wavelength.pdf}
-    \caption{The Fabry-Perot transmission function on the form of an Airy function as seen in eq. (\ref{eq:simplified_airy_function}) as a function of the incident wavelength.}
+    \caption{The Airy function as seen in eq. (\ref{eq:simplified_airy_function}) as a function of the incident wavelength for a cavity length of $l = 100 \mu m$. The blue dashed line shows an example without losses due to e.g. scattering or absorption, while the red line shows an example of a lossy cavity with intensities given as $|r|^2 = 70\%$, $|t|^2 = 10\%$ and $L = 20\%$.}
     \label{fig:airy_trans_vs_wavelength}
 \end{figure}
 
-\subsubsection{Cavity losses}
+\subsubsection{Cavity losses}\label{sec:cavity_losses}
 
 In eq. (\ref{eq:lossless_finesse}) we assume the case of a lossless cavity, i.e. eq. (\ref{eq:lossless_condition}) is fulfilled. In practice, any cavity will have some amount of losses, which would have to be taken into account when calculating the finesse. When losses are present eq. (\ref{eq:lossless_condition}) instead generally reads
 \begin{eqnarray}
@@ -168,4 +162,4 @@ In this case the finesse would be given as
 \end{equation}
 where $L_{total} = L + L^{\prime}$ are the total additional cavity losses.
 
-The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach unity, as some light is lost to e.g. absorption or scattering for each round trip of the cavity.
+The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach unity, as some light is lost to e.g. absorption or scattering for each round trip of the cavity. This is shown in figure \ref{fig:airy_trans_vs_wavelength} where the Airy function is shown and compared for examples with $L=0$ and $L=20\%$.
