@@ -1,12 +1,12 @@
 \section{Theory}
 \subsection{The Fabry-Perot interferometer}\label{sec:fabry_perot}
 
-The Fabry-Perot interferometer, also known as an optical cavity, is generally comprised of two reflective optical elements, hereafter refered to as mirrors. In the following we assume a plane-plane configuration for two lossless mirrors and a plane-wave at normal incidence for the incoming field, as sketched in figure \ref{fig:planar_fabry-perot}. 
+The Fabry-Perot interferometer, also known as an optical cavity, is generally comprised of two reflective optical elements, hereafter referred to as mirrors. In the following we assume a plane-plane configuration for two lossless mirrors and a plane-wave at normal incidence for the incoming field, as sketched in figure \ref{fig:planar_fabry-perot}. 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/planar_fabry_perot.pdf}
-    \caption{Sketch of a planar Fabry-Perot cavity.}
+    \caption{Schematics of a planar Fabry-Perot cavity.}
     \label{fig:planar_fabry-perot}
 \end{figure}
 
@@ -14,7 +14,7 @@ The two mirrors are described by each their respective amplitude coefficients fo
 
 \subsubsection{Transmission}
 
-In order to determine the transmission throught the Fabry-Perot cavity, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further, initially, assumed that the mirrors are both lossless, such that
+In order to determine the transmission through the Fabry-Perot cavity, we once again consider the configuration in figure \ref{fig:planar_fabry-perot}. It is further assumed that the mirrors are both lossless, such that
 \begin{equation}
     |r|^2 + |t|^2 = |r^{\prime}|^2 + |t^{\prime}|^2 = 1.
     \label{eq:lossless_condition}
@@ -47,7 +47,7 @@ where $\delta$ is the phase shift associated with each round trip inside the cav
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/fabry_perot_high_and_low_finesse.pdf}
-    \caption{The red line shows the transmission spectrum of a \emph{high} finesse Fabry-Perot cavity of reflectivity $|r|^2 = 0.90$, while the blue dashed line shows the transmission spectrum of a \emph{low} finesse cavity with reflectivity $|r|^2 = 0.50$.}
+    \caption{The red line shows the transmission spectrum of a high finesse Fabry-Perot cavity of reflectivity $|r|^2 = 0.90$, while the blue dashed line shows the transmission spectrum of a low finesse cavity with reflectivity $|r|^2 = 0.50$.}
     \label{fig:fabry_perot_trans}
 \end{figure}
 
@@ -73,9 +73,9 @@ In order to relate the resonance transmission profile to the length of the cavit
     \nu_n = n \frac{c}{2l},
     \label{eq:resonance_freq}
 \end{equation}
-where $c$ is the speed of light, $n$ is a positive integer refering to the order of the resonance frequency and $l$ is the cavity length. This corresponds to resonance occuring at times related to each round trip inside the cavity. 
+where $c$ is the speed of light, $n$ is a positive integer referring to the order of the resonance frequency and $l$ is the cavity length. This corresponds to resonance occuring at times related to each round trip inside the cavity. 
 
-Since the FSR is defined as the spectral distance between each peak, it follows from eq. (\ref{eq:resonance_freq}) that it can be be expressed in units of frequency as 
+Since the FSR is defined as the spectral distance between each peak, it follows from eq. (\ref{eq:resonance_freq}) that it can be expressed in units of frequency as 
 \begin{equation}
     FSR_{\nu} = \frac{c}{2l},
     \label{eq:FSR_vs_cavity_length}
@@ -93,7 +93,7 @@ Finally, considering the definition of the finesse from eq. (\ref{eq:finesse_def
 \end{equation}
 where the finesse is now defined in terms of the total cavity transmission at resonance. 
 
-Note here that the relation between the FSR and the cavity length $l$ is clearly shown in eq. (\ref{eq:FSR_vs_cavity_length}), and figure \ref{fig:fabry_perot_FSR_comparison} furthermore shows transmission spectra underlining the effect of changing the cavity length. 
+Note here that the relation between the FSR and the cavity length $l$ is clearly shown in eq. (\ref{eq:FSR_vs_cavity_length}), and figure \ref{fig:fabry_perot_FSR_comparison} furthermore shows transmission spectra highlighting the effect of changing the cavity length. 
 
 \begin{figure}[h!]
     \centering
@@ -129,13 +129,13 @@ Re-writing the general cavity brightness condition, it can easily be shown that 
 \begin{equation}
     \lambda_n = \frac{2l}{n},
 \end{equation}
-where $n=1,2,3,...$ is a positive integer refering to the order of the resonance. 
+where $n=1,2,3,...$ is a positive integer referring to the order of the resonance. 
 
-Since $\nu = c / \lambda$, the relation between the linewidth in wavelength space $\delta_{\lambda}$ and the one in frequency space $\delta_{\nu}$ is non-linear. Therefore one does not simply make the aforementioned substitution in order to relate them. It can however be shown that their respective expressions differ by a factor of $\lambda^2/c$, and the linewidth when varying the wavelength is thus given as
+Since $\nu = c / \lambda$, the relation between the linewidth in wavelength space $\delta_{\lambda}$ and the one in frequency space $\delta_{\nu}$ is non-linear. Therefore, one does not simply make the aforementioned substitution in order to relate them. However, it can be shown that their respective expressions differ by a factor of $\lambda^2/c$, and the linewidth when varying the wavelength is thus given as
 \begin{equation}
     \delta_{\lambda} = \frac{\lambda^2}{c} \cdot \delta_{\nu} = \frac{\lambda^2}{4 \pi l} (|t|^2 + |t^{\prime}|^2).
 \end{equation}
-Finally we consider the definition for the finesse $\mathcal{F}$ and the expression given in eq. (\ref{eq:lossless_finesse}), in order to show that the $FSR$ in wavelength space is given as 
+Finally, we consider the definition for the finesse $\mathcal{F}$ and the expression given in eq. (\ref{eq:lossless_finesse}), in order to show that the $FSR$ in wavelength space is given as 
 \begin{equation}
     FSR_{\lambda} \equiv \delta_{\lambda} \cdot \mathcal{F} =  \frac{\lambda^2}{2l}.
 \end{equation}
@@ -144,22 +144,22 @@ Figure \ref{fig:airy_trans_vs_wavelength} shows an example of the Airy function 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/airy_function_vs_wavelength.pdf}
-    \caption{The Airy function as seen in eq. (\ref{eq:simplified_airy_function}) as a function of the incident wavelength for a cavity length of $l = 100 \mu m$. The blue dashed line shows an example without losses due to e.g. scattering or absorption, while the red line shows an example of a lossy cavity with intensities given as $|r|^2 = 70\%$, $|t|^2 = 10\%$ and $L = 20\%$.}
+    \caption{The Airy function as seen in eq. (\ref{eq:simplified_airy_function}), plotted as a function of the incident wavelength for a cavity length of $l = 100 \mu m$. The blue dashed line shows an example without losses due to e.g. scattering or absorption, while the red line shows an example of a lossy cavity with intensities given as $|r|^2 = 70\%$, $|t|^2 = 10\%$ and $L = 20\%$.}
     \label{fig:airy_trans_vs_wavelength}
 \end{figure}
 
 \subsubsection{Cavity losses}\label{sec:cavity_losses}
 
-In eq. (\ref{eq:lossless_finesse}) we assume the case of a lossless cavity, i.e. eq. (\ref{eq:lossless_condition}) is fulfilled. In practice, any cavity will have some amount of losses, which would have to be taken into account when calculating the finesse. When losses are present eq. (\ref{eq:lossless_condition}) instead generally reads
+In eq. (\ref{eq:lossless_finesse}), we assume the case of a lossless cavity, i.e. eq. (\ref{eq:lossless_condition}) is fulfilled. In practice, any cavity will have some amount of losses, which would have to be taken into account when calculating the finesse. When losses are present, eq. (\ref{eq:lossless_condition}) instead generally reads
 \begin{eqnarray}
     |r|^2 + |t|^2 + L + L^{\prime} = 1,
 \end{eqnarray}
-where $L$ and $L^{\prime}$ indicates the fractional losses of each mirror.
+where $L$ and $L^{\prime}$ indicate the fractional losses of each mirror.
 
 In this case the finesse would be given as 
 \begin{equation}
     \mathcal{F} = \frac{2 \pi}{|t|^2 + |t^{\prime}|^2 + L_{total}},
 \end{equation}
-where $L_{total} = L + L^{\prime}$ are the total additional cavity losses.
+where $L_{total} = L + L^{\prime}$ is the total additional cavity losses.
 
 The effect on the transmission spectrum of a cavity with losses is that the level of the normalized transmission will not reach unity, as some light is lost to e.g. absorption or scattering for each round trip of the cavity. This is shown in figure \ref{fig:airy_trans_vs_wavelength} where the Airy function is shown and compared for examples with $L=0$ and $L=20\%$.

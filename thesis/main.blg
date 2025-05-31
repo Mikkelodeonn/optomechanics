@@ -1,0 +1,25 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[90] biber-darwin:340> INFO - === Sat May 31, 2025, 19:38:13
+[115] Biber.pm:419> INFO - Reading 'main.bcf'
+[224] Biber.pm:979> INFO - Found 63 citekeys in bib section 0
+[239] Biber.pm:4419> INFO - Processing section 0
+[253] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
+[257] bibtex.pm:1713> INFO - LaTeX decoding ...
+[327] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[764] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[765] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[765] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[765] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[819] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[860] bbl.pm:763> INFO - Output to main.bbl
+[862] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Monsel' is not an integer - this will probably not sort properly.
+[862] Biber.pm:131> WARN - legacy month field 'Nov' in entry 'Wilson' is not an integer - this will probably not sort properly.
+[862] Biber.pm:131> WARN - legacy month field 'Feb' in entry 'Chowdhury' is not an integer - this will probably not sort properly.
+[862] Biber.pm:131> WARN - legacy month field 'Aug' in entry 'Zhang' is not an integer - this will probably not sort properly.
+[862] Biber.pm:131> WARN - legacy month field 'Oct' in entry 'Al-Sumaidae' is not an integer - this will probably not sort properly.
+[862] Biber.pm:131> WARN - legacy month field 'Aug' in entry 'Hornig' is not an integer - this will probably not sort properly.
+[863] Biber.pm:131> WARN - legacy month field 'dec' in entry 'Kemiktarak2' is not an integer - this will probably not sort properly.
+[863] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Norte' is not an integer - this will probably not sort properly.
+[863] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Manjeshwar' is not an integer - this will probably not sort properly.
+[863] Biber.pm:133> INFO - WARNINGS: 9

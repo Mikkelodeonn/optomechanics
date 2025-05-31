@@ -235,12 +235,12 @@ OUTPUT main.toc
 INPUT ./abstract.tex
 INPUT ./abstract.tex
 INPUT abstract.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecti1440.tfm
 INPUT ./introduction.tex
 INPUT ./introduction.tex
 INPUT ./introduction.tex
 INPUT ./introduction.tex
 INPUT introduction.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecti1440.tfm
 INPUT ./figures/broadband_sketch.pdf
 INPUT ./figures/broadband_sketch.pdf
 INPUT ./figures/broadband_sketch.pdf

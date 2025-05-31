@@ -2213,8 +2213,8 @@
       \strng{authorbibnamehash}{d5124032891d32e300aca36b46b86d1a}
       \strng{authornamehash}{d5124032891d32e300aca36b46b86d1a}
       \strng{authorfullhash}{d5124032891d32e300aca36b46b86d1a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Nanostructured tramplines for photonics and sensing}
@@ -2271,8 +2271,8 @@
       \endverb
     \endentry
     \entry{edmund_optics}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \verb{urlraw}
       \verb https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-waveplates/
       \endverb
@@ -2281,8 +2281,8 @@
       \endverb
     \endentry
     \entry{thorlabs_stage1}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \verb{urlraw}
       \verb https://www.thorlabs.com/thorproduct.cfm?partnumber=PT1#ad-image
       \endverb
@@ -2426,8 +2426,8 @@
       \strng{authorbibnamehash}{2055001139a1ec9bb7f96e93eabe2266}
       \strng{authornamehash}{2055001139a1ec9bb7f96e93eabe2266}
       \strng{authorfullhash}{136f5c683f02be9ae16a4266affd5a23}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{213 nm and 532 nm solid state laser treatment of biogenetical fibrous materials}
@@ -2455,8 +2455,8 @@
       \strng{authorbibnamehash}{1b1d3769e8af49081bccd1e1c4b97677}
       \strng{authornamehash}{1b1d3769e8af49081bccd1e1c4b97677}
       \strng{authorfullhash}{1b1d3769e8af49081bccd1e1c4b97677}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Measurements and their Uncertainties - A Practical Guide to Modern Error Analysis}
