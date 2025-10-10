@@ -27,8 +27,11 @@ plt.figure(figsize=(10,7))
 
 #plt.plot(δs, airy_function(δs, np.sqrt(0.5), np.sqrt(0.5)), color="royalblue", linestyle="-.", label="$|r|^2=50$%")
 #plt.plot(δs, airy_function(δs, np.sqrt(0.9), np.sqrt(0.9)), color="firebrick", linestyle="-", label="$|r|^2=90$%")
-plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.9), np.sqrt(0.1), np.sqrt(0.0), 100e-6), color="royalblue", linestyle="-.", label="lossless trans.")
-plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.7), np.sqrt(0.1), np.sqrt(0.2), 100e-6), color="firebrick", linestyle="-", label="lossy trans. (L = 20%)")
+#plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.9), np.sqrt(0.1), np.sqrt(0.0), 100e-6), color="royalblue", linestyle="-.", label="lossless trans.")
+#plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.7), np.sqrt(0.1), np.sqrt(0.2), 100e-6), color="firebrick", linestyle="-", label="lossy trans. (L = 20%)")
+
+plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.9), np.sqrt(0.1), np.sqrt(0.0), 100e-6), color="firebrick", linestyle="-", label="high finesse") 
+plt.plot(λs*1e9, airy_function2(λs, np.sqrt(0.5), np.sqrt(0.5), np.sqrt(0.0), 100e-6), color="royalblue", linestyle="-.", label="low finesse")
 plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
 plt.subplots_adjust(bottom=0.3)
 plt.xticks(fontsize=21)

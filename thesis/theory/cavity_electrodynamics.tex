@@ -22,7 +22,7 @@ In order to determine the transmission through the Fabry-Perot cavity, we once a
 
 This means that all losses, e.g. due to absorption or scattering, are neglected. 
 
-In order to formulate $E_{out}$ in terms of $E_{in}$, we first consider the incident field as a propagating plane-wave with wave number $k = 2 \pi / \lambda$. We then consider $E_{out}$ to be comprised of contributions for each roundtrip inside the cavity. This can be written as an infinite geometrical series given as
+To formulate $E_{out}$ in terms of $E_{in}$, we first consider the incident field as a propagating plane-wave with wave number $k = 2 \pi / \lambda$. We then consider $E_{out}$ to be comprised of contributions for each roundtrip inside the cavity. This can be written as an infinite geometrical series given as
 \begin{equation}
     \begin{split}
         E_{out} & = tt^{\prime} E_{in} e^{ik \delta / 2} + tt^{\prime} E_{in} e^{ik \delta / 2} rr^{\prime} e^{i\delta}\\&+ tt^{\prime} E_{in} e^{ik \delta / 2} \left(rr^{\prime} e^{i\delta}\right)^2 + tt^{\prime} E_{in} e^{ik \delta / 2} \left(rr^{\prime} e^{i\delta}\right)^3 + ...\\& = tt^{\prime} E_{in} e^{ik \delta / 2} \sum^{\infty}_{m=0}\left( rr^{\prime}e^{i\delta} \right)^m
@@ -93,8 +93,6 @@ Finally, considering the definition of the finesse from eq. (\ref{eq:finesse_def
 \end{equation}
 where the finesse is now defined in terms of the total cavity transmission at resonance. 
 
-Note here that the relation between the FSR and the cavity length $l$ is clearly shown in eq. (\ref{eq:FSR_vs_cavity_length}), and figure \ref{fig:fabry_perot_FSR_comparison} furthermore shows transmission spectra highlighting the effect of changing the cavity length. 
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/100um_and_200um_fabry_perot_trans_vs_freq.pdf}
@@ -102,9 +100,12 @@ Note here that the relation between the FSR and the cavity length $l$ is clearly
     \label{fig:fabry_perot_FSR_comparison}
 \end{figure}
 
+
+Note here that the relation between the FSR and the cavity length $l$ is clearly shown in eq. (\ref{eq:FSR_vs_cavity_length}), and figure \ref{fig:fabry_perot_FSR_comparison} furthermore shows transmission spectra highlighting the effect of changing the cavity length. 
+
 \subsubsection{Varying the incident wavelength}
 
-In order to simplify the Airy function in eq. (\ref{eq:airy_function}) we introduce the so-called \emph{coefficient of finesse} $F$, which is a function only of the mirror reflectivites, given as
+To simplify the Airy function in eq. (\ref{eq:airy_function}) we introduce the so-called \emph{coefficient of finesse} $F$, which is a function only of the mirror reflectivites, given as
 \begin{equation}
     F = \frac{4 |rr^{\prime}|}{(1-|rr^{\prime}|)^2}.
 \end{equation}

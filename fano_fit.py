@@ -53,25 +53,25 @@ def theoretical_reflection_values(params: list, λs: np.array, losses=True, loss
 left = 0 #7
 right = -1 #-6
 extrapolated = False
-line_width_fit = False
+line_width_fit = True
 
-cavity_length_guess = 31.5#139#31
+cavity_length_guess = 77#139#31
 
 scan_num = 4
 ### fit FSR scans for all lengths from 20250326 -> plot in HWHM vs. cavity length figure
 scan_type = "s"
 
-#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/380um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/380um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
-#norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan.txt")#[left:right]
-#norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250512/normalization/short_scan_PI.txt")#[left:right]
+#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+#norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250523/normalization/short_scan.txt")#[left:right]
+#norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Single fano cavity/Data/20250523/normalization/short_scan_PI.txt")#[left:right]
 
-#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
-#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
-data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")#[left:right]
-PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")#[left:right]
-norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan.txt")#[left:right]
-norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/normalization/long_scan_PI.txt")#[left:right]
+data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+".txt")#[left:right]
+PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/30um/"+str(scan_type)+str(scan_num)+"_PI.txt")#[left:right]
+#data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l.txt")#[left:right]
+#PI_data = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250211/34um/34l_PI.txt")#[left:right]
+norm = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/short_scan.txt")#[left:right]
+norm_PI = np.loadtxt("/Users/mikkelodeon/optomechanics/Double fano cavity/M3+M5/data/20250523/normalization/short_scan_PI.txt")#[left:right]
 
 if not np.allclose(data[:,0], norm[:,0]):
     raise Exception("Normalization and data files do not match!")
@@ -202,27 +202,28 @@ else:
     lw_err = round(np.sqrt(np.diag(pcov))[4]*1e3,3)
     hwhm = round(np.abs(popt[4])*1e3,3)
     legend = [hwhm, lw_err]
-    print("lw error: ", lw_err)
-    print("popt:",popt)
-    print("p0 =", p0)
+    print("linewidth: ", hwhm, "+/-", lw_err)
+    #print("popt:",popt)
+    #print("p0 =", p0)
 
     if extrapolated == False:
         xs = np.linspace(data[:,0][0], data[:,0][-1], 10000) 
     else:
         xs = np.linspace(data[:,0][0]-1, data[:,0][-1]+1, 10000) 
 
-    plt.figure(figsize=(10,7))
-    plt.scatter(data[:,0], data[:,1], color="maroon", marker=".", label="data", zorder=1)
-    plt.plot(xs, fit_model(xs, *popt), color="orangered", alpha=0.7, label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
+    plt.figure(figsize=(11,7))
+    plt.scatter(data[:,0], data[:,1], color="magenta", marker="o", label="data", zorder=1)
+    plt.plot(xs, fit_model(xs, *popt), color="magenta", alpha=0.7, label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
-    plt.xlabel("wavelength [nm]", fontsize=28)
-    plt.ylabel("norm. trans.", fontsize=28)
+    plt.xlabel("Wavelength [nm]", fontsize=36)
+    plt.ylabel("Cavity transmission", fontsize=36)
     #plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True, shadow=True, ncol=2)
     #plt.subplots_adjust(bottom=0.2)
-    plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
-    plt.subplots_adjust(bottom=0.3, left=0.15)
-    plt.locator_params(axis='x', tight=True, nbins=7)
+    #plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=4)
+    plt.subplots_adjust(bottom=0.15, left=0.15)
+    plt.locator_params(axis='x', tight=True, nbins=5)
     #plt.ticklabel_format(style="sci", axis="y", scilimits=(0,0))
-    plt.xticks(fontsize=21)
-    plt.yticks(fontsize=21)
-    plt.show()
+    plt.xticks(fontsize=28)
+    plt.yticks(fontsize=28)
+    plt.grid(alpha=0.3)
+    #plt.show()

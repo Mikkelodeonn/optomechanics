@@ -471,7 +471,7 @@ slws_0512_p, bblws_0512_p = calc_lws_single(l, params2_origin+params2_origin_err
 
 ############################## 20250326 ##############################  
 
-ls_0326 = np.array([21.45, 32.71, 52.22, 80.63, 244.89, 320.25, 450.48])*1e-6
+ls_0326 = np.array([21.45, 32.71, 52.22, 80.63])*1e-6#, 244.89, 320.25, 450.48])*1e-6
 
 lws21 = np.array([68.829, 74.187, 48.436, 48.777, 71.753, 65.673, 46.808, 54.260, 61.337, 68.750, 56.628, 63.813, 56.939, 62.304])
 lws33 = np.array([37.528, 78.588, 52.193, 58.226, 74.592, 68.143, 47.219, 54.553, 62.793, 62.023, 45.564, 71.124, 60.410, 85.821, 59.870])
@@ -497,8 +497,8 @@ err251 = stdev(lws251)
 err323 = stdev(lws323)
 err453 = stdev(lws453)
 
-lws_0326 = np.array([lw21, lw33, lw53, lw83, lw251, lw323, lw453])*1e-12
-errs_0326 = np.array([err21, err33, err53, err83, err251, err323, err453])*1e-12
+lws_0326 = np.array([lw21, lw33, lw53, lw83])*1e-12#, lw251, lw323, lw453])*1e-12
+errs_0326 = np.array([err21, err33, err53, err83])*1e-12#, err251, err323, err453])*1e-12
 
 ############################## 20250523 ##############################    
 
@@ -562,20 +562,20 @@ dlws_0523_m, slws_0523_m, bblws_0523_m = calc_lws(l, params1_0523-params1_0523_e
 #slws = (slws_0523 + slws_0326)/2
 #dlws = (dlws_0523 + dlws_0326)/2
 
-#bblws_p = (bblws_0523_p + bblws_0326_p)/2
-#slws_p = (slws_0523_p + slws_0326_p)/2
-#dlws_p = (dlws_0523_p + dlws_0326_p)/2
+bblws_p = (bblws_0523_p + bblws_0326_p)/2
+slws_p = (slws_0523_p + slws_0326_p)/2
+dlws_p = (dlws_0523_p + dlws_0326_p)/2
 
-#bblws_m = (bblws_0523_m + bblws_0326_m)/2
-#slws_m = (slws_0523_m + slws_0326_m)/2
-#dlws_m = (dlws_0523_m + dlws_0326_m)/2
+bblws_m = (bblws_0523_m + bblws_0326_m)/2
+slws_m = (slws_0523_m + slws_0326_m)/2
+dlws_m = (dlws_0523_m + dlws_0326_m)/2
 
 ##################################################################### 
 
-plt.figure(figsize=(10,7))
-#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt=".", capsize=3, color="darkviolet", label="data", zorder=7)
-#plt.errorbar(lengths_0523, lws_0523, errs_0523, fmt=".", capsize=3, color="firebrick", label="data", zorder=7) # measured on 23/5
-#plt.scatter(lengths_0523, sim_lws_0523, marker=".", color="black", label="simulation")
+plt.figure(figsize=(11,7))
+#plt.errorbar(ls_0326*1e6, lws_0326*1e12, errs_0326*1e12, fmt="o", capsize=3, color="magenta", label="data", zorder=7) # measured on 26/3
+#plt.errorbar(lengths_0523, lws_0523, errs_0523, fmt="o", color="magenta", capsize=3, label="data", zorder=7) # measured on 23/5
+#plt.scatter(lengths_0523, sim_lws_0523, marker="o", edgecolor="forestgreen", color="white", label="simulation")
 #plt.plot(l*1e6, bblws_0523, linestyle="--", color="royalblue", label="broadband")
 #plt.plot(l*1e6, slws_0523, linestyle="--", label="single Fano", color="orangered")
 #plt.plot(l*1e6, dlws_0523, linestyle="--", label= "double Fano", color="forestgreen")
@@ -583,11 +583,18 @@ plt.figure(figsize=(10,7))
 #plt.fill_between(l*1e6, slws_0523_p, slws_0523_m, color="orangered", alpha=0.1)
 #plt.fill_between(l*1e6, dlws_0523_p, dlws_0523_m, color="forestgreen", alpha=0.1)
 
-#plt.plot(l*1e6, bblws_0326, linestyle="--", color="royalblue", label="broadband")
-#plt.plot(l*1e6, slws_0326, linestyle="--", label="single Fano", color="orangered")
+#plt.plot(l*1e6, bblws, linestyle="--", color="black", label="broadband")
+#plt.plot(l*1e6, slws, linestyle="--", label="single Fano", color="darkorange")
+#plt.plot(l*1e6, dlws, linestyle="--", label= "double Fano", color="magenta")
+#plt.fill_between(l*1e6, bblws_0523_m, bblws_0326_p, color="black", alpha=0.15)
+#plt.fill_between(l*1e6, slws_0523_m, slws_0326_p, color="darkorange", alpha=0.15)
+#plt.fill_between(l*1e6, dlws_0523_m, dlws_0326_p, color="magenta", alpha=0.15)
+
+#plt.plot(l*1e6, bblws_0326, linestyle="--", color="black", label="broadband")
+#plt.plot(l*1e6, slws_0326, linestyle="--", label="single Fano", color="darkorange")
 #plt.plot(l*1e6, dlws_0326, linestyle="--", label= "double Fano", color="forestgreen")
-#plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="royalblue", alpha=0.1)
-#plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="orangered", alpha=0.1)
+#plt.fill_between(l*1e6, bblws_0326_p, bblws_0326_m, color="black", alpha=0.1)
+#plt.fill_between(l*1e6, slws_0326_p, slws_0326_m, color="darkorange", alpha=0.1)
 #plt.fill_between(l*1e6, dlws_0326_p, dlws_0326_m, color="forestgreen", alpha=0.1)
 
 #plt.plot(l*1e6, bblws_origin, linestyle="--", color="royalblue", label="broadband")
@@ -598,28 +605,30 @@ plt.figure(figsize=(10,7))
 #plt.fill_between(l*1e6, dlws_origin_p, dlws_origin_m, color="forestgreen", alpha=0.1)
 
 
-plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="data")
-plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
-plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
-plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
-plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
-plt.scatter(single_lengths, sim_lws_single, marker="o", color="black", label="simulation")
+#plt.errorbar(single_lengths, lws_0512, errs_0512, lengths_err, fmt=".", capsize=3, label="data")
+#plt.plot(l*1e6, slws_0512, linestyle="--", color="orangered", label="single fano")
+#plt.plot(l*1e6, bblws_0512, linestyle="--", color="royalblue", label="broadband")
+#plt.fill_between(l*1e6, bblws_0512_p, bblws_0512_m, color="royalblue", alpha=0.1)
+#plt.fill_between(l*1e6, slws_0512_p, slws_0512_m, color="orangered", alpha=0.1)
+#plt.scatter(single_lengths, sim_lws_single, marker="o", color="black", label="simulation")
 
 
 #plt.scatter(losses, lws, color="forestgreen", marker=".", label="simulated")
 #plt.plot(Ls, linewidths, color="forestgreen", alpha=0.5, label="analytical")
 
 
-#plt.plot(lengths*1e6, bblws, linestyle="--", color="royalblue", alpha=0.5, label="broadband analytical")
-#plt.plot(lengths*1e6, slws, linestyle="--", color="orangered", alpha=0.5, label="single Fano analytical")
-#plt.plot(lengths*1e6, dlws, linestyle="--", color="forestgreen", alpha=0.5, label="double Fano analytical")
-#plt.scatter(sim_lengths, sim_bblws, marker=".", color="royalblue", label="broadband sim.")
-#plt.scatter(sim_lengths, sim_slws, marker=".", color="orangered", label="single Fano sim.")
-#plt.scatter(sim_lengths, sim_dlws, marker=".", color="forestgreen", label="double Fano sim.")
+plt.plot(lengths*1e6, bblws, linestyle="--", lw="3", color="black", alpha=0.5, label="broadband analytical")
+plt.plot(lengths*1e6, slws, linestyle="--", lw="3", color="darkorange", alpha=0.5, label="single Fano analytical")
+plt.plot(lengths*1e6, dlws, linestyle="--", lw="3", color="magenta", alpha=0.5, label="double Fano analytical")
+plt.scatter(sim_lengths, sim_bblws, marker="o", lw="2", edgecolor="black", color="white", label="broadband sim.")
+plt.scatter(sim_lengths, sim_slws, marker="o", lw="2", edgecolor="darkorange", color="white", label="single Fano sim.")
+plt.scatter(sim_lengths, sim_dlws, marker="o", lw="2", edgecolor="magenta", color="white", label="double Fano sim.")
+
+
 #plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)", zorder=7)
-#plt.plot(l*1e6, broadband_lws, linestyle="--", color="royalblue", label="avg. broadband cavity")
-#plt.plot(l*1e6,single_fano_lws, linestyle="--", label="avg. single fano cavity", color="orangered")
-#plt.plot(l*1e6,double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
+#plt.plot(l*1e6, broadband_lws, linestyle="--", color="black", label="avg. broadband cavity")
+#plt.plot(l*1e6, single_fano_lws, linestyle="--", label="avg. single fano cavity", color="darkorange")
+#plt.plot(l*1e6, double_fano_lws, linestyle="--", label= "avg. double fano cavity", color="forestgreen")
 #plt.fill_between(l*1e6, broadband_lws_p, broadband_lws_m, color="royalblue", alpha=0.3)
 #plt.fill_between(l*1e6, single_fano_lws_p, single_fano_lws_m, color="orangered", alpha=0.3)
 #plt.fill_between(l*1e6, double_fano_lws_p, double_fano_lws_m, color="forestgreen", alpha=0.3)
@@ -637,20 +646,21 @@ plt.scatter(single_lengths, sim_lws_single, marker="o", color="black", label="si
 #plt.errorbar(ls_0220*1e6, lws_0220*1e12, err_0220*1e12, xerr=ls_0220_err*1e6, fmt=".", capsize=3, color="magenta", label="HWHM (measured on 20/2)")
 #plt.errorbar(ls_0225*1e6, lws_0225*1e12, err_0225*1e12, xerr=ls_0225_err*1e6, fmt=".", capsize=3, color="darkblue", label="HWHM (measured on 25/2)")
 #plt.title("HWHM as a function of cavity length")
-plt.xlabel("cavity length [μm]", fontsize=28)
+plt.xlabel("Cavity length [μm]", fontsize=36, fontname="Times New Roman")
 #plt.xlabel("L [%]", fontsize=28)
-plt.ylabel("HWHM [pm]", fontsize=28)
+plt.ylabel("HWHM [pm]", fontsize=36, fontname="Times New Roman")
 plt.xscale("log")
 plt.yscale("log")
 ax = plt.gca()
 ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
 ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
 #plt.ticklabel_format(style='plain', axis="both")
-plt.xticks(fontsize=21)
-plt.yticks(fontsize=21)
-plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=2)
-plt.subplots_adjust(bottom=0.3, left=0.15)
+plt.xticks(fontsize=28, fontname="Times New Roman")
+plt.yticks(fontsize=28, fontname="Times New Roman")
+#plt.legend(loc='upper center', fontsize=16, bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True, ncol=2)
+#plt.subplots_adjust(bottom=0.3, left=0.15)
 plt.grid(True, which="both", ls="--", alpha=0.2)
+plt.subplots_adjust(bottom=0.15, left=0.15)
 plt.show()
 
 
