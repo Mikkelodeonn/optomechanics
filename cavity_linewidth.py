@@ -620,9 +620,9 @@ plt.figure(figsize=(11,7))
 plt.plot(lengths*1e6, bblws, linestyle="--", lw="3", color="black", alpha=0.5, label="broadband analytical")
 plt.plot(lengths*1e6, slws, linestyle="--", lw="3", color="darkorange", alpha=0.5, label="single Fano analytical")
 plt.plot(lengths*1e6, dlws, linestyle="--", lw="3", color="magenta", alpha=0.5, label="double Fano analytical")
-plt.scatter(sim_lengths, sim_bblws, marker="o", lw="2", edgecolor="black", color="white", label="broadband sim.")
-plt.scatter(sim_lengths, sim_slws, marker="o", lw="2", edgecolor="darkorange", color="white", label="single Fano sim.")
-plt.scatter(sim_lengths, sim_dlws, marker="o", lw="2", edgecolor="magenta", color="white", label="double Fano sim.")
+plt.scatter(sim_lengths, sim_bblws, marker="o", s=50, lw="3", edgecolor="black", color="white", label="broadband sim.")
+plt.scatter(sim_lengths, sim_slws, marker="o", s=50, lw="3", edgecolor="darkorange", color="white", label="single Fano sim.")
+plt.scatter(sim_lengths, sim_dlws, marker="o", s=50, lw="3", edgecolor="magenta", color="white", label="double Fano sim.")
 
 
 #plt.errorbar(np.array(the_good_lengths)*1e6, np.array(the_good_data_points)*1e12, np.array(good_errs)*1e12, fmt=".", capsize=3, color="cornflowerblue", label="HWHM (measured)", zorder=7)
@@ -661,7 +661,7 @@ plt.yticks(fontsize=28, fontname="Times New Roman")
 #plt.subplots_adjust(bottom=0.3, left=0.15)
 plt.grid(True, which="both", ls="--", alpha=0.2)
 plt.subplots_adjust(bottom=0.15, left=0.15)
-plt.show()
+#plt.show()
 
 
 

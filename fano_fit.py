@@ -212,7 +212,7 @@ else:
         xs = np.linspace(data[:,0][0]-1, data[:,0][-1]+1, 10000) 
 
     plt.figure(figsize=(11,7))
-    plt.scatter(data[:,0], data[:,1], color="magenta", marker="o", label="data", zorder=1)
+    plt.scatter(data[:,0], data[:,1], color="magenta", marker="o", linewidth="3", label="data", zorder=1)
     plt.plot(xs, fit_model(xs, *popt), color="magenta", alpha=0.7, label="fit: HWHM $\\approx$ %5.3f +/- %5.3fpm" % tuple(legend))
     #plt.title("M3/M5 double fano transmission")  
     plt.xlabel("Wavelength [nm]", fontsize=36)
@@ -226,4 +226,4 @@ else:
     plt.xticks(fontsize=28)
     plt.yticks(fontsize=28)
     plt.grid(alpha=0.3)
-    #plt.show()
+    plt.show()

@@ -74,14 +74,14 @@ mist_r = [(1-eps)*r for r in mist_ref[1]]
 #λs = np.linspace(M3_0523[:,0][0], M3_0523[:,0][-1], len(M3_0523[:,0]))
 #λs = np.array(mist_ref[0])
 
-#λs = np.linspace(950.5, 952.7, 1000)
+λs = np.linspace(950.5, 952.7, 1000)
 #λs = np.linspace(951, 951.4, 10000)
 #λs = np.linspace(949, 953, 10000)
 #λs = np.linspace(945, 957, 10000)
 #λs = np.linspace(g1data[:,0][0], g1data[:,0][-1], len(g1data[:,0]))
-λs = np.linspace(mist_ref[0][0], mist_ref[0][-1], len(mist_ref[0]))
+#λs = np.linspace(mist_ref[0][0], mist_ref[0][-1], len(mist_ref[0]))
 #λs = np.linspace(G1.data[:,0][0], G1.data[:,0][-1], len(G1.data[:,0]))
-lmin = 5
+lmin = 29.9
 #L = 0.016
 Δ = 0.0
 #λs = np.linspace(950.500, 951.500, 90) # 950, 952
@@ -752,13 +752,16 @@ def l_vs_λ_cmaps_fixed_length(params1: list, params2: list, λs: np.array, intr
             pass
         else:
             ax[j].set_yticklabels([])
-        
-        if j == 0:
-            ax[j].set_xticks(np.concatenate((np.linspace(np.min(λs), λt, 2), np.linspace(λt, np.max(λs), 4))))
-            ax[j].set_xticklabels([round(a-(params1[0]+params2[0])/2,1) for a in np.concatenate((np.linspace(np.min(λs), λt,2), np.linspace(λt, np.max(λs),4)))], fontsize=21)
-        else:
-            ax[j].set_xticks(np.concatenate((np.linspace(np.min(λs), λt, 3), np.linspace(λt, np.max(λs), 3))))
-            ax[j].set_xticklabels([round(a-(params1[0]+params2[0])/2,1) for a in np.concatenate((np.linspace(np.min(λs), λt,3), np.linspace(λt, np.max(λs),3)))], fontsize=21)  
+
+        ax[j].set_xticks(np.linspace(np.min(λs), np.max(λs), 5))
+        ax[j].set_xticklabels([round(a-(params1[0]+params2[0])/2,1) for a in np.linspace(np.min(λs), np.max(λs),5)], fontsize=21)
+    
+        #if j == 0:
+        #    ax[j].set_xticks(np.concatenate((np.linspace(np.min(λs), λt, 2), np.linspace(λt, np.max(λs), 4))))
+        #    ax[j].set_xticklabels([round(a-(params1[0]+params2[0])/2,1) for a in np.concatenate((np.linspace(np.min(λs), λt,2), np.linspace(λt, np.max(λs),4)))], fontsize=21)
+        #else:
+        #    ax[j].set_xticks(np.concatenate((np.linspace(np.min(λs), λt, 3), np.linspace(λt, np.max(λs), 3))))
+        #    ax[j].set_xticklabels([round(a-(params1[0]+params2[0])/2,1) for a in np.concatenate((np.linspace(np.min(λs), λt,3), np.linspace(λt, np.max(λs),3)))], fontsize=21)  
         #ax[j].set_xticks(np.linspace(np.min(λs), np.max(λs),10))
         #ax[j].set_xticklabels([])
         #ax[i,j].set_yticks(np.linspace(np.min(ls), np.max(ls),10))
@@ -1025,7 +1028,7 @@ fig, ax = plt.subplots(figsize=(11,7))
 #### Heat maps of cavity transmission as a function of wavelength and cavity length ####
 
 #l_vs_λ_cmaps(params1, params2, λs, intracavity=False, losses=False, lmin=lmin)
-#l_vs_λ_cmaps_fixed_length(params1, params2, λs, intracavity=False, losses=False, lmin=29.9)
+l_vs_λ_cmaps_fixed_length(params1, params2, λs, intracavity=False, losses=False, lmin=29.9)
 #double_fano_cmap(params1, params2, λs, intracavity=False, losses=False, lmin=lmin)
 #lmin=29.9
 #double_fano_cmap(G1, G2, λs, intracavity=False, losses=True, lmin=lmin)
@@ -1280,33 +1283,33 @@ fig, ax = plt.subplots(figsize=(11,7))
 
 
 
-mist_ref_with_losses = theoretical_reflection_values(MISTparams, losses=True, loss_factor = 0.04)[0]
-mist_ref_with_losses = [float(r) for r in mist_ref_with_losses]
+#mist_ref_with_losses = theoretical_reflection_values(MISTparams, losses=True, loss_factor = 0.04)[0]
+#mist_ref_with_losses = [float(r) for r in mist_ref_with_losses]
 #rparams, _ = curve_fit(model, mist_ref[0], mist_r, p0=[951.2, 951.2, 0.3, 0.5, 0], maxfev=10000)
-rparams, _ = curve_fit(model, mist_ref[0], mist_ref_with_losses, p0=[951.2, 951.2, 0.3, 0.5, 1e-6], maxfev=10000)
+#rparams, _ = curve_fit(model, mist_ref[0], mist_ref_with_losses, p0=[951.2, 951.2, 0.3, 0.5, 1e-6], maxfev=10000)
 #print(rparams[4])
 
-xfit = np.linspace(mist_ref[0][0], mist_ref[0][-1], 10000) 
+#xfit = np.linspace(mist_ref[0][0], mist_ref[0][-1], 10000) 
 
-lossy_rs = model(xfit, *rparams)
-lossy_ts = model(xfit, *MISTparams)
-lossy_losses = np.abs(1 - model(xfit, *MISTparams)-model(xfit, *rparams))
+#lossy_rs = model(xfit, *rparams)
+#lossy_ts = model(xfit, *MISTparams)
+#lossy_losses = np.abs(1 - model(xfit, *MISTparams)-model(xfit, *rparams))
 
-idx = np.argmin(lossy_ts)
+#idx = np.argmin(lossy_ts)
 ##print(idx)
-print("losses on resonance:  ", lossy_losses[idx]) #, np.max(lossy_losses))
-print("minimum transmission: ", lossy_ts[idx]) #np.min(lossy_ts))
-print("maximum reflection:   ", lossy_rs[idx]) #np.max(lossy_rs))
+#print("losses on resonance:  ", lossy_losses[idx]) #, np.max(lossy_losses))
+#print("minimum transmission: ", lossy_ts[idx]) #np.min(lossy_ts))
+#print("maximum reflection:   ", lossy_rs[idx]) #np.max(lossy_rs))
 
-print("sum:  ", lossy_losses[idx] + lossy_ts[idx] + lossy_rs[idx])
+#print("sum:  ", lossy_losses[idx] + lossy_ts[idx] + lossy_rs[idx])
 
-print("[λ0, λ1, td, γλ, α] = ", MISTparams)
+#print("[λ0, λ1, td, γλ, α] = ", MISTparams)
 
-tjek = lossy_losses + lossy_ts + lossy_rs
+#tjek = lossy_losses + lossy_ts + lossy_rs
 
-for t in tjek:
-    if int(t) != 1:
-        print(t)
+#for t in tjek:
+#    if int(t) != 1:
+#        print(t)
 
 #plt.scatter(mist_t[0], mist_trans[1], marker=".", color="darkblue", alpha=0.8, label="$T_{MIST}$")
 #plt.scatter(mist_trans[0], mist_t, marker=".", color="darkblue", label="$(1-\\varepsilon) \cdot T_{MIST} + \\varepsilon$")
@@ -1315,18 +1318,18 @@ for t in tjek:
 
 #ax2 = ax.twinx()
 
-ax.plot(xfit, model(xfit, *rparams), color="royalblue", alpha=1, label="$|r_g|^2$")#"$R_{max} = $%s%%" % str(round(np.max(lossy_rs),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $r_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(rparams[:-1])) 
+#ax.plot(xfit, model(xfit, *rparams), color="royalblue", alpha=1, label="$|r_g|^2$")#"$R_{max} = $%s%%" % str(round(np.max(lossy_rs),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $r_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(rparams[:-1])) 
 
-ax.plot(xfit, model(xfit, *MISTparams), color="firebrick", alpha=1, label="$|t_g|^2$")#"$T_{min} = $%s%%" % str(round(np.min(lossy_ts),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $t_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(tparams[:-1]))
+#ax.plot(xfit, model(xfit, *MISTparams), color="firebrick", alpha=1, label="$|t_g|^2$")#"$T_{min} = $%s%%" % str(round(np.min(lossy_ts),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $t_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(tparams[:-1]))
 #plt.plot(xfit, model(xfit, *tparams2), color="royalblue", alpha=0.4, label="fit: $(1-\\varepsilon) \cdot T_{MIST} + \\varepsilon$")#label="$T_{min} = $%s%%" % str(round(np.min(lossy_ts),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $t_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(tparams[:-1]))
 
 
 
 #ax.plot(xfit, lossy_losses, color="blueviolet", alpha=1, label="$L_{max} = $%s%%" % str(round(np.max(lossy_losses),2)*1e2))#"fit: $\\lambda_0=$%5.3f, $\\lambda_1=$%5.3f, $t_d=$%5.3f, $\\gamma_{\\lambda}=$%5.3f" % tuple(tparams[:-1]))
 
-ax.set_xlabel("Wavelength [nm]", fontsize=36, fontname="Times New Roman")
-ax.tick_params(axis='y', labelsize=28, direction="in", length=4, width=1)
-ax.tick_params(axis='x', labelsize=28, direction="in", length=4, width=1)
+#ax.set_xlabel("Wavelength [nm]", fontsize=36, fontname="Times New Roman")
+#ax.tick_params(axis='y', labelsize=28, direction="in", length=4, width=1)
+#ax.tick_params(axis='x', labelsize=28, direction="in", length=4, width=1)
 #ax.set_ylabel("Grating transmission", color="firebrick", fontsize=36, fontname="Times New Roman")
 #ax.xaxis.set_ticks_position("both")
 #ax.yaxis.set_ticks_position("both")
@@ -1334,13 +1337,13 @@ ax.tick_params(axis='x', labelsize=28, direction="in", length=4, width=1)
 #ax2.set_yticks([])
 ##ax2.tick_params(axis='both', direction="in")
 #ax2.set_ylabel("Grating reflectivity", color="royalblue", fontsize=36, fontname="Times New Roman")
-ax.grid(alpha=0.3)
-plt.locator_params(axis='x', tight=True, nbins=8)
-ax.set_ylim((0,1))
+#ax.grid(alpha=0.3)
+#plt.locator_params(axis='x', tight=True, nbins=8)
+#ax.set_ylim((0,1))
 #ax2.set_ylim((0,1))
-plt.subplots_adjust(bottom=0.15)
-ax.legend(fontsize=28)
-plt.show()
+#plt.subplots_adjust(bottom=0.15)
+#ax.legend(fontsize=28)
+#plt.show()
 
 
 
@@ -1371,9 +1374,9 @@ plt.show()
 #plt.scatter(λs, bb_ts, color="royalblue", marker=".", label="broadband sim.")
 #font = font_manager.FontProperties(family='Times New Roman', size=21)
 #ax2 = ax.twinx()
-#ax.plot(λs, rs, color="royalblue", linestyle="-.", label="grating reflectivity", zorder=1)
-#ax.plot(λs, double_ts, color="magenta", ls="-", label="double Fano sim.",zorder=2)
-#ax.plot(λs, single_ts, color="darkorange", ls="--", label="single Fano sim.",zorder=3)
+#ax.plot(λs, rs, color="royalblue", linestyle="-.", label="$|r_g|^2$", zorder=1)
+#ax.plot(λs, double_ts, color="magenta", ls="-", label="$\\mathcal{T}_{cav,double}$",zorder=2)
+#ax.plot(λs, single_ts, color="darkorange", ls="--", label="$\\mathcal{T}_{cav,single}$",zorder=3) 
 
 #ax.tick_params(axis='y', direction="in", labelsize=32, length=4)
 #ax.tick_params(axis='x', direction="in", labelsize=32, length=4)
@@ -1386,10 +1389,11 @@ plt.show()
 #ax2.set_ylabel("Grating reflectivity", color="royalblue", fontsize=42)#, fontname="Times New Roman")
 
 #ax.grid(alpha=0.3)
-#ax.set_xlabel("Wavelength [nm]", fontsize=42)#, fontname="Times New Roman")
+#ax.set_xlabel("Wavelength [nm]", fontsize=38)#, fontname="Times New Roman")
 #plt.locator_params(axis='x', tight=True, nbins=8)
-#plt.subplots_adjust(bottom=0.15, left=0.15)
+#plt.subplots_adjust(bottom=0.15)
 #ax.set_ylim((-0.05,1.05))
+#ax.legend(fontsize=24, loc=2)
 #ax2.set_ylim((-0.05,1.05))
 #plt.show()
 
